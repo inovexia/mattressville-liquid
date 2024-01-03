@@ -1,0 +1,10 @@
+{
+  "name": "mattressville-liquid",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev":"shopify theme dev --store mattress-ville"
+  },
+  "author": "",
+  "license": "ISC"
+}
