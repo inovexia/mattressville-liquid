@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev":"shopify theme dev --store mattress-ville"
+    "dev":"shopify theme dev --store mattress-ville",
+    "test-dev":"shopify theme dev --store inovexia-store"
   },
   "author": "",
   "license": "ISC"

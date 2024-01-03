@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": false,
+  "liveSassCompile.settings.generateMap": false,
   "[javascript]": {
     "editor.formatOnSave": true
   },
@@ -10,7 +11,9 @@
     "editor.formatOnSave": true
   },
   "cSpell.words": [
+    "Innovexia",
     "mattressville",
+    "stylesheet",
     "ville"
   ]
 }
