@@ -49,6 +49,10 @@
       {{ body_font_italic | font_face: font_display: 'swap' }}
       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
+      {{ settings.thin_font | font_face: font_display: 'swap' }}
+      {{ settings.regular_font | font_face: font_display: 'swap' }}
+      {{ settings.medium_font | font_face: font_display: 'swap' }}
+      {{ settings.bold_font | font_face: font_display: 'swap' }}
 
       {% for scheme in settings.color_schemes -%}
         {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
@@ -252,6 +256,7 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'new-base.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -273,6 +278,8 @@
         onload="this.media='all'"
       >
     {%- endif -%}
+    <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'script.js' | asset_url }}" defer></script>
 
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -290,8 +297,7 @@
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%}
-
-    {% sections 'header-group' %}
+    <header>{% sections 'header-group' %}</header>
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}

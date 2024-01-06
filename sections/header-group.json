@@ -2,6 +2,18 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "extended-bar": {
+      "type": "extended-bar"
+    },
+    "header-top": {
+      "type": "header-top"
+    },
+    "header-mid": {
+      "type": "header-mid"
+    },
+    "header-bottom": {
+      "type": "header-bottom"
+    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -38,6 +50,10 @@
     }
   },
   "order": [
+    "extended-bar",
+    "header-top",
+    "header-mid",
+    "header-bottom",
     "announcement-bar",
     "header"
   ]

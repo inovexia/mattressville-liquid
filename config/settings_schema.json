@@ -37,6 +37,16 @@
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
+        "type": "color",
+        "id": "theme_accent",
+        "label": "Theme Accent Color"
+      },
+      {
+        "type": "color",
+        "id": "theme_secondary",
+        "label": "Theme Secondary Color"
+      },
+      {
         "type": "color_scheme_group",
         "id": "color_schemes",
         "definition": [
@@ -107,6 +117,34 @@
       {
         "type": "header",
         "content": "t:settings_schema.typography.settings.header__1.content"
+      },
+      {
+        "type": "font_picker",
+        "id": "thin_font",
+        "default": "roboto_n3",
+        "label": "Thin Font",
+        "info": "Thin font to be used here weight 300"
+      },
+      {
+        "type": "font_picker",
+        "id": "regular_font",
+        "default": "roboto_n4",
+        "label": "Regular Font",
+        "info": "Regular font to be used here weight 400"
+      },
+      {
+        "type": "font_picker",
+        "id": "medium_font",
+        "default": "roboto_n5",
+        "label": "Medium Font",
+        "info": "Medium font to be used here weight 500"
+      },
+      {
+        "type": "font_picker",
+        "id": "bold_font",
+        "default": "roboto_n7",
+        "label": "Bold Font",
+        "info": "Bold font to be used here weight 700"
       },
       {
         "type": "font_picker",

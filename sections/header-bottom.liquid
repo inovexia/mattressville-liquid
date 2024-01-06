@@ -1,0 +1,18 @@
+{{ 'header-bottom.css' | asset_url | stylesheet_tag }}
+<div class="header-bottom" style="border-bottom-color: {{ settings.theme_accent }};">
+  <div class="container">
+    <div class="main-nav">
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "t:sections.header-bottom.name",
+  "class": "header-bottom-section",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+  ]
+}
+{% endschema %}

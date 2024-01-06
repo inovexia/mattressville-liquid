@@ -1,0 +1,12 @@
+.header-bottom {
+  border-bottom: 2px solid #ff3057;
+}
+.header-bottom .main-nav {
+  height: 40px;
+  justify-content: flex-start;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-wrap: wrap;
+}

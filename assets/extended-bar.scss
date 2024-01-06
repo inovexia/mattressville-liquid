@@ -1,0 +1,42 @@
+.extended-bar {
+  width: 100%;
+  background-color: #d7355c;
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: #ffffff;
+  padding: 15px 20px;
+
+  @media (min-width: 1200px) {
+    padding: 10px 0;
+  }
+
+  .content{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 1200px) {
+      align-items: baseline;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a{
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    button {
+      color: #ffffff;
+      cursor: pointer;
+      text-decoration: underline;
+      margin-left: 10px;
+      background-color: #d7355c;
+      border: none;
+      padding: 0;
+    }
+  }
+}
