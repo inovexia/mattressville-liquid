@@ -1,18 +1,259 @@
 {{ 'header-bottom.css' | asset_url | stylesheet_tag }}
-<div class="header-bottom" style="border-bottom-color: {{ settings.theme_accent }};">
+<div class="header-bottom">
   <div class="container">
     <div class="main-nav">
+      <div class="mobile-middle">
+        <a
+          class="logo"
+          href="{{ routes.root_url }}"
+          aria-current="page">
+          {%- if section.settings.mobile_logo != blank -%}
+            {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+            {{ section.settings.mobile_logo | image_url: width: 260, height: 30 | image_tag: class: 'logo-img', loading: 'lazy', alt: 'logo_alt', style: 'margin:10px 0' }}
+          {%- else -%}
+            <img
+              src="{{ 'mattressville-logo.png' | asset_img_url: 'master' }}"
+              alt="Logo"
+              width="260"
+              height="30"
+              loading="lazy"
+              class="logo-img"
+              style="margin:10px 0" />
+          {%- endif -%}
+        </a>
+        <form
+          action="{{ routes.search_url }}"
+          method="get"
+          role="search"
+          class="search-box">
+          <button
+            aria-label="Search"
+            type="submit"
+            class="btn-search"
+            aria-label="{{ 'Search' }}">
+            <i class="gsi gs-search"></i>
+          </button>
+          <input
+            type="search"
+            name="q"
+            value=""
+            required=""
+            placeholder="Search by brand, model..."
+            class="search-input" />
+          <input
+            type="hidden"
+            name="type"
+            value="product" />
+          <input
+            type="hidden"
+            name="options[prefix]"
+            value="last" />
+        </form>
+      </div>
+      <div class="mobile-bottom">
+        <div class="start">
+          <button
+            type="button"
+            class="main-menu-toggle"
+            aria-label="Toggle Nav Drop Down">
+            <span class="stripe"></span>
+            <span class="stripe"></span>
+            <span class="stripe"></span>
+          </button>
+        </div>
+        <div class="end">
+          <ul class="mobile-bottom-right">
+            <li class="mini-cart">
+              <a
+                class="cart-link"
+                href="{{ routes.cart_url }}"
+                aria-label="Cart Items">
+                <span class="icon-wrapper" data-quantity="0">
+                  <i class="gsi gs-shopping-cart"></i>
+                </span>
+              </a>
+            </li>
+            {%- if shop.customer_accounts_enabled -%}
+              <li class="login">
+                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="cart-link">
+                  <span class="icon-wrapper">
+                    <i class="gsi gs-log-in"></i>
+                  </span>
+                  <span class="visually-hidden">
+                    {%- liquid
+                      if customer
+                        echo 'customer.account_fallback' | t
+                      else
+                        echo 'customer.log_in' | t
+                      endif
+                    -%}
+                  </span>
+                </a>
+              </li>
+            {%- endif -%}
+          </ul>
+        </div>
+      </div>
+      <div class="main-menu">
+        <div class="nav-area">
+          <div class="nav-item has-mega-menu dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle nav-link"
+              role="button">{{ section.settings.meta_menu_title }}</a>
+            <div class="dropdown-menu mega-menu">
+              <div class="mega-menu-area">
+                {%- for link in section.settings.mega_menu.links -%}
+                  {%- assign hasChildren = link.links | empty | default: false -%}
+                  <div class="mega-menus">
+                    <h5>{{- link.title | escape -}}</h5>
+                    {%- if hasChildren -%}
+                      <div class="inner-menu">
+                        {%- for childlink in link.links -%}
+                          <div class="dropdown-item">
+                            <a class="nav-link" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                          </div>
+                        {%- endfor -%}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+              </div>
+              <div class="all-item">
+                {%- assign megaMenuBottomLink = section.settings.mega_menu_bottom_link | default: "/collections/all-mattresses" | url_escape -%}
+                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink }}">{{ section.settings.mega_menu_bottom_label }}</a>
+              </div>
+            </div>
+          </div>
+          {%- for link in section.settings.bottom_menu.links -%}
+            {%- assign hasChildren = link.links | empty | default: false -%}
+            <div class="nav-item {%- if hasChildren -%}{{" dropdown"}}{%- endif -%}">
+              <a class=" {%- if hasChildren -%}{{"dropdown-toggle "}}{%- endif -%}nav-link" href="{{ link.url }}">{{- link.title | escape -}}</a>
+              {%- if hasChildren -%}
+                <div class="dropdown-menu">
+                  {%- for childlink in link.links -%}
+                    <div class="dropdown-item">
+                      <a class="nav-link" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                    </div>
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+          <div class="has-icon nav-item">
+            {%- if section.settings.match_maker_image != blank -%}
+              <img
+                src="{{ section.settings.match_maker_image | img_url: 'master' }}"
+                alt="bed"
+                width="26"
+                height="25"
+                loading="lazy"
+                class="icon" />
+            {%- else -%}
+              <img
+                src="{{ 'bed-xs.png' | asset_img_url: 'master' }}"
+                alt="bed"
+                width="26"
+                height="25"
+                loading="lazy"
+                class="icon" />
+            {%- endif -%}
+            {%- assign matchMakerLink = section.settings.match_maker_link | default: "/pages/mattress-matchmaker" | url_escape -%}
+            <a class="nav-link" href="{{ matchMakerLink }}">{{ section.settings.match_maker_label }}</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+{% javascript %}
+  (function($) {
+    $(document).ready(function() {
+      $(".main-nav .dropdown-toggle").click(function(e) {
+        e.preventDefault();
+        var $menu = $(this).next(".dropdown-menu");
+        if (! $menu.hasClass("open")) {
+          $(".dropdown-menu.open").removeClass("open").slideUp("fast");
+          $menu.addClass("open").slideDown("fast");
+        } else {
+          $menu.removeClass("open").slideUp("fast");
+        }
+      });
+      $(".dropdown-menu .nav-link").click(function(e) {
+        e.stopPropagation();
+      });
+      $(".nav-link:not(.dropdown-toggle)").click(function(e) {
+        if ($(".main-menu").hasClass("open")) {
+          $(".main-menu").slideUp("fast");
+        }
+      });
+      $(".main-menu-toggle").click(function(e) {
+        $(".main-menu").toggleClass("open").slideToggle("fast");
+      });
+      $(document).on("click", function(e) {
+        if (! $(e.target).closest(".main-nav").length) {
+          $(".main-nav .dropdown-menu.open").removeClass("open").slideUp("fast");
+        }
+      });
+    })
+  })(jQuery)
+{% endjavascript %}
 {% schema %}
-{
-  "name": "t:sections.header-bottom.name",
-  "class": "header-bottom-section",
-  "enabled_on": {
-    "groups": ["header"]
-  },
-  "settings": [
-  ]
-}
+  {
+    "name": "t:sections.header-bottom.name",
+    "class": "header-bottom-section",
+    "enabled_on": {
+      "groups": ["header"]
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "mobile_logo",
+        "label": "Mobile Logo"
+      },
+      {
+        "type": "text",
+        "id": "meta_menu_title",
+        "default": "All Mattresses",
+        "label": "Mega Menu Title"
+      },
+      {
+        "type": "link_list",
+        "id": "mega_menu",
+        "label": "Mega Menu"
+      },
+      {
+        "type": "text",
+        "id": "mega_menu_bottom_label",
+        "default": "VIEW ALL MATTRESSES",
+        "label": "Mega Menu Bottom Label"
+      },
+      {
+        "type": "url",
+        "id": "mega_menu_bottom_link",
+        "label": "Mega Menu Bottom Link"
+      },
+      {
+        "type": "link_list",
+        "id": "bottom_menu",
+        "label": "Bottom Menu"
+      },
+      {
+        "type": "image_picker",
+        "id": "match_maker_image",
+        "label": "Mach Maker Image"
+      },
+      {
+        "type": "text",
+        "id": "match_maker_label",
+        "default": "Mattress Matchmaker",
+        "label": "Match Maker Label"
+      },
+      {
+        "type": "url",
+        "id": "match_maker_link",
+        "label": "Match Maker Link"
+      }
+    ]
+  }
 {% endschema %}

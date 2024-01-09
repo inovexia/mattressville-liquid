@@ -8,6 +8,16 @@
     display: block;
   }
 }
+@media (max-width: 1200px) {
+  .header-top .container {
+    max-width: unset;
+  }
+}
+@media (max-width: 992px) {
+  .header-top .container {
+    padding: unset;
+  }
+}
 .header-top .header-inner {
   display: flex;
 }
@@ -66,28 +76,28 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .header-top .header-inner .center .search-box .btn-search .gsi {
-  color: #fe3c61;
+  color: var(--accent-color);
   font-size: 22px;
 }
 .header-top .header-inner .center .search-box .search-input {
+  background-clip: padding-box;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  border: none;
+  box-shadow: none;
+  color: var(--secondary-color);
+  flex-grow: 1;
+  font-size: 12px;
   font-size: 1rem;
   font-weight: 400;
+  height: 100%;
   line-height: 1.5;
-  background-color: #ffffff;
-  background-clip: padding-box;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: #535353;
+  line-height: 14px;
+  outline-offset: 0;
+  outline: none;
   padding-block: 4px;
   padding-inline: 0;
-  height: 100%;
-  font-size: 12px;
-  line-height: 14px;
-  flex-grow: 1;
-  border: none;
-  outline: none;
-  outline-offset: 0;
-  box-shadow: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .header-top .header-inner .end {
   flex-shrink: 1;
@@ -112,7 +122,7 @@
   align-items: center;
   background-color: transparent;
   border: none;
-  color: #535353;
+  color: var(--secondary-color);
   cursor: pointer;
   display: flex;
   font-size: 18px;
@@ -129,7 +139,7 @@
   align-items: center;
   background-color: transparent;
   border: none;
-  color: #535353;
+  color: var(--secondary-color);
   cursor: pointer;
   display: flex;
   font-size: 18px;
@@ -137,6 +147,7 @@
   justify-content: center;
   line-height: 24px;
   padding: 0 20px;
+  text-decoration: none;
 }
 .header-top .header-inner .end .end-menu .mini-cart .cart-toggle .icon {
   position: relative;
@@ -178,7 +189,7 @@
   align-items: center;
   background-color: transparent;
   border: none;
-  color: #535353;
+  color: var(--secondary-color);
   cursor: pointer;
   display: flex;
   font-size: 18px;

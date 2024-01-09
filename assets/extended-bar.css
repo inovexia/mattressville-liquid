@@ -1,11 +1,11 @@
 .extended-bar {
-  width: 100%;
-  background-color: #d7355c;
-  display: block;
-  text-align: center;
-  font-size: 13px;
+  background-color: var(--accent-color);
   color: #ffffff;
+  display: block;
+  font-size: 13px;
   padding: 15px 20px;
+  text-align: center;
+  width: 100%;
 }
 @media (min-width: 1200px) {
   .extended-bar {
@@ -26,15 +26,16 @@
   margin-bottom: 0;
 }
 .extended-bar .content a {
-  color: #ffffff;
+  color: inherit;
   text-decoration: underline;
 }
 .extended-bar .content button {
-  color: #ffffff;
-  cursor: pointer;
-  text-decoration: underline;
-  margin-left: 10px;
-  background-color: #d7355c;
+  background-color: var(--accent-color);
   border: none;
+  color: inherit;
+  cursor: pointer;
+  line-height: 1.5;
+  margin-left: 10px;
   padding: 0;
+  text-decoration: underline;
 }

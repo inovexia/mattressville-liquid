@@ -1,9 +1,19 @@
 .header-mid {
   align-items: center;
-  background: #535353;
+  background: var(--secondary-color);
   color: #ffffff;
   display: flex;
   height: 40px;
+
+  .container {
+    @media (max-width: 1200px) {
+      max-width: unset;
+    }
+
+    @media (max-width: 992px) {
+      padding: unset;
+    }
+  }
 
   .inner {
     align-items: center;

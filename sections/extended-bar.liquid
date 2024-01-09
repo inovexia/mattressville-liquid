@@ -1,6 +1,6 @@
 {{ 'extended-bar.css' | asset_url | stylesheet_tag }}
 {%- if section.settings.bar_text != blank -%}
-<div class="extended-bar" style="background-color: {{ settings.theme_accent }};">
+<div class="extended-bar" style="color: {{ section.settings.text_color }};">
   <div class="content">
     {{ section.settings.bar_text }}
     <button class="dismiss-extended-bar">Dismiss</button>
@@ -15,6 +15,12 @@
     "groups": ["header"]
   },
   "settings": [
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
     {
       "type": "richtext",
       "id": "bar_text",

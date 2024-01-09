@@ -100,6 +100,8 @@
       }
 
       :root {
+        --accent-color: {{ settings.theme_accent }};
+        --secondary-color: {{ settings.theme_secondary }};
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
@@ -278,7 +280,7 @@
         onload="this.media='all'"
       >
     {%- endif -%}
-    <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'jquery.min.js' | asset_url }}"></script>
     <script src="{{ 'script.js' | asset_url }}" defer></script>
 
     <script>
