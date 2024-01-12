@@ -8,14 +8,13 @@
           class="logo"
           aria-current="page">
           {%- if section.settings.logo != blank -%}
-            {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
-            {{ section.settings.logo | image_url: width: 260 | image_tag:
- class: 'logo-img',
- loading: 'lazy',
- height: 30,
- width: 260,
- alt: logo_alt
-            }}
+            <img
+              src="{{ section.settings.footer_logo | img_url: 'master' }}"
+              alt="Logo"
+              width="260"
+              height="30"
+              loading="lazy"
+              class="logo-img" />
           {%- else -%}
             <img
               src="{{ 'mattressville-logo.png' | asset_img_url: 'master' }}"

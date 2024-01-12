@@ -1,0 +1,404 @@
+{% style %}
+  :root  {
+    --footer-mobile-bg: {{ section.settings.background_color }};
+  }
+{% endstyle %}
+{{ 'footer-mobile.css' | asset_url | stylesheet_tag }}
+<div class="container">
+  <div class="accordion">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'about_area' -%}
+          <div class="item">
+            <div class="header">
+              <button type="button" class="btn-toggle">
+                <span>{{ block.settings.section_title | escape }}</span>
+                <i class="gsi gs-chevron-up"></i>
+              </button>
+            </div>
+            <div class="collapse show">
+              <div class="content about">
+                <div class="description">
+                  {{ block.settings.section_content | escape }}<span class="mail-us">{{ block.settings.contact_mail | escape }}</span>
+                </div>
+                <div class="menu">
+                  {%- for item in block.settings.about_menu.links -%}
+                    <a class="menu-link" area-label="{{ item.title | escape }}" href="{{ item.url }}">{{ item.title | escape }}</a>
+                  {%- endfor -%}
+                </div>
+              </div>
+            </div>
+            <hr class="separator">
+          </div>
+        {%- when 'styles_area' -%}
+          <div class="item">
+            <div class="header">
+              <button type="button" class="btn-toggle">
+                <span>{{ block.settings.section_title | escape }}</span>
+                <i class="gsi gs-chevron-down"></i>
+              </button>
+            </div>
+            <div class="collapse">
+              <div class="content stylesTypes">
+                <div class="areas">
+                  {%- for item in block.settings.styles_menu.links -%}
+                    <div>
+                      <a area-label="{{ item.title | escape }}" href="{{ item.url }}">{{ item.title | escape }}</a>
+                    </div>
+                  {%- endfor -%}
+                </div>
+              </div>
+            </div>
+            <hr class="separator">
+          </div>
+          {%- when 'locations_area' -%}
+            <div class="item">
+              <div class="header">
+                <button type="button" class="btn-toggle">
+                  <span>{{ block.settings.section_title | escape }}</span>
+                  <i class="gsi gs-chevron-down"></i>
+                </button>
+              </div>
+              <div class="collapse">
+                <div class="content location">
+                  <div class="locations">
+                    <div class="flex-fill">
+                      <ul class="list-unstyled">
+                        {%- for item in block.settings.locations_a.links -%}
+                          <li>
+                            <a rel="noreferrer nofollow" href="{{ item.url }}">{{ item.title | escape }}</a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    </div>
+                    <div class="flex-fill">
+                      <ul class="list-unstyled pl-0 mb-0">
+                        {%- for item in block.settings.locations_b.links -%}
+                          <li>
+                            <a rel="noreferrer nofollow" href="{{ item.url }}">{{ item.title | escape }}</a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="separator">
+            </div>
+          {%- when 'brands_area' -%}
+            <div class="item">
+              <div class="header">
+                <button type="button" class="btn-toggle">
+                  <span>{{ block.settings.section_title | escape }}</span>
+                  <i class="gsi gs-chevron-down"></i>
+                </button>
+              </div>
+              <div class="collapse">
+                <div class="content brands">
+                  <div class="brands-list">
+                    {%- for item in block.settings.brands_menu.links -%}
+                      <div>
+                        <a area-label="{{ item.title | escape }}" href="{{ item.url }}">{{ item.title | escape }}</a>
+                      </div>
+                    {%- endfor -%}
+                  </div>
+                </div>
+              </div>
+              <hr class="separator">
+            </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+  <div class="bottom">
+    <div class="inner">
+      <div class="pay-safe">
+        <div class="payment-mods">
+          {%- if section.settings.enable_american_express_payment -%}
+            <img
+              src="{{ 'american_express' | payment_type_img_url }}"
+              alt="american_express"
+              loading="lazy"
+              height="38"
+              width="60" />
+          {%- endif -%}
+          {%- if section.settings.enable_apple_pay_payment -%}
+            <img
+              src="{{ 'apple_pay' | payment_type_img_url }}"
+              alt="apple_pay"
+              loading="lazy"
+              height="38"
+              width="60" />
+          {%- endif -%}
+          {%- if section.settings.enable_diners_club_payment -%}
+            <img
+              src="{{ 'diners_club' | payment_type_img_url }}"
+              alt="diners_club"
+              loading="lazy"
+              height="38"
+              width="60" />
+          {%- endif -%}
+          {%- if section.settings.enable_discover_payment -%}
+            <img
+              src="{{ 'discover' | payment_type_img_url }}"
+              alt="discover"
+              loading="lazy"
+              height="38"
+              width="60" />
+          {%- endif -%}
+          {%- if section.settings.enable_google_pay_payment -%}
+            <img
+              src="{{ 'google_pay' | payment_type_img_url }}"
+              alt="google_pay"
+              loading="lazy"
+              height="38"
+              width="60" />
+          {%- endif -%}
+          {%- if section.settings.enable_master_payment -%}
+            <img
+              src="{{ 'master' | payment_type_img_url }}"
+              alt="master"
+              loading="lazy"
+              height="38"
+              width="60" />
+          {%- endif -%}
+          {%- if section.settings.enable_shopify_pay_payment -%}
+            <img
+              src="{{ 'shopify_pay' | payment_type_img_url }}"
+              alt="shopify_pay"
+              loading="lazy"
+              height="38"
+              width="60" />
+          {%- endif -%}
+          {%- if section.settings.enable_visa_payment -%}
+            <img
+              src="{{ 'visa' | payment_type_img_url }}"
+              alt="visa"
+              loading="lazy"
+              height="38"
+              width="60" />
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="copyright">
+        <p>{{section.settings.copyright_text}}</p>
+      </div>
+      <div class="social-media">
+        {%- if settings.social_twitter_link != blank -%}
+          <a href="{{ settings.social_twitter_link }}" target="_blank" rel="nofollow noreferrer" class="media-link">
+            <i class="gsi gs-twitter-alt"></i>
+          </a>
+        {%- endif -%}
+        {%- if settings.social_facebook_link != blank -%}
+          <a href="{{ settings.social_facebook_link }}" target="_blank" rel="nofollow noreferrer" class="media-link">
+            <i class="gsi gs-facebook-alt"></i>
+          </a>
+        {%- endif -%}
+        {%- if settings.social_instagram_link != blank -%}
+          <a href="{{ settings.social_instagram_link }}" target="_blank" rel="nofollow noreferrer" class="media-link">
+            <i class="gsi gs-instagram"></i>
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+{% javascript %}
+  (function($) {
+    $(document).ready(function() {
+      $(".accordion .btn-toggle").click(function() {
+        var $icon = $(this).find(".gsi");
+        var $collapse = $(this).parents(".item").find(".collapse");
+        $(".accordion .btn-toggle .gsi.gs-chevron-up").addClass("gs-chevron-down").removeClass("gs-chevron-up");
+        if (! $collapse.hasClass("show")) {
+          $(".collapse.show").slideUp("fast").removeClass("show");
+          $collapse.slideDown("fast").addClass("show");
+          $icon.addClass("gs-chevron-up").removeClass("gs-chevron-down");
+        } else {
+          $collapse.slideUp("fast").removeClass("show");
+          $icon.addClass("gs-chevron-down").removeClass("gs-chevron-up");
+        }
+      });
+    })
+  })(jQuery)
+{% endjavascript %}
+{% schema %}
+  {
+    "name": "Footer Mobile",
+    "class": "footer-mobile",
+    "enabled_on": {
+      "groups": ["footer"]
+    },
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#f1f3f4"
+      },
+      {
+        "type": "text",
+        "id": "copyright_text",
+        "label": "Copy Right Text",
+        "default": "© 2023 online mattress store - mattressville.ca. All Rights Reserved."
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_american_express_payment",
+        "default": true,
+        "label": "Enable American Express Payment"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_apple_pay_payment",
+        "default": true,
+        "label": "Enable Apple Pay Payment"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_diners_club_payment",
+        "default": true,
+        "label": "Enable Diners Club Payment"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_discover_payment",
+        "default": true,
+        "label": "Enable Discover Payment"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_google_pay_payment",
+        "default": true,
+        "label": "Enable Google Pay Payment"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_master_payment",
+        "default": true,
+        "label": "Enable Master Payment"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shopify_pay_payment",
+        "default": true,
+        "label": "Enable Shopify Pay Payment"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_visa_payment",
+        "default": true,
+        "label": "Enable Visa Payment"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "about_area",
+        "name": "About Area",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "About Us"
+          },
+          {
+            "type": "textarea",
+            "id": "section_content",
+            "label": "Section Content",
+            "default": "Mattressville is your one stop shop for deals and discounts on premium mattresses and sleep accessories so you can Have a Good Night, Every Night! Shop online or visit us in Mississauga near Toronto and find out why we are the highest rated mattress store."
+          },
+          {
+            "type": "link_list",
+            "id": "about_menu",
+            "label": "About Menu"
+          },
+          {
+            "type": "text",
+            "id": "contact_mail",
+            "label": "Contact Mail",
+            "default": "info@mattressville.ca"
+          }
+        ]
+      },
+      {
+        "type": "brands_area",
+        "name": "Brand Area",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "Brands"
+          },
+          {
+            "type": "link_list",
+            "id": "brands_menu",
+            "label": "Brands Menu"
+          }
+        ]
+      },
+      {
+        "type": "styles_area",
+        "name": "Styles Area",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "Styles/Types"
+          },
+          {
+            "type": "link_list",
+            "id": "styles_menu",
+            "label": "Styles Menu"
+          }
+        ]
+      },
+      {
+        "type": "locations_area",
+        "name": "Locations Area",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "Delivery Areas"
+          },
+          {
+            "type": "link_list",
+            "id": "locations_a",
+            "label": "Locations A"
+          },
+          {
+            "type": "link_list",
+            "id": "locations_b",
+            "label": "Locations B"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Footer Top Columns",
+        "blocks": [
+          {
+            "type": "about_area"
+          },
+          {
+            "type": "styles_area"
+          },
+          {
+            "type": "locations_area"
+          },
+          {
+            "type": "brands_area"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

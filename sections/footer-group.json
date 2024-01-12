@@ -2,52 +2,85 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "footer": {
-      "type": "footer",
+    "footer-mobile": {
+      "type": "footer-mobile",
       "blocks": {
-        "footer-0": {
-          "type": "link_list",
+        "fm-0": {
+          "type": "about_area",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "about_menu": "footer-bottom"
           }
         },
-        "footer-1": {
-          "type": "link_list",
+        "fm-1": {
+          "type": "styles_area",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "styles_menu": "styles"
           }
         },
-        "footer-2": {
-          "type": "text",
+        "fm-2": {
+          "type": "locations_area",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "locations_a": "locations-a",
+            "locations_b": "locations-b"
+          }
+        },
+        "fm-3": {
+          "type": "brands_area",
+          "settings": {
+            "brands_menu": "brands"
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "footer-1",
-        "footer-2"
-      ],
+        "fm-0",
+        "fm-1",
+        "fm-2",
+        "fm-3"
+      ]
+    },
+    "footer-top": {
+      "type": "footer-top",
+      "blocks": {
+        "ft-0": {
+          "type": "about_column"
+        },
+        "ft-1": {
+          "type": "brand_column",
+          "settings": {
+            "brands_menu": "brands"
+          }
+        },
+        "ft-2": {
+          "type": "styles_column",
+          "settings": {
+            "styles_menu": "styles"
+          }
+        },
+        "ft-3": {
+          "type": "locations_column",
+          "settings": {
+            "locations_a": "locations-a",
+            "locations_b": "locations-b"
+          }
+        }
+      },
+      "block_order": [
+        "ft-0",
+        "ft-1",
+        "ft-2",
+        "ft-3"
+      ]
+    },
+    "footer-bottom": {
+      "type": "footer-bottom",
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
-        "show_social": true,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
-        "payment_enable": true,
-        "show_policy": false,
-        "margin_top": 48,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "footer_menu": "footer-bottom"
       }
     }
   },
   "order": [
-    "footer"
+    "footer-mobile",
+    "footer-top",
+    "footer-bottom"
   ]
 }

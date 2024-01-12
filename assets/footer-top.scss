@@ -1,0 +1,110 @@
+.footer-top {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: block;
+    background-color: var(--footer-top-bg);
+    color: var(--secondary-color);
+    padding-block: 50px 128px;
+
+    .container {
+      position: relative;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+
+      .about {
+        color: inherit;
+        max-width: 407px;
+        margin-right: 20px;
+        width: 100%;
+      }
+
+      .brands {
+        color: inherit;
+        max-width: 145px;
+        margin-right: 20px;
+        width: 100%;
+      }
+
+      .style-type {
+        color: inherit;
+        max-width: 190px;
+        margin-right: 20px;
+        width: 100%;
+      }
+
+      .location {
+        color: inherit;
+        max-width: 220px;
+        width: 100%;
+
+        .badge-image {
+          padding-top: 40px;
+          text-align: center;
+          margin-right: 20px;
+
+          img {
+            width: 155px;
+          }
+        }
+      }
+
+      .section-title {
+        color: inherit;
+        display: block;
+        font-weight: 500;
+        margin-bottom: 27px;
+        position: relative;
+        text-decoration: none;
+
+        &::after {
+          border-bottom: 2px solid var(--accent-color);
+          bottom: -10px;
+          content: '';
+          display: block;
+          height: 0;
+          left: 0;
+          position: absolute;
+          width: 80px;
+        }
+      }
+
+      .location-area {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .areas {
+        display: flex;
+        flex-direction: column;
+      }
+
+      a {
+        color: inherit;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+      }
+
+      .mail-us {
+        color: inherit;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration: none;
+      }
+
+      .footer-badges {
+        align-items: center;
+        bottom: -60px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        right: 60px;
+      }
+    }
+  }
+}
