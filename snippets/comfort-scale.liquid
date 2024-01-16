@@ -1,0 +1,38 @@
+{% comment %}
+  {{ product.metafields.meta_data.softness_score }}
+  Renders product comfort-scale.
+  Accepts:
+  - product: {Object} product object
+
+  Usage:
+  {% render 'comfort-scale', product: product %}
+{% endcomment %}
+{% assign level = 0 %}
+
+{% if product.tags contains 'Extra Firm' %}
+  {% assign level = 4 %}
+{% elsif product.tags contains 'Firm' %}
+  {% assign level = 3 %}
+{% elsif product.tags contains 'Medium' %}
+  {% assign level = 2 %}
+{% elsif product.tags contains 'Soft' %}
+  {% assign level = 1 %}
+{% endif %}
+{% if level > 0 %}
+  {{ 'comfort-scale.css' | asset_url | stylesheet_tag }}
+  <div class="comfort-scale">
+    <h4>Comfort Scale</h4>
+    <div class="firm-meter">
+      <h6 class="firmness">
+        <span class="d-block">Soft</span>
+        <span class="d-block">Firm</span>
+      </h6>
+      <div class="meter level-{{ level }}">
+        <span class="meter-block"></span>
+        <span class="meter-block"></span>
+        <span class="meter-block"></span>
+        <span class="meter-block"></span>
+      </div>
+    </div>
+  </div>
+{% endif %}

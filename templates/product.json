@@ -39,8 +39,9 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description"
+        "comfort_scale": {
+          "type": "comfort_scale",
+          "settings": {}
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
@@ -93,7 +94,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
+        "comfort_scale",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",

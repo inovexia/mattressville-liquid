@@ -47,6 +47,7 @@
     {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
     {%- if show_badges %} price--show-badge{% endif -%}
   "
+  style="display: flex;"
 >
   <div class="price__container">
     {%- comment -%}
@@ -62,6 +63,7 @@
               {{- 'products.product.price.regular_price' | t -}}
             </span>
             <span>
+              <div>Compare At</div>
               <s class="price-item price-item--regular variant-item__old-price">
                 {% if settings.currency_code_enabled %}
                   {{ compare_at_price | money_with_currency }}
@@ -74,6 +76,7 @@
         {%- endif -%}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span class="price-item price-item--regular">
+          <div>Our Price</div>
           {{- 'products.product.volume_pricing.price_range' | t: minimum: money_price_min, maximum: money_price_max -}}
         </span>
       {%- else -%}
@@ -83,10 +86,11 @@
         </span>
       {%- endif -%}
     </div>
-    <div class="price__sale">
+    <div class="price__sale" style="display: flex;">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span>
+          <div>Compare At</div>
           <s class="price-item price-item--regular">
             {% if settings.currency_code_enabled %}
               {{ compare_at_price | money_with_currency }}
@@ -97,7 +101,7 @@
         </span>
       {%- endunless -%}
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-      <span class="price-item price-item--sale price-item--last">
+      <span class="price-item price-item--sale price-item--last"><div>Our Price</div>
         {{ money_price }}
       </span>
     </div>
@@ -117,11 +121,11 @@
     </small>
   </div>
   {%- if show_badges -%}
-    <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
+    <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}" style="margin-block: auto;">
       {{ 'products.product.on_sale' | t }}
     </span>
 
-    <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
+    <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}" style="margin-block: auto;">
       {{ 'products.product.sold_out' | t }}
     </span>
   {%- endif -%}
