@@ -54,14 +54,14 @@
 
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 65%;
-    width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 40%;
+    width: calc(40% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
     padding: 0 0 0 4rem;
-    max-width: 35%;
-    width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 60%;
+    width: calc(60% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media).product--right .product__info-wrapper {
@@ -229,8 +229,9 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type='radio']:checked + label {
-  background-color: rgb(var(--color-foreground));
+  background-color: var(--accent-color);
   color: rgb(var(--color-background));
+  border-color: var(--accent-color);
 }
 
 .product-form__input input[type='radio']:not(.disabled) + label > .visually-hidden {
@@ -383,7 +384,7 @@ a.product__text {
 
 @media screen and (min-width: 750px) {
   .product__info-container {
-    max-width: 60rem;
+    max-width: 100%;
   }
 
   .product__info-container .price--on-sale .price-item--regular {
