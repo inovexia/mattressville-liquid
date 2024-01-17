@@ -40,70 +40,94 @@
         <div class="copyright">{{ section.settings.copyright_text }}</div>
         <div class="right-side">
           <div class="payment-mods">
+            {%- if section.settings.enable_google_pay_payment -%}
+              <img
+                src="{{ 'google_pay' | payment_type_img_url }}"
+                alt="google_pay"
+                loading="lazy"
+                height="38"
+                width="60" />
+            {%- endif -%}
+            {%- if section.settings.enable_affirm_payment -%}
+              <img
+                src="{{ 'affirm' | payment_type_img_url }}"
+                alt="affirm"
+                loading="lazy"
+                height="38"
+                width="60" />
+            {%- endif -%}
+            {%- if section.settings.enable_opay_payment -%}
+              <img
+                src="{{ 'opay' | payment_type_img_url }}"
+                alt="opay"
+                loading="lazy"
+                height="38"
+                width="60" />
+            {%- endif -%}
             {%- if section.settings.enable_american_express_payment -%}
               <img
                 src="{{ 'american_express' | payment_type_img_url }}"
                 alt="american_express"
                 loading="lazy"
-                height="26"
-                width="42" />
+                height="38"
+                width="60" />
             {%- endif -%}
             {%- if section.settings.enable_apple_pay_payment -%}
               <img
                 src="{{ 'apple_pay' | payment_type_img_url }}"
                 alt="apple_pay"
                 loading="lazy"
-                height="26"
-                width="42" />
+                height="38"
+                width="60" />
             {%- endif -%}
             {%- if section.settings.enable_diners_club_payment -%}
               <img
                 src="{{ 'diners_club' | payment_type_img_url }}"
                 alt="diners_club"
                 loading="lazy"
-                height="26"
-                width="42" />
+                height="38"
+                width="60" />
             {%- endif -%}
             {%- if section.settings.enable_discover_payment -%}
               <img
                 src="{{ 'discover' | payment_type_img_url }}"
                 alt="discover"
                 loading="lazy"
-                height="26"
-                width="42" />
-            {%- endif -%}
-            {%- if section.settings.enable_google_pay_payment -%}
-              <img
-                src="{{ 'google_pay' | payment_type_img_url }}"
-                alt="google_pay"
-                loading="lazy"
-                height="26"
-                width="42" />
+                height="38"
+                width="60" />
             {%- endif -%}
             {%- if section.settings.enable_master_payment -%}
               <img
                 src="{{ 'master' | payment_type_img_url }}"
                 alt="master"
                 loading="lazy"
-                height="26"
-                width="42" />
+                height="38"
+                width="60" />
             {%- endif -%}
             {%- if section.settings.enable_shopify_pay_payment -%}
               <img
                 src="{{ 'shopify_pay' | payment_type_img_url }}"
                 alt="shopify_pay"
                 loading="lazy"
-                height="26"
-                width="42" />
+                height="38"
+                width="60" />
             {%- endif -%}
             {%- if section.settings.enable_visa_payment -%}
               <img
                 src="{{ 'visa' | payment_type_img_url }}"
                 alt="visa"
                 loading="lazy"
-                height="26"
-                width="42" />
+                height="38"
+                width="60" />
             {%- endif -%}
+            {%- if section.settings.enable_paypal_payment -%}
+              <img
+                src="{{ 'paypal' | payment_type_img_url }}"
+                alt="paypal"
+                loading="lazy"
+                height="38"
+                width="60" />
+              {%- endif -%}
           </div>
           <div class="social-media">
             {%- if settings.social_twitter_link != blank -%}
@@ -176,25 +200,43 @@
       {
         "type": "checkbox",
         "id": "enable_american_express_payment",
-        "default": true,
+        "default": false,
         "label": "Enable American Express Payment"
       },
       {
         "type": "checkbox",
-        "id": "enable_apple_pay_payment",
+        "id": "enable_affirm_payment",
         "default": true,
+        "label": "Enable Affirm Payment"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_paypal_payment",
+        "default": true,
+        "label": "Enable PayPal Payment"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_opay_payment",
+        "default": true,
+        "label": "Enable OPay Payment"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_apple_pay_payment",
+        "default": false,
         "label": "Enable Apple Pay Payment"
       },
       {
         "type": "checkbox",
         "id": "enable_diners_club_payment",
-        "default": true,
+        "default": false,
         "label": "Enable Diners Club Payment"
       },
       {
         "type": "checkbox",
         "id": "enable_discover_payment",
-        "default": true,
+        "default": false,
         "label": "Enable Discover Payment"
       },
       {
@@ -212,7 +254,7 @@
       {
         "type": "checkbox",
         "id": "enable_shopify_pay_payment",
-        "default": true,
+        "default": false,
         "label": "Enable Shopify Pay Payment"
       },
       {

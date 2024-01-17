@@ -224,7 +224,7 @@
 }
 
 .facets__summary:hover .facets__summary-label {
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 0.3rem;
 }
 
@@ -319,7 +319,7 @@
 /* Hover/focus state */
 .facets-layout-list .facets__label:hover .facet-checkbox__text,
 .facets-layout-list input:focus ~ .facet-checkbox__text {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .facets-layout-grid > * {
@@ -748,8 +748,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__open:hover .mobile-facets__open-label {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  text-decoration: none;
 }
 
 .mobile-facets__open > * + * {

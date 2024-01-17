@@ -40,10 +40,10 @@
             <i class="gsi gs-search"></i>
           </button>
           <input
+            required
             type="search"
             name="q"
-            value=""
-            required=""
+            value="{{ search.terms | escape }}"
             placeholder="Search by brand, model..."
             class="search-input" />
           <input

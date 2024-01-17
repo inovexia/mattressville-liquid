@@ -1,0 +1,18 @@
+{% comment %}
+  {{ product.metafields.meta_data.softness_score }}
+  Renders product shipping-areas.
+  Accepts:
+  - product: {Object} product object
+
+  Usage:
+  {% render 'shipping-areas', product: product %}
+{% endcomment %}
+{{ 'shipping-areas.css' | asset_url | stylesheet_tag }}
+{%- if product.metafields.meta_data.shipping_areas != blank -%}
+  <div class="shipping-areas">
+    <h4>
+      <strong>{{ product.metafields.meta_data.shipping_areas }}</strong>
+    </h4>
+  </div>
+{%- endif -%}
+
