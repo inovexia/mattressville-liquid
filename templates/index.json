@@ -3,18 +3,36 @@
     "slideshow_yh9aX9": {
       "type": "slideshow",
       "blocks": {
-        "slide_mp4EPY": {
+        "slide_PEgBhX": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville_banner_1.jpg",
-            "heading": "Welcome to Mattressville",
+            "heading": "",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Shop Now",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_mp4EPY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/younger_generations_are_opting_for_adjustable_beds.webp",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
             "link": "shopify:\/\/collections\/all",
             "button_style_secondary": false,
             "box_align": "middle-right",
-            "show_text_box": true,
+            "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "color_scheme": "",
@@ -24,14 +42,15 @@
         "slide_86rVjX": {
           "type": "slide",
           "settings": {
-            "heading": "Image slide",
+            "image": "shopify:\/\/shop_images\/The_Best_Mattresses_of_2023-Mattressville.webp",
+            "heading": "",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
+            "subheading": "",
+            "button_label": "",
             "link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
-            "show_text_box": true,
+            "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "color_scheme": "",
@@ -40,14 +59,18 @@
         }
       },
       "block_order": [
+        "slide_PEgBhX",
         "slide_mp4EPY",
         "slide_86rVjX"
       ],
+      "custom_css": [
+        "slideshow-component {margin-top: 10px;}"
+      ],
       "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
+        "layout": "grid",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "image_behavior": "none",
         "show_text_below": true,
@@ -94,62 +117,9 @@
         "image_ratio": "adapt",
         "columns_desktop": 4,
         "color_scheme": "",
-        "show_view_all": false,
+        "show_view_all": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -169,7 +139,7 @@
         "show_view_all": true,
         "view_all_style": "link",
         "enable_desktop_slider": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -181,12 +151,132 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_view_all_small_cf19b650-b4a0-4f6e-be32-234348b5b651.webp",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/all-mattresses"
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_flash_deals_small_a42b2aa8-7487-4c2e-b3eb-6a936f200d2d.webp",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/accessories-flash-deals"
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_clearance_small_8af409af-79e4-41d0-960c-115baae569dd.webp",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/clearance"
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 84,
+        "padding_bottom": 84
+      }
+    },
+    "featured_collection_BY7Ca9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Today's Deal",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "flash-deals",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_De6KAC": {
+      "type": "newsletter",
+      "blocks": {
+        "paragraph_EJhQGi": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<h2>Subscribe to our newsletter and enjoy<\/h2>"
+          }
+        },
+        "heading_MxyUbh": {
+          "type": "heading",
+          "settings": {
+            "heading": "5% OFF",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_W7jHhz": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_EJhQGi",
+        "heading_MxyUbh",
+        "email_form_W7jHhz"
+      ],
+      "settings": {
+        "color_scheme": "scheme-6",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "slideshow_yh9aX9",
     "collection_list_m9ETkg",
+    "featured_collection_xLkaJK",
     "multicolumn",
-    "featured_collection_xLkaJK"
+    "featured_collection_BY7Ca9",
+    "newsletter_De6KAC"
   ]
 }
