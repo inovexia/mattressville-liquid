@@ -63,6 +63,9 @@
         "slide_mp4EPY",
         "slide_86rVjX"
       ],
+      "custom_css": [
+        "div {margin-top: 10px;}"
+      ],
       "settings": {
         "layout": "grid",
         "slide_height": "adapt_image",
