@@ -3,7 +3,6 @@
     "main": {
       "type": "main-search",
       "settings": {
-        "products_per_page": 9,
         "columns_desktop": 3,
         "image_ratio": "adapt",
         "show_secondary_image": false,
