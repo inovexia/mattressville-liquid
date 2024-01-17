@@ -136,7 +136,7 @@
         "column_alignment": "left",
         "background_style": "none",
         "button_label": "View All",
-        "button_link": "",
+        "button_link": "shopify:\/\/collections\/all-mattresses",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
