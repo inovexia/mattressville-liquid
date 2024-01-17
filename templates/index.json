@@ -54,6 +54,53 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "collection_list_m9ETkg": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_RAmrLz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mattress-in-a-box"
+          }
+        },
+        "featured_collection_cYE4t9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "memory-foam"
+          }
+        },
+        "featured_collection_GFWCfW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "accessories-adjustable-beds"
+          }
+        },
+        "featured_collection_Qxhk9z": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mattresses-under-500"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_RAmrLz",
+        "featured_collection_cYE4t9",
+        "featured_collection_GFWCfW",
+        "featured_collection_Qxhk9z"
+      ],
+      "settings": {
+        "title": "Shop By Categories",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -134,59 +181,12 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "collection_list_m9ETkg": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_RAmrLz": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "mattress-in-a-box"
-          }
-        },
-        "featured_collection_cYE4t9": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "memory-foam"
-          }
-        },
-        "featured_collection_GFWCfW": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "accessories-adjustable-beds"
-          }
-        },
-        "featured_collection_Qxhk9z": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "mattresses-under-500"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_RAmrLz",
-        "featured_collection_cYE4t9",
-        "featured_collection_GFWCfW",
-        "featured_collection_Qxhk9z"
-      ],
-      "settings": {
-        "title": "Shop By Categories",
-        "heading_size": "h1",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "slideshow_yh9aX9",
+    "collection_list_m9ETkg",
     "multicolumn",
-    "featured_collection_xLkaJK",
-    "collection_list_m9ETkg"
+    "featured_collection_xLkaJK"
   ]
 }
