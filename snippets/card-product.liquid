@@ -34,7 +34,21 @@
     if ratio == 0 or ratio == null
       assign ratio = 1
     endif
-  -%}
+    assign targetTitle = "queen" | downcase
+    assign queenVariant = null
+    assign cardProductUrl = card_product.url
+    for variant in card_product.variants
+      assign variantOptionsLowercase = variant.options | join: ',' | downcase
+      if variantOptionsLowercase contains targetTitle and queenVariant == null
+        assign queenVariant = variant
+        if card_product.url contains '?'
+          assign cardProductUrl = card_product.url | append: '&variant=' | append: queenVariant.id
+        else
+          assign cardProductUrl = card_product.url | append: '?variant=' | append: queenVariant.id
+        endif
+      endif
+    endfor
+  %}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
       class="
@@ -110,7 +124,7 @@
               {% endif %}
             >
               <a
-                href="{{ card_product.url }}"
+                href="{{ cardProductUrl }}"
                 id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
                 class="full-unstyled-link"
                 aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -147,7 +161,7 @@
             {% endif %}
           >
             <a
-              href="{{ card_product.url }}"
+              href="{{ cardProductUrl }}"
               id="CardLink-{{ section_id }}-{{ card_product.id }}"
               class="full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
@@ -198,8 +212,7 @@
                 </span>
               </p>
             {%- endif -%}
-
-            {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% render 'price', product: card_product, price_class: '', queenVariant: queenVariant, use_queen_variant: true, show_compare_at_price: true %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               <div class="card__information-volume-pricing-note">
                 <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
@@ -227,7 +240,7 @@
                   class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
                   aria-haspopup="dialog"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                  data-product-url="{{ card_product.url }}"
+                  data-product-url="{{ cardProductUrl }}"
                 >
                   {{ 'products.product.choose_options' | t }}
                   {%- if horizontal_quick_add -%}
