@@ -128,7 +128,7 @@
         "column_fcPXDa"
       ],
       "settings": {
-        "title": "Multicolumn",
+        "title": "Shop By Categories",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -138,53 +138,6 @@
         "button_label": "View All",
         "button_link": "",
         "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collection_list_m9ETkg": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_RAmrLz": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "mattress-in-a-box"
-          }
-        },
-        "featured_collection_cYE4t9": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "memory-foam"
-          }
-        },
-        "featured_collection_GFWCfW": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "accessories-adjustable-beds"
-          }
-        },
-        "featured_collection_Qxhk9z": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "mattresses-under-500"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_RAmrLz",
-        "featured_collection_cYE4t9",
-        "featured_collection_GFWCfW",
-        "featured_collection_Qxhk9z"
-      ],
-      "settings": {
-        "title": "Shop By Categories",
-        "heading_size": "h1",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "color_scheme": "",
-        "show_view_all": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -341,7 +294,6 @@
   "order": [
     "slideshow_yh9aX9",
     "multicolumn_Yk9bxe",
-    "collection_list_m9ETkg",
     "featured_collection_xLkaJK",
     "multicolumn",
     "featured_collection_BY7Ca9",
