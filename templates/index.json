@@ -54,6 +54,53 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "collection_list_m9ETkg": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_RAmrLz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mattress-in-a-box"
+          }
+        },
+        "featured_collection_cYE4t9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "memory-foam"
+          }
+        },
+        "featured_collection_GFWCfW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "accessories-adjustable-beds"
+          }
+        },
+        "featured_collection_Qxhk9z": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mattresses-under-500"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_RAmrLz",
+        "featured_collection_cYE4t9",
+        "featured_collection_GFWCfW",
+        "featured_collection_Qxhk9z"
+      ],
+      "settings": {
+        "title": "Shop By Categories",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -110,73 +157,26 @@
     "featured_collection_xLkaJK": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "Trending Products",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "",
+        "collection": "all-mattresses",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
+        "view_all_style": "link",
         "enable_desktop_slider": false,
         "color_scheme": "",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
-        "show_vendor": false,
+        "show_vendor": true,
         "show_rating": false,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collection_list_m9ETkg": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_RAmrLz": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "mattress-in-a-box"
-          }
-        },
-        "featured_collection_cYE4t9": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "memory-foam"
-          }
-        },
-        "featured_collection_GFWCfW": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "accessories-adjustable-beds"
-          }
-        },
-        "featured_collection_Qxhk9z": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "mattresses-under-500"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_RAmrLz",
-        "featured_collection_cYE4t9",
-        "featured_collection_GFWCfW",
-        "featured_collection_Qxhk9z"
-      ],
-      "settings": {
-        "title": "Shop By Categories",
-        "heading_size": "h1",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
@@ -185,8 +185,8 @@
   },
   "order": [
     "slideshow_yh9aX9",
+    "collection_list_m9ETkg",
     "multicolumn",
-    "featured_collection_xLkaJK",
-    "collection_list_m9ETkg"
+    "featured_collection_xLkaJK"
   ]
 }
