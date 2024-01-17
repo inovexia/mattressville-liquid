@@ -77,6 +77,73 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "multicolumn_Yk9bxe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_yFRjzY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/category1.webp",
+            "title": "",
+            "text": "",
+            "link_label": "MATTRESS IN A BOX",
+            "link": "shopify:\/\/collections\/mattress-in-a-box"
+          }
+        },
+        "column_MFJrHh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/category2.webp",
+            "title": "",
+            "text": "",
+            "link_label": "MEMORY FOAM MATTRESSES",
+            "link": "shopify:\/\/collections\/memory-foam"
+          }
+        },
+        "column_iTgttr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/category3.webp",
+            "title": "",
+            "text": "",
+            "link_label": "ADJUSTABLE BED BASES",
+            "link": "shopify:\/\/collections\/accessories-adjustable-beds"
+          }
+        },
+        "column_fcPXDa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/category4.webp",
+            "title": "",
+            "text": "",
+            "link_label": "MATTRESS UNDER $500",
+            "link": "shopify:\/\/collections\/mattresses-under-500"
+          }
+        }
+      },
+      "block_order": [
+        "column_yFRjzY",
+        "column_MFJrHh",
+        "column_iTgttr",
+        "column_fcPXDa"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "View All",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collection_list_m9ETkg": {
       "type": "collection-list",
       "blocks": {
@@ -273,6 +340,7 @@
   },
   "order": [
     "slideshow_yh9aX9",
+    "multicolumn_Yk9bxe",
     "collection_list_m9ETkg",
     "featured_collection_xLkaJK",
     "multicolumn",
