@@ -64,7 +64,7 @@
         "slide_86rVjX"
       ],
       "custom_css": [
-        "div {margin-top: 10px;}"
+        "slideshow-component {margin-top: 10px;}"
       ],
       "settings": {
         "layout": "grid",
