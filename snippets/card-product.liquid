@@ -34,20 +34,96 @@
     if ratio == 0 or ratio == null
       assign ratio = 1
     endif
-    assign targetTitle = "queen" | downcase
-    assign queenVariant = null
-    assign cardProductUrl = card_product.url
-    for variant in card_product.variants
-      assign variantOptionsLowercase = variant.options | join: ',' | downcase
-      if variantOptionsLowercase contains targetTitle and queenVariant == null
-        assign queenVariant = variant
-        if card_product.url contains '?'
-          assign cardProductUrl = card_product.url | append: '&variant=' | append: queenVariant.id
-        else
-          assign cardProductUrl = card_product.url | append: '?variant=' | append: queenVariant.id
+    assign results = null
+    if collection != blank
+      assign results = collection
+    else if search != blank
+      assign results = search
+    endif
+    assign filterSize = null
+    assign filterSizeCount = 0
+    for filter in results.filters
+      for value in filter.active_values
+        if filter.label == 'Size'
+          if filterSize == null
+            assign filterSize = value.label
+          endif
+          assign filterSizeCount = filterSizeCount | plus: 1 
         endif
-      endif
+      endfor
     endfor
+    assign targetTitle = "queen" | downcase
+    if filterSizeCount > 0
+      if filterSize != null and filterSizeCount > 1
+        assign targetTitle = null
+      else if filterSize != null and filterSizeCount == 1
+        assign targetTitle = filterSize | downcase
+      endif
+    endif
+    assign targetVariant = null
+    assign cardProductUrl = card_product.url
+    if targetTitle != null
+      for variant in card_product.variants
+        assign variantOptionsLowercase = variant.options | join: ',' | downcase
+        if variantOptionsLowercase contains targetTitle and targetVariant == null
+          assign targetVariant = variant
+          if card_product.url contains '?'
+            assign cardProductUrl = card_product.url | append: '&variant=' | append: targetVariant.id
+          else
+            assign cardProductUrl = card_product.url | append: '?variant=' | append: targetVariant.id
+          endif
+        endif
+      endfor
+    endif
+  assign vendorImage = null
+  assign vendorImageH = 0
+  assign vendorImageW = 0
+  case card_product.vendor
+    when 'Beautyrest'
+      assign vendorImage = 'beauty.jpg' | asset_img_url: 'master'
+      assign vendorImageH = 50
+      assign vendorImageW = 216
+    when 'Beaudoin'
+      assign vendorImage = 'beaudoin.jpg' | asset_img_url: 'master'
+      assign vendorImageH = 50
+      assign vendorImageW = 270
+    when 'Galaxy Bedding'
+      assign vendorImage = 'galaxy.jpg' | asset_img_url: 'master'
+      assign vendorImageH = 50
+      assign vendorImageW = 102
+    when 'Kingsdown'
+      assign vendorImage = 'kingsdown.jpg' | asset_img_url: 'master'
+      assign vendorImageH = 50
+      assign vendorImageW = 117
+    when 'Mattressville'
+      assign vendorImage = 'mville-new.jpg' | asset_img_url: 'master'
+      assign vendorImageH = 50
+      assign vendorImageW = 158
+    when 'Natura'
+      assign vendorImage = 'natura.jpg' | asset_img_url: 'master'
+      assign vendorImageH = 50
+      assign vendorImageW = 100
+    when 'Sealy'
+      assign vendorImage = 'sealy.jpg' | asset_img_url: 'master'
+      assign vendorImageH = 50
+      assign vendorImageW = 58
+    when 'Serta'
+      assign vendorImage = 'serta.jpg' | asset_img_url: 'master'
+      assign vendorImageH = 50
+      assign vendorImageW = 50
+    when 'Serta iComfort'
+      assign vendorImage = 'iComfort.jpg' | asset_img_url: 'master'
+      assign vendorImageH = 50
+      assign vendorImageW = 186
+    when 'Stearns & Foster'
+      assign vendorImage = 'sf.jpg' | asset_img_url: 'master'
+      assign vendorImageH = 50
+      assign vendorImageW = 155
+    when 'Tempur-Pedic'
+      assign vendorImage = 'tempur.jpg' | asset_img_url: 'master'
+      assign vendorImageH = 50
+      assign vendorImageW = 182
+  endcase
   %}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
@@ -172,7 +248,17 @@
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-              <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
+              {%- if vendorImage != null -%}
+                <img
+                  src="{{ vendorImage }}"
+                  aalt="{{ card_product.vendor }}"
+                  class="footer-logo"
+                  loading="lazy"
+                  height="{{ vendorImageH }}"
+                  width="{{ vendorImageW }}" />
+              {%- else -%}
+                <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
+              {%- endif -%}
             {%- endif -%}
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
@@ -212,7 +298,7 @@
                 </span>
               </p>
             {%- endif -%}
-            {% render 'price', product: card_product, price_class: '', queenVariant: queenVariant, use_queen_variant: true, show_compare_at_price: true %}
+            {% render 'price', product: card_product, price_class: '', targetVariant: targetVariant, use_target_variant: true, show_compare_at_price: true %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               <div class="card__information-volume-pricing-note">
                 <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
