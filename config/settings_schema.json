@@ -4,8 +4,8 @@
     "theme_name": "MattressVille",
     "theme_version": "1.0.0",
     "theme_author": "Team Innovexia",
-    "theme_documentation_url": "https://github.com/inovexia/mattressville-liquid",
-    "theme_support_url": "https://github.com/inovexia/mattressville-liquid/issues"
+    "theme_documentation_url": "https:\/\/github.com\/inovexia\/mattressville-liquid",
+    "theme_support_url": "https:\/\/github.com\/inovexia\/mattressville-liquid\/issues"
   },
   {
     "name": "t:settings_schema.logo.name",

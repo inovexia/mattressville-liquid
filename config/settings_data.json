@@ -135,6 +135,20 @@
     "content_for_index": [
 
     ],
+    "blocks": {
+      "410654874852735521": {
+        "type": "shopify:\/\/apps\/fordeer-product-labels\/blocks\/badge\/6efba0f5-50fb-446d-8a52-da07098aad0c",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "10534424223343191814": {
+        "type": "shopify:\/\/apps\/customer-dashboard\/blocks\/app-embed\/f81081fd-cd04-43ee-897a-18ef0e5d9b04",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
