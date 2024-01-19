@@ -1,6 +1,8 @@
 {
   "current": {
+    "logo": "shopify:\/\/shop_images\/mattressville-logo-no-slogan.png",
     "logo_width": 260,
+    "favicon": "shopify:\/\/shop_images\/favicon_862dbb71-c24a-4a7a-bd64-12a92645a18f.png",
     "theme_accent": "#d7355c",
     "theme_secondary": "#535353",
     "thin_font": "roboto_n3",
