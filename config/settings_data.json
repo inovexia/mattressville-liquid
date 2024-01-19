@@ -1,6 +1,6 @@
 {
   "current": {
-    "logo_width": 90,
+    "logo_width": 260,
     "theme_accent": "#d7355c",
     "theme_secondary": "#535353",
     "thin_font": "roboto_n3",
@@ -11,7 +11,7 @@
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
     "body_scale": 100,
-    "page_width": 1300,
+    "page_width": 1260,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -206,7 +206,7 @@
   },
   "presets": {
     "Default": {
-      "logo_width": 90,
+      "logo_width": 260,
       "theme_accent": "#d7355c",
       "theme_secondary": "#535353",
       "color_schemes": {

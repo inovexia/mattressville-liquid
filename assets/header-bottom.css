@@ -212,6 +212,7 @@
     position: relative;
     display: flex;
     top: 0;
+    z-index: unset;
   }
 }
 .header-bottom .main-nav .main-menu .nav-area {
