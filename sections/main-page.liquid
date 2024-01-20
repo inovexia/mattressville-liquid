@@ -1,25 +1,63 @@
 {{ 'section-main-page.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+  .page-header {
+    color: {{ section.settings.header_color }};
+    background-image: url("{{ section.settings.header_bg_image | img_url: 'master' }}");
+    background-position: center;
+    margin-bottom: {{ section.settings.header_margin_bottom }}px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+  }
+  .page-header::before {
+    background-color: {{ section.settings.header_bg_color }};
+    content: "";
+    position: absolute;
+    opacity: {{ section.settings.header_bg_color_opacity | divided_by: 100.0 }};
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .header-{{ section.id }}-padding {
+    padding-top: {{ section.settings.header_padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.header_padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .header-{{ section.id }}-padding {
+      padding-top: {{ section.settings.header_padding_top }}px;
+      padding-bottom: {{ section.settings.header_padding_bottom }}px;
+    }
+  }
+
+  .content-{{ section.id }}-padding {
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
+    .content-{{ section.id }}-padding {
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
 {%- endstyle -%}
-
-<div class="container container section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    {{ page.title | escape }}
-  </h1>
-  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    {{ page.content }}
+<div class="section">
+  <div class="page-header header-{{ section.id }}-padding">
+    <div class="container">
+      <h1 class="page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        {{ page.title | escape }}
+      </h1>
+    </div>
+  </div>
+  <div class="page-content content-{{ section.id }}-padding">
+    <div class="container">
+      <div class="content rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ page.content }}
+      </div>
+    </div>
   </div>
 </div>
 
@@ -27,21 +65,79 @@
 {
   "name": "t:sections.main-page.name",
   "tag": "section",
-  "class": "section",
   "settings": [
     {
       "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
+      "content": "Page Header"
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "label": "Header Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "header_bg_color",
+      "label": "Header Background Color",
+      "default": "#ff5c78"
     },
     {
       "type": "range",
-      "id": "padding_top",
+      "id": "header_bg_color_opacity",
       "min": 0,
       "max": 100,
-      "step": 4,
+      "step": 5,
+      "unit": "%",
+      "label": "Header Background Color Opacity",
+      "default": 60
+    },
+    {
+      "type": "image_picker",
+      "id": "header_bg_image",
+      "label": "Header Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Header Padding"
+    },
+    {
+      "type": "range",
+      "id": "header_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
-      "default": 36
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "header_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 70
+    },
+    {
+      "type": "header",
+      "content": "Header Margin"
+    },
+    {
+      "type": "range",
+      "id": "header_margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Margin",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Content Padding"
     },
     {
       "type": "range",

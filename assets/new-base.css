@@ -87,17 +87,36 @@ hr {
   overflow: visible;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-weight: 500;
+  line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
-
-p {
+body h1 {
+  font-size: 40px;
+}
+body h2 {
+  font-size: 32px;
+}
+body h3 {
+  font-size: 28px;
+}
+body h4 {
+  font-size: 24px;
+}
+body h5 {
+  font-size: 20px;
+}
+body h6 {
+  font-size: 16px;
+}
+body p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -223,6 +242,10 @@ img {
 
 .gs-instagram:before {
   content: "\e984";
+}
+
+.gs-chevron-right::before {
+  content: "\e930";
 }
 
 .gs-chevron-down:before {

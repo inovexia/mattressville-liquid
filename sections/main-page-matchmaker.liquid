@@ -1,0 +1,250 @@
+{{ 'section-main-page-matchmaker.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+{%- endstyle -%}
+<div class="left-area">
+  <div class="left-inner">
+    <div class="bread-crumb">
+      <a class="home" href="/">Home</a>
+      <i class="gsi gs-chevron-right"></i>
+      <span>Mattress Matchmaker</span>
+    </div>
+    <h1 class="tool-title">Mattress Matchmaker</h1>
+    <div class="tool-area">
+      <div class="sub-title-block">
+        <h4 class="tool-sub-title">Let’s find your perfect mattress!</h4>
+        <p class="tool-sub-desc">Answer the following questions about your sleeping preferences so we can get your best match.</p>
+      </div>
+      <div class="bed-icon-block">
+        <div class="icon-wrap">
+          <img
+            src="{{ 'bed-1.5x.png' | asset_img_url: 'master' }}"
+            alt="bed"
+            width="232"
+            height="226"
+            loading="lazy"
+            class="bed-img" />
+        </div>
+      </div>
+    </div>
+    <div class="progress-wrapper">
+      <div class="steps">
+        <span class="step active" id="step-1">1</span>
+        <span class="step" id="step-2">2</span>
+        <span class="step" id="step-3">3</span>
+        <span class="step" id="step-4">4</span>
+        <div class="bar progress-1"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<form class="right-area">
+  <div class="right-inner">
+    <div class="quiz-box">
+      <div id="question-1" class="question-blok active">
+        <div class="question">
+          <h3>In what position do you most comfortably sleep?</h3>
+        </div>
+        <div class="options-wrapper">
+          <div class="vertical">
+            <button type="button" class="btn-quiz-option vertical-1" value="On Your Side">
+              <img
+                alt="A pink colored vector image of a pillow and a human sleeping on it sideways."
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q1o1.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              <strong class="label">ON YOUR SIDE</strong>
+            </button>
+            <button type="button" class="btn-quiz-option vertical-1" value="On Your Back">
+              <img
+                alt="A pink colored vector image of a pillow and a human sleeping on it."
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q1o2.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              <strong class="label">ON YOUR BACK/STOMACH</strong>
+            </button>
+            <button type="button" class="btn-quiz-option vertical-1" value="Toss and Turn">
+              <img
+                alt="A pink colored vector image of a pillow and a human sleeping on it."
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q1o3.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              <strong class="label">ALL OVER THE PLACE</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="question-2" class="question-blok">
+        <div class="question">
+          <h3>What's your preferred mattress comfort level?</h3>
+        </div>
+        <div class="options-wrapper">
+          <div class="grid">
+            <button type="button" class="btn-quiz-option grid-1" value="Soft">
+              <img
+                alt="A pink colored vector image of a human sleeping but a pillow in his hand."
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q2o1.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              <strong class="label">SOFT</strong>
+            </button>
+            <button type="button" class="btn-quiz-option grid-1" value="Medium">
+              <img
+                alt="A pink colored vector image of a pillow and a human sleeping on it."
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q2o2.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              <strong class="label">MEDIUM</strong>
+            </button>
+            <button type="button" class="btn-quiz-option grid-1" value="Firm">
+              <img
+                alt="A pink colored vector image of a pillow and a human sleeping on it."
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q2o3.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              <strong class="label">FIRM</strong>
+            </button>
+            <button type="button" class="btn-quiz-option grid-1" value="Extra Firm">
+              <img
+                alt="A pink colored vector image of a pillow and a human sleeping on it."
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q2o4.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              <strong class="label">EXTRA FIRM</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="question-3" class="question-blok">
+        <div class="question">
+          <h3>What is your body type?</h3>
+        </div>
+        <div class="options-wrapper">
+          <div class="grid">
+            <button type="button" class="btn-quiz-option grid-2" value="Small">
+              <strong class="label">SMALL</strong>
+              <img
+                alt="q3o1"
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q3o1.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              <span class="desc">Typically under 130lbs.</span>
+            </button>
+            <button type="button" class="btn-quiz-option grid-2" value="Average">
+              <strong class="label">AVERAGE</strong>
+              <img
+                alt="q3o2"
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q3o2.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              <span class="desc">Between 130lbs and 210lbs.</span>
+            </button>
+            <button type="button" class="btn-quiz-option grid-2" value="Large">
+              <strong class="label">LARGE</strong>
+              <img
+                alt="q3o3"
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q3o3.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              <span class="desc">Between 210lbs and 280lbs.</span>
+            </button>
+            <button type="button" class="btn-quiz-option grid-2" value="Extra Large">
+              <strong class="label">EXTRA LARGE</strong>
+              <img
+                alt="q3o4"
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q3o4.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              <span class="desc">Over 280lbs.</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="question-4" class="question-blok">
+        <div class="question">
+          <h3>What type of mattress are you interested in?</h3>
+        </div>
+        <div class="options-wrapper">
+          <div class="vertical-full">
+            <button type="button" class="btn-quiz-option vertical-full-3" value="Modern">
+              <div class="flex-shrink-1">
+                <img
+                alt="q4o1"
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q4o1.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              </div>
+              <div class="flex-grow-1">
+                <strong class="label">FOAM CORE MATTRESS</strong>
+                <span class="desc">Special bedding is made with the newest in mattress technology including specialty longer lasting foams, innovative cooling systems and advanced pressure relief systems which help eliminate back pain and provide the best sleep possible.</span>
+              </div>
+            </button>
+            <button type="button" class="btn-quiz-option vertical-full-3" value="Traditional">
+              <div class="flex-shrink-1">
+                <img
+                alt="q4o2"
+                class="image"
+                height="160"
+                loading="lazy"
+                src="{{ 'q4o2.jpg' | asset_img_url: 'master' }}"
+                width="220" />
+              </div>
+              <div class="flex-grow-1">
+                <strong class="label">TRADITIONAL INNERSPRING MATTRESS</strong>
+                <span class="desc">Mattress technologies have come a long way in the past decade and most good quality innerspring mattresses now provide advanced back support and quality materials for a comfortable night's sleep.</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="quiz-navigation">
+      <button type="button" class="btn-navigate prev" disabled="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
+          <path d="M25 6.5L1 6.5M1 6.5L7 1M1 6.5L7 12" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span class="label">PREV</span>
+      </button>
+      <button type="button" class="btn-navigate next">
+        <span class="label">NEXT</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
+          <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</form>
+{% schema %}
+{
+  "name": "Mattress Matchmaker",
+  "tag": "section",
+  "class": "matchmaker-section",
+  "settings": [
+    
+  ]
+}
+{% endschema %}
