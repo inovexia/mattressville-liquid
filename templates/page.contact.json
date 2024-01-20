@@ -3,7 +3,6 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "header_margin_bottom": 0,
         "padding_bottom": 0
       }
     },

@@ -2,7 +2,8 @@
   "sections": {
     "coupons": {
       "type": "main-page-coupons",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [

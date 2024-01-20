@@ -2,7 +2,8 @@
   "sections": {
     "matchmaker": {
       "type": "main-page-matchmaker",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
