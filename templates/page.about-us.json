@@ -1,9 +1,8 @@
 {
   "sections": {
     "main": {
-      "type": "main-page",
+      "type": "main-page-sidebar",
       "settings": {
-        "padding_bottom": 28
       }
     }
   },
