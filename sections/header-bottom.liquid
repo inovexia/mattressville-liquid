@@ -2,54 +2,6 @@
 <div class="header-bottom">
   <div class="container">
     <div class="main-nav">
-      <div class="mobile-middle">
-        <a
-          class="logo"
-          href="{{ routes.root_url }}"
-          aria-current="page">
-          {%- if section.settings.mobile_logo != blank -%}
-            {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
-            {{ section.settings.mobile_logo | image_url: width: 260, height: 30 | image_tag: class: 'logo-img', loading: 'lazy', alt: 'logo_alt', style: 'margin:10px 0' }}
-          {%- else -%}
-            <img
-              src="{{ 'mattressville-logo.png' | asset_img_url: 'master' }}"
-              alt="Logo"
-              width="260"
-              height="30"
-              loading="lazy"
-              class="logo-img"
-              style="margin:10px 0" />
-          {%- endif -%}
-        </a>
-        <form
-          action="{{ routes.search_url }}"
-          method="get"
-          role="search"
-          class="search-box">
-          <button
-            aria-label="Search"
-            type="submit"
-            class="btn-search"
-            aria-label="{{ 'Search' }}">
-            <i class="gsi gs-search"></i>
-          </button>
-          <input
-            type="search"
-            name="q"
-            value=""
-            required=""
-            placeholder="Search by brand, model..."
-            class="search-input" />
-          <input
-            type="hidden"
-            name="type"
-            value="product" />
-          <input
-            type="hidden"
-            name="options[prefix]"
-            value="last" />
-        </form>
-      </div>
       <div class="mobile-bottom">
         <div class="start">
           <button
@@ -62,36 +14,10 @@
           </button>
         </div>
         <div class="end">
-          <ul class="mobile-bottom-right">
-            <li class="mini-cart">
-              <a
-                class="cart-link"
-                href="{{ routes.cart_url }}"
-                aria-label="Cart Items">
-                <span class="icon-wrapper" data-quantity="0">
-                  <i class="gsi gs-shopping-cart"></i>
-                </span>
-              </a>
-            </li>
-            {%- if shop.customer_accounts_enabled -%}
-              <li class="login">
-                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="cart-link">
-                  <span class="icon-wrapper">
-                    <i class="gsi gs-log-in"></i>
-                  </span>
-                  <span class="visually-hidden">
-                    {%- liquid
-                      if customer
-                        echo 'customer.account_fallback' | t
-                      else
-                        echo 'customer.log_in' | t
-                      endif
-                    -%}
-                  </span>
-                </a>
-              </li>
-            {%- endif -%}
-          </ul>
+          <a href="tel:{{ section.settings.phone_number }}">
+            <i class="gsi gs-phone"></i>
+            <span>{{ section.settings.phone_number }}</span>
+          </a>
         </div>
       </div>
       <div class="main-menu">
@@ -207,9 +133,10 @@
     },
     "settings": [
       {
-        "type": "image_picker",
-        "id": "mobile_logo",
-        "label": "Mobile Logo"
+        "type": "text",
+        "id": "phone_number",
+        "label": "Phone Number",
+        "default": "1905-212-7722"
       },
       {
         "type": "text",

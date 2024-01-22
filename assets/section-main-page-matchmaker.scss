@@ -8,15 +8,21 @@
     margin: 0 auto;
     display: flex;
     overflow-y: visible;
+
+    &.please-wait {
+      cursor: progress;
+    }
   }
 
   .left-area {
     flex-shrink: 1;
 
+    &.quiz-started {
+      display: none;
+    }
+
     .left-inner {
       background-color: #eff9f9;
-      display: flex;
-      flex-direction: column;
       height: calc(100vh - 134px);
       padding-left: 20px;
       padding-right: 20px;
@@ -51,99 +57,148 @@
         padding-right: 69px;
       }
 
-      .bread-crumb {
-        align-items: center;
-        display: flex;
-        margin: 23px 0 20px;
-
-        .home {
-          color: var(--secondary-color);
-          font-weight: 700;
-          text-decoration: none;
-          white-space: nowrap;
-        }
-
-        span {
-          color: var(--secondary-color);
-          font-size: 16px;
-        }
-      }
-
-      .tool-title {
-        color: var(--secondary-color);
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 42px;
-        padding-bottom: 7px;
-        margin-bottom: 0;
-        position: relative;
-        margin-top: 0;
-
-        &::after {
-          border-bottom: 2px solid var(--accent-color);
-          bottom: 0;
-          content: '';
-          display: inline-block;
-          left: 0;
-          position: absolute;
-          width: 80px;
-        }
-      }
-
-      .tool-area {
-        flex-grow: 1;
+      .left-wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        margin-top: 0px;
+        height: 100%;
+        padding-top: 24px;
 
-        .sub-title-block {
-          text-align: center;
+        .bread-crumb {
+          align-items: center;
+          display: flex;
+          margin-bottom: 20px;
 
-          .tool-sub-title {
+          .home {
             color: var(--secondary-color);
-            font-size: 24px;
-            line-height: 28px;
-            margin-bottom: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
           }
 
-          .tool-sub-desc {
+          span {
             color: var(--secondary-color);
-            font-size: 14px;
-            line-height: 22px;
-            margin-bottom: 0;
+            font-size: 16px;
           }
         }
 
-        .bed-icon-block {
+        .tool-title {
+          color: var(--secondary-color);
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 42px;
+          padding-bottom: 7px;
+          margin-bottom: 0;
+          position: relative;
+          margin-top: 0;
+
+          &::after {
+            border-bottom: 2px solid var(--accent-color);
+            bottom: 0;
+            content: '';
+            display: inline-block;
+            left: 0;
+            position: absolute;
+            width: 80px;
+          }
+        }
+
+        .tool-area {
+          flex-grow: 1;
           display: flex;
-          justify-content: center;
+          flex-direction: column;
+          justify-content: unset;
+          margin-top: 0px;
+          margin-bottom: 109px;
 
-          .icon-wrap {
-            align-items: center;
-            background-color: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            height: 150px;
-            justify-content: center;
-            margin-top: 24px;
-            width: 150px;
+          @media (min-width: 992px) {
+            justify-content: space-evenly;
+            margin-bottom: 0;
+          }
 
-            @media (min-width: 375px) {
-              height: 250px;
-              width: 250px;
+          .sub-title-block {
+            text-align: center;
+
+            .tool-sub-title {
+              color: var(--secondary-color);
+              font-size: 24px;
+              line-height: 28px;
+              margin-bottom: 10px;
             }
 
-            @media (min-width: 992px) {
+            .tool-sub-desc {
+              color: var(--secondary-color);
+              font-size: 14px;
+              line-height: 22px;
+              margin-bottom: 0;
+            }
+          }
+
+          .bed-icon-block {
+            display: flex;
+            justify-content: center;
+
+            .icon-wrap {
               align-items: center;
               background-color: #ffffff;
               border-radius: 50%;
               display: flex;
-              height: 302px;
+              height: 150px;
               justify-content: center;
-              margin-top: 0;
-              width: 302px;
+              margin-top: 24px;
+              width: 150px;
+
+              @media (min-width: 375px) {
+                height: 250px;
+                width: 250px;
+              }
+
+              @media (min-width: 992px) {
+                align-items: center;
+                background-color: #ffffff;
+                border-radius: 50%;
+                display: flex;
+                height: 302px;
+                justify-content: center;
+                margin-top: 0;
+                width: 302px;
+              }
+
+              .bed-img {
+                color: #ffffff;
+                width: 150px;
+                height: auto;
+
+                @media (min-width: 992px) {
+                  width: auto;
+                }
+              }
             }
+          }
+        }
+
+        .btn-start-quiz {
+          align-items: center;
+          background-color: var(--accent-color);
+          border: none;
+          bottom: 0;
+          color: #ffffff;
+          cursor: pointer;
+          display: flex;
+          font-size: 16px;
+          font-weight: 700;
+          height: 60px;
+          justify-content: space-between;
+          left: 0;
+          line-height: 19px;
+          letter-spacing: 0.05em;
+          padding-right: 45px;
+          padding-left: 50px;
+          position: absolute;
+          text-transform: uppercase;
+          width: 100%;
+
+          @media (min-width: 992px) {
+            display: none;
           }
         }
       }
@@ -153,6 +208,7 @@
           position: absolute;
           width: 2px;
           height: 100%;
+          top: 0;
           right: 0;
           z-index: 1;
 
@@ -227,11 +283,94 @@
     display: none;
     height: calc(100vh - 134px);
 
+    &.start {
+      display: flex;
+      flex-direction: column;
+    }
+
     @media (min-width: 992px) {
       flex-grow: 1;
       position: unset;
-      display: block;
+      display: block !important;
       height: unset;
+    }
+
+    .progress-wrapper {
+      height: auto;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      width: 100%;
+
+      @media (min-width: 992px) {
+        display: none;
+      }
+
+      .steps {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        justify-content: space-evenly;
+
+        .step {
+          align-items: center;
+          border-radius: 50%;
+          background-color: #f1f3f4;
+          color: #535353;
+          display: inline-flex;
+          height: 40px;
+          justify-content: center;
+          transition: all 0.2s ease;
+          width: 40px;
+
+          &.active {
+            background-color: var(--accent-color);
+            box-shadow: 0 3px 10px #7e00181a;
+            color: #ffffff;
+          }
+        }
+
+        .progress-box {
+          position: absolute;
+          top: 50%;
+          z-index: -1;
+          width: 100%;
+
+          .bar {
+            background-color: #ff5c7b;
+            display: block;
+            left: 0;
+            position: absolute;
+            top: 0;
+            height: 2px;
+            transition: width 0.2s ease;
+            width: 0;
+            z-index: -1;
+
+            &.progress-1 {
+              width: 20%;
+            }
+
+            &.progress-2 {
+              width: 40%;
+            }
+
+            &.progress-3 {
+              width: 60%;
+            }
+
+            &.progress-4 {
+              width: 80%;
+            }
+
+            &.progress-5 {
+              width: 100%;
+            }
+          }
+        }
+      }
     }
 
     .right-inner {
@@ -244,6 +383,10 @@
       padding-left: 20px;
       position: relative;
       width: 100%;
+
+      .quiz-navigation {
+        display: none;
+      }
 
       @media (min-width: 992px) {
         height: 100%;
@@ -287,7 +430,8 @@
               }
             }
 
-            &.next {
+            &.next,
+            &.finish {
               .label {
                 margin-right: 18px;
               }
@@ -342,17 +486,25 @@
             padding-bottom: 18px;
 
             .btn-quiz-option {
+              align-items: center;
               background-color: #ffffff;
               border: 1px solid #f1f3f4;
               box-shadow: 0 10px 30px #0000000d;
               border-radius: 15px;
+              display: flex;
+              justify-content: flex-start;
               cursor: pointer;
               padding: 10px;
               position: relative;
               width: 100%;
               z-index: 0;
 
-              &:hover, &.active {
+              &:not(:last-child) {
+                margin-bottom: 10px;
+              }
+
+              &:hover,
+              &.active {
                 border: 1px solid var(--accent-color);
               }
 
@@ -362,6 +514,7 @@
                   display: flex;
                   height: 100px;
                   justify-content: flex-start;
+                  margin-bottom: 0;
                 }
 
                 &:not(:last-child) {
@@ -376,14 +529,14 @@
                 line-height: 18px;
 
                 @media (min-width: 992px) {
-                    font-size: 20px;
-                    line-height: 23px;
-                    margin-left: 32px;
+                  font-size: 20px;
+                  line-height: 23px;
+                  margin-left: 32px;
                 }
               }
 
               &::after {
-                content: "";
+                content: '';
                 height: 100%;
                 left: 0;
                 position: absolute;
@@ -413,8 +566,98 @@
                 width: 514px;
               }
             }
+
+            .vertical-full {
+              .btn-quiz-option {
+                &.vertical-full-3 {
+                  align-items: center;
+                  display: flex;
+                  height: 144px;
+                  text-align: left;
+
+                  .start {
+                    flex-shrink: 1;
+
+                    .image {
+                      margin-right: 20px;
+                      min-width: 75px;
+
+                      @media (min-width: 992px) {
+                        min-width: 110px;
+                      }
+                    }
+                  }
+
+                  .end {
+                    flex-grow: 1;
+
+                    .label {
+                      margin-bottom: 5px;
+                      margin-left: 0;
+                    }
+
+                    .label,
+                    .desc {
+                      display: block;
+                    }
+                  }
+                }
+              }
+            }
+
+            .grid {
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-template-columns: 1fr 1fr;
+              grid-row-gap: 20px;
+              grid-column-gap: 20px;
+
+              .btn-quiz-option {
+                &.grid-1 {
+                  align-items: center;
+                  display: flex;
+                  height: 100px;
+                  justify-content: flex-start;
+                }
+
+                &.grid-2 {
+                  align-items: center;
+                  display: flex;
+                  flex-direction: column;
+                  height: 215px;
+                  justify-content: space-evenly;
+                }
+              }
+            }
           }
         }
+      }
+    }
+
+    .btn-previous {
+      align-items: center;
+      background-color: var(--accent-color);
+      border: none;
+      bottom: 0;
+      color: #ffffff;
+      column-gap: 8px;
+      cursor: pointer;
+      display: flex;
+      font-size: 16px;
+      font-weight: 700;
+      height: 60px;
+      justify-content: center;
+      left: 0;
+      letter-spacing: 0.05em;
+      line-height: 19px;
+      padding-left: 50px;
+      padding-right: 45px;
+      position: absolute;
+      text-transform: uppercase;
+      width: 100%;
+
+      @media (min-width: 992px) {
+        display: none;
       }
     }
   }
