@@ -46,10 +46,10 @@
     </div>
     <div class="progress-wrapper">
       <div class="steps">
-        <span class="step active">1</span>
-        <span class="step">2</span>
-        <span class="step">3</span>
-        <span class="step">4</span>
+        <span class="step step-1 active">1</span>
+        <span class="step step-2">2</span>
+        <span class="step step-3">3</span>
+        <span class="step step-4">4</span>
         <div class="bar progress-1"></div>
       </div>
     </div>
@@ -61,10 +61,10 @@
   <input type="hidden" name="filter.v.price.lte" value="" />
   <div class="progress-wrapper">
     <div class="steps">
-      <span class="step active">1</span>
-      <span class="step">2</span>
-      <span class="step">3</span>
-      <span class="step">4</span>
+      <span class="step step-1 active">1</span>
+      <span class="step step-2">2</span>
+      <span class="step step-3">3</span>
+      <span class="step step-4">4</span>
       <div class="progress-box">
         <div class="bar progress-1"></div>
       </div>
@@ -322,7 +322,7 @@
           $(`#question-${step}`).removeClass('active');
           $(`.progress-wrapper .bar`).removeClass(`progress-${step}`);
           step = step - 1;
-          $(`#step-${step}`).addClass('active');
+          $(`.step-${step}`).addClass('active');
           $(`#question-${step}`).addClass('active');
           $(`.progress-wrapper .bar`).addClass(`progress-${step}`);
         }
@@ -341,7 +341,7 @@
           $(`#question-${step}`).removeClass('active');
           $(`.progress-wrapper .bar`).removeClass(`progress-${step}`);
           step = step + 1;
-          $(`#step-${step}`).addClass('active');
+          $(`.step-${step}`).addClass('active');
           $(`#question-${step}`).addClass('active');
           $(`.progress-wrapper .bar`).addClass(`progress-${step}`);
         } else {
