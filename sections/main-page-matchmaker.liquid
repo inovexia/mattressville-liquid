@@ -1,47 +1,79 @@
 {{ 'section-main-page-matchmaker.css' | asset_url | stylesheet_tag }}
-
-{%- style -%}
-{%- endstyle -%}
 <div class="left-area">
   <div class="left-inner">
-    <div class="bread-crumb">
-      <a class="home" href="/">Home</a>
-      <i class="gsi gs-chevron-right"></i>
-      <span>Mattress Matchmaker</span>
-    </div>
-    <h1 class="tool-title">Mattress Matchmaker</h1>
-    <div class="tool-area">
-      <div class="sub-title-block">
-        <h4 class="tool-sub-title">Let’s find your perfect mattress!</h4>
-        <p class="tool-sub-desc">Answer the following questions about your sleeping preferences so we can get your best match.</p>
+    <div class="left-wrapper">
+      {%- if section.settings.show_breadcrumb -%}
+      <div class="bread-crumb">
+        <a class="home" href="/">Home</a>
+        <i class="gsi gs-chevron-right"></i>
+        <span>{{ section.settings.page_title }}</span>
       </div>
-      <div class="bed-icon-block">
-        <div class="icon-wrap">
-          <img
-            src="{{ 'bed-1.5x.png' | asset_img_url: 'master' }}"
-            alt="bed"
-            width="232"
-            height="226"
-            loading="lazy"
-            class="bed-img" />
+      {%- endif -%}
+      <h1 class="tool-title">{{ section.settings.page_title }}</h1>
+      <div class="tool-area">
+        <div class="sub-title-block">
+          <h4 class="tool-sub-title">{{ section.settings.sub_title }}</h4>
+          <p class="tool-sub-desc">{{ section.settings.description }}</p>
+        </div>
+        <div class="bed-icon-block">
+          <div class="icon-wrap">
+            {%- if section.settings.featured_image != blank -%}
+              <img
+                src="{{ section.settings.featured_image | img_url: 'master' }}"
+                alt="bed"
+                width="232"
+                height="226"
+                loading="lazy"
+                class="bed-img" />
+            {%- else -%}
+              <img
+                src="{{ 'bed-1.5x.png' | asset_img_url: 'master' }}"
+                alt="bed"
+                width="232"
+                height="226"
+                loading="lazy"
+                class="bed-img" />
+            {%- endif -%}
+          </div>
         </div>
       </div>
+      <button type="button" class="btn-start-quiz">
+        <span>START QUIZ</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="26" height="13" class="my-auto">
+          <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
     </div>
     <div class="progress-wrapper">
       <div class="steps">
-        <span class="step active" id="step-1">1</span>
-        <span class="step" id="step-2">2</span>
-        <span class="step" id="step-3">3</span>
-        <span class="step" id="step-4">4</span>
+        <span class="step step-1 active">1</span>
+        <span class="step step-2">2</span>
+        <span class="step step-3">3</span>
+        <span class="step step-4">4</span>
         <div class="bar progress-1"></div>
       </div>
     </div>
   </div>
 </div>
-<form class="right-area">
+<form class="right-area" action="{{ "/collections/all" | url }}" method="get">
+  <input type="hidden" name="sort_by" value="manual" />
+  <input type="hidden" name="filter.v.price.gte" value="" />
+  <input type="hidden" name="filter.v.price.lte" value="" />
+  <div class="progress-wrapper">
+    <div class="steps">
+      <span class="step step-1 active">1</span>
+      <span class="step step-2">2</span>
+      <span class="step step-3">3</span>
+      <span class="step step-4">4</span>
+      <div class="progress-box">
+        <div class="bar progress-1"></div>
+      </div>
+    </div>
+  </div>
   <div class="right-inner">
     <div class="quiz-box">
       <div id="question-1" class="question-blok active">
+        <input type="hidden" class="question-value" name="filter.p.tag" value="" />
         <div class="question">
           <h3>In what position do you most comfortably sleep?</h3>
         </div>
@@ -81,6 +113,7 @@
         </div>
       </div>
       <div id="question-2" class="question-blok">
+        <input type="hidden" class="question-value" name="filter.p.tag" value="" />
         <div class="question">
           <h3>What's your preferred mattress comfort level?</h3>
         </div>
@@ -130,6 +163,7 @@
         </div>
       </div>
       <div id="question-3" class="question-blok">
+        <input type="hidden" class="question-value" name="filter.p.tag" value="" />
         <div class="question">
           <h3>What is your body type?</h3>
         </div>
@@ -183,13 +217,14 @@
         </div>
       </div>
       <div id="question-4" class="question-blok">
+        <input type="hidden" class="question-value" name="filter.p.tag" value="" />
         <div class="question">
           <h3>What type of mattress are you interested in?</h3>
         </div>
         <div class="options-wrapper">
           <div class="vertical-full">
             <button type="button" class="btn-quiz-option vertical-full-3" value="Modern">
-              <div class="flex-shrink-1">
+              <div class="start">
                 <img
                 alt="q4o1"
                 class="image"
@@ -198,13 +233,13 @@
                 src="{{ 'q4o1.jpg' | asset_img_url: 'master' }}"
                 width="220" />
               </div>
-              <div class="flex-grow-1">
+              <div class="end">
                 <strong class="label">FOAM CORE MATTRESS</strong>
                 <span class="desc">Special bedding is made with the newest in mattress technology including specialty longer lasting foams, innovative cooling systems and advanced pressure relief systems which help eliminate back pain and provide the best sleep possible.</span>
               </div>
             </button>
             <button type="button" class="btn-quiz-option vertical-full-3" value="Traditional">
-              <div class="flex-shrink-1">
+              <div class="start">
                 <img
                 alt="q4o2"
                 class="image"
@@ -213,7 +248,7 @@
                 src="{{ 'q4o2.jpg' | asset_img_url: 'master' }}"
                 width="220" />
               </div>
-              <div class="flex-grow-1">
+              <div class="end">
                 <strong class="label">TRADITIONAL INNERSPRING MATTRESS</strong>
                 <span class="desc">Mattress technologies have come a long way in the past decade and most good quality innerspring mattresses now provide advanced back support and quality materials for a comfortable night's sleep.</span>
               </div>
@@ -225,26 +260,164 @@
     <div class="quiz-navigation">
       <button type="button" class="btn-navigate prev" disabled="">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
-          <path d="M25 6.5L1 6.5M1 6.5L7 1M1 6.5L7 12" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M25 6.5L1 6.5M1 6.5L7 1M1 6.5L7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
         <span class="label">PREV</span>
       </button>
       <button type="button" class="btn-navigate next">
         <span class="label">NEXT</span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
-          <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <button type="submit" class="btn-navigate finish" style="display:none;">
+        <span class="label">FINISH</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
+          <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
       </button>
     </div>
   </div>
+  <button type="button" class="btn-previous">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="26" height="13">
+      <path d="M25 6.5L1 6.5M1 6.5L7 1M1 6.5L7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <span>PREVIOUS</span>
+  </button>
 </form>
+{% javascript %}
+  (function($) {
+    $(document).ready(function() {
+      const startQuiz = $('.matchmaker-section .btn-start-quiz');
+      const previousBtn = $('.matchmaker-section .btn-previous');
+      const prev = $('.matchmaker-section .quiz-navigation .prev');
+      const next = $('.matchmaker-section .quiz-navigation .next');
+      const finish = $('.matchmaker-section .quiz-navigation .finish');
+      const btnQuizQption = $('.matchmaker-section .btn-quiz-option');
+      let step = 1;
+      startQuiz.click(function() {
+        $('.matchmaker-section .left-area').addClass('quiz-started');
+        $('.matchmaker-section .right-area').addClass('start');
+      });
+      previousBtn.click(function() {
+        if(step > 1) {
+          prev.trigger("click");
+        }
+      });
+      btnQuizQption.click(function() {
+        const activeQuestionBlok = $('.matchmaker-section .quiz-box .question-blok.active');
+        activeQuestionBlok.find('.btn-quiz-option.active').removeClass('active');
+        $(this).parents('.question-blok').find('.question-value').val($(this).val());
+        $(this).addClass('active');
+        if ($('.matchmaker-section .right-area').hasClass('start')) {
+          if (step === 4) {
+            finish.trigger("click");
+          } else {
+            next.trigger("click");
+          }
+        }
+      });
+      prev.click(function() {
+        if (step > 1) {
+          $(`#question-${step}`).removeClass('active');
+          $(`.progress-wrapper .bar`).removeClass(`progress-${step}`);
+          step = step - 1;
+          $(`.step-${step}`).addClass('active');
+          $(`#question-${step}`).addClass('active');
+          $(`.progress-wrapper .bar`).addClass(`progress-${step}`);
+        }
+        if (step < 2) {
+          prev.prop("disabled", true);
+        } else {
+          prev.prop("disabled", false);
+        }
+        if (step < 4) {
+          finish.hide();
+          next.show();
+        }
+      });
+      next.click(function() {
+        if (step < 4) {
+          $(`#question-${step}`).removeClass('active');
+          $(`.progress-wrapper .bar`).removeClass(`progress-${step}`);
+          step = step + 1;
+          $(`.step-${step}`).addClass('active');
+          $(`#question-${step}`).addClass('active');
+          $(`.progress-wrapper .bar`).addClass(`progress-${step}`);
+        } else {
+          // finish
+          finish.show();
+          const formData = new FormData();
+          console.log('finish', 'filter.p.tag')
+        }
+        if (step > 1) {
+          prev.prop("disabled", false);
+        } else {
+          prev.prop("disabled", true);
+        }
+        if (step === 4) {
+          finish.show();
+          next.hide();
+        }
+      });
+      finish.click(function(e) {
+        e.preventDefault();
+        let valid = true;
+        $('.question-value').each(function(index) {
+          if ($(this).val() === '') {
+            valid = false;
+          }
+        });
+        if (!valid) {
+          alert('Please select all options');
+          return;
+        }
+        $(`.progress-wrapper .bar`).removeClass(`progress-4`);
+        $(`.progress-wrapper .bar`).addClass(`progress-5`);
+        $(`.matchmaker-section`).addClass(`please-wait`);
+        prev.prop("disabled", true);
+        finish.prop("disabled", true);
+        finish.parents('form').submit();
+      })
+    })
+  })(jQuery)
+{% endjavascript %}
 {% schema %}
 {
   "name": "Mattress Matchmaker",
   "tag": "section",
   "class": "matchmaker-section",
   "settings": [
-    
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumb",
+      "label": "Show Breadbrumb",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "page_title",
+      "label": "Page Title",
+      "default": "Mattress Matchmaker"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "Sub Title",
+      "default": "Let's find your perfect mattress!"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Answer the following questions about your sleeping preferences so we can get your best match."
+    },
+    {
+      "type": "image_picker",
+      "id": "featured_image",
+      "label": "Featured Image",
+      "info": "Default will be used when nothing selected."
+    }
   ]
 }
 {% endschema %}

@@ -27,78 +27,6 @@
     justify-content: flex-start;
   }
 }
-.header-bottom .main-nav .mobile-middle {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border-bottom: 2px solid #e5e5e5;
-  padding: 0 20px;
-}
-@media (min-width: 992px) {
-  .header-bottom .main-nav .mobile-middle {
-    display: none;
-  }
-}
-.header-bottom .main-nav .mobile-middle .logo {
-  display: flex;
-  min-height: 50px;
-}
-.header-bottom .main-nav .mobile-middle .logo .logo-img {
-  height: auto;
-  margin-block: 10px;
-  max-width: 100%;
-}
-.header-bottom .main-nav .mobile-middle .search-box {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  width: 100%;
-}
-.header-bottom .main-nav .mobile-middle .search-box .btn-search {
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  color: #212529;
-  cursor: pointer;
-  display: inline-block;
-  flex-grow: 1;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  padding: 7.5px 12px;
-  max-width: 48px;
-  text-align: center;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.header-bottom .main-nav .mobile-middle .search-box .btn-search .gsi {
-  color: var(--accent-color);
-  font-size: 22px;
-}
-.header-bottom .main-nav .mobile-middle .search-box .search-input {
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  background-color: #ffffff;
-  border-radius: 4px;
-  border: none;
-  box-shadow: none;
-  color: #495057;
-  display: inline-block;
-  flex-grow: 1;
-  font-size: 16px;
-  font-weight: 400;
-  height: 38px;
-  line-height: 1.5;
-  outline-offset: 0;
-  outline: none;
-  padding: 7.5px 12px;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  vertical-align: middle;
-  width: auto;
-}
 .header-bottom .main-nav .mobile-bottom {
   align-items: center;
   display: flex;
@@ -128,7 +56,7 @@
   text-transform: none;
 }
 .header-bottom .main-nav .mobile-bottom .start .main-menu-toggle .stripe {
-  background-color: #535353;
+  background-color: var(--secondary-color);
   border-radius: 10px;
   display: block;
   height: 2px;
@@ -141,54 +69,13 @@
 .header-bottom .main-nav .mobile-bottom .end {
   flex-shrink: 1px;
 }
-.header-bottom .main-nav .mobile-bottom .end .mobile-bottom-right {
-  display: flex;
-  height: 30px;
-  list-style: none;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-.header-bottom .main-nav .mobile-bottom .end .mobile-bottom-right li:first-child {
-  padding-right: 20px;
-}
-.header-bottom .main-nav .mobile-bottom .end .mobile-bottom-right li:last-child {
-  border-left: 2px solid #e6e6e6;
-  padding-left: 20px;
-}
-.header-bottom .main-nav .mobile-bottom .end .mobile-bottom-right .cart-link {
-  cursor: pointer;
+.header-bottom .main-nav .mobile-bottom .end a {
   align-items: center;
-  background-color: transparent;
-  border: none;
-  color: #535353;
-  display: inline-flex;
-  padding: 0;
-  height: 100%;
+  color: var(--secondary-color);
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  display: flex;
   text-decoration: none;
-  white-space: nowrap;
-}
-.header-bottom .main-nav .mobile-bottom .end .mobile-bottom-right .cart-link .icon-wrapper {
-  position: relative;
-}
-.header-bottom .main-nav .mobile-bottom .end .mobile-bottom-right .cart-link .icon-wrapper[data-quantity]::after {
-  align-items: center;
-  background-color: #ff5c7b;
-  border-radius: 50%;
-  color: #ffffff;
-  content: attr(data-quantity);
-  display: flex;
-  font-size: 10px;
-  height: 15px;
-  justify-content: center;
-  line-height: 15px;
-  overflow: hidden;
-  position: absolute;
-  right: -8px;
-  top: -5px;
-  width: 15px;
-}
-.header-bottom .main-nav .mobile-bottom .end .mobile-bottom-right .cart-link .icon-wrapper .gsi {
-  font-size: 23px;
 }
 .header-bottom .main-nav .main-menu {
   background-color: #ffffff;
@@ -210,7 +97,7 @@
   .header-bottom .main-nav .main-menu {
     margin-top: 0;
     position: relative;
-    display: flex;
+    display: flex !important;
     top: 0;
     z-index: unset;
   }

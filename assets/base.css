@@ -2341,6 +2341,16 @@ product-info .loading__spinner:not(.hidden) ~ *,
   top: 0;
 }
 
+.section-header.shopify-section-header-sticky {
+  height: var(--header-height);
+}
+
+.section-header.shopify-section-header-sticky .header-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .shopify-section-header-hidden {
   top: calc(-1 * var(--header-height));
 }
