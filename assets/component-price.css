@@ -38,7 +38,9 @@
 }
 
 .price__regular .price-item--regular {
-  font-size: 14px;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
   margin-right: 0;
 }
 
@@ -108,10 +110,15 @@
   line-height: 1.5;
 }
 
-.price--on-sale .price__sale .price-item.price-item--sale{
+.price--on-sale .price__sale .price-item.price-item--sale {
   font-size: 28px;
   line-height: 1.2;
   font-weight: 700;
+}
+
+.price--on-sale .price__sale .price-item.price-item--regular {
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .unit-price {
