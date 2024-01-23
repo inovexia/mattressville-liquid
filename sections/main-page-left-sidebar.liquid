@@ -1,23 +1,21 @@
 {%- style -%}
 {%- endstyle -%}
 
-<div class="">
-  <div class="page-width page-width section-padding">
-    <div class="grid">
-      <div class="sidebar">
-        {% render 'left-sidebar' %}
-      </div>
-
-      <div class="main-content">
-        <h2 class="page-title {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-          {%- if section.settings.page.title != blank -%}
-            {{ section.settings.page.title | escape }}
-          {%- else -%}
-            {{ 'sections.page.title' | t }}
-          {%- endif -%}
-        </h2>
-      </div>
+<div class="facets-vertical page-width">
+  <aside class="facets-wrapper">
+    <div class="facets-container">
+      {% render 'left-sidebar' %}
     </div>
+  </aside>
+
+  <div class="main-content">
+    <h2 class="page-title {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {%- if section.settings.page.title != blank -%}
+        {{ section.settings.page.title | escape }}
+      {%- else -%}
+        {{ 'sections.page.title' | t }}
+      {%- endif -%}
+    </h2>
   </div>
 </div>
 
