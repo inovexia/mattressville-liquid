@@ -33,11 +33,12 @@
   margin: 0 1rem 0 0;
 }
 
-.card__content .card__information .card-information .vendor-information + .price .price-item{
+.price .price-item {
   margin-right: 0;
 }
 
 .price__regular .price-item--regular {
+  font-size: 14px;
   margin-right: 0;
 }
 
@@ -88,9 +89,10 @@
 }
 
 .price--on-sale .price__sale {
-  display: initial;
+  display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap;
+  font-size: 8px;
   text-align: right;
 }
 
@@ -101,8 +103,15 @@
 
 .price--on-sale .price-item--regular {
   text-decoration: line-through;
-  color: rgba(var(--color-foreground), 0.75);
-  font-size: 1.3rem;
+  color: var(--secondary-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.price--on-sale .price__sale .price-item.price-item--sale{
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
 .unit-price {

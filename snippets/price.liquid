@@ -5,6 +5,7 @@
   - product: {Object} Product Liquid object (optional)
   - targetVariant: {Object} Queen Variant Liquid object (optional)
   - use_variant: {Boolean} Renders selected or first variant price instead of overall product pricing (optional)
+  - at_product: {Boolean} if used from product page (optional)
   - use_target_variant: {Boolean} Renders Queen or first variant price instead of overall product pricing (optional)
   - show_badges: {Boolean} Renders 'Sale' and 'Sold Out' tags if the product matches the condition (optional)
   - price_class: {String} Adds a price class to the price element (optional)
@@ -33,9 +34,9 @@
   assign price_min = product.price_min
   assign price_max = product.price_max
   assign available = target.available | default: false
-  assign money_price = price | money
-  assign money_price_min = price_min | money
-  assign money_price_max = price_max | money
+  assign money_price = price | money_without_trailing_zeros 
+  assign money_price_min = price_min | money_without_trailing_zeros 
+  assign money_price_max = price_max | money_without_trailing_zeros 
   if settings.currency_code_enabled
     assign money_price = price | money_with_currency
     assign money_price_min = price_min | money_with_currency
@@ -57,7 +58,6 @@
     {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
     {%- if show_badges %} price--show-badge{% endif -%}
   "
-  style="display: flex;"
 >
   <div class="price__container">
     {%- comment -%}
@@ -66,7 +66,10 @@
         - div.price__sale: Displayed when a variant is a sale
     {%- endcomment -%}
     {%- if use_target_variant and targetVariant != null -%}
-    <small style="color:var(--accent-color);font-size: 10px;">[{{ targetVariant.option1 }}]</small>
+      <small style="color:var(--accent-color);font-size: 10px;">OUR PRICE [{{ targetVariant.option1 }}]</small>
+    {%- endif -%}
+    {%- if at_product -%}
+      <h3>Our Price</h3>
     {%- endif -%}
     <div class="price__regular">
       {%- if product.quantity_price_breaks_configured? -%}
@@ -81,7 +84,7 @@
                 {% if settings.currency_code_enabled %}
                   {{ compare_at_price | money_with_currency }}
                 {% else %}
-                  {{ compare_at_price | money }}
+                  {{ compare_at_price | money_without_trailing_zeros }}
                 {% endif %}
               </s>
             </span>
@@ -89,7 +92,6 @@
         {%- endif -%}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span class="price-item price-item--regular">
-          <div>Our Price</div>
           {{- 'products.product.volume_pricing.price_range' | t: minimum: money_price_min, maximum: money_price_max -}}
         </span>
       {%- else -%}
@@ -99,7 +101,7 @@
         </span>
       {%- endif -%}
     </div>
-    <div class="price__sale" style="display: flex;">
+    <div class="price__sale">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span>
@@ -108,20 +110,20 @@
             {% if settings.currency_code_enabled %}
               {{ compare_at_price | money_with_currency }}
             {% else %}
-              {{ compare_at_price | money }}
+              {{ compare_at_price | money_without_trailing_zeros }}
             {% endif %}
           </s>
         </span>
       {%- endunless -%}
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-      <span class="price-item price-item--sale price-item--last"><div>Our Price</div>
+      <span class="price-item price-item--sale price-item--last">
         {{ money_price }}
       </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
       <span class="price-item price-item--last">
-        <span>{{- product.selected_or_first_available_variant.unit_price | money -}}</span>
+        <span>{{- product.selected_or_first_available_variant.unit_price | money_without_trailing_zeros -}}</span>
         <span aria-hidden="true">/</span>
         <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
         <span>
