@@ -46,14 +46,14 @@
 {%- endstyle -%}
 <div class="section">
   <div class="page-header header-{{ section.id }}-padding">
-    <div class="container">
+    <div class="page-width">
       <h1 class="page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
         {{ page.title | escape }}
       </h1>
     </div>
   </div>
   <div class="page-content content-{{ section.id }}-padding">
-    <div class="container">
+    <div class="page-width">
       <div class="content rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         {{ page.content }}
       </div>

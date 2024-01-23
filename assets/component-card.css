@@ -88,8 +88,24 @@
   background-color: transparent;
 }
 
+.card__content .card__information .card-information {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
 .card-information {
   text-align: var(--text-alignment);
+}
+
+.card__content .card__information .card-information .vendor-information {
+  flex: 1 0 155px;
+  max-width: 155px;
+}
+
+.card__content .card__information .card-information .vendor-information .vendor-img {
+  max-width: 150px;
+  height: auto;
 }
 
 .card__media,

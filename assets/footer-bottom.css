@@ -57,9 +57,11 @@
   }
   .footer-bottom .end .footer-below .right-side {
     align-items: center;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
     display: flex;
     flex-grow: 1;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-block: auto;
   }
   .footer-bottom .end .footer-below .right-side .payment-mods {
@@ -72,7 +74,6 @@
   }
   .footer-bottom .end .footer-below .right-side .social-media {
     display: flex;
-    min-width: 150px;
   }
   .footer-bottom .end .footer-below .right-side .social-media .media-link {
     background-color: transparent;

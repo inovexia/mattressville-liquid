@@ -49,10 +49,6 @@
       {{ body_font_italic | font_face: font_display: 'swap' }}
       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
-      {{ settings.thin_font | font_face: font_display: 'swap' }}
-      {{ settings.regular_font | font_face: font_display: 'swap' }}
-      {{ settings.medium_font | font_face: font_display: 'swap' }}
-      {{ settings.bold_font | font_face: font_display: 'swap' }}
 
       {% for scheme in settings.color_schemes -%}
         {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
@@ -258,8 +254,8 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'gsi.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'new-base.css' | asset_url | stylesheet_tag }}
-
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}

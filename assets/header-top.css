@@ -8,13 +8,16 @@
     display: block;
   }
 }
+.header-top .page-width {
+  width: 100%;
+}
 @media (max-width: 1200px) {
-  .header-top .container {
+  .header-top .page-width {
     max-width: unset;
   }
 }
 @media (max-width: 992px) {
-  .header-top .container {
+  .header-top .page-width {
     padding: unset;
   }
 }

@@ -1022,6 +1022,10 @@ a.product__text {
   overflow: hidden;
 }
 
+.product__media-list .media .image-magnify-lightbox {
+  position: relative;
+}
+
 .thumbnail-list {
   flex-wrap: wrap;
   grid-gap: 1rem;

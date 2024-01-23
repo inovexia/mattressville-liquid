@@ -2,7 +2,9 @@
   border-bottom: 2px solid var(--accent-color);
   position: relative;
 
-  .container {
+  .page-width {
+    width: 100%;
+
     @media (max-width: 1200px) {
       max-width: unset;
     }

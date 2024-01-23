@@ -1,3 +1,7 @@
+.card__content .card__information .card-information .price {
+  flex-shrink: 1;
+}
+
 .price {
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
@@ -8,6 +12,12 @@
 .price > * {
   display: inline-block;
   vertical-align: top;
+}
+
+.price > .price__container {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
 }
 
 .price.price--unavailable {
@@ -21,6 +31,10 @@
 .price .price-item {
   display: inline-block;
   margin: 0 1rem 0 0;
+}
+
+.card__content .card__information .card-information .vendor-information + .price .price-item{
+  margin-right: 0;
 }
 
 .price__regular .price-item--regular {
@@ -75,8 +89,9 @@
 
 .price--on-sale .price__sale {
   display: initial;
-  flex-direction: row;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
+  text-align: right;
 }
 
 .price--center {

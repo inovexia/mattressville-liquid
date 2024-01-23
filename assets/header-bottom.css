@@ -2,13 +2,16 @@
   border-bottom: 2px solid var(--accent-color);
   position: relative;
 }
+.header-bottom .page-width {
+  width: 100%;
+}
 @media (max-width: 1200px) {
-  .header-bottom .container {
+  .header-bottom .page-width {
     max-width: unset;
   }
 }
 @media (max-width: 992px) {
-  .header-bottom .container {
+  .header-bottom .page-width {
     padding: unset;
   }
 }

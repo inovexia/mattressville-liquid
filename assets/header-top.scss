@@ -7,7 +7,9 @@
     display: block;
   }
 
-  .container {
+  .page-width {
+    width: 100%;
+
     @media (max-width: 1200px) {
       max-width: unset;
     }

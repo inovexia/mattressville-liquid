@@ -8,7 +8,7 @@
     color: var(--secondary-color);
     padding-block: 50px 128px;
   }
-  .footer-top .container {
+  .footer-top .page-width {
     position: relative;
   }
   .footer-top .footer-inner {

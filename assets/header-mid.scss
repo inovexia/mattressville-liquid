@@ -5,7 +5,9 @@
   display: flex;
   height: 40px;
 
-  .container {
+  .page-width {
+    width: 100%;
+
     @media (max-width: 1200px) {
       max-width: unset;
     }

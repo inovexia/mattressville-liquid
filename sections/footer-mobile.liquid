@@ -4,7 +4,7 @@
   }
 {% endstyle %}
 {{ 'footer-mobile.css' | asset_url | stylesheet_tag }}
-<div class="container">
+<div class="page-width">
   <div class="accordion">
     {%- for block in section.blocks -%}
       {%- case block.type -%}

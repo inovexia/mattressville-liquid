@@ -1,5 +1,5 @@
 {{ 'product-content.css' | asset_url | stylesheet_tag }}
-<div class="container">
+<div class="page-width">
   <div class="inner">
     <div class="tabs" role="tablist">
       <div class="tab-item">
@@ -11,11 +11,14 @@
       <div class="tab-item">
         <a href="#tabpane-features" role="tab" class="tab">FEATURES</a>
       </div>
-      {%- if section.settings.review_tab_shortcode != blank -%}
-      <div class="tab-item">
-        <a href="#tabpane-reviews" role="tab" class="tab">REVIEWS</a>
-      </div>
-      {%- endif -%}
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            <div class="tab-item">
+              <a href="#tabpane-reviews" role="tab" class="tab">REVIEWS</a>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
     </div>
     <div class="tab-content">
       <div id="tabpane-description" class="tab-pane active">
@@ -35,13 +38,16 @@
           {{ product.metafields.meta_data.features_tab }}
         </div>
       </div>
-      {%- if section.settings.review_tab_shortcode != blank -%}
-      <div id="tabpane-reviews" class="tab-pane">
-        <div class="tab-container">
-            {{ section.settings.review_tab_shortcode }}
-        </div>
-      </div>
-      {%- endif -%}
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            <div id="tabpane-reviews" class="tab-pane">
+              <div class="tab-container">
+                {% render block %}
+              </div>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
     </div>
   </div>
 </div>
@@ -66,14 +72,12 @@
   "disabled_on": {
     "groups": ["header", "footer"]
   },
-  "settings": [
+  "settings": [],
+  "blocks": [
     {
-      "type": "liquid",
-      "id": "review_tab_shortcode",
-      "label": "Review Type Shortcode"
+      "type": "@app"
     }
   ],
-  "blocks": [],
   "presets": []
 }
 {% endschema %}

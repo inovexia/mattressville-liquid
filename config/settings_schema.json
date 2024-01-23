@@ -120,36 +120,8 @@
       },
       {
         "type": "font_picker",
-        "id": "thin_font",
-        "default": "roboto_n3",
-        "label": "Thin Font",
-        "info": "Thin font to be used here weight 300"
-      },
-      {
-        "type": "font_picker",
-        "id": "regular_font",
-        "default": "roboto_n4",
-        "label": "Regular Font",
-        "info": "Regular font to be used here weight 400"
-      },
-      {
-        "type": "font_picker",
-        "id": "medium_font",
-        "default": "roboto_n5",
-        "label": "Medium Font",
-        "info": "Medium font to be used here weight 500"
-      },
-      {
-        "type": "font_picker",
-        "id": "bold_font",
-        "default": "roboto_n7",
-        "label": "Bold Font",
-        "info": "Bold font to be used here weight 700"
-      },
-      {
-        "type": "font_picker",
         "id": "type_header_font",
-        "default": "assistant_n4",
+        "default": "roboto_n4",
         "label": "t:settings_schema.typography.settings.type_header_font.label",
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
@@ -170,7 +142,7 @@
       {
         "type": "font_picker",
         "id": "type_body_font",
-        "default": "assistant_n4",
+        "default": "roboto_n4",
         "label": "t:settings_schema.typography.settings.type_body_font.label",
         "info": "t:settings_schema.typography.settings.type_body_font.info"
       },
@@ -195,7 +167,7 @@
         "min": 1000,
         "max": 1600,
         "step": 10,
-        "default": 1260,
+        "default": 1360,
         "unit": "px",
         "label": "t:settings_schema.layout.settings.page_width.label"
       },
