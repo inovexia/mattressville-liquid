@@ -5,8 +5,16 @@
        {
             "type": "checkbox",
             "id": "show_sidebar",
-            "label": "Show Sidebar"
+            "label": "Show Sidebar",
+            "default": false
       }
     ]
   }
 {% endschema %}
+
+
+{% if section.settings.show_sidebar == true  %}
+<div class="product-template__container page-width amazon-link-container">
+  <p>This product is no longer in stock, but you can view our range on Amazon.</p>
+</div>
+{% endif %}
