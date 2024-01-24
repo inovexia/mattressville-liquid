@@ -12,9 +12,55 @@
         "header_margin_bottom": 30,
         "padding_bottom": 28
       }
+    },
+    "multicolumn_8BApPV": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_eCBJA8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cta-image.jpg",
+            "title": "<a href=\"\/collections\/all-mattresses\" title=\"All Mattresses\">Shop All Mattresses<\/a>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wwn7RA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bed.png",
+            "title": "<a href=\"https:\/\/mattressville.ca\/mattress-matchmaker\/\">Try our Mattress Matchmaker<\/a>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_eCBJA8",
+        "column_wwn7RA"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-6",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "multicolumn_8BApPV"
   ]
 }
