@@ -10,8 +10,8 @@
             "text_style": "uppercase"
           }
         },
-        "title": {
-          "type": "title",
+        "essentials_XbMJNa": {
+          "type": "essentials",
           "settings": {
           }
         },
@@ -33,16 +33,6 @@
             "heading_2": "",
             "icon_3": "none",
             "heading_3": ""
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "essentials": {
-          "type": "essentials",
-          "settings": {
           }
         },
         "variant_picker": {
@@ -77,7 +67,7 @@
       },
       "block_order": [
         "vendor",
-        "essentials",
+        "essentials_XbMJNa",
         "caption",
         "icon_with_text_apLJb3",
         "variant_picker",
