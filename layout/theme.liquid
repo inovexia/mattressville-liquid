@@ -297,7 +297,13 @@
     {%- endif -%}
     <header>{% sections 'header-group' %}</header>
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout }}
+      {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+
+      <div class="facets-vertical page-width">
+        {% render 'left-sidebar-page' %}
+
+        {{ content_for_layout }}
+      </div>
     </main>
     <footer>{% sections 'footer-group' %}</footer>
     <ul hidden>
