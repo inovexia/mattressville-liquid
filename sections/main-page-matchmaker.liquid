@@ -295,7 +295,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const finish = document.querySelector('.matchmaker-section .quiz-navigation .finish');
   const btnQuizOption = document.querySelectorAll('.matchmaker-section .btn-quiz-option');
   let step = 1;
-
   startQuiz.addEventListener('click', function() {
     const leftArea = document.querySelector('.matchmaker-section .left-area');
     const rightArea = document.querySelector('.matchmaker-section .right-area');
@@ -304,13 +303,11 @@ document.addEventListener("DOMContentLoaded", function() {
       rightArea.classList.add('start');
     }
   });
-
   previousBtn.addEventListener('click', function() {
     if (step > 1) {
       prev.click();
     }
   });
-
   btnQuizOption.forEach(function(button) {
     button.addEventListener('click', function() {
       const activeQuestionBlock = this.closest('.question-blok');
@@ -321,7 +318,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         activeQuestionBlock.querySelector('.question-value').value = this.value;
         this.classList.add('active');
-
         if (document.querySelector('.matchmaker-section .right-area').classList.contains('start')) {
           if (step === 4) {
             finish.click();
@@ -394,7 +390,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(`.matchmaker-section`).classList.add(`please-wait`);
     prev.disabled = true;
     finish.disabled = true;
-
     // Ensure correct access to the form associated with the finish button
     const form = finish.closest('form');
     if (form) {
