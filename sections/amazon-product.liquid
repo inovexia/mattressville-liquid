@@ -11,7 +11,7 @@
   }
 {% endschema %}
 
-{% if product.available == false and section.settings.amazon_link != blank  %}
+{% if section.settings.amazon_link != blank  %}
 <div class="product-template__container page-width amazon-link-container">
   <p>This product is no longer in stock, but you can view our range on Amazon.</p>
   <a href="{{ section.settings.amazon_link }}" title="Go to Amazon" target="_blank">Go to Amazon</a> 
