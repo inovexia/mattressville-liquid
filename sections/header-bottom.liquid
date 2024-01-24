@@ -93,36 +93,79 @@
   </div>
 </div>
 {% javascript %}
-  (function($) {
-    $(document).ready(function() {
-      $(".main-nav .dropdown-toggle").click(function(e) {
-        e.preventDefault();
-        var $menu = $(this).next(".dropdown-menu");
-        if (! $menu.hasClass("open")) {
-          $(".dropdown-menu.open").removeClass("open").slideUp("fast");
-          $menu.addClass("open").slideDown("fast");
-        } else {
-          $menu.removeClass("open").slideUp("fast");
-        }
-      });
-      $(".dropdown-menu .nav-link").click(function(e) {
-        e.stopPropagation();
-      });
-      $(".nav-link:not(.dropdown-toggle)").click(function(e) {
-        if ($(".main-menu").hasClass("open")) {
-          $(".main-menu").slideUp("fast");
-        }
-      });
-      $(".main-menu-toggle").click(function(e) {
-        $(".main-menu").toggleClass("open").slideToggle("fast");
-      });
-      $(document).on("click", function(e) {
-        if (! $(e.target).closest(".main-nav").length) {
-          $(".main-nav .dropdown-menu.open").removeClass("open").slideUp("fast");
-        }
-      });
-    })
-  })(jQuery)
+document.addEventListener("DOMContentLoaded", function() {
+  var mainNavDropdownToggles = document.querySelectorAll(".main-nav .dropdown-toggle");
+  var dropdownMenus = document.querySelectorAll(".dropdown-menu");
+  var mainMenu = document.querySelector(".main-menu");
+  var mainMenuToggle = document.querySelector(".main-menu-toggle");
+  mainNavDropdownToggles.forEach(function(toggle) {
+    toggle.addEventListener("click", function(e) {
+      e.preventDefault();
+      var menu = this.nextElementSibling;
+
+      if (!menu.classList.contains("open")) {
+        closeOpenDropdownMenus();
+        menu.classList.add("open");
+        slideDown(menu);
+      } else {
+        menu.classList.remove("open");
+        slideUp(menu);
+      }
+    });
+  });
+  dropdownMenus.forEach(function(menu) {
+    menu.querySelector(".nav-link").addEventListener("click", function(e) {
+      e.stopPropagation();
+    });
+  });
+  document.querySelectorAll(".nav-link:not(.dropdown-toggle)").forEach(function(link) {
+    link.addEventListener("click", function() {
+      if (mainMenu.classList.contains("open")) {
+        slideUp(mainMenu);
+      }
+    });
+  });
+  mainMenuToggle.addEventListener("click", function() {
+    mainMenu.classList.toggle("open");
+    slideToggle(mainMenu);
+  });
+  document.addEventListener("click", function(e) {
+    if (!e.target.closest(".main-nav")) {
+      closeOpenDropdownMenus();
+    }
+  });
+  function closeOpenDropdownMenus() {
+    document.querySelectorAll(".main-nav .dropdown-menu.open").forEach(function(menu) {
+      menu.classList.remove("open");
+      slideUp(menu);
+    });
+  }
+  function slideUp(element) {
+    element.style.transition = "max-height 0.3s";
+    element.style.maxHeight = 0;
+    element.style.overflow = "hidden";
+    setTimeout(function () {
+      element.style.display = "none";
+    }, 100);
+  }
+  function slideDown(element) {
+    element.style.transition = "max-height 0.3s";
+    element.style.display = "block";
+    element.style.overflow = "hidden";
+    element.style.maxHeight = element.scrollHeight + "px";
+    setTimeout(function () {
+      element.style.maxHeight = "unset";
+    }, 100);
+  }
+  function slideToggle(element) {
+    if (element.clientHeight > 0) {
+      slideUp(element);
+    } else {
+      slideDown(element);
+    }
+  }
+});
+
 {% endjavascript %}
 {% schema %}
   {

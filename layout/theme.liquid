@@ -275,9 +275,6 @@
         onload="this.media='all'"
       >
     {%- endif -%}
-    <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
-    <script src="{{ 'script.js' | asset_url }}" defer></script>
-
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
       if (Shopify.designMode) {

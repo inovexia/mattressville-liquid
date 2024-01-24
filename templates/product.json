@@ -10,8 +10,8 @@
             "text_style": "uppercase"
           }
         },
-        "title": {
-          "type": "title",
+        "essentials_XbMJNa": {
+          "type": "essentials",
           "settings": {
           }
         },
@@ -33,11 +33,6 @@
             "heading_2": "",
             "icon_3": "none",
             "heading_3": ""
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
           }
         },
         "variant_picker": {
@@ -72,10 +67,9 @@
       },
       "block_order": [
         "vendor",
-        "title",
+        "essentials_XbMJNa",
         "caption",
         "icon_with_text_apLJb3",
-        "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",

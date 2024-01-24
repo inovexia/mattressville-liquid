@@ -427,5 +427,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "details[id*=\"filter.p.tag\"]{display: none;}"
+    ]
   }
 }
