@@ -1,0 +1,47 @@
+.invx-sidebar {
+  margin: 0;
+  padding: 0;
+  width: 256px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.invx-sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.invx-sidebar a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.invx-sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.invx-main-content {
+  margin-left: 256px;
+  padding: 1px 16px;
+  height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .invx-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .invx-sidebar a {
+    text-align: center;
+    float: none;
+  }
+  div.invx-main-content {
+    margin-left: 0;
+  }
+}
