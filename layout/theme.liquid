@@ -276,7 +276,7 @@
         onload="this.media='all'"
       >
     {%- endif -%}
-    <script src="{{ 'jquery.min.js' | asset_url }}"></script>
+    <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
     <script src="{{ 'script.js' | asset_url }}" defer></script>
 
     <script>
@@ -297,6 +297,7 @@
     {%- endif -%}
     <header>{% sections 'header-group' %}</header>
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {%  section 'amazon-product' %}
       {{ content_for_layout }}
     </main>
     <footer>{% sections 'footer-group' %}</footer>
