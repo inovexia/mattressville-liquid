@@ -1,47 +1,37 @@
-.invx-sidebar {
-  margin: 0;
-  padding: 0;
-  width: 256px;
-  background-color: #f1f1f1;
-  position: fixed;
+.sidbar-content-container {
   height: 100%;
-  overflow: auto;
+  display: flex;
+}
+.sidbar-content-container > .invx-sidebar {
+  width: 30%;
+  max-width: 300px;
+}
+.sidbar-content-container > .invx-content {
+  position: relative;
+  flex-grow: 1;
 }
 
-.invx-sidebar a {
-  display: block;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-}
-
-.invx-sidebar a.active {
-  background-color: #04aa6d;
-  color: white;
-}
-
-.invx-sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-
-div.invx-main-content {
-  margin-left: 256px;
-  padding: 1px 16px;
-  height: 100%;
-}
-
-@media screen and (max-width: 700px) {
-  .invx-sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
+@media (max-width: 767px) {
+  .sidbar-content-container {
+    overflow: hidden;
+    transform: translateX(-300px);
+    width: calc(100% + 300px);
+    transition: transform 0.2s ease-out;
   }
-  .invx-sidebar a {
-    text-align: center;
-    float: none;
+  .sidbar-content-container > .invx-sidebar {
+    min-width: 300px;
   }
-  div.invx-main-content {
-    margin-left: 0;
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    left: 20px;
+    top: 20px;
+  }
+  .menu-toggle div {
+    width: 35px;
+    height: 5px;
+    background-color: #555;
+    margin: 6px 0;
   }
 }
