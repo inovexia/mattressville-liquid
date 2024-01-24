@@ -128,12 +128,6 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
-      },
-      "amazon-product": {
-        "type": "amazon-product",
-        "settings": {
-          "amazon_link": ""
-        }
       }
     },
     "content_for_index": [
