@@ -22,9 +22,6 @@
       {{ blog.title | escape }}
     </h1>
 
-
-    {% render 'blog-sidebar' %}
-
     <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {%- for article in blog.articles -%}
         <div
