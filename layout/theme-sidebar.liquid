@@ -255,6 +255,7 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'gsi.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'theme-sidebar.css' | asset_url | stylesheet_tag }}
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
@@ -275,7 +276,7 @@
         onload="this.media='all'"
       >
     {%- endif -%}
-    <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'jquery.min.js' | asset_url }}"></script>
     <script src="{{ 'script.js' | asset_url }}" defer></script>
 
     <script>
