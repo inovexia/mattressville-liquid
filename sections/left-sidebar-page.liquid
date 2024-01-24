@@ -14,7 +14,26 @@
 
 
 {% if section.settings.show_sidebar == true  %}
-<div class="product-template__container page-width amazon-link-container">
-  <p>This product is no longer in stock, but you can view our range on Amazon.</p>
+{%- style -%}
+{%- endstyle -%}
+
+<div class="facets-vertical page-width">
+  {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+
+  <aside class="facets-wrapper">
+    <div class="facets-container">
+      {% render 'left-sidebar' %}
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <h2 class="page-title ">
+      {%- if page.title != blank -%}
+        {{ page.title | escape }}
+      {%- else -%}
+      {%- endif -%}
+    </h2>
+  </div>
 </div>
+
 {% endif %}
