@@ -227,23 +227,55 @@
   </div>
 </div>
 {% javascript %}
-  (function($) {
-    $(document).ready(function() {
-      $(".accordion .btn-toggle").click(function() {
-        var $icon = $(this).find(".gsi");
-        var $collapse = $(this).parents(".item").find(".collapse");
-        $(".accordion .btn-toggle .gsi.gs-chevron-up").addClass("gs-chevron-down").removeClass("gs-chevron-up");
-        if (! $collapse.hasClass("show")) {
-          $(".collapse.show").slideUp("fast").removeClass("show");
-          $collapse.slideDown("fast").addClass("show");
-          $icon.addClass("gs-chevron-up").removeClass("gs-chevron-down");
-        } else {
-          $collapse.slideUp("fast").removeClass("show");
-          $icon.addClass("gs-chevron-down").removeClass("gs-chevron-up");
-        }
+document.addEventListener("DOMContentLoaded", function() {
+  var accordionButtons = document.querySelectorAll(".accordion .btn-toggle");
+
+  accordionButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var icon = this.querySelector(".gsi");
+      var collapse = this.closest(".item").querySelector(".collapse");
+
+      document.querySelectorAll(".accordion .btn-toggle .gsi.gs-chevron-up").forEach(function(upIcon) {
+        upIcon.classList.add("gs-chevron-down");
+        upIcon.classList.remove("gs-chevron-up");
       });
-    })
-  })(jQuery)
+
+      if (!collapse.classList.contains("show")) {
+        document.querySelectorAll(".collapse.show").forEach(function(shownCollapse) {
+          slideUp(shownCollapse);
+          shownCollapse.classList.remove("show");
+        });
+
+        slideDown(collapse);
+        collapse.classList.add("show");
+        icon.classList.add("gs-chevron-up");
+        icon.classList.remove("gs-chevron-down");
+      } else {
+        slideUp(collapse);
+        collapse.classList.remove("show");
+        icon.classList.add("gs-chevron-down");
+        icon.classList.remove("gs-chevron-up");
+      }
+    });
+  });
+  function slideUp(element) {
+    element.style.transition = "max-height 0.3s";
+    element.style.maxHeight = 0;
+    element.style.overflow = "hidden";
+    setTimeout(function () {
+      element.style.display = "none";
+    }, 100);
+  }
+  function slideDown(element) {
+    element.style.transition = "max-height 0.3s";
+    element.style.display = "block";
+    element.style.overflow = "hidden";
+    element.style.maxHeight = element.scrollHeight + "px";
+    setTimeout(function () {
+      element.style.maxHeight = "unset";
+    }, 100);
+  }
+});
 {% endjavascript %}
 {% schema %}
   {

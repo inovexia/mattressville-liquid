@@ -5,6 +5,7 @@
   padding-block: 30px 61.24px;
 }
 .footer-mobile .accordion {
+  border: none;
   overflow-anchor: none;
 }
 .footer-mobile .accordion .item {

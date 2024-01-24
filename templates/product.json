@@ -40,6 +40,11 @@
           "settings": {
           }
         },
+        "essentials": {
+          "type": "essentials",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -72,10 +77,9 @@
       },
       "block_order": [
         "vendor",
-        "title",
+        "essentials",
         "caption",
         "icon_with_text_apLJb3",
-        "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",

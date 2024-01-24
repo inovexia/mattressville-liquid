@@ -52,18 +52,25 @@
   </div>
 </div>
 {% javascript %}
-  (function($) {
-    $(document).ready(function() {
-      $(".product-content .tab").click(function(e) {
-        e.preventDefault();
-        const $href = $(this).attr('href');
-        $(".product-content .tabs .tab.active").removeClass("active");
-        $(".product-content .tab-content .tab-pane.active").removeClass("active");
-        $(this).addClass('active');
-        $($href).addClass('active');
-      });
-    })
-  })(jQuery)
+document.addEventListener('DOMContentLoaded', function() {
+  var tabs = document.querySelectorAll('.product-content .tab');
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function(e) {
+      e.preventDefault();
+      var href = this.getAttribute('href');
+      var activeTab = document.querySelector('.product-content .tabs .tab.active');
+      var activeTabContent = document.querySelector('.product-content .tab-content .tab-pane.active');
+      if (activeTab) {
+        activeTab.classList.remove('active');
+      }
+      if (activeTabContent) {
+        activeTabContent.classList.remove('active');
+      }
+      this.classList.add('active');
+      document.querySelector(href).classList.add('active');
+    });
+  });
+});
 {% endjavascript %}
 {% schema %}
 {
