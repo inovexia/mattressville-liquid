@@ -32,8 +32,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Save_150_Coupon.webp",
             "caption": "",
-            "heading": "SAVE $150 COUPON",
-            "text": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE150 ($150 OFF all Orders from $1,500 and Up)<\/strong> at the checkout page. Mattressville reserves the right to void the coupons.<\/p><p><strong>Expires: January 28, 2024<\/strong><\/p>",
+            "heading": "SAVE $100 COUPON",
+            "text": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: SAVE100 ($100 OFF all Orders from $1,000 to $1,499) at the checkout page. Mattressville reserves the right to void the coupons.<\/p><p><strong>Expires: January 28, 2024<\/strong><\/p>",
             "button_label": "Start Saving",
             "button_link": ""
           }
@@ -43,8 +43,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Save_150_Coupon.webp",
             "caption": "",
-            "heading": "SAVE $150 COUPON",
-            "text": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE150 ($150 OFF all Orders from $1,500 and Up)<\/strong> at the checkout page. Mattressville reserves the right to void the coupons.<\/p><p><strong>Expires: January 28, 2024<\/strong><\/p>",
+            "heading": "SAVE $50 COUPON",
+            "text": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: SAVE50 ($50 OFF all Orders from $499 to $999) at the checkout page. Mattressville reserves the right to void the coupons.<\/p><p><strong>Expires: January 28, 2024<\/strong><\/p>",
             "button_label": "Start Saving",
             "button_link": ""
           }
