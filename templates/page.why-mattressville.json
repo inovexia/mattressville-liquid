@@ -80,10 +80,109 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_jANkzF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BQy8PN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Quality Mattress Brands",
+            "heading_size": "h1"
+          }
+        },
+        "text_zUzLHV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When it comes to mattresses, no-name or generic brands are not the same as well recognized name ones. Generic brands have none of the patented features and their components and quality are not the same as the name brand.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BQy8PN",
+        "text_zUzLHV"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_fR7TMb": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_T9tT7g": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville.ca_stern-foster-logo.png",
+            "title": "STEARNS & FOSTER",
+            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
+            "link_label": "View Stearns & Foster Products",
+            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
+          }
+        },
+        "column_B8hBVB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville.ca_stern-foster-logo.png",
+            "title": "STEARNS & FOSTER",
+            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
+            "link_label": "View Stearns & Foster Products",
+            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
+          }
+        },
+        "column_GwnwJn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville.ca_stern-foster-logo.png",
+            "title": "STEARNS & FOSTER",
+            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
+            "link_label": "View Stearns & Foster Products",
+            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
+          }
+        },
+        "column_QQpqiM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville.ca_stern-foster-logo.png",
+            "title": "STEARNS & FOSTER",
+            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
+            "link_label": "View Stearns & Foster Products",
+            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
+          }
+        }
+      },
+      "block_order": [
+        "column_T9tT7g",
+        "column_B8hBVB",
+        "column_GwnwJn",
+        "column_QQpqiM"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "multicolumn_PHYEYn"
+    "multicolumn_PHYEYn",
+    "rich_text_jANkzF",
+    "multicolumn_fR7TMb"
   ]
 }
