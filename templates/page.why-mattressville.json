@@ -177,12 +177,84 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_6cG7tA": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_BEekTh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Full Manufacturer Warranty",
+            "icon": "none",
+            "row_content": "<p>Purchasing a new mattress is an investment, and you should have peace of mind that your investment is protected — that’s why all of our mattresses come with a full manufacturer warranty. This means that if you ever have an issue with your new mattress in the future, you can contact us and we will guide you through the warranty process. Our exceptional after-sales service team works tirelessly to make the warranty process as simple and easy as possible, so you can shop at Mattressville with confidence.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_m6z8qw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Sleep Guarantee",
+            "icon": "none",
+            "row_content": "<p>It's not uncommon for customers to test out a mattress at the store for a few minutes, purchase it with the expectation that it will satisfy their needs, and then after some time, realize that it's too soft or too firm. We understand that the few minutes you get to test out a mattress in-store may not be a good indicator of whether your choice will be right for you in the long-term — and that's where our Comfort Guarantee comes in. A comfortable bed is key to getting a good night's sleep. Our Comfort Guarantee is offered to underline our commitment to providing a great night's sleep. The Comfort Guarantee allows for the replacement of a mattress if you find your original purchase to be of the wrong comfort level. Although it rarely happens that our customers are unsatisfied with their new mattress purchase, we are so confident in our range of quality mattresses that we're willing to give you a couple of months to try out your selection. If you feel at any point that you're not getting the best night's sleep with your new mattress, you can contact us to arrange an exchange for a new mattress.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6UMbwX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Price Match Guarantee",
+            "icon": "none",
+            "row_content": "<p>One of the things you'll discover when shopping with Mattressville is that our products are always priced below what you'll find retail stores. In fact, we're so confident you won't find a better price anywhere else that we offer a 'Price Match Guarantee.' We will beat any competitor's price by 5%, so you can shop with peace of mind.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WdkXkb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Mattress Sleep Experts",
+            "icon": "none",
+            "row_content": "<p>When you make the decision to get a new mattress it may seem like all of them are the same, with differences only in size and thickness. However, not all mattresses are created equal — there are different types and sizes of mattresses, made from different materials, and constructed using different materials. The key to getting quality sleep is finding the mattress that best suits your sleep style and sleep needs. Our non-commissioned, friendly, highly professional and knowledgeable Sleep Consultants can help you select the perfect mattress with no pressure.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JKezXT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Referral Program",
+            "icon": "none",
+            "row_content": "<p>With your Mattressville referral program account, you will be provided with a unique discount link that you can share with your friends to enjoy a number of benefits from us. Our referral program also gives you an opportunity to receive extra cash, free presents, additional discounts or store credit for your future purchases. Contact us online today for more details or give us a call at (888) 841 0905!<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_BEekTh",
+        "collapsible_row_m6z8qw",
+        "collapsible_row_6UMbwX",
+        "collapsible_row_WdkXkb",
+        "collapsible_row_JKezXT"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "multicolumn_PHYEYn",
     "rich_text_jANkzF",
-    "multicolumn_fR7TMb"
+    "multicolumn_fR7TMb",
+    "collapsible_content_6cG7tA"
   ]
 }
