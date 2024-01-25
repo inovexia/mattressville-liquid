@@ -12,8 +12,10 @@
 {%- elsif path[1] contains 'blogs' -%}
   <div class="invx-sidebar">
     <ul class="menu">
-      {% for blog in blogs %}
-        {{ blog.title | link_to: blog.url }}
+      {% for link in linklists['blog-categories'].links %}
+        <li class="menu-link">
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
       {% endfor %}
     </ul>
   </div>
