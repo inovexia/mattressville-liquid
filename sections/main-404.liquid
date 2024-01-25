@@ -1,23 +1,109 @@
-<style type="text/css">
-  .template-404 .title + * {
+{%- style -%}
+  .template-404 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-block: 50px;
+  }
+
+  .template-404 .not-found {
+    font-size: {{ section.settings.not_fond_size }}px;
+    line-height: 1.2;
+    margin-block: 0;
+  }
+
+  .template-404 .title {
+    font-size: {{ section.settings.title_size }}px;
+    margin-block: 0 16px;
+  }
+
+  .template-404 .sub-title {
+    font-size: {{ section.settings.sub_title_size }}px;
+    margin-block: 0 16px;
+  }
+
+  .template-404 .button{
     margin-top: 1rem;
   }
 
   @media screen and (min-width: 750px) {
-    .template-404 .title + * {
+    .template-404 .button {
       margin-top: 2rem;
     }
   }
-</style>
+{%- endstyle -%}
 
-<div class="template-404 page-width page-margin center">
-  <p>
+<div class="template-404 page-width center">
+  <h2 class="not-found">
     {{ 'templates.404.subtext' | t }}
-  </p>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
+  </h2>
+  {%- if section.settings.title_text != blank -%}
+    <h1 class="title">
+      {{ section.settings.title_text }}
+    </h1>
+  {%- else -%}
+    <h1 class="title">
+      {{ 'templates.404.title' | t }}
+    </h1>
+  {%- endif -%}
+  {%- if section.settings.sub_title_text != blank -%}
+    <h4 class="sub-title">
+      {{ section.settings.sub_title_text }}
+    </h4>
+  {%- endif -%}
   <a href="{{ routes.all_products_collection_url }}" class="button">
     {{ 'general.continue_shopping' | t }}
   </a>
 </div>
+{% schema %}
+  {
+    "name": "404 Main",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "range",
+        "id": "not_fond_size",
+        "min": 50,
+        "max": 150,
+        "step": 1,
+        "default": 96,
+        "unit": "px",
+        "label": "404 Font Size"
+      },
+      {
+        "type": "text",
+        "id": "title_text",
+        "label": "Title Text",
+        "default": "The page you requested was not found."
+      },
+      {
+        "type": "range",
+        "id": "title_size",
+        "min": 24,
+        "max": 60,
+        "step": 1,
+        "default": 32,
+        "unit": "px",
+        "label": "Title Font Size"
+      },
+      {
+        "type": "text",
+        "id": "sub_title_text",
+        "label": "Sub Title Text",
+        "default": "Please try using our search to find the right page"
+      },
+      {
+        "type": "range",
+        "id": "sub_title_size",
+        "min": 16,
+        "max": 30,
+        "step": 1,
+        "default": 16,
+        "unit": "px",
+        "label": "Sub Title Font Size"
+      }
+    ]
+  }
+{% endschema %}
