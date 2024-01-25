@@ -32,7 +32,7 @@
         "row_z8Txhc"
       ],
       "custom_css": [
-        ".coupons-section .image-with-text__content--desktop-left > p {font-size: 14px;}"
+        ".coupons-section .image-with-text__content--desktop-left p {font-size: 14px;}"
       ],
       "settings": {
         "desktop_image_width": "large",
