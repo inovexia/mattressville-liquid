@@ -1,7 +1,8 @@
 {
+  "layout": "theme-sidebar",
   "sections": {
     "main": {
-      "type": "main-blog",
+      "type": "main-blog-sidebar",
       "settings": {
         "layout": "collage",
         "show_image": true,
