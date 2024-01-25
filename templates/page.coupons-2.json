@@ -13,16 +13,16 @@
         "padding_bottom": 36
       }
     },
-    "multirow_AE6Byz": {
-      "type": "multirow",
+    "coupons-row": {
+      "type": "coupons-row",
       "blocks": {
         "row_z8Txhc": {
           "type": "row",
           "settings": {
             "image": "shopify:\/\/shop_images\/Save_150_Coupon.webp",
-            "caption": "SAVE $150 COUPON",
-            "heading": "",
-            "text": "<p>Coupons can not be combined with any other <br\/>offer or discount and do not have a cash value. Must be presented at the<br\/> time of purchase or can be applied online by entering coupon code: <strong>SAVE150 ($150 OFF all Orders from $1,500 and Up)<\/strong> at the checkout page. Mattressville reserves the right to void the coupons.<\/p><p><strong>Expires: January 28, 2024<\/strong><\/p>",
+            "caption": "",
+            "heading": "SAVE $150 COUPON",
+            "text": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE150 ($150 OFF all Orders from $1,500 and Up)<\/strong> at the checkout page. Mattressville reserves the right to void the coupons.<\/p><p><strong>Expires: January 28, 2024<\/strong><\/p>",
             "button_label": "Start Saving",
             "button_link": ""
           }
@@ -32,9 +32,8 @@
         "row_z8Txhc"
       ],
       "settings": {
-        "image_height": "adapt",
-        "desktop_image_width": "large",
-        "heading_size": "h0",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
         "text_style": "body",
         "button_style": "secondary",
         "desktop_content_position": "middle",
@@ -50,6 +49,6 @@
   },
   "order": [
     "main",
-    "multirow_AE6Byz"
+    "coupons-row"
   ]
 }
