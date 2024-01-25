@@ -12,93 +12,9 @@
         "header_margin_bottom": 30,
         "padding_bottom": 36
       }
-    },
-    "rich_text_EEmxeU": {
-      "type": "rich-text",
-      "blocks": {
-        "text_MKGzWk": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The foundation, “box spring”, or base, is designed to prolong the life of the mattress by providing solid, stable support. It also elevates the mattress off the floor for better hygiene and a more attractive appearance. Mattressville offers 3 types of foundations: posture box, semi-flex, coil spring.<\/p>"
-          }
-        },
-        "heading_ebRWBw": {
-          "type": "heading",
-          "settings": {
-            "heading": "Posture Box",
-            "heading_size": "h2"
-          }
-        },
-        "text_L4Aarq": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A slatted wooden frame with a flat platform top, it’s usually covered in the same fabric as the mattress for a more cohesive look. A posture box is not a ‘box spring’, as it has no springs, and is therefore less effective for supporting the weight of the mattress.<\/p>"
-          }
-        },
-        "heading_n4BX3p": {
-          "type": "heading",
-          "settings": {
-            "heading": "Semi Flex",
-            "heading_size": "h2"
-          }
-        },
-        "text_HbMwek": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Similar to the construction of the posture box, but with the addition of a rigid metal grid network affixed above the slats, this type of foundation is also very firm and absorbs little weight from the mattress.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_MKGzWk",
-        "heading_ebRWBw",
-        "text_L4Aarq",
-        "heading_n4BX3p",
-        "text_HbMwek"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "rich_text_f6LMaM": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_eakmBH": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h2"
-          }
-        },
-        "text_a8HaKp": {
-          "type": "text",
-          "settings": {
-            "text": "<p>This is the standard ‘box spring’, and it’s usually found matched to mid-priced bedding sets. The coil spring foundation uses a spring system similar to the basic mattress innerspring; however, due to the greater gauge of the coils and the larger size of the foundation, the foundation is much firmer than an innerspring mattress. Nonetheless, the coil spring foundation has the softest feel of any foundation available.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_eakmBH",
-        "text_a8HaKp"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
-    "main",
-    "rich_text_EEmxeU",
-    "rich_text_f6LMaM"
+    "main"
   ]
 }
