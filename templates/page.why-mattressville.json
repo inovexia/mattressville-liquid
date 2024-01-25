@@ -13,68 +13,77 @@
         "padding_bottom": 36
       }
     },
-    "image_banner_hGaNbX": {
-      "type": "image-banner",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/pillows.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
-      }
-    },
-    "rich_text_YUbKKr": {
-      "type": "rich-text",
+    "multicolumn_PHYEYn": {
+      "type": "multicolumn",
       "blocks": {
-        "heading_fMLeLP": {
-          "type": "heading",
+        "column_64GfrG": {
+          "type": "column",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "image": "shopify:\/\/shop_images\/favicon_862dbb71-c24a-4a7a-bd64-12a92645a18f.png",
+            "title": "",
+            "text": "<p><strong>Awesome referral rewards program,<\/strong> as well as the best deals & offers.<\/p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "text_zFWMMM": {
-          "type": "text",
+        "column_anm7Ek": {
+          "type": "column",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "image": "shopify:\/\/shop_images\/favicon_862dbb71-c24a-4a7a-bd64-12a92645a18f.png",
+            "title": "",
+            "text": "<p><strong>No traditional retail prices<\/strong> when shopping with us, we buy in bulk direct from the factory and maintain low overhead costs.<\/p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "button_4YzMRX": {
-          "type": "button",
+        "column_eg4YVK": {
+          "type": "column",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "title": "",
+            "text": "<p><strong>No costly retail space<\/strong>, fancy showrooms, high administrative costs, or expensive advertising budgets.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zVXWye": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>Non-commissioned, friendly and knowledgeable <strong>Sleep Consultants will help you select the perfect mattress.<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading_fMLeLP",
-        "text_zFWMMM",
-        "button_4YzMRX"
+        "column_64GfrG",
+        "column_anm7Ek",
+        "column_eg4YVK",
+        "column_zVXWye"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
         "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
-    "image_banner_hGaNbX",
-    "rich_text_YUbKKr"
+    "multicolumn_PHYEYn"
   ]
 }
