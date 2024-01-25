@@ -79,11 +79,19 @@
         "custom_text_title": "",
         "custom_text_body": "<p>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void the coupons.<\/p>"
       }
+    },
+    "home_banner_WT86ma": {
+      "type": "home-banner",
+      "settings": {
+        "custom_text_title": "",
+        "custom_text_body": "<p><strong>*These coupons can be redeemed through this website or at our store (1911 Dundas St. East, Unit 18 – Mississauga, ON – L4X 1M1).<\/strong>Note: Coupons are not applicable for some CLEARANCE items. You can only use one coupon per purchase and please watch the expiry date as these coupons are limited.<\/p>"
+      }
     }
   },
   "order": [
     "main",
     "coupons-row",
-    "home_banner_d7gXkC"
+    "home_banner_d7gXkC",
+    "home_banner_WT86ma"
   ]
 }
