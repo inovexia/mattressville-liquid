@@ -226,6 +226,17 @@
           "secondary_button_label": "#535353",
           "shadow": "#f1f3f4"
         }
+      },
+      "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#000000",
+          "button": "#d7355c",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#d7355c",
+          "shadow": "#535353"
+        }
       }
     }
   },
@@ -430,7 +441,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "details[id*=\"filter.p.tag\"]{display: none;}"
+      "details[id*=\"filter.p.tag\"] {display: none;}"
     ]
   }
 }
