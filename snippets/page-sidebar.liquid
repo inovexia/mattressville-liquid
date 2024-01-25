@@ -1,9 +1,14 @@
-<div class="invx-sidebar">
-  <ul class="menu">
-    {% for link in linklists['page-sidebar'].links %}
-      <li class="menu-link">
-        <a href="{{ link.url }}">{{ link.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+{%- assign path = request.path | split: '/' -%}
+{%- if path[1] contains 'pages' -%}
+  <div class="invx-sidebar">
+    <ul class="menu">
+      {% for link in linklists['page-sidebar'].links %}
+        <li class="menu-link">
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{%- elsif path[1] contains 'blogs' -%}
+  {{ request.path }}
+{%- endif -%}
