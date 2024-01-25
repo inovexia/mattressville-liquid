@@ -323,7 +323,70 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "Button label",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_NtqcKh": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_V4YNHd": {
+          "type": "column",
+          "settings": {
+            "title": "No Expensive Showroom",
+            "text": "<p>We keep our rent cost low with No Prime Retail Locatrion and space saving design. It allow us to save and evaluate our product prices without hidden or extra costs.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_crLVVp": {
+          "type": "column",
+          "settings": {
+            "title": "Low Administrative Cost",
+            "text": "<p>We use only necessary administrative expenses, implementing different saving strategies that significantly allow us to cut out business costs.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yHJ7He": {
+          "type": "column",
+          "settings": {
+            "title": "Non-Commissioned Staff",
+            "text": "<p>Non-commisioned sales approach helps to alleviate the pressure typical mattress sales can place upon the customer. Our Friendly Sleep Consultants work to make your mattress buying experience as comfortable and pleasant as possible.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YtcDiy": {
+          "type": "column",
+          "settings": {
+            "title": "Bulk Buying Power",
+            "text": "<p>We are always on the lookout for exceptional mattress deals and promotions from our suppliers. We buy in bulk and negotiate the lowest prices and then pass all the savings directly on to you. We utilize our buying power to offer the best price for brand nan mattresses.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_V4YNHd",
+        "column_crLVVp",
+        "column_yHJ7He",
+        "column_YtcDiy"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "",
         "columns_mobile": "1",
@@ -340,6 +403,7 @@
     "multicolumn_fR7TMb",
     "collapsible_content_6cG7tA",
     "rich_text_EBibEQ",
-    "multicolumn_A9Ngk7"
+    "multicolumn_A9Ngk7",
+    "multicolumn_NtqcKh"
   ]
 }
