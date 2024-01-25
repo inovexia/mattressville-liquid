@@ -37,7 +37,24 @@
         "heading": "Health & Wellness",
         "heading_size": "h1",
         "blog": "health-sleep-wellness",
-        "post_limit": 4,
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_UUbgca": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "User Guides",
+        "heading_size": "h1",
+        "blog": "how-to-user-guide",
+        "post_limit": 3,
         "columns_desktop": 3,
         "color_scheme": "",
         "show_image": true,
@@ -52,6 +69,7 @@
   "order": [
     "main",
     "featured_blog_ddzjxG",
-    "featured_blog_J6cyXt"
+    "featured_blog_J6cyXt",
+    "featured_blog_UUbgca"
   ]
 }
