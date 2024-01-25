@@ -1,22 +1,6 @@
-{% comment %}
-  <div class="invx-sidebar">
-    <ul class="menu">
-      {% for link in linklists['main-menu'].links %}
-        <li class="menu-link">
-          <a href="{{ link.url }}">{{ link.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-
-    <a class="active" href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-  </div>
-{% endcomment %}
 <div class="invx-sidebar">
   <ul class="menu">
-    {% for link in linklists['main-menu'].links %}
+    {% for link in linklists['page-sidebar'].links %}
       <li class="menu-link">
         <a href="{{ link.url }}">{{ link.title }}</a>
       </li>
