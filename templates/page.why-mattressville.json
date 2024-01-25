@@ -19,7 +19,7 @@
         "column_64GfrG": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/favicon_862dbb71-c24a-4a7a-bd64-12a92645a18f.png",
+            "image": "shopify:\/\/shop_images\/mattressville.ca_icon-rewards.png",
             "title": "",
             "text": "<p><strong>Awesome referral rewards program,<\/strong> as well as the best deals & offers.<\/p>",
             "link_label": "",
@@ -29,7 +29,7 @@
         "column_anm7Ek": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/favicon_862dbb71-c24a-4a7a-bd64-12a92645a18f.png",
+            "image": "shopify:\/\/shop_images\/mattressville.ca_icon-price.png",
             "title": "",
             "text": "<p><strong>No traditional retail prices<\/strong> when shopping with us, we buy in bulk direct from the factory and maintain low overhead costs.<\/p>",
             "link_label": "",
@@ -39,6 +39,7 @@
         "column_eg4YVK": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville.ca_icon-retail.png",
             "title": "",
             "text": "<p><strong>No costly retail space<\/strong>, fancy showrooms, high administrative costs, or expensive advertising budgets.<\/p>",
             "link_label": "",
@@ -48,6 +49,7 @@
         "column_zVXWye": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville.ca_icon-support.png",
             "title": "",
             "text": "<p>Non-commissioned, friendly and knowledgeable <strong>Sleep Consultants will help you select the perfect mattress.<\/strong><\/p>",
             "link_label": "",
