@@ -31,6 +31,9 @@
       "block_order": [
         "row_z8Txhc"
       ],
+      "custom_css": [
+        ".coupons-section .image-with-text__content--desktop-left > * {font-size: 14px;}"
+      ],
       "settings": {
         "desktop_image_width": "large",
         "heading_size": "h2",
