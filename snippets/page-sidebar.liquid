@@ -10,5 +10,11 @@
     </ul>
   </div>
 {%- elsif path[1] contains 'blogs' -%}
-  {{ request.path }}
+  <div class="invx-sidebar">
+    <ul class="menu">
+      {% for blog in blogs %}
+        {{ blog.title | link_to: blog.url }}
+      {% endfor %}
+    </ul>
+  </div>
 {%- endif -%}
