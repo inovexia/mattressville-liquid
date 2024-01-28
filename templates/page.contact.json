@@ -16,6 +16,15 @@
     "multicolumn_EqKKpi": {
       "type": "multicolumn",
       "blocks": {
+        "column_mMnfyJ": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_g8ex8P": {
           "type": "column",
           "settings": {
@@ -26,30 +35,12 @@
             "link": "tel:905-212-7722"
           }
         },
-        "column_mMnfyJ": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_mCLkF3": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/location.png",
             "title": "Visit Mattressville",
             "text": "<p>1911 Dundas St. East, Unit 18 Mississauga, On L4X 1M1<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_ckkDP3": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -63,14 +54,23 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_ckkDP3": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "column_g8ex8P",
         "column_mMnfyJ",
+        "column_g8ex8P",
         "column_mCLkF3",
-        "column_ckkDP3",
-        "column_XwX96H"
+        "column_XwX96H",
+        "column_ckkDP3"
       ],
       "settings": {
         "title": "",
