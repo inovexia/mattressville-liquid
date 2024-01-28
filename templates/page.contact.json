@@ -13,6 +13,82 @@
         "padding_bottom": 0
       }
     },
+    "multicolumn_EqKKpi": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_g8ex8P": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/phone.png",
+            "title": "Call Us Now",
+            "text": "",
+            "link_label": "905-212-7722",
+            "link": "tel:905-212-7722"
+          }
+        },
+        "column_mMnfyJ": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mCLkF3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/location.png",
+            "title": "Visit Mattressville",
+            "text": "<p>1911 Dundas St. East, Unit 18 Mississauga, On L4X 1M1<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ckkDP3": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_XwX96H": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/clock.png",
+            "title": "Working hours",
+            "text": "<p>Monday to Friday:11am to 7pm <br\/>Saturday:11am to 6pm <br\/>Sunday:12pm to 5pm<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_g8ex8P",
+        "column_mMnfyJ",
+        "column_mCLkF3",
+        "column_ckkDP3",
+        "column_XwX96H"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "form": {
       "type": "contact-form",
       "settings": {
@@ -26,6 +102,7 @@
   },
   "order": [
     "main",
+    "multicolumn_EqKKpi",
     "form"
   ]
 }
