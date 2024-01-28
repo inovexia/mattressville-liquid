@@ -16,15 +16,6 @@
     "multicolumn_EqKKpi": {
       "type": "multicolumn",
       "blocks": {
-        "column_mMnfyJ": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_g8ex8P": {
           "type": "column",
           "settings": {
@@ -54,30 +45,19 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_ckkDP3": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "column_mMnfyJ",
         "column_g8ex8P",
         "column_mCLkF3",
-        "column_XwX96H",
-        "column_ckkDP3"
+        "column_XwX96H"
       ],
       "settings": {
         "title": "",
         "heading_size": "h2",
         "image_width": "third",
         "image_ratio": "adapt",
-        "columns_desktop": 5,
+        "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
