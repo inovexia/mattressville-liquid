@@ -4,7 +4,7 @@
     "main": {
       "type": "main-blog-sidebar",
       "settings": {
-        "layout": "collage",
+        "layout": "grid",
         "show_image": true,
         "image_height": "medium",
         "show_date": true,
