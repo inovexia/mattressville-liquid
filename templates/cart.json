@@ -8,7 +8,7 @@
         ".button {background-color: #fff; color: rgb(var(--color-foreground));}"
       ],
       "settings": {
-        "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
+        "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
       }
