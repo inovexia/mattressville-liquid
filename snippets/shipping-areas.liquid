@@ -6,6 +6,8 @@
 
   Usage:
   {% render 'shipping-areas', product: product %}
+  <a href="#expand" class="expand">Show more details</a>
+  <a href="#collapse" class="collapse">Show less details</a>
 {% endcomment %}
 {{ 'shipping-areas.css' | asset_url | stylesheet_tag }}
 {%- if product.metafields.meta_data.shipping_areas != blank -%}

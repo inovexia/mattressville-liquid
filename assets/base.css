@@ -156,6 +156,10 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
     max-width: var(--page-width);
     padding: 0 5rem;
   }
+
+  .page-width.page-width-no-padding {
+    padding: 0;
+  }
 }
 
 .isolate {
