@@ -2,10 +2,55 @@
   "sections": {
     "cart-items": {
       "type": "main-cart-items",
+      "custom_css": [
+        "h1 {font-size: 36px; line-height: 42.19px; font-weight: 700; color: #535353; position: relative;}"
+      ],
       "settings": {
         "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_nYbe34": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_McjmAX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_8aihY7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "button_PBGm8P": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_McjmAX",
+        "text_8aihY7",
+        "button_PBGm8P"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "cart-footer": {
@@ -64,6 +109,7 @@
   },
   "order": [
     "cart-items",
+    "rich_text_nYbe34",
     "cart-footer",
     "featured-collection"
   ]
