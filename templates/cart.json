@@ -3,7 +3,8 @@
     "cart-items": {
       "type": "main-cart-items",
       "custom_css": [
-        "h1 {font-size: 36px; line-height: 42.19px; font-weight: 700; color: #535353; position: relative;}"
+        "h1 {font-size: 36px; line-height: 42.19px; font-weight: 700; color: #535353; position: relative;}",
+        ".cart-items th {font-weight: 700; font-size: 1.2rem;}"
       ],
       "settings": {
         "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
@@ -11,46 +12,47 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_nYbe34": {
-      "type": "rich-text",
+    "multicolumn_VaD7t4": {
+      "type": "multicolumn",
       "blocks": {
-        "heading_McjmAX": {
-          "type": "heading",
+        "column_hizFnc": {
+          "type": "column",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "title": "DELIVERY",
+            "text": "<ol><li>FREE delivery on orders over $499. There is a $60 surcharge on orders under $499<\/li><li>Delivery times vary. You will be contacted by customer service within 24 hours to schedule your delivery.<\/li><\/ol>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "text_8aihY7": {
-          "type": "text",
+        "column_U4anAa": {
+          "type": "column",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        },
-        "button_PBGm8P": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "title": "PICKUP",
+            "text": "<ol><li>Pickup location is at the Mississauga store located at 1911 Dundas St E unit 18, Mississauga, ON L4X 1M1<\/li><li>After your purchase is made, you will be contacted by customer service to inform you when the items are ready to be picked up<\/li><\/ol>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading_McjmAX",
-        "text_8aihY7",
-        "button_PBGm8P"
+        "column_hizFnc",
+        "column_U4anAa"
       ],
       "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
+        "title": "PICK UP & DELIVERY DISCLAIMER",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
         "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "cart-footer": {
@@ -109,7 +111,7 @@
   },
   "order": [
     "cart-items",
-    "rich_text_nYbe34",
+    "multicolumn_VaD7t4",
     "cart-footer",
     "featured-collection"
   ]
