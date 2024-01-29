@@ -5,7 +5,7 @@
       "custom_css": [
         "h1 {font-size: 36px; line-height: 42.19px; font-weight: 700; color: #535353; position: relative;}",
         ".cart-items th {font-weight: 700; font-size: 1.2rem;}",
-        ".button {background-color: #fff; color: rgb(var(--color-foreground));}"
+        "cart-remove-button .button {background-color: #fff; color: rgb(var(--color-foreground));}"
       ],
       "settings": {
         "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
