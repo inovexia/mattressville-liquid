@@ -116,6 +116,13 @@
     "show_vendor": true,
     "show_cart_note": true,
     "cart_drawer_collection": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/mattressville-logo-no-slogan.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "large",
+    "checkout_input_background_color_mode": "white",
+    "checkout_heading_font": "Roboto",
+    "checkout_body_font": "Roboto",
+    "checkout_button_color": "#d7355c",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
