@@ -4,10 +4,95 @@
     "main": {
       "type": "main-page-sidebar",
       "settings": {
+        "header_color": "#ffffff",
+        "header_bg_color": "#ff5c78",
+        "header_bg_color_opacity": 60,
+        "header_padding_top": 70,
+        "header_padding_bottom": 70,
+        "header_margin_bottom": 30,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_EKL6in": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_RVCpXb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Local GTA Flyer",
+            "heading_size": "h2"
+          }
+        },
+        "text_ze8qzQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>There is currently no local promotion available. Check back soon.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RVCpXb",
+        "text_ze8qzQ"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_jexaPg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_PFyUma": {
+          "type": "heading",
+          "settings": {
+            "heading": "Canada Wide Flyer",
+            "heading_size": "h2"
+          }
+        },
+        "text_Nm93Er": {
+          "type": "text",
+          "settings": {
+            "text": "<p>There is currently no local promotion available. Check back soon.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PFyUma",
+        "text_Nm93Er"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_with_text_EKL6in",
+    "image_with_text_jexaPg"
   ]
 }
