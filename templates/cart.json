@@ -2,7 +2,56 @@
   "sections": {
     "cart-items": {
       "type": "main-cart-items",
+      "custom_css": [
+        "h1 {font-size: 36px; line-height: 42.19px; font-weight: 700; color: #535353; position: relative;}",
+        ".cart-items th {font-weight: 700; font-size: 1.2rem;}",
+        "cart-remove-button .button {background-color: #fff; color: rgb(var(--color-foreground));}"
+      ],
       "settings": {
+        "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_VaD7t4": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_hizFnc": {
+          "type": "column",
+          "settings": {
+            "title": "DELIVERY",
+            "text": "<ol><li>FREE delivery on orders over $499. There is a $60 surcharge on orders under $499<\/li><li>Delivery times vary. You will be contacted by customer service within 24 hours to schedule your delivery.<\/li><\/ol>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_U4anAa": {
+          "type": "column",
+          "settings": {
+            "title": "PICKUP",
+            "text": "<ol><li>Pickup location is at the Mississauga store located at 1911 Dundas St E unit 18, Mississauga, ON L4X 1M1<\/li><li>After your purchase is made, you will be contacted by customer service to inform you when the items are ready to be picked up<\/li><\/ol>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_hizFnc",
+        "column_U4anAa"
+      ],
+      "settings": {
+        "title": "PICK UP & DELIVERY DISCLAIMER",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -24,24 +73,38 @@
       "block_order": [
         "subtotal",
         "buttons"
-      ]
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     },
     "featured-collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 4,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "full_width": false,
         "show_view_all": true,
-        "swipe_on_mobile": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "square",
+        "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": true,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -49,6 +112,7 @@
   },
   "order": [
     "cart-items",
+    "multicolumn_VaD7t4",
     "cart-footer",
     "featured-collection"
   ]

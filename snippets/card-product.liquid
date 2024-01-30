@@ -76,53 +76,31 @@
       endfor
     endif
   assign vendorImage = null
-  assign vendorImageH = 0
-  assign vendorImageW = 0
+  assign vendorImageH = 63
+  assign vendorImageW = 195
   case card_product.vendor
     when 'Beautyrest'
       assign vendorImage = 'beauty.jpg' | asset_img_url: 'master'
-      assign vendorImageH = 50
-      assign vendorImageW = 216
     when 'Beaudoin'
       assign vendorImage = 'beaudoin.jpg' | asset_img_url: 'master'
-      assign vendorImageH = 50
-      assign vendorImageW = 270
     when 'Galaxy Bedding'
       assign vendorImage = 'galaxy.jpg' | asset_img_url: 'master'
-      assign vendorImageH = 50
-      assign vendorImageW = 102
     when 'Kingsdown'
       assign vendorImage = 'kingsdown.jpg' | asset_img_url: 'master'
-      assign vendorImageH = 50
-      assign vendorImageW = 117
     when 'Mattressville'
       assign vendorImage = 'mville-new.jpg' | asset_img_url: 'master'
-      assign vendorImageH = 50
-      assign vendorImageW = 158
     when 'Natura'
       assign vendorImage = 'natura.jpg' | asset_img_url: 'master'
-      assign vendorImageH = 50
-      assign vendorImageW = 100
     when 'Sealy'
       assign vendorImage = 'sealy.jpg' | asset_img_url: 'master'
-      assign vendorImageH = 50
-      assign vendorImageW = 58
     when 'Serta'
       assign vendorImage = 'serta.jpg' | asset_img_url: 'master'
-      assign vendorImageH = 50
-      assign vendorImageW = 50
     when 'Serta iComfort'
       assign vendorImage = 'iComfort.jpg' | asset_img_url: 'master'
-      assign vendorImageH = 50
-      assign vendorImageW = 186
     when 'Stearns & Foster'
       assign vendorImage = 'sf.jpg' | asset_img_url: 'master'
-      assign vendorImageH = 50
-      assign vendorImageW = 155
     when 'Tempur-Pedic'
       assign vendorImage = 'tempur.jpg' | asset_img_url: 'master'
-      assign vendorImageH = 50
-      assign vendorImageW = 182
   endcase
   %}
   <div class="card-wrapper product-card-wrapper">
@@ -140,7 +118,7 @@
     >
       <div class="card__content">
         <div class="card__information">
-          <h3
+          <h5
             class="card__heading"
             {% if card_product.featured_media == null and settings.card_style == 'standard' %}
               id="title-{{ section_id }}-{{ card_product.id }}"
@@ -150,11 +128,14 @@
               href="{{ cardProductUrl }}"
               id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
               class="full-unstyled-link"
+              title="{{ card_product.title | escape }}"
               aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
             >
-              {{ card_product.title | escape }}
+              <strong>
+                {{ card_product.title | escape }}
+              </strong>
             </a>
-          </h3>
+          </h5>
         </div>
       </div>
       <div
@@ -212,7 +193,7 @@
         {%- endif -%}
         <div class="card__content">
           <div class="card__information">
-            <h3
+            <h5
               class="card__heading"
               {% if card_product.featured_media == null and settings.card_style == 'standard' %}
                 id="title-{{ section_id }}-{{ card_product.id }}"
@@ -222,11 +203,14 @@
                 href="{{ cardProductUrl }}"
                 id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
                 class="full-unstyled-link"
+                title="{{ card_product.title | escape }}"
                 aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
               >
-                {{ card_product.title | escape }}
+                <strong>
+                  {{ card_product.title | escape }}
+                </strong>
               </a>
-            </h3>
+            </h5>
           </div>
           <div class="card__badge {{ settings.badge_position }}">
             {%- if card_product.available == false -%}
@@ -309,7 +293,7 @@
               </div>
             {%- endif -%}
           </div>
-          {%- render 'comfort-scale', product: card_product -%}
+          {%- render 'comfort-scale', product: card_product, is_card: true -%}
           {%- render 'shipping-areas', product: card_product -%}
         </div>
         {%- if show_quick_add -%}
@@ -465,11 +449,11 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          <h3 class="card__heading card__heading--placeholder{% if settings.card_style == 'standard' %} h5{% endif %}">
-            <a role="link" aria-disabled="true" class="full-unstyled-link">
-              {{ 'onboarding.product_title' | t }}
+          <h5 class="card__heading card__heading--placeholder{% if settings.card_style == 'standard' %} h5{% endif %}">
+            <a role="link" aria-disabled="true" title="{{ card_product.title | escape }}" class="full-unstyled-link">
+              <strong>{{ 'onboarding.product_title' | t }}</strong>
             </a>
-          </h3>
+          </h5>
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>

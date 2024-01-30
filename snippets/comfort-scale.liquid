@@ -3,6 +3,7 @@
   Renders product comfort-scale.
   Accepts:
   - product: {Object} product object
+  - is_card: {Boolean} Show the product rating. Default: false
 
   Usage:
   {% render 'comfort-scale', product: product %}
@@ -21,7 +22,9 @@
 {% if level > 0 %}
   {{ 'comfort-scale.css' | asset_url | stylesheet_tag }}
   <div class="comfort-scale">
-    <h4>Comfort Scale</h4>
+    {% if is_card == false %}
+      <h4>Comfort Scale</h4>
+    {% endif %}    
     <div class="firm-meter">
       <h6 class="firmness">
         <span class="d-block">Soft</span>
