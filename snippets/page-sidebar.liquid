@@ -1,6 +1,7 @@
 {%- assign path = request.path | split: '/' -%}
 {%- if path[1] contains 'pages' -%}
   <div class="invx_sidebar ">
+    {% render 'bread-crumb-nav' %}
     <div class="invx_sidebar_menu">
       <div class="invx_sidebar_menu_header">
         {{ shop.name }}
@@ -40,6 +41,7 @@
   </div>
 {%- elsif path[1] contains 'blogs' -%}
   <div class="invx_sidebar ">
+    {% render 'bread-crumb-nav' %}
     <div class="invx_sidebar_menu">
       <div class="invx_sidebar_menu_header">Blog Categories</div>
       <ul class="invx_sidebar_menu_ul">
@@ -51,8 +53,11 @@
       </ul>
     </div>
 
-    {% for article in blogs.path[2].title %}
-      {{ article.title | link_to: article.url }}
-    {% endfor %}
+    <div class="invx_sidebar_menu">
+      <div class="invx_sidebar_menu_header">Blog Categories</div>
+      {% for article in blogs.path[2].title %}
+        {{ article.title | link_to: article.url }}
+      {% endfor %}
+    </div>
   </div>
 {%- endif -%}
