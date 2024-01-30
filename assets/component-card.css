@@ -171,6 +171,7 @@
 }
 
 .card__badge {
+  display: none;
   align-self: flex-end;
   grid-row-start: 3;
   justify-self: flex-start;
@@ -203,14 +204,16 @@
 .card__heading {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  color: var(--secondary-color);
   display: -webkit-box;
-  font-size: calc(var(--font-heading-scale) * 1.8rem);
+  font-size: 16px;
+  height: 48px;
+  line-height: 20px;
   margin-bottom: 0;
   margin-top: 0;
   overflow: hidden;
   text-align: center;
   text-overflow: ellipsis;
-  height: 48px;
 }
 
 .card__heading:last-child {
@@ -382,7 +385,7 @@
 }
 
 .card-information>.price {
-  color: rgb(var(--color-foreground));
+  color: var(--secondary-color);
 }
 
 .card--horizontal .card-information>.price {

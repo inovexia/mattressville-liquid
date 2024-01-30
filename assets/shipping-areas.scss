@@ -2,17 +2,8 @@
   display: flex;
   flex-direction: column;
 
-  .collapse,
-  .expand{
-    color: #535353;
-    cursor: pointer;
-    font-size: 12px;
-    line-height: 14px;
-    text-align: center;
-    text-decoration: none;
-  }
-
   h4{
+    color: var(--secondary-color);
     font-size: 1.8rem;
     font-weight: 500;
     line-height: calc(1 + 0.5 / var(--font-body-scale));

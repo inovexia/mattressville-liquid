@@ -2,16 +2,8 @@
   display: flex;
   flex-direction: column;
 }
-.shipping-areas .collapse,
-.shipping-areas .expand {
-  color: #535353;
-  cursor: pointer;
-  font-size: 12px;
-  line-height: 14px;
-  text-align: center;
-  text-decoration: none;
-}
 .shipping-areas h4 {
+  color: var(--secondary-color);
   font-size: 1.8rem;
   font-weight: 500;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
