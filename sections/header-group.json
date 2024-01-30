@@ -9,7 +9,7 @@
           "type": "announcement",
           "settings": {
             "text": "Premium Mattress Sale | The Highest Rated Mattress Store | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.",
-            "link": "shopify:\/\/collections"
+            "link": "shopify:\/\/collections\/all-mattresses"
           }
         }
       },
@@ -56,6 +56,7 @@
     "header-bottom": {
       "type": "header-bottom",
       "settings": {
+        "phone_number": "1905-212-7722",
         "meta_menu_title": "All Mattresses",
         "mega_menu": "mega-menu",
         "mega_menu_bottom_label": "VIEW ALL MATTRESSES",
