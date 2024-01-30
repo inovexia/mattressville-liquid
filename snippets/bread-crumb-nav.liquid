@@ -11,6 +11,10 @@
 
   .breadcrumbs__item {
     display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 70%;
   }
 
   .breadcrumbs__item:not(:last-child):after {
