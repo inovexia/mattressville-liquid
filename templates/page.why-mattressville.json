@@ -133,8 +133,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville.ca_beautyrest-logo.png",
-            "title": "STEARNS & FOSTER",
-            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
+            "title": "BEAUTYREST",
+            "text": "<p>Sleep is more than a necessity and a mattress should represent something more than the utility. Beautyrest Black® is where technology and luxury intertwine to take you far beyond mere comfort. It's about sleep that indulges the senses. Sleep that refuses to compromise. Sleep that's so completely restorative and inspiring, it borders on the sacred.<br\/><br\/><\/p>",
             "link_label": "View Stearns & Foster Products",
             "link": "shopify:\/\/collections\/brand-stearns-and-foster"
           }
@@ -143,8 +143,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville.ca_tempur-pedic-logo.png",
-            "title": "STEARNS & FOSTER",
-            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
+            "title": "TEMPUR-PEDIC",
+            "text": "<p>Tempur-Pedic® mattresses are designed to help you relax and sleep better. It is more than a typical memory foam mattress. TEMPUR® material is not typical memory foam. Their proprietary formulation changed the way the world sleeps.<\/p>",
             "link_label": "View Stearns & Foster Products",
             "link": "shopify:\/\/collections\/brand-stearns-and-foster"
           }
@@ -153,8 +153,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville.ca_seally-logo.png",
-            "title": "STEARNS & FOSTER",
-            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
+            "title": "SEALLY",
+            "text": "<p>Since 1881, Sealy has built mattresses that focus on support, comfort, and value. Sealy Posturepedic mattresses are designed to give you the rest you need to wake up renewed, refreshed, and ready to face your day.<\/p>",
             "link_label": "View Stearns & Foster Products",
             "link": "shopify:\/\/collections\/brand-stearns-and-foster"
           }
@@ -167,7 +167,7 @@
         "column_QQpqiM"
       ],
       "custom_css": [
-        ".multicolumn-card {background-color:#fff; border: 1px solid #ccc; border-radius: 15px}"
+        ".multicolumn-card {background-color: #fff; border: 1px solid #ccc; border-radius: 15px;}"
       ],
       "settings": {
         "title": "",
