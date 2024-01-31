@@ -283,7 +283,7 @@
         "text_pN7b38"
       ],
       "settings": {
-        "desktop_content_position": "center",
+        "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
@@ -306,7 +306,8 @@
         "column_xWLbFH": {
           "type": "column",
           "settings": {
-            "title": "MATTRESSVILLE",
+            "image": "shopify:\/\/shop_images\/mattressville-logo-no-slogan.png",
+            "title": "",
             "text": "<ul><li>Reasonable Price\/Good Quality<\/li><li>Brand Name Products<\/li><li>Fully Manufacturer Warranty<\/li><li>Sleep Guarantee<\/li><li>Price Match Guarantee<\/li><li>Mattress\/ Sleep Experts<\/li><li>Referral Program<\/li><\/ul>",
             "link_label": "Shop Now",
             "link": ""
@@ -326,6 +327,10 @@
         "column_rNMUbc",
         "column_xWLbFH",
         "column_CM9eQY"
+      ],
+      "custom_css": [
+        ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
+        ".multicolumn-card {background-color: #fff; border: 1px solid #ccc; border-radius: 15px; -webkit-box-shadow: ; -moz-box-shadow: ; box-shadow: 4px 3px 8px 0px rgba(0, 0, 0, 0.35);}"
       ],
       "settings": {
         "title": "",
