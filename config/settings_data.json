@@ -448,7 +448,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "details[id*=\"filter.p.tag\"] {display: none;}"
+      "details[id*=\"filter.p.tag\"] {display: none;}",
+      ".content > p > img {border-radius: 25px;}"
     ]
   }
 }
