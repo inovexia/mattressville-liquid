@@ -65,7 +65,7 @@
 }
 
 .sidebar-content-container .invx_sidebar_menu_header {
-  background-color: #535354;
+  background-color: var(--secondary-color);
   padding: 14px 40px;
   color: #ffffff;
   font-size: 2rem;

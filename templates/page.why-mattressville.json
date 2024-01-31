@@ -10,7 +10,7 @@
         "header_padding_top": 70,
         "header_padding_bottom": 70,
         "header_margin_bottom": 30,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "multicolumn_PHYEYn": {
@@ -64,7 +64,10 @@
         "column_zVXWye"
       ],
       "custom_css": [
-
+        ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
+        ".multicolumn-card {display: flex; justify-content: space-around;}",
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 200px; flex-grow: 1;}",
+        ".multicolumn-card .multicolumn-card__info {text-align: left;}"
       ],
       "settings": {
         "title": "",
@@ -72,14 +75,14 @@
         "image_width": "third",
         "image_ratio": "circle",
         "columns_desktop": 2,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "button_label": "",
         "button_link": "",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
@@ -120,7 +123,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville.ca_stern-foster-logo.png",
-            "title": "STEARNS & FOSTER",
+            "title": "<strong>STEARNS & FOSTER<\/strong>",
             "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
             "link_label": "View Stearns & Foster Products",
             "link": "shopify:\/\/collections\/brand-stearns-and-foster"
@@ -130,8 +133,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville.ca_beautyrest-logo.png",
-            "title": "STEARNS & FOSTER",
-            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
+            "title": "<strong>BEAUTYREST<\/strong>",
+            "text": "<p>Sleep is more than a necessity and a mattress should represent something more than the utility. Beautyrest Black® is where technology and luxury intertwine to take you far beyond mere comfort. It's about sleep that indulges the senses. Sleep that refuses to compromise. Sleep that's so completely restorative and inspiring, it borders on the sacred.<br\/><br\/><\/p>",
             "link_label": "View Stearns & Foster Products",
             "link": "shopify:\/\/collections\/brand-stearns-and-foster"
           }
@@ -140,8 +143,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville.ca_tempur-pedic-logo.png",
-            "title": "STEARNS & FOSTER",
-            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
+            "title": "<strong>TEMPUR-PEDIC<\/strong>",
+            "text": "<p>Tempur-Pedic® mattresses are designed to help you relax and sleep better. It is more than a typical memory foam mattress. TEMPUR® material is not typical memory foam. Their proprietary formulation changed the way the world sleeps.<\/p>",
             "link_label": "View Stearns & Foster Products",
             "link": "shopify:\/\/collections\/brand-stearns-and-foster"
           }
@@ -150,8 +153,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville.ca_seally-logo.png",
-            "title": "STEARNS & FOSTER",
-            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
+            "title": "<strong>SEALLY<\/strong>",
+            "text": "<p>Since 1881, Sealy has built mattresses that focus on support, comfort, and value. Sealy Posturepedic mattresses are designed to give you the rest you need to wake up renewed, refreshed, and ready to face your day.<\/p>",
             "link_label": "View Stearns & Foster Products",
             "link": "shopify:\/\/collections\/brand-stearns-and-foster"
           }
@@ -163,12 +166,16 @@
         "column_GwnwJn",
         "column_QQpqiM"
       ],
+      "custom_css": [
+        ".multicolumn-card {background-color: #fff; border: 1px solid #ccc; border-radius: 15px;}",
+        ".multicolumn-card .link {color: var(--accent-color);}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h2",
-        "image_width": "half",
+        "image_width": "third",
         "image_ratio": "adapt",
-        "columns_desktop": 2,
+        "columns_desktop": 1,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
@@ -236,15 +243,18 @@
         "collapsible_row_WdkXkb",
         "collapsible_row_JKezXT"
       ],
+      "custom_css": [
+        "h3 {font-size: 1.4em;}"
+      ],
       "settings": {
         "caption": "",
         "heading": "Frequently Asked Questions",
         "heading_size": "h1",
-        "heading_alignment": "center",
+        "heading_alignment": "left",
         "layout": "none",
         "color_scheme": "",
         "container_color_scheme": "",
-        "open_first_collapsible_row": false,
+        "open_first_collapsible_row": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
@@ -273,7 +283,7 @@
         "text_pN7b38"
       ],
       "settings": {
-        "desktop_content_position": "center",
+        "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
@@ -296,7 +306,8 @@
         "column_xWLbFH": {
           "type": "column",
           "settings": {
-            "title": "MATTRESSVILLE",
+            "image": "shopify:\/\/shop_images\/mattressville-logo-no-slogan.png",
+            "title": "",
             "text": "<ul><li>Reasonable Price\/Good Quality<\/li><li>Brand Name Products<\/li><li>Fully Manufacturer Warranty<\/li><li>Sleep Guarantee<\/li><li>Price Match Guarantee<\/li><li>Mattress\/ Sleep Experts<\/li><li>Referral Program<\/li><\/ul>",
             "link_label": "Shop Now",
             "link": ""
@@ -316,6 +327,10 @@
         "column_rNMUbc",
         "column_xWLbFH",
         "column_CM9eQY"
+      ],
+      "custom_css": [
+        ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
+        ".multicolumn-card {background: #ffffff; border-radius: 15px; border: 1px solid #f1f3f4; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); overflow: hidden; text-align: left; z-index: 1;}"
       ],
       "settings": {
         "title": "",
@@ -384,6 +399,12 @@
         "column_yHJ7He",
         "column_YtcDiy"
       ],
+      "custom_css": [
+        ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
+        ".multicolumn-card {display: flex; justify-content: space-around;}",
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 250px; flex-grow: 1;}",
+        ".multicolumn-card .multicolumn-card__info {text-align: left;}"
+      ],
       "settings": {
         "title": "Our Business Strategy",
         "heading_size": "h1",
@@ -401,31 +422,34 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_FfnX7p": {
-      "type": "image-with-text",
+    "coupons_row_9CtJPp": {
+      "type": "coupons-row",
       "blocks": {
-        "heading_6VxGrA": {
-          "type": "heading",
+        "row_eUhaa4": {
+          "type": "row",
           "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville.ca_progress-50.png",
+            "caption": "",
             "heading": "Total Savings",
-            "heading_size": "h1"
+            "text": "",
+            "button_label": "",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "heading_6VxGrA"
+        "row_eUhaa4"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/mattressville.ca_progress-50.png",
-        "height": "adapt",
         "desktop_image_width": "small",
-        "layout": "image_first",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
         "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
+        "row_color_scheme": "",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
@@ -441,6 +465,6 @@
     "rich_text_EBibEQ",
     "multicolumn_A9Ngk7",
     "multicolumn_NtqcKh",
-    "image_with_text_FfnX7p"
+    "coupons_row_9CtJPp"
   ]
 }

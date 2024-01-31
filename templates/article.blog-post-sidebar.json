@@ -4,17 +4,17 @@
     "main": {
       "type": "main-article-sidebar",
       "blocks": {
-        "featured_image": {
-          "type": "featured_image",
-          "settings": {
-            "image_height": "adapt"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
             "blog_show_date": true,
             "blog_show_author": false
+          }
+        },
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "adapt"
           }
         },
         "share": {
@@ -30,8 +30,8 @@
         }
       },
       "block_order": [
-        "featured_image",
         "title",
+        "featured_image",
         "share",
         "content"
       ],

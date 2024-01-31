@@ -9,7 +9,22 @@
 }
 
 .blog__title {
-  margin: 0;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin-top: 23px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.blog__title::after {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  position: absolute;
+  border-bottom: 2px solid var(--accent-color);
+  left: 0;
+  bottom: -5px;
 }
 
 .blog__posts.articles-wrapper {

@@ -1,6 +1,6 @@
 <style>
   .breadcrumbs {
-    margin: 0 0 1em 0.5em;
+    margin: 23px 0;
   }
 
   .breadcrumbs__list {
@@ -11,23 +11,27 @@
 
   .breadcrumbs__item {
     display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 70%;
   }
 
   .breadcrumbs__item:not(:last-child):after {
-    border-style: solid;
-    border-width: 0.1em 0.1em 0 0;
-    content: '';
-    display: inline-block;
-    height: 0.2em;
-    margin: 0 0.2em;
-    position: relative;
-    transform: rotate(45deg);
-    vertical-align: middle;
-    width: 0.2em;
+    content: "\e930";
+    font-family: "GS-Starter-Icon";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
   }
 
   .breadcrumbs__link {
-    text-decoration: underline;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
   }
 
   .breadcrumbs__link[aria-current='page'] {
@@ -48,7 +52,7 @@
   <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
     <ol class="breadcrumbs__list">
       <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="/">Home</a>
+        <a class="breadcrumbs__link home" href="/">Home</a>
       </li>
       {%- case t -%}
         {%- when 'page' -%}
