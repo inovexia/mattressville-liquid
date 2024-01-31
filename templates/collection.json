@@ -12,7 +12,7 @@
       "type": "main-collection-product-grid",
       "custom_css": [
         "#FacetFiltersForm #FacetsWrapperDesktop #verticalTitle {display: none;}",
-        "#FacetFiltersForm #FacetsWrapperDesktop facet-remove {margin-left: auto;}"
+        "#FacetFiltersForm #FacetsWrapperDesktop #verticalTitle + facet-remove {margin-left: auto;}"
       ],
       "settings": {
         "products_per_page": 9,
