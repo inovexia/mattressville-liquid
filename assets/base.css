@@ -809,7 +809,22 @@ summary::-webkit-details-marker {
 }
 
 .title--primary {
-  margin: 4rem 0;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin-top: 23px;
+  margin-bottom: 27px;
+  position: relative;
+}
+
+.title--primary::after {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  position: absolute;
+  border-bottom: 2px solid var(--accent-color);
+  left: 0;
+  bottom: -5px;
 }
 
 .title-wrapper--self-padded-tablet-down,
@@ -832,7 +847,8 @@ summary::-webkit-details-marker {
   }
 
   .title--primary {
-    margin: 2rem 0;
+    margin-top: 23px;
+    margin-bottom: 27px;
   }
 
   .title-wrapper-with-link {
