@@ -47,7 +47,7 @@
           "type": "column",
           "settings": {
             "title": "<strong>King<\/strong>",
-            "text": "<p>&lt;br&gt;<\/p><p>76″ x 79″ (inches)<\/p><p>193cm x 201cm (centimeters)<\/p>",
+            "text": "<p><\/p><p>76″ x 79″ (inches)<\/p><p>193cm x 201cm (centimeters)<\/p>",
             "link_label": "",
             "link": ""
           }
