@@ -43,7 +43,7 @@
     background-color: var(--main_container_background_color);
   }
   .sidebar-content-container .invx_sidebar {
-    width: 30%;
+    width: 40%;
     max-width: 300px;
     margin-right: 20px;
   }
