@@ -36,19 +36,9 @@
       ],
       "settings": {
       }
-    },
-    "custom_liquid_GJ64Ja": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "fmaloney@georgebrown.ca",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
-    "main",
-    "custom_liquid_GJ64Ja"
+    "main"
   ]
 }
