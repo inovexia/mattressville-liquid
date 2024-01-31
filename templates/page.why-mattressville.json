@@ -167,7 +167,8 @@
         "column_QQpqiM"
       ],
       "custom_css": [
-        ".multicolumn-card {background-color: #fff; border: 1px solid #ccc; border-radius: 15px;}"
+        ".multicolumn-card {background-color: #fff; border: 1px solid #ccc; border-radius: 15px;}",
+        ".multicolumn-card .link {color: var(--accent-color);}"
       ],
       "settings": {
         "title": "",
