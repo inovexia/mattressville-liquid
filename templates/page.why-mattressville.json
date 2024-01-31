@@ -166,6 +166,9 @@
         "column_GwnwJn",
         "column_QQpqiM"
       ],
+      "custom_css": [
+        ".multicolumn-card {background-color:#fff; border: 1px solid #ccc; border-radius: 15px}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h2",
