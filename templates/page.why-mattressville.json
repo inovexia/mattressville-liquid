@@ -68,7 +68,7 @@
       ],
       "custom_css": [
         "multicolumn.background-primary .multicolumn-card {background-color: #fff;}",
-        ".multicolumn-card {display: flex; justify-content: space-around; padding-left: 10px; border: 1px solid #ccc; border-radius:15px;}",
+        ".multicolumn-card {display: flex; justify-content: space-around; padding-left: 10px; border: 1px solid #ccc; border-radius: 15px;}",
         ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}",
         "@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",
         ".multicolumn-card .multicolumn-card__info {text-align: left; max-width: 270px; width: 100%;}"
@@ -110,6 +110,9 @@
       "block_order": [
         "heading_BQy8PN",
         "text_zUzLHV"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {padding: 0;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -171,6 +174,7 @@
         "column_QQpqiM"
       ],
       "custom_css": [
+        ".multicolumn {padding: 0;}",
         ".multicolumn-card {background-color: #fff; border: 1px solid #ccc; border-radius: 15px;}",
         ".multicolumn-card .link {color: var(--accent-color);}"
       ],
@@ -248,7 +252,8 @@
         "collapsible_row_JKezXT"
       ],
       "custom_css": [
-        "h3 {font-size: 1.4em;}"
+        "h3 {font-size: 1.4em;}",
+        ".accordion {padding:0;}"
       ],
       "settings": {
         "caption": "",
