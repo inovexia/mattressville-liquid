@@ -20,7 +20,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/phone.png",
-            "title": "Call Us Now",
+            "title": "<strong>Call Us Now<\/strong>",
             "text": "",
             "link_label": "905-212-7722",
             "link": "tel:905-212-7722"
@@ -30,7 +30,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/location.png",
-            "title": "Visit Mattressville",
+            "title": "<strong>Visit Mattressville<\/strong>",
             "text": "<p>1911 Dundas St. East, Unit 18 Mississauga, On L4X 1M1<\/p>",
             "link_label": "",
             "link": ""
@@ -40,7 +40,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/clock.png",
-            "title": "Working hours",
+            "title": "<strong>Working hours<\/strong>",
             "text": "<p>Monday to Friday:11am to 7pm <br\/>Saturday:11am to 6pm <br\/>Sunday:12pm to 5pm<\/p>",
             "link_label": "",
             "link": ""
