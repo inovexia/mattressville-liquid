@@ -128,7 +128,7 @@
         "column_fcPXDa"
       ],
       "settings": {
-        "title": "Shop By Categories",
+        "title": "<strong>Shop By Categories<\/strong>",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -147,7 +147,7 @@
     "featured_collection_xLkaJK": {
       "type": "featured-collection",
       "settings": {
-        "title": "Trending Products",
+        "title": "<strong>Trending Products<\/strong>",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -231,7 +231,7 @@
     "featured_collection_BY7Ca9": {
       "type": "featured-collection",
       "settings": {
-        "title": "Today's Deal",
+        "title": "<strong>Today's Deal<\/strong>",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
