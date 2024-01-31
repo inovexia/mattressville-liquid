@@ -53,7 +53,7 @@
       {%- case t -%}
         {%- when 'page' -%}
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
+            <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title | truncate: 20 }}</a>
           </li>
         {%- when 'product' -%}
           {%- if collection.url -%}
@@ -62,7 +62,9 @@
             </li>
           {%- endif -%}
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+            <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">
+              {{- product.title | truncate: 20 -}}
+            </a>
           </li>
         {%- when 'collection' and collection.handle -%}
           {%- if current_tags -%}
@@ -75,13 +77,15 @@
             </li>
           {%- else -%}
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
+              <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">
+                {{- collection.title | truncate: 20 -}}
+              </a>
             </li>
           {%- endif -%}
         {%- when 'blog' -%}
           {%- if current_tags -%}
             <li class="breadcrumbs__item">
-              {{ blog.title | link_to: blog.url }}
+              {{ blog.title | link_to: blog.url | truncate: 20 }}
             </li>
             <li class="breadcrumbs__item">
               {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
@@ -89,7 +93,7 @@
             </li>
           {%- else -%}
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
+              <a class="breadcrumbs__link" href="{{ blog.url }}" aria-current="page">{{ blog.title | truncate: 20 }}</a>
             </li>
           {%- endif -%}
         {%- when 'article' -%}
@@ -97,11 +101,15 @@
             {{ blog.title | link_to: blog.url }}
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="{{ article.url }}" aria-current="page">{{ article.title }}</a>
+            <a class="breadcrumbs__link" href="{{ article.url }}" aria-current="page">
+              {{- article.title | truncate: 20 -}}
+            </a>
           </li>
         {%- else -%}
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
+            <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">
+              {{- page_title | truncate: 20 -}}
+            </a>
           </li>
       {%- endcase -%}
     </ol>
