@@ -407,7 +407,11 @@
         "column_YtcDiy"
       ],
       "custom_css": [
-
+        "multicolumn.background-primary .multicolumn-card {background: #ffffff;}",
+        ".multicolumn-card {display: flex; justify-content: space-around; padding-left: 10px; border-radius: 25px; box-shadow: 5px 5px 10px #ccc;}",
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}",
+        "@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",
+        ".multicolumn-card .multicolumn-card__info {text-align: left; max-width: 270px; width: 100%;}"
       ],
       "settings": {
         "title": "Our Business Strategy",
