@@ -330,8 +330,8 @@
       ],
       "custom_css": [
         ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
-        ".multicolumn-card {background-color: #fff; border: 1px solid #ccc; border-radius: 15px; -webkit-box-shadow: ; -moz-box-shadow: ; box-shadow: 4px 3px 8px 0px rgba(0, 0, 0, 0.35);}",
-        ".multicolumn div:nth-child(2) .multicolumn-card {background-color: black;}"
+        ".multicolumn-card {background: #ffffff; border-radius: 15px; border: 1px solid #f1f3f4; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); overflow: hidden; text-align: left; z-index: 1;}",
+        ".multicolumn li:nth-child(2) .multicolumn-card {z-index: 1000; margin-left: -15px; margin-right: -20px;}"
       ],
       "settings": {
         "title": "",
