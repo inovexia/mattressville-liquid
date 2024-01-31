@@ -243,15 +243,18 @@
         "collapsible_row_WdkXkb",
         "collapsible_row_JKezXT"
       ],
+      "custom_css": [
+        "h3 {font-size: 1.4em;}"
+      ],
       "settings": {
         "caption": "",
         "heading": "Frequently Asked Questions",
         "heading_size": "h1",
-        "heading_alignment": "center",
+        "heading_alignment": "left",
         "layout": "none",
         "color_scheme": "",
         "container_color_scheme": "",
-        "open_first_collapsible_row": false,
+        "open_first_collapsible_row": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
