@@ -3,6 +3,9 @@
   "sections": {
     "main": {
       "type": "main-page-sidebar",
+      "custom_css": [
+
+      ],
       "settings": {
         "header_color": "#ffffff",
         "header_bg_color": "#ff5c78",
@@ -330,7 +333,9 @@
       ],
       "custom_css": [
         ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
-        ".multicolumn-card {background: #ffffff; border-radius: 15px; border: 1px solid #f1f3f4; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); overflow: hidden; text-align: left; z-index: 1;}"
+        ".multicolumn-card {background: #ffffff; border-radius: 15px; border: 1px solid #f1f3f4; overflow: hidden; text-align: left;}",
+        ".multicolumn li:nth-child(2) .multicolumn-card {box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.05); height: 105%; margin-top: -15px; margin-left: -15px; margin-right: -15px; z-index: 1000 !important;}",
+        ".multicolumn li:nth-child(3) .multicolumn-card {z-index: -1 !important;}"
       ],
       "settings": {
         "title": "",
