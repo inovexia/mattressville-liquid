@@ -3,6 +3,9 @@
   "sections": {
     "main": {
       "type": "main-page-sidebar",
+      "custom_css": [
+
+      ],
       "settings": {
         "header_color": "#ffffff",
         "header_bg_color": "#ff5c78",
@@ -64,10 +67,10 @@
         "column_zVXWye"
       ],
       "custom_css": [
-        ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
-        ".multicolumn-card {display: flex; justify-content: space-around;}",
-        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 200px; flex-grow: 1;}",
-        ".multicolumn-card .multicolumn-card__info {text-align: left;}"
+        ".multicolumn-card {display: flex; justify-content: space-around; padding-left: 10px; border: 1px solid #ccc; border-radius: 15px;}",
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}",
+        "@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",
+        ".multicolumn-card .multicolumn-card__info {text-align: left; max-width: 270px; width: 100%;}"
       ],
       "settings": {
         "title": "",
@@ -330,7 +333,10 @@
       ],
       "custom_css": [
         ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
-        ".multicolumn-card {background: #ffffff; border-radius: 15px; border: 1px solid #f1f3f4; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); overflow: hidden; text-align: left; z-index: 1;}"
+        ".multicolumn-card {background: #ffffff; border-radius: 15px; border: 1px solid #f1f3f4; overflow: hidden; text-align: left;}",
+        ".multicolumn li:nth-child(2) .multicolumn-card {box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.05); height: 105%; margin: -15px -15px 0 -15px; z-index: 1000 !important;}",
+        ".multicolumn li:nth-child(3) .multicolumn-card {z-index: -1 !important;}",
+        ".multicolumn ul {list-style: none;}"
       ],
       "settings": {
         "title": "",
@@ -342,7 +348,7 @@
         "background_style": "primary",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "",
+        "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
