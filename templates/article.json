@@ -23,7 +23,9 @@
           }
         },
         "content": {
-          "type": "content"
+          "type": "content",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -31,10 +33,22 @@
         "title",
         "share",
         "content"
-      ]
+      ],
+      "settings": {
+      }
+    },
+    "custom_liquid_GJ64Ja": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "fmaloney@georgebrown.ca",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_GJ64Ja"
   ]
 }
