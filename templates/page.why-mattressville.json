@@ -67,7 +67,7 @@
         ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
         ".multicolumn-card {display: flex; justify-content: space-around;}",
         ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 200px; flex-grow: 1;}",
-        ".multicolumn-card .multicolumn-card__info {text-align:left;}"
+        ".multicolumn-card .multicolumn-card__info {text-align: left;}"
       ],
       "settings": {
         "title": "",
@@ -386,6 +386,12 @@
         "column_crLVVp",
         "column_yHJ7He",
         "column_YtcDiy"
+      ],
+      "custom_css": [
+        ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
+        ".multicolumn-card {display: flex; justify-content: space-around;}",
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 250px; flex-grow: 1;}",
+        ".multicolumn-card .multicolumn-card__info {text-align: left;}"
       ],
       "settings": {
         "title": "Our Business Strategy",
