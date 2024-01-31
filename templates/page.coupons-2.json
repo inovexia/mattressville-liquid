@@ -52,6 +52,11 @@
         "column_FkNtma",
         "column_KzhYWf"
       ],
+      "custom_css": [
+        ".multicolumn-card {margin-bottom: 20px;}",
+        ".multicolumn-card .link {border: 1px solid; border-radius: 25px; padding: 5px 20px; background-color: var(--accent-color); color: #fff;}",
+        ".multicolumn-card .link:hover {color: var(--accent-color); background-color: #fff;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
