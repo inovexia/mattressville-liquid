@@ -1,24 +1,57 @@
-.sidebar-content-container {
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  max-width: 1260px;
-  padding-block: 0 32px;
-  box-sizing: content-box;
-  grid-gap: 32px;
-  justify-content: space-between;
-  background-color: var(--main_container_background_color);
+@media (max-width: 767px) {
+  .sidebar-content-container {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    transition: transform 0.2s ease-out;
+  }
+
+  .sidebar-content-container .invx_sidebar {
+    min-width: 300px;
+    width: 100%;
+  }
+
+  .sidebar-content-container .invx-content {
+    display: block;
+    width: 100%;
+  }
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    left: 20px;
+    top: 20px;
+  }
+  .menu-toggle div {
+    width: 35px;
+    height: 5px;
+    background-color: #555;
+    margin: 6px 0;
+  }
 }
-.sidebar-content-container .invx_sidebar {
-  width: 30%;
-  max-width: 300px;
-  margin-right: 20px;
+
+@media (min-width: 768px) {
+  .sidebar-content-container {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin: 20px auto;
+    padding-block: 32px;
+    box-sizing: content-box;
+    grid-gap: 32px;
+    justify-content: space-between;
+    background-color: var(--main_container_background_color);
+  }
+  .sidebar-content-container .invx_sidebar {
+    width: 40%;
+    max-width: 300px;
+    margin-right: 20px;
+  }
 }
 
 .sidebar-content-container .invx_sidebar_menu {
   border: 1px solid var(--sidebar_border);
   box-shadow: 0px 2px 12px -2px #e5e5e5;
-  width: 310px;
   box-sizing: border-box;
   border-radius: 15px;
 }
@@ -50,25 +83,25 @@
   border-bottom: 1px solid var(--accent-color);
 }
 
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:not(:last-child).active{
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:not(:last-child).active {
   border-bottom: 1px solid #ffffff;
 }
 
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:not(:first-child).active{
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:not(:first-child).active {
   border-top: 1px solid #ffffff;
   margin-top: -1px;
 }
 
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_child_li:not(:last-child),
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .accrodion [role="button"] {
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .accrodion [role='button'] {
   border-bottom: 1px solid var(--accent-color);
 }
 
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_child_li:not(:last-child).active{
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_child_li:not(:last-child).active {
   border-bottom: 1px solid #ffffff;
 }
 
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_child_li:not(:first-child).active{
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_child_li:not(:first-child).active {
   border-top: 1px solid #ffffff;
   margin-top: -1px;
 }
@@ -82,7 +115,7 @@
 }
 
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li a,
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .accrodion [role="button"] {
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .accrodion [role='button'] {
   cursor: pointer;
   display: block;
   padding: 14px 40px;
@@ -97,8 +130,8 @@
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:hover > a,
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li.active > a,
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:hover .invx_sidebar_menu_child_li:hover > a,
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .invx_sidebar_menu_child_li.child-active  > a,
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:hover .accrodion [role="button"] {
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .invx_sidebar_menu_child_li.child-active > a,
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:hover .accrodion [role='button'] {
   background-color: var(--accent-color);
   color: #ffffff;
 }
@@ -116,29 +149,4 @@
 .sidebar-content-container .invx-content {
   position: relative;
   flex-grow: 1;
-}
-
-@media (max-width: 767px) {
-  .sidebar-content-container {
-    overflow: hidden;
-    transform: translateX(-300px);
-    width: calc(100% + 300px);
-    transition: transform 0.2s ease-out;
-  }
-  .sidebar-content-container .invx_sidebar_menu {
-    min-width: 300px;
-  }
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    cursor: pointer;
-    left: 20px;
-    top: 20px;
-  }
-  .menu-toggle div {
-    width: 35px;
-    height: 5px;
-    background-color: #555;
-    margin: 6px 0;
-  }
 }
