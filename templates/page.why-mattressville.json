@@ -64,7 +64,10 @@
         "column_zVXWye"
       ],
       "custom_css": [
-
+        ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
+        ".multicolumn-card {display: flex; justify-content: space-around;}",
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 200px; flex-grow: 1;}",
+        ".multicolumn-card .multicolumn-card__info {text-align:left;}"
       ],
       "settings": {
         "title": "",
