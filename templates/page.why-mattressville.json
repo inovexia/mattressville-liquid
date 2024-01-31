@@ -430,35 +430,39 @@
         "padding_bottom": 36
       }
     },
-    "coupons_row_9CtJPp": {
-      "type": "coupons-row",
+    "multicolumn_fK9pNm": {
+      "type": "multicolumn",
       "blocks": {
-        "row_eUhaa4": {
-          "type": "row",
+        "column_bLVQJB": {
+          "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville.ca_progress-50.png",
-            "caption": "",
-            "heading": "Total Savings",
-            "text": "",
-            "button_label": "",
-            "button_link": ""
+            "image": "shopify:\/\/shop_images\/mattressville.ca_progress-25.png",
+            "title": "",
+            "text": "<h2><strong>Total Savings<\/strong><\/h2>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "row_eUhaa4"
+        "column_bLVQJB"
+      ],
+      "custom_css": [
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 100%; max-width: 120px;}"
       ],
       "settings": {
-        "desktop_image_width": "small",
+        "title": "",
         "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "mobile_content_alignment": "left",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -473,6 +477,6 @@
     "rich_text_EBibEQ",
     "multicolumn_A9Ngk7",
     "multicolumn_NtqcKh",
-    "coupons_row_9CtJPp"
+    "multicolumn_fK9pNm"
   ]
 }
