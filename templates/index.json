@@ -340,7 +340,7 @@
         "review_NHRWjY": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/mattressville.ca_icon-support.png",
+            "review_image": "shopify:\/\/shop_images\/customer-support.webp",
             "review_stars": "5",
             "review_text": "<p>The sales person Andrew was excellent. He knew his products well and helped us choosing what we needed. The delivery service was smooth as well. Was overall a great experience.<\/p>",
             "review_name": "Best Customer Support",
@@ -351,6 +351,7 @@
         "review_7ht3tC": {
           "type": "Review",
           "settings": {
+            "review_image": "shopify:\/\/shop_images\/shopping-experience.webp",
             "review_stars": "5",
             "review_text": "<p>I received excellent service from Alex both pre sale and after sale. My purchase was done online and Alex follow up with a call. The delivery guys were also very professional and courteous. Highly recommend!!<br\/>                  <\/p>",
             "review_name": "Easy Online Shopping Experience",
@@ -361,6 +362,7 @@
         "review_bzEikC": {
           "type": "Review",
           "settings": {
+            "review_image": "shopify:\/\/shop_images\/free-delivery.webp",
             "review_stars": "5",
             "review_text": "<p>My husband and I decided to check this place based on the positive reviews. I am glad we did... The service was exceptional. The salesperson was very honest and knowledgeable. No additional charge for delivery which is another plus.... Best mattress store in town.\"<\/p>",
             "review_name": "Free delivery on orders above $499",
@@ -371,6 +373,7 @@
         "review_43b3XP": {
           "type": "Review",
           "settings": {
+            "review_image": "shopify:\/\/shop_images\/shield.webp",
             "review_stars": "5",
             "review_text": "<p>Great place to buy brand name mattresses. You can choose from high end Stearns and Foster, Tempurpedic, Beautyrest Black, to mid range Sealy, Simmons and some good local brands. They deliver to all major cities.... Definitely recommend. Great service and prices.\"<\/p>",
             "review_name": "Biggest Brand Names",
