@@ -45,7 +45,6 @@
     width: 100%;
     max-width: 300px;
     margin-right: 20px;
-    margin-bottom: 20px;
   }
 }
 
@@ -54,6 +53,7 @@
   box-shadow: 0px 2px 12px -2px #e5e5e5;
   box-sizing: border-box;
   border-radius: 15px;
+  margin-bottom: 30px;
 }
 .sidebar-content-container .invx_sidebar_menu_ul {
   margin: 0;

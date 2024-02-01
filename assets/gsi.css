@@ -74,8 +74,6 @@
 /*
  * Remove padding from product collection titles
  */
-@media screen and (min-width: 990px) {
-  .collection__title.title-wrapper--self-padded-tablet-down {
-    padding: 0;
-  }
+.collection__title {
+  padding: 0px;
 }

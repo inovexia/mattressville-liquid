@@ -55,9 +55,7 @@
 
     <div class="invx_sidebar_menu">
       <div class="invx_sidebar_menu_header">Recent Blogs</div>
-      {% for article in blogs.path[2].title %}
-        {{ article.title | link_to: article.url }}
-      {% endfor %}
+      {% render 'latest-related-blogs' %}
     </div>
   </div>
 {%- endif -%}
