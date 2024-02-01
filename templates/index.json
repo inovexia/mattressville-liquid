@@ -158,17 +158,6 @@
             "url_product": ""
           }
         },
-        "review_LmmNzB": {
-          "type": "Review",
-          "settings": {
-            "review_image": "shopify:\/\/shop_images\/Natura_Logo.png",
-            "review_stars": "5",
-            "review_text": "",
-            "review_name": "",
-            "position": "",
-            "url_product": ""
-          }
-        },
         "review_Lh6wpj": {
           "type": "Review",
           "settings": {
@@ -202,10 +191,10 @@
             "url_product": ""
           }
         },
-        "review_8qaCDp": {
+        "review_krBYzi": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/mattressville.ca_tempur-pedic-logo.png",
+            "review_image": "shopify:\/\/shop_images\/mattressville.ca_seally-logo.png",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
@@ -216,14 +205,13 @@
       },
       "block_order": [
         "review_tUgVWT",
-        "review_LmmNzB",
         "review_Lh6wpj",
         "review_m3fQBC",
         "review_46XecM",
-        "review_8qaCDp"
+        "review_krBYzi"
       ],
       "custom_css": [
-        ".psb-reviews-info img {width: 100%; height: auto;}"
+        ".psb-reviews-info img {width: 100%; height: auto; background: transparent;}"
       ],
       "settings": {
         "container_width": "psb-container",
@@ -240,7 +228,7 @@
         "enable_pagination": false,
         "enable_navigation": false,
         "pagination_type": "bullets",
-        "background_color": "rgba(0,0,0,0)",
+        "background_color": "#e9f3f3",
         "swiper_control_color": "#d7355c",
         "review-background-color": "rgba(0,0,0,0)",
         "stars-color": "#FFA500",
