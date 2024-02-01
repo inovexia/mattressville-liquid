@@ -408,7 +408,7 @@
         ".multicolumn-card {background: #fff; display: flex; justify-content: space-around; padding-left: 10px; border-radius: 5px; box-shadow: -5px -1px 8px #ccc;}",
         ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}",
         "@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",
-        ".multicolumn-card .multicolumn-card__info {text-align: left; max-width: 270px; width: 100%;}"
+        ".multicolumn-card .multicolumn-card__info {text-align: left; width: 100%;}"
       ],
       "settings": {
         "title": "Our Business Strategy",
