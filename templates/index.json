@@ -248,7 +248,7 @@
         "border_color": "rgba(0,0,0,0)",
         "text_align": "center",
         "section_padding_top": 15,
-        "section_padding_bottom": 25,
+        "section_padding_bottom": 15,
         "text_align_mobile": "right",
         "section_padding_top_mobile": 35,
         "section_padding_bottom_mobile": 35
