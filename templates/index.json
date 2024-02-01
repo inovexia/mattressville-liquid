@@ -215,7 +215,7 @@
       ],
       "settings": {
         "container_width": "psb-container",
-        "heading": "<h2>Our Brands<\/h2>",
+        "heading": "",
         "heading_tag": "h1",
         "subheading": "",
         "heading_color": "#000",
