@@ -78,6 +78,7 @@
     },
     "header-mid": {
       "type": "header-mid",
+      "disabled": true,
       "settings": {
         "text_color": "#ffffff",
         "phone_number": "1905-212-7722",
