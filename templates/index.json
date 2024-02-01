@@ -201,6 +201,17 @@
             "position": "",
             "url_product": ""
           }
+        },
+        "review_WpzmbW": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/sf.webp",
+            "review_stars": "5",
+            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>",
+            "review_name": "Mason Peter",
+            "position": "@ceo_mason",
+            "url_product": ""
+          }
         }
       },
       "block_order": [
@@ -208,7 +219,8 @@
         "review_Lh6wpj",
         "review_m3fQBC",
         "review_46XecM",
-        "review_krBYzi"
+        "review_krBYzi",
+        "review_WpzmbW"
       ],
       "custom_css": [
         ".psb-reviews-info img {width: 100%; height: auto; background: transparent;}"
@@ -218,7 +230,7 @@
         "heading": "",
         "heading_tag": "h1",
         "subheading": "",
-        "heading_color": "#000",
+        "heading_color": "#000000",
         "subheading_color": "#585454",
         "enable_star": false,
         "border_radius": 12,
@@ -231,12 +243,12 @@
         "background_color": "#e9f3f3",
         "swiper_control_color": "#d7355c",
         "review-background-color": "rgba(0,0,0,0)",
-        "stars-color": "#FFA500",
-        "text_color": "#000",
+        "stars-color": "#ffa500",
+        "text_color": "#000000",
         "border_color": "rgba(0,0,0,0)",
         "text_align": "center",
-        "section_padding_top": 30,
-        "section_padding_bottom": 30,
+        "section_padding_top": 15,
+        "section_padding_bottom": 25,
         "text_align_mobile": "right",
         "section_padding_top_mobile": 35,
         "section_padding_bottom_mobile": 35
@@ -416,7 +428,7 @@
         "heading": "<h2>What Our Customers are Saying<\/h2>",
         "heading_tag": "h1",
         "subheading": "",
-        "heading_color": "#000",
+        "heading_color": "#000000",
         "subheading_color": "#585454",
         "enable_star": true,
         "border_radius": 12,
@@ -429,8 +441,8 @@
         "background_color": "#e9f3f3",
         "swiper_control_color": "#d7355c",
         "review-background-color": "#ffffff",
-        "stars-color": "#FFA500",
-        "text_color": "#000",
+        "stars-color": "#ffa500",
+        "text_color": "#000000",
         "border_color": "rgba(0,0,0,0)",
         "text_align": "center",
         "section_padding_top": 50,
