@@ -67,6 +67,7 @@
         "column_zVXWye"
       ],
       "custom_css": [
+        "multicolumn.background-primary .multicolumn-card {background-color: #fff;}",
         ".multicolumn-card {display: flex; justify-content: space-around; padding-left: 10px; border: 1px solid #ccc; border-radius: 15px;}",
         ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}",
         "@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",
@@ -109,6 +110,9 @@
       "block_order": [
         "heading_BQy8PN",
         "text_zUzLHV"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {padding: 0;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -170,6 +174,7 @@
         "column_QQpqiM"
       ],
       "custom_css": [
+        ".multicolumn {padding: 0;}",
         ".multicolumn-card {background-color: #fff; border: 1px solid #ccc; border-radius: 15px;}",
         ".multicolumn-card .link {color: var(--accent-color);}"
       ],
@@ -247,7 +252,8 @@
         "collapsible_row_JKezXT"
       ],
       "custom_css": [
-        "h3 {font-size: 1.4em;}"
+        "h3 {font-size: 1.4em;}",
+        ".accordion {padding:0;}"
       ],
       "settings": {
         "caption": "",
@@ -406,10 +412,11 @@
         "column_YtcDiy"
       ],
       "custom_css": [
-        ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
-        ".multicolumn-card {display: flex; justify-content: space-around;}",
-        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 250px; flex-grow: 1;}",
-        ".multicolumn-card .multicolumn-card__info {text-align: left;}"
+        "multicolumn.background-primary .multicolumn-card {background: #ffffff;}",
+        ".multicolumn-card {display: flex; justify-content: space-around; padding-left: 10px; border-radius: 25px; box-shadow: 5px 5px 10px #ccc;}",
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}",
+        "@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",
+        ".multicolumn-card .multicolumn-card__info {text-align: left; max-width: 270px; width: 100%;}"
       ],
       "settings": {
         "title": "Our Business Strategy",
@@ -428,35 +435,40 @@
         "padding_bottom": 36
       }
     },
-    "coupons_row_9CtJPp": {
-      "type": "coupons-row",
+    "multicolumn_fK9pNm": {
+      "type": "multicolumn",
       "blocks": {
-        "row_eUhaa4": {
-          "type": "row",
+        "column_bLVQJB": {
+          "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville.ca_progress-50.png",
-            "caption": "",
-            "heading": "Total Savings",
-            "text": "",
-            "button_label": "",
-            "button_link": ""
+            "image": "shopify:\/\/shop_images\/mattressville.ca_progress-25.png",
+            "title": "",
+            "text": "<h2><strong>Total Savings<\/strong><\/h2>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "row_eUhaa4"
+        "column_bLVQJB"
+      ],
+      "custom_css": [
+        ".multicolumn-card {padding-top: 20px; border-radius: 25px; box-shadow: 5px 5px 10px #ccc;}",
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 100%; max-width: 120px;}"
       ],
       "settings": {
-        "desktop_image_width": "small",
+        "title": "",
         "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "mobile_content_alignment": "left",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -471,6 +483,6 @@
     "rich_text_EBibEQ",
     "multicolumn_A9Ngk7",
     "multicolumn_NtqcKh",
-    "coupons_row_9CtJPp"
+    "multicolumn_fK9pNm"
   ]
 }

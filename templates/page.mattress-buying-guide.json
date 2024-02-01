@@ -19,7 +19,7 @@
         "column_DRMai3": {
           "type": "column",
           "settings": {
-            "title": "Twin\/Single",
+            "title": "<strong>Twin\/Single<\/strong>",
             "text": "<p>39″ x 75″ (inches)<\/p><p>99cm x 190.5cm (centimeters)<br\/><\/p>",
             "link_label": "",
             "link": ""
@@ -28,7 +28,7 @@
         "column_U6qX7c": {
           "type": "column",
           "settings": {
-            "title": "Full\/Double",
+            "title": "<strong>Full\/Double<\/strong>",
             "text": "<p>54″ x 75″ (inches)<\/p><p>137cm x 190.5cm (centimeters)<br\/><\/p>",
             "link_label": "",
             "link": ""
@@ -37,7 +37,7 @@
         "column_6qUaDF": {
           "type": "column",
           "settings": {
-            "title": "Queen",
+            "title": "<strong>Queen<\/strong>",
             "text": "<p>59″ x 79″ (inches)<\/p><p>150cm x 201cm (centimeters)<br\/><\/p>",
             "link_label": "",
             "link": ""
@@ -46,7 +46,7 @@
         "column_mPQW6C": {
           "type": "column",
           "settings": {
-            "title": "King",
+            "title": "<strong>King<\/strong>",
             "text": "<p>76″ x 79″ (inches)<\/p><p>193cm x 201cm (centimeters)<\/p>",
             "link_label": "",
             "link": ""
@@ -60,8 +60,8 @@
         "column_mPQW6C"
       ],
       "settings": {
-        "title": "MATTRESS SIZES",
-        "heading_size": "h1",
+        "title": "<strong>MATTRESS SIZES<\/strong>",
+        "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 4,

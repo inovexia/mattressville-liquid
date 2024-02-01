@@ -53,15 +53,21 @@
           >
             {{ article.title | escape }}
           </h1>
-          {%- if block.settings.blog_show_date -%}
-            <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">
-              {{- article.published_at | time_tag: format: 'date' -}}
+          {%- if block.settings.blog_show_author -%}
+            <span class="article-label">
+              Posted by: 
+            </span>
+            <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <strong class="published-by" itemprop="name">{{ article.author }}</strong>
             </span>
           {%- endif -%}
-          {%- if block.settings.blog_show_author -%}
-            <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
-              <span itemprop="name">{{ article.author }}</span>
+          {%- if block.settings.blog_show_date -%}
+            <span class="article-label">
+              Posted on: 
             </span>
+            <strong class="published-on" itemprop="dateCreated pubdate datePublished">
+              {{- article.published_at | time_tag: format: 'date' -}}
+            </strong>
           {%- endif -%}
         </header>
 
