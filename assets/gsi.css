@@ -59,8 +59,8 @@
   content: '\e9b2';
 }
 
-h1:after,
-h2:after {
+.page-title:after,
+.title:after {
   content: ''; /* This is necessary for the pseudo element to work. */
   display: block; /* This will put the pseudo element on its own line. */
   margin: 0 auto; /* This will center the border. */
