@@ -4,12 +4,22 @@
     "main": {
       "type": "main-page-sidebar",
       "settings": {
-        "header_color": "#ffffff",
-        "header_bg_color": "#ff5c78",
-        "header_bg_color_opacity": 60,
-        "header_padding_top": 70,
-        "header_padding_bottom": 70,
-        "header_margin_bottom": 30,
+      }
+    },
+    "featured_blog_FCTbmC": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Featured Brands",
+        "heading_size": "h1",
+        "blog": "featured-brands",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "show_view_all": true,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -81,6 +91,57 @@
         "padding_bottom": 36
       }
     },
+    "featured_blog_9JWw8F": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "How To \/ User Guides",
+        "heading_size": "h1",
+        "blog": "how-to-user-guide",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_zF4QFV": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Promotions",
+        "heading_size": "h1",
+        "blog": "promotions",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_kVzGX3": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Tips",
+        "heading_size": "h1",
+        "blog": "tips",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_NEH7re": {
       "type": "rich-text",
       "settings": {
@@ -95,10 +156,14 @@
   },
   "order": [
     "main",
+    "featured_blog_FCTbmC",
     "featured_blog_ddzjxG",
     "featured_blog_J6cyXt",
     "featured_blog_UUbgca",
     "featured_blog_8fJhjU",
+    "featured_blog_9JWw8F",
+    "featured_blog_zF4QFV",
+    "featured_blog_kVzGX3",
     "rich_text_NEH7re"
   ]
 }
