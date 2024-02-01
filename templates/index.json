@@ -173,15 +173,15 @@
         "image_iFcJ7X"
       ],
       "settings": {
-        "container_width": "psb-container-fluid",
+        "container_width": "psb-container",
         "enable_keep_layout": false,
-        "img_proportion": "150%",
-        "heading_text": "Our Watches",
+        "img_proportion": "56%",
+        "heading_text": "",
         "heading_tag": "h2",
-        "inherit_fonts": false,
+        "inherit_fonts": true,
         "text_color": "#262424",
         "background_color": "transparent",
-        "text_align": "center",
+        "text_align": "left",
         "section_padding_top": 50,
         "section_padding_bottom": 50,
         "section_padding_top_mobile": 50,
@@ -333,6 +333,86 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "psb_reviews_reviews_01_PRaRHW": {
+      "type": "psb-reviews-reviews-01",
+      "blocks": {
+        "review_NHRWjY": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/mattressville.ca_icon-support.png",
+            "review_stars": "5",
+            "review_text": "<p>The sales person Andrew was excellent. He knew his products well and helped us choosing what we needed. The delivery service was smooth as well. Was overall a great experience.<\/p>",
+            "review_name": "Best Customer Support",
+            "position": "June Graham",
+            "url_product": ""
+          }
+        },
+        "review_7ht3tC": {
+          "type": "Review",
+          "settings": {
+            "review_stars": "5",
+            "review_text": "<p>I received excellent service from Alex both pre sale and after sale. My purchase was done online and Alex follow up with a call. The delivery guys were also very professional and courteous. Highly recommend!!<br\/>                  <\/p>",
+            "review_name": "Easy Online Shopping Experience",
+            "position": "Vincent S",
+            "url_product": ""
+          }
+        },
+        "review_bzEikC": {
+          "type": "Review",
+          "settings": {
+            "review_stars": "5",
+            "review_text": "<p>My husband and I decided to check this place based on the positive reviews. I am glad we did... The service was exceptional. The salesperson was very honest and knowledgeable. No additional charge for delivery which is another plus.... Best mattress store in town.\"<\/p>",
+            "review_name": "Free delivery on orders above $499",
+            "position": "Five Star Moulding Company",
+            "url_product": ""
+          }
+        },
+        "review_43b3XP": {
+          "type": "Review",
+          "settings": {
+            "review_stars": "5",
+            "review_text": "<p>Great place to buy brand name mattresses. You can choose from high end Stearns and Foster, Tempurpedic, Beautyrest Black, to mid range Sealy, Simmons and some good local brands. They deliver to all major cities.... Definitely recommend. Great service and prices.\"<\/p>",
+            "review_name": "Biggest Brand Names",
+            "position": "Valeriya Budakovska",
+            "url_product": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_NHRWjY",
+        "review_7ht3tC",
+        "review_bzEikC",
+        "review_43b3XP"
+      ],
+      "settings": {
+        "container_width": "psb-container",
+        "heading": "<h2>What Our Customers are Saying<\/h2>",
+        "heading_tag": "h1",
+        "subheading": "",
+        "heading_color": "#000",
+        "subheading_color": "#585454",
+        "enable_star": true,
+        "border_radius": 12,
+        "slider_per_view": 2.5,
+        "enable_loop": true,
+        "enable_autoplay": true,
+        "enable_pagination": false,
+        "enable_navigation": false,
+        "pagination_type": "bullets",
+        "background_color": "#f4d1d9",
+        "swiper_control_color": "#d7355c",
+        "review-background-color": "#ffffff",
+        "stars-color": "#FFA500",
+        "text_color": "#000",
+        "border_color": "rgba(0,0,0,0)",
+        "text_align": "center",
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "text_align_mobile": "center",
+        "section_padding_top_mobile": 35,
+        "section_padding_bottom_mobile": 35
+      }
     }
   },
   "order": [
@@ -342,6 +422,7 @@
     "featured_collection_xLkaJK",
     "multicolumn",
     "featured_collection_BY7Ca9",
-    "newsletter_De6KAC"
+    "newsletter_De6KAC",
+    "psb_reviews_reviews_01_PRaRHW"
   ]
 }
