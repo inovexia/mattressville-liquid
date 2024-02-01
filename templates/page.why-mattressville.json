@@ -405,8 +405,7 @@
         "column_YtcDiy"
       ],
       "custom_css": [
-        "multicolumn.background-primary .multicolumn-card {background: #ffffff;}",
-        ".multicolumn-card {display: flex; justify-content: space-around; padding-left: 10px; border-radius: 25px; box-shadow: 5px 5px 10px #ccc;}",
+        ".multicolumn-card {background: #fff; display: flex; justify-content: space-around; padding-left: 10px; border-radius: 5px; box-shadow: -5px -1px 8px #ccc;}",
         ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}",
         "@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",
         ".multicolumn-card .multicolumn-card__info {text-align: left; max-width: 270px; width: 100%;}"
@@ -446,7 +445,7 @@
         "column_bLVQJB"
       ],
       "custom_css": [
-        ".multicolumn-card {padding-top: 20px; border-radius: 25px; box-shadow: 5px 5px 10px #ccc;}",
+        ".multicolumn-card {padding-top: 20px; border-radius: 5px; box-shadow: -5px -2px 8px #ccc;}",
         ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 100%; max-width: 120px;}"
       ],
       "settings": {
