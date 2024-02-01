@@ -144,48 +144,111 @@
         "padding_bottom": 36
       }
     },
-    "psb_gallery_gallery_01_DVmP6m": {
-      "type": "psb-gallery-gallery-01",
+    "psb_reviews_reviews_01_Vr6JBB": {
+      "type": "psb-reviews-reviews-01",
       "blocks": {
-        "image_BeCnme": {
-          "type": "image",
+        "review_tUgVWT": {
+          "type": "Review",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/mattressville.ca_tempur-pedic-logo.png",
-            "link_to": ""
+            "review_image": "shopify:\/\/shop_images\/mattressville.ca_beautyrest-logo.png",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
           }
         },
-        "image_cTFEkD": {
-          "type": "image",
+        "review_LmmNzB": {
+          "type": "Review",
           "settings": {
-            "link_to": ""
+            "review_image": "shopify:\/\/shop_images\/mattressville.ca_seally-logo.png",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
           }
         },
-        "image_iFcJ7X": {
-          "type": "image",
+        "review_Lh6wpj": {
+          "type": "Review",
           "settings": {
-            "link_to": ""
+            "review_image": "shopify:\/\/shop_images\/mattressville-logo-no-slogan.png",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
+          }
+        },
+        "review_m3fQBC": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/mattressville.ca_stern-foster-logo.png",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
+          }
+        },
+        "review_46XecM": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/mattressville.ca_beautyrest-logo.png",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
+          }
+        },
+        "review_8qaCDp": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/mattressville.ca_tempur-pedic-logo.png",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
           }
         }
       },
       "block_order": [
-        "image_BeCnme",
-        "image_cTFEkD",
-        "image_iFcJ7X"
+        "review_tUgVWT",
+        "review_LmmNzB",
+        "review_Lh6wpj",
+        "review_m3fQBC",
+        "review_46XecM",
+        "review_8qaCDp"
       ],
       "settings": {
         "container_width": "psb-container",
-        "enable_keep_layout": false,
-        "img_proportion": "56%",
-        "heading_text": "",
-        "heading_tag": "h2",
-        "inherit_fonts": true,
-        "text_color": "#262424",
-        "background_color": "transparent",
-        "text_align": "left",
-        "section_padding_top": 50,
-        "section_padding_bottom": 50,
-        "section_padding_top_mobile": 50,
-        "section_padding_bottom_mobile": 50
+        "heading": "",
+        "heading_tag": "div",
+        "subheading": "",
+        "heading_color": "#000",
+        "subheading_color": "#585454",
+        "enable_star": false,
+        "border_radius": 12,
+        "slider_per_view": 4,
+        "enable_loop": true,
+        "enable_autoplay": true,
+        "enable_pagination": false,
+        "enable_navigation": false,
+        "pagination_type": "bullets",
+        "background_color": "#e9f3f3",
+        "swiper_control_color": "#d7355c",
+        "review-background-color": "rgba(0,0,0,0)",
+        "stars-color": "#FFA500",
+        "text_color": "#000",
+        "border_color": "rgba(0,0,0,0)",
+        "text_align": "center",
+        "section_padding_top": 30,
+        "section_padding_bottom": 30,
+        "text_align_mobile": "right",
+        "section_padding_top_mobile": 35,
+        "section_padding_bottom_mobile": 35
       }
     },
     "featured_collection_xLkaJK": {
@@ -300,40 +363,6 @@
         "padding_bottom": 36
       }
     },
-    "newsletter_De6KAC": {
-      "type": "newsletter",
-      "blocks": {
-        "paragraph_EJhQGi": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<h2>Subscribe to our newsletter and enjoy<\/h2>"
-          }
-        },
-        "heading_MxyUbh": {
-          "type": "heading",
-          "settings": {
-            "heading": "5% OFF",
-            "heading_size": "h1"
-          }
-        },
-        "email_form_W7jHhz": {
-          "type": "email_form",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "paragraph_EJhQGi",
-        "heading_MxyUbh",
-        "email_form_W7jHhz"
-      ],
-      "settings": {
-        "color_scheme": "scheme-6",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "psb_reviews_reviews_01_PRaRHW": {
       "type": "psb-reviews-reviews-01",
       "blocks": {
@@ -419,16 +448,50 @@
         "section_padding_top_mobile": 35,
         "section_padding_bottom_mobile": 35
       }
+    },
+    "newsletter_De6KAC": {
+      "type": "newsletter",
+      "blocks": {
+        "paragraph_EJhQGi": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<h2>Subscribe to our newsletter and enjoy<\/h2>"
+          }
+        },
+        "heading_MxyUbh": {
+          "type": "heading",
+          "settings": {
+            "heading": "5% OFF",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_W7jHhz": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_EJhQGi",
+        "heading_MxyUbh",
+        "email_form_W7jHhz"
+      ],
+      "settings": {
+        "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "slideshow_yh9aX9",
     "multicolumn_Yk9bxe",
-    "psb_gallery_gallery_01_DVmP6m",
+    "psb_reviews_reviews_01_Vr6JBB",
     "featured_collection_xLkaJK",
     "multicolumn",
     "featured_collection_BY7Ca9",
-    "newsletter_De6KAC",
-    "psb_reviews_reviews_01_PRaRHW"
+    "psb_reviews_reviews_01_PRaRHW",
+    "newsletter_De6KAC"
   ]
 }
