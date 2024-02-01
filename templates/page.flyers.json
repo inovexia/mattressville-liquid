@@ -4,13 +4,6 @@
     "main": {
       "type": "main-page-sidebar",
       "settings": {
-        "header_color": "#ffffff",
-        "header_bg_color": "#ff5c78",
-        "header_bg_color_opacity": 60,
-        "header_padding_top": 70,
-        "header_padding_bottom": 70,
-        "header_margin_bottom": 30,
-        "padding_bottom": 28
       }
     },
     "image_with_text_EKL6in": {
@@ -88,11 +81,58 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "multicolumn_pWVmxp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_4X4nKa": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GhNBjL": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_4X4nKa",
+        "column_GhNBjL"
+      ],
+      "custom_css": [
+        ".multicolumn.background-primary .multicolumn-card {background: transparent;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-6",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "image_with_text_EKL6in",
-    "image_with_text_jexaPg"
+    "image_with_text_jexaPg",
+    "multicolumn_pWVmxp"
   ]
 }
