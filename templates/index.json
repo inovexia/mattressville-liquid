@@ -234,28 +234,6 @@
             "position": "",
             "url_product": ""
           }
-        },
-        "review_cppDWX": {
-          "type": "Review",
-          "settings": {
-            "review_image": "shopify:\/\/shop_images\/sertamattress.png",
-            "review_stars": "5",
-            "review_text": "",
-            "review_name": "",
-            "position": "",
-            "url_product": ""
-          }
-        },
-        "review_Nkq3cL": {
-          "type": "Review",
-          "settings": {
-            "review_image": "shopify:\/\/shop_images\/galaxy.webp",
-            "review_stars": "5",
-            "review_text": "",
-            "review_name": "",
-            "position": "",
-            "url_product": ""
-          }
         }
       },
       "block_order": [
@@ -266,9 +244,7 @@
         "review_m3fQBC",
         "review_46XecM",
         "review_krBYzi",
-        "review_8tciHD",
-        "review_cppDWX",
-        "review_Nkq3cL"
+        "review_8tciHD"
       ],
       "custom_css": [
         ".psb-reviews-info img {width: 100%; height: auto; background: transparent;}"
