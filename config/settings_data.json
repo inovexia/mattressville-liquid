@@ -457,7 +457,8 @@
     "custom_css": [
       "details[id*=\"filter.p.tag\"] {display: none;}",
       ".content > p > img {border-radius: 25px;}",
-      ".collection-hero__image-page-width img {border-radius: 25px; box-shadow: 0 0 10px -8px var(--secondary-color);}"
+      ".collection-hero__image-page-width img {border-radius: 25px; box-shadow: 0 0 10px -8px var(--secondary-color);}",
+      "h1:after, h2:after {}"
     ]
   }
 }
