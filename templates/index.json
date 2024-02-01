@@ -222,6 +222,9 @@
         "review_46XecM",
         "review_8qaCDp"
       ],
+      "custom_css": [
+        ".psb-reviews-info img {width: 100%; height: auto;}"
+      ],
       "settings": {
         "container_width": "psb-container",
         "heading": "",
