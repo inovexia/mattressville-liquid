@@ -59,7 +59,7 @@
           "type": "announcement",
           "settings": {
             "text": "1905-212-7722",
-            "link": ""
+            "link": "tel:1905-212-7722"
           }
         }
       },
