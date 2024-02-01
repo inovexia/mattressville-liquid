@@ -238,7 +238,7 @@
         "review_cppDWX": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/serta.webp",
+            "review_image": "shopify:\/\/shop_images\/sertamattress.png",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
@@ -298,8 +298,8 @@
         "section_padding_top": 10,
         "section_padding_bottom": 10,
         "text_align_mobile": "right",
-        "section_padding_top_mobile": 35,
-        "section_padding_bottom_mobile": 35
+        "section_padding_top_mobile": 10,
+        "section_padding_bottom_mobile": 10
       }
     },
     "featured_collection_xLkaJK": {
