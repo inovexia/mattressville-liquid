@@ -158,6 +158,28 @@
             "url_product": ""
           }
         },
+        "review_6jCr9J": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/mville-new.webp",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
+          }
+        },
+        "review_WpzmbW": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/sf.webp",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
+          }
+        },
         "review_Lh6wpj": {
           "type": "Review",
           "settings": {
@@ -194,18 +216,7 @@
         "review_krBYzi": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/sealy.webp",
-            "review_stars": "5",
-            "review_text": "",
-            "review_name": "",
-            "position": "",
-            "url_product": ""
-          }
-        },
-        "review_WpzmbW": {
-          "type": "Review",
-          "settings": {
-            "review_image": "shopify:\/\/shop_images\/sf.webp",
+            "review_image": "shopify:\/\/shop_images\/seally_19058521-7595-4985-8a76-a5a99fbb5563.png",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
@@ -224,17 +235,6 @@
             "url_product": ""
           }
         },
-        "review_6jCr9J": {
-          "type": "Review",
-          "settings": {
-            "review_image": "shopify:\/\/shop_images\/mville-new.webp",
-            "review_stars": "5",
-            "review_text": "",
-            "review_name": "",
-            "position": "",
-            "url_product": ""
-          }
-        },
         "review_cppDWX": {
           "type": "Review",
           "settings": {
@@ -245,18 +245,30 @@
             "position": "",
             "url_product": ""
           }
+        },
+        "review_Nkq3cL": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/galaxy.webp",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
+          }
         }
       },
       "block_order": [
         "review_tUgVWT",
+        "review_6jCr9J",
+        "review_WpzmbW",
         "review_Lh6wpj",
         "review_m3fQBC",
         "review_46XecM",
         "review_krBYzi",
-        "review_WpzmbW",
         "review_8tciHD",
-        "review_6jCr9J",
-        "review_cppDWX"
+        "review_cppDWX",
+        "review_Nkq3cL"
       ],
       "custom_css": [
         ".psb-reviews-info img {width: 100%; height: auto; background: transparent;}"
@@ -283,8 +295,8 @@
         "text_color": "#000000",
         "border_color": "rgba(0,0,0,0)",
         "text_align": "center",
-        "section_padding_top": 15,
-        "section_padding_bottom": 15,
+        "section_padding_top": 10,
+        "section_padding_bottom": 10,
         "text_align_mobile": "right",
         "section_padding_top_mobile": 35,
         "section_padding_bottom_mobile": 35
