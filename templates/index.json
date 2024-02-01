@@ -298,7 +298,7 @@
         "section_padding_top": 10,
         "section_padding_bottom": 10,
         "text_align_mobile": "right",
-        "section_padding_top_mobile": 10,
+        "section_padding_top_mobile": 25,
         "section_padding_bottom_mobile": 10
       }
     },
