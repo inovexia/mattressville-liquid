@@ -194,7 +194,7 @@
             "feature_text": "",
             "feature_image": "shopify:\/\/shop_images\/mattressville.ca_beautyrest-logo.png",
             "feature_url": "",
-            "hide_image": false
+            "hide_image": true
           }
         }
       },
