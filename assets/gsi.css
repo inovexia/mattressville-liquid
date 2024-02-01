@@ -63,8 +63,10 @@
 .title:after {
   content: ''; /* This is necessary for the pseudo element to work. */
   display: block; /* This will put the pseudo element on its own line. */
-  margin: 0 auto; /* This will center the border. */
-  width: 50%; /* Change this to whatever width you want. */
+  margin: 0; /* This will reset the margins. */
+  left: 0; /* This will align the border to the left. */
+  width: 10%; /* Change this to whatever width you want. */
+  max-width: 100px;
   padding-top: 20px; /* This creates some space between the element and the border. */
   border-bottom: 2px solid #ff5c7b; /* This creates the border. Replace black with whatever color you want. */
 }
