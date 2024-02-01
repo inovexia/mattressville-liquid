@@ -335,7 +335,7 @@
         ".multicolumn-card {background: #ffffff; border-radius: 15px; border: 1px solid #f1f3f4; overflow: hidden; text-align: left;}",
         ".multicolumn li:nth-child(2) .multicolumn-card {box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.05); height: 105%; margin: -15px -15px 0 -15px; z-index: 1000 !important;}",
         ".multicolumn li:nth-child(3) .multicolumn-card {z-index: -1 !important;}",
-        ".multicolumn ul {list-style: none;}"
+        ".multicolumn ul {list-style: none; font-size:0.86em;}"
       ],
       "settings": {
         "title": "",
