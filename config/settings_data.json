@@ -9,7 +9,7 @@
     "heading_scale": 100,
     "type_body_font": "roboto_n4",
     "body_scale": 100,
-    "page_width": 1260,
+    "page_width": 1360,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -148,12 +148,6 @@
         "settings": {
         }
       },
-      "10534424223343191814": {
-        "type": "shopify:\/\/apps\/customer-dashboard\/blocks\/app-embed\/f81081fd-cd04-43ee-897a-18ef0e5d9b04",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "7570552984445421165": {
         "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
@@ -170,6 +164,18 @@
       "9365423049038898845": {
         "type": "shopify:\/\/apps\/tawk-to-live-chat\/blocks\/widget-embed-code\/91169e75-f163-40ce-90e0-9059f3c9b772",
         "disabled": true,
+        "settings": {
+        }
+      },
+      "7046932070715527255": {
+        "type": "shopify:\/\/apps\/puco-sections-blocks\/blocks\/app-embed-javascript\/f1ea0cb9-0193-44b7-bab7-d0fd6bec6cbf",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "12723626199553905971": {
+        "type": "shopify:\/\/apps\/puco-sections-blocks\/blocks\/app-embed-stylesheet\/f1ea0cb9-0193-44b7-bab7-d0fd6bec6cbf",
+        "disabled": false,
         "settings": {
         }
       }

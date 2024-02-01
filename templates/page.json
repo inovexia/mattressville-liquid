@@ -41,6 +41,9 @@
         "column_eCBJA8",
         "column_wwn7RA"
       ],
+      "custom_css": [
+        ".multicolumn.background-primary .multicolumn-card {background: transparent;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",

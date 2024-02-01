@@ -1,0 +1,76 @@
+{%- comment -%}
+  {
+    "name": "Space",
+    "author": "PusherCommerce"
+    "description": "Please DO NOT copy in any form. Any act of copying will be sued and held responsible with the law"
+  }
+{%- endcomment -%}
+{% capture minify %}
+  <style>
+    #psb-{{ section.id }} .psb-utilities-space__item {
+      height: {{ section.settings.space_mobile }}px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      #psb-{{ section.id }} .psb-utilities-space__item {
+        height: {{ section.settings.space_tablet }}px;
+      }
+    }
+    @media only screen and (min-width: 1024px) {
+      #psb-{{ section.id }} .psb-utilities-space__item {
+        height: {{ section.settings.space_desktop }}px;
+      }
+    }
+  </style>
+{% endcapture %}
+{{ minify | strip_newlines }}
+
+<div id="psb-{{ section.id }}" class="psb-{{ section.id }} psb-section psb-utilities-space" style="display: none;">
+  {%- comment -%}A lot of themes default hide empty div => set display block {%- endcomment -%}
+  <div class="psb-utilities-space__item" style="display: block"></div>
+</div>
+
+{% schema %}
+{
+  "name": "⚡︎PSB: Space",
+  "tag": "section",
+  "class": "psb-section-wrapper",
+  "settings": [
+    {
+      "type": "range",
+      "id": "space_mobile",
+      "min": 0,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "label": "Space on mobile",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "space_tablet",
+      "min": 0,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "label": "Space on tablet",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "space_desktop",
+      "min": 0,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "label": "Space on desktop",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "⚡︎PSB: Space"
+    }
+  ]
+}
+{% endschema %}
