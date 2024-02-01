@@ -1,13 +1,15 @@
 @font-face {
-  font-family: "GS-Starter-Icon";
-  src: url("./GS-Starter-Icon.eot?e2mlkw");
-  src: url("./GS-Starter-Icon.eot?e2mlkw#iefix") format("embedded-opentype"), url("./GS-Starter-Icon.ttf?e2mlkw") format("truetype"), url("./GS-Starter-Icon.woff?e2mlkw") format("woff"), url("./GS-Starter-Icon.svg?e2mlkw#GS-Starter-Icon") format("svg");
+  font-family: 'GS-Starter-Icon';
+  src: url('./GS-Starter-Icon.eot?e2mlkw');
+  src: url('./GS-Starter-Icon.eot?e2mlkw#iefix') format('embedded-opentype'),
+    url('./GS-Starter-Icon.ttf?e2mlkw') format('truetype'), url('./GS-Starter-Icon.woff?e2mlkw') format('woff'),
+    url('./GS-Starter-Icon.svg?e2mlkw#GS-Starter-Icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 .gsi {
-  font-family: "GS-Starter-Icon";
+  font-family: 'GS-Starter-Icon';
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -18,41 +20,51 @@
 }
 
 .gs-facebook-alt:before {
-  content: "\ea90";
+  content: '\ea90';
 }
 
 .gs-twitter-alt:before {
-  content: "\ea96";
+  content: '\ea96';
 }
 
 .gs-instagram:before {
-  content: "\e984";
+  content: '\e984';
 }
 
 .gs-chevron-right::before {
-  content: "\e930";
+  content: '\e930';
 }
 
 .gs-chevron-down:before {
-  content: "\e92e";
+  content: '\e92e';
 }
 
 .gs-chevron-up:before {
-  content: "\e931";
+  content: '\e931';
 }
 
 .gs-search:before {
-  content: "\e9cc";
+  content: '\e9cc';
 }
 
 .gs-shopping-cart:before {
-  content: "\e9d5";
+  content: '\e9d5';
 }
 
 .gs-log-in:before {
-  content: "\e990";
+  content: '\e990';
 }
 
 .gs-phone:before {
-  content: "\e9b2";
+  content: '\e9b2';
+}
+
+h1:after,
+h2:after {
+  content: ''; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  margin: 0 auto; /* This will center the border. */
+  width: 50%; /* Change this to whatever width you want. */
+  padding-top: 20px; /* This creates some space between the element and the border. */
+  border-bottom: 2px solid #ff5c7b; /* This creates the border. Replace black with whatever color you want. */
 }
