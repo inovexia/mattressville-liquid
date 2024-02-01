@@ -388,6 +388,9 @@
         "review_bzEikC",
         "review_43b3XP"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "container_width": "psb-container",
         "heading": "<h2>What Our Customers are Saying<\/h2>",
@@ -403,7 +406,7 @@
         "enable_pagination": false,
         "enable_navigation": false,
         "pagination_type": "bullets",
-        "background_color": "#f4d1d9",
+        "background_color": "#e9f3f3",
         "swiper_control_color": "#d7355c",
         "review-background-color": "#ffffff",
         "stars-color": "#FFA500",
