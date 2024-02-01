@@ -144,6 +144,50 @@
         "padding_bottom": 36
       }
     },
+    "psb_gallery_gallery_01_DVmP6m": {
+      "type": "psb-gallery-gallery-01",
+      "blocks": {
+        "image_BeCnme": {
+          "type": "image",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/mattressville.ca_tempur-pedic-logo.png",
+            "link_to": ""
+          }
+        },
+        "image_cTFEkD": {
+          "type": "image",
+          "settings": {
+            "link_to": ""
+          }
+        },
+        "image_iFcJ7X": {
+          "type": "image",
+          "settings": {
+            "link_to": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_BeCnme",
+        "image_cTFEkD",
+        "image_iFcJ7X"
+      ],
+      "settings": {
+        "container_width": "psb-container-fluid",
+        "enable_keep_layout": false,
+        "img_proportion": "150%",
+        "heading_text": "Our Watches",
+        "heading_tag": "h2",
+        "inherit_fonts": false,
+        "text_color": "#262424",
+        "background_color": "transparent",
+        "text_align": "center",
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "section_padding_top_mobile": 50,
+        "section_padding_bottom_mobile": 50
+      }
+    },
     "featured_collection_xLkaJK": {
       "type": "featured-collection",
       "settings": {
@@ -294,6 +338,7 @@
   "order": [
     "slideshow_yh9aX9",
     "multicolumn_Yk9bxe",
+    "psb_gallery_gallery_01_DVmP6m",
     "featured_collection_xLkaJK",
     "multicolumn",
     "featured_collection_BY7Ca9",
