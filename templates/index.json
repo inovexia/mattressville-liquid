@@ -161,7 +161,7 @@
         "review_LmmNzB": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/mattressville.ca_seally-logo.png",
+            "review_image": "shopify:\/\/shop_images\/Natura_Logo.png",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
@@ -172,7 +172,7 @@
         "review_Lh6wpj": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/mattressville-logo-no-slogan.png",
+            "review_image": "shopify:\/\/shop_images\/tempur-pedic-logo.png",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
@@ -183,7 +183,7 @@
         "review_m3fQBC": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/mattressville.ca_stern-foster-logo.png",
+            "review_image": "shopify:\/\/shop_images\/Kingsdown_Logo.png",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
@@ -194,7 +194,7 @@
         "review_46XecM": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/mattressville.ca_beautyrest-logo.png",
+            "review_image": "shopify:\/\/shop_images\/eco-comfort-Logo.png",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
@@ -240,7 +240,7 @@
         "enable_pagination": false,
         "enable_navigation": false,
         "pagination_type": "bullets",
-        "background_color": "#e9f3f3",
+        "background_color": "rgba(0,0,0,0)",
         "swiper_control_color": "#d7355c",
         "review-background-color": "rgba(0,0,0,0)",
         "stars-color": "#FFA500",
