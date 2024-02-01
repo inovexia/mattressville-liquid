@@ -435,7 +435,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville.ca_progress-50.jpg",
             "title": "",
-            "text": "<h2><strong>Total Savings<\/strong><\/h2>",
+            "text": "<h4><strong>Total Savings<\/strong><\/h4>",
             "link_label": "",
             "link": ""
           }
