@@ -20,7 +20,7 @@
         "text_36UH7g"
       ],
       "custom_css": [
-        ".rich__text {border: 1px solid #ccc;}"
+        ".rich-text {border: 1px solid #ccc; border-radius: 15px;}"
       ],
       "settings": {
         "desktop_content_position": "left",
