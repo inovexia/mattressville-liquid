@@ -1,0 +1,316 @@
+{%- comment -%}
+  {
+    "name": "Block Coupon 01",
+    "author": "PusherCommerce"
+    "description": "Please DO NOT copy in any form. Any act of copying will be sued and held responsible with the law"
+  }
+{%- endcomment -%}
+
+{% capture minify %}
+  <style>
+    #psb-{{ section.id }} {
+      background-color: {{ section.settings.background_color }};
+    }
+
+    #psb-{{ section.id }} .psb-coupon-wrapper {
+      padding: 25px;
+    }
+    
+    #psb-{{ section.id }} .psb-card {
+      border-radius: 5px;
+      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+      background-color: {{ section.settings.card_background_color }};
+      padding: 10px 10px;
+      position: relative;
+    }
+
+    #psb-{{ section.id }} .psb-main-wrapper,
+    #psb-{{ section.id }} .psb-copy-button {
+      display: flex;
+      padding: 0 10px;
+      align-items: center;
+    }
+    #psb-{{ section.id }} .psb-card::after {
+      position: absolute;
+      content: "";
+      height: 40px;
+      right: -20px;
+      border-radius: 40px;
+      z-index: 1;
+      top: 70px;
+      background-color: {{ section.settings.background_color }};
+      width: 40px;
+    }
+
+    #psb-{{ section.id }} .psb-card::before {
+      position: absolute;
+      content: "";
+      height: 40px;
+      left: -20px;
+      border-radius: 40px;
+      z-index: 1;
+      top: 70px;
+      background-color: {{ section.settings.background_color }};
+      width: 40px;
+    }
+
+    #psb-{{ section.id }} .psb-logo {
+      padding-left: 5px;
+    }
+
+    #psb-{{ section.id }} .psb-logo img {
+      min-width: 100px;
+      width: 100px;
+      height: 100px;
+    }
+    #psb-{{ section.id }} .psb-vertical-line {
+      border-left: 5px dotted {{ section.settings.vertical_line_color }};
+      height: 100px;
+      margin: 0 15px;
+    }
+
+    #psb-{{ section.id }} .psb-content {
+      padding-right: 5px;
+    }
+
+    #psb-{{ section.id }} .psb-content .psb-heading {
+      color: {{ section.settings.heading_color }};
+    }
+
+    #psb-{{ section.id }} .psb-content .psb-description {
+      color: {{ section.settings.description_color }};
+    }
+
+    #psb-{{ section.id }} .psb-copy-button {
+      margin: 10px;
+      height: 45px;
+      border-radius: 4px;
+      padding: 0;
+      border: 1px solid {{ section.settings.border_coupon_color }};
+    }
+
+    #psb-{{ section.id }} .psb-copy-button button {
+      height: 45px;
+    }
+
+    #psb-{{ section.id }} .psb-copy-button input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      font-weight: 600;
+      padding-left: 15px;
+      background-color: transparent;
+    }
+
+    #psb-{{ section.id }} .psb-copy-button button {
+      cursor: pointer;
+      padding: 5px 20px;
+      background-color: {{ section.settings.button_background_color }};
+      color: {{ section.settings.button_text_color }};
+      border: 1px solid transparent;
+    }
+  </style>
+{% endcapture %}
+{{ minify | strip_newlines }}
+
+<psb-teleport data-to="{{ section.settings.block_id }}">
+  <div id="psb-{{ section.id }}" class="psb-{{ section.id }} psb-section psb-block psb-coupon-coupon-01" style="display: none;">
+    <div class="psb-container-fullwidth">
+      <div class="psb-coupon-wrapper psb-d-flex psb-justify-content-center psb-align-items-center">
+        <div class="psb-card">
+          <div class="psb-main-wrapper">
+            <div class="psb-logo">
+              {% if section.settings.logo_image != blank %}
+                {{ section.settings.logo_image | image_url: width: 1500 | image_tag: loading: 'lazy' }}
+              {% else %}
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0738/6782/1357/files/macdonal_logo.png?v=1702903228"
+                  width="100"
+                  height="100"
+                  loading="lazy"
+                  loading="lazy"
+                  alt="Placholder image"
+                >
+              {% endif %}
+            </div>
+            <div class="psb-vertical-line"></div>
+            <div class="psb-content psb-rte">
+              <{{ section.settings.heading_tag }} class="psb-heading">{{ section.settings.heading }}</{{ section.settings.heading_tag }}>
+              <p class="psb-description">{{ section.settings.description }}</p>
+            </div>
+          </div>
+          <div class="psb-copy-button">
+            <input id="psb-coupon-01-copy-value" type="text" readonly value="{{ section.settings.coupon_code }}">
+            <button class="psb-coupon-01-copy-btn">{{ section.settings.copy_button_text }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</psb-teleport>
+
+<script>
+  (function () {
+    const copyButton = document.querySelector('#psb-{{ section.id }} .psb-coupon-01-copy-btn');
+    copyButton.addEventListener('click', () => {
+      const inputEl = document.querySelector('#psb-{{ section.id }} #psb-coupon-01-copy-value');
+      inputEl.select();
+      document.execCommand('copy');
+      copyButton.innerHTML = '{{ section.settings.copied_button_text }}';
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "⚡︎PSB Block: Coupon 01",
+  "tag": "section",
+  "class": "psb-section-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Block ID"
+    },
+    {
+      "type": "text",
+      "id": "block_id",
+      "label": "Block ID",
+      "default": "psb-block-coupon-01"
+    },
+    {
+      "type": "header",
+      "content": "Main settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo image",
+      "info": "Tips: Use transparent png image for best effect."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "10% Coupon"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "options": [
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "div",
+          "label": "Div"
+        }
+      ],
+      "default": "h3",
+      "info": "Heading size"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Valid till 30 March 2025. Copy and use immediately at Checkout page."
+    },
+    {
+      "type": "text",
+      "id": "coupon_code",
+      "label": "Coupon code",
+      "default": "PUCO10"
+    },
+    {
+      "type": "text",
+      "id": "copy_button_text",
+      "label": "Copy button text",
+      "default": "COPY"
+    },
+    {
+      "type": "text",
+      "id": "copied_button_text",
+      "label": "Copied button text",
+      "default": "COPIED"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#565656"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#565656"
+    },
+    {
+      "type": "color",
+      "id": "vertical_line_color",
+      "label": "Vertical line color",
+      "default": "#565656"
+    },
+    {
+      "type": "color",
+      "id": "border_coupon_color",
+      "label": "Border coupon color",
+      "default": "#e1e1e1"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background color",
+      "default": "#dc143c"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "transparent"
+    }
+  ],
+  "presets": [
+    {
+      "name": "⚡︎PSB Block: Coupon 01",
+      "settings": {
+        "background_color": "#dc143c"
+      }
+    }
+  ]
+}
+{% endschema %}
