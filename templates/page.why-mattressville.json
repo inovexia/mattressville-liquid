@@ -300,7 +300,7 @@
           "type": "column",
           "settings": {
             "title": "BIG BOX RETAILERS",
-            "text": "<ul><li>✖ Huge Price\/Good Quality<\/li><li>✓ Brand Name Products<\/li><li>✓ Fully Manufacturer Warranty<\/li><li>✓ Sleep Guarantee<\/li><li>✓ Price Match Guarantee<\/li><li>✓ Mattress\/ Sleep Experts<\/li><li>✖ Referral Program<\/li><\/ul>",
+            "text": "<ul><li>✕ Huge Price\/Good Quality<\/li><li>✓ Brand Name Products<\/li><li>✓ Fully Manufacturer Warranty<\/li><li>✓ Sleep Guarantee<\/li><li>✓ Price Match Guarantee<\/li><li>✓ Mattress\/ Sleep Experts<\/li><li>✕ Referral Program<\/li><\/ul>",
             "link_label": "",
             "link": ""
           }
@@ -319,7 +319,7 @@
           "type": "column",
           "settings": {
             "title": "OUTLET STORES",
-            "text": "<ul><li>✖ Cheap Price\/Poor Quality<\/li><li>✖ Usually no Brand Name Products<\/li><li>✖ Difficult Warranty<\/li><li>✓ Sleep Guarantee<\/li><li>✓ Price Match Guarantee<\/li><li>✖ Mattress\/ Sleep Experts<\/li><li>✖ Referral Program<\/li><\/ul>",
+            "text": "<ul><li>✕ Cheap Price\/Poor Quality<\/li><li>✕ Usually no Brand Name Products<\/li><li>✕ Difficult Warranty<\/li><li>✓ Sleep Guarantee<\/li><li>✓ Price Match Guarantee<\/li><li>✕ Mattress\/ Sleep Experts<\/li><li>✕ Referral Program<\/li><\/ul>",
             "link_label": "",
             "link": ""
           }
