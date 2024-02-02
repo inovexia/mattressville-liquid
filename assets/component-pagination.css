@@ -111,6 +111,7 @@ a.pagination__item:hover::after {
   background-color: var(--accent-color);
   border-radius: 89.5709px;
   border: none;
+  box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
   display: inline-flex;
