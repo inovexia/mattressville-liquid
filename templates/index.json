@@ -321,7 +321,7 @@
         "show_view_all": false,
         "view_all_style": "outline",
         "enable_desktop_slider": false,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -377,7 +377,7 @@
         "text_color": "#262424",
         "background_color": "transparent",
         "text_align": "center",
-        "section_padding_top": 50,
+        "section_padding_top": 100,
         "section_padding_bottom": 50,
         "section_padding_top_mobile": 50,
         "section_padding_bottom_mobile": 50
