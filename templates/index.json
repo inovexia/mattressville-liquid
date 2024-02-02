@@ -334,6 +334,53 @@
         "padding_bottom": 36
       }
     },
+    "psb_gallery_gallery_01_pQmz4F": {
+      "type": "psb-gallery-gallery-01",
+      "blocks": {
+        "image_zqFU4b": {
+          "type": "image",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/mattressville_clearance_small_8af409af-79e4-41d0-960c-115baae569dd.webp",
+            "link_to": ""
+          }
+        },
+        "image_VF76MB": {
+          "type": "image",
+          "settings": {
+            "link_to": ""
+          }
+        },
+        "image_JLxtdP": {
+          "type": "image",
+          "settings": {
+            "link_to": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_zqFU4b",
+        "image_VF76MB",
+        "image_JLxtdP"
+      ],
+      "custom_css": [
+        "img {width: 100%; height: auto;}"
+      ],
+      "settings": {
+        "container_width": "psb-container",
+        "enable_keep_layout": false,
+        "img_proportion": "56%",
+        "heading_text": "",
+        "heading_tag": "h2",
+        "inherit_fonts": true,
+        "text_color": "#262424",
+        "background_color": "transparent",
+        "text_align": "center",
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "section_padding_top_mobile": 50,
+        "section_padding_bottom_mobile": 50
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -565,6 +612,7 @@
     "multicolumn_Yk9bxe",
     "psb_reviews_reviews_01_Vr6JBB",
     "featured_collection_xLkaJK",
+    "psb_gallery_gallery_01_pQmz4F",
     "multicolumn",
     "featured_collection_BY7Ca9",
     "psb_reviews_reviews_01_PRaRHW",
