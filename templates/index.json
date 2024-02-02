@@ -128,7 +128,8 @@
         "column_fcPXDa"
       ],
       "custom_css": [
-        "img {border-radius: 15px;}"
+        "img {border-radius: 15px;}",
+        ".background-none .multicolumn-card__image-wrapper + .multicolumn-card__info {padding-top: 0; font-weight: 700; letter-spacing: 0;}"
       ],
       "settings": {
         "title": "<strong>Shop By Categories<\/strong>",
