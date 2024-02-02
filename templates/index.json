@@ -506,7 +506,7 @@
         "paragraph_EJhQGi": {
           "type": "paragraph",
           "settings": {
-            "text": "<h2>Subscribe to our newsletter and enjoy<\/h2>"
+            "text": "<h2>Mattressville<\/h2><h3>Subscribe to our newsletter and enjoy<\/h3>"
           }
         },
         "heading_MxyUbh": {
@@ -526,6 +526,9 @@
         "paragraph_EJhQGi",
         "heading_MxyUbh",
         "email_form_W7jHhz"
+      ],
+      "custom_css": [
+        ".newsletter__wrapper {border: 1px solid var(--accent-color); border-radius: 10px;}"
       ],
       "settings": {
         "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
