@@ -528,7 +528,7 @@
         "email_form_W7jHhz"
       ],
       "custom_css": [
-        ".newsletter__wrapper {border: 1px solid var(--accent-color); border-radius: 10px;}"
+        ".newsletter__wrapper {border: 2px solid var(--accent-color); border-radius: 10px; width: 100%; max-width: 650px; margin: 0 auto;}"
       ],
       "settings": {
         "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
