@@ -27,16 +27,21 @@
       Now a quick example of showing the latest 3 articles from our master article list
     {% endcomment %}
 
-    <ul class="invx_sidebar_menu_ul">
+    <ul class="invx_sidebar_menu_ul recent-blogs">
       {% for article in featuredArticles limit: 5 %}
         <li class="invx_sidebar_menu_li">
           <a href="{{ article.url }}">
             {% if article.image %}
-              <img src="{{ article.image.src | image_url }}" width="50" height="auto">
+              <img src="{{ article.image.src | image_url }}" width="100%" height="auto">
             {% endif %}
-            {{ article.title }}
+            <p>
+              {{ article.title -}}
+              <br>
+              <small>
+                {{ article.published_at | | date: '%B %d, %Y' }}
+              </small>
+            </p>
           </a>
-          {% comment %} {{ article.published_at }} {% endcomment %}
         </li>
       {% endfor %}
     </ul>

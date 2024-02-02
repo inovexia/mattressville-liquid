@@ -150,3 +150,7 @@
   position: relative;
   flex-grow: 1;
 }
+
+.sidebar-content-container .invx_sidebar .recent-blogs img {
+  border-radius: 15px;
+}
