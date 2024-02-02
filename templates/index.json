@@ -365,7 +365,7 @@
         "image_zqFU4b"
       ],
       "custom_css": [
-        ".psb-img-wrapper img {width: 100%; height: auto; border-radius: 15px; padding-top: 20px;}"
+        ".psb-img-wrapper img {width: 100%; height: auto; border-radius: 15px; margin-bottom:0px;}"
       ],
       "settings": {
         "container_width": "psb-container",
