@@ -2,9 +2,6 @@
 {%- if path[1] contains 'blogs' -%}
   {% assign featuredBlogs = path[2] %}
 
-  {% comment %}
-    Set the featuredArticles variable to false by default.
-  {% endcomment %}
   {% assign featuredArticles = false %}
 
   {% comment %}
@@ -30,14 +27,18 @@
       Now a quick example of showing the latest 3 articles from our master article list
     {% endcomment %}
 
-    {% for article in featuredArticles limit: 3 %}
-      <p>
-        <b>{{ article.title }}: </b><br>
-        {{ article.published_at }}
-      </p>
-    {% endfor %}
+    <ul class="invx_sidebar_menu_ul">
+      {% for article in featuredArticles limit: 5 %}
+        <li class="invx_sidebar_menu_li">
+          <a href="{{ article.url }}">
+            {% if article.image %}
+              <img src="{{ article.image.src | image_url }}" width="50" height="auto">
+            {% endif %}
+            {{ article.title }}
+          </a>
+          {% comment %} {{ article.published_at }} {% endcomment %}
+        </li>
+      {% endfor %}
+    </ul>
   {% endif %}
-  {% for article in blogs.path[2].title %}
-    {{ article.title | link_to: article.url }}
-  {% endfor %}
 {% endif %}

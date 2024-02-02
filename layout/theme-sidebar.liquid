@@ -276,8 +276,6 @@
         onload="this.media='all'"
       >
     {%- endif -%}
-    <script src="{{ 'jquery.min.js' | asset_url }}"></script>
-    <script src="{{ 'script.js' | asset_url }}" defer></script>
 
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -298,7 +296,7 @@
     <header>{% sections 'header-group' %}</header>
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       <div class="page-width sidebar-content-container">
-        {% render 'page-sidebar' %}
+        {% render 'invx-page-sidebar' %}
 
         <div class="invx-content">
           {{ content_for_layout }}

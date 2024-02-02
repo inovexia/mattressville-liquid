@@ -60,6 +60,7 @@
 }
 
 .page-title:after,
+.psb-section h2,
 .title:after {
   content: ''; /* This is necessary for the pseudo element to work. */
   display: block; /* This will put the pseudo element on its own line. */
@@ -68,12 +69,14 @@
   width: 10%; /* Change this to whatever width you want. */
   max-width: 100px;
   padding-top: 0px; /* This creates some space between the element and the border. */
-  border-bottom: 2px solid #ff5c7b; /* This creates the border. Replace black with whatever color you want. */
+  border-bottom: 2px solid var(--accent-color); /* This creates the border. Replace black with whatever color you want. */
 }
 
 /*
  * Remove padding from product collection titles
  */
-.collection__title {
-  padding: 0px;
+@media screen and (min-width: 990px) {
+  .collection__title.title-wrapper--self-padded-tablet-down {
+    padding: 0 5rem;
+  }
 }

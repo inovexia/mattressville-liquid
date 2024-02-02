@@ -1,7 +1,7 @@
 {%- assign path = request.path | split: '/' -%}
 {%- if path[1] contains 'pages' -%}
   <div class="invx_sidebar ">
-    {% render 'bread-crumb-nav' %}
+    {% render 'invx-bread-crumb-nav' %}
     <div class="invx_sidebar_menu">
       <div class="invx_sidebar_menu_header">
         {{ shop.name }}
@@ -41,7 +41,7 @@
   </div>
 {%- elsif path[1] contains 'blogs' -%}
   <div class="invx_sidebar ">
-    {% render 'bread-crumb-nav' %}
+    {% render 'invx-bread-crumb-nav' %}
     <div class="invx_sidebar_menu">
       <div class="invx_sidebar_menu_header">Blog Categories</div>
       <ul class="invx_sidebar_menu_ul">
@@ -55,7 +55,7 @@
 
     <div class="invx_sidebar_menu">
       <div class="invx_sidebar_menu_header">Recent Blogs</div>
-      {% render 'latest-related-blogs' %}
+      {% render 'invx-latest-related-blogs' %}
     </div>
   </div>
 {%- endif -%}
