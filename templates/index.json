@@ -370,7 +370,7 @@
       "settings": {
         "container_width": "psb-container",
         "enable_keep_layout": false,
-        "img_proportion": "100%",
+        "img_proportion": "56%",
         "heading_text": "",
         "heading_tag": "h2",
         "inherit_fonts": false,
