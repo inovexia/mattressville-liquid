@@ -333,7 +333,8 @@
       "custom_css": [
         ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
         ".multicolumn-card {background: #ffffff; border-radius: 15px; border: 1px solid #f1f3f4; overflow: hidden; text-align: left; box-shadow: -5px -5px 8px 2px rgba(0, 0, 0, 0.05);}",
-        ".multicolumn li:nth-child(2) .multicolumn-card {height: 105%; margin: -15px -15px 0 -15px; z-index: 1000 !important;}",
+        ".multicolumn li:nth-child(2) .multicolumn-card {height: 114%; z-index: 1000 !important; position: relative; transform: scale(1.02); margin-top: -7%;}",
+        ".multicolumn li:nth-child(2) .multicolumn-card .link.animate-arrow {position: absolute; background-color: var(--accent-color); color: #fff; width: 100%; left: 0; bottom: 0; text-align: center; margin-top: 0; padding-block: 6px;}",
         ".multicolumn li:nth-child(3) .multicolumn-card {z-index: -1 !important;}",
         ".multicolumn ul {list-style: none; font-size: 0.9em;}"
       ],
