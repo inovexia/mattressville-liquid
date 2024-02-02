@@ -60,7 +60,7 @@
 }
 
 .page-title:after,
-.psb-section h2,
+.psb-section h2:after,
 .title:after {
   content: ''; /* This is necessary for the pseudo element to work. */
   display: block; /* This will put the pseudo element on its own line. */
