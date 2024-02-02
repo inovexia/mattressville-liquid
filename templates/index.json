@@ -377,7 +377,7 @@
         "text_color": "#262424",
         "background_color": "transparent",
         "text_align": "center",
-        "section_padding_top": 100,
+        "section_padding_top": 50,
         "section_padding_bottom": 50,
         "section_padding_top_mobile": 50,
         "section_padding_bottom_mobile": 50
