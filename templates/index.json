@@ -411,6 +411,45 @@
         "padding_bottom": 20
       }
     },
+    "newsletter_De6KAC": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_MxyUbh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mattressville",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_EJhQGi": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<h2>Subscribe to our newsletter and enjoy 5% Off<\/h2>"
+          }
+        },
+        "email_form_W7jHhz": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_MxyUbh",
+        "paragraph_EJhQGi",
+        "email_form_W7jHhz"
+      ],
+      "custom_css": [
+        ".newsletter__wrapper {border: 2px solid var(--accent-color); border-radius: 10px; width: 100%; max-width: 650px; margin: 30 auto;}",
+        ".inline-richtext {font-family: var(--font-heading-family); font-style: var(--font-heading-style); letter-spacing: calc(var(--font-heading-scale) * 0.06rem); color: var(--accent-color); line-height: calc(1 + 0.3 \/ max (1, var(--font-heading-scale))); word-break: break-word; font-size: calc(var(--font-heading-scale) * 4rem);}",
+        "button {background-color: var(--accent-color); color: #fff;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "psb_reviews_reviews_01_PRaRHW": {
       "type": "psb-reviews-reviews-01",
       "blocks": {
@@ -505,45 +544,6 @@
         "space_desktop": 50
       }
     },
-    "newsletter_De6KAC": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_MxyUbh": {
-          "type": "heading",
-          "settings": {
-            "heading": "Mattressville",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_EJhQGi": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<h2>Subscribe to our newsletter and enjoy 5% Off<\/h2>"
-          }
-        },
-        "email_form_W7jHhz": {
-          "type": "email_form",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "heading_MxyUbh",
-        "paragraph_EJhQGi",
-        "email_form_W7jHhz"
-      ],
-      "custom_css": [
-        ".newsletter__wrapper {border: 2px solid var(--accent-color); border-radius: 10px; width: 100%; max-width: 650px; margin: 0 auto;}",
-        ".inline-richtext {font-family: var(--font-heading-family); font-style: var(--font-heading-style); letter-spacing: calc(var(--font-heading-scale) * 0.06rem); color: var(--accent-color); line-height: calc(1 + 0.3 \/ max (1, var(--font-heading-scale))); word-break: break-word; font-size: calc(var(--font-heading-scale) * 4rem);}",
-        "button {background-color: var(--accent-color); color: #fff;}"
-      ],
-      "settings": {
-        "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
-        "full_width": false,
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "psb_utilities_space_jPGPLt": {
       "type": "psb-utilities-space",
       "settings": {
@@ -560,9 +560,9 @@
     "featured_collection_xLkaJK",
     "psb_gallery_gallery_01_pQmz4F",
     "featured_collection_BY7Ca9",
+    "newsletter_De6KAC",
     "psb_reviews_reviews_01_PRaRHW",
     "psb_utilities_space_iXPQnK",
-    "newsletter_De6KAC",
     "psb_utilities_space_jPGPLt"
   ]
 }
