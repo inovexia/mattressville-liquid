@@ -127,6 +127,9 @@
         "column_iTgttr",
         "column_fcPXDa"
       ],
+      "custom_css": [
+        "img {border-radius: 15px;}"
+      ],
       "settings": {
         "title": "<strong>Shop By Categories<\/strong>",
         "heading_size": "h1",
