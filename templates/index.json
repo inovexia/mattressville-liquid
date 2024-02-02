@@ -127,6 +127,10 @@
         "column_iTgttr",
         "column_fcPXDa"
       ],
+      "custom_css": [
+        "img {border-radius: 15px;}",
+        ".background-none .multicolumn-card__image-wrapper + .multicolumn-card__info {padding-top: 0; font-weight: 700; letter-spacing: 0;}"
+      ],
       "settings": {
         "title": "<strong>Shop By Categories<\/strong>",
         "heading_size": "h1",
@@ -150,7 +154,29 @@
         "review_tUgVWT": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/mattressville.ca_beautyrest-logo.png",
+            "review_image": "shopify:\/\/shop_images\/beauty.webp",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
+          }
+        },
+        "review_6jCr9J": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/mville-new.webp",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
+          }
+        },
+        "review_WpzmbW": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/sf.webp",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
@@ -172,7 +198,7 @@
         "review_m3fQBC": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/Kingsdown_Logo.png",
+            "review_image": "shopify:\/\/shop_images\/kingsdown.webp",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
@@ -183,7 +209,7 @@
         "review_46XecM": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/eco-comfort-Logo.png",
+            "review_image": "shopify:\/\/shop_images\/iComfort.webp",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
@@ -194,7 +220,40 @@
         "review_krBYzi": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/mattressville.ca_seally-logo.png",
+            "review_image": "shopify:\/\/shop_images\/seally_19058521-7595-4985-8a76-a5a99fbb5563.png",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
+          }
+        },
+        "review_8tciHD": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/natura.webp",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
+          }
+        },
+        "review_a7AtDC": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/galaxy.webp",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
+          }
+        },
+        "review_PQEP6e": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/sertamattress.png",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
@@ -205,10 +264,15 @@
       },
       "block_order": [
         "review_tUgVWT",
+        "review_6jCr9J",
+        "review_WpzmbW",
         "review_Lh6wpj",
         "review_m3fQBC",
         "review_46XecM",
-        "review_krBYzi"
+        "review_krBYzi",
+        "review_8tciHD",
+        "review_a7AtDC",
+        "review_PQEP6e"
       ],
       "custom_css": [
         ".psb-reviews-info img {width: 100%; height: auto; background: transparent;}"
@@ -218,7 +282,7 @@
         "heading": "",
         "heading_tag": "h1",
         "subheading": "",
-        "heading_color": "#000",
+        "heading_color": "#000000",
         "subheading_color": "#585454",
         "enable_star": false,
         "border_radius": 12,
@@ -231,15 +295,15 @@
         "background_color": "#e9f3f3",
         "swiper_control_color": "#d7355c",
         "review-background-color": "rgba(0,0,0,0)",
-        "stars-color": "#FFA500",
-        "text_color": "#000",
+        "stars-color": "#ffa500",
+        "text_color": "#000000",
         "border_color": "rgba(0,0,0,0)",
         "text_align": "center",
-        "section_padding_top": 30,
-        "section_padding_bottom": 30,
+        "section_padding_top": 10,
+        "section_padding_bottom": 10,
         "text_align_mobile": "right",
-        "section_padding_top_mobile": 35,
-        "section_padding_bottom_mobile": 35
+        "section_padding_top_mobile": 0,
+        "section_padding_bottom_mobile": 0
       }
     },
     "featured_collection_xLkaJK": {
@@ -257,7 +321,7 @@
         "show_view_all": false,
         "view_all_style": "outline",
         "enable_desktop_slider": false,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -270,60 +334,53 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "psb_gallery_gallery_01_pQmz4F": {
+      "type": "psb-gallery-gallery-01",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "image_VF76MB": {
+          "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_view_all_small_cf19b650-b4a0-4f6e-be32-234348b5b651.webp",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify:\/\/collections\/all-mattresses"
+            "background_image": "shopify:\/\/shop_images\/mattressville_view_all_small_cf19b650-b4a0-4f6e-be32-234348b5b651.webp",
+            "link_to": "shopify:\/\/collections\/all-mattresses"
           }
         },
-        "column2": {
-          "type": "column",
+        "image_JLxtdP": {
+          "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_flash_deals_small_a42b2aa8-7487-4c2e-b3eb-6a936f200d2d.webp",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify:\/\/collections\/accessories-flash-deals"
+            "background_image": "shopify:\/\/shop_images\/mattressville_flash_deals_small_a42b2aa8-7487-4c2e-b3eb-6a936f200d2d.webp",
+            "link_to": "shopify:\/\/collections\/accessories-flash-deals"
           }
         },
-        "column3": {
-          "type": "column",
+        "image_zqFU4b": {
+          "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_clearance_small_8af409af-79e4-41d0-960c-115baae569dd.webp",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify:\/\/collections\/clearance"
+            "background_image": "shopify:\/\/shop_images\/mattressville_clearance_small_8af409af-79e4-41d0-960c-115baae569dd.webp",
+            "link_to": "shopify:\/\/collections\/clearance"
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "image_VF76MB",
+        "image_JLxtdP",
+        "image_zqFU4b"
+      ],
+      "custom_css": [
+        ".psb-img-wrapper img {width: 100%; height: auto; border-radius:15px;}"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 84,
-        "padding_bottom": 84
+        "container_width": "psb-container",
+        "enable_keep_layout": false,
+        "img_proportion": "56%",
+        "heading_text": "",
+        "heading_tag": "h2",
+        "inherit_fonts": true,
+        "text_color": "#262424",
+        "background_color": "transparent",
+        "text_align": "center",
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "section_padding_top_mobile": 50,
+        "section_padding_bottom_mobile": 50
       }
     },
     "featured_collection_BY7Ca9": {
@@ -409,14 +466,14 @@
         "review_43b3XP"
       ],
       "custom_css": [
-
+        ".psb-section h2 {font-family: var(--font-heading-family); font-style: var(--font-heading-style); font-weight: var(--font-heading-weight); letter-spacing: calc(var(--font-heading-scale) * 0.06rem); color: rgb(var(--color-foreground)); line-height: calc(1 + 0.3 \/ max (1, var(--font-heading-scale))); word-break: break-word; font-size: calc(var(--font-heading-scale) * 4rem); text-align: left;}"
       ],
       "settings": {
         "container_width": "psb-container",
         "heading": "<h2>What Our Customers are Saying<\/h2>",
-        "heading_tag": "h1",
+        "heading_tag": "div",
         "subheading": "",
-        "heading_color": "#000",
+        "heading_color": "#000000",
         "subheading_color": "#585454",
         "enable_star": true,
         "border_radius": 12,
@@ -429,8 +486,8 @@
         "background_color": "#e9f3f3",
         "swiper_control_color": "#d7355c",
         "review-background-color": "#ffffff",
-        "stars-color": "#FFA500",
-        "text_color": "#000",
+        "stars-color": "#ffa500",
+        "text_color": "#000000",
         "border_color": "rgba(0,0,0,0)",
         "text_align": "center",
         "section_padding_top": 50,
@@ -440,20 +497,28 @@
         "section_padding_bottom_mobile": 35
       }
     },
+    "psb_utilities_space_iXPQnK": {
+      "type": "psb-utilities-space",
+      "settings": {
+        "space_mobile": 30,
+        "space_tablet": 40,
+        "space_desktop": 50
+      }
+    },
     "newsletter_De6KAC": {
       "type": "newsletter",
       "blocks": {
-        "paragraph_EJhQGi": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<h2>Subscribe to our newsletter and enjoy<\/h2>"
-          }
-        },
         "heading_MxyUbh": {
           "type": "heading",
           "settings": {
-            "heading": "5% OFF",
+            "heading": "Mattressville",
             "heading_size": "h1"
+          }
+        },
+        "paragraph_EJhQGi": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<h2>Subscribe to our newsletter and enjoy 5% Off<\/h2>"
           }
         },
         "email_form_W7jHhz": {
@@ -463,15 +528,28 @@
         }
       },
       "block_order": [
-        "paragraph_EJhQGi",
         "heading_MxyUbh",
+        "paragraph_EJhQGi",
         "email_form_W7jHhz"
+      ],
+      "custom_css": [
+        ".newsletter__wrapper {border: 2px solid var(--accent-color); border-radius: 10px; width: 100%; max-width: 650px; margin: 0 auto;}",
+        ".inline-richtext {font-family: var(--font-heading-family); font-style: var(--font-heading-style); letter-spacing: calc(var(--font-heading-scale) * 0.06rem); color: var(--accent-color); line-height: calc(1 + 0.3 \/ max (1, var(--font-heading-scale))); word-break: break-word; font-size: calc(var(--font-heading-scale) * 4rem);}",
+        "button {background-color: var(--accent-color); color: #fff;}"
       ],
       "settings": {
         "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
-        "full_width": true,
+        "full_width": false,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 40
+      }
+    },
+    "psb_utilities_space_jPGPLt": {
+      "type": "psb-utilities-space",
+      "settings": {
+        "space_mobile": 30,
+        "space_tablet": 40,
+        "space_desktop": 50
       }
     }
   },
@@ -480,9 +558,11 @@
     "multicolumn_Yk9bxe",
     "psb_reviews_reviews_01_Vr6JBB",
     "featured_collection_xLkaJK",
-    "multicolumn",
+    "psb_gallery_gallery_01_pQmz4F",
     "featured_collection_BY7Ca9",
     "psb_reviews_reviews_01_PRaRHW",
-    "newsletter_De6KAC"
+    "psb_utilities_space_iXPQnK",
+    "newsletter_De6KAC",
+    "psb_utilities_space_jPGPLt"
   ]
 }

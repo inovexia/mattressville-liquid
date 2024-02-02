@@ -808,7 +808,8 @@ summary::-webkit-details-marker {
   flex-wrap: wrap;
 }
 
-.title--primary {
+
+.title--primary:not(.regular) {
   font-weight: 700;
   font-size: 36px;
   color: var(--secondary-color);
@@ -817,8 +818,8 @@ summary::-webkit-details-marker {
   position: relative;
 }
 
-.title--primary::after {
-  content: '';
+.title--primary:not(.regular)::after {
+  content: "";
   display: inline-block;
   width: 80px;
   position: absolute;
@@ -846,7 +847,7 @@ summary::-webkit-details-marker {
     margin: 5rem 0 3rem;
   }
 
-  .title--primary {
+  .title--primary:not(.regular) {
     margin-top: 23px;
     margin-bottom: 27px;
   }
