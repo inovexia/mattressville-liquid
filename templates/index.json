@@ -365,15 +365,15 @@
         "image_zqFU4b"
       ],
       "custom_css": [
-        ".psb-img-wrapper img {width: 100%; height: auto; border-radius: 15px; margin-bottom:0px;}"
+        ".psb-img-wrapper img {width: 100%; height: auto; border-radius: 15px;}"
       ],
       "settings": {
         "container_width": "psb-container",
         "enable_keep_layout": false,
-        "img_proportion": "56%",
+        "img_proportion": "100%",
         "heading_text": "",
         "heading_tag": "h2",
-        "inherit_fonts": true,
+        "inherit_fonts": false,
         "text_color": "#262424",
         "background_color": "rgba(0,0,0,0)",
         "text_align": "center",
