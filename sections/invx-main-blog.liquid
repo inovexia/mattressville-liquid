@@ -14,9 +14,29 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .blog-lists {
+    align-items: center;
+    background: #f1f3f4;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    justify-content: space-evenly;
+    padding: 5px 5px 5px 0px;
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+  .blog-lists ul{
+    list-style-type: none;
+  }
+  .blog-lists ul li {
+    display:inline;
+  }
 {%- endstyle -%}
 
-{% assign featuredBlogs = 'tips,promotions' | split: ',' %}
+{% assign featuredBlogs = 'tips,promotions,announcements,how-to-user-guide,health-sleep-wellness,featured-brands,industry-info,accessory-guide'
+  | split: ','
+%}
 
 {% assign featuredArticles = false %}
 
@@ -33,6 +53,15 @@
   {% endif %}
 {% endfor %}
 
+<div class="blog-lists">
+  <ul>
+    {% for featuredBlog in featuredBlogs %}
+      <li>
+        <a href="{{ blogs[featuredBlog].url }}">{{ blogs[featuredBlog].title }} |</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 {% if featuredArticles %}
   {%- paginate featuredArticles.articles by 6 -%}
     <div class="main-blog page-width page-width-no-padding section-{{ section.id }}-padding">
