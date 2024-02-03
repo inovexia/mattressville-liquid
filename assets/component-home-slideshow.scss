@@ -1,25 +1,40 @@
 .home-slideshow-inner {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+
+  @media (min-width: 990px) {
+    flex-direction: row;
+  }
 
   .home-slideshow {
     flex-grow: 1;
     width: 100%;
     position: relative;
-    max-width: calc(100% - 230px);
+
+    @media (min-width: 990px) {
+      max-width: calc(100% - 230px);
+    }
   }
 
   .home-slideshow-sidebar {
     background-color: #eff9f9;
     border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
     text-align: center;
-    padding-top: 15px;
     flex-grow: 1;
+
+    @media (min-width: 990px) {
+      padding-top: 15px;
+    }
 
     .sidebar-inner {
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      @media (min-width: 990px) {
+        flex-direction: row;
+      }
 
       .sidebar-content {
         align-items: center;
@@ -33,6 +48,14 @@
         width: 50%;
         text-decoration: none;
 
+        img{
+          max-width: 50px;
+
+          @media (min-width: 990px) {
+            max-width: unset;
+          }
+        }
+
         @media (min-width: 990px) {
           margin-top: 41px;
           width: 100%;
@@ -40,7 +63,7 @@
           padding-bottom: 0;
           padding-top: 0;
         }
-        
+
         .card-title {
           color: #707070;
           font-size: 14px;
