@@ -1,7 +1,7 @@
 {
   "sections": {
     "slideshow_yh9aX9": {
-      "type": "slideshow",
+      "type": "landing-slideshow",
       "blocks": {
         "slide_PEgBhX": {
           "type": "slide",
@@ -67,14 +67,20 @@
         "slideshow-component {margin-top: 10px;}"
       ],
       "settings": {
-        "layout": "grid",
         "slide_height": "adapt_image",
         "slider_visual": "dots",
         "auto_rotate": true,
         "change_slides_speed": 5,
         "image_behavior": "none",
         "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
+        "accessibility_info": "Slideshow about our brand",
+        "enable_sidebar": true,
+        "sidebar_image_a": "shopify:\/\/shop_images\/bed-lg_1cec67cb-90fd-43dd-8166-765fcb5fc9b8.webp",
+        "link_item_a": "shopify:\/\/pages\/mattress-matchmaker",
+        "label_item_a": "Mattress Matchmaker",
+        "sidebar_image_b": "shopify:\/\/shop_images\/gift-lg_37b8b6b0-3c26-41bf-b496-71b4cb06df31.webp",
+        "link_item_b": "shopify:\/\/pages\/coupons",
+        "label_item_b": "Coupons & Deals"
       }
     },
     "multicolumn_Yk9bxe": {
