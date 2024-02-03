@@ -371,7 +371,7 @@
         "image_zqFU4b"
       ],
       "custom_css": [
-        ".psb-img-wrapper img {width: 100%; height: auto; border-radius: 15px;}"
+        ".psb-img-wrapper img {border-radius: 25px;}"
       ],
       "settings": {
         "container_width": "psb-container",
@@ -383,8 +383,8 @@
         "text_color": "#262424",
         "background_color": "rgba(0,0,0,0)",
         "text_align": "center",
-        "section_padding_top": 20,
-        "section_padding_bottom": 0,
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
         "section_padding_top_mobile": 20,
         "section_padding_bottom_mobile": 10
       }
