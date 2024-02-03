@@ -64,8 +64,7 @@
         "slide_86rVjX"
       ],
       "custom_css": [
-        "slideshow-component {margin-top: 20px; padding-right: 10px;}",
-        "img {border-radius: 15px;}"
+        "slideshow-component {margin-top: 20px;}"
       ],
       "settings": {
         "slide_height": "adapt_image",
