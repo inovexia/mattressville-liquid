@@ -18,6 +18,11 @@
     max-width: calc(100% - 230px);
   }
 }
+@media (min-width: 990px) {
+  .home-slideshow-inner .home-slideshow.no-sidebar {
+    max-width: 100%;
+  }
+}
 .home-slideshow-inner .home-slideshow-sidebar {
   background-color: #eff9f9;
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);

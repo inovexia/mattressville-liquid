@@ -17,6 +17,12 @@
         max-width: calc(100% - 230px);
       }
     }
+
+    &.no-sidebar {
+      @media (min-width: 990px) {
+        max-width: 100%;
+      }
+    }
   }
 
   .home-slideshow-sidebar {
