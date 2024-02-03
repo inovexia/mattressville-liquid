@@ -41,6 +41,7 @@
         "menu": "",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "none",
+        "show_social": true,
         "show_line_separator": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "",
@@ -78,7 +79,6 @@
     },
     "header-mid": {
       "type": "header-mid",
-      "disabled": true,
       "settings": {
         "text_color": "#ffffff",
         "phone_number": "1905-212-7722",
