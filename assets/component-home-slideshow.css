@@ -31,12 +31,12 @@
 }
 .home-slideshow-inner .home-slideshow-sidebar .sidebar-inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
 }
 @media (min-width: 990px) {
   .home-slideshow-inner .home-slideshow-sidebar .sidebar-inner {
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 .home-slideshow-inner .home-slideshow-sidebar .sidebar-inner .sidebar-content {
