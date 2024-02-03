@@ -15,6 +15,64 @@
 <script src="{{ 'main-search.js' | asset_url }}" defer="defer"></script>
 
 <style>
+  #FacetFiltersForm {
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+  }
+  #FacetFiltersForm #FacetsWrapperDesktop {
+    padding-top: 71px;
+  }
+  #FacetFiltersForm #FacetsWrapperDesktop #verticalTitle {
+    display: none;
+  }
+  #FacetFiltersForm #FacetsWrapperDesktop #verticalTitle + facet-remove {
+    margin-left: auto;
+  }
+  #FacetFiltersForm #FacetsWrapperDesktop::before {
+    content: "Shopping Options";
+    background-color: var(--secondary-color);
+    border-radius: 15px 15px 0 0;
+    padding: 22px 0 20px;
+    color: #ffffff;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+  }
+
+  #FacetFiltersForm #FacetsWrapperDesktop .active-facets {
+    border-left: 1px solid #00000020;
+    border-right: 1px solid #00000020;
+    padding: 10px;
+  }
+
+  #FacetFiltersForm #FacetsWrapperDesktop .facets__disclosure-vertical {
+    border-top-color: var(--accent-color);
+    border-left: 1px solid #00000020;
+    border-right: 1px solid #00000020;
+    padding: 10px;
+  }
+
+  #FacetFiltersForm #FacetsWrapperDesktop .facets__disclosure-vertical .facets__summary {
+    padding: 10px;
+  }
+
+  #FacetFiltersForm #FacetsWrapperDesktop .facets__disclosure-vertical .facets__summary .facets__summary span {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  #FacetFiltersForm #FacetsWrapperDesktop .facets__disclosure-vertical:nth-last-child(3) {
+    border-bottom: 1px solid #00000020;
+    border-radius: 0 0 15px 15px;
+  }
+
+  #FacetFiltersForm #FacetsWrapperDesktop .facets__disclosure-vertical .facets__display-vertical {
+    padding: 10px;
+  }
   .template-search__header {
     margin-bottom: 3rem;
   }
@@ -66,7 +124,7 @@
 {% paginate search.results by 24 %}
   <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
     <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      <h1 class="h2 center">
+      <h1 class="search__title">
         {%- if search.performed -%}
           {{- 'templates.search.title' | t -}}
         {%- else -%}
