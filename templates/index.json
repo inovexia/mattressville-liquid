@@ -67,7 +67,6 @@
         "slideshow-component {margin-top: 10px;}"
       ],
       "settings": {
-        "layout": "grid",
         "slide_height": "adapt_image",
         "slider_visual": "dots",
         "auto_rotate": true,
