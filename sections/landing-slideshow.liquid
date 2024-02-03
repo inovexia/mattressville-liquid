@@ -289,7 +289,7 @@
                 loading="lazy"
               />
             {%- endif -%}
-            <span class="card-title">{{ label_item_a }}</span>
+            <span class="card-title">{{ section.settings.label_item_a }}</span>
           </a>
           {%- assign linkItemB = section.settings.link_item_b | default: "/pages/coupons/" | url_escape -%}
           <a class="sidebar-content" href="{{ linkItemB }}">
@@ -302,7 +302,7 @@
                 loading="lazy"
               />
             {%- endif -%}
-            <span class="card-title">{{ label_item_b }}</span>
+            <span class="card-title">{{ section.settings.label_item_b }}</span>
           </a>
         </div>
       </div>
