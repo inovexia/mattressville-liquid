@@ -141,17 +141,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "rich_text_NEH7re": {
-      "type": "rich-text",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": false,
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -163,7 +152,6 @@
     "featured_blog_8fJhjU",
     "featured_blog_9JWw8F",
     "featured_blog_zF4QFV",
-    "featured_blog_kVzGX3",
-    "rich_text_NEH7re"
+    "featured_blog_kVzGX3"
   ]
 }
