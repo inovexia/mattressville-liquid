@@ -74,7 +74,7 @@
         "image_behavior": "none",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
-        "enable_sidebar": true,
+        "enable_sidebar": false,
         "sidebar_image_a": "shopify:\/\/shop_images\/bed-lg_1cec67cb-90fd-43dd-8166-765fcb5fc9b8.webp",
         "link_item_a": "shopify:\/\/pages\/mattress-matchmaker",
         "label_item_a": "Mattress Matchmaker",
