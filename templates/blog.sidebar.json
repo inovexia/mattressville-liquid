@@ -2,7 +2,7 @@
   "layout": "theme-sidebar",
   "sections": {
     "main": {
-      "type": "invx-main-blog", 
+      "type": "invx-main-blog",
       "settings": {
         "layout": "grid",
         "show_image": true,
