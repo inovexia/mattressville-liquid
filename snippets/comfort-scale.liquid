@@ -8,17 +8,27 @@
   Usage:
   {% render 'comfort-scale', product: product %}
 {% endcomment %}
-{% assign level = 0 %}
-
-{% if product.tags contains 'Extra Firm' %}
-  {% assign level = 4 %}
-{% elsif product.tags contains 'Firm' %}
-  {% assign level = 3 %}
-{% elsif product.tags contains 'Medium' %}
-  {% assign level = 2 %}
-{% elsif product.tags contains 'Soft' %}
-  {% assign level = 1 %}
-{% endif %}
+{%- liquid
+  assign targetTitle = "queen" | downcase
+  assign targetVariant = product.selected_or_first_available_variant
+  for variant in card_product.variants
+    assign variantOptionsLowercase = variant.options | join: ',' | downcase
+    if variantOptionsLowercase contains targetTitle and targetVariant == null
+      assign targetVariant = variant
+    endif
+  endfor
+  assign firmness = targetVariant.metafields.custom.firmness
+  assign level = 0
+  if firmness.value contains 'Extra Firm'
+    assign level = 4
+  elsif firmness.value contains 'Firm'
+    assign level = 3
+  elsif firmness.value contains 'Medium'
+    assign level = 2
+  elsif firmness.value contains 'Soft'
+    assign level = 1
+  endif
+%}
 {% if level > 0 %}
   {{ 'comfort-scale.css' | asset_url | stylesheet_tag }}
   <div class="comfort-scale">

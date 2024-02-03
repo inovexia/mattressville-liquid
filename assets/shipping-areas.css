@@ -1,13 +1,21 @@
 .shipping-areas {
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
+  margin-top: auto;
 }
-.shipping-areas h4 {
-  color: var(--secondary-color);
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
+.shipping-areas p {
+  color: #008c00;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.13rem;
   text-align: center;
   margin-block: 0;
+}
+.shipping-areas p span {
+  color: #ef3224;
+}
+.shipping-areas p strong {
+  color: var(--secondary-color);
+  font-weight: 500;
 }
