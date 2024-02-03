@@ -39,7 +39,7 @@
     top: 0;
     left: 0;
   }
-  
+
   #FacetFiltersForm #FacetsWrapperDesktop .active-facets {
     border-left: 1px solid #00000020;
     border-right: 1px solid #00000020;
@@ -56,13 +56,13 @@
   #FacetFiltersForm #FacetsWrapperDesktop .facets__disclosure-vertical .facets__summary {
     padding: 10px;
   }
-  
+
   #FacetFiltersForm #FacetsWrapperDesktop .facets__disclosure-vertical .facets__summary .facets__summary span {
     color: var(--secondary-color);
     font-size: 16px;
     font-weight: 400;
   }
-  
+
   #FacetFiltersForm #FacetsWrapperDesktop .facets__disclosure-vertical:nth-last-child(3) {
     border-bottom: 1px solid #00000020;
     border-radius: 0 0 15px 15px;
@@ -85,9 +85,11 @@
   }
 {%- endstyle -%}
 
-{% comment %} <pre style="white-space: pre-wrap;">
-  {{ collection.filters.active_values | json }}
-</pre> {% endcomment %}
+{% comment %}
+  <pre style="white-space: pre-wrap;">
+    {{ collection.filters.active_values | json }}
+  </pre>
+{% endcomment %}
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
