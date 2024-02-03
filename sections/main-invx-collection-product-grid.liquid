@@ -167,6 +167,8 @@
             id="main-collection-filters"
             data-id="{{ section.id }}"
           >
+            {% render 'invx-bread-crumb-nav' %}
+
             {% render 'facets',
               results: collection,
               enable_filtering: section.settings.enable_filtering,
@@ -184,6 +186,8 @@
           data-cascade
         {% endif %}
       >
+        {% render 'invx-collection-banner' %}
+
         {%- if collection.products.size == 0 -%}
           <div class="collection collection--empty container" id="product-grid" data-id="{{ section.id }}">
             <div class="loading-overlay gradient"></div>
@@ -230,7 +234,6 @@
                 </li>
               {%- endfor -%}
             </ul>
-            aasasa
 
             {%- if paginate.pages > 1 -%}
               {% render 'pagination', paginate: paginate, anchor: '' %}
