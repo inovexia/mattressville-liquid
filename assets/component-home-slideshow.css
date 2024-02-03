@@ -52,6 +52,7 @@
   text-decoration: none;
 }
 .home-slideshow-inner .home-slideshow-sidebar .sidebar-inner .sidebar-content img {
+  height: auto;
   max-width: 50px;
 }
 @media (min-width: 990px) {
