@@ -69,7 +69,7 @@
       "settings": {
         "color_scheme": "",
         "show_line_separator": false,
-        "show_social": true,
+        "show_social": false,
         "auto_rotate": false,
         "change_slides_speed": 10,
         "enable_country_selector": false,
