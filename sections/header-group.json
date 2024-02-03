@@ -67,6 +67,7 @@
       "block_order": [
         "announcement_znVyhB"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "show_line_separator": false,
