@@ -2,7 +2,7 @@
   "layout": "theme-sidebar",
   "sections": {
     "main": {
-      "type": "main-page-sidebar",
+      "type": "invx-main-page",
       "settings": {
         "header_color": "#ffffff",
         "header_bg_color": "#ff5c78",

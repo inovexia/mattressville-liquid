@@ -1,7 +1,7 @@
 {
   "sections": {
     "product-grid": {
-      "type": "main-invx-collection-product-grid",
+      "type": "invx-main-collection-product-grid",
       "custom_css": [
         ".collection--empty container .regular .underlined-link {display: none;}"
       ],
