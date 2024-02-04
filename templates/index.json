@@ -6,7 +6,7 @@
         "slide_PEgBhX": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/welcome_to_Mattressville_banner_main.webp",
+            "image": "shopify:\/\/shop_images\/mattressville_banner_1.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -315,7 +315,7 @@
     "featured_collection_xLkaJK": {
       "type": "featured-collection",
       "settings": {
-        "title": "<strong>Trending Products <\/strong>",
+        "title": "<strong>Trending Products<\/strong>",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -346,21 +346,21 @@
         "image_VF76MB": {
           "type": "image",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/mattressville_view_all_small_cf19b650-b4a0-4f6e-be32-234348b5b651.webp",
+            "background_image": "shopify:\/\/shop_images\/mattressville_view_all.png",
             "link_to": "shopify:\/\/collections\/all-mattresses"
           }
         },
         "image_JLxtdP": {
           "type": "image",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/mattressville_flash_deals_small_a42b2aa8-7487-4c2e-b3eb-6a936f200d2d.webp",
+            "background_image": "shopify:\/\/shop_images\/mattressville_flash_deals.png",
             "link_to": "shopify:\/\/collections\/accessories-flash-deals"
           }
         },
         "image_zqFU4b": {
           "type": "image",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/mattressville_clearance_small_8af409af-79e4-41d0-960c-115baae569dd.webp",
+            "background_image": "shopify:\/\/shop_images\/mattressville_clearance_small_6fbb7707-2695-4b71-998d-523ef5701b8c.png",
             "link_to": "shopify:\/\/collections\/clearance"
           }
         }
@@ -384,7 +384,7 @@
         "background_color": "rgba(0,0,0,0)",
         "text_align": "center",
         "section_padding_top": 0,
-        "section_padding_bottom": 0,
+        "section_padding_bottom": 40,
         "section_padding_top_mobile": 20,
         "section_padding_bottom_mobile": 10
       }
@@ -413,7 +413,7 @@
         "enable_quick_add": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 0,
+        "padding_top": 24,
         "padding_bottom": 20
       }
     },
