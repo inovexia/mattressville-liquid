@@ -60,7 +60,7 @@
         "column_zVXWye"
       ],
       "custom_css": [
-        "multicolumn.background-primary .multicolumn-card {background-color: #fff;}",
+        "multicolumn.background-primary .multicolumn-card {}",
         ".multicolumn-card {display: flex; justify-content: space-around; padding-left: 10px; border: 0px solid #ccc; border-radius: 15px;}",
         ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}",
         "@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",
