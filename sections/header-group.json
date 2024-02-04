@@ -67,6 +67,7 @@
       "block_order": [
         "announcement_znVyhB"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "show_line_separator": false,
@@ -79,7 +80,6 @@
     },
     "header-mid": {
       "type": "header-mid",
-      "disabled": true,
       "settings": {
         "text_color": "#ffffff",
         "phone_number": "1905-212-7722",
