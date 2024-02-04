@@ -6,7 +6,7 @@
         "slide_PEgBhX": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_banner_1.jpg",
+            "image": "shopify:\/\/shop_images\/welcome_to_Mattressville_banner_main.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -346,21 +346,18 @@
         "image_VF76MB": {
           "type": "image",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/mattressville_view_all.png",
             "link_to": "shopify:\/\/collections\/all-mattresses"
           }
         },
         "image_JLxtdP": {
           "type": "image",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/mattressville_flash_deals.png",
             "link_to": "shopify:\/\/collections\/accessories-flash-deals"
           }
         },
         "image_zqFU4b": {
           "type": "image",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/mattressville_clearance_small_6fbb7707-2695-4b71-998d-523ef5701b8c.png",
             "link_to": "shopify:\/\/collections\/clearance"
           }
         }
