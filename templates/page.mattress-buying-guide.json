@@ -5,7 +5,8 @@
       "type": "home-banner",
       "custom_css": [
         "h3 {color: white;}",
-        ".custom-text-section {background-color: #f55a7a; width: 100%; text-align: center; border-radius: 15px; padding-top: 5px; padding-bottom: 5px;}"
+        ".custom-text-section {background-color: #f55a7a; width: 100%; text-align: center; border-radius: 15px; padding-top: 5px; padding-bottom: 5px;}",
+        ".custom-text-section_wrapper{margin: 20px;}"
       ],
       "settings": {
         "custom_text_title": "",
