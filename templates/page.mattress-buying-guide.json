@@ -1,45 +1,6 @@
 {
   "layout": "theme-sidebar",
   "sections": {
-    "home_banner_RFERwp": {
-      "type": "home-banner",
-      "disabled": true,
-      "custom_css": [
-        "h3 {color: white;}",
-        ".custom-text-section {background-color: #f55a7a; width: 100%; text-align: center; border-radius: 15px; padding-top: 5px; padding-bottom: 5px; margin: 50px;}",
-        ".custom-text-section_wrapper {margin: 20px;}"
-      ],
-      "settings": {
-        "custom_text_title": "",
-        "custom_text_body": "<h3>Twin\/Single – 39″ x 75″ (inches) – 99cm x 190.5cm (centimeters)<\/h3><h3>Full\/Double – 54″ x 75″ (inches) – 137cm x 190.5cm (centimeters)<\/h3><h3>Queen – 59″ x 79″ (inches) – 150cm x 201cm (centimeters)<\/h3><h3>King – 76″ x 79″ (inches) – 193cm x 201cm (centimeters)<\/h3>"
-      }
-    },
-    "rich_text_hej64t": {
-      "type": "rich-text",
-      "blocks": {
-        "text_iGmJxV": {
-          "type": "text",
-          "settings": {
-            "text": "<h3>Twin\/Single – 39″ x 75″ (inches) – 99cm x 190.5cm (centimeters)<\/h3><h3>Full\/Double – 54″ x 75″ (inches) – 137cm x 190.5cm (centimeters)<\/h3><h3>Queen – 59″ x 79″ (inches) – 150cm x 201cm (centimeters)<\/h3><h3>King – 76″ x 79″ (inches) – 193cm x 201cm (centimeters)<\/h3>"
-          }
-        }
-      },
-      "block_order": [
-        "text_iGmJxV"
-      ],
-      "custom_css": [
-        "h3 {color: white;}",
-        ".rich-text__wrapper {background-color: #f55a7a; width: 100%; text-align: center; border-radius: 15px; padding-top: 5px; padding-bottom: 5px;}"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "main": {
       "type": "invx-main-page",
       "settings": {
@@ -110,8 +71,6 @@
     }
   },
   "order": [
-    "home_banner_RFERwp",
-    "rich_text_hej64t",
     "main",
     "multicolumn_WPeRCx"
   ]
