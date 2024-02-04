@@ -68,10 +68,22 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "home_banner_RFERwp": {
+      "type": "home-banner",
+      "custom_css": [
+        "h3 {color: white;}",
+        ".custom-text-section {padding: 0; background-color: #f55a7a; width:100%;}"
+      ],
+      "settings": {
+        "custom_text_title": "",
+        "custom_text_body": "<h3>Twin\/Single – 39″ x 75″ (inches) – 99cm x 190.5cm (centimeters)<\/h3><h3>Full\/Double – 54″ x 75″ (inches) – 137cm x 190.5cm (centimeters)<\/h3><h3>Queen – 59″ x 79″ (inches) – 150cm x 201cm (centimeters)<\/h3><h3>King – 76″ x 79″ (inches) – 193cm x 201cm (centimeters)<\/h3>"
+      }
     }
   },
   "order": [
     "main",
-    "multicolumn_WPeRCx"
+    "multicolumn_WPeRCx",
+    "home_banner_RFERwp"
   ]
 }
