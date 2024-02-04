@@ -315,7 +315,7 @@
     "featured_collection_xLkaJK": {
       "type": "featured-collection",
       "settings": {
-        "title": "<strong>Trending Products<\/strong>",
+        "title": "<strong>Trending Products <\/strong>",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
