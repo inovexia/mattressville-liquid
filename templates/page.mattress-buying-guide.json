@@ -91,7 +91,7 @@
         "text_zBtiYf"
       ],
       "custom_css": [
-        ".rich-text__wrapper {padding: 0; background-color: #f32c54;}"
+        ".rich-text__wrapper {padding: 0; background-color: #f32c54; color:white;}"
       ],
       "settings": {
         "desktop_content_position": "center",
