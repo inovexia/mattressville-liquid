@@ -1,11 +1,6 @@
 {
   "layout": "theme-sidebar",
   "sections": {
-    "main": {
-      "type": "invx-main-page",
-      "settings": {
-      }
-    },
     "multicolumn_WPeRCx": {
       "type": "multicolumn",
       "blocks": {
@@ -68,10 +63,49 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "main": {
+      "type": "invx-main-page",
+      "settings": {
+      }
+    },
+    "rich_text_AbypKg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_B8YDLP": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_zBtiYf": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Twin\/Single – 39″ x 75″ (inches) – 99cm x 190.5cm (centimeters)<\/h3><h3>Full\/Double – 54″ x 75″ (inches) – 137cm x 190.5cm (centimeters)<\/h3><h3>Queen – 59″ x 79″ (inches) – 150cm x 201cm (centimeters)<\/h3><h3>King – 76″ x 79″ (inches) – 193cm x 201cm (centimeters)<\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_B8YDLP",
+        "text_zBtiYf"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {padding: 0; background-color: #f32c54;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
+    "multicolumn_WPeRCx",
     "main",
-    "multicolumn_WPeRCx"
+    "rich_text_AbypKg"
   ]
 }
