@@ -3,6 +3,7 @@
   "sections": {
     "home_banner_RFERwp": {
       "type": "home-banner",
+      "disabled": true,
       "custom_css": [
         "h3 {color: white;}",
         ".custom-text-section {background-color: #f55a7a; width: 100%; text-align: center; border-radius: 15px; padding-top: 5px; padding-bottom: 5px; margin: 50px;}",
