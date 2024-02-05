@@ -44,44 +44,6 @@
         "padding_bottom": 0
       }
     },
-    "image_with_text_jexaPg": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_PFyUma": {
-          "type": "heading",
-          "settings": {
-            "heading": "Canada Wide Flyer",
-            "heading_size": "h2"
-          }
-        },
-        "text_Nm93Er": {
-          "type": "text",
-          "settings": {
-            "text": "<p>There is currently no local promotion available. Check back soon.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_PFyUma",
-        "text_Nm93Er"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
-        "height": "medium",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "multicolumn_pWVmxp": {
       "type": "multicolumn",
       "blocks": {
@@ -134,7 +96,6 @@
   "order": [
     "main",
     "image_with_text_EKL6in",
-    "image_with_text_jexaPg",
     "multicolumn_pWVmxp"
   ]
 }
