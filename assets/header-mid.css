@@ -60,7 +60,7 @@
   color: inherit;
   font-size: 12px;
   line-height: 14px;
-  margin-bottom: 0;
+  margin-block: 0;
   text-align: center;
 }
 @media (min-width: 992px) {

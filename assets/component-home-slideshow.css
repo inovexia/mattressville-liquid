@@ -23,6 +23,9 @@
     max-width: 100%;
   }
 }
+.home-slideshow-inner .home-slideshow .banner__content {
+  display: none;
+}
 .home-slideshow-inner .home-slideshow-sidebar {
   background-color: #eff9f9;
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);

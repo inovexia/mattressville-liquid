@@ -8,8 +8,19 @@
     class: 'my-class'
   %}
 {% endcomment %}
+{%- style -%}
+  .header-social-icons{
+    display: none;
+  }
 
-<ul class="list-unstyled list-social{% if class %} {{ class}}{% endif %}" role="list">
+  @media (min-width:990px){
+    .header-social-icons{
+      display: flex;
+    }
+  }
+{%- endstyle -%}
+
+<ul class="header-social-icons list-unstyled list-social{% if class %} {{ class}}{% endif %}" role="list">
   {%- if settings.social_facebook_link != blank -%}
     <li class="list-social__item">
       <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
