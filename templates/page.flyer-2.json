@@ -1,0 +1,140 @@
+{
+  "layout": "theme-sidebar",
+  "sections": {
+    "main": {
+      "type": "invx-main-page",
+      "settings": {
+      }
+    },
+    "image_with_text_EKL6in": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_RVCpXb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Local GTA Flyer",
+            "heading_size": "h2"
+          }
+        },
+        "text_ze8qzQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>There is currently no local promotion available. Check back soon.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RVCpXb",
+        "text_ze8qzQ"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_jexaPg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_PFyUma": {
+          "type": "heading",
+          "settings": {
+            "heading": "Canada Wide Flyer",
+            "heading_size": "h2"
+          }
+        },
+        "text_Nm93Er": {
+          "type": "text",
+          "settings": {
+            "text": "<p>There is currently no local promotion available. Check back soon.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PFyUma",
+        "text_Nm93Er"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_pWVmxp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_4X4nKa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cta-image.jpg",
+            "title": "<a href=\"\/collections\/all-mattresses\" title=\"All Mattresses\">Shop All Mattresses<\/a>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GhNBjL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bed.png",
+            "title": "<a href=\"https:\/\/mattressville.ca\/mattress-matchmaker\/\">Try our Mattress Matchmaker<\/a>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_4X4nKa",
+        "column_GhNBjL"
+      ],
+      "custom_css": [
+        ".multicolumn.background-primary .multicolumn-card {background: transparent;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_EKL6in",
+    "image_with_text_jexaPg",
+    "multicolumn_pWVmxp"
+  ]
+}
