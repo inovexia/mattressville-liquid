@@ -429,6 +429,28 @@
         "padding_bottom": 20
       }
     },
+    "newsletter_De6KAC": {
+      "type": "home-newsletter",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "background_color": "#eff9f9",
+        "heading": "Mattressville",
+        "sub_heading": "Subscribe to our newsletter and enjoy",
+        "offer_text": "5% OFF",
+        "padding_top": 15,
+        "padding_bottom": 15
+      }
+    },
+    "psb_utilities_space_iXPQnK": {
+      "type": "psb-utilities-space",
+      "settings": {
+        "space_mobile": 30,
+        "space_tablet": 40,
+        "space_desktop": 50
+      }
+    },
     "psb_reviews_reviews_01_PRaRHW": {
       "type": "psb-reviews-reviews-01",
       "blocks": {
@@ -515,26 +537,6 @@
         "section_padding_bottom_mobile": 35
       }
     },
-    "psb_utilities_space_iXPQnK": {
-      "type": "psb-utilities-space",
-      "settings": {
-        "space_mobile": 30,
-        "space_tablet": 40,
-        "space_desktop": 50
-      }
-    },
-    "newsletter_De6KAC": {
-      "type": "home-newsletter",
-      "custom_css": [ ],
-      "settings": {
-        "background_color": "#eff9f9",
-        "heading": "Mattressville",
-        "sub_heading": "Subscribe to our newsletter and enjoy",
-        "offer_text": "5% OFF",
-        "padding_top": 15,
-        "padding_bottom": 15
-      }
-    },
     "psb_utilities_space_jPGPLt": {
       "type": "psb-utilities-space",
       "settings": {
@@ -551,9 +553,9 @@
     "featured_collection_xLkaJK",
     "psb_gallery_gallery_01_pQmz4F",
     "featured_collection_BY7Ca9",
-    "psb_reviews_reviews_01_PRaRHW",
-    "psb_utilities_space_iXPQnK",
     "newsletter_De6KAC",
+    "psb_utilities_space_iXPQnK",
+    "psb_reviews_reviews_01_PRaRHW",
     "psb_utilities_space_jPGPLt"
   ]
 }
