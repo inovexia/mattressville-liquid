@@ -314,6 +314,11 @@
     },
     "featured_collection_xLkaJK": {
       "type": "featured-collection",
+      "custom_css": [
+        ".collection__title {align-items: center; display: flex; column-gap: 20px;}",
+        ".collection__description a {align-items: center; color: #095f86; display: inline-flex; text-decoration: none; text-decoration-thickness: auto; font-size: 16px; line-height: 19px;}",
+        ".collection__description a:hover {color: #095f86;}"
+      ],
       "settings": {
         "title": "<strong>Trending Products<\/strong>",
         "heading_size": "h1",
