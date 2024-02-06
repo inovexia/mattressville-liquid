@@ -1,0 +1,194 @@
+.newsletter {
+  background-color: #eff9f9;
+  padding: 15px;
+
+  .offer-grid {
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 10px solid #ffffff;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 640px;
+    width: 100%;
+
+    .offer-content {
+      background-color: #ffffff;
+      border-radius: 10px;
+      border: 1px solid var(--secondary-color);
+      box-sizing: border-box;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        padding: 8.56px 41px 11px 50px;
+        text-align: left;
+      }
+
+      .above {
+        display: block;
+        justify-content: space-between;
+
+        .start {
+          h3 {
+            color: var(--secondary-color);
+            font-size: 36px;
+            line-height: 42.19px;
+            margin: 0;
+          }
+
+          p {
+            color: var(--secondary-color);
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 18.75px;
+            margin: 0;
+            padding-top: 5px;
+          }
+        }
+
+        .end {
+          strong {
+            color: var(--secondary-color);
+            font-size: 49.68px;
+            font-weight: 700;
+            line-height: 58.22px;
+            text-align: center;
+
+            @media (min-width: 768px) {
+              text-align: right;
+            }
+          }
+        }
+
+        @media (min-width: 768px) {
+          display: flex;
+
+          .start {
+            max-width: 270px;
+
+            p {
+              padding-top: 3px;
+            }
+          }
+
+          .end {
+            padding-top: 0;
+
+            .end {
+              strong {
+                font-size: 63.2362px;
+                line-height: 78px;
+              }
+            }
+          }
+        }
+      }
+
+      .subscribe-form {
+        margin-top: 6.12px;
+
+        @media (min-width: 768px) {
+          margin-top: 6.56px;
+        }
+
+        .newsletter-form {
+          .row-form {
+            display: flex;
+            flex-direction: column;
+            margin-inline: 0;
+            margin-bottom: 10px;
+            row-gap: 8px;
+            width: 100%;
+            
+            @media (min-width: 768px) {
+              flex-direction: row;
+              flex-wrap: wrap;
+              height: 40px;
+              justify-content: space-between;
+            }
+
+            .input-control {
+              padding-inline: 0.5rem;
+              flex: 0 0 100%;
+              width: 100%;
+              max-width: 100%;
+
+              &.h-100 {
+                height: 100%;
+              }
+
+              &.no-padding {
+                @media (min-width: 768px) {
+                  padding-inline: 0;
+                }
+              }
+
+              input {
+                background-color: #f1f3f4;
+                border-radius: 100px;
+                border: 0;
+                box-shadow: none;
+                color: var(--secondary-color);
+                font-size: 12px;
+                line-height: 14px;
+                outline-offset: 0;
+                outline: none;
+                overflow: hidden;
+                padding: 14px 0 12px 25px;
+                text-align: left;
+                width: 100%;
+
+                &.input-email {
+                  @media (min-width: 768px) {
+                    border-radius: 15px 0 0 15px;
+                  }
+                }
+              }
+
+              @media (min-width: 768px) {
+                flex: 0 0 50%;
+                max-width: 50%;
+                width: 278px;
+
+                &:first-child {
+                  padding-left: 0;
+                }
+
+                &:last-child {
+                  padding-right: 0;
+                }
+              }
+            }
+
+            .btn-submit {
+              align-items: center;
+              background-color: var(--accent-color);
+              border-radius: 90px;
+              border: none;
+              color: #ffffff;
+              cursor: pointer;
+              display: flex;
+              flex-grow: 1;
+              font-size: 16px;
+              height: 100%;
+              justify-content: space-between;
+              letter-spacing: 0.05em;
+              line-height: 19px;
+              margin-top: 0;
+              margin-inline: 0.5rem;
+              padding: 11px 25px 10px 25.1px;
+              text-align: left;
+              width: unset;
+
+              @media (min-width: 768px) {
+                border-radius: 0 90px 90px 0;
+                margin-inline: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
