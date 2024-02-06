@@ -398,17 +398,22 @@
     },
     "featured_collection_BY7Ca9": {
       "type": "featured-collection",
+      "custom_css": [
+        ".collection__title {align-items: center; display: flex; column-gap: 20px; padding-inline: 0;}",
+        ".collection__description a {align-items: center; color: #095f86; display: inline-flex; text-decoration: none; text-decoration-thickness: auto; font-size: 16px; line-height: 19px;}",
+        ".collection__description a:hover {color: #095f86;}"
+      ],
       "settings": {
         "title": "<strong>Today's Deal<\/strong>",
         "heading_size": "h1",
-        "description": "",
+        "description": "<p><a href=\"\/collections\/accessories-flash-deals\" title=\"Flash Deals\">Explore more<\/a><\/p>",
         "show_description": false,
         "description_style": "body",
         "collection": "flash-deals",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "outline",
         "enable_desktop_slider": false,
         "color_scheme": "scheme-1",
