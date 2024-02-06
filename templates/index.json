@@ -384,8 +384,8 @@
         "text_color": "#262424",
         "background_color": "rgba(0,0,0,0)",
         "text_align": "center",
-        "section_padding_top": 0,
-        "section_padding_bottom": 40,
+        "section_padding_top": 30,
+        "section_padding_bottom": 20,
         "section_padding_top_mobile": 20,
         "section_padding_bottom_mobile": 10
       }
