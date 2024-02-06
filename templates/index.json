@@ -372,7 +372,8 @@
       ],
       "custom_css": [
         "@media (min-width: 1290px) {.psb-container {max-width: 1290px; }}",
-        ".psb-img-wrapper img {width: 100%; height: auto; border-radius: 15px;}"
+        ".psb-img-wrapper {padding-bottom: 0;}",
+        ".psb-img-wrapper img {width: 100%; height: auto; border-radius: 15px; position: relative;}"
       ],
       "settings": {
         "container_width": "psb-container",
