@@ -1,16 +1,34 @@
+<style>
+  @media (max-width: 767px) {
+    .invx_sidebar_menu_header {
+      cursor: pointer;
+      width: 100%;
+      outline: none;
+    }
+    .invx_sidebar_menu_ul {
+      display: none;
+      overflow: hidden;
+      transition: 0.2s ease-out;
+    }
+    .invx_sidebar_menu_ul.active {
+      display: block;
+      transition: 0.2s ease-out;
+    }
+  }
+</style>
 {%- assign path = request.path | split: '/' -%}
 {%- if path[1] contains 'pages' -%}
   <div class="invx_sidebar ">
     {% render 'invx-bread-crumb-nav' %}
-    <div class="invx_sidebar_menu">
-      <div class="invx_sidebar_menu_header">
+    <div class="invx_sidebar_menu ">
+      <div class="invx_sidebar_menu_header" onclick="collapsible('invx_sidebar_menu_ul')">
         {{ shop.name }}
       </div>
-      <ul class="invx_sidebar_menu_ul">
+      <ul class="invx_sidebar_menu_ul" id="invx_sidebar_menu_ul">
         {% for link in linklists['page-sidebar'].links %}
           <li class="invx_sidebar_menu_li {% if link.active %} active {% if link.child_active %} child-active {% endif %}{% endif %}">
             {% if link.links != blank %}
-              <div class="accrodion">
+              <div class="accordion">
                 <details
                   id="{{ link.title }}_details"
                   {% if link.child_active %}
@@ -43,8 +61,8 @@
   <div class="invx_sidebar ">
     {% render 'invx-bread-crumb-nav' %}
     <div class="invx_sidebar_menu">
-      <div class="invx_sidebar_menu_header">Blog Categories</div>
-      <ul class="invx_sidebar_menu_ul">
+      <div class="invx_sidebar_menu_header" onclick="collapsible('invx_sidebar_menu_ul')">Blog Categories</div>
+      <ul class="invx_sidebar_menu_ul" id="invx_sidebar_menu_ul">
         {% for link in linklists['blog-categories'].links %}
           <li class="invx_sidebar_menu_li">
             <a href="{{ link.url }}">{{ link.title }}</a>
@@ -54,8 +72,17 @@
     </div>
 
     <div class="invx_sidebar_menu">
-      <div class="invx_sidebar_menu_header">Recent Blogs</div>
-      {% render 'invx-latest-related-blogs' %}
+      <div class="invx_sidebar_menu_header" onclick="collapsible('invx_sidebar_menu_blogs')">Recent Blogs</div>
+      <div id="invx_sidebar_menu_blogs">
+        {% render 'invx-latest-related-blogs' %}
+      </div>
     </div>
   </div>
 {%- endif -%}
+
+<script>
+  function collapsible(elem) {
+    var coll = document.getElementById(elem);
+    coll.classList.toggle('active');
+  }
+</script>
