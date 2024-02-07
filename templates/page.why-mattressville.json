@@ -119,26 +119,6 @@
     "multicolumn_fR7TMb": {
       "type": "multicolumn",
       "blocks": {
-        "column_T9tT7g": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville.ca_stern-foster-logo.png",
-            "title": "<strong>STEARNS & FOSTER<\/strong>",
-            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
-            "link_label": "View Stearns & Foster Products",
-            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
-          }
-        },
-        "column_B8hBVB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville.ca_beautyrest-logo.png",
-            "title": "<strong>BEAUTYREST<\/strong>",
-            "text": "<p>Sleep is more than a necessity and a mattress should represent something more than the utility. Beautyrest Black® is where technology and luxury intertwine to take you far beyond mere comfort. It's about sleep that indulges the senses. Sleep that refuses to compromise. Sleep that's so completely restorative and inspiring, it borders on the sacred.<br\/><br\/><\/p>",
-            "link_label": "View Stearns & Foster Products",
-            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
-          }
-        },
         "column_GwnwJn": {
           "type": "column",
           "settings": {
@@ -158,13 +138,33 @@
             "link_label": "View Stearns & Foster Products",
             "link": "shopify:\/\/collections\/brand-stearns-and-foster"
           }
+        },
+        "column_T9tT7g": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville.ca_stern-foster-logo.png",
+            "title": "<strong>STEARNS & FOSTER<\/strong>",
+            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
+            "link_label": "View Stearns & Foster Products",
+            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
+          }
+        },
+        "column_B8hBVB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville.ca_beautyrest-logo.png",
+            "title": "<strong>BEAUTYREST<\/strong>",
+            "text": "<p>Sleep is more than a necessity and a mattress should represent something more than the utility. Beautyrest Black® is where technology and luxury intertwine to take you far beyond mere comfort. It's about sleep that indulges the senses. Sleep that refuses to compromise. Sleep that's so completely restorative and inspiring, it borders on the sacred.<br\/><br\/><\/p>",
+            "link_label": "View Stearns & Foster Products",
+            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
+          }
         }
       },
       "block_order": [
-        "column_T9tT7g",
-        "column_B8hBVB",
         "column_GwnwJn",
-        "column_QQpqiM"
+        "column_QQpqiM",
+        "column_T9tT7g",
+        "column_B8hBVB"
       ],
       "custom_css": [
         ".multicolumn {padding: 0;}",
