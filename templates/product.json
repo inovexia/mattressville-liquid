@@ -76,6 +76,10 @@
         "comfort_scale",
         "share"
       ],
+      "custom_css": [
+        ".icon-with-text__item{align-items: baseline;}",
+        ".icon-with-text--vertical img {width: 65px; height: auto;}"
+      ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "",
