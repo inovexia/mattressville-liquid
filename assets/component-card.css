@@ -203,7 +203,8 @@
   height: 100%;
 }
 
-.card__heading {
+.card__heading,
+.card_heading {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   color: var(--secondary-color);
@@ -218,11 +219,13 @@
   text-overflow: ellipsis;
 }
 
-.card__heading:last-child {
+.card__heading:last-child,
+.card_heading:last-child {
   margin-bottom: 0;
 }
 
 .card--horizontal .card__heading,
+.card--horizontal .card_heading,
 .card--horizontal .price__container .price-item,
 .card--horizontal__quick-add {
   font-size: calc(var(--font-heading-scale) * 1.2rem);

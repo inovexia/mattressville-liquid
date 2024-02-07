@@ -20,6 +20,20 @@
         max-width: 407px;
         margin-right: 20px;
         width: 100%;
+
+        * {
+          font-size: 16px;
+          line-height: 1.5;
+          letter-spacing: 0;
+        }
+
+        span {
+          line-height: 1;
+        }
+
+        p {
+          margin-block: 0;
+        }
       }
 
       .brands {

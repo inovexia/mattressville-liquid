@@ -20,15 +20,15 @@
         "text_36UH7g"
       ],
       "custom_css": [
-        ".rich-text {border: 1px solid #ccc; border-radius: 15px;}"
+        ".rich-text {border: 1px solid #ccc; border-radius: 15px; margin-bottom: 40px;}"
       ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
-        "full_width": true,
+        "full_width": false,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 40
       }
     }
   },

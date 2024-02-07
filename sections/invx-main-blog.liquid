@@ -65,9 +65,11 @@
 {% if featuredArticles %}
   {%- paginate featuredArticles.articles by 6 -%}
     <div class="main-blog page-width page-width-no-padding section-{{ section.id }}-padding">
+      {% if blog.title != blank %}
       <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
         {{ blog.title | escape }}
       </h1>
+      {% endif %}
 
       <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
         {%- for article in featuredArticles.articles -%}

@@ -6,72 +6,92 @@
       "settings": {
       }
     },
-    "multicolumn_WPeRCx": {
-      "type": "multicolumn",
+    "rich_text_gtXcth": {
+      "type": "rich-text",
       "blocks": {
-        "column_DRMai3": {
-          "type": "column",
+        "heading_ayGhc9": {
+          "type": "heading",
           "settings": {
-            "title": "<strong>Twin\/Single<\/strong>",
-            "text": "<p>39″ x 75″ (inches)<\/p><p>99cm x 190.5cm (centimeters)<br\/><\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_U6qX7c": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Full\/Double<\/strong>",
-            "text": "<p>54″ x 75″ (inches)<\/p><p>137cm x 190.5cm (centimeters)<br\/><\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_6qUaDF": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Queen<\/strong>",
-            "text": "<p>59″ x 79″ (inches)<\/p><p>150cm x 201cm (centimeters)<br\/><\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_mPQW6C": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>King<\/strong>",
-            "text": "<p>76″ x 79″ (inches)<\/p><p>193cm x 201cm (centimeters)<\/p>",
-            "link_label": "",
-            "link": ""
+            "heading": "MATTRESS SIZES",
+            "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "column_DRMai3",
-        "column_U6qX7c",
-        "column_6qUaDF",
-        "column_mPQW6C"
+        "heading_ayGhc9"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
-        "title": "<strong>MATTRESS SIZES<\/strong>",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 12
+      }
+    },
+    "rich_text_8j4Xmq": {
+      "type": "rich-text",
+      "blocks": {
+        "text_HJBgXR": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Twin\/Single – 39″ x 75″ (inches) – 99cm x 190.5cm (centimeters)<\/h4><h4>Full\/Double – 54″ x 75″ (inches) – 137cm x 190.5cm (centimeters)<\/h4><h4>Queen – 59″ x 79″ (inches) – 150cm x 201cm (centimeters)<\/h4><h4>King – 76″ x 79″ (inches) – 193cm x 201cm (centimeters)<\/h4>"
+          }
+        }
+      },
+      "block_order": [
+        "text_HJBgXR"
+      ],
+      "custom_css": [
+        ".rich-text {border-radius: 15px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_9MpUtR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pHwBRc": {
+          "type": "heading",
+          "settings": {
+            "heading": "MATTRESS BUILD",
+            "heading_size": "h1"
+          }
+        },
+        "text_tPNYfm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The characteristics of a mattress are mostly dictated by the build, the main types are:<\/p><h3><strong>Innerspring<\/strong><\/h3><p>Innerspring or open coil mattresses are build with a system of connected springs, arranged in rows and connected to each other at the top and bottom by a spiral helical wire. An outer rod is sometimes added around the outside to strengthen the perimeter of the mattress. Innerspring sprung mattresses come in large variety of tensions, from very firm down to softer options.<\/p><h3><strong>Pocket Coil<\/strong><\/h3><p><a href=\"https:\/\/mattressville.ca\/all-mattresses\/pocket-coil\/\">Pocket coil mattresses<\/a> contain many individual springs, housed in fabric pockets, all working independantly of each other. This arrangement means that support is offered from the edge to the very centre of the mattress and means significantly less-roll together when two people are on it. Amounts of individual springs vary, the more pocket springs a mattress has, the more supportive it will be. Pocket coil mattresses can be a great investment, as they provide a supportive sleeping environment.<\/p><h3><strong>Memory Foam<\/strong><\/h3><p>Famously developed by NASA in the 1960’s <a href=\"https:\/\/mattressville.ca\/all-mattresses\/memory-foam\/\">Memory Foam Mattresses<\/a> relieve pressure on the body by distributing your weight evenly, providing ultimate support. In Addition, the flexible structure of Memory Foam Mattresses means they can absorb movement and mould to your individual body shape for a great night’s sleep. Some customers have found memory foam to be too warm to sleep on, this is why there is an increase in popularity of our Formeflex Cool Gel memory foam mattresses, featuring the cooling properties of Thermo Cool Cover and Flex Gel Memory foam to regulate the temperature.<\/p><h3><strong>Latex mattress<\/strong><\/h3><p><a href=\"https:\/\/mattressville.ca\/all-mattresses\/organic-latex\/\">Latex<\/a> can be Natural (organic) and blend synthetic latex. Natural Latex is made of white milky sap juice which is tapped from the bark of the ‘Hevea Brasiliensis’ or Rubber Tree and probably is one of the most environmentally beneficial products in mattress industry that you can find.<\/p><p>Natural Latex has better anti-bacterial properties than any other bedding material. The excellent breathing properties of Natural Latex prevents moisture build-up, which is the major cause of bacterial growth and dust mite infestation.<\/p><p><a href=\"https:\/\/mattressville.ca\/all-mattresses\/organic-latex\/\">Natural latex mattresses<\/a> are also recommended for people who suffer from allergies, respiratory problems, hay fever, eczema and asthma. At the final stage of production natural latex goes through a double-washing process that makes it as contaminant free as it’s possible to get.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pHwBRc",
+        "text_tPNYfm"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
-    "multicolumn_WPeRCx"
+    "rich_text_gtXcth",
+    "rich_text_8j4Xmq",
+    "rich_text_9MpUtR"
   ]
 }

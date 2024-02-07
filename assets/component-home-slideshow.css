@@ -14,9 +14,17 @@
   position: relative;
 }
 @media (min-width: 990px) {
-  .home-slideshow-inner .home-slideshow {
+  .home-slideshow-inner .home-slideshow:not(.no-sidebar) {
     max-width: calc(100% - 230px);
   }
+}
+@media (min-width: 990px) {
+  .home-slideshow-inner .home-slideshow.no-sidebar {
+    max-width: 100%;
+  }
+}
+.home-slideshow-inner .home-slideshow .banner__content {
+  display: none;
 }
 .home-slideshow-inner .home-slideshow-sidebar {
   background-color: #eff9f9;

@@ -61,7 +61,7 @@
       ],
       "custom_css": [
         "multicolumn.background-primary .multicolumn-card {background-color: #fff;}",
-        ".multicolumn-card {display: flex; justify-content: space-around; padding-left: 10px; border: 1px solid #ccc; border-radius: 15px;}",
+        ".multicolumn-card {display: flex; justify-content: space-around; padding-left: 10px; border: 0px solid #ccc; border-radius: 15px;}",
         ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}",
         "@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",
         ".multicolumn-card .multicolumn-card__info {text-align: left; width: 100%;}"
@@ -119,26 +119,6 @@
     "multicolumn_fR7TMb": {
       "type": "multicolumn",
       "blocks": {
-        "column_T9tT7g": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville.ca_stern-foster-logo.png",
-            "title": "<strong>STEARNS & FOSTER<\/strong>",
-            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
-            "link_label": "View Stearns & Foster Products",
-            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
-          }
-        },
-        "column_B8hBVB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville.ca_beautyrest-logo.png",
-            "title": "<strong>BEAUTYREST<\/strong>",
-            "text": "<p>Sleep is more than a necessity and a mattress should represent something more than the utility. Beautyrest Black® is where technology and luxury intertwine to take you far beyond mere comfort. It's about sleep that indulges the senses. Sleep that refuses to compromise. Sleep that's so completely restorative and inspiring, it borders on the sacred.<br\/><br\/><\/p>",
-            "link_label": "View Stearns & Foster Products",
-            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
-          }
-        },
         "column_GwnwJn": {
           "type": "column",
           "settings": {
@@ -158,13 +138,33 @@
             "link_label": "View Stearns & Foster Products",
             "link": "shopify:\/\/collections\/brand-stearns-and-foster"
           }
+        },
+        "column_T9tT7g": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville.ca_stern-foster-logo.png",
+            "title": "<strong>STEARNS & FOSTER<\/strong>",
+            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
+            "link_label": "View Stearns & Foster Products",
+            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
+          }
+        },
+        "column_B8hBVB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville.ca_beautyrest-logo.png",
+            "title": "<strong>BEAUTYREST<\/strong>",
+            "text": "<p>Sleep is more than a necessity and a mattress should represent something more than the utility. Beautyrest Black® is where technology and luxury intertwine to take you far beyond mere comfort. It's about sleep that indulges the senses. Sleep that refuses to compromise. Sleep that's so completely restorative and inspiring, it borders on the sacred.<br\/><br\/><\/p>",
+            "link_label": "View Stearns & Foster Products",
+            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
+          }
         }
       },
       "block_order": [
-        "column_T9tT7g",
-        "column_B8hBVB",
         "column_GwnwJn",
-        "column_QQpqiM"
+        "column_QQpqiM",
+        "column_T9tT7g",
+        "column_B8hBVB"
       ],
       "custom_css": [
         ".multicolumn {padding: 0;}",
@@ -174,9 +174,9 @@
       "settings": {
         "title": "",
         "heading_size": "h2",
-        "image_width": "third",
+        "image_width": "half",
         "image_ratio": "adapt",
-        "columns_desktop": 1,
+        "columns_desktop": 2,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
@@ -332,7 +332,7 @@
       ],
       "custom_css": [
         ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
-        ".multicolumn-card {background: #ffffff; border-radius: 15px; border: 1px solid #f1f3f4; overflow: hidden; text-align: left; box-shadow: -5px -5px 8px 2px rgba(0, 0, 0, 0.05);}",
+        ".multicolumn-card {background: #ffffff; border-radius: 15px; border: 1px solid #f1f3f4; overflow: hidden; text-align: left; box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.05);}",
         ".multicolumn li:nth-child(2) .multicolumn-card {height: 114%; z-index: 1000 !important; position: relative; transform: scale(1.02); margin-top: -7%;}",
         ".multicolumn li:nth-child(3) .multicolumn-card {z-index: -1 !important;}",
         ".multicolumn ul {list-style: none; font-size: 0.9em;}"

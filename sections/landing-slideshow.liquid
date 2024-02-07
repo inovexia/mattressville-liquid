@@ -28,7 +28,7 @@
 
 <div class="page-width">
   <div class="home-slideshow-inner">
-    <div class="home-slideshow">
+    <div class="home-slideshow{% unless section.settings.enable_sidebar %} no-sidebar{% endunless %}">
       <slideshow-component
         class="slider-mobile-gutter{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
         role="region"
