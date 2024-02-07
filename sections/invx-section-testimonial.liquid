@@ -1,0 +1,41 @@
+<div class="invx-testimonial-section">
+  <h2>{{ section.settings.section_heading }}</h2>
+  <div>{{ section.settings.section_bg }}</div>
+</div>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "tag": "section",
+  "class": "testimonials",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "id": "section_bg",
+      "type": "image_picker",
+      "label": "Section Background"
+    },
+    {
+      "id": "section_heading",
+      "type": "richtext",
+      "label": "Section Heading",
+      "default": "<p>Add your text here</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
