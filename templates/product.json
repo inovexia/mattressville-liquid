@@ -132,6 +132,7 @@
         "show_secondary_image": true,
         "show_vendor": true,
         "show_rating": false,
+        "enable_quick_add": true,
         "columns_mobile": "1",
         "padding_top": 36,
         "padding_bottom": 60
