@@ -1,7 +1,114 @@
-<div class="invx-testimonial-section">
-  <h2>{{ section.settings.section_heading }}</h2>
-  <div>{{ section.settings.section_bg }}</div>
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+
+{%- capture minify -%}
+<style>
+  .invx-testimonial {
+    background-image: url({{ section.settings.section_background_image | image_url }});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border_radius: 15px;
+  }
+  .invx-testimonial-item {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background: #fff;
+    padding: 30px;
+    height: auto;
+  }
+</style>
+{%- endcapture -%}
+{{ minify | strip_newlines }}
+
+<div
+  id="invx-{{ section.id }}"
+  class="invx-{{ section.id }} invx-section "
+>
+  <div class="invx-container invx-testimonial">
+    <div class="invx-review-heading invx-block-space">
+      {{ section.settings.section_background_image | image_url }}
+      <h2
+        class="invx-section-heading invx-rte"
+        style="--heading-color: {{ section.settings.heading_color }}"
+      >
+        {{ section.settings.heading }}
+      </h2>
+      <div
+        class="invx-utilities-heading__subheading invx-rte invx-block-space"
+        style="--subheading-color: {{ section.settings.subheading_color }}"
+      >
+        {{ section.settings.subheading }}
+      </div>
+    </div>
+
+    <div class="invx-row {% if section.settings.enable_keep_layout %}is-keep-layout{% endif %}">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="invx-testimonial-item">
+                {%- if block.settings.review_image != blank -%}
+                  <img
+                    src="{{ block.settings.review_image | image_url: '450x450', crop: 'center' }}"
+                    alt="avatar"
+                    sizes="100%"
+                    loading="lazy"
+                    width="75"
+                    height="75"
+                  >
+                {%- else -%}
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0663/5887/0235/files/team02.jpg"
+                    alt="avatar"
+                    sizes="100%"
+                    loading="lazy"
+                    width="75"
+                    height="75"
+                  >
+                {%- endif -%}
+                <div>{{ block.settings.review_name }}</div>
+                <div>{{ block.settings.position }}</div>
+                <div>{{ block.settings.review_text }}</div>
+                <div>{{ block.settings.review_stars }}</div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- Initialize Swiper -->
+<script>
+  window.addEventListener('load', function () {
+    const swiper = new Swiper('.mySwiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      slidesPerView: 1,
+      loop: true,
+      lazyLoading: true,
+      keyboard: {
+        enabled: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>
 
 {% schema %}
 {
@@ -13,28 +120,102 @@
   },
   "settings": [
     {
-      "id": "section_bg",
-      "type": "image_picker",
-      "label": "Section Background"
+      "type": "header",
+      "content": "Heading settings"
     },
     {
-      "id": "section_heading",
+      "label": "Heading",
       "type": "richtext",
-      "label": "Section Heading",
-      "default": "<p>Add your text here</p>"
+      "id": "heading",
+      "default": "<p>What Our Customers Are Saying</p>"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "default": "<p>Great products and quick service</p>",
+      "label": "Subheading"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading color",
+      "default": "#585454"
+    },
+    {
+      "label": "Section Background",
+      "id": "section_background_image",
+      "type": "image_picker"
     }
   ],
   "blocks": [
     {
-      "name": "Slide",
+      "name": "Testimonial",
       "type": "slide",
       "settings": [
         {
           "type": "image_picker",
-          "id": "image",
-          "label": "Image"
+          "id": "review_image",
+          "label": "Customer image",
+          "info": "Recommended 1:1 ratio, square image"
+        },
+        {
+          "type": "select",
+          "id": "review_stars",
+          "label": "Review rating",
+          "options": [
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            }
+          ],
+          "default": "5"
+        },
+        {
+          "type": "text",
+          "id": "review_name",
+          "label": "Reviewer name",
+          "default": "Mason Peter"
+        },
+        {
+          "type": "text",
+          "id": "position",
+          "label": "Position or other info, etc.",
+          "default": "@ceo_mason"
+        },
+        {
+          "type": "richtext",
+          "id": "review_text",
+          "label": "Review text",
+          "default": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.</p>"
         }
       ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials"
     }
   ]
 }
