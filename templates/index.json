@@ -556,9 +556,9 @@
           "settings": {
             "review_image": "shopify:\/\/shop_images\/customer-support.webp",
             "review_stars": "5",
-            "review_name": "Best Customer Support",
-            "position": "@ceo_mason",
-            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>"
+            "review_title": "Best Customer Support",
+            "reviewer_name": "June Graham",
+            "review_text": "<p>The sales person Andrew was excellent. He knew his products well and helped us choosing what we needed. The delivery service was smooth as well. Was overall a great experience.<\/p>"
           }
         },
         "slide_yMVEb4": {
@@ -566,9 +566,9 @@
           "settings": {
             "review_image": "shopify:\/\/shop_images\/shopping-experience.webp",
             "review_stars": "5",
-            "review_name": "Mason Peter",
-            "position": "@ceo_mason",
-            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>"
+            "review_text": "<p>I received excellent service from Alex both pre sale and after sale. My purchase was done online and Alex follow up with a call. The delivery guys were also very professional and courteous. Highly recommend!!<\/p>",
+            "review_title": "Easy Online Shopping Experience",
+            "reviewer_name": "Vincent S"
           }
         },
         "slide_qnbyHk": {
@@ -576,9 +576,10 @@
           "settings": {
             "review_image": "shopify:\/\/shop_images\/free-delivery.webp",
             "review_stars": "5",
-            "review_name": "Mason Peter",
-            "position": "@ceo_mason",
-            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>"
+            "review_text": "<p>My husband and I decided to check this place based on the positive reviews. I am glad we did... The service was exceptional. The salesperson was very honest and knowledgeable. No additional charge for delivery which is another plus.... Best mattress store in town.\"<\/p>",
+            "review_title": "Free delivery",
+            "review_subtitle": "On orders above $499",
+            "reviewer_name": "Five Star Moulding Company"
           }
         },
         "slide_x7PRLD": {
@@ -586,9 +587,9 @@
           "settings": {
             "review_image": "shopify:\/\/shop_images\/shield.webp",
             "review_stars": "5",
-            "review_name": "Mason Peter",
-            "position": "@ceo_mason",
-            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>"
+            "review_text": "<p>Great place to buy brand name mattresses. You can choose from high end Stearns and Foster, Tempurpedic, Beautyrest Black, to mid range Sealy, Simmons and some good local brands. They deliver to all major cities.... Definitely recommend. Great service and prices.\"<\/p>",
+            "review_title": "Biggest Brand Names",
+            "reviewer_name": "Valeriya Budakovska"
           }
         }
       },

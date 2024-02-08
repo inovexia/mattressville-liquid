@@ -1,169 +1,84 @@
 {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
-
-{%- capture minify -%}
-<style>
-  .invx-testimonial {
-    background-image: url({{ section.settings.section_background_image | image_url }});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border_radius: 15px;
-  }
-  .invx-testimonial-item {
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    background: #fff;
-    padding: 30px;
-    height: auto;
-  }
-</style>
-{%- endcapture -%}
-{{ minify | strip_newlines }}
 {{ 'invx-testimonial.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width">
-  <div class="entry-data ">
-    <h2 class="title">{{ section.settings.heading }}</h2>
-  </div>
-  <div class="testimonials-inner">
-    {%- if section.settings.section_background_image != blank -%}
-      <img
-        src="{{ section.settings.section_background_image | img_url: 'master' }}"
-        alt="A women sleeping on a white bed and white cozy mattress"
-        class="testimonial-bg"
-        height="300"
-        width="1260"
-        loading="lazy"
-      />
-    {%- endif -%}
-    <div class="testimonial-data">
-      <div class="swiper testimonial-swiper">
-        <div class="swiper-wrapper">
-          {% for block in section.blocks %}
-            <div class="swiper-slide">
-              <div class="top-area d-flex">
-                {%- if block.settings.review_image != blank -%}
-                  <img
-                    src="{{ block.settings.review_image | image_url: 'master' }}"
-                    alt="{{ block.settings.review_name }}"
-                    height="52"
-                    width="52"
-                    loading="lazy"
-                  >
-                {%- else -%}
-                  <img
-                    src="https://cdn.shopify.com/s/files/1/0663/5887/0235/files/team02.jpg"
-                    alt="{{ block.settings.review_name }}"
-                    height="52"
-                    width="52"
-                    loading="lazy"
-                  >
-                {%- endif -%}
-                <div class="d-flex flex-column">
-                  <h3 class="my-auto">{{ block.settings.review_name }}</h3>
+{%- capture minify -%}
+  <div class="page-width">
+    <div class="entry-data ">
+      <h2 class="title">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="testimonials-inner">
+      {%- if section.settings.section_background_image != blank -%}
+        <img
+          src="{{ section.settings.section_background_image | img_url: 'master' }}"
+          alt="A women sleeping on a white bed and white cozy mattress"
+          class="testimonial-bg"
+          height="300"
+          width="1260"
+          loading="lazy"
+        />
+      {%- endif -%}
+      <div class="testimonial-data">
+        <div class="swiper testimonial-swiper">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide">
+                <div class="top-area d-flex">
+                  {%- if block.settings.review_image != blank -%}
+                    <img
+                      src="{{ block.settings.review_image | img_url: 'master' }}"
+                      alt="{{ block.settings.review_title }}"
+                      height="52"
+                      width="52"
+                      loading="lazy"
+                    >
+                  {%- else -%}
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0663/5887/0235/files/team02.jpg"
+                      alt="{{ block.settings.review_title }}"
+                      height="52"
+                      width="52"
+                      loading="lazy"
+                    >
+                  {%- endif -%}
+                  <div class="end d-flex flex-column">
+                    <h3 class="my-auto">{{ block.settings.review_title }}</h3>
+                    {%- if block.settings.review_subtitle != blank -%}
+                      <p>{{ block.settings.review_subtitle }}</p>
+                    {%- endif -%}
+                  </div>
+                </div>
+                <div class="star d-flex justify-content-center">
+                  {% assign review_stars = block.settings.review_stars | plus: 0 %}
+                  {% for i in (1..review_stars) %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="24" height="23" class="my-auto star-icon">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9992 19.4142L5.6346 22.81C4.75605 23.2787 4.18215 22.8676 4.35363 21.8868L5.60243 14.7438L0.418105 9.70637C-0.29485 9.01363 -0.0735007 8.33865 0.910558 8.19905L8.04576 7.1868L11.2134 0.670345C11.6473 -0.222447 12.35 -0.224449 12.7849 0.670345L15.9525 7.1868L23.0878 8.19905C24.0727 8.33877 24.2965 9.01039 23.5802 9.70637L18.3959 14.7438L19.6447 21.8868C19.8158 22.8654 19.2415 23.2783 18.3637 22.81L11.9992 19.4142Z" fill="currentColor"></path>
+                    </svg>
+                  {% endfor %}
+                </div>
+                <div class="desc">
+                  {{ block.settings.review_text }}
+                  <div class="meta-data">
+                    <div class="name-meta">{{ block.settings.reviewer_name }}</div>
+                  </div>
                 </div>
               </div>
-              {% comment %} <div class="star d-flex justify-content-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="24" height="23" class="my-auto star-icon">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9992 19.4142L5.6346 22.81C4.75605 23.2787 4.18215 22.8676 4.35363 21.8868L5.60243 14.7438L0.418105 9.70637C-0.29485 9.01363 -0.0735007 8.33865 0.910558 8.19905L8.04576 7.1868L11.2134 0.670345C11.6473 -0.222447 12.35 -0.224449 12.7849 0.670345L15.9525 7.1868L23.0878 8.19905C24.0727 8.33877 24.2965 9.01039 23.5802 9.70637L18.3959 14.7438L19.6447 21.8868C19.8158 22.8654 19.2415 23.2783 18.3637 22.81L11.9992 19.4142Z" fill="#FBCA23"></path>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="24" height="23" class="my-auto star-icon">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9992 19.4142L5.6346 22.81C4.75605 23.2787 4.18215 22.8676 4.35363 21.8868L5.60243 14.7438L0.418105 9.70637C-0.29485 9.01363 -0.0735007 8.33865 0.910558 8.19905L8.04576 7.1868L11.2134 0.670345C11.6473 -0.222447 12.35 -0.224449 12.7849 0.670345L15.9525 7.1868L23.0878 8.19905C24.0727 8.33877 24.2965 9.01039 23.5802 9.70637L18.3959 14.7438L19.6447 21.8868C19.8158 22.8654 19.2415 23.2783 18.3637 22.81L11.9992 19.4142Z" fill="#FBCA23"></path>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="24" height="23" class="my-auto star-icon">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9992 19.4142L5.6346 22.81C4.75605 23.2787 4.18215 22.8676 4.35363 21.8868L5.60243 14.7438L0.418105 9.70637C-0.29485 9.01363 -0.0735007 8.33865 0.910558 8.19905L8.04576 7.1868L11.2134 0.670345C11.6473 -0.222447 12.35 -0.224449 12.7849 0.670345L15.9525 7.1868L23.0878 8.19905C24.0727 8.33877 24.2965 9.01039 23.5802 9.70637L18.3959 14.7438L19.6447 21.8868C19.8158 22.8654 19.2415 23.2783 18.3637 22.81L11.9992 19.4142Z" fill="#FBCA23"></path>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="24" height="23" class="my-auto star-icon">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9992 19.4142L5.6346 22.81C4.75605 23.2787 4.18215 22.8676 4.35363 21.8868L5.60243 14.7438L0.418105 9.70637C-0.29485 9.01363 -0.0735007 8.33865 0.910558 8.19905L8.04576 7.1868L11.2134 0.670345C11.6473 -0.222447 12.35 -0.224449 12.7849 0.670345L15.9525 7.1868L23.0878 8.19905C24.0727 8.33877 24.2965 9.01039 23.5802 9.70637L18.3959 14.7438L19.6447 21.8868C19.8158 22.8654 19.2415 23.2783 18.3637 22.81L11.9992 19.4142Z" fill="#FBCA23"></path>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="24" height="23" class="my-auto star-icon">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9992 19.4142L5.6346 22.81C4.75605 23.2787 4.18215 22.8676 4.35363 21.8868L5.60243 14.7438L0.418105 9.70637C-0.29485 9.01363 -0.0735007 8.33865 0.910558 8.19905L8.04576 7.1868L11.2134 0.670345C11.6473 -0.222447 12.35 -0.224449 12.7849 0.670345L15.9525 7.1868L23.0878 8.19905C24.0727 8.33877 24.2965 9.01039 23.5802 9.70637L18.3959 14.7438L19.6447 21.8868C19.8158 22.8654 19.2415 23.2783 18.3637 22.81L11.9992 19.4142Z" fill="#FBCA23"></path>
-                </svg>
-              </div>
-              <div class="desc">
-                <p> The sales person Andrew was excellent. He knew his products well and helped us choosing what we needed. The delivery service was smooth as well. Was overall a great experience. </p>
-                <div class="meta-data d-flex justify-content-between">
-                  <div class="name-meta">June Graham</div>
-                </div>
-              </div> {% endcomment %}
-            </div>
-          {% endfor %}
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
-      <div class="slider-nav">
-        <button class="btn-swiper swiper-left" aria-label="Slide Left">
-          <i class="gsi gs-chevron-left"></i>
-        </button>
-        <button class="btn-swiper swiper-right" aria-label="Slide Right">
-          <i class="gsi gs-chevron-right"></i>
-        </button>
+        <div class="slider-nav">
+          <button class="btn-swiper swiper-left" aria-label="Slide Left">
+            <i class="gsi gs-chevron-left"></i>
+          </button>
+          <button class="btn-swiper swiper-right" aria-label="Slide Right">
+            <i class="gsi gs-chevron-right"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-{% comment %} 
-<div
-  id="invx-{{ section.id }}"
-  class="invx-{{ section.id }} invx-section "
->
-  <div class="invx-container invx-testimonial">
-    <div class="invx-review-heading invx-block-space">
-      <h2
-        class="invx-section-heading invx-rte"
-        style="--heading-color: {{ section.settings.heading_color }}"
-      >
-        {{ section.settings.heading }}
-      </h2>
-      <div
-        class="invx-utilities-heading__subheading invx-rte invx-block-space"
-        style="--subheading-color: {{ section.settings.subheading_color }}"
-      >
-        {{ section.settings.subheading }}
-      </div>
-    </div>
-
-    <div class="invx-row {% if section.settings.enable_keep_layout %}is-keep-layout{% endif %}">
-      <!-- Swiper -->
-      <div class="swiper testimonial-slider">
-        <div class="swiper-wrapper">
-          {% for block in section.blocks %}
-            <div class="swiper-slide">
-              <div class="invx-testimonial-item">
-                {%- if block.settings.review_image != blank -%}
-                  <img
-                    src="{{ block.settings.review_image | image_url: '450x450', crop: 'center' }}"
-                    alt="avatar"
-                    sizes="100%"
-                    loading="lazy"
-                    width="75"
-                    height="75"
-                  >
-                {%- else -%}
-                  <img
-                    src="https://cdn.shopify.com/s/files/1/0663/5887/0235/files/team02.jpg"
-                    alt="avatar"
-                    sizes="100%"
-                    loading="lazy"
-                    width="75"
-                    height="75"
-                  >
-                {%- endif -%}
-                <div>{{ block.settings.review_name }}</div>
-                <div>{{ block.settings.position }}</div>
-                <div>{{ block.settings.review_text }}</div>
-                <div>{{ block.settings.review_stars }}</div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </div>
-</div> {% endcomment %}
-
-<!-- Initialize Swiper -->
+{%- endcapture -%}
+{{ minify | strip_newlines }}
 <script>
   window.addEventListener('load', function () {
     const swiper = new Swiper('.testimonial-swiper', {
@@ -174,7 +89,7 @@
       rewind: true,
       lazyLoading: true,
       breakpoints:{
-        992: { slidesPerView: 1 },
+        990: { slidesPerView: 1 },
       },
       pagination: {
         el: '.swiper-pagination',
@@ -260,19 +175,23 @@
         },
         {
           "type": "text",
-          "id": "review_name",
-          "label": "Reviewer name",
-          "default": "Mason Peter"
+          "id": "review_title",
+          "label": "Review Title"
         },
         {
           "type": "text",
-          "id": "position",
-          "label": "Position or other info, etc."
+          "id": "review_subtitle",
+          "label": "Review Subtitle"
+        },
+        {
+          "type": "text",
+          "id": "reviewer_name",
+          "label": "Reviewer Name"
         },
         {
           "type": "richtext",
           "id": "review_text",
-          "label": "Review text"
+          "label": "Review Text"
         }
       ]
     }

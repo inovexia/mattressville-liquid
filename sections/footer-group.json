@@ -2,6 +2,9 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "yotpo-side-reviews": {
+      "type": "custom-yotpo-side-reviews"
+    },
     "footer-mobile": {
       "type": "footer-mobile",
       "blocks": {
@@ -79,6 +82,7 @@
     }
   },
   "order": [
+    "yotpo-side-reviews",
     "footer-mobile",
     "footer-top",
     "footer-bottom"
