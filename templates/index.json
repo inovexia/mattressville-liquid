@@ -554,6 +554,7 @@
         "slide_jzeLpF": {
           "type": "slide",
           "settings": {
+            "review_image": "shopify:\/\/shop_images\/customer-support.webp",
             "review_stars": "5",
             "review_name": "Mason Peter",
             "position": "@ceo_mason",
@@ -563,6 +564,7 @@
         "slide_yMVEb4": {
           "type": "slide",
           "settings": {
+            "review_image": "shopify:\/\/shop_images\/shopping-experience.webp",
             "review_stars": "5",
             "review_name": "Mason Peter",
             "position": "@ceo_mason",
@@ -572,6 +574,7 @@
         "slide_qnbyHk": {
           "type": "slide",
           "settings": {
+            "review_image": "shopify:\/\/shop_images\/free-delivery.webp",
             "review_stars": "5",
             "review_name": "Mason Peter",
             "position": "@ceo_mason",
@@ -581,6 +584,7 @@
         "slide_x7PRLD": {
           "type": "slide",
           "settings": {
+            "review_image": "shopify:\/\/shop_images\/shield.webp",
             "review_stars": "5",
             "review_name": "Mason Peter",
             "position": "@ceo_mason",
