@@ -544,6 +544,59 @@
         "space_tablet": 40,
         "space_desktop": 50
       }
+    },
+    "invx_section_testimonial_CxycbC": {
+      "type": "invx-section-testimonial",
+      "blocks": {
+        "slide_jzeLpF": {
+          "type": "slide",
+          "settings": {
+            "review_stars": "5",
+            "review_name": "Mason Peter",
+            "position": "@ceo_mason",
+            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>"
+          }
+        },
+        "slide_yMVEb4": {
+          "type": "slide",
+          "settings": {
+            "review_stars": "5",
+            "review_name": "Mason Peter",
+            "position": "@ceo_mason",
+            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>"
+          }
+        },
+        "slide_qnbyHk": {
+          "type": "slide",
+          "settings": {
+            "review_stars": "5",
+            "review_name": "Mason Peter",
+            "position": "@ceo_mason",
+            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>"
+          }
+        },
+        "slide_x7PRLD": {
+          "type": "slide",
+          "settings": {
+            "review_stars": "5",
+            "review_name": "Mason Peter",
+            "position": "@ceo_mason",
+            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "slide_jzeLpF",
+        "slide_yMVEb4",
+        "slide_qnbyHk",
+        "slide_x7PRLD"
+      ],
+      "settings": {
+        "heading": "<p>What Our Customers Are Saying<\/p>",
+        "heading_color": "#000",
+        "subheading": "<p>Great products and quick service<\/p>",
+        "subheading_color": "#585454"
+      }
     }
   },
   "order": [
@@ -556,6 +609,7 @@
     "newsletter_De6KAC",
     "psb_utilities_space_iXPQnK",
     "psb_reviews_reviews_01_PRaRHW",
-    "psb_utilities_space_jPGPLt"
+    "psb_utilities_space_jPGPLt",
+    "invx_section_testimonial_CxycbC"
   ]
 }
