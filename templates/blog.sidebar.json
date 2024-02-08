@@ -23,7 +23,7 @@
       "type": "psb-utilities-space",
       "settings": {
         "space_mobile": 20,
-        "space_tablet": 20,
+        "space_tablet": 30,
         "space_desktop": 40
       }
     }
