@@ -1,0 +1,39 @@
+{
+  "layout": "theme-sidebar",
+  "sections": {
+    "main": {
+      "type": "invx-main-page",
+      "settings": {
+      }
+    },
+    "rich_text_t4pYCG": {
+      "type": "rich-text",
+      "blocks": {
+        "text_36UH7g": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The foundation, “box spring”, or base, is designed to prolong the life of the mattress by providing solid, stable support. It also elevates the mattress off the floor for better hygiene and a more attractive appearance. Mattressville offers 3 types of foundations: posture box, semi-flex, coil spring.<\/p><h3><strong>Posture Box<\/strong><\/h3><p>A slatted wooden frame with a flat platform top, it’s usually covered in the same fabric as the mattress for a more cohesive look. A posture box is not a ‘box spring’, as it has no springs, and is therefore less effective for supporting the weight of the mattress.<\/p><h3><strong>Semi Flex<\/strong><\/h3><p>Similar to the construction of the posture box, but with the addition of a rigid metal grid network affixed above the slats, this type of foundation is also very firm and absorbs little weight from the mattress.<\/p><h3><strong>Coil Spring<\/strong><\/h3><p>This is the standard ‘box spring’, and it’s usually found matched to mid-priced bedding sets. The coil spring foundation uses a spring system similar to the basic mattress innerspring; however, due to the greater gauge of the coils and the larger size of the foundation, the foundation is much firmer than an innerspring mattress. Nonetheless, the coil spring foundation has the softest feel of any foundation available.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_36UH7g"
+      ],
+      "custom_css": [
+        ".rich-text {border: 1px solid #ccc; border-radius: 15px; margin-bottom: 40px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_t4pYCG"
+  ]
+}

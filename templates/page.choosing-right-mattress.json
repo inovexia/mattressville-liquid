@@ -1,0 +1,13 @@
+{
+  "layout": "theme-sidebar",
+  "sections": {
+    "main": {
+      "type": "invx-main-page",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

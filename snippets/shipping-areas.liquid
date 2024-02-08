@@ -1,0 +1,25 @@
+{% comment %}
+  {{ product.metafields.meta_data.softness_score }}
+  Renders product shipping-areas.
+  Accepts:
+  - product: {Object} product object
+
+  Usage:
+  {% render 'shipping-areas', product: product %}
+  <a href="#expand" class="expand">Show more details</a>
+  <a href="#collapse" class="collapse">Show less details</a>
+{% endcomment %}
+{{ 'shipping-areas.css' | asset_url | stylesheet_tag }}
+{%- if product.metafields.custom.product_shipping_areas.value.size > 0 -%}
+  <div class="shipping-areas">
+    <p>
+      {%- if available -%}
+        <stocked>In Stock: </stocked>
+      {%- else -%}
+        <span>Sold Out: </span>
+      {%- endif -%}
+      <strong>{{ product.metafields.custom.product_shipping_areas.value  | join: ", " }}</strong>
+    </p>
+  </div>
+{%- endif -%}
+

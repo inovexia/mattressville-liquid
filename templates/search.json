@@ -3,10 +3,10 @@
     "main": {
       "type": "main-search",
       "settings": {
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "image_ratio": "adapt",
         "show_secondary_image": false,
-        "show_vendor": false,
+        "show_vendor": true,
         "show_rating": false,
         "enable_filtering": true,
         "enable_sorting": true,

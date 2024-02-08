@@ -1,0 +1,71 @@
+{%- comment -%}
+  {
+    "name": "Line",
+    "author": "PusherCommerce"
+    "description": "Please DO NOT copy in any form. Any act of copying will be sued and held responsible with the law"
+  }
+{%- endcomment -%}
+<div id="psb-{{ section.id }}" class="psb-{{ section.id }} psb-section psb-utilities-line" style="display: none;">
+  {%- comment -%}A lot of themes default hide empty div => set display block {%- endcomment -%}
+  <div class="{{ section.settings.container_width }}">
+    <div
+      class="psb-utilities-line__draw"
+      style="
+        display: block;
+        height: {{ section.settings.line_height }}px;
+        background-color: {{ section.settings.line_color }};
+      "
+    ></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "⚡︎PSB: Line",
+  "tag": "section",
+  "class": "psb-section-wrapper",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container_width",
+      "options": [
+        {
+          "value": "psb-container",
+          "label": "Container"
+        },
+        {
+          "value": "psb-container-fluid",
+          "label": "Container Fluid"
+        },
+        {
+          "value": "psb-container-fullwidth",
+          "label": "Container Fullwidth"
+        }
+      ],
+      "default": "psb-container",
+      "label": "Container width"
+    },
+    {
+      "type": "range",
+      "id": "line_height",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Line height",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "Line color",
+      "default": "#ccc"
+    }
+  ],
+  "presets": [
+    {
+      "name": "⚡︎PSB: Line"
+    }
+  ]
+}
+{% endschema %}

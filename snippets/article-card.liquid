@@ -23,7 +23,7 @@
       assign ratio = media_aspect_ratio
     endif
   -%}
-  <div class="article-card-wrapper card-wrapper underline-links-hover">
+  <div class="article-card-wrapper card-wrapper">
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
     <div
       class="
@@ -49,33 +49,35 @@
               {% endif %}
             >
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-              <img
-                srcset="
-                  {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
-                  {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
-                  {{ article.image.src | image_url }} {{ article.image.src.width }}w
-                "
-                src="{{ article.image.src | image_url: width: 533 }}"
-                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                alt="{{ article.image.src.alt | escape }}"
-                class="motion-reduce"
-                {% unless lazy_load == false %}
-                  loading="lazy"
-                {% endunless %}
-                width="{{ article.image.width }}"
-                height="{{ article.image.height }}"
-              >
+              <a href="{{ article.url }}">
+                <img
+                  srcset="
+                    {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                    {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {{ article.image.src | image_url }} {{ article.image.src.width }}w
+                  "
+                  src="{{ article.image.src | image_url: width: 533 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                  alt="{{ article.image.src.alt | escape }}"
+                  class="motion-reduce"
+                  {% unless lazy_load == false %}
+                    loading="lazy"
+                  {% endunless %}
+                  width="{{ article.image.width }}"
+                  height="{{ article.image.height }}"
+                />
+              </a>
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
             </div>
           </div>
         {%- endif -%}
-        <div class="card__content">
+        <a href="{{ article.url }}" class="card__content">
           <div class="card__information">
-            <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
+            <h3 class="card_heading{% if show_excerpt %} h2{% endif %}">
               <a href="{{ article.url }}" class="full-unstyled-link">
                 {{ article.title | truncate: 50 | escape }}
               </a>
@@ -110,46 +112,69 @@
               <span class="badge color-{{ settings.color_schemes | first }}">{{ 'blogs.article.blog' | t }}</span>
             </div>
           {%- endif -%}
-        </div>
+        </a>
       </div>
-      <div class="card__content">
-        <div class="card__information">
-          <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
-            <a href="{{ article.url }}" class="full-unstyled-link">
-              {{ article.title | truncate: 50 | escape }}
-            </a>
-          </h3>
-          <div class="article-card__info caption-with-letter-spacing h5">
-            {%- if show_date -%}
-              <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
-            {%- endif -%}
-            {%- if show_author -%}
-              <span>{{ article.author }}</span>
-            {%- endif -%}
-          </div>
-          {%- if show_excerpt -%}
-            {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-              <p class="article-card__excerpt rte-width">
-                {%- if article.excerpt.size > 0 -%}
-                  {{ article.excerpt | strip_html | truncatewords: 30 }}
-                {%- else -%}
-                  {{ article.content | strip_html | truncatewords: 30 }}
-                {%- endif -%}
-              </p>
-            {%- endif -%}
-            <div class="article-card__footer">
-              {%- if article.comments_count > 0 and blog.comments_enabled? -%}
-                <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
-              {%- endif -%}
-            </div>
+      <div class="card__information">
+        <h3 class="card_heading{% if show_excerpt %} h2{% endif %}">
+          <a href="{{ article.url }}" class="full-unstyled-link">
+            {{ article.title | truncate: 50 | escape }}
+          </a>
+        </h3>
+        <div class="article-card__info caption-with-letter-spacing h5">
+          {%- if show_date -%}
+            <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
+          {%- endif -%}
+          {%- if show_author -%}
+            <span>{{ article.author }}</span>
           {%- endif -%}
         </div>
-        {%- if show_badge -%}
-          <div class="card__badge {{ settings.badge_position }}">
-            <span class="badge color-{{ settings.color_schemes | first }}">{{ 'blogs.article.blog' | t }}</span>
+        {%- if show_excerpt -%}
+          {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+            <p class="article-card__excerpt rte-width">
+              {%- if article.excerpt.size > 0 -%}
+                {{ article.excerpt | strip_html | truncatewords: 30 }}
+              {%- else -%}
+                {{ article.content | strip_html | truncatewords: 30 }}
+              {%- endif -%}
+            </p>
+          {%- endif -%}
+          <div class="article-card__footer">
+            {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+              <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+            {%- endif -%}
           </div>
         {%- endif -%}
       </div>
+      <div class="social-media-icon">
+        <a class="btn-read-more" href="{{ article.url }}">
+          <span class="btn-label">READ MORE</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
+            <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <div class="social-media">
+          {%- if settings.social_twitter_link != blank -%}
+            <a href="{{ settings.social_twitter_link }}" target="_blank" rel="noreferrer nofollow">
+              <i class="gsi gs-twitter-alt"></i>
+            </a>
+          {%- endif -%}
+          {%- if settings.social_facebook_link != blank -%}
+            <a href="{{ settings.social_facebook_link }}" target="_blank" rel="noreferrer nofollow">
+              <i class="gsi gs-facebook-alt"></i>
+            </a>
+          {%- endif -%}
+          {%- if settings.social_instagram_link != blank -%}
+            <a href="{{ settings.social_instagram_link }}" target="_blank" rel="noreferrer nofollow">
+              <i class="gsi gs-instagram"></i>
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+      {%- if show_badge -%}
+        <div class="card__badge {{ settings.badge_position }}">
+          <span class="badge color-{{ settings.color_schemes | first }}">{{ 'blogs.article.blog' | t }}</span>
+        </div>
+      {%- endif -%}
     </div>
   </div>
 {%- endif -%}

@@ -3,6 +3,8 @@
 }
 
 .image-with-text .grid__item {
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 

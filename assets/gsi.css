@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "GS-Starter-Icon";
+  src: url("./GS-Starter-Icon.eot?e2mlkw");
+  src: url("./GS-Starter-Icon.eot?e2mlkw#iefix") format("embedded-opentype"), url("./GS-Starter-Icon.ttf?e2mlkw") format("truetype"), url("./GS-Starter-Icon.woff?e2mlkw") format("woff"), url("./GS-Starter-Icon.svg?e2mlkw#GS-Starter-Icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+.gsi {
+  font-family: "GS-Starter-Icon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gs-facebook-alt:before {
+  content: "\ea90";
+}
+
+.gs-twitter-alt:before {
+  content: "\ea96";
+}
+
+.gs-instagram:before {
+  content: "\e984";
+}
+
+.gs-chevron-left::before {
+  content: "\e92f";
+}
+
+.gs-chevron-right::before {
+  content: "\e930";
+}
+
+.gs-chevron-down:before {
+  content: "\e92e";
+}
+
+.gs-chevron-up:before {
+  content: "\e931";
+}
+
+.gs-search:before {
+  content: "\e9cc";
+}
+
+.gs-shopping-cart:before {
+  content: "\e9d5";
+}
+
+.gs-log-in:before {
+  content: "\e990";
+}
+
+.gs-phone:before {
+  content: "\e9b2";
+}
+
+.page-title, .title {
+  color: var(--secondary-color);
+}
+
+.page-title:after,
+.title:after {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  margin: 0; /* This will reset the margins. */
+  left: 0; /* This will align the border to the left. */
+  width: 80px; /* Change this to whatever width you want. */
+  max-width: 100px;
+  padding-top: 0px; /* This creates some space between the element and the border. */
+  border-bottom: 2px solid var(--accent-color); /* This creates the border. Replace black with whatever color you want. */
+}
+
+/*
+ * Remove padding from product collection titles
+ */
+.collection__title {
+  padding: 0px;
+}
+
+#shopify-section-template--22019728539956__multicolumn_A9Ngk7 .multicolumn li:nth-child(2) .multicolumn-card .link.animate-arrow {
+  position: absolute;
+  background-color: var(--accent-color);
+  color: #fff;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  margin-top: 0;
+  padding-block: 6px;
+}

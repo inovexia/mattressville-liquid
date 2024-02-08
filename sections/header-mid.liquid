@@ -1,0 +1,61 @@
+{{ 'header-mid.css' | asset_url | stylesheet_tag }}
+<div class="header-mid" style="color: {{ section.settings.text_color }};">
+  <div class="page-width">
+    <div class="inner">
+      <div class="contact">
+        <a href="tel:{{ section.settings.phone_number }}">
+          <i class="gsi gs-phone"></i>
+          <span>{{ section.settings.phone_number }}</span>
+        </a>
+        {%- if section.settings.contact_us_page != blank -%}
+          <a href="{{ section.settings.contact_us_page.url }}">
+            <span>{{ section.settings.contact_us_page.title }}</span>
+          </a>
+        {%- else -%}
+          <a href="/contact-us/">
+            <span>Contact Us</span>
+          </a>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.offer_text != blank -%}
+      <div class="offer">
+        <p>{{ section.settings.offer_text }}</p>
+      </div>
+    {%- endif -%}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "t:sections.header-mid.name",
+  "class": "header-mid-section",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Number",
+      "default": "1905-212-7722"
+    },
+    {
+      "type": "page",
+      "id": "contact_us_page",
+      "label": "Contact Us Page"
+    },
+    {
+      "type": "text",
+      "id": "offer_text",
+      "label": "Offer Text",
+      "default": "FREE Shipping over $499"
+    }
+  ]
+}
+{% endschema %}

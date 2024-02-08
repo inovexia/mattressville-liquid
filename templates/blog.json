@@ -1,4 +1,5 @@
 {
+  "layout": "theme-sidebar",
   "sections": {
     "main": {
       "type": "main-blog",
@@ -7,7 +8,7 @@
         "show_image": true,
         "image_height": "medium",
         "show_date": true,
-        "show_author": false,
+        "show_author": true,
         "padding_top": 36,
         "padding_bottom": 36
       }

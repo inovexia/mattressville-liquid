@@ -1,11 +1,11 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Dawn",
-    "theme_version": "12.0.0",
-    "theme_author": "Shopify",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_name": "MattressVille",
+    "theme_version": "1.0.0",
+    "theme_author": "Team Innovexia",
+    "theme_documentation_url": "https:\/\/github.com\/inovexia\/mattressville-liquid",
+    "theme_support_url": "https:\/\/github.com\/inovexia\/mattressville-liquid\/issues"
   },
   {
     "name": "t:settings_schema.logo.name",
@@ -21,7 +21,7 @@
         "min": 50,
         "max": 300,
         "step": 10,
-        "default": 100,
+        "default": 260,
         "unit": "px",
         "label": "t:settings_schema.logo.settings.logo_width.label"
       },
@@ -36,6 +36,16 @@
   {
     "name": "t:settings_schema.colors.name",
     "settings": [
+      {
+        "type": "color",
+        "id": "theme_accent",
+        "label": "Theme Accent Color"
+      },
+      {
+        "type": "color",
+        "id": "theme_secondary",
+        "label": "Theme Secondary Color"
+      },
       {
         "type": "color_scheme_group",
         "id": "color_schemes",
@@ -111,7 +121,7 @@
       {
         "type": "font_picker",
         "id": "type_header_font",
-        "default": "assistant_n4",
+        "default": "roboto_n4",
         "label": "t:settings_schema.typography.settings.type_header_font.label",
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
@@ -132,7 +142,7 @@
       {
         "type": "font_picker",
         "id": "type_body_font",
-        "default": "assistant_n4",
+        "default": "roboto_n4",
         "label": "t:settings_schema.typography.settings.type_body_font.label",
         "info": "t:settings_schema.typography.settings.type_body_font.info"
       },
@@ -156,8 +166,8 @@
         "id": "page_width",
         "min": 1000,
         "max": 1600,
-        "step": 100,
-        "default": 1200,
+        "step": 10,
+        "default": 1360,
         "unit": "px",
         "label": "t:settings_schema.layout.settings.page_width.label"
       },
@@ -1409,7 +1419,7 @@
         "type": "checkbox",
         "id": "currency_code_enabled",
         "label": "t:settings_schema.currency_format.settings.currency_code_enabled.label",
-        "default": true
+        "default": false
       }
     ]
   },

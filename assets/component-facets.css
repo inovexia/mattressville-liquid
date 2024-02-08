@@ -224,7 +224,7 @@
 }
 
 .facets__summary:hover .facets__summary-label {
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 0.3rem;
 }
 
@@ -319,7 +319,7 @@
 /* Hover/focus state */
 .facets-layout-list .facets__label:hover .facet-checkbox__text,
 .facets-layout-list input:focus ~ .facet-checkbox__text {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .facets-layout-grid > * {
@@ -478,11 +478,11 @@ button.facets__button {
   margin-top: 1.5rem;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 span.active-facets__button-inner {
-  color: rgb(var(--color-foreground));
+  color: #ffffff;
   box-shadow: 0 0 0 0.1rem rgb(var(--color-foreground));
   border-radius: 2.6rem;
   font-size: 1rem;
@@ -748,8 +748,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__open:hover .mobile-facets__open-label {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  text-decoration: none;
 }
 
 .mobile-facets__open > * + * {
@@ -1092,6 +1091,7 @@ input.mobile-facets__checkbox {
   .facets-vertical-form {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 16px;
   }
 
   .product-count-vertical {

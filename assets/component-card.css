@@ -80,16 +80,31 @@
 }
 
 .card--card .card__inner .card__media {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-radius: 0;
 }
 
 .card--standard.card--text {
   background-color: transparent;
 }
 
+.card__content .card__information .card-information {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
 .card-information {
   text-align: var(--text-alignment);
+}
+
+.card__content .card__information .card-information .vendor-information {
+  flex: 1 0 155px;
+  max-width: 155px;
+}
+
+.card__content .card__information .card-information .vendor-information .vendor-img {
+  max-width: 150px;
+  height: auto;
 }
 
 .card__media,
@@ -113,6 +128,7 @@
 }
 
 .card__inner {
+  max-height: 170px;
   width: 100%;
 }
 
@@ -124,7 +140,6 @@
 .card__content {
   display: grid;
   grid-template-rows: minmax(0, 1fr) max-content minmax(0, 1fr);
-  padding: 1rem;
   width: 100%;
   flex-grow: 1;
 }
@@ -135,7 +150,9 @@
 
 .card__information {
   grid-row-start: 2;
-  padding: 1.3rem 1rem;
+  padding: 1.3rem 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:not(.ratio)>.card__content {
@@ -150,12 +167,13 @@
 
 @media screen and (min-width: 750px) {
   .card__information {
-    padding-bottom: 1.7rem;
+    padding-bottom: 10px;
     padding-top: 1.7rem;
   }
 }
 
 .card__badge {
+  display: none;
   align-self: flex-end;
   grid-row-start: 3;
   justify-self: flex-start;
@@ -185,16 +203,29 @@
   height: 100%;
 }
 
-.card__heading {
-  margin-top: 0;
+.card__heading,
+.card_heading {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: var(--secondary-color);
+  display: -webkit-box;
+  font-size: 16px;
+  height: 48px;
+  line-height: 20px;
   margin-bottom: 0;
+  margin-top: 0;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
 }
 
-.card__heading:last-child {
+.card__heading:last-child,
+.card_heading:last-child {
   margin-bottom: 0;
 }
 
 .card--horizontal .card__heading,
+.card--horizontal .card_heading,
 .card--horizontal .price__container .price-item,
 .card--horizontal__quick-add {
   font-size: calc(var(--font-heading-scale) * 1.2rem);
@@ -359,7 +390,7 @@
 }
 
 .card-information>.price {
-  color: rgb(var(--color-foreground));
+  color: var(--secondary-color);
 }
 
 .card--horizontal .card-information>.price {

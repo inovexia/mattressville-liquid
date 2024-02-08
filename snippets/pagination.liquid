@@ -21,10 +21,13 @@
           <li>
             <a
               href="{{ paginate.previous.url }}{{ anchor }}"
-              class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce"
+              class="btn-navigate prev"
               aria-label="{{ 'general.pagination.previous' | t }}"
             >
-              {% render 'icon-caret' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
+                <path d="M25 6.5L1 6.5M1 6.5L7 1M1 6.5L7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <span class="label">PREV</span>
             </a>
           </li>
         {%- endif -%}
@@ -34,7 +37,7 @@
             {%- if part.is_link -%}
               <a
                 href="{{ part.url }}{{ anchor }}"
-                class="pagination__item link"
+                class="btn-paginate"
                 aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
               >
                 {{- part.title -}}
@@ -44,14 +47,14 @@
                 <a
                   role="link"
                   aria-disabled="true"
-                  class="pagination__item pagination__item--current light"
+                  class="btn-paginate active"
                   aria-current="page"
                   aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
                 >
                   {{- part.title -}}
                 </a>
               {%- else -%}
-                <span class="pagination__item">{{ part.title }}</span>
+                <span class="btn-paginate">{{ part.title }}</span>
               {%- endif -%}
             {%- endif -%}
           </li>
@@ -61,10 +64,13 @@
           <li>
             <a
               href="{{ paginate.next.url }}{{ anchor }}"
-              class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce"
+              class="btn-navigate next"
               aria-label="{{ 'general.pagination.next' | t }}"
             >
-              {%- render 'icon-caret' -%}
+              <span class="label">NEXT</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
+                <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </a>
           </li>
         {%- endif -%}

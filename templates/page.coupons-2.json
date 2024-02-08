@@ -1,0 +1,83 @@
+{
+  "layout": "theme-sidebar",
+  "sections": {
+    "main": {
+      "type": "invx-main-page",
+      "settings": {
+      }
+    },
+    "multicolumn_pXDjMw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_yDC3bH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Save_150_Coupon.webp",
+            "title": "<strong>SAVE $150 COUPON<\/strong>",
+            "text": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE150 ($150 OFF all Orders from $1,500 and Up)<\/strong> at the checkout page. Mattressville reserves the right to void the coupons.<\/p><p><strong>Expires: January 28, 2024<\/strong><\/p><p><em>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void the coupons.<\/em><\/p>",
+            "link_label": "Start Saving",
+            "link": "shopify:\/\/collections\/all-mattresses"
+          }
+        },
+        "column_FkNtma": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Save_100_Coupon.webp",
+            "title": "<strong>SAVE $100 COUPON<\/strong>",
+            "text": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE100 ($100 OFF all Orders from $1,000 to $1,499) <\/strong>at the checkout page. Mattressville reserves the right to void the coupons.<\/p><p><strong>Expires: January 28, 2024<\/strong><\/p><p><em>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void <\/em><\/p>",
+            "link_label": "Start Saving",
+            "link": "shopify:\/\/collections\/all-mattresses"
+          }
+        },
+        "column_KzhYWf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Save_50_Coupon.webp",
+            "title": "<strong>SAVE $50 COUPON<\/strong>",
+            "text": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE50 ($50 OFF all Orders from $499 to $999) <\/strong>at the checkout page. Mattressville reserves the right to void the coupons.<\/p><p><strong>Expires: January 28, 2024<\/strong><\/p><p><em>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void <\/em><\/p>",
+            "link_label": "Start Saving",
+            "link": "shopify:\/\/collections\/all-mattresses"
+          }
+        }
+      },
+      "block_order": [
+        "column_yDC3bH",
+        "column_FkNtma",
+        "column_KzhYWf"
+      ],
+      "custom_css": [
+        ".multicolumn-card {margin-bottom: 20px;}",
+        ".multicolumn-card .link {border: 1px solid; border-radius: 25px; padding: 5px 20px; background-color: var(--accent-color); color: #fff;}",
+        ".multicolumn-card .link:hover {color: var(--accent-color); background-color: #fff;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "home_banner_WT86ma": {
+      "type": "home-banner",
+      "settings": {
+        "custom_text_title": "",
+        "custom_text_body": "<p><strong>*These coupons can be redeemed through this website or at our store (1911 Dundas St. East, Unit 18 – Mississauga, ON – L4X 1M1).<\/strong>Note: Coupons are not applicable for some CLEARANCE items. You can only use one coupon per purchase and please watch the expiry date as these coupons are limited.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_pXDjMw",
+    "home_banner_WT86ma"
+  ]
+}

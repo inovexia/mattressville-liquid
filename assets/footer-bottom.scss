@@ -1,0 +1,105 @@
+.footer-bottom {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: block;
+    background-color: var(--secondary-color);
+    color: var(--footer-bottom-text);
+    padding-block: 20px;
+
+    .bottom-inner {
+      display: flex;
+
+      .logo-area {
+        font-style: 1px;
+        margin-block: auto;
+
+        .footer-logo {
+          margin-right: 30px;
+        }
+      }
+    }
+
+    .end {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      margin-block: auto;
+
+      .footer-upper {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--footer-bottom-text);
+
+        .menu {
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0;
+          padding-bottom: 10px;
+
+          .menu-link {
+            background-color: transparent;
+            color: var(--footer-bottom-text);
+            font-size: 12px;
+            line-height: 24px;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .footer-below {
+        align-items: center;
+        column-gap: 8px;
+        display: flex;
+        padding-top: 15px;
+
+        .copyright {
+          color: var(--footer-bottom-text);
+          font-size: 12px;
+          line-height: 14px;
+        }
+
+        .right-side {
+          align-items: center;
+          column-gap: 8px;
+          display: flex;
+          flex-grow: 1;
+          justify-content: flex-end;
+          margin-block: auto;
+
+          .payment-mods{
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 7px;
+
+            img{
+              &:not(:last-child){
+                margin-right: 7px;
+              }
+            }
+          }
+
+          .social-media {
+            display: flex;
+
+            .media-link {
+              background-color: transparent;
+              color: var(--footer-bottom-text);
+              display: inline-flex;
+              text-decoration: none;
+
+              &:not(:last-child) {
+                margin-right: 7px;
+              }
+
+              .gsi {
+                font-size: 23px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

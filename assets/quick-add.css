@@ -6,7 +6,7 @@
 }
 
 .card--card .quick-add {
-  margin: 0 1.3rem 1rem;
+  margin: 0;
 }
 
 .quick-add-modal {
@@ -189,10 +189,6 @@ quick-add-modal .page-width {
   padding: 0;
 }
 
-quick-add-modal .product__title > h1 {
-  display: none;
-}
-
 quick-add-modal .product__title > a {
   display: block;
   text-decoration: none;
@@ -210,9 +206,19 @@ quick-add-modal .product-form__buttons {
 }
 
 .quick-add__submit {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   padding: 0.8rem;
   min-width: 100%;
   box-sizing: border-box;
+}
+
+.quick-add .quick-add__submit::after, .quick-add  .quick-add__submit::before {
+  box-shadow: none;
+}
+
+.quick-add .quick-add__submit:hover::after, .quick-add  .quick-add__submit:hover::before {
+  box-shadow: none;
 }
 
 quick-add-modal .product-media-container.constrain-height {

@@ -1,0 +1,41 @@
+{
+  "layout": "theme-sidebar",
+  "sections": {
+    "main": {
+      "type": "invx-main-page",
+      "settings": {
+      }
+    },
+    "blogs": {
+      "type": "invx-main-blog",
+      "custom_css": [
+        ".card {width: 100%; background: #ffffff; border: 1px solid #f1f3f4; box-sizing: border-box; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); border-radius: 15px; margin: 20px 20px 20px 0;}",
+        "img {border-radius: 15px;}",
+        ".card {padding: 20px;}",
+        ".card__inner {background-color: #fff;}"
+      ],
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "psb_utilities_space_8EWfnG": {
+      "type": "psb-utilities-space",
+      "settings": {
+        "space_mobile": 20,
+        "space_tablet": 40,
+        "space_desktop": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "blogs",
+    "psb_utilities_space_8EWfnG"
+  ]
+}

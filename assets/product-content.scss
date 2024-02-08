@@ -1,0 +1,106 @@
+.product-content {
+  .inner {
+    background-color: #ffffff;
+    border: 1px solid #f1f3f4;
+    box-shadow: 0 10px 30px #00000008;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    margin-left: 0;
+    margin-right: 0;
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+
+      .tab-item {
+        flex-basis: 0;
+        flex-grow: 1;
+        text-align: center;
+
+        &:not(:last-child) {
+          margin-right: 2px;
+        }
+
+        .tab {
+          background-color: #f1f3f4;
+          border-radius: 0;
+          color: var(--secondary-color);
+          font-size: 12px;
+          line-height: 14px;
+          padding: 13px;
+          display: block;
+          text-decoration: none;
+
+          &.active {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      .tab-pane {
+        display: none;
+
+        &.active {
+          display: block;
+        }
+
+        .tab-container {
+          padding: 20px;
+
+          @media (min-width: 992px) {
+            padding: 100px;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          figure {
+            margin-bottom: 16px;
+          }
+
+          a {
+            color: #098fc7;
+            text-decoration: none;
+            background-color: transparent;
+          }
+
+          figure{
+            margin: 0;
+          }
+
+          table {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            color: #212529;
+            margin-bottom: 16px;
+            width: 100%;
+
+            tbody {
+              tr {
+                &:nth-of-type(2n + 1) {
+                  background-color: rgba(0, 0, 0, 0.05);
+                }
+              }
+            }
+
+            th,
+            td {
+              border: 1px solid #dee2e6 !important;
+              padding: 8px;
+              vertical-align: top;
+            }
+          }
+        }
+      }
+    }
+  }
+}

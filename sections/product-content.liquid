@@ -1,0 +1,90 @@
+{{ 'product-content.css' | asset_url | stylesheet_tag }}
+<div class="page-width">
+  <div class="inner">
+    <div class="tabs" role="tablist">
+      <div class="tab-item">
+        <a href="#tabpane-description" role="tab" class="tab active">DESCRIPTION</a>
+      </div>
+      <div class="tab-item">
+        <a href="#tabpane-information" role="tab" class="tab">INFORMATION</a>
+      </div>
+      <div class="tab-item">
+        <a href="#tabpane-features" role="tab" class="tab">FEATURES</a>
+      </div>
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            <div class="tab-item">
+              <a href="#tabpane-reviews" role="tab" class="tab">REVIEWS</a>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+    <div class="tab-content">
+      <div id="tabpane-description" class="tab-pane active">
+        <div class="tab-container">
+          {%- if product.description != blank -%}
+            {{ product.description }}
+          {%- endif -%}
+        </div>
+      </div>
+      <div id="tabpane-information" class="tab-pane">
+        <div class="tab-container">
+          {{ product.metafields.meta_data.info_tab | replace: '!important', '' }}
+        </div>
+      </div>
+      <div id="tabpane-features" class="tab-pane">
+        <div class="tab-container">
+          {{ product.metafields.meta_data.features_tab }}
+        </div>
+      </div>
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            <div id="tabpane-reviews" class="tab-pane">
+              <div class="tab-container">
+                {% render block %}
+              </div>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+{% javascript %}
+document.addEventListener('DOMContentLoaded', function() {
+  var tabs = document.querySelectorAll('.product-content .tab');
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function(e) {
+      e.preventDefault();
+      var href = this.getAttribute('href');
+      var activeTab = document.querySelector('.product-content .tabs .tab.active');
+      var activeTabContent = document.querySelector('.product-content .tab-content .tab-pane.active');
+      if (activeTab) {
+        activeTab.classList.remove('active');
+      }
+      if (activeTabContent) {
+        activeTabContent.classList.remove('active');
+      }
+      this.classList.add('active');
+      document.querySelector(href).classList.add('active');
+    });
+  });
+});
+{% endjavascript %}
+{% schema %}
+{
+  "name": "Product Content",
+  "class": "product-content",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": []
+}
+{% endschema %}
