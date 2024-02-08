@@ -41,6 +41,7 @@
 
       .start {
         flex-grow: 1;
+        display: flex;
 
         .main-menu-toggle {
           background-color: transparent;
@@ -71,7 +72,8 @@
       }
 
       .end {
-        flex-shrink: 1px;
+        flex-shrink: 1;
+        display: flex;
 
         a {
           align-items: center;
@@ -264,8 +266,12 @@
 
           &.mega-menu {
             padding-block: 8px 20px;
-            padding-inline: 50px;
+            padding-inline: 20px;
             width: 100%;
+
+            @media (min-width:990px) {
+              padding-inline: 50px;
+            }
 
             .mega-menu-area {
               display: flex;
@@ -281,7 +287,8 @@
                   color: #535353;
                   font-family: 'Roboto', sans-serif;
                   font-size: 20px;
-                  font-weight: 500;
+                  font-weight: 700;
+                  letter-spacing: 0;
                   line-height: 23px;
                   margin: 10px 0;
                 }
@@ -292,6 +299,7 @@
                   color: #212529;
                   display: block;
                   font-weight: 400;
+                  letter-spacing: 0;
                   padding: 0;
                   text-align: inherit;
                   white-space: nowrap;
