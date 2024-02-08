@@ -458,6 +458,7 @@
         "review_NHRWjY": {
           "type": "Review",
           "settings": {
+            "review_image": "shopify:\/\/shop_images\/customer-support.webp",
             "review_stars": "5",
             "review_text": "<p>The sales person Andrew was excellent. He knew his products well and helped us choosing what we needed. The delivery service was smooth as well. Was overall a great experience.<\/p>",
             "review_name": "Best Customer Support",
@@ -554,40 +555,36 @@
           "type": "slide",
           "settings": {
             "review_stars": "5",
-            "review_text": "<p>The sales person Andrew was excellent. He knew his products well and helped us choosing what we needed. The delivery service was smooth as well. Was overall a great experience.<\/p>",
-            "review_name": "Best Customer Support",
-            "position": "June Graham",
-            "url_product": ""
+            "review_name": "Mason Peter",
+            "position": "@ceo_mason",
+            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>"
           }
         },
         "slide_yMVEb4": {
           "type": "slide",
           "settings": {
             "review_stars": "5",
-            "review_text": "<p>I received excellent service from Alex both pre sale and after sale. My purchase was done online and Alex follow up with a call. The delivery guys were also very professional and courteous. Highly recommend!!<br\/>                  <\/p>",
-            "review_name": "Easy Online Shopping Experience",
-            "position": "Vincent S",
-            "url_product": ""
+            "review_name": "Mason Peter",
+            "position": "@ceo_mason",
+            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>"
           }
         },
         "slide_qnbyHk": {
           "type": "slide",
           "settings": {
             "review_stars": "5",
-            "review_text": "<p>My husband and I decided to check this place based on the positive reviews. I am glad we did... The service was exceptional. The salesperson was very honest and knowledgeable. No additional charge for delivery which is another plus.... Best mattress store in town.\"<\/p>",
-            "review_name": "Free delivery on orders above $499",
-            "position": "Five Star Moulding Company",
-            "url_product": ""
+            "review_name": "Mason Peter",
+            "position": "@ceo_mason",
+            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>"
           }
         },
         "slide_x7PRLD": {
           "type": "slide",
           "settings": {
             "review_stars": "5",
-            "review_text": "<p>Great place to buy brand name mattresses. You can choose from high end Stearns and Foster, Tempurpedic, Beautyrest Black, to mid range Sealy, Simmons and some good local brands. They deliver to all major cities.... Definitely recommend. Great service and prices.\"<\/p>",
-            "review_name": "Biggest Brand Names",
-            "position": "Valeriya Budakovska",
-            "url_product": ""
+            "review_name": "Mason Peter",
+            "position": "@ceo_mason",
+            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.<\/p>"
           }
         }
       },
@@ -599,7 +596,7 @@
       ],
       "settings": {
         "heading": "What Our Customers Are Saying",
-        "heading_color": "#535353",
+        "heading_color": "#000000",
         "section_background_image": "shopify:\/\/shop_images\/girl.webp"
       }
     }
