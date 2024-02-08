@@ -18,9 +18,18 @@
         "padding_top": 36,
         "padding_bottom": 20
       }
+    },
+    "psb_utilities_space_UA7Xac": {
+      "type": "psb-utilities-space",
+      "settings": {
+        "space_mobile": 20,
+        "space_tablet": 20,
+        "space_desktop": 40
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "psb_utilities_space_UA7Xac"
   ]
 }
