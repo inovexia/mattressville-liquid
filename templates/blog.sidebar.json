@@ -3,6 +3,10 @@
   "sections": {
     "page_wx8Dan": {
       "type": "page",
+      "custom_css": [
+        "h2 {margin-bottom: 20px;}",
+        "img {border-radius: 15px;}"
+      ],
       "settings": {
         "page": "blogs",
         "heading_size": "h1",
