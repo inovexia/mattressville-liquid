@@ -14,6 +14,10 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .page-width {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 
   .blog-lists {
     align-items: center;
@@ -23,14 +27,23 @@
     border-radius: 15px;
     justify-content: space-evenly;
     padding: 5px 5px 5px 0px;
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin-top: 10px;
   }
-  .blog-lists ul{
+  .blog-lists ul {
     list-style-type: none;
   }
   .blog-lists ul li {
     display:inline;
+  }
+
+  .blog-lists a {
+    color: #000;
+    text-decoration: none;
+  }
+  .blog-lists a:visited {
+    color: #000;
+    text-decoration: none;
   }
 {%- endstyle -%}
 
@@ -66,9 +79,9 @@
   {%- paginate featuredArticles.articles by 6 -%}
     <div class="main-blog page-width page-width-no-padding section-{{ section.id }}-padding">
       {% if blog.title != blank %}
-      <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-        {{ blog.title | escape }}
-      </h1>
+        <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+          {{ blog.title | escape }}
+        </h1>
       {% endif %}
 
       <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
