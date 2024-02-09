@@ -1,6 +1,16 @@
 {
   "layout": "theme-sidebar",
   "sections": {
+    "page_wx8Dan": {
+      "type": "page",
+      "settings": {
+        "page": "blogs",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "invx-main-blog",
       "custom_css": [
@@ -29,6 +39,7 @@
     }
   },
   "order": [
+    "page_wx8Dan",
     "main",
     "psb_utilities_space_UA7Xac"
   ]
