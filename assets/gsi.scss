@@ -32,6 +32,10 @@
   content: '\e984';
 }
 
+.gs-chevron-left::before {
+  content: "\e92f";
+}
+
 .gs-chevron-right::before {
   content: '\e930';
 }

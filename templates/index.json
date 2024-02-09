@@ -443,106 +443,64 @@
         "padding_bottom": 15
       }
     },
-    "psb_utilities_space_iXPQnK": {
-      "type": "psb-utilities-space",
-      "settings": {
-        "space_mobile": 30,
-        "space_tablet": 40,
-        "space_desktop": 50
-      }
-    },
-    "psb_reviews_reviews_01_PRaRHW": {
-      "type": "psb-reviews-reviews-01",
+    "invx_section_testimonial_CxycbC": {
+      "type": "invx-section-testimonial",
       "blocks": {
-        "review_NHRWjY": {
-          "type": "Review",
+        "slide_jzeLpF": {
+          "type": "slide",
           "settings": {
             "review_image": "shopify:\/\/shop_images\/customer-support.webp",
             "review_stars": "5",
-            "review_text": "<p>The sales person Andrew was excellent. He knew his products well and helped us choosing what we needed. The delivery service was smooth as well. Was overall a great experience.<\/p>",
-            "review_name": "Best Customer Support",
-            "position": "June Graham",
-            "url_product": ""
+            "review_title": "Best Customer Support",
+            "review_subtitle": "",
+            "reviewer_name": "June Graham",
+            "review_text": "<p>The sales person Andrew was excellent. He knew his products well and helped us choosing what we needed. The delivery service was smooth as well. Was overall a great experience.<\/p>"
           }
         },
-        "review_7ht3tC": {
-          "type": "Review",
+        "slide_yMVEb4": {
+          "type": "slide",
           "settings": {
             "review_image": "shopify:\/\/shop_images\/shopping-experience.webp",
             "review_stars": "5",
-            "review_text": "<p>I received excellent service from Alex both pre sale and after sale. My purchase was done online and Alex follow up with a call. The delivery guys were also very professional and courteous. Highly recommend!!<br\/>                  <\/p>",
-            "review_name": "Easy Online Shopping Experience",
-            "position": "Vincent S",
-            "url_product": ""
+            "review_title": "Easy Online Shopping Experience",
+            "review_subtitle": "",
+            "reviewer_name": "Vincent S",
+            "review_text": "<p>I received excellent service from Alex both pre sale and after sale. My purchase was done online and Alex follow up with a call. The delivery guys were also very professional and courteous. Highly recommend!!<\/p>"
           }
         },
-        "review_bzEikC": {
-          "type": "Review",
+        "slide_qnbyHk": {
+          "type": "slide",
           "settings": {
             "review_image": "shopify:\/\/shop_images\/free-delivery.webp",
             "review_stars": "5",
-            "review_text": "<p>My husband and I decided to check this place based on the positive reviews. I am glad we did... The service was exceptional. The salesperson was very honest and knowledgeable. No additional charge for delivery which is another plus.... Best mattress store in town.\"<\/p>",
-            "review_name": "Free delivery on orders above $499",
-            "position": "Five Star Moulding Company",
-            "url_product": ""
+            "review_title": "Free delivery",
+            "review_subtitle": "On orders above $499",
+            "reviewer_name": "Five Star Moulding Company",
+            "review_text": "<p>My husband and I decided to check this place based on the positive reviews. I am glad we did... The service was exceptional. The salesperson was very honest and knowledgeable. No additional charge for delivery which is another plus.... Best mattress store in town.\"<\/p>"
           }
         },
-        "review_43b3XP": {
-          "type": "Review",
+        "slide_x7PRLD": {
+          "type": "slide",
           "settings": {
             "review_image": "shopify:\/\/shop_images\/shield.webp",
             "review_stars": "5",
-            "review_text": "<p>Great place to buy brand name mattresses. You can choose from high end Stearns and Foster, Tempurpedic, Beautyrest Black, to mid range Sealy, Simmons and some good local brands. They deliver to all major cities.... Definitely recommend. Great service and prices.\"<\/p>",
-            "review_name": "Biggest Brand Names",
-            "position": "Valeriya Budakovska",
-            "url_product": ""
+            "review_title": "Biggest Brand Names",
+            "review_subtitle": "",
+            "reviewer_name": "Valeriya Budakovska",
+            "review_text": "<p>Great place to buy brand name mattresses. You can choose from high end Stearns and Foster, Tempurpedic, Beautyrest Black, to mid range Sealy, Simmons and some good local brands. They deliver to all major cities.... Definitely recommend. Great service and prices.\"<\/p>"
           }
         }
       },
       "block_order": [
-        "review_NHRWjY",
-        "review_7ht3tC",
-        "review_bzEikC",
-        "review_43b3XP"
-      ],
-      "custom_css": [
-        ".psb-section h2 {font-family: var(--font-heading-family); font-style: var(--font-heading-style); font-weight: var(--font-heading-weight); letter-spacing: calc(var(--font-heading-scale) * 0.06rem); color: rgb(var(--color-foreground)); line-height: calc(1 + 0.3 \/ max (1, var(--font-heading-scale))); word-break: break-word; font-size: calc(var(--font-heading-scale) * 4rem); text-align: left;}"
+        "slide_jzeLpF",
+        "slide_yMVEb4",
+        "slide_qnbyHk",
+        "slide_x7PRLD"
       ],
       "settings": {
-        "container_width": "psb-container",
-        "heading": "<h2>What Our Customers are Saying<\/h2>",
-        "heading_tag": "div",
-        "subheading": "",
+        "heading": "What Our Customers Are Saying",
         "heading_color": "#000000",
-        "subheading_color": "#585454",
-        "enable_star": true,
-        "border_radius": 12,
-        "slider_per_view": 2.5,
-        "enable_loop": true,
-        "enable_autoplay": true,
-        "enable_pagination": false,
-        "enable_navigation": false,
-        "pagination_type": "bullets",
-        "background_color": "#e9f3f3",
-        "swiper_control_color": "#d7355c",
-        "review-background-color": "#ffffff",
-        "stars-color": "#ffa500",
-        "text_color": "#000000",
-        "border_color": "rgba(0,0,0,0)",
-        "text_align": "center",
-        "section_padding_top": 50,
-        "section_padding_bottom": 50,
-        "text_align_mobile": "center",
-        "section_padding_top_mobile": 35,
-        "section_padding_bottom_mobile": 35
-      }
-    },
-    "psb_utilities_space_jPGPLt": {
-      "type": "psb-utilities-space",
-      "settings": {
-        "space_mobile": 30,
-        "space_tablet": 40,
-        "space_desktop": 50
+        "section_background_image": "shopify:\/\/shop_images\/girl.webp"
       }
     }
   },
@@ -554,8 +512,6 @@
     "psb_gallery_gallery_01_pQmz4F",
     "featured_collection_BY7Ca9",
     "newsletter_De6KAC",
-    "psb_utilities_space_iXPQnK",
-    "psb_reviews_reviews_01_PRaRHW",
-    "psb_utilities_space_jPGPLt"
+    "invx_section_testimonial_CxycbC"
   ]
 }
