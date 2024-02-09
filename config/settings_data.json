@@ -464,7 +464,7 @@
       "details[id*=\"filter.p.tag\"] {display: none;}",
       ".content > p > img {border-radius: 25px;}",
       ".collection-hero__image-page-width img {border-radius: 25px; box-shadow: 0 0 10px -8px var(--secondary-color);}",
-      "@media screen and (min-width: 750px) {.facets__form-vertical {width: 32rem; }}"
+      "@media screen and (min-width: 750px) {.facets__form-vertical {width: 30rem; }}"
     ]
   }
 }
