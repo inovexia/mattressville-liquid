@@ -147,7 +147,7 @@
 
     <div class="invx-content">
       <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
-        <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        <div class="template-search__header  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
           <h1 class="search__title">
             {%- if search.performed -%}
               {{- 'templates.search.title' | t -}}
@@ -243,7 +243,7 @@
             and section.settings.filter_type == 'vertical'
             and search.filters != empty
           -%}
-            <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
+            <facet-filters-form class="facets facets-vertical-sort   small-hide no-js-hidden">
               <form class="facets-vertical-form" id="FacetSortForm">
                 <div class="facet-filters sorting caption">
                   <div class="facet-filters__field">
@@ -304,13 +304,13 @@
           {%- endif -%}
           <div
             {% if section.settings.filter_type == 'vertical' %}
-              class="facets-vertical page-width"
+              class="facets-vertical  "
             {% endif %}
           >
             <div class="product-grid-container" id="ProductGridContainer">
               {%- if search.results.size == 0 and search.filters != empty -%}
                 <div
-                  class="template-search__results collection collection--empty{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+                  class="template-search__results collection collection--empty{% if section.settings.filter_type != 'vertical' %}  {% endif %}"
                   id="product-grid"
                   data-id="{{ section.id }}"
                 >
@@ -328,7 +328,7 @@
                 </div>
               {%- else -%}
                 <div
-                  class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+                  class="template-search__results collection{% if section.settings.filter_type != 'vertical' %}  {% endif %}"
                   id="product-grid"
                   data-id="{{ section.id }}"
                 >
