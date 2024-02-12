@@ -1,0 +1,226 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+{{ 'coupons-tab.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width page-width-no-padding">
+  <div class="section-{{ section.id }}-padding">
+    <div class="header-box">
+      <button type="button" class="link active">All Coupons</button>
+      <button type="button" class="link">Sealy</button>
+      <button type="button" class="link">Serta</button>
+      <button type="button" class="link">Stearns &amp; Foster</button>
+      <button type="button" class="link">Beautyrest</button>
+      <button type="button" class="link">Tempur-Pedic</button>
+      <button type="button" class="link">Delivery</button>
+      <button type="button" class="link">Accessories</button>
+      <button type="button" class="link">Kingsdown</button>
+      <button type="button" class="link">Natura</button>
+    </div>
+    {%- for block in section.blocks -%}
+      <div class="card-wrapper {{ block.settings.type }}">
+        <div class="card-container">
+          <div class="cash-coupon">
+            {%- if block.settings.image != blank -%}
+              <img
+                src="{{ block.settings.image | img_url: 'master' }}"
+                alt="{{ block.settings.title }} {{ block.settings.type }}"
+                class="cash-coupon-img"
+                height="448"
+                width="1289"
+                loading="lazy"
+              />
+            {%- endif -%}
+          </div>
+          <div class="card-content">
+            <h2 class="card-heading">{{ block.settings.title }}</h2>
+            <div class="description">{{ block.settings.description }}</div>
+            <p class="card-para">
+              <strong>Expires: {{ block.settings.expiry }}</strong>
+            </p>
+            <div class="actions">
+              <a
+                {% if block.settings.button_link == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ block.settings.button_link }}"
+                {% endif %}
+                class="btn"
+              >
+                <span class="btn-text">{{ block.settings.button_label }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
+                  <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              {% if section.settings.enable_copy_code %}
+                <button type="button" title='Copy "{{ block.settings.code }}"' class="copy-code" value="{{ block.settings.code }}">{% render 'icon-clipboard' %}</button>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {{ section.settings.tnc }}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+{% javascript %}
+  document.addEventListener("DOMContentLoaded", function () {
+      console.log("hello");
+  });
+{% endjavascript %}
+{% schema %}
+{
+  "name": "Coupons Tab",
+  "class": "coupons",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "tnc",
+      "default": "<p><em>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void the coupons.<\/em><\/p>",
+      "label": "Coupon Terms"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_copy_code",
+      "default": true,
+      "label": "Enable Copy Code"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "coupon",
+      "name": "Coupon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Coupon Image"
+        },
+        {
+          "type": "select",
+          "id": "type",
+          "label": "Type",
+          "options": [
+            {
+              "value": "other",
+              "label": "Other"
+            },
+            {
+              "value": "sealy",
+              "label": "Sealy"
+            },
+            {
+              "value": "serta",
+              "label": "Serta"
+            },
+            {
+              "value": "stearns_and_foster",
+              "label": "Stearns & Foster"
+            },
+            {
+              "value": "beautyrest",
+              "label": "Beautyrest"
+            },
+            {
+              "value": "tempur_pedic",
+              "label": "Tempur-Pedic"
+            },
+            {
+              "value": "DELIVERY",
+              "label": "DELIVERY"
+            },
+            {
+              "value": "ACCESSORIES",
+              "label": "ACCESSORIES"
+            },
+            {
+              "value": "KINGSDOWN",
+              "label": "KINGSDOWN"
+            },
+            {
+              "value": "NATURA",
+              "label": "NATURA"
+            }
+          ],
+          "default": "other"
+        },
+        {
+          "type": "text",
+          "id": "code",
+          "label": "Coupon Code"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Coupon Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Coupon Description"
+        },
+        {
+          "type": "text",
+          "id": "expiry",
+          "info": "Example: February 12, 2024",
+          "label": "Expiry date"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coupon",
+      "blocks": [
+      ]
+    }
+  ]
+}
+{% endschema %}
