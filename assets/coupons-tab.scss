@@ -46,6 +46,10 @@
     display: flex;
     flex-direction: column;
 
+    &.hide {
+      display: none;
+    }
+
     > {
       .card-container {
         background: #ffffff;
@@ -182,6 +186,8 @@
         font-size: 12px;
         line-height: 20px;
         color: var(--secondary-color);
+        margin-top: 0;
+        margin-bottom: 16px;
       }
     }
   }

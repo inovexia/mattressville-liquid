@@ -43,6 +43,9 @@
   display: flex;
   flex-direction: column;
 }
+.coupons .card-wrapper.hide {
+  display: none;
+}
 .coupons .card-wrapper > .card-container {
   background: #ffffff;
   border: 1px solid #f1f3f4;
@@ -175,4 +178,6 @@
   font-size: 12px;
   line-height: 20px;
   color: var(--secondary-color);
+  margin-top: 0;
+  margin-bottom: 16px;
 }

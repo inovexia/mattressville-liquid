@@ -16,16 +16,16 @@
 <div class="page-width page-width-no-padding">
   <div class="section-{{ section.id }}-padding">
     <div class="header-box">
-      <button type="button" class="link active">All Coupons</button>
-      <button type="button" class="link">Sealy</button>
-      <button type="button" class="link">Serta</button>
-      <button type="button" class="link">Stearns &amp; Foster</button>
-      <button type="button" class="link">Beautyrest</button>
-      <button type="button" class="link">Tempur-Pedic</button>
-      <button type="button" class="link">Delivery</button>
-      <button type="button" class="link">Accessories</button>
-      <button type="button" class="link">Kingsdown</button>
-      <button type="button" class="link">Natura</button>
+      <button type="button" class="link active" value="all">All Coupons</button>
+      <button type="button" class="link" value="sealy">sealy</button>
+      <button type="button" class="link" value="serta">serta</button>
+      <button type="button" class="link" value="stearns_and_foster">stearns &amp; foster</button>
+      <button type="button" class="link" value="beautyrest">beautyrest</button>
+      <button type="button" class="link" value="tempur_pedic">tempur-pedic</button>
+      <button type="button" class="link" value="delivery">delivery</button>
+      <button type="button" class="link" value="accessories">accessories</button>
+      <button type="button" class="link" value="kingsdown">kingsdown</button>
+      <button type="button" class="link" value="natura">natura</button>
     </div>
     {%- for block in section.blocks -%}
       <div class="card-wrapper {{ block.settings.type }}">
@@ -75,7 +75,28 @@
 </div>
 {% javascript %}
   document.addEventListener("DOMContentLoaded", function () {
-      console.log("hello");
+    var headerBoxLinks = document.querySelectorAll(".header-box .link");
+    var copyCodeButtons = document.querySelectorAll(".card-wrapper .copy-code");
+    headerBoxLinks.forEach(function(link) {
+      link.addEventListener("click", function(e) {
+      e.preventDefault();
+      var type = this.value;
+      document.querySelector(".header-box .active").classList.remove("active");
+      this.classList.add("active");
+      if(type === "all") {
+        document.querySelectorAll(".card-wrapper").forEach(function(item){
+          item.classList.remove("hide");
+        });
+      } else {
+        document.querySelectorAll(".card-wrapper").forEach(function(item){
+          item.classList.add("hide");
+        });
+        document.querySelectorAll(`.${type}`).forEach(function(item){
+          item.classList.remove("hide");
+        });
+      }
+    });
+  });
   });
 {% endjavascript %}
 {% schema %}
@@ -163,20 +184,20 @@
               "label": "Tempur-Pedic"
             },
             {
-              "value": "DELIVERY",
-              "label": "DELIVERY"
+              "value": "delivery",
+              "label": "Delivery"
             },
             {
-              "value": "ACCESSORIES",
-              "label": "ACCESSORIES"
+              "value": "accessories",
+              "label": "Accessories"
             },
             {
-              "value": "KINGSDOWN",
-              "label": "KINGSDOWN"
+              "value": "kingsdown",
+              "label": "Kingsdown"
             },
             {
-              "value": "NATURA",
-              "label": "NATURA"
+              "value": "natura",
+              "label": "Natura"
             }
           ],
           "default": "other"
