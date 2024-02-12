@@ -3,7 +3,7 @@
   box-sizing: border-box;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.0509803922);
   border-radius: 15px;
-  padding: 20px 10px;
+  padding: 14px 10px;
   margin-bottom: 30px;
 }
 @media (min-width: 1200px) {
@@ -18,8 +18,7 @@
   display: inline-block;
   font-size: 12px;
   line-height: 14px;
-  padding: 0 10px;
-  padding-right: 10px;
+  padding: 3px 10px;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -37,14 +36,8 @@
   }
 }
 @media (min-width: 768px) {
-  .coupons .header-box .link:not(:last-child)::after {
-    content: "";
-    border-right: 1px solid var(--secondary-color);
-    position: absolute;
-    height: 20px;
-    right: -15px;
-    top: 50%;
-    transform: translateY(-50%);
+  .coupons .header-box .link:not(:first-child) {
+    border-left: 1px solid var(--secondary-color);
   }
 }
 .coupons .card-wrapper {
