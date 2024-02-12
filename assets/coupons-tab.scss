@@ -36,7 +36,7 @@
         overflow: visible;
       }
 
-      &::after {
+      &:not(:last-child)::after {
         @media (min-width: 768px) {
           content: '';
           border-right: 1px solid var(--secondary-color);
