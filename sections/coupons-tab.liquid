@@ -79,24 +79,40 @@
     var copyCodeButtons = document.querySelectorAll(".card-wrapper .copy-code");
     headerBoxLinks.forEach(function(link) {
       link.addEventListener("click", function(e) {
-      e.preventDefault();
-      var type = this.value;
-      document.querySelector(".header-box .active").classList.remove("active");
-      this.classList.add("active");
-      if(type === "all") {
-        document.querySelectorAll(".card-wrapper").forEach(function(item){
-          item.classList.remove("hide");
-        });
-      } else {
-        document.querySelectorAll(".card-wrapper").forEach(function(item){
-          item.classList.add("hide");
-        });
-        document.querySelectorAll(`.${type}`).forEach(function(item){
-          item.classList.remove("hide");
-        });
-      }
+        e.preventDefault();
+        var type = this.value;
+        var activeLink = document.querySelector(".header-box .active");
+        if(activeLink){
+          activeLink.classList.remove("active");
+        }
+        this.classList.add("active");
+        if(type === "all") {
+          document.querySelectorAll(".card-wrapper").forEach(function(item){
+            item.classList.remove("hide");
+          });
+        } else {
+          document.querySelectorAll(".card-wrapper").forEach(function(item){
+            item.classList.add("hide");
+          });
+          document.querySelectorAll(`.${type}`).forEach(function(item){
+            item.classList.remove("hide");
+          });
+        }
+      });
     });
-  });
+    copyCodeButtons.forEach(function(copy) {
+      copy.addEventListener("click", function(e) {
+        e.preventDefault();
+        var code = this.value;
+        navigator.clipboard.writeText(code)
+        .then(function() {
+          alert("Coupon Code copied successfully:");
+        })
+        .catch(function(error) {
+          console.error("Unable to copy code:", error);
+        });
+      });
+    });
   });
 {% endjavascript %}
 {% schema %}
