@@ -1,0 +1,286 @@
+{%- comment -%}
+  {
+    "name": "Tab 01",
+    "author": "PusherCommerce"
+    "description": "Please DO NOT copy in any form. Any act of copying will be sued and held responsible with the law"
+  }
+{%- endcomment -%}
+
+{% capture minify %}
+  <style>
+    #psb-{{ section.id }} {
+      background-color: {{ section.settings.background_color }};
+      color: {{ section.settings.text_color }};
+      padding-top: {{section.settings.section_padding_top_mobile}}px;
+      padding-bottom: {{section.settings.section_padding_bottom_mobile}}px;
+    }
+    #psb-{{ section.id }} [role=tablist] {
+      border-bottom: 1px solid {{ section.settings.border_color }};
+    }
+
+    #psb-{{ section.id }} [role=tab] {
+      {% if section.settings.inherit_fonts == false %}
+      font-size: 18px;
+      {% endif %}
+
+      {% if section.settings.use_square_border %}
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      {% endif %}
+
+      color: {{ section.settings.text_color }};
+      border-top-color: {{ section.settings.border_color }};
+    }
+
+    #psb-{{ section.id }} [role="tab"][aria-selected="true"] {
+      background-color: {{ section.settings.selected_tab_color }};
+    }
+
+    #psb-{{ section.id }} [role="tabpanel"] {
+      {% if section.settings.inherit_fonts == false %}
+      font-size: 14px;
+      {% endif %}
+    }
+
+    @media (min-width: 768px) {
+      #psb-{{ section.id }} {
+        padding-top: {{ section.settings.section_padding_top }}px;
+        padding-bottom: {{ section.settings.section_padding_bottom }}px;
+      }
+
+      #psb-{{ section.id }} [role=tab]  {
+        {% if section.settings.inherit_fonts == false %}
+        font-size: 20px;
+        {% endif %}
+        border-top-color: transparent;
+      }
+
+      #psb-{{ section.id }} [role=tab][aria-selected=true] {
+        background-color: transparent;
+        border: 1px solid {{ section.settings.border_color }};
+        {%- if section.settings.background_color == "transparent" -%}
+          border-bottom-color: #fff;
+        {%- else -%}
+          border-bottom-color: {{ section.settings.background_color }};
+        {%- endif -%}
+      }
+
+      #psb-{{ section.id }} [role="tabpanel"] {
+        {% if section.settings.inherit_fonts == false %}
+        font-size: 16px;
+        {% endif %}
+      }
+    }
+  </style>
+{% endcapture %}
+{{ minify | strip_newlines }}
+
+<div id="psb-{{ section.id }}" class="psb-{{ section.id }} psb-section psb-tab-tab-01" style="display: none;">
+  <div class="{{ section.settings.container_width }}">
+    <!-- Must have "id" attr -->
+    <psb-tab id="psb-tab-{{ section.id }}">
+      <ul data-tabs>
+        {% for block in section.blocks %}
+          <li {{ block.shopify_attributes }}>
+            <a
+              href="#tab{{ block.id }}"
+              {% if forloop.index == 1 %}
+                data-tabby-default
+              {% endif %}
+            >
+              {{ block.settings.tab_heading }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      {% for block in section.blocks %}
+        <div id="tab{{ block.id }}" {{ block.shopify_attributes }}>
+          {% if block.settings.tab_page != blank %}
+            <div class="tab_content psb-rte">{{ block.settings.tab_page.content }}</div>
+          {% else %}
+            <div class="tab_content">{{ block.settings.tab_content }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </psb-tab>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "⚡︎PSB: Tab 01",
+  "tag": "section",
+  "class": "psb-section-wrapper",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container_width",
+      "options": [
+        {
+          "value": "psb-container",
+          "label": "Container"
+        },
+        {
+          "value": "psb-container-fluid",
+          "label": "Container Fluid"
+        },
+        {
+          "value": "psb-container-fullwidth",
+          "label": "Container Fullwidth"
+        }
+      ],
+      "default": "psb-container",
+      "label": "Container width"
+    },
+    {
+      "type": "checkbox",
+      "id": "inherit_fonts",
+      "default": false,
+      "label": "Inherit font sizes from theme"
+    },
+    {
+      "type": "header",
+      "content": "⚡︎ Style"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_square_border",
+      "label": "Use square border",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#aaa"
+    },
+    {
+      "type": "color",
+      "id": "selected_tab_color",
+      "label": "Selected color (only mobile)",
+      "default": "#eee"
+    },
+    {
+      "type": "header",
+      "content": "Desktop"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding-top",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding-bottom",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_mobile",
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding-top",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_mobile",
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding-bottom",
+      "default": 100
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_heading",
+          "label": "Heading",
+          "default": "Premium sections"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_content",
+          "label": "Raw content",
+          "default": "<p>Go to the app and choose for yourself the ones that best suit the store</p>"
+        },
+        {
+          "type": "page",
+          "id": "tab_page",
+          "label": "Raw content from page"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "⚡︎PSB: Tab 01",
+      "blocks": [
+        {
+          "type": "content",
+          "settings": {
+            "tab_heading": "Description",
+            "tab_content": "<p>Imagine your favourite gooey flapjack, but this time the oats are rippled through with sweet honeycomb and it's topped with a chocolatey drizzle. This dreamy treat also has 40% less sugar* than the average cereal bar, this flapjack is a dream come true.</p>"
+          }
+        },
+        {
+          "type": "content",
+          "settings": {
+            "tab_heading": "Ingredients",
+            "tab_content": "<p>All of our food is packed in the same place, so cross-contamination between any of our ingredients is possible. Our snacks may contain traces of gluten, eggs, peanuts, soya, milk, nuts, mustard and sesame.</p>"
+          }
+        },
+        {
+          "type": "content",
+          "settings": {
+            "tab_heading": "Nutrition",
+            "tab_content": "<p>This delicious whole oat flapjack is a source of fibre and manganese to support energy-yielding metabolism..</p>"
+          }
+        },
+        {
+          "type": "content",
+          "settings": {
+            "tab_heading": "Shipping",
+            "tab_content": "<p>Once your order is placed, you will receive a confirmation email that will include your order details and the selected shipping method. Please allow 3-5 business days transit time to receive your order once it has shipped. This time frame pertains to orders placed within the continental United States and does not include Alaska and Hawaii.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
