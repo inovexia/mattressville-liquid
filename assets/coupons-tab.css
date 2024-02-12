@@ -10,7 +10,7 @@
   .coupons .header-box {
     align-items: center;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 }
 .coupons .header-box .link {
@@ -31,7 +31,6 @@
 }
 @media (min-width: 1200px) {
   .coupons .header-box .link {
-    padding-right: 0px;
     overflow: visible;
   }
 }

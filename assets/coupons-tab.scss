@@ -10,7 +10,7 @@
     @media (min-width: 1200px) {
       align-items: center;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: center;
     }
 
     .link {
@@ -31,7 +31,6 @@
       }
 
       @media (min-width: 1200px) {
-        padding-right: 0px;
         overflow: visible;
       }
 
