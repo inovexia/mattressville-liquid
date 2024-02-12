@@ -108,6 +108,9 @@
   line-height: 1.5;
   text-align: left;
 }
+.coupons .card-wrapper > .card-container .card-content .description strong {
+  font-weight: 700;
+}
 .coupons .card-wrapper > .card-container .card-content .card-para {
   color: var(--secondary-color);
   font-size: 12px;
