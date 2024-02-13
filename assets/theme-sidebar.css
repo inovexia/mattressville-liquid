@@ -38,7 +38,6 @@
     display: flex;
     align-items: flex-start;
     box-sizing: content-box;
-    grid-gap: 32px;
     justify-content: space-between;
     background-color: var(--main_container_background_color);
     max-width: 1260px;
@@ -47,7 +46,7 @@
   .sidebar-content-container .invx_sidebar {
     width: 100%;
     max-width: 300px;
-    margin-right: 20px;
+    padding-right: 30px;
   }
 }
 

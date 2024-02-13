@@ -46,6 +46,7 @@
             <h2 class="card-heading">{{ block.settings.title }}</h2>
             <div class="description">{{ block.settings.description }}</div>
             <p class="card-para">
+              <input type="hidden" class="expiry" value="{{ block.settings.expiry }}" />
               <strong>Expires: {{ block.settings.expiry }}</strong>
             </p>
             <div class="actions">
@@ -75,8 +76,28 @@
 </div>
 {% javascript %}
   document.addEventListener("DOMContentLoaded", function () {
+    var expiries = document.querySelectorAll(".card-wrapper .expiry");
     var headerBoxLinks = document.querySelectorAll(".header-box .link");
     var copyCodeButtons = document.querySelectorAll(".card-wrapper .copy-code");
+    expiries.forEach(function(expiry) {
+      console.log(expiry);
+      var dateString = expiry.value;
+      var datetime = new Date(dateString);
+
+      // Set time to end of the day
+      datetime.setHours(23);
+      datetime.setMinutes(59);
+      datetime.setSeconds(59);
+      datetime.setMilliseconds(999);
+
+      var currentTime = new Date();
+
+      var isPast = datetime < currentTime;
+      console.log(isPast);
+      if(isPast){
+        expiry.closest('.card-wrapper').classList.add('expired');
+      }
+    });
     headerBoxLinks.forEach(function(link) {
       link.addEventListener("click", function(e) {
         e.preventDefault();

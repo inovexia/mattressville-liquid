@@ -43,6 +43,9 @@
   display: flex;
   flex-direction: column;
 }
+.coupons .card-wrapper.expired {
+  display: none;
+}
 .coupons .card-wrapper.hide {
   display: none;
 }

@@ -46,6 +46,10 @@
     display: flex;
     flex-direction: column;
 
+    &.expired {
+      display: none;
+    }
+
     &.hide {
       display: none;
     }
