@@ -72,6 +72,11 @@
         {{ section.settings.tnc }}
       </div>
     {%- endfor -%}
+    <div class="no-coupons hide">
+      <h3 class="regular title--primary">
+        No coupons found
+      </h3>
+    </div>
   </div>
 </div>
 {% javascript %}
@@ -80,7 +85,6 @@
     var headerBoxLinks = document.querySelectorAll(".header-box .link");
     var copyCodeButtons = document.querySelectorAll(".card-wrapper .copy-code");
     expiries.forEach(function(expiry) {
-      console.log(expiry);
       var dateString = expiry.value;
       var datetime = new Date(dateString);
 
@@ -93,11 +97,17 @@
       var currentTime = new Date();
 
       var isPast = datetime < currentTime;
-      console.log(isPast);
       if(isPast){
         expiry.closest('.card-wrapper').classList.add('expired');
       }
     });
+    var coupons = document.querySelectorAll(".coupons .card-wrapper");
+    var expiredCoupons = document.querySelectorAll(".coupons .card-wrapper.expired");
+    console.log(coupons.length, expiredCoupons.length);
+    if(coupons.length === expiredCoupons.length){
+      var noCoupons = document.querySelector(".coupons .no-coupons");
+      noCoupons.classList.remove("hide");
+    }
     headerBoxLinks.forEach(function(link) {
       link.addEventListener("click", function(e) {
         e.preventDefault();
@@ -107,17 +117,29 @@
           activeLink.classList.remove("active");
         }
         this.classList.add("active");
+        var coupons = document.querySelectorAll(".coupons .card-wrapper");
         if(type === "all") {
-          document.querySelectorAll(".card-wrapper").forEach(function(item){
+          coupons.forEach(function(item){
             item.classList.remove("hide");
           });
+          var hiddenCoupons = document.querySelectorAll(".coupons .card-wrapper.hide");
+          if(coupons.length === hiddenCoupons.length){
+            var noCoupons = document.querySelector(".coupons .no-coupons");
+            noCoupons.classList.remove("hide");
+          }
         } else {
-          document.querySelectorAll(".card-wrapper").forEach(function(item){
+          coupons.forEach(function(item){
             item.classList.add("hide");
           });
-          document.querySelectorAll(`.${type}`).forEach(function(item){
+          var typeCoupons = document.querySelectorAll(`.coupons .${type}`);
+          typeCoupons.forEach(function(item){
             item.classList.remove("hide");
           });
+          var typeHiddenCoupons = document.querySelectorAll(`.coupons .${type}.hide`);
+          if(typeCoupons.length === typeHiddenCoupons.length){
+            var noCoupons = document.querySelector(".coupons .no-coupons");
+            noCoupons.classList.remove("hide");
+          }
         }
       });
     });

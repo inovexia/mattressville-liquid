@@ -184,3 +184,14 @@
   margin-top: 0;
   margin-bottom: 16px;
 }
+.coupons .no-coupons {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.coupons .no-coupons.hide {
+  display: none;
+}
+.coupons .no-coupons .title--primary {
+  margin-block: 0;
+}

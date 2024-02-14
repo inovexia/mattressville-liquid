@@ -195,4 +195,18 @@
       }
     }
   }
+
+  .no-coupons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &.hide {
+      display: none;
+    }
+
+    .title--primary{
+      margin-block: 0;
+    }
+  }
 }

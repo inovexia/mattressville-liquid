@@ -107,18 +107,17 @@
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
 
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
-      {% if collection.products.size > 0 %}
-        {{ 'component-facets.css' | asset_url | stylesheet_tag }}
-        <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
-        {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-          <aside
-            aria-labelledby="verticalTitle"
-            class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
-            id="main-collection-filters"
-            data-id="{{ section.id }}"
-          >
-            {% render 'invx-bread-crumb-nav' %}
-
+      {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+      {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+        <aside
+          aria-labelledby="verticalTitle"
+          class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+          id="main-collection-filters"
+          data-id="{{ section.id }}"
+        >
+          {% render 'invx-bread-crumb-nav' %}
+          {% if collection.products.size > 0 %}
             {% render 'facets',
               results: collection,
               enable_filtering: section.settings.enable_filtering,
@@ -126,21 +125,21 @@
               filter_type: section.settings.filter_type,
               paginate: paginate
             %}
-            {% if section.settings.enable_flash_deals and section.settings.flash_deals_image != blank -%}
-              <a href="{{ section.settings.flash_deals_link }}" class="flash-deals">
-                <img
-                  src="{{ section.settings.flash_deals_image | img_url: 'master' }}"
-                  alt="Flash Deals"
-                  class="flash-deals-img"
-                  height="150"
-                  width="408"
-                  loading="lazy"
-                />
-              </a>
-            {%- endif -%}
-          </aside>
-        {%- endif -%}
-      {% endif %}
+          {% endif %}
+          {% if section.settings.enable_flash_deals and section.settings.flash_deals_image != blank -%}
+            <a href="{{ section.settings.flash_deals_link }}" class="flash-deals">
+              <img
+                src="{{ section.settings.flash_deals_image | img_url: 'master' }}"
+                alt="Flash Deals"
+                class="flash-deals-img"
+                height="150"
+                width="408"
+                loading="lazy"
+              />
+            </a>
+          {%- endif -%}
+        </aside>
+      {%- endif -%}
       <div
         class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         id="ProductGridContainer"
