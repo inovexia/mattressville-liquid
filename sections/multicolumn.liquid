@@ -13,6 +13,29 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  
+  .multicolumn .title-wrapper-with-link a.link {
+    align-items: center;
+    color: #095f86;
+    display: inline-flex;
+    text-decoration: none;
+    text-decoration-thickness: auto;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media (min-width: 990px) {
+    .multicolumn .title-wrapper-with-link{
+      align-items: center;
+      column-gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .multicolumn .title-wrapper-with-link a.link {
+      margin-top: 10px;
+    }
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -35,8 +58,8 @@
         <h2 class="title inline-richtext {{ section.settings.heading_size }}">
           {{ section.settings.title }}
         </h2>
-        {%- if section.settings.button_label != blank and show_mobile_slider -%}
-          <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
+        {%- if section.settings.button_label != blank -%}
+          <a href="{{ section.settings.button_link }}" class="link">
             {{- section.settings.button_label | escape -}}
           </a>
         {%- endif -%}
@@ -171,20 +194,6 @@
         </div>
       {%- endif -%}
     </slider-component>
-    <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
-      {%- if section.settings.button_label != blank -%}
-        <a
-          class="button button--primary"
-          {% if section.settings.button_link == blank %}
-            role="link" aria-disabled="true"
-          {% else %}
-            href="{{ section.settings.button_link }}"
-          {% endif %}
-        >
-          {{ section.settings.button_label | escape }}
-        </a>
-      {%- endif -%}
-    </div>
   </div>
 </div>
 
