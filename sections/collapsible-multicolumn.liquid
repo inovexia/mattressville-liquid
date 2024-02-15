@@ -110,7 +110,8 @@
   }
 
   .collapsible-section .multicolumn-card .collapse {
-    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease 0s;
   }
 
   .collapsible-section .multicolumn-card .collapse .card-body {
@@ -239,7 +240,7 @@
                   </div>
                 </div>
               </button>
-              <div class="collapse">
+              <div class="collapse" style="display: none; max-height: 0;">
                 <div class="card-body">
                   {{ block.settings.text }}
                   {% if block.settings.link != blank %}
@@ -291,6 +292,8 @@ document.addEventListener("DOMContentLoaded", function() {
   accordionButtons.forEach(function(button) {
     button.addEventListener("click", function() {
       var collapse = this.closest(".multicolumn-card").querySelector(".collapse");
+
+
       if (!collapse.classList.contains("show")) {
         slideDown(collapse);
         collapse.classList.add("show");
@@ -301,17 +304,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
   function slideUp(element) {
-    element.style.transition = "max-height 0.3s";
-    element.style.maxHeight = 0;
-    element.style.overflow = "hidden";
+    element.style.maxHeight = element.scrollHeight + "px";
     setTimeout(function () {
-      element.style.display = "none";
+      element.style.maxHeight = 0;
+      setTimeout(function () {
+        element.style.display = "none";
+      }, 300); // Wait for the transition to complete before hiding
     }, 100);
   }
   function slideDown(element) {
-    element.style.transition = "max-height 0.3s";
     element.style.display = "block";
-    element.style.overflow = "hidden";
     element.style.maxHeight = element.scrollHeight + "px";
     setTimeout(function () {
       element.style.maxHeight = "unset";
