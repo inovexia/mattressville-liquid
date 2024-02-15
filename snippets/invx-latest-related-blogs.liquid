@@ -27,7 +27,7 @@
       <li class="invx_sidebar_menu_li">
         <a href="{{ article.url }}">
           {% if article.image %}
-            <img src="{{ article.image.src | image_url }}" width="100%" height="auto">
+            <img src="{{ article.image.src | image_url: width: 220 }}" width="100%" height="auto">
           {% endif %}
           <p>
             {{ article.title -}}
