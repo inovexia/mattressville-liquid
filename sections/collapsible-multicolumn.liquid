@@ -303,6 +303,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
+
   function slideUp(element) {
     element.style.maxHeight = element.scrollHeight + "px";
     setTimeout(function () {
@@ -312,6 +313,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }, 300); // Wait for the transition to complete before hiding
     }, 100);
   }
+
   function slideDown(element) {
     element.style.display = "block";
     element.style.maxHeight = element.scrollHeight + "px";
