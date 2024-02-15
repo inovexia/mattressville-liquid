@@ -97,7 +97,7 @@
       var currentTime = new Date();
 
       var isPast = datetime < currentTime;
-      if(isPast){
+      if (isPast){
         expiry.closest('.card-wrapper').classList.add('expired');
       }
     });
@@ -123,9 +123,11 @@
             item.classList.remove("hide");
           });
           var hiddenCoupons = document.querySelectorAll(".coupons .card-wrapper.hide");
+          var noCoupons = document.querySelector(".coupons .no-coupons");
           if(coupons.length === hiddenCoupons.length){
-            var noCoupons = document.querySelector(".coupons .no-coupons");
             noCoupons.classList.remove("hide");
+          } else {
+            noCoupons.classList.add("hide");
           }
         } else {
           coupons.forEach(function(item){
@@ -136,9 +138,11 @@
             item.classList.remove("hide");
           });
           var typeHiddenCoupons = document.querySelectorAll(`.coupons .${type}.hide`);
+          var noCoupons = document.querySelector(".coupons .no-coupons");
           if(typeCoupons.length === typeHiddenCoupons.length){
-            var noCoupons = document.querySelector(".coupons .no-coupons");
             noCoupons.classList.remove("hide");
+          } else {
+            noCoupons.classList.add("hide");
           }
         }
       });
