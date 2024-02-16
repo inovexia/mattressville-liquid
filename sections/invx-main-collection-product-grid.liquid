@@ -75,6 +75,7 @@
   .flash-deals {
     border-radius: 15px;
     display: flex;
+    justify-content: center;
     overflow: hidden;
     margin-block: 30px;
   }
@@ -229,7 +230,7 @@
               data-id="{{ section.id }}"
               class="
                 grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
-                grid--{{ section.settings.columns_desktop }}-col-desktop
+                grid--{{ section.settings.columns_desktop }}-col-desktop grid--3-col-large-desktop
               "
             >
               {%- for product in collection.products -%}

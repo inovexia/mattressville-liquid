@@ -84,7 +84,7 @@
   padding: 0px;
 }
 
-#shopify-section-template--22019728539956__multicolumn_A9Ngk7 .multicolumn li:nth-child(2) .multicolumn-card .link.animate-arrow {
+#Slide-template--22022203867444__multicolumn_A9Ngk7-2 .multicolumn-card .link.animate-arrow {
   position: absolute;
   background-color: var(--accent-color);
   color: #fff;
@@ -94,4 +94,10 @@
   text-align: center;
   margin-top: 0;
   padding-block: 6px;
+}
+
+@media (max-width: 989px) {
+  .yotpo-side-widget {
+    display: none;
+  }
 }
