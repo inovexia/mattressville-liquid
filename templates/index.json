@@ -92,6 +92,96 @@
             "color_scheme": "scheme-1",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_CKrRRg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_yQaMJP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_kingsdown_coolwave_banner.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_9y8Uir": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_banner_stearns_and_foster__2024.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_yTF6mG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_sealy_repreve_banner_2024.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_bTWUcd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tempur-pedic_home_banner_48a81cb1-840c-4199-a41e-3d9403c99dd5.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
@@ -99,7 +189,12 @@
         "slide_gQ3iXy",
         "slide_mp4EPY",
         "slide_86rVjX",
-        "slide_mgniDF"
+        "slide_mgniDF",
+        "slide_CKrRRg",
+        "slide_yQaMJP",
+        "slide_9y8Uir",
+        "slide_yTF6mG",
+        "slide_bTWUcd"
       ],
       "custom_css": [
         "slideshow-component {margin-top: 20px;}"
