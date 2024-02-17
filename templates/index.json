@@ -21,6 +21,24 @@
             "text_alignment_mobile": "center"
           }
         },
+        "slide_gQ3iXy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Why_Tempur-Pedic_is_the_King_of_Memory_Foam_Mattresses-mattressville.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_mp4EPY": {
           "type": "slide",
           "settings": {
@@ -56,12 +74,32 @@
             "color_scheme": "",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_mgniDF": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_natura_banner_rev_2024_ddd17fac-ab54-4ae3-acc0-7c8dd0ed254c.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "slide_PEgBhX",
+        "slide_gQ3iXy",
         "slide_mp4EPY",
-        "slide_86rVjX"
+        "slide_86rVjX",
+        "slide_mgniDF"
       ],
       "custom_css": [
         "slideshow-component {margin-top: 20px;}"
