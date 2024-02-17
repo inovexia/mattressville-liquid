@@ -260,10 +260,13 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   function slideUp(element) {
     element.style.transition = "max-height 0.3s";
-    element.style.maxHeight = 0;
+    element.style.maxHeight = element.scrollHeight + "px";
     element.style.overflow = "hidden";
     setTimeout(function () {
-      element.style.display = "none";
+      element.style.maxHeight = 0;
+      setTimeout(function () {
+        element.style.display = "none";
+      }, 300); // Wait for the transition to complete before hiding
     }, 100);
   }
   function slideDown(element) {

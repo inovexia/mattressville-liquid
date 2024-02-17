@@ -8,7 +8,11 @@
   {{ 'component-facets.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-
+{%- if section.settings.enable_quick_add -%}
+  {{ 'quick-add.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
@@ -94,6 +98,7 @@
   .flash-deals {
     border-radius: 15px;
     display: flex;
+    justify-content: center;
     overflow: hidden;
     margin-block: 30px;
   }
@@ -443,7 +448,7 @@
                 >
                   <div class="loading-overlay gradient"></div>
                   <ul
-                    class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
+                    class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop grid--3-col-large-desktop"
                     role="list"
                   >
                     {%- for item in search.results -%}
@@ -468,6 +473,7 @@
                               show_secondary_image: section.settings.show_secondary_image,
                               show_vendor: section.settings.show_vendor,
                               show_rating: section.settings.show_rating,
+                              show_quick_add: section.settings.enable_quick_add,
                               lazy_load: lazy_load
                             %}
                           {%- when 'article' -%}
@@ -631,6 +637,12 @@
       "default": false,
       "label": "t:sections.main-search.settings.show_rating.label",
       "info": "t:sections.main-search.settings.show_rating.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.enable_quick_buy.label"
     },
     {
       "type": "header",
