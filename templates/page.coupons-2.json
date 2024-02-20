@@ -6,63 +6,57 @@
       "settings": {
       }
     },
-    "multicolumn_pXDjMw": {
-      "type": "multicolumn",
+    "coupons-tab": {
+      "type": "coupons-tab",
       "blocks": {
-        "column_yDC3bH": {
-          "type": "column",
+        "coupon_yDC3bH": {
+          "type": "coupon",
           "settings": {
             "image": "shopify:\/\/shop_images\/Save_150_Coupon.webp",
-            "title": "<strong>SAVE $150 COUPON<\/strong>",
-            "text": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE150 ($150 OFF all Orders from $1,500 and Up)<\/strong> at the checkout page. Mattressville reserves the right to void the coupons.<\/p><p><strong>Expires: January 28, 2024<\/strong><\/p><p><em>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void the coupons.<\/em><\/p>",
-            "link_label": "Start Saving",
-            "link": "shopify:\/\/collections\/all-mattresses"
+            "type": "other",
+            "code": "SAVE150",
+            "title": "SAVE $150 COUPON",
+            "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE150 ($150 OFF all Orders from $1,500 and Up)<\/strong> at the checkout page. Mattressville reserves the right to void the coupons.<\/p>",
+            "expiry": "February 12, 2024",
+            "button_label": "Start Saving",
+            "button_link": "shopify:\/\/collections\/all-mattresses"
           }
         },
-        "column_FkNtma": {
-          "type": "column",
+        "coupon_FkNtma": {
+          "type": "coupon",
           "settings": {
             "image": "shopify:\/\/shop_images\/Save_100_Coupon.webp",
-            "title": "<strong>SAVE $100 COUPON<\/strong>",
-            "text": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE100 ($100 OFF all Orders from $1,000 to $1,499) <\/strong>at the checkout page. Mattressville reserves the right to void the coupons.<\/p><p><strong>Expires: January 28, 2024<\/strong><\/p><p><em>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void <\/em><\/p>",
-            "link_label": "Start Saving",
-            "link": "shopify:\/\/collections\/all-mattresses"
+            "type": "other",
+            "code": "SAVE100",
+            "title": "SAVE $100 COUPON",
+            "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE100 ($100 OFF all Orders from $1,000 to $1,499) <\/strong>at the checkout page. Mattressville reserves the right to void the coupons.<\/p>",
+            "expiry": "February 12, 2024",
+            "button_label": "Start Saving",
+            "button_link": "shopify:\/\/collections\/all-mattresses"
           }
         },
-        "column_KzhYWf": {
-          "type": "column",
+        "coupon_KzhYWf": {
+          "type": "coupon",
           "settings": {
             "image": "shopify:\/\/shop_images\/Save_50_Coupon.webp",
-            "title": "<strong>SAVE $50 COUPON<\/strong>",
-            "text": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE50 ($50 OFF all Orders from $499 to $999) <\/strong>at the checkout page. Mattressville reserves the right to void the coupons.<\/p><p><strong>Expires: January 28, 2024<\/strong><\/p><p><em>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void <\/em><\/p>",
-            "link_label": "Start Saving",
-            "link": "shopify:\/\/collections\/all-mattresses"
+            "type": "other",
+            "code": "SAVE50",
+            "title": "SAVE $50 COUPON",
+            "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE50 ($50 OFF all Orders from $499 to $999) <\/strong>at the checkout page. Mattressville reserves the right to void the coupons.<\/p>",
+            "expiry": "February 12, 2024",
+            "button_label": "Start Saving",
+            "button_link": "shopify:\/\/collections\/all-mattresses"
           }
         }
       },
       "block_order": [
-        "column_yDC3bH",
-        "column_FkNtma",
-        "column_KzhYWf"
-      ],
-      "custom_css": [
-        ".multicolumn-card {margin-bottom: 20px;}",
-        ".multicolumn-card .link {border: 1px solid; border-radius: 25px; padding: 5px 20px; background-color: var(--accent-color); color: #fff;}",
-        ".multicolumn-card .link:hover {color: var(--accent-color); background-color: #fff;}"
+        "coupon_yDC3bH",
+        "coupon_FkNtma",
+        "coupon_KzhYWf"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 1,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "tnc": "<p><em>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void the coupons.<\/em><\/p>",
+        "enable_copy_code": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -77,7 +71,7 @@
   },
   "order": [
     "main",
-    "multicolumn_pXDjMw",
+    "coupons-tab",
     "home_banner_WT86ma"
   ]
 }

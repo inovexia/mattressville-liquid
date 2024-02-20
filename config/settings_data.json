@@ -58,7 +58,7 @@
     "collection_card_shadow_horizontal_offset": 0,
     "collection_card_shadow_vertical_offset": 4,
     "collection_card_shadow_blur": 5,
-    "blog_card_style": "standard",
+    "blog_card_style": "card",
     "blog_card_image_padding": 0,
     "blog_card_text_alignment": "left",
     "blog_card_color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
@@ -175,6 +175,12 @@
       },
       "12723626199553905971": {
         "type": "shopify:\/\/apps\/puco-sections-blocks\/blocks\/app-embed-stylesheet\/f1ea0cb9-0193-44b7-bab7-d0fd6bec6cbf",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "10534424223343191814": {
+        "type": "shopify:\/\/apps\/customer-dashboard\/blocks\/app-embed\/f81081fd-cd04-43ee-897a-18ef0e5d9b04",
         "disabled": false,
         "settings": {
         }
@@ -464,7 +470,7 @@
       "details[id*=\"filter.p.tag\"] {display: none;}",
       ".content > p > img {border-radius: 25px;}",
       ".collection-hero__image-page-width img {border-radius: 25px; box-shadow: 0 0 10px -8px var(--secondary-color);}",
-      "@media screen and (min-width: 750px) {.facets__form-vertical {width: 32rem; }}"
+      "@media screen and (min-width: 750px) {.facets__form-vertical {width: 30rem; }}"
     ]
   }
 }

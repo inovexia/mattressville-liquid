@@ -1,0 +1,42 @@
+{% assign featuredBlogs = 'tips' %}
+
+{% assign featuredArticles = false %}
+
+{% comment %}
+  Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable.
+{% endcomment %}
+{% for featuredBlog in featuredBlogs %}
+  {% if blogs[featuredBlog].articles %}
+    {% if featuredArticles %}
+      {% assign featuredArticles = featuredArticles | concat: blogs[featuredBlog].articles %}
+    {% else %}
+      {% assign featuredArticles = blogs[featuredBlog].articles %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+  If featuredArticles is not false we should have articles to show
+{% endcomment %}
+{% if featuredArticles %}
+  {% assign featuredArticles = featuredArticles | sort: 'published_at' | reverse %}
+
+  <ul class="invx_sidebar_menu_ul recent-blogs">
+    {% for article in featuredArticles limit: 5 %}
+      <li class="invx_sidebar_menu_li">
+        <a href="{{ article.url }}">
+          {% if article.image %}
+            <img src="{{ article.image.src | image_url: width: 220 }}" width="100%" height="auto">
+          {% endif %}
+          <p>
+            {{ article.title -}}
+            <br>
+            <small>
+              {{ article.published_at | | date: '%B %d, %Y' }}
+            </small>
+          </p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

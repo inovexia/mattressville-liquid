@@ -1,0 +1,212 @@
+.coupons {
+  .header-box {
+    background: #f1f3f4;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px #0000000d;
+    border-radius: 15px;
+    padding: 14px 10px;
+    margin-bottom: 30px;
+
+    @media (min-width: 1200px) {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .link {
+      color: var(--secondary-color);
+      display: inline-block;
+      font-size: 12px;
+      line-height: 14px;
+      padding: 3px 10px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-overflow: ellipsis;
+      white-space: pre;
+      overflow: hidden;
+
+      &.active {
+        font-weight: 700;
+      }
+
+      @media (min-width: 1200px) {
+        overflow: visible;
+      }
+
+      &:not(:first-child) {
+        @media (min-width: 768px) {
+          border-left: 1px solid var(--secondary-color);
+        }
+      }
+    }
+  }
+
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &.expired {
+      display: none;
+    }
+
+    &.hide {
+      display: none;
+    }
+
+    > {
+      .card-container {
+        background: #ffffff;
+        border: 1px solid #f1f3f4;
+        box-shadow: 0 10px 30px #0000000d;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        @media (min-width: 576px) {
+          display: flex;
+          row-gap: 20px;
+          flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+          align-items: center;
+          flex-direction: row;
+          column-gap: 20px;
+        }
+
+        .cash-coupon {
+          display: flex;
+          flex-grow: 1;
+
+          .cash-coupon-img {
+            max-width: 100%;
+            height: auto;
+
+            @media (min-width: 990px) {
+              max-width: 553px;
+            }
+          }
+        }
+
+        .card-content {
+          flex-shrink: 1;
+
+          .card-heading {
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: var(--secondary-color);
+
+            @media (min-width: 990px) {
+              font-size: 14px;
+            }
+
+            @media (min-width: 1200px) {
+              font-size: 18px;
+            }
+          }
+
+          .description {
+            color: var(--secondary-color);
+            margin-right: 16px;
+
+            * {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 1.5;
+              text-align: left;
+            }
+
+            strong {
+              font-weight: 700;
+            }
+          }
+
+          .card-para {
+            color: var(--secondary-color);
+            font-size: 12px;
+            line-height: 20px;
+            margin-right: 5px;
+
+            @media (min-width: 990px) {
+              font-size: 10px;
+              margin-right: 16px;
+            }
+
+            @media (min-width: 1200px) {
+              font-size: 14px;
+            }
+          }
+
+          .actions {
+            align-items: center;
+            column-gap: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            .btn {
+              align-items: center;
+              background-color: var(--accent-color);
+              border-radius: 89.5709px;
+              border: 1px solid transparent;
+              color: #ffffff;
+              cursor: pointer;
+              display: inline-flex;
+              font-size: 16px;
+              font-weight: 700;
+              justify-content: space-between;
+              line-height: 1.5;
+              max-width: 320px;
+              padding: 4px 12px;
+              text-decoration: none;
+              width: 100%;
+            }
+
+            .copy-code {
+              align-items: center;
+              background-color: var(--secondary-color);
+              border-radius: 100%;
+              border: 1px solid transparent;
+              box-sizing: border-box;
+              color: #ffffff;
+              cursor: pointer;
+              display: inline-flex;
+              font-size: 16px;
+              font-weight: 700;
+              height: 34px;
+              justify-content: center;
+              line-height: 1.5;
+              min-width: 34px;
+              padding: 0;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      p {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 20px;
+        color: var(--secondary-color);
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .no-coupons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &.hide {
+      display: none;
+    }
+
+    .title--primary{
+      margin-block: 0;
+    }
+  }
+}

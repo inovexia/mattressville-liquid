@@ -16,9 +16,9 @@
     }
   }
 </style>
-{%- assign path = request.path | split: '/' -%}
-{%- if path[1] contains 'pages' -%}
-  <div class="invx_sidebar ">
+{% assign path = request.path | split: '/' %}
+<div class="invx_sidebar ">
+  {% if path[1] contains 'pages' %}
     {% render 'invx-bread-crumb-nav' %}
     <div class="invx_sidebar_menu ">
       <div class="invx_sidebar_menu_header" onclick="collapsible('invx_sidebar_menu_ul')">
@@ -56,9 +56,7 @@
         {% endfor %}
       </ul>
     </div>
-  </div>
-{%- elsif path[1] contains 'blogs' -%}
-  <div class="invx_sidebar ">
+  {%- elsif path[1] contains 'blogs' -%}
     {% render 'invx-bread-crumb-nav' %}
     <div class="invx_sidebar_menu">
       <div class="invx_sidebar_menu_header" onclick="collapsible('invx_sidebar_menu_ul')">Blog Categories</div>
@@ -74,11 +72,20 @@
     <div class="invx_sidebar_menu">
       <div class="invx_sidebar_menu_header" onclick="collapsible('invx_sidebar_menu_blogs')">Recent Blogs</div>
       <div id="invx_sidebar_menu_blogs">
-        {% render 'invx-latest-related-blogs' %}
+        {% render 'invx-sidebar-related-blogs' %}
       </div>
     </div>
-  </div>
-{%- endif -%}
+  {%- endif -%}
+
+  {%- if path[1] contains 'pages' and path[2] contains 'blogs' -%}
+    <div class="invx_sidebar_menu">
+      <div class="invx_sidebar_menu_header" onclick="collapsible('invx_sidebar_menu_blogs')">Recent Blogs</div>
+      <div id="invx_sidebar_menu_blogs">
+        {% render 'invx-sidebar-latest-blogs' %}
+      </div>
+    </div>
+  {%- endif -%}
+</div>
 
 <script>
   function collapsible(elem) {

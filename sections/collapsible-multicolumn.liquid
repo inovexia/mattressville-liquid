@@ -36,6 +36,126 @@
       margin-top: 10px;
     }
   }
+
+  .collapsible-section .multicolumn-card {
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #f1f3f4;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 0;
+    padding: 27px 0 26.25px;
+    position: relative;
+    word-wrap: break-word;
+  }
+
+  .collapsible-section .multicolumn-card .toggle-button {
+    /* border-bottom: 1px solid var(--secondary-color); */
+    align-items: center;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 0 30px;
+  }
+
+  .collapsible-section .multicolumn-card .toggle-button .icon {
+    display: flex;
+    flex-shrink: 1;
+    justify-content: center;
+    max-width: 180px;
+    width: 100%;
+  }
+
+  .collapsible-section .multicolumn-card .toggle-button .icon img {
+    height: auto;
+    max-height: 60px;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .collapsible-section .multicolumn-card .toggle-button .card-content {
+    flex-grow: 1;
+    text-align: center;
+    width: 100%;
+  }
+
+  .collapsible-section .multicolumn-card .toggle-button .card-content .heading {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  .collapsible-section .multicolumn-card .toggle-button .card-content .card-flex {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .collapsible-section .multicolumn-card .toggle-button .card-content .card-flex p {
+    color: var(--secondary-color);
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  .collapsible-section .multicolumn-card .collapse {
+    overflow: hidden;
+    transition: max-height 0.3s ease 0s;
+  }
+
+  .collapsible-section .multicolumn-card .collapse .card-body {
+    padding: 8px 24px;
+  }
+
+  .collapsible-section .multicolumn-card .collapse .card-body::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    border-top: 2px solid #f1f3f4;
+  }
+
+  .collapsible-section .multicolumn-card .collapse .card-body p {
+    color: #212529;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .collapsible-section .multicolumn-card .collapse .card-body a {
+    color: #098fc7;
+    margin-right: 5px;
+    text-decoration: none;
+  }
+
+  @media (min-width: 1200px) {
+    .collapsible-section .multicolumn-card .toggle-button {
+      flex-direction: row;
+    }
+
+    .collapsible-section .multicolumn-card .toggle-button .icon {
+      justify-content: flex-start;
+    }
+
+    .collapsible-section .multicolumn-card .toggle-button .card-content {
+      text-align: left;
+    }
+
+    .collapsible-section .multicolumn-card .toggle-button .card-content .card-flex {
+      justify-content: flex-start;
+    }
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -99,68 +219,37 @@
             {% endif %}
           >
             <div class="multicolumn-card content-container">
-              {%- if block.settings.image != blank -%}
-                {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
-                  {% assign spaced_image = true %}
-                {% endif %}
-                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
-                  <div
-                    class="media media--transparent media--{{ section.settings.image_ratio }}"
-                    {% if section.settings.image_ratio == 'adapt' %}
-                      style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                    {% endif %}
-                  >
-                    {%- liquid
-                      assign number_of_columns = section.settings.columns_desktop
-                      assign number_of_columns_mobile = section.settings.columns_mobile
-                      assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                      assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                      assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
-                      if section.settings.image_width == 'half'
-                        assign image_width = 0.5
-                      elsif section.settings.image_width == 'third'
-                        assign image_width = 0.33
-                      else
-                        assign image_width = 1
-                      endif
-                    -%}
-                    {% capture sizes %}
-                      (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
-                      (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
-                      (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
-                      calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
-                    {% endcapture %}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3200
-                      | image_tag:
-                        widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
-                        sizes: sizes,
-                        class: 'multicolumn-card__image'
-                    }}
+              <button variant="link" class="toggle-button" type="button">
+                <div class="icon">
+                  {%- if block.settings.image != blank -%}
+                    <img
+                      alt="{{ block.settings.title }}"
+                      class="card__image"
+                      src="{{ block.settings.image | img_url: 'master' }}"
+                      height="{{ block.settings.image.height }}"
+                      width="{{ block.settings.image.width }}"
+                      loading="lazy"
+                    />
+                  {%- endif -%}
+                </div>
+                <div class="card-content flex-grow-1">
+                  <span class="heading">{{ block.settings.title }}</span>
+                  <div class="card-flex">
+                    <p>Show more details</p>
+                    <i class="gsi gs-chevron-down"></i>
                   </div>
                 </div>
-              {%- endif -%}
-              <div class="multicolumn-card__info">
-                {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext">{{ block.settings.title }}</h3>
-                {%- endif -%}
-                {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
-                {%- endif -%}
-                {%- if block.settings.link_label != blank -%}
-                  <a
-                    class="link animate-arrow"
-                    {% if block.settings.link == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.link }}"
-                    {% endif %}
-                  >
-                    {{- block.settings.link_label | escape -}}
-                    <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span></a
-                  >
-                {%- endif -%}
+              </button>
+              <div class="collapse" style="display: none; max-height: 0;">
+                <div class="card-body">
+                  {{ block.settings.text }}
+                  {% if block.settings.link != blank %}
+                    <a href="{{ block.settings.link }}">
+                      {{- block.settings.link_label | escape -}}
+                      <i class="gsi gs-chevron-right"></i>
+                    </a>
+                  {% endif %}
+                </div>
               </div>
             </div>
           </li>
@@ -196,11 +285,48 @@
     </slider-component>
   </div>
 </div>
+{% javascript %}
+document.addEventListener("DOMContentLoaded", function() {
+  var accordionButtons = document.querySelectorAll(".collapsible-section .toggle-button");
 
+  accordionButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var collapse = this.closest(".multicolumn-card").querySelector(".collapse");
+
+
+      if (!collapse.classList.contains("show")) {
+        slideDown(collapse);
+        collapse.classList.add("show");
+      } else {
+        slideUp(collapse);
+        collapse.classList.remove("show");
+      }
+    });
+  });
+
+  function slideUp(element) {
+    element.style.maxHeight = element.scrollHeight + "px";
+    setTimeout(function () {
+      element.style.maxHeight = 0;
+      setTimeout(function () {
+        element.style.display = "none";
+      }, 300); // Wait for the transition to complete before hiding
+    }, 100);
+  }
+
+  function slideDown(element) {
+    element.style.display = "block";
+    element.style.maxHeight = element.scrollHeight + "px";
+    setTimeout(function () {
+      element.style.maxHeight = "unset";
+    }, 100);
+  }
+});
+{% endjavascript %}
 {% schema %}
 {
-  "name": "t:sections.multicolumn.name",
-  "class": "section",
+  "name": "Collapsible Multicolumn",
+  "class": "collapsible-section",
   "tag": "section",
   "disabled_on": {
     "groups": ["header", "footer"]
