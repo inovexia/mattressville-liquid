@@ -1,4 +1,5 @@
 {
+  "layout": "theme-sidebar",
   "sections": {
     "main": {
       "type": "main-page",
