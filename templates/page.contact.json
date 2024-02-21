@@ -2,25 +2,17 @@
   "layout": "theme-sidebar",
   "sections": {
     "main": {
-      "type": "main-page",
+      "type": "invx-main-page",
       "settings": {
-        "header_color": "#ffffff",
-        "header_bg_color": "#ff5c78",
-        "header_bg_color_opacity": 60,
-        "header_bg_image": "shopify:\/\/shop_images\/city-shot.jpg",
-        "header_padding_top": 70,
-        "header_padding_bottom": 70,
-        "header_margin_bottom": 30,
-        "padding_bottom": 0
       }
     },
     "multicolumn_EqKKpi": {
-      "type": "multicolumn",
+      "type": "multicolumn-2",
       "blocks": {
         "column_g8ex8P": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/phone.png",
+            "image": "shopify:\/\/shop_images\/phone-1.png",
             "title": "<strong>Call Us Now<\/strong>",
             "text": "",
             "link_label": "905-212-7722",
@@ -30,7 +22,7 @@
         "column_mCLkF3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/location.png",
+            "image": "shopify:\/\/shop_images\/location-1.png",
             "title": "<strong>Visit Mattressville<\/strong>",
             "text": "<p>1911 Dundas St. East, Unit 18 Mississauga, On L4X 1M1<\/p>",
             "link_label": "",
@@ -40,7 +32,7 @@
         "column_XwX96H": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/clock.png",
+            "image": "shopify:\/\/shop_images\/clock-1.png",
             "title": "<strong>Working hours<\/strong>",
             "text": "<p>Monday to Friday:11am to 7pm <br\/>Saturday:11am to 6pm <br\/>Sunday:12pm to 5pm<\/p>",
             "link_label": "",
@@ -58,8 +50,8 @@
         "heading_size": "h2",
         "image_width": "third",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
+        "columns_desktop": 1,
+        "column_alignment": "left",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
@@ -78,7 +70,11 @@
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
-      }
+      },
+      "custom_css": [
+        ".contact.page-width {padding-inline: 0;}",
+        "@media (min-width: 990px) { #ContactForm {max-width: 60%;margin: 0 auto;} }"
+      ]
     }
   },
   "order": [
