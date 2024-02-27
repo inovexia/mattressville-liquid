@@ -17,13 +17,21 @@
 
     <title>
       {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- if current_tags %} | tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} | Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} | {{ shop.name }}{% endunless -%}
     </title>
 
     {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+      {% if template != 'index' %}
+        {% assign truncated_description = page_description | truncate: 149, "" %}
+        {% if page_description.size > 149 %}
+          {% assign truncated_description = truncated_description | append: "…" %}
+        {% endif %}
+        <meta name="description" content="{{ truncated_description | escape }}">
+      {% else %}
+        <meta name="description" content="{{ page_description | escape }}">
+      {% endif %}
     {% endif %}
 
     {% render 'meta-tags' %}
