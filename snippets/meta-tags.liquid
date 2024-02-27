@@ -5,9 +5,9 @@
   assign og_description = page_description | default: shop.description | default: shop.name
   if template != 'index'
     assign og_description = og_description | truncate: 149, ""
-    {% if og_description.size > 149 %}
-      {% assign og_description = og_description | append: "…" %}
-    {% endif %}
+    if og_description.size > 149
+      assign og_description = og_description | append: "…"
+    endif
   endif
   if request.page_type == 'product'
     assign og_type = 'product'
