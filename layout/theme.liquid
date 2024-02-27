@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    <link rel="canonical" href="{{ canonical_url }}">
+    {% if canonical_url %}
+      {% capture canonical_url_with_slash %}{{ canonical_url }}/{% endcapture %}
+      {% assign canonical_url = canonical_url_with_slash | append: "/" %}
+      <link rel="canonical" href="{{ canonical_url }}">
+    {% endif %}
     <meta name="ahrefs-site-verification" content="45d770788531ddae23d09f8ad95b15995469c05dacb6ab2b391255b891077202"/>
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
