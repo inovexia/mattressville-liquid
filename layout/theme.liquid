@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     {% if canonical_url %}
-      {% assign last_char = canonical_url | slice: -1 %}
-      {% unless last_char == "/" %}
-        {% assign canonical_url = canonical_url | append: "/" %}
-      {% endunless %}
-      <link rel="canonical" href="{{ canonical_url }}">
+      {% if canonical_url contains request.path %}
+        <link rel="canonical" href="{{ canonical_url }}">
+      {% else %}
+        {% assign last_char = canonical_url | slice: -1 %}
+        {% unless last_char == "/" %}
+          {% assign canonical_url = canonical_url | append: "/" %}
+        {% endunless %}
+        <link rel="canonical" href="{{ canonical_url }}">
+      {% endif %}
     {% endif %}
     <meta name="ahrefs-site-verification" content="45d770788531ddae23d09f8ad95b15995469c05dacb6ab2b391255b891077202"/>
     {%- if settings.favicon != blank -%}
