@@ -4,7 +4,7 @@
   assign og_type = 'website'
   assign og_description = page_description | default: shop.description | default: shop.name
   if template != 'index' and og_description.size > 149
-    assign og_description = og_description | append: "…"
+    assign og_description = og_description | truncate: 149, "" | append: "…"
   endif
   if request.page_type == 'product'
     assign og_type = 'product'
