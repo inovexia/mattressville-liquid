@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     {% if canonical_url %}
-      {% capture canonical_url_with_slash %}{{ canonical_url }}/{% endcapture %}
-      {% assign canonical_url = canonical_url_with_slash | append: "/" %}
+      {% unless canonical_url ends_with: '/' %}
+        {% assign canonical_url = canonical_url | append: '/' %}
+      {% endunless %}
       <link rel="canonical" href="{{ canonical_url }}">
     {% endif %}
     {%- if settings.favicon != blank -%}
