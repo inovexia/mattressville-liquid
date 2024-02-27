@@ -7,6 +7,7 @@
     <meta name="theme-color" content="">
     {% if canonical_url %}
       {% unless canonical_url ends_with: '/' %}
+        here
         {% assign canonical_url = canonical_url | append: '/' %}
       {% endunless %}
       <link rel="canonical" href="{{ canonical_url }}">
