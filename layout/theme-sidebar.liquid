@@ -255,7 +255,10 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'gsi.css' | asset_url | stylesheet_tag: preload: true }}
+
+    {% comment %} Include CSS for sidebar {% endcomment %}
     {{ 'theme-sidebar.css' | asset_url | stylesheet_tag }}
+
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
@@ -295,12 +298,17 @@
     {%- endif -%}
     <header>{% sections 'header-group' %}</header>
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {% comment %} Layout with sidebar starts here {% endcomment %}
       <div class="page-width sidebar-content-container">
+        {% comment %} Render sidebar snippet start {% endcomment %}
         {% render 'invx-page-sidebar' %}
+        {% comment %} Render sidebar snippet end {% endcomment %}
 
+        {% comment %} Add a content wrapper div for main content area {% endcomment %}
         <div class="invx-content">
           {{ content_for_layout }}
         </div>
+        {% comment %} Add a content wrapper div for main content area {% endcomment %}
       </div>
     </main>
     <footer>{% sections 'footer-group' %}</footer>
