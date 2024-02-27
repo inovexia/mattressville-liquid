@@ -23,7 +23,7 @@
                 </div>
                 <div class="menu">
                   {%- for item in block.settings.about_menu.links -%}
-                    <a class="menu-link" area-label="{{ item.title | escape }}" href="{{ item.url }}/">{{ item.title | escape }}</a>
+                    <a class="menu-link" area-label="{{ item.title | escape }}" href="{{ item.url }}">{{ item.title | escape }}</a>
                   {%- endfor -%}
                 </div>
               </div>
@@ -43,7 +43,7 @@
                 <div class="areas">
                   {%- for item in block.settings.styles_menu.links -%}
                     <div>
-                      <a area-label="{{ item.title | escape }}" href="{{ item.url }}/">{{ item.title | escape }}</a>
+                      <a area-label="{{ item.title | escape }}" href="{{ item.url }}">{{ item.title | escape }}</a>
                     </div>
                   {%- endfor -%}
                 </div>
@@ -66,7 +66,7 @@
                       <ul class="list-unstyled">
                         {%- for item in block.settings.locations_a.links -%}
                           <li>
-                            <a rel="noreferrer nofollow" href="{{ item.url }}/">{{ item.title | escape }}</a>
+                            <a rel="noreferrer nofollow" href="{{ item.url }}">{{ item.title | escape }}</a>
                           </li>
                         {%- endfor -%}
                       </ul>
@@ -98,7 +98,7 @@
                   <div class="brands-list">
                     {%- for item in block.settings.brands_menu.links -%}
                       <div>
-                        <a area-label="{{ item.title | escape }}" href="{{ item.url }}/">{{ item.title | escape }}</a>
+                        <a area-label="{{ item.title | escape }}" href="{{ item.url }}">{{ item.title | escape }}</a>
                       </div>
                     {%- endfor -%}
                   </div>
