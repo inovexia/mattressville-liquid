@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     {% if canonical_url %}
-      {% unless canonical_url ends_with: '/' %}
-        {% assign canonical_url = canonical_url | append: '/' %}
+      {% assign last_char = canonical_url | slice: -1 %}
+      {% unless last_char == "/" %}
+        {% assign canonical_url = canonical_url | append: "/" %}
       {% endunless %}
       <link rel="canonical" href="{{ canonical_url }}">
     {% endif %}
