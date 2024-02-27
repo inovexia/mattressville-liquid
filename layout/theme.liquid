@@ -23,11 +23,15 @@
     </title>
 
     {% if page_description %}
-      {% assign truncated_description = page_description | truncate: 149, "" %}
-      {% if page_description.size > 149 %}
+      {% if template != 'index' %}
+        {% assign truncated_description = page_description | truncate: 149, "" %}
+        {% if page_description.size > 149 %}
           {% assign truncated_description = truncated_description | append: "…" %}
+        {% endif %}
+        <meta name="description" content="{{ truncated_description | escape }}">
+      {% else %}
+        <meta name="description" content="{{ page_description | escape }}">
       {% endif %}
-      <meta name="description" content="{{ truncated_description | escape }}">
     {% endif %}
 
     {% render 'meta-tags' %}
