@@ -16,6 +16,9 @@
 %}
 <meta name="robots" content="index, follow">
 <meta name="HandheldFriendly" content="true">
+{% if page_title != blank %}
+<meta name="keywords" content="{{ page_title }}">
+{% endif %}
 <meta property="og:site_name" content="{{ shop.name }}">
 <meta property="og:url" content="{{ og_url }}">
 <meta property="og:title" content="{{ og_title | escape }}">
