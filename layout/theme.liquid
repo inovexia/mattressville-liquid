@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     {% if canonical_url %}
+      {% if template != 'product'  %}
       {% assign last_char = canonical_url | slice: -1 %}
       {% unless last_char == "/" %}
         {% assign canonical_url = canonical_url | append: "/" %}
       {% endunless %}
+      {% endif %}
       <link rel="canonical" href="{{ canonical_url }}">
     {% endif %}
     <meta name="ahrefs-site-verification" content="45d770788531ddae23d09f8ad95b15995469c05dacb6ab2b391255b891077202"/>
