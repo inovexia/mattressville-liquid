@@ -24,7 +24,11 @@
     {%- endunless -%}
 
     <title>
-      {{ page_title }}
+      {% if page_title == "Products" and settings.all_collection_title != blank %}
+        {{ settings.all_collection_title }}
+      {% else %}
+        {{ page_title }}
+      {% endif %}
       {%- if current_tags %} | tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} | Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} | {{ shop.name }}{% endunless -%}
@@ -32,6 +36,8 @@
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
+    {% elsif page_title == "Products" and settings.all_collection_desc != blank %}
+      <meta name="description" content="{{ settings.all_collection_desc | escape }}">
     {% endif %}
 
     {% render 'meta-tags' %}

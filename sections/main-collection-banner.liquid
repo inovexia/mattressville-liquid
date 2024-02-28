@@ -20,7 +20,11 @@
     <div class="collection-hero__text-wrapper">
       <h1 class="collection-hero__title">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
-        {{- collection.title | escape -}}
+        {% if collection.title == "Products" and settings.all_collection_title != blank %}
+          {{ settings.all_collection_title }}
+        {% else %}
+          {{- collection.title | escape -}}
+        {% endif %}
       </h1>
 
       {%- if section.settings.show_collection_image and collection.image -%}
@@ -44,7 +48,13 @@
         </div>
       {%- endif -%}
       {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">{{ collection.description }}</div>
+        <div class="collection-hero__description rte">
+          {% if collection.title == "Products" and settings.all_collection_desc != blank %}
+            {{ settings.all_collection_desc }}
+          {% else %}
+            {{ collection.description }}
+          {% endif %}
+          </div>
       {%- endif -%}
     </div>
   </div>

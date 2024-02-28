@@ -632,6 +632,21 @@
     ]
   },
   {
+    "name": "All Collection Page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "all_collection_title",
+        "label": "Page Title"
+      },
+      {
+        "type": "richtext",
+        "id": "all_collection_desc",
+        "label": "Page Description"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.collection_cards.name",
     "settings": [
       {
