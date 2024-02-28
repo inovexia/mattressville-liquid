@@ -37,13 +37,12 @@
                       <div class="inner-menu">
                         {%- for childlink in link.links -%}
                           {% assign childlink_url = childlink.url %}
-                          {% if canonical_url contains '?' %}
-                          {% else %}
+                          {% unless canonical_url contains '?' or childlink_url contains '?' %}
                             {% assign last_char = childlink_url | slice: -1 %}
                             {% unless last_char == "/" %}
                               {% assign childlink_url = childlink_url | append: "/" %}
                             {% endunless %}
-                          {% endif %}
+                          {% endunless %}
                           <div class="dropdown-item">
                             <a class="nav-link" href="{{ childlink_url }}">{{ childlink.title | escape }}</a>
                           </div>
