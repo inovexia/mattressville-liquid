@@ -28,15 +28,11 @@
     </title>
 
     {% if page_description %}
-      {% if template != 'index' %}
-        {% assign truncated_description = page_description | truncate: 149, "" %}
-        {% if page_description.size > 149 %}
-          {% assign truncated_description = truncated_description | append: "…" %}
-        {% endif %}
-        <meta name="description" content="{{ truncated_description | escape }}">
-      {% else %}
-        <meta name="description" content="{{ page_description | escape }}">
-      {% endif %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% elsif page_title == "Products" and settings.all_collection_desc != blank %}
+      <meta name="description" content="{{ settings.all_collection_desc | escape }}">
+    {% else %}
+      <meta name="description" content="Mattressville's {{ page_title }} to choose for your best sleep, keep on exploring, we will bring you best offers there is.">
     {% endif %}
 
     {% render 'meta-tags' %}

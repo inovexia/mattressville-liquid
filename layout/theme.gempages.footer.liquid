@@ -31,6 +31,10 @@
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
+    {% elsif page_title == "Products" and settings.all_collection_desc != blank %}
+      <meta name="description" content="{{ settings.all_collection_desc | escape }}">
+    {% else %}
+      <meta name="description" content="Mattressville's {{ page_title }} to choose for your best sleep, keep on exploring, we will bring you best offers there is.">
     {% endif %}
 
     {% render 'meta-tags' %}
