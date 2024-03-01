@@ -5,8 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    <link rel="canonical" href="{{ canonical_url }}">
-    <meta name="ahrefs-site-verification" content="45d770788531ddae23d09f8ad95b15995469c05dacb6ab2b391255b891077202"/>
+    {% if canonical_url %}
+      {% if template != 'product'  %}
+      {% assign last_char = canonical_url | slice: -1 %}
+      {% unless last_char == "/" %}
+        {% assign canonical_url = canonical_url | append: "/" %}
+      {% endunless %}
+      {% endif %}
+      <link rel="canonical" href="{{ canonical_url }}">
+    {% endif %}
+    <meta name="ahrefs-site-verification" content="4e435d3dd5da41fc95ce8f1b596d7f77297392cb39c5544172a5fff46cf800ea">
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -16,14 +24,22 @@
     {%- endunless -%}
 
     <title>
-      {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {% if page_title == "Products" and settings.all_collection_title != blank %}
+        {{ settings.all_collection_title }}
+      {% else %}
+        {{ page_title }}
+      {% endif %}
+      {%- if current_tags %} | tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} | Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} | {{ shop.name }}{% endunless -%}
     </title>
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
+    {% elsif page_title == "Products" and settings.all_collection_desc != blank %}
+      <meta name="description" content="{{ settings.all_collection_desc | escape }}">
+    {% else %}
+      <meta name="description" content="Mattressville's {{ page_title }} to choose for your best sleep, keep on exploring, we will bring you best offers there is.">
     {% endif %}
 
     {% render 'meta-tags' %}
@@ -45,7 +61,6 @@
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
-      {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
       {{ settings.type_header_font | font_face: font_display: 'swap' }}

@@ -123,7 +123,7 @@
         "id": "type_header_font",
         "default": "roboto_n4",
         "label": "t:settings_schema.typography.settings.type_header_font.label",
-        "info": "t:settings_schema.typography.settings.type_header_font.info"
+        "info": "t:settings_schema.typography.settings.type_header_font.info" 
       },
       {
         "type": "range",
@@ -628,6 +628,21 @@
         "unit": "px",
         "label": "t:settings_schema.global.settings.blur.label",
         "default": 0
+      }
+    ]
+  },
+  {
+    "name": "All Collection Page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "all_collection_title",
+        "label": "Page Title"
+      },
+      {
+        "type": "richtext",
+        "id": "all_collection_desc",
+        "label": "Page Description"
       }
     ]
   },

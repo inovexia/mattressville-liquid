@@ -154,10 +154,14 @@
                   assign wrapper = 'div'
                 endif
               %}
+              {% capture image_url_parts %}{{ "files/mattressville_clearance_small_8af409af-79e4-41d0-960c-115baae569dd.webp" | split: "/" }}{% endcapture %}
+              {% capture filename %}{{ image_url_parts | last | split: "." | first }}{% endcapture %}
+              {% assign alt_text = filename | replace: "_", " " | replace: "-", " " | capitalize %}
               <{{ wrapper }}
                 {%- if wrapper == 'a' -%}
                   href="{{ block.settings.link_to }}"
                 {%- endif -%}
+                aria-label="{{ alt_text }}"
                 class="psb-img-wrapper"
               >
                 {% if block.settings.background_image == blank %}
@@ -170,7 +174,7 @@
                   {% endcapture %}
                   <img src="{{ current_placeholder_image }}" alt="Placeholder image" width="1500" height="1500" loading="lazy">
                 {% else %}
-                  {{ block.settings.background_image | image_url: width: 1500 | image_tag: loading: 'lazy' }}
+                  {{ block.settings.background_image | image_url: width: 1500 | image_tag: loading: 'lazy', alt: alt_text }}
                 {% endif %}
               </{{ wrapper }}>
             </div>

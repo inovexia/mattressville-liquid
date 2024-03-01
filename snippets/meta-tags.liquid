@@ -3,7 +3,9 @@
   assign og_url = canonical_url | default: request.origin
   assign og_type = 'website'
   assign og_description = page_description | default: shop.description | default: shop.name
-
+  if template != 'index' and og_description.size > 149
+    assign og_description = og_description | truncate: 149, "" | append: "…"
+  endif
   if request.page_type == 'product'
     assign og_type = 'product'
   elsif request.page_type == 'article'
@@ -12,7 +14,11 @@
     assign og_url = request.origin
   endif
 %}
-
+<meta name="robots" content="index, follow">
+<meta name="HandheldFriendly" content="true">
+{% if page_title != blank %}
+<meta name="keywords" content="{{ page_title }}">
+{% endif %}
 <meta property="og:site_name" content="{{ shop.name }}">
 <meta property="og:url" content="{{ og_url }}">
 <meta property="og:title" content="{{ og_title | escape }}">

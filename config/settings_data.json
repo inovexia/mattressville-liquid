@@ -47,6 +47,8 @@
     "card_shadow_horizontal_offset": 2,
     "card_shadow_vertical_offset": 4,
     "card_shadow_blur": 10,
+    "all_collection_title": "All Products",
+    "all_collection_desc": "",
     "collection_card_style": "card",
     "collection_card_image_padding": 6,
     "collection_card_text_alignment": "center",

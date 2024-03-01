@@ -36,8 +36,15 @@
                     {%- if hasChildren -%}
                       <div class="inner-menu">
                         {%- for childlink in link.links -%}
+                          {% assign childlink_url = childlink.url %}
+                          {% unless canonical_url contains '?' or childlink_url contains '?' %}
+                            {% assign last_char = childlink_url | slice: -1 %}
+                            {% unless last_char == "/" %}
+                              {% assign childlink_url = childlink_url | append: "/" %}
+                            {% endunless %}
+                          {% endunless %}
                           <div class="dropdown-item">
-                            <a class="nav-link" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                            <a class="nav-link" href="{{ childlink_url }}">{{ childlink.title | escape }}</a>
                           </div>
                         {%- endfor -%}
                       </div>
