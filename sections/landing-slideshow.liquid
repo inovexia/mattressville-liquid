@@ -148,17 +148,42 @@
                     endif
                   -%}
                   {%- if forloop.first %}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3840
-                      | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
-                    }}
+                    <img
+                      srcset="
+                        {%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                        {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                        {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+                        {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                        {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
+                      "
+                      src="{{ block.settings.image | image_url: width: 1030 }}"
+                      sizes="(max-width: 164px) 100vw, (min-width: 165px) and (max-width: 359px) 165px, (min-width: 360px) and (max-width: 534px) 360px, (min-width: 535px) and (max-width: 749px) 535px, (min-width: 750px) and (max-width: 1069px) 750px, (min-width: {{ settings.page_width }}px) {{ settings.page_width }}px"
+                      alt="{{block.settings.image.alt}}"
+                      loading="lazy"
+                      width="{{ block.settings.image.width }}"
+                      height="{{ block.settings.image.height }}"
+                      fetchpriority="{{ fetch_priority }}"
+                    />
                   {%- else -%}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3840
-                      | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
-                    }}
+                    <img
+                      srcset="
+                        {%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                        {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                        {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+                        {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                        {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
+                      "
+                      src="{{ block.settings.image | image_url: width: 1030 }}"
+                      sizes="(max-width: 164px) 100vw, (min-width: 165px) and (max-width: 359px) 165px, (min-width: 360px) and (max-width: 534px) 360px, (min-width: 535px) and (max-width: 749px) 535px, (min-width: 750px) and (max-width: 1069px) 750px, (min-width: {{ settings.page_width }}px) {{ settings.page_width }}px"
+                      alt="{{block.settings.image.alt}}"
+                      loading="lazy"
+                      width="{{ block.settings.image.width }}"
+                      height="{{ block.settings.image.height }}"
+                    />
                   {%- endif -%}
                 {%- else -%}
                   {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
