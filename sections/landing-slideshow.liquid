@@ -148,6 +148,11 @@
                     endif
                   -%}
                   {%- if forloop.first %}
+                    {% assign preload_image_url = block.settings.image | image_url: width: 1030 %}
+                    {% if preload_image_url %}
+                      {% assign preload_tag = "<link rel='preload' href='" | append: preload_image_url | append: "' as='image'>" %}
+                      {{ preload_tag | strip_html }}
+                    {% endif %}
                     <img
                       srcset="
                         {%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
@@ -158,7 +163,7 @@
                         {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
                         {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
                       "
-                      src="{{ block.settings.image | image_url: width: 1030 }}"
+                      src="{{ preload_image_url }}"
                       sizes="(max-width: 164px) 100vw, (min-width: 165px) and (max-width: 359px) 165px, (min-width: 360px) and (max-width: 534px) 360px, (min-width: 535px) and (max-width: 749px) 535px, (min-width: 750px) and (max-width: 1069px) 750px, (min-width: {{ settings.page_width }}px) {{ settings.page_width }}px"
                       alt="{{block.settings.image.alt}}"
                       width="{{ block.settings.image.width }}"
