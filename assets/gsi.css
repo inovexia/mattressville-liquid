@@ -61,6 +61,14 @@
   content: "\e9b2";
 }
 
+.gs-user:before {
+  content: "\ea00";
+}
+
+.gs-heart:before {
+  content: "\e97d";
+}
+
 .page-title, .title {
   color: var(--secondary-color);
 }

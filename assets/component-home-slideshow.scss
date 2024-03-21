@@ -24,17 +24,33 @@
       }
     }
 
-    .banner__content{
+    .banner__content {
+      display: none;
+    }
+
+    .slideshow__autoplay {
       display: none;
     }
   }
 
   .home-slideshow-sidebar {
     background-color: #eff9f9;
-    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
     text-align: center;
     flex-grow: 1;
+    position: relative;
 
+    &::after {
+      @media (min-width: 990px) {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        top: 100%;
+        background-color: #eff9f9;
+        left: 0;
+        z-index: 0;
+      }
+    }
     @media (min-width: 990px) {
       padding-top: 15px;
     }
