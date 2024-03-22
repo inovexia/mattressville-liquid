@@ -98,9 +98,10 @@
         "share"
       ],
       "custom_css": [
-        ".icon-with-text__item {align-items: baseline; flex-direction: column;}",
+        ".icon-with-text__item {align-items: baseline; flex-direction: column; gap: 8px;}",
         "@media (min-width: 990px) {.icon-with-text__item {margin-top: -100px; }}",
-        ".icon-with-text--vertical img {width: 65px; height: auto;}"
+        ".icon-with-text--vertical img {width: 65px; height: auto;}",
+        ".icon-with-text__item .h4.inline-richtext {font-size: 11px; margin-bottom: 24px; font-weight: 400; line-height: 1.5;}"
       ],
       "settings": {
         "enable_sticky_info": true,
