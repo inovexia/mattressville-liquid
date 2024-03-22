@@ -432,7 +432,7 @@
         "enable_navigation": false,
         "pagination_type": "bullets",
         "background_color": "#e9f3f3",
-        "swiper_control_color": "#d7355c",
+        "swiper_control_color": "#ff5c7b",
         "review-background-color": "rgba(0,0,0,0)",
         "stars-color": "#ffa500",
         "text_color": "#000000",

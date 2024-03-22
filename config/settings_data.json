@@ -3,7 +3,7 @@
     "logo": "shopify:\/\/shop_images\/mattressville-logo-no-slogan.png",
     "logo_width": 260,
     "favicon": "shopify:\/\/shop_images\/favicon_862dbb71-c24a-4a7a-bd64-12a92645a18f.png",
-    "theme_accent": "#d7355c",
+    "theme_accent": "#ff5c7b",
     "theme_secondary": "#535353",
     "type_header_font": "roboto_n7",
     "heading_scale": 100,
@@ -125,7 +125,7 @@
     "checkout_input_background_color_mode": "white",
     "checkout_heading_font": "Roboto",
     "checkout_body_font": "Roboto",
-    "checkout_button_color": "#d7355c",
+    "checkout_button_color": "#ff5c7b",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -229,11 +229,11 @@
       },
       "scheme-5": {
         "settings": {
-          "background": "#d7355c",
+          "background": "#ff5c7b",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#d7355c",
+          "button_label": "#ff5c7b",
           "secondary_button_label": "#ffffff",
           "shadow": "#535353"
         }
@@ -244,7 +244,7 @@
           "background_gradient": "",
           "text": "#535353",
           "button": "#535353",
-          "button_label": "#d7355c",
+          "button_label": "#ff5c7b",
           "secondary_button_label": "#535353",
           "shadow": "#f1f3f4"
         }
@@ -254,9 +254,9 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#000000",
-          "button": "#d7355c",
+          "button": "#ff5c7b",
           "button_label": "#ffffff",
-          "secondary_button_label": "#d7355c",
+          "secondary_button_label": "#ff5c7b",
           "shadow": "#535353"
         }
       }
@@ -265,7 +265,7 @@
   "presets": {
     "Default": {
       "logo_width": 260,
-      "theme_accent": "#d7355c",
+      "theme_accent": "#ff5c7b",
       "theme_secondary": "#535353",
       "color_schemes": {
         "scheme-1": {
@@ -314,11 +314,11 @@
         },
         "scheme-5": {
           "settings": {
-            "background": "#d7355c",
+            "background": "#ff5c7b",
             "background_gradient": "",
             "text": "#FFFFFF",
             "button": "#FFFFFF",
-            "button_label": "#d7355c",
+            "button_label": "#ff5c7b",
             "secondary_button_label": "#FFFFFF",
             "shadow": "#535353"
           }
@@ -329,7 +329,7 @@
             "background_gradient": "",
             "text": "#535353",
             "button": "#535353",
-            "button_label": "#d7355c",
+            "button_label": "#ff5c7b",
             "secondary_button_label": "#535353",
             "shadow": "#f1f3f4"
           }
