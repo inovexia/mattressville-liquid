@@ -98,7 +98,8 @@
         "share"
       ],
       "custom_css": [
-        ".icon-with-text__item {align-items: baseline;}",
+        ".icon-with-text__item {align-items: baseline; flex-direction: column;}",
+        "@media (min-width: 990px) {.icon-with-text__item {margin-top: -100px; }}",
         ".icon-with-text--vertical img {width: 65px; height: auto;}"
       ],
       "settings": {
