@@ -511,7 +511,19 @@ a.product__text {
 }
 
 .product-form__buttons {
-  max-width: 44rem;
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+}
+
+.button--full-width {
+  flex: 1 1 50%;
+  width: 50%;
+}
+
+.shopify-payment-button {
+  flex: 1 1 50%;
+  width: 50%;
 }
 
 .product--no-media .product__info-container>modal-opener {
