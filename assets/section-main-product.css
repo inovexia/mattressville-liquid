@@ -326,6 +326,14 @@ fieldset.product-form__input .form__label {
   margin: 2.5rem 0;
 }
 
+.product__info-container .price--on-sale .price__sale .price-item.price-item--sale {
+  color: var(--accent-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  margin-bottom: 10px;
+}
+
 .product__text {
   margin-bottom: 0;
 }
