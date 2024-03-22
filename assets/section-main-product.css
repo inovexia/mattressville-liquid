@@ -379,6 +379,14 @@ a.product__text {
   margin: 0;
 }
 
+.product__title>h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33px;
+  margin-bottom: 5px;
+  max-width: 490px;
+}
+
 .product__title>a {
   display: none;
 }
