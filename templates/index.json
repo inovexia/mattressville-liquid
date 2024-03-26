@@ -7,7 +7,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/welcome_to_Mattressville_banner_main.webp",
-            "slide_link": "shopify:\/\/collections\/all-mattresses",
+            "slide_link": "\/collections\/all-mattresses",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
