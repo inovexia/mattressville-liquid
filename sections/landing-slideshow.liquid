@@ -122,6 +122,7 @@
                 opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
               }
             </style>
+            <a href="{{ block.settings.slide_link }}">
             <div
               class="slideshow__slide grid__item grid--1-col slider__slide"
               id="Slide-{{ section.id }}-{{ forloop.index }}"
@@ -226,6 +227,7 @@
                   {%- endif -%}
                 </div>
               </div>
+            </a>
             </div>
           {%- endfor -%}
         </div>
@@ -500,6 +502,11 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.home_slideshow.blocks.slide.settings.image.label"
+        },
+        {
+          "type": "url",
+          "id": "slide_link",
+          "label": "Slide Link"
         },
         {
           "type": "inline_richtext",

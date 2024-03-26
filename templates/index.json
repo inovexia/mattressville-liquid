@@ -7,6 +7,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/welcome_to_Mattressville_banner_main.webp",
+            "slide_link": "shopify:\/\/collections\/all-mattresses",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -25,6 +26,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Why_Tempur-Pedic_is_the_King_of_Memory_Foam_Mattresses-mattressville.jpg",
+            "slide_link": "shopify:\/\/collections\/all-mattresses",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -43,11 +45,12 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/younger_generations_are_opting_for_adjustable_beds.webp",
+            "slide_link": "shopify:\/\/collections\/all-mattresses",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify:\/\/collections\/all-mattresses",
             "button_style_secondary": false,
             "box_align": "middle-right",
             "show_text_box": false,
@@ -61,6 +64,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/The_Best_Mattresses_of_2023-Mattressville.webp",
+            "slide_link": "shopify:\/\/collections\/all-mattresses",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -79,6 +83,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville_natura_banner_rev_2024_ddd17fac-ab54-4ae3-acc0-7c8dd0ed254c.jpg",
+            "slide_link": "shopify:\/\/collections\/all-mattresses",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -97,6 +102,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
+            "slide_link": "shopify:\/\/collections\/all-mattresses",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -115,6 +121,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville_kingsdown_coolwave_banner.jpg",
+            "slide_link": "shopify:\/\/collections\/all-mattresses",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -133,6 +140,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville_banner_stearns_and_foster__2024.jpg",
+            "slide_link": "shopify:\/\/collections\/brand-stearns-and-foster",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -151,6 +159,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville_sealy_repreve_banner_2024.jpg",
+            "slide_link": "shopify:\/\/collections\/all-mattresses",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -169,6 +178,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Tempur-pedic_home_banner_48a81cb1-840c-4199-a41e-3d9403c99dd5.jpg",
+            "slide_link": "shopify:\/\/collections\/all-mattresses",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
