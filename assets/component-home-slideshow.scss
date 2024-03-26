@@ -23,6 +23,22 @@
         max-width: 100%;
       }
     }
+    slideshow-component {
+      height: 100%;
+
+      .slideshow {
+        height: 100%;
+
+        .slideshow__slide {
+          position: relative;
+          z-index: 2;
+
+          .slideshow__media {
+            height: 100%;
+          }
+        }
+      }
+    }
 
     .banner__content {
       display: none;

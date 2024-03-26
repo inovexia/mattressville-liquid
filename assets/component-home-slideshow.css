@@ -23,6 +23,19 @@
     max-width: 100%;
   }
 }
+.home-slideshow-inner .home-slideshow slideshow-component {
+  height: 100%;
+}
+.home-slideshow-inner .home-slideshow slideshow-component .slideshow {
+  height: 100%;
+}
+.home-slideshow-inner .home-slideshow slideshow-component .slideshow .slideshow__slide {
+  position: relative;
+  z-index: 2;
+}
+.home-slideshow-inner .home-slideshow slideshow-component .slideshow .slideshow__slide .slideshow__media {
+  height: 100%;
+}
 .home-slideshow-inner .home-slideshow .banner__content {
   display: none;
 }
