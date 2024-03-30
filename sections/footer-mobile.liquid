@@ -106,6 +106,23 @@
               </div>
               <hr class="separator">
             </div>
+            {%- when 'affirm_disclaimer' -%}
+              <div class="item">
+                <div class="header">
+                  <button type="button" class="btn-toggle">
+                    <span>{{ block.settings.section_title | escape }}</span>
+                    <i class="gsi gs-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="collapse">
+                  <div class="content about">
+                    <div class="description">
+                  {{ block.settings.affirm_disclaimer }}
+                </div>
+                  </div>
+                </div>
+                <hr class="separator">
+              </div>
       {%- endcase -%}
     {%- endfor -%}
   </div>
@@ -456,6 +473,24 @@ document.addEventListener("DOMContentLoaded", function() {
             "label": "Locations B"
           }
         ]
+      },
+      {
+        "type": "affirm_disclaimer",
+        "name": "Affirm Disclaimer",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "Affirm Disclaomer"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "affirm_disclaimer",
+            "label": "Affirm Disclaimer"
+          }
+        ]
       }
     ],
     "presets": [
@@ -473,6 +508,9 @@ document.addEventListener("DOMContentLoaded", function() {
           },
           {
             "type": "brands_area"
+          },
+          {
+            "type": "affirm_disclaimer"
           }
         ]
       }

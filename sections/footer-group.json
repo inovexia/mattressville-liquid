@@ -40,13 +40,21 @@
             "section_title": "Brands",
             "brands_menu": "brands"
           }
+        },
+        "fm-4": {
+          "type": "affirm_disclaimer",
+          "settings": {
+            "section_title": "Affirm",
+            "affirm_disclaimer": "Payment options through Affirm Canada Holdings Ltd. (\"Affirm\"). Your rate will be 0–31.99% APR (where available and subject to provincial regulatory limitations). APR offered is based on creditworthiness and subject to an eligibility check. Not all customers will be eligible for 0% APR. Payment options depend on your purchase amount, may vary by merchant, and may not be available in all provinces/territories. Actual payment option terms will be shown at checkout. A down payment (or a payment due today) may be required. Affirm accepts debit cards and PAD as forms of repayment on payment options. Select payment options may be eligible for repayment in the form of credit cards. Please review the terms and conditions of your credit card when using it as a form of repayment. Sample payment options may be: a $800 purchase could be split into 12 monthly payments of $72.21 at 15% APR, or 4 interest-free payments of $200 every 2 weeks. For more information, please see <a href=\"https://www.affirm.com/en-ca/how-it-works\">https://www.affirm.com/en-ca/how-it-works</a>."
+          }
         }
       },
       "block_order": [
         "fm-0",
         "fm-1",
         "fm-2",
-        "fm-3"
+        "fm-3",
+        "fm-4"
       ],
       "settings": {
         "background_color": "#f1f3f4",
@@ -61,7 +69,8 @@
         "enable_google_pay_payment": true,
         "enable_master_payment": true,
         "enable_shopify_pay_payment": false,
-        "enable_visa_payment": true
+        "enable_visa_payment": true,
+        "affirm_disclaimer": "Payment options through Affirm Canada Holdings Ltd. (\"Affirm\"). Your rate will be 0–31.99% APR (where available and subject to provincial regulatory limitations). APR offered is based on creditworthiness and subject to an eligibility check. Not all customers will be eligible for 0% APR. Payment options depend on your purchase amount, may vary by merchant, and may not be available in all provinces/territories. Actual payment option terms will be shown at checkout. A down payment (or a payment due today) may be required. Affirm accepts debit cards and PAD as forms of repayment on payment options. Select payment options may be eligible for repayment in the form of credit cards. Please review the terms and conditions of your credit card when using it as a form of repayment. Sample payment options may be: a $800 purchase could be split into 12 monthly payments of $72.21 at 15% APR, or 4 interest-free payments of $200 every 2 weeks. For more information, please see <a href=\"https://www.affirm.com/en-ca/how-it-works\">https://www.affirm.com/en-ca/how-it-works</a>."
       }
     },
     "footer-top": {
@@ -133,7 +142,8 @@
         "enable_google_pay_payment": true,
         "enable_master_payment": true,
         "enable_shopify_pay_payment": false,
-        "enable_visa_payment": true
+        "enable_visa_payment": true,
+        "affirm_disclaimer": "Payment options through Affirm Canada Holdings Ltd. (\"Affirm\"). Your rate will be 0–31.99% APR (where available and subject to provincial regulatory limitations). APR offered is based on creditworthiness and subject to an eligibility check. Not all customers will be eligible for 0% APR. Payment options depend on your purchase amount, may vary by merchant, and may not be available in all provinces/territories. Actual payment option terms will be shown at checkout. A down payment (or a payment due today) may be required. Affirm accepts debit cards and PAD as forms of repayment on payment options. Select payment options may be eligible for repayment in the form of credit cards. Please review the terms and conditions of your credit card when using it as a form of repayment. Sample payment options may be: a $800 purchase could be split into 12 monthly payments of $72.21 at 15% APR, or 4 interest-free payments of $200 every 2 weeks. For more information, please see <a href=\"https://www.affirm.com/en-ca/how-it-works\">https://www.affirm.com/en-ca/how-it-works</a>."
       }
     }
   },
