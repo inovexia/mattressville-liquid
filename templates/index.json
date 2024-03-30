@@ -207,7 +207,8 @@
         "slide_bTWUcd"
       ],
       "custom_css": [
-        "slideshow-component {margin-top: 20px;}"
+        "slideshow-component {margin-top: 20px;}",
+        ".slider-buttons {display: none;}"
       ],
       "settings": {
         "slide_height": "adapt_image",
