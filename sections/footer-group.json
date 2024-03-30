@@ -3,7 +3,9 @@
   "type": "footer",
   "sections": {
     "yotpo-side-reviews": {
-      "type": "custom-yotpo-side-reviews"
+      "type": "custom-yotpo-side-reviews",
+      "settings": {
+      }
     },
     "footer-mobile": {
       "type": "footer-mobile",
@@ -11,18 +13,23 @@
         "fm-0": {
           "type": "about_area",
           "settings": {
-            "about_menu": "footer-bottom"
+            "section_title": "About Us",
+            "section_content": "Mattressville is your one stop shop for deals and discounts on premium mattresses and sleep accessories so you can Have a Good Night, Every Night! Shop online or visit us in Mississauga near Toronto and find out why we are the highest rated mattress store.",
+            "about_menu": "footer-bottom",
+            "contact_mail": "info@mattressville.ca"
           }
         },
         "fm-1": {
           "type": "styles_area",
           "settings": {
+            "section_title": "Styles\/Types",
             "styles_menu": "styles"
           }
         },
         "fm-2": {
           "type": "locations_area",
           "settings": {
+            "section_title": "Delivery Areas",
             "locations_a": "locations-a",
             "locations_b": "locations-b"
           }
@@ -30,6 +37,7 @@
         "fm-3": {
           "type": "brands_area",
           "settings": {
+            "section_title": "Brands",
             "brands_menu": "brands"
           }
         }
@@ -39,31 +47,63 @@
         "fm-1",
         "fm-2",
         "fm-3"
-      ]
+      ],
+      "settings": {
+        "background_color": "#f1f3f4",
+        "copyright_text": "© 2023 online mattress store - mattressville.ca. All Rights Reserved.",
+        "enable_american_express_payment": false,
+        "enable_affirm_payment": true,
+        "enable_paypal_payment": true,
+        "enable_opay_payment": true,
+        "enable_apple_pay_payment": false,
+        "enable_diners_club_payment": false,
+        "enable_discover_payment": false,
+        "enable_google_pay_payment": true,
+        "enable_master_payment": true,
+        "enable_shopify_pay_payment": false,
+        "enable_visa_payment": true
+      }
     },
     "footer-top": {
       "type": "footer-top",
       "blocks": {
         "ft-0": {
-          "type": "about_column"
+          "type": "about_column",
+          "settings": {
+            "section_title": "About Us",
+            "section_title_link": "",
+            "section_content": "Mattressville is your one stop shop for deals and discounts on premium mattresses and sleep accessories so you can Have a Good Night, Every Night! Shop online or visit us in Mississauga near Toronto and find out why we are the highest rated mattress store.",
+            "contact_title": "Contact Us",
+            "contact_title_link": "",
+            "contact_address": "1911 Dundas St. East, Unit 18 Mississauga, On L4X 1M1",
+            "contact_number": "905-212-7722",
+            "contact_mail": "info@mattressville.ca"
+          }
         },
         "ft-1": {
           "type": "brand_column",
           "settings": {
+            "section_title": "Brands",
             "brands_menu": "brands"
           }
         },
         "ft-2": {
           "type": "styles_column",
           "settings": {
+            "section_title": "Styles\/Types",
             "styles_menu": "styles"
           }
         },
         "ft-3": {
           "type": "locations_column",
           "settings": {
+            "section_title": "Delivery Areas",
             "locations_a": "locations-a",
-            "locations_b": "locations-b"
+            "locations_b": "locations-b",
+            "review_image_height": 135,
+            "review_image_width": 155,
+            "award_image_height": 114,
+            "award_image_width": 155
           }
         }
       },
@@ -72,12 +112,28 @@
         "ft-1",
         "ft-2",
         "ft-3"
-      ]
+      ],
+      "settings": {
+        "background_color": "#f1f3f4"
+      }
     },
     "footer-bottom": {
       "type": "footer-bottom",
       "settings": {
-        "footer_menu": "footer-bottom"
+        "text_color": "#ffffff",
+        "footer_menu": "footer-bottom",
+        "copyright_text": "© 2024 online mattress store - mattressville.ca. All Rights Reserved.",
+        "enable_american_express_payment": false,
+        "enable_affirm_payment": true,
+        "enable_paypal_payment": true,
+        "enable_opay_payment": true,
+        "enable_apple_pay_payment": false,
+        "enable_diners_club_payment": false,
+        "enable_discover_payment": false,
+        "enable_google_pay_payment": true,
+        "enable_master_payment": true,
+        "enable_shopify_pay_payment": false,
+        "enable_visa_payment": true
       }
     }
   },
