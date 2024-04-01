@@ -467,7 +467,8 @@
       ".content > p > img {border-radius: 25px;}",
       ".collection-hero__image-page-width img {border-radius: 25px; box-shadow: 0 0 10px -8px var(--secondary-color);}",
       "@media screen and (min-width: 750px) {.facets__form-vertical {width: 30rem; }}",
-      "body .collection-hero__description span {font-size: 16px; line-height: 24px; color: #535353; font-family: \"Roboto\", sans-serif;}"
+      "body .collection-hero__description span {font-size: 16px; line-height: 24px; color: #535353; font-family: \"Roboto\", sans-serif;}",
+      "body{color:#212529;}"
     ]
   }
 }
