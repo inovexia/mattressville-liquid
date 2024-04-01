@@ -469,7 +469,10 @@
       "@media screen and (min-width: 750px) {.facets__form-vertical {width: 30rem; }}",
       "body .collection-hero__description span,body .collection-hero__description p {font-size: 16px; line-height: 24px; color: #535353; font-family: \"Roboto\", sans-serif;}",
       "body {color: #212529;}",
-      ".quantity-selector-btn {display: flex; align-items: center;}"
+      ".quantity-selector-btn {display: flex; align-items: center;}",
+      ".quantity-selector-btn .inventory-status {margin-left: 20px;}",
+      ".quantity-selector-btn .inventory-status .in-s {color: rgb(34, 139, 34); text-transform: uppercase;}",
+      ".quantity-selector-btn .inventory-status .out-s {color: #ff5c7b; text-transform: uppercase;}"
     ]
   }
 }
