@@ -4,7 +4,7 @@
     "logo_width": 260,
     "favicon": "shopify:\/\/shop_images\/favicon_862dbb71-c24a-4a7a-bd64-12a92645a18f.png",
     "theme_accent": "#ff5c7b",
-    "theme_secondary": "#535353",
+    "theme_secondary": "#212529",
     "type_header_font": "roboto_n7",
     "heading_scale": 100,
     "type_body_font": "roboto_n4",
@@ -467,7 +467,7 @@
       ".content > p > img {border-radius: 25px;}",
       ".collection-hero__image-page-width img {border-radius: 25px; box-shadow: 0 0 10px -8px var(--secondary-color);}",
       "@media screen and (min-width: 750px) {.facets__form-vertical {width: 30rem; }}",
-      "body .collection-hero__description span {font-size: 16px; line-height: 24px; color: #535353; font-family: 'Roboto', sans-serif;}"
+      "body .collection-hero__description span {font-size: 16px; line-height: 24px; color: #535353; font-family: \"Roboto\", sans-serif;}"
     ]
   }
 }
