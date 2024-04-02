@@ -473,7 +473,7 @@
       ".quantity-selector-btn .inventory-status {margin-left: 20px;}",
       ".quantity-selector-btn .inventory-status .in-s {color: rgb(34, 139, 34); text-transform: uppercase;}",
       ".quantity-selector-btn .inventory-status .out-s {color: #ff5c7b; text-transform: uppercase;}",
-      "\/* Why Mattressville Page *\/.multicolumn-card__info ul li {text-decoration: none; color: #212529; line-height: 30px; font-size: 13px; border-bottom: none; font-family: 'Roboto', sans-serif;}"
+      " \/* Why Mattressville Page *\/.multicolumn-card__info ul li {text-decoration: none; color: #212529; line-height: 30px; font-size: 13px; border-bottom: none; font-family: \"Roboto\", sans-serif;}"
     ]
   }
 }
