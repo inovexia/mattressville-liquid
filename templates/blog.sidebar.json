@@ -8,7 +8,7 @@
         "img {border-radius: 15px;}"
       ],
       "settings": {
-        "page": "blogs",
+        "page": "blog",
         "heading_size": "h1",
         "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
         "padding_top": 36,
