@@ -284,6 +284,9 @@
         "heading_azWRtK",
         "text_pN7b38"
       ],
+      "custom_css": [
+        ".rich-text__wrapper{padding:0;}"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
