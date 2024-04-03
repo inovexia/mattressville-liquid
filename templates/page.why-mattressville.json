@@ -450,7 +450,7 @@
       "custom_css": [
         ".multicolumn-card {padding-top: 20px; border-radius: 5px; box-shadow: -5px -2px 8px #ccc;}",
         ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 100%; max-width: 120px;}",
-        ".section-template--22113196278068__multicolumn_fK9pNm-padding {padding-left: 0; padding-right: 0;}"
+        ".animate--slide-in{padding-left: 0; padding-right: 0;}"
       ],
       "settings": {
         "title": "",
