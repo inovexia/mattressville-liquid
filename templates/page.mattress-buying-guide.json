@@ -47,7 +47,7 @@
       ],
       "custom_css": [
         ".rich-text {border-radius: 15px; width: unset;}",
-        ".isolate .rich-text h4 {font-size: 20px; font-weight: 500;}"
+        ".isolate .rich-text h4 {font-size: 20px; font-weight: 500; margin: 10px 0px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
