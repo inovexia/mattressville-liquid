@@ -246,7 +246,7 @@
       "custom_css": [
         "h3 {font-size: 1.4em;}",
         ".accordion {padding: 0;}",
-        ".collapsible-content{max-width:100%;}"
+        ".collapsible-content__wrapper{max-width: 100%;}"
       ],
       "settings": {
         "caption": "",
