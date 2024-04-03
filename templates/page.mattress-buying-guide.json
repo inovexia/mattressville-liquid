@@ -21,7 +21,7 @@
         "heading_ayGhc9"
       ],
       "custom_css": [
-        ".rich-text__wrapper { width: unset; }"
+        ".rich-text__wrapper {width: unset;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -46,7 +46,8 @@
         "text_HJBgXR"
       ],
       "custom_css": [
-        ".rich-text {border-radius: 15px; width: unset; }"
+        ".rich-text {border-radius: 15px; width: unset;}",
+        ".isolate .rich-text h4 {font-size: 20px; font-weight: 500;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -79,10 +80,10 @@
         "text_tPNYfm"
       ],
       "custom_css": [
-        "@media screen and (min-width: 990px) {.rich-text__blocks {max-width: 100%;}}",
-        ".rich-text__wrapper { width: unset; padding: 0; }",
-        ".rich-text__wrapper a { color: #098fc7; text-decoration: none;background-color: transparent; }",
-        ".rich-text__wrapper a:hover { text-decoration: underline; }"
+        "@media screen and (min-width: 990px) {.rich-text__blocks {max-width: 100%; }}",
+        ".rich-text__wrapper {width: unset; padding: 0;}",
+        ".rich-text__wrapper a {color: #098fc7; text-decoration: none; background-color: transparent;}",
+        ".rich-text__wrapper a:hover {text-decoration: underline;}"
       ],
       "settings": {
         "desktop_content_position": "left",
