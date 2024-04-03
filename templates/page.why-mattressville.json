@@ -65,7 +65,7 @@
         ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}",
         "@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",
         ".multicolumn-card .multicolumn-card__info {text-align: left; width: 100%;}",
-        ".multicolumn{padding:0;}"
+        ".multicolumn . {padding: 0;}"
       ],
       "settings": {
         "title": "",
