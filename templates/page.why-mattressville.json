@@ -105,7 +105,8 @@
         "text_zUzLHV"
       ],
       "custom_css": [
-        ".rich-text__wrapper {padding: 0;}"
+        ".rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks {max-width: 100%;}"
       ],
       "settings": {
         "desktop_content_position": "center",
