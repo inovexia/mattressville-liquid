@@ -25,6 +25,11 @@
         <div class="tab-container">
           <div class="description-box d-flex">
             <div class="description-left flex-grow-1">
+              <div class="vendor-details">
+                {%- if product.title != blank -%}
+                  <h4>{{ product.title }}</h4>
+                {%- endif -%}
+              </div>
                {%- if product.description != blank -%}
                   {{ product.description }}
                 {%- endif -%}

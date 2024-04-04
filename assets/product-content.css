@@ -91,6 +91,9 @@
 .product-content .inner .tab-content .tab-pane .tab-container figure {
   margin-bottom: 16px;
 }
+.product-content .inner .tab-content .tab-pane .tab-container figure image {
+  width: 100%;
+}
 .product-content .inner .tab-content .tab-pane .tab-container a {
   color: #098fc7;
   text-decoration: none;
