@@ -48,7 +48,7 @@
             "title": "<a href=\"\/collections\/all-mattresses\" title=\"All Mattresses\">Shop All Mattresses<\/a>",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify:\/\/collections\/all-mattresses"
           }
         },
         "column_6F34dd": {
@@ -58,7 +58,7 @@
             "title": "<a href=\"https:\/\/mattressville.ca\/mattress-matchmaker\/\">Try our Mattress Matchmaker<\/a>",
             "text": "",
             "link_label": "",
-            "link": ""
+            "link": "shopify:\/\/pages\/mattress-matchmaker"
           }
         }
       },
@@ -67,7 +67,11 @@
         "column_6F34dd"
       ],
       "custom_css": [
-        ".multicolumn.background-primary .multicolumn-card {background: transparent;}"
+        ".multicolumn.background-primary .multicolumn-card {background: transparent;}",
+        ".inline-richtext a {font-size: 24px; font-weight: 500; line-height: 28px; margin-top: 30px; text-decoration: none; font-family: Roboto;}",
+        ".multicolumn.color-scheme-1.gradient.background-primary.no-heading {background-color: #eff9f9;}",
+        ".multicolumn-card__image-wrapper.multicolumn-card__image-wrapper--third-width.multicolumn-card-spacing {width: 190px;}",
+        ".media.media--transparent.media--adapt {border-radius: 20px;}"
       ],
       "settings": {
         "title": "",
