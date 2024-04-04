@@ -23,9 +23,27 @@
     <div class="tab-content">
       <div id="tabpane-description" class="tab-pane active">
         <div class="tab-container">
-          {%- if product.description != blank -%}
-            {{ product.description }}
-          {%- endif -%}
+          <div class="description-box d-flex">
+            <div class="description-left flex-grow-1">
+               {%- if product.description != blank -%}
+                  {{ product.description }}
+                {%- endif -%}
+            </div>
+            <div class="description-right flex-shrink-1">
+              <div class="mv-logo">
+                <img src="https://cdn.shopify.com/s/files/1/0558/6780/1757/files/mattressville-slogan1.png?v=1712205980" alt="Mattressville"/>
+              </div>
+              <div class="coupon-logo">
+                <a href="/pages/coupons" class="coupon-link-text">Don't Forget To Check</a>
+                <a href="/pages/coupons" class="coupon-link-text">Coupons & Deals</a>
+                <div class="coupon-image">
+                  <a href="/pages/coupons" class="coupon-link-text">
+                  <img src="https://cdn.shopify.com/s/files/1/0558/6780/1757/files/gift-lg.png?v=1712205818" alt="Coupon gift"/>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div id="tabpane-information" class="tab-pane">
