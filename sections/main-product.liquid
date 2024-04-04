@@ -61,7 +61,7 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
-  <div class="page-width">
+  <div class="page-width product-single">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       {% render 'product-media-gallery', variant_images: variant_images %}
@@ -291,8 +291,9 @@
                     </button>
                   </quantity-input>
                   <div class="inventory-status">
-                  {% if product.selected_or_first_available_variant.available %}<span class="in-s">In Stock</span> {% else %} <span class="out-s">Out of Stock</span> {% endif %}
-                    </div>
+                        {% if product.selected_or_first_available_variant.available %}<span class="in-s">In Stock</span> {% else %} <span class="out-s">Out of Stock</span> {% endif %}
+                  </div>
+                  {% comment %} Overriding by INVX {% endcomment %}
                   {%- liquid
                     assign volume_pricing_array = product.selected_or_first_available_variant.quantity_price_breaks | sort: 'quantity' | reverse
                     assign current_qty_for_volume_pricing = cart_qty | plus: product.selected_or_first_available_variant.quantity_rule.min
@@ -580,6 +581,20 @@
           {% render 'icon-arrow' %}
         </a>
       </product-info>
+      
+    </div>
+    <div class="product-footer">
+        <div class="sku-status"><strong>SKU:N/A</strong></div>
+        <div class="product-categories">
+          <strong>Categories:</strong>
+        {% assign valid_collections = "" %}
+        {% for collection in product.collections %}
+          {% unless collection.title contains '?' or collection.title contains '!' or collection.title contains '@' or collection.title contains '#' or collection.title contains '$' or collection.title contains '%' or collection.title contains '^' or collection.title contains '&' or collection.title contains '*' or collection.title contains '(' or collection.title contains ')' or collection.title contains '-' or collection.title contains '_' or collection.title contains '+' or collection.title contains '=' or collection.title contains '[' or collection.title contains ']' or collection.title contains '{' or collection.title contains '}' or collection.title contains '|' or collection.title contains ';' or collection.title contains ':' or collection.title contains '"' or collection.title contains "'" or collection.title contains ',' or collection.title contains '.' or collection.title contains '<' or collection.title contains '>' or collection.title contains '/' or collection.title contains '\\' or collection.title contains '`' or collection.title contains '~' %}
+            {% assign valid_collections = valid_collections | append: collection.title | append: ',' | append: ' ' %}
+          {% endunless %}
+        {% endfor %}
+        {{ valid_collections | remove_end: ',' }}
+      </div>
     </div>
     {%- if section.settings.media_position == 'right' -%}
       {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
