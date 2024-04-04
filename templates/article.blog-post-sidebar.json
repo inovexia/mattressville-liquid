@@ -69,7 +69,9 @@
       "custom_css": [
         ".multicolumn.background-primary .multicolumn-card {background: transparent;}",
         ".inline-richtext a {font-size: 24px; font-weight: 500; line-height: 28px; margin-top: 30px; text-decoration: none; font-family: Roboto;}",
-        ".multicolumn.color-scheme-1.gradient.background-primary.no-heading {background-color: #eff9f9;}"
+        ".multicolumn.color-scheme-1.gradient.background-primary.no-heading {background-color: #eff9f9;}",
+        ".multicolumn-card__image-wrapper.multicolumn-card__image-wrapper--third-width.multicolumn-card-spacing {width: 190px;}",
+        ".media.media--transparent.media--adapt {border-radius: 20px;}"
       ],
       "settings": {
         "title": "",
