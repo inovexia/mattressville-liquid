@@ -1,3 +1,33 @@
+{% assign vendorImage = null %}
+{% assign vendorImageH = 63 %}
+{% assign vendorImageW = "auto" %}
+    {% case product.vendor %}
+    {% when 'Beautyrest' %}
+      {% assign vendorImage = 'beauty.jpg' | asset_img_url: 'master' %}
+    {% when 'Beaudoin' %}
+      {% assign vendorImage = 'beaudoin.jpg' | asset_img_url: 'master' %}
+      {% when 'EcoComfort' %} 
+        {% assign vendorImage = 'ecocomfort.jpg' | asset_img_url: 'master' %}
+        {% when 'Galaxy Bedding' %}
+          {% assign vendorImage = 'galaxy.jpg' | asset_img_url: 'master' %}
+        {% when 'Kingsdown' %}
+          {% assign vendorImage = 'kingsdown.jpg' | asset_img_url: 'master' %}
+        {% when 'Mattressville' %}
+          {% assign vendorImage = 'mville-new.jpg' | asset_img_url: 'master' %}
+        {% when 'Natura' %}
+          {% assign vendorImage = 'natura.jpg' | asset_img_url: 'master' %}
+        {% when 'Sealy' %}
+          {%  assign vendorImage = 'sealy-vendor.jpg' | asset_img_url: 'master' %}
+        {% when 'Serta' %}
+          {% assign vendorImage = 'serta.jpg' | asset_img_url: 'master' %}
+        {% when 'Serta iComfort' %}
+          {% assign vendorImage = 'iComfort.jpg' | asset_img_url: 'master' %}
+        {% when 'Stearns & Foster' %}
+          {% assign vendorImage = 'sf.jpg' | asset_img_url: 'master' %}
+        {% when 'Tempur-Pedic' %}
+          {% assign vendorImage = 'tempur.jpg' | asset_img_url: 'master' %}
+      {% endcase %}
+
 {{ 'product-content.css' | asset_url | stylesheet_tag }}
 <div class="page-width">
   <div class="inner">
@@ -26,6 +56,15 @@
           <div class="description-box d-flex">
             <div class="description-left flex-grow-1">
               <div class="vendor-details">
+                {%- if vendorImage != null -%}
+                  <img
+                    src="{{ vendorImage }}"
+                    alt="{{ product.vendor }}"
+                    class="vendor-img"
+                    loading="lazy"
+                    height="{{ vendorImageH }}"
+                    width="{{ vendorImageW }}" />
+              {%- endif -%}
                 {%- if product.title != blank -%}
                   <h4>{{ product.title }}</h4>
                 {%- endif -%}
@@ -36,14 +75,14 @@
             </div>
             <div class="description-right flex-shrink-1">
               <div class="mv-logo">
-                <img src="https://cdn.shopify.com/s/files/1/0558/6780/1757/files/mattressville-slogan1.png?v=1712205980" alt="Mattressville"/>
+                <img src={{'mattressville-slogan.png' | asset_img_url: 'master'}} alt="Mattressville">
               </div>
               <div class="coupon-logo">
                 <a href="/pages/coupons" class="coupon-link-text">Don't Forget To Check</a>
                 <a href="/pages/coupons" class="coupon-link-text">Coupons & Deals</a>
                 <div class="coupon-image">
                   <a href="/pages/coupons" class="coupon-link-text">
-                    <img src="https://cdn.shopify.com/s/files/1/0558/6780/1757/files/gift-lg.png?v=1712205818" alt="Coupon gift"/>
+                    <img src={{'gift-lg.png' | asset_img_url: 'master'}} alt="Coupon gift">
                   </a>
                 </div>
               </div>
