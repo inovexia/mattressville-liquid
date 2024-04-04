@@ -99,6 +99,9 @@
   font-size: 16px;
   line-height: 24px;
 }
+.product-content .inner .tab-content .tab-pane .tab-container p span img {
+  width: 100%;
+}
 .product-content .inner .tab-content .tab-pane .tab-container figure {
   margin-bottom: 16px;
 }
