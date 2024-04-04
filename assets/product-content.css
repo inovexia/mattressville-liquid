@@ -50,6 +50,17 @@
   .product-content .inner .tab-content .tab-pane .tab-container {
     padding: 100px;
   }
+  .product-content .inner .tab-content .tab-pane .tab-container .description-box .description-left .vendor-details {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .product-content .inner .tab-content .tab-pane .tab-container .description-box .description-left .vendor-details h4 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33px;
+    margin: 0;
+  }
   .product-content .inner .tab-content .tab-pane .tab-container .description-box .description-right {
     text-align: center;
   }
@@ -74,17 +85,6 @@
   }
   .product-content .inner .tab-content .tab-pane .tab-container .description-box .description-left {
     flex-grow: 1;
-  }
-  .product-content .inner .tab-content .tab-pane .tab-container .description-box .description-left .vendor-details {
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-  }
-  .product-content .inner .tab-content .tab-pane .tab-container .description-box .description-left .vendor-details h4 {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 33px;
-    margin: 0;
   }
   .product-content .inner .tab-content .tab-pane .tab-container .description-box .description-right {
     flex-shrink: 1;

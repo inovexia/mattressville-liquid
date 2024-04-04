@@ -57,6 +57,22 @@
           @media (min-width:0px) {
             padding: 100px;
             .description-box{
+
+              .description-left{
+                
+                .vendor-details {
+                  margin-bottom: 1rem;
+                  display: flex;
+                  align-items: center;
+
+                  h4 {
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 33px;
+                    margin: 0;
+                  }
+                }
+              }
               .description-right{
                 text-align: center;
                 .mv-logo {
@@ -85,19 +101,6 @@
 
               .description-left{
                 flex-grow: 1;
-
-                .vendor-details {
-                  margin-bottom: 1rem;
-                  display: flex;
-                  align-items: center;
-
-                  h4 {
-                    font-size: 28px;
-                    font-weight: 700;
-                    line-height: 33px;
-                    margin: 0;
-                  }
-                }
               }
               .description-right{
                 flex-shrink: 1;
