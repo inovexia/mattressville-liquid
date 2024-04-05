@@ -169,3 +169,14 @@
 .product-single .comfort-scale .firm-meter {
   width: 70%;
 }
+
+.blog-featured .page-title {
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin: 23px 0 27px 0;
+  position: relative;
+}
+.blog-featured .feat-image img {
+  width: 100%;
+}

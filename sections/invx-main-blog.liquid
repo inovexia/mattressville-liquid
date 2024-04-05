@@ -96,7 +96,7 @@
   {% assign featuredBlogs = path[2] %}
 {% endif %}
 {% comment %} 
-                Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable. 
+                                                                                Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable. 
 {% endcomment %}
 {% for featuredBlog in featuredBlogs %}
   {% if blogs[featuredBlog].articles %}
@@ -108,29 +108,45 @@
   {% endif %}
 {% endfor %}
 
-<div class="blog-lists">
-  <ul>
-    <li>
-      <a href="/pages/blog">ALL BLOGS</a>
-    </li>
-    {% for blogItem in blogList %}
+<div class="blog-inner">
+  {% if blog.title %}
+    <div class="blog-featured">
+      <h1 class="page-title h0 scroll-trigger animate--fade-in">
+        Blog
+      </h1>
+      <div class="feat-image content rte scroll-trigger animate--slide-in">
+        <img src={{'mattressville_blog.jpg' | asset_img_url: 'master'}} alt="Blog">
+      </div>
+      {% if blog.metafields.custom.description %}
+        <p>{{ blog.metafields.custom.description }}</p>
+      {% endif %}
+
+    </div>
+  {% endif %}
+  <div class="blog-lists">
+    <ul>
       <li>
-        <a href="{{ blogs[blogItem].url }}">{{ blogs[blogItem].title }}</a>
+        <a href="/pages/blog">ALL BLOGS</a>
       </li>
-    {% endfor %}
-  </ul>
+      {% for blogItem in blogList %}
+        <li>
+          <a href="{{ blogs[blogItem].url }}">{{ blogs[blogItem].title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
 {% if featuredArticles %}
   {%- paginate featuredArticles.articles by 6 -%}
     <div class="main-blog page-width page-width-no-padding section-{{ section.id }}-padding">
       {% comment %} 
-                                                                {% if blog.title != blank %} 
-                                                                <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"> 
-                                                                {{ blog.title | escape }} 
-                                                                </h1>
-                                                                {% endif %} 
-                                                {% endcomment %}
+                                                                                                                                                                                                                                  {% if blog.title != blank %} 
+                                                                                                                                                                                                                                  <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"> 
+                                                                                                                                                                                                                                  {{ blog.title | escape }} 
+                                                                                                                                                                                                                                  </h1>
+                                                                                                                                                                                                                                  {% endif %} 
+                                                                                                                                                                        {% endcomment %}
       <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
         {%- for article in featuredArticles.articles -%}
           <div

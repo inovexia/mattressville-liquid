@@ -7,6 +7,8 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .breadcrumbs__item {
@@ -14,7 +16,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 70%;
+    font-size: 13px;
   }
 
   .breadcrumbs__item:not(:last-child):after {
@@ -32,6 +34,8 @@
     font-weight: 700;
     text-decoration: none;
     white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .breadcrumbs__link[aria-current='page'] {
@@ -65,7 +69,7 @@
               href="{{ page.url }}"
               aria-current="page">{{ page.title | truncate: 20 }}</a>
           </li>
-        {%- when 'product' -%}
+        {%- when 'products' -%}
           {%- if collection.url -%}
             <li class="breadcrumbs__item">
               {{ collection.title | link_to: collection.url }}
@@ -105,40 +109,46 @@
             </li>
           {%- endif -%}
         {%- when 'blog' -%}
-          {%- if current_tags -%}
-            <li class="breadcrumbs__item">
-              {{ blog.title | link_to: blog.url | truncate: 20 }}
-            </li>
-            <li class="breadcrumbs__item">
-              {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
-              <a
-                class="breadcrumbs__link"
-                href="{{ tag_url }}"
-                aria-current="page">{{ current_tags | join: ' + ' }}</a>
-            </li>
-          {%- else -%}
-            <li class="breadcrumbs__item">
-              <a
-                class="breadcrumbs__link"
-                href="{{ blog.url }}"
-                aria-current="page">{{ blog.title | truncate: 20 }}</a>
-            </li>
-          {%- endif -%}
+          <li class="breadcrumbs__item">
+            Blog
+          </li>
+        {% comment %} 
+                                                  {%- if current_tags -%}
+          
+                                                  <li class="breadcrumbs__item"> 
+                                                  {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%} 
+                                                  <a 
+                                                  class="breadcrumbs__link" 
+                                                  href="{{ tag_url }}" 
+                                                  aria-current="page">{{ current_tags | join: ' + ' }}</a>
+                                                  </li> 
+          
+                                                  {%- else -%}
+                                                  <li class="breadcrumbs__item"> 
+                                                  <a 
+                                                  class="breadcrumbs__link" 
+                                                  href="{{ blog.url }}" 
+                                                  aria-current="page">{{ blog.title | truncate: 20 }}</a>
+                                                  </li>
+                                                  {%- endif -%} 
+                                        {% endcomment %}
         {%- when 'article' -%}
           <li class="breadcrumbs__item">
             <a href="/pages/blog">Blog</a>
           </li>
           <li class="breadcrumbs__item">
-            {{ blog.title | link_to: blog.url }}
+            {{ blog.title }}
           </li>
-          <li class="breadcrumbs__item">
-            <a
-              class="breadcrumbs__link"
-              href="{{ article.url }}"
-              aria-current="page">
-              {{- article.title | truncate: 20 -}}
-            </a>
-          </li>
+        {% comment %} 
+                                                                      <li class="breadcrumbs__item">
+                                                                        <a
+                                                                          class="breadcrumbs__link"
+                                                                          href="{{ article.url }}"
+                                                                          aria-current="page">
+                                                                          {{- article.title | truncate: 20 -}}
+                                                                        </a>
+                                                                      </li>
+                                                        {% endcomment %}
         {%- else -%}
           <li class="breadcrumbs__item">
             <a
