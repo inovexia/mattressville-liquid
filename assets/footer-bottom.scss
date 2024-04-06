@@ -1,6 +1,20 @@
 .footer-bottom {
   display: none;
 
+  .bottom-inner{
+    div{
+      p{
+        a{
+          color: #098fc7;
+          &:hover{
+            color: #098fc7;
+          }
+        }
+        
+      }
+    }
+  }
+
   @media (min-width: 992px) {
     display: block;
     background-color: var(--secondary-color);

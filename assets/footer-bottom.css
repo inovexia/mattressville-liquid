@@ -1,6 +1,12 @@
 .footer-bottom {
   display: none;
 }
+.footer-bottom .bottom-inner div p a {
+  color: #098fc7;
+}
+.footer-bottom .bottom-inner div p a:hover {
+  color: #098fc7;
+}
 @media (min-width: 992px) {
   .footer-bottom {
     display: block;
