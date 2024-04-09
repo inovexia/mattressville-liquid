@@ -1,10 +1,14 @@
-<div class="yotpo-widget-instance" data-yotpo-instance-id="618966" data-yotpo-product-id="{{product.id}}"></div>
+{% if template == 'index' %}
+  <div
+    class="yotpo-widget-instance"
+    data-yotpo-instance-id="618966"
+    data-yotpo-product-id="{{ product.id }}"></div>
+{% endif %}
 {% schema %}
-{
-  "name": "Custom Yotpo Side Reviews",
-  "tag": "section",
-  "class": "yotpo-side-widget",
-  "settings": [
-  ]
-}
+  {
+    "name": "Custom Yotpo Side Reviews",
+    "tag": "section",
+    "class": "yotpo-side-widget",
+    "settings": []
+  }
 {% endschema %}
