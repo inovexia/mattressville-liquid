@@ -3,6 +3,7 @@
   "sections": {
     "main": {
       "type": "invx-main-page",
+      "disabled": true,
       "settings": {
       }
     },
