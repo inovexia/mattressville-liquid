@@ -298,7 +298,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 52,
-        "padding_bottom": 40
+        "padding_bottom": 12
       }
     },
     "psb_reviews_reviews_01_Vr6JBB": {
@@ -445,7 +445,7 @@
         "enable_pagination": false,
         "enable_navigation": false,
         "pagination_type": "bullets",
-        "background_color": "#e9f3f3",
+        "background_color": "#eff9f9",
         "swiper_control_color": "#ff5c7b",
         "review-background-color": "rgba(0,0,0,0)",
         "stars-color": "#ffa500",
