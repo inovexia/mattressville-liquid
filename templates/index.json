@@ -207,7 +207,9 @@
         "slide_bTWUcd"
       ],
       "custom_css": [
-        "slideshow-component {margin-top: 20px;}"
+        "slideshow-component {margin-top: 20px;}",
+        ".home-slideshow .media {background-color: transparent;}",
+        ".home-slideshow a, .home-slideshow img {border-radius: 15px;}"
       ],
       "settings": {
         "slide_height": "adapt_image",
