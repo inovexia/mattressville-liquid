@@ -208,8 +208,9 @@
       ],
       "custom_css": [
         "slideshow-component {margin-top: 20px;}",
+        ".home-slideshow {width: 80%;}",
         ".home-slideshow .media {background-color: transparent;}",
-        ".home-slideshow a, .home-slideshow img {border-radius: 15px;}"
+        ".home-slideshow a,.home-slideshow img {border-radius: 15px;}"
       ],
       "settings": {
         "slide_height": "adapt_image",
@@ -235,7 +236,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/category1.webp",
-            "title": "",
+            "title": "MATTRESS IN A BOX",
             "text": "",
             "link_label": "MATTRESS IN A BOX",
             "link": "shopify:\/\/collections\/mattress-in-a-box"
