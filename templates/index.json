@@ -246,9 +246,9 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/category2.webp",
-            "title": "",
+            "title": "MEMORY FOAM MATTRESSES",
             "text": "",
-            "link_label": "MEMORY FOAM MATTRESSES",
+            "link_label": "",
             "link": "shopify:\/\/collections\/memory-foam"
           }
         },
@@ -256,9 +256,9 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/category3.webp",
-            "title": "",
+            "title": "ADJUSTABLE BED BASES",
             "text": "",
-            "link_label": "ADJUSTABLE BED BASES",
+            "link_label": "",
             "link": "shopify:\/\/collections\/accessories-adjustable-beds"
           }
         },
@@ -266,9 +266,9 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/category4.webp",
-            "title": "",
+            "title": "MATTRESS UNDER $500",
             "text": "",
-            "link_label": "MATTRESS UNDER $500",
+            "link_label": "",
             "link": "shopify:\/\/collections\/mattresses-under-500"
           }
         }
@@ -281,7 +281,8 @@
       ],
       "custom_css": [
         "img {border-radius: 15px;}",
-        ".background-none .multicolumn-card__image-wrapper + .multicolumn-card__info {padding-top: 0; font-weight: 700; letter-spacing: 0;}"
+        ".background-none .multicolumn-card__image-wrapper + .multicolumn-card__info {padding-top: 0; font-weight: 700; letter-spacing: 0;}",
+        ".multicolumn h3 {text-decoration: none; font-size: inherit; margin-top: 1.5rem;}"
       ],
       "settings": {
         "title": "<strong>Shop By Categories <\/strong>",
