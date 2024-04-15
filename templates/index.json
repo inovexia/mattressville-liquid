@@ -207,8 +207,7 @@
         "slide_bTWUcd"
       ],
       "custom_css": [
-        "slideshow-component {margin-top: 20px;}",
-        ".slider-buttons {display: none;}"
+        "slideshow-component {margin-top: 20px;}"
       ],
       "settings": {
         "slide_height": "adapt_image",
@@ -294,8 +293,8 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 12,
-        "padding_bottom": 20
+        "padding_top": 52,
+        "padding_bottom": 40
       }
     },
     "psb_reviews_reviews_01_Vr6JBB": {
