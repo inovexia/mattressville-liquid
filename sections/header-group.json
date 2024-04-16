@@ -11,18 +11,10 @@
             "text": "Premium Mattress Sale | The Highest Rated Mattress Store | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.",
             "link": "shopify:\/\/collections\/all-mattresses"
           }
-        },
-        "announcement_MtDm69": {
-          "type": "announcement",
-          "settings": {
-            "text": "FREE Shipping over $499",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "announcement_LDchzp",
-        "announcement_MtDm69"
+        "announcement_LDchzp"
       ],
       "settings": {
         "color_scheme": "scheme-5",
