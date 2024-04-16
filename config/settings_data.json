@@ -229,7 +229,7 @@
       },
       "scheme-5": {
         "settings": {
-          "background": "#ff5c7b",
+          "background": "#d7355c",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
@@ -479,7 +479,7 @@
       "#Slide-template--22113196278068__multicolumn_A9Ngk7-2 .multicolumn-card__info a:first-child {pointer-events: none;}",
       ".section-template--22113195491636__rich_text_9MpUtR-padding .rich-text__text.rte.scroll-trigger.animate--slide-in {color: #212529;}",
       "@media (prefers-reduced-motion: no-preference) {.scroll-trigger.animate--slide-in {transform: unset; }}",
-      ".article-template__content p img{border:none;}"
+      ".article-template__content p img {border: none;}"
     ]
   }
 }
