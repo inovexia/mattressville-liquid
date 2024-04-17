@@ -7,6 +7,11 @@
       "settings": {
       }
     },
+    "mm-sub-footer": {
+      "type": "invx-mm-sub-footer",
+      "settings": {
+      }
+    },
     "footer-mobile": {
       "type": "footer-mobile",
       "blocks": {
@@ -147,6 +152,7 @@
     }
   },
   "order": [
+    "mm-sub-footer",
     "yotpo-side-reviews",
     "footer-mobile",
     "footer-top",

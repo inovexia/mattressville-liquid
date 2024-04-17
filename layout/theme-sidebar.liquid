@@ -7,8 +7,8 @@
     <meta name="theme-color" content="">
     {% if canonical_url %}
       {% assign last_char = canonical_url | slice: -1 %}
-      {% unless last_char == "/" %}
-        {% assign canonical_url = canonical_url | append: "/" %}
+      {% unless last_char == '/' %}
+        {% assign canonical_url = canonical_url | append: '/' %}
       {% endunless %}
       <link rel="canonical" href="{{ canonical_url }}">
     {% endif %}
@@ -29,10 +29,13 @@
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
-    {% elsif page_title == "Products" and settings.all_collection_desc != blank %}
+    {% elsif page_title == 'Products' and settings.all_collection_desc != blank %}
       <meta name="description" content="{{ settings.all_collection_desc | escape }}">
     {% else %}
-      <meta name="description" content="Mattressville's {{ page_title }} to choose for your best sleep, keep on exploring, we will bring you best offers there is.">
+      <meta
+        name="description"
+        content="Mattressville's {{ page_title }} to choose for your best sleep, keep on exploring, we will bring you best offers there is."
+      >
     {% endif %}
 
     {% render 'meta-tags' %}
@@ -319,6 +322,14 @@
         {% comment %} Add a content wrapper div for main content area {% endcomment %}
       </div>
     </main>
+
+    {% comment %} Display footer on only those pages where required {% endcomment %}
+    {% assign path = request.path | split: '/' %}
+
+    {% if path[1] contains 'blogs' %}
+      <div>{% render 'invx-mm-sub-footer' %}</div>
+    {% endif %}
+
     <footer>{% sections 'footer-group' %}</footer>
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>

@@ -7,7 +7,8 @@
           <button
             type="button"
             class="main-menu-toggle"
-            aria-label="Toggle Nav Drop Down">
+            aria-label="Toggle Nav Drop Down"
+          >
             <span class="stripe"></span>
             <span class="stripe"></span>
             <span class="stripe"></span>
@@ -26,7 +27,10 @@
             <a
               href="#"
               class="dropdown-toggle nav-link"
-              role="button">{{ section.settings.meta_menu_title }}</a>
+              role="button"
+            >
+              {{- section.settings.meta_menu_title -}}
+            </a>
             <div class="dropdown-menu mega-menu">
               <div class="mega-menu-area">
                 {%- for link in section.settings.mega_menu.links -%}
@@ -39,8 +43,8 @@
                           {% assign childlink_url = childlink.url %}
                           {% unless canonical_url contains '?' or childlink_url contains '?' %}
                             {% assign last_char = childlink_url | slice: -1 %}
-                            {% unless last_char == "/" %}
-                              {% assign childlink_url = childlink_url | append: "/" %}
+                            {% unless last_char == '/' %}
+                              {% assign childlink_url = childlink_url | append: '/' %}
                             {% endunless %}
                           {% endunless %}
                           <div class="dropdown-item">
@@ -53,15 +57,22 @@
                 {%- endfor -%}
               </div>
               <div class="all-item">
-                {%- assign megaMenuBottomLink = section.settings.mega_menu_bottom_link | default: "/collections/all-mattresses" | url_escape -%}
-                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink }}">{{ section.settings.mega_menu_bottom_label }}</a>
+                {%- assign megaMenuBottomLink = section.settings.mega_menu_bottom_link
+                  | default: '/collections/all-mattresses'
+                  | url_escape
+                -%}
+                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink }}">
+                  {{- section.settings.mega_menu_bottom_label -}}
+                </a>
               </div>
             </div>
           </div>
           {%- for link in section.settings.bottom_menu.links -%}
             {%- assign hasChildren = link.links | empty | default: false -%}
             <div class="nav-item {%- if hasChildren -%}{{" dropdown"}}{%- endif -%}">
-              <a class=" {%- if hasChildren -%}{{"dropdown-toggle "}}{%- endif -%}nav-link" href="{{ link.url }}">{{- link.title | escape -}}</a>
+              <a class=" {%- if hasChildren -%}{{"dropdown-toggle "}}{%- endif -%}nav-link" href="{{ link.url }}">
+                {{- link.title | escape -}}
+              </a>
               {%- if hasChildren -%}
                 <div class="dropdown-menu">
                   {%- for childlink in link.links -%}
@@ -76,12 +87,13 @@
           <div class="has-icon nav-item">
             {%- if section.settings.match_maker_image != blank -%}
               <img
-                src="{{ section.settings.match_maker_image | img_url: 'master' }}"
+                src="{{ section.settings.match_maker_image | image_url: 'master' }}"
                 alt="bed"
                 width="26"
                 height="25"
                 loading="lazy"
-                class="icon" />
+                class="icon"
+              >
             {%- else -%}
               <img
                 src="{{ 'bed-xs.png' | asset_img_url: 'master' }}"
@@ -89,9 +101,13 @@
                 width="26"
                 height="25"
                 loading="lazy"
-                class="icon" />
+                class="icon"
+              >
             {%- endif -%}
-            {%- assign matchMakerLink = section.settings.match_maker_link | default: "/pages/mattress-matchmaker" | url_escape -%}
+            {%- assign matchMakerLink = section.settings.match_maker_link
+              | default: '/pages/mattress-matchmaker'
+              | url_escape
+            -%}
             <a class="nav-link" href="{{ matchMakerLink }}">{{ section.settings.match_maker_label }}</a>
           </div>
         </div>
@@ -100,137 +116,136 @@
   </div>
 </div>
 {% javascript %}
-document.addEventListener("DOMContentLoaded", function() {
-  var mainNavDropdownToggles = document.querySelectorAll(".main-nav .dropdown-toggle");
-  var dropdownMenus = document.querySelectorAll(".dropdown-menu");
-  var mainMenu = document.querySelector(".main-menu");
-  var mainMenuToggle = document.querySelector(".main-menu-toggle");
-  mainNavDropdownToggles.forEach(function(toggle) {
-    toggle.addEventListener("click", function(e) {
-      e.preventDefault();
-      var menu = this.nextElementSibling;
+  document.addEventListener('DOMContentLoaded', function () {
+    var mainNavDropdownToggles = document.querySelectorAll('.main-nav .dropdown-toggle');
+    var dropdownMenus = document.querySelectorAll('.dropdown-menu');
+    var mainMenu = document.querySelector('.main-menu');
+    var mainMenuToggle = document.querySelector('.main-menu-toggle');
+    mainNavDropdownToggles.forEach(function (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        var menu = this.nextElementSibling;
 
-      if (!menu.classList.contains("open")) {
+        if (!menu.classList.contains('open')) {
+          closeOpenDropdownMenus();
+          menu.classList.add('open');
+          slideDown(menu);
+        } else {
+          menu.classList.remove('open');
+          slideUp(menu);
+        }
+      });
+    });
+    dropdownMenus.forEach(function (menu) {
+      menu.querySelector('.nav-link').addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+    });
+    document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (mainMenu.classList.contains('open')) {
+          slideUp(mainMenu);
+        }
+      });
+    });
+    mainMenuToggle.addEventListener('click', function () {
+      mainMenu.classList.toggle('open');
+      slideToggle(mainMenu);
+    });
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.main-nav')) {
         closeOpenDropdownMenus();
-        menu.classList.add("open");
-        slideDown(menu);
-      } else {
-        menu.classList.remove("open");
+      }
+    });
+    function closeOpenDropdownMenus() {
+      document.querySelectorAll('.main-nav .dropdown-menu.open').forEach(function (menu) {
+        menu.classList.remove('open');
         slideUp(menu);
+      });
+    }
+    function slideUp(element) {
+      element.style.transition = 'max-height 0.3s';
+      element.style.maxHeight = 0;
+      element.style.overflow = 'hidden';
+      setTimeout(function () {
+        element.style.display = 'none';
+      }, 100);
+    }
+    function slideDown(element) {
+      element.style.transition = 'max-height 0.3s';
+      element.style.display = 'block';
+      element.style.overflow = 'hidden';
+      element.style.maxHeight = element.scrollHeight + 'px';
+      setTimeout(function () {
+        element.style.maxHeight = 'unset';
+      }, 100);
+    }
+    function slideToggle(element) {
+      if (element.clientHeight > 0) {
+        slideUp(element);
+      } else {
+        slideDown(element);
       }
-    });
-  });
-  dropdownMenus.forEach(function(menu) {
-    menu.querySelector(".nav-link").addEventListener("click", function(e) {
-      e.stopPropagation();
-    });
-  });
-  document.querySelectorAll(".nav-link:not(.dropdown-toggle)").forEach(function(link) {
-    link.addEventListener("click", function() {
-      if (mainMenu.classList.contains("open")) {
-        slideUp(mainMenu);
-      }
-    });
-  });
-  mainMenuToggle.addEventListener("click", function() {
-    mainMenu.classList.toggle("open");
-    slideToggle(mainMenu);
-  });
-  document.addEventListener("click", function(e) {
-    if (!e.target.closest(".main-nav")) {
-      closeOpenDropdownMenus();
     }
   });
-  function closeOpenDropdownMenus() {
-    document.querySelectorAll(".main-nav .dropdown-menu.open").forEach(function(menu) {
-      menu.classList.remove("open");
-      slideUp(menu);
-    });
-  }
-  function slideUp(element) {
-    element.style.transition = "max-height 0.3s";
-    element.style.maxHeight = 0;
-    element.style.overflow = "hidden";
-    setTimeout(function () {
-      element.style.display = "none";
-    }, 100);
-  }
-  function slideDown(element) {
-    element.style.transition = "max-height 0.3s";
-    element.style.display = "block";
-    element.style.overflow = "hidden";
-    element.style.maxHeight = element.scrollHeight + "px";
-    setTimeout(function () {
-      element.style.maxHeight = "unset";
-    }, 100);
-  }
-  function slideToggle(element) {
-    if (element.clientHeight > 0) {
-      slideUp(element);
-    } else {
-      slideDown(element);
-    }
-  }
-});
-
 {% endjavascript %}
 {% schema %}
-  {
-    "name": "t:sections.header-bottom.name",
-    "class": "header-bottom-section",
-    "enabled_on": {
-      "groups": ["header"]
+{
+  "name": "t:sections.header-bottom.name",
+  "class": "header-bottom-section",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Number",
+      "default": "1905-212-7722"
     },
-    "settings": [
-      {
-        "type": "text",
-        "id": "phone_number",
-        "label": "Phone Number",
-        "default": "1905-212-7722"
-      },
-      {
-        "type": "text",
-        "id": "meta_menu_title",
-        "default": "All Mattresses",
-        "label": "Mega Menu Title"
-      },
-      {
-        "type": "link_list",
-        "id": "mega_menu",
-        "label": "Mega Menu"
-      },
-      {
-        "type": "text",
-        "id": "mega_menu_bottom_label",
-        "default": "VIEW ALL MATTRESSES",
-        "label": "Mega Menu Bottom Label"
-      },
-      {
-        "type": "url",
-        "id": "mega_menu_bottom_link",
-        "label": "Mega Menu Bottom Link"
-      },
-      {
-        "type": "link_list",
-        "id": "bottom_menu",
-        "label": "Bottom Menu"
-      },
-      {
-        "type": "image_picker",
-        "id": "match_maker_image",
-        "label": "Mach Maker Image"
-      },
-      {
-        "type": "text",
-        "id": "match_maker_label",
-        "default": "Mattress Matchmaker",
-        "label": "Match Maker Label"
-      },
-      {
-        "type": "url",
-        "id": "match_maker_link",
-        "label": "Match Maker Link"
-      }
-    ]
-  }
+    {
+      "type": "text",
+      "id": "meta_menu_title",
+      "default": "All Mattresses",
+      "label": "Mega Menu Title"
+    },
+    {
+      "type": "link_list",
+      "id": "mega_menu",
+      "label": "Mega Menu"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_bottom_label",
+      "default": "VIEW ALL MATTRESSES",
+      "label": "Mega Menu Bottom Label"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_bottom_link",
+      "label": "Mega Menu Bottom Link"
+    },
+    {
+      "type": "link_list",
+      "id": "bottom_menu",
+      "label": "Bottom Menu"
+    },
+    {
+      "type": "image_picker",
+      "id": "match_maker_image",
+      "label": "Mach Maker Image"
+    },
+    {
+      "type": "text",
+      "id": "match_maker_label",
+      "default": "Mattress Matchmaker",
+      "label": "Match Maker Label"
+    },
+    {
+      "type": "url",
+      "id": "match_maker_link",
+      "label": "Match Maker Link"
+    }
+  ]
+}
 {% endschema %}

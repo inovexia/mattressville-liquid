@@ -97,7 +97,7 @@
 
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_child_li:not(:last-child),
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .accordion [role='button'] {
-  border-bottom: 1px solid var(--accent-color);
+  /* border-bottom: 1px solid var(--accent-color); */
 }
 
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_child_li:not(:last-child).active {
@@ -115,9 +115,12 @@
 
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .accordion {
   margin-bottom: -1px;
+  margin-top: 0;
+  border-top: none;
+  border-bottom: none;
 }
 
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li a,
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li > a,
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .accordion [role='button'] {
   cursor: pointer;
   display: block;
@@ -130,13 +133,14 @@
   border-radius: 0 0 15px 15px;
 }
 
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:hover>a,
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li.active>a,
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:hover .invx_sidebar_menu_child_li:hover>a,
-.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .invx_sidebar_menu_child_li.child-active>a,
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:hover > a,
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li.active > a,
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:hover .invx_sidebar_menu_child_li:hover > a,
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .invx_sidebar_menu_child_li.child-active > a,
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li:hover .accordion [role='button'] {
-  background-color: var(--accent-color);
-  color: #ffffff;
+  /*  background-color: var(--accent-color); */
+  color: #000;
+  font-weight: 700;
 }
 
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .invx_sidebar_menu_child_ul {
@@ -148,6 +152,12 @@
 
 .sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .invx_sidebar_menu_child_ul li {
   list-style-type: none;
+  width: 100%;
+}
+.sidebar-content-container .invx_sidebar_menu_ul .invx_sidebar_menu_li .invx_sidebar_menu_child_ul li a {
+  padding: 25px 0 5px 40px;
+  text-decoration: none;
+  width: 100%;
 }
 
 .sidebar-content-container .invx-content {
