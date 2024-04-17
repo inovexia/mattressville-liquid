@@ -326,7 +326,11 @@
     {% comment %} Display footer on only those pages where required {% endcomment %}
     {% assign path = request.path | split: '/' %}
 
-    {% if path[1] contains 'blogs' %}
+    {% if path[1] contains 'blogs'
+      or path[2] contains 'mattress-sale-flyers'
+      or path[2] contains 'canada-wide-flyer'
+      or path[2] contains 'local-gta-flyer'
+    %}
       <div>{% render 'invx-mm-sub-footer' %}</div>
     {% endif %}
 
