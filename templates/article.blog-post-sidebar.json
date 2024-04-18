@@ -37,58 +37,6 @@
       ],
       "settings": {
       }
-    },
-    "multicolumn_GVzPyj": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_nM7bTB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/cta-image.jpg",
-            "title": "<a href=\"\/collections\/all-mattresses\" title=\"All Mattresses\">Shop All Mattresses<\/a>",
-            "text": "",
-            "link_label": "",
-            "link": "shopify:\/\/collections\/all-mattresses"
-          }
-        },
-        "column_6F34dd": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bed.png",
-            "title": "<a href=\"https:\/\/mattressville.ca\/mattress-matchmaker\/\">Try our Mattress Matchmaker<\/a>",
-            "text": "",
-            "link_label": "",
-            "link": "shopify:\/\/pages\/mattress-matchmaker"
-          }
-        }
-      },
-      "block_order": [
-        "column_nM7bTB",
-        "column_6F34dd"
-      ],
-      "custom_css": [
-        ".multicolumn.background-primary .multicolumn-card {background: transparent;}",
-        ".inline-richtext a {font-size: 24px; font-weight: 500; line-height: 28px; margin-top: 30px; text-decoration: none; font-family: Roboto;}",
-        ".multicolumn.color-scheme-1.gradient.background-primary.no-heading {background-color: #eff9f9;}",
-        ".multicolumn-card__image-wrapper.multicolumn-card__image-wrapper--third-width.multicolumn-card-spacing {width: 190px;}",
-        ".media.media--transparent.media--adapt {border-radius: 20px;}"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
