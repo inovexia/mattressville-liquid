@@ -210,7 +210,8 @@
         "slideshow-component {margin-top: 20px;}",
         ".home-slideshow {width: 80%;}",
         ".home-slideshow .media {background-color: transparent;}",
-        ".home-slideshow a,.home-slideshow img {border-radius: 15px;}"
+        ".home-slideshow a,.home-slideshow img {border-radius: 15px;}",
+        ".slideshow__controls {display: none;}"
       ],
       "settings": {
         "slide_height": "adapt_image",
