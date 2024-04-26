@@ -379,6 +379,12 @@ a.product__text {
   margin: 0;
 }
 
+@media (min-width:900px) and (max-width:1100px) {
+  .product__title>h1 {
+    font-size: 26px !important;
+  }
+}
+
 .product__title>h1 {
   font-size: 28px;
   font-weight: 700;
@@ -405,6 +411,8 @@ a.product__text {
 
 .product .price .badge {
   margin-bottom: 0.5rem;
+  background: linear-gradient(to right, rgb(247, 5, 5), rgb(143, 8, 8));
+  color: #fff;
 }
 
 .product .price__container {

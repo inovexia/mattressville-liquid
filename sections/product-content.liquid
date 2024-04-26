@@ -19,7 +19,7 @@
         {% when 'Sealy' %}
           {%  assign vendorImage = 'sealy-vendor.jpg' | asset_img_url: 'master' %}
         {% when 'Serta' %}
-          {% assign vendorImage = 'serta.jpg' | asset_img_url: 'master' %}
+          {% assign vendorImage = 'serta-new.jpg' | asset_img_url: 'master' %}
         {% when 'Serta iComfort' %}
           {% assign vendorImage = 'iComfort.jpg' | asset_img_url: 'master' %}
         {% when 'Stearns & Foster' %}
@@ -72,6 +72,15 @@
                {%- if product.description != blank -%}
                   {{ product.description }}
                 {%- endif -%}
+                <div class="affirm-text">
+                  <p>Buy now pay over time! Financing available via Affirm.<br>Learn more on <a href="https://helpcenter.affirm.com/s/" rel="noopener noreferrer"> <img
+                  src={{'affirm-icon.png' | asset_img_url: 'master' }}                  alt="{{ product.vendor }}"
+                  class="vendor-img"
+                  loading="lazy"
+                  height="30"
+                  width="auto" /></a>
+                 </p>
+                </div>
             </div>
             <div class="description-right flex-shrink-1">
               <div class="mv-logo">

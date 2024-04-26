@@ -48,7 +48,7 @@
 }
 @media (min-width: 0px) {
   .product-content .inner .tab-content .tab-pane .tab-container {
-    padding: 100px;
+    padding: 30px 15px;
   }
   .product-content .inner .tab-content .tab-pane .tab-container .description-box .description-left .vendor-details {
     margin-bottom: 1rem;
@@ -59,7 +59,12 @@
     font-size: 28px;
     font-weight: 700;
     line-height: 33px;
-    margin: 0;
+    margin: 0 0 0 5px;
+  }
+  .product-content .inner .tab-content .tab-pane .tab-container .description-box .description-left .affirm-text p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
   }
   .product-content .inner .tab-content .tab-pane .tab-container .description-box .description-right {
     text-align: center;
@@ -79,6 +84,9 @@
   }
 }
 @media (min-width: 992px) {
+  .product-content .inner .tab-content .tab-pane .tab-container {
+    padding: 100px;
+  }
   .product-content .inner .tab-content .tab-pane .tab-container .description-box {
     display: flex;
     align-items: flex-start;
@@ -95,11 +103,15 @@
     padding-top: 50px;
   }
 }
-.product-content .inner .tab-content .tab-pane .tab-container p {
+.product-content .inner .tab-content .tab-pane .tab-container .light {
+  opacity: 1;
+}
+.product-content .inner .tab-content .tab-pane .tab-container .light p {
   font-size: 16px;
   line-height: 24px;
+  color: #212529;
 }
-.product-content .inner .tab-content .tab-pane .tab-container p span img {
+.product-content .inner .tab-content .tab-pane .tab-container .light p span img {
   width: 100%;
 }
 .product-content .inner .tab-content .tab-pane .tab-container figure {
@@ -131,4 +143,45 @@
   border: 1px solid #dee2e6 !important;
   padding: 8px;
   vertical-align: top;
+}
+
+.product-media-modal .product-media-modal__content.color-scheme-1.gradient {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s !important;
+}
+.product-media-modal .product-media-modal__content .global-media-settings.global-media-settings--no-shadow {
+  display: none;
+}
+.product-media-modal .product-media-modal__content .global-media-settings.global-media-settings--no-shadow.active {
+  display: block;
+  width: 75%;
+  margin: 0px auto;
+}
+
+body .product-single .product__info-wrapper .product-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .product-single .product__info-wrapper .product-form .form {
+  width: 50%;
+}
+body .product-single .product__info-wrapper .product-form .kaktus-w-wishlist-button__wrap {
+  background-color: transparent !important;
+  color: #000 !important;
+  justify-content: flex-start !important;
+  display: flex !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+}
+body .product-single .breadcrumbs {
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+body .product-single .product .slider-mobile-gutter .product__media-item.grid__item.slider__slide .product__modal-opener .product__media .fordeer-config-label {
+  display: none;
+}
+
+body #shopify-section-template--22333613048116__main .icon-with-text__item .h4.inline-richtext {
+  margin-bottom: 0px;
 }
