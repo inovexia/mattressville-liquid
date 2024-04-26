@@ -182,6 +182,6 @@ body .product-single .product .slider-mobile-gutter .product__media-item.grid__i
   display: none;
 }
 
-body #shopify-section-template--22333613048116__main .icon-with-text__item .h4.inline-richtext {
-  margin-bottom: 0px;
+body .product-single .icon-with-text__item .h4.inline-richtext {
+  margin-bottom: 0px !important;
 }
