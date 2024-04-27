@@ -61,6 +61,13 @@
         "padding_bottom": 36
       }
     },
+    "home_banner_TRnMNr": {
+      "type": "home-banner",
+      "settings": {
+        "custom_text_title": "",
+        "custom_text_body": "<p>*Coupons can not be combined with any other offer or discount and do not<br\/> have a cash value. Mattressville has the right to void the coupons.<\/p>"
+      }
+    },
     "home_banner_WT86ma": {
       "type": "home-banner",
       "settings": {
@@ -72,6 +79,7 @@
   "order": [
     "main",
     "coupons-tab",
+    "home_banner_TRnMNr",
     "home_banner_WT86ma"
   ]
 }
