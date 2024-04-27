@@ -198,6 +198,7 @@
   }
 }
 body{
+  overflow-x:hidden;
   .product-single{
     .share-button {
       margin: 0;
@@ -215,6 +216,7 @@ body{
           }
         }
         &.mySwiperSmall{
+          padding-bottom:10px;
           .swiper-wrapper{
             justify-content:center;
             align-items: center;
