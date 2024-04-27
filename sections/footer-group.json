@@ -72,6 +72,13 @@
         "enable_visa_payment": true
       }
     },
+    "home_banner_rBQHW8": {
+      "type": "home-banner",
+      "settings": {
+        "custom_text_title": "",
+        "custom_text_body": "<p><strong>*These coupons can be redeemed through this website or at our store (1911 Dundas St. East, Unit 18 – Mississauga, ON – L4X 1M1).<\/strong>Note: Coupons are not applicable for some CLEARANCE items. You can only use one coupon per purchase and please watch the expiry date as these coupons are limited.<\/p>"
+      }
+    },
     "footer-top": {
       "type": "footer-top",
       "blocks": {
@@ -149,6 +156,7 @@
   "order": [
     "yotpo-side-reviews",
     "footer-mobile",
+    "home_banner_rBQHW8",
     "footer-top",
     "footer-bottom"
   ]
