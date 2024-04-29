@@ -199,6 +199,12 @@
 }
 body{
   overflow-x:hidden;
+  .lg-components-open {
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
   .product-single{
     .share-button {
       margin: 0;
@@ -206,6 +212,9 @@ body{
     .invx-custom-gallery-slider{
       .swiper{
         &.mySwiperMain{
+          #lg-swiper{
+            max-height: 500px;
+          }
           .swiper-button-next {
             display: block !important;
             color: #000;
@@ -220,6 +229,7 @@ body{
           .swiper-wrapper{
             justify-content:center;
             align-items: center;
+            transform: none !important;
             .swiper-slide{
               width:50px !important;
               height: 100%;

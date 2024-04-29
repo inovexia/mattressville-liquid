@@ -37,8 +37,10 @@
         content="Mattressville's {{ page_title }} to choose for your best sleep, keep on exploring, we will bring you best offers there is."
       >
     {% endif %}
+    {% if template == 'product' %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css?ver=6.5.2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css" />
+    {% endif %}
 
     {% render 'meta-tags' %}
 
@@ -331,8 +333,10 @@
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
+
+{% if template == 'product' %}
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
     <script>
       let $lgSwiper = document.getElementById('lg-swiper');
     var swiper = new Swiper(".mySwiperSmall", {
@@ -349,8 +353,21 @@
       thumbs: {
         swiper: swiper,
       },
+      // Init lightGallery ince swiper is initilized
+    on: {
+        init: function () {
+            const lg = lightGallery($lgSwiper);
+
+            // Before closing lightGallery, make sure swiper slide
+            // is aligned with the lightGallery active slide
+            $lgSwiper.addEventListener('lgBeforeClose', () => {
+                swiper.slideTo(lg.index, 0)
+            });
+        },
+    }
     });
   </script>
+  {%- endif -%}
 
     <script>
       window.shopUrl = '{{ request.origin }}';

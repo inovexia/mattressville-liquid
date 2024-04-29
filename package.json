@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev":"shopify theme dev --store mattress-ville",
-    "test-dev":"shopify theme dev --store inovexia-store"
+    "dev": "shopify theme dev --store mattress-ville",
+    "test-dev": "shopify theme dev --store inovexia-store"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lightgallery": "^2.7.2"
+  }
 }
