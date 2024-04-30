@@ -91,30 +91,11 @@
     {%- endcase -%}
   {%- endfor -%}
 
+  {% if article.metafields.custom.accordion %}
   <div id="articleAccordion"></div>
+  {% endif %}
 
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var json = {{ article.metafields.custom.accordion | json }};
-  
-    var array = [];
-    for (var i = 0; i < json.children.length; i += 2) {
-      var question = json.children[i].children[0].value;
-      var answer = json.children[i + 1].children[0].value;
-      array.push({question: question, answer: answer});
-    }
-  
-    // Create HTML for each question and answer
-    var html = '';
-    for (var i = 0; i < array.length; i++) {
-      html += '<h4>' + array[i].question + '</h4>';
-      html += '<p>' + array[i].answer + '</p>';
-    }
-  
-    // Insert the HTML into a div with the id 'faq'
-    document.getElementById('articleAccordion').innerHTML = html;
-  });
-  </script>
+ 
   
 
 
@@ -127,9 +108,53 @@
     var answer = json.children[i + 1].children[0].value;
     array.push({question: question, answer: answer});
   }
+  // Create HTML for each question and answer
+  var html = '';
+    for (var i = 0; i < array.length; i++) {
+      html += '<h4 class="invx-accordion">' + array[i].question + '</h4>';
+      html += '<div class="panel">';
+      html += '<p>' + array[i].answer + '</p>';
+      html += '</div>';
+    }
+  
+    // Insert the HTML into a div with the id 'faq'
+    document.getElementById('articleAccordion').innerHTML = html;
 </script>
 
+<script>
+var acc = document.getElementsByClassName("invx-accordion");
 
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    var isActive = this.classList.contains("active");
+
+    // Close all panels
+    var allPanels = document.getElementsByClassName("panel");
+    for (var j = 0; j < allPanels.length; j++) {
+      allPanels[j].style.display = "none";
+    }
+
+    // Remove active class from all items
+    var allItems = document.getElementsByClassName("invx-accordion");
+    for (var k = 0; k < allItems.length; k++) {
+      allItems[k].classList.remove("active");
+    }
+
+    // If clicked item is not active, show its panel
+    if (!isActive) {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      panel.style.display = "block";
+    }
+  });
+
+  // Show panel of the first item by default
+  if (i === 0) {
+    var panel = acc[i].nextElementSibling;
+    panel.style.display = "block";
+  }
+}
+</script>
 
 
 
