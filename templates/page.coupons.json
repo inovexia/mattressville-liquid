@@ -47,12 +47,26 @@
             "button_label": "Start Saving",
             "button_link": "shopify:\/\/collections\/all-mattresses"
           }
+        },
+        "coupon_kiREzC": {
+          "type": "coupon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/location-1.png",
+            "type": "serta",
+            "code": "ABC123",
+            "title": "Test Coupon",
+            "description": "<p>Some description<\/p>",
+            "expiry": "May 15, 2024",
+            "button_label": "Satrt Saving",
+            "button_link": "shopify:\/\/products\/beaudoin-carter-platform-bed"
+          }
         }
       },
       "block_order": [
         "coupon_yDC3bH",
         "coupon_FkNtma",
-        "coupon_KzhYWf"
+        "coupon_KzhYWf",
+        "coupon_kiREzC"
       ],
       "settings": {
         "tnc": "<p><em>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void the coupons.<\/em><\/p>",
