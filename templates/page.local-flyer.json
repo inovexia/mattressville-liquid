@@ -56,14 +56,14 @@
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "center",
         "content_layout": "no-overlap",
         "section_color_scheme": "",
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 100
       }
     }
   },
