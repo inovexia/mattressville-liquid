@@ -50,26 +50,6 @@
     },
     "image_with_text_EKL6in": {
       "type": "image-with-text",
-      "blocks": {
-        "text_ze8qzQ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>There is currently no local promotion available. Check back soon.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "heading_RVCpXb": {
-          "type": "heading",
-          "settings": {
-            "heading": "Local GTA Flyer",
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "text_ze8qzQ",
-        "heading_RVCpXb"
-      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
         "height": "medium",
