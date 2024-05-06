@@ -50,6 +50,9 @@
     },
     "image_with_text_EKL6in": {
       "type": "image-with-text",
+      "custom_css": [
+        "img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; width: auto; right: 50%; transform: translate(-50%,0%);}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
         "height": "medium",
