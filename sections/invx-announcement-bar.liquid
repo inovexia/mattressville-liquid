@@ -1,0 +1,73 @@
+<style>
+  #invx-announcement-bar #invx-announcement-bar-dismiss {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  #invx-announcement-bar p {
+    padding: 5px 0px;
+    margin: 0px;
+  }
+  #invx-announcement-bar p,
+  #invx-announcement-bar a {
+    color: #fff;
+  }
+</style>
+
+<div
+  class="announcement-bar"
+  id="invx-announcement-bar"
+  style="background-color: {{ section.settings.background_color }};"
+>
+  <div class="page-width " style="display: flex; align-items: center">
+    {{ section.settings.announcement }}
+    <span id="invx-announcement-bar-dismiss">Dismiss</span>
+  </div>
+</div>
+
+<script>
+  var bar = document.getElementById('invx-announcement-bar');
+  var dismiss = document.getElementById('invx-announcement-bar-dismiss');
+  dismiss.addEventListener('click', function () {
+    bar.style.display = 'none';
+  });
+</script>
+{% schema %}
+{
+  "name": "Announcements",
+  "class": "section",
+  "tag": "section",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#D7355C"
+    },
+    {
+      "type": "richtext",
+      "id": "announcement",
+      "default": "<p>Welcome to Mattressville  store</p>",
+      "label": "Announcement"
+    },
+    {
+      "type": "select",
+      "id": "duration",
+      "label": "Duration to hide banner",
+      "options": [
+        {
+          "value": "session",
+          "label": "For the current session"
+        },
+        {
+          "value": "page",
+          "label": "Till the page reloads"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -2,30 +2,13 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement_bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement_LDchzp": {
-          "type": "announcement",
-          "settings": {
-            "text": "Premium Mattress Sale | The Highest Rated Mattress Store | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.",
-            "link": "shopify:\/\/collections\/all-mattresses"
-          }
-        }
-      },
-      "block_order": [
-        "announcement_LDchzp"
-      ],
+    "invx-announcement": {
+      "type": "invx-announcement-bar",
       "settings": {
-        "color_scheme": "scheme-5",
-        "show_line_separator": true,
-        "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_country_selector": false,
-        "enable_language_selector": false
+        "background_color": "#ffffff"
       }
     },
+
     "header": {
       "type": "header",
       "settings": {
@@ -43,31 +26,6 @@
         "margin_bottom": 0,
         "padding_top": 8,
         "padding_bottom": 8
-      }
-    },
-    "announcement_bar_3xBxrG": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement_znVyhB": {
-          "type": "announcement",
-          "settings": {
-            "text": "1905-212-7722",
-            "link": "tel:1905-212-7722"
-          }
-        }
-      },
-      "block_order": [
-        "announcement_znVyhB"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "",
-        "show_line_separator": false,
-        "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 10,
-        "enable_country_selector": false,
-        "enable_language_selector": false
       }
     },
     "header-mid": {
@@ -94,9 +52,8 @@
     }
   },
   "order": [
-    "announcement_bar",
+    "invx-announcement",
     "header",
-    "announcement_bar_3xBxrG",
     "header-mid",
     "header-bottom"
   ]

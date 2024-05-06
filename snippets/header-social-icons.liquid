@@ -8,22 +8,30 @@
     class: 'my-class'
   %}
 {% endcomment %}
+{{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 {%- style -%}
-  .header-social-icons{
+  .header-social-icons {
     display: none;
+    /* border-left: 2px solid #e6e6e6;
+    border-right: 2px solid #e6e6e6; */
   }
 
-  @media (min-width:990px){
-    .header-social-icons{
+  @media (min-width: 990px) {
+    .header-social-icons {
       display: flex;
+      margin-right: 10px;
+    }
+
+    .list-social__item {
     }
 
     .list-social__link {
       text-decoration: none;
     }
 
-    .list-social__link .gsi{
-      font-size: 22px;
+    .list-social__link .gsi {
+      font-size: 16px;
+      color: #fff;
     }
   }
 {%- endstyle -%}
@@ -45,6 +53,14 @@
       </a>
     </li>
   {%- endif -%}
+  {%- if settings.social_twitter_link != blank -%}
+    <li class="list-social__item">
+      <a href="{{ settings.social_twitter_link }}" class="link list-social__link">
+        <i class="gsi gs-twitter-alt"></i>
+        <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
   {%- if settings.social_youtube_link != blank -%}
     <li class="list-social__item">
       <a href="{{ settings.social_youtube_link }}" class="link list-social__link">
@@ -58,14 +74,6 @@
       <a href="{{ settings.social_tiktok_link }}" class="link list-social__link">
         {%- render 'icon-tiktok' -%}
         <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
-      </a>
-    </li>
-  {%- endif -%}
-  {%- if settings.social_twitter_link != blank -%}
-    <li class="list-social__item">
-      <a href="{{ settings.social_twitter_link }}" class="link list-social__link">
-        <i class="gsi gs-twitter-alt"></i>
-        <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
       </a>
     </li>
   {%- endif -%}
