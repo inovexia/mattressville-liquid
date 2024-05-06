@@ -5,7 +5,7 @@
     "invx-announcement": {
       "type": "invx-announcement-bar",
       "settings": {
-        "background_color": "#ffffff",
+        "background_color": "#d7355c",
         "announcement": "<p><a href=\"\/collections\/all-mattresses\" title=\"All Mattresses\">Premium Mattress Sale<\/a> | The Highest Rated Mattress Store | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.<\/p>",
         "duration": "session"
       }
