@@ -100,12 +100,16 @@
         "text_jVUamn",
         "button_jxFTbn"
       ],
+      "custom_css": [
+        ".image-with-text__grid.grid.grid--gapless.grid--1-col.grid--2-col-tablet {max-width: 540px; margin: 0px auto;}",
+        ".image-with-text__text-item.grid__item {display: none;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 0,
+        "padding_top": 12,
         "padding_bottom": 20
       }
     },
