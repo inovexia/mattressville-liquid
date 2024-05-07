@@ -44,7 +44,7 @@
         "column_ypJ9zH"
       ],
       "custom_css": [
-        "#Slider-template--22113195393332__multicolumn_CrLKdg {align-items: center; background: #f1f3f4; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); border-radius: 15px; justify-content: space-around; padding: 20px 10px; overflow: hidden;}",
+        "#Slider-template--22113195393332__multicolumn_CrLKdg {align-items: center; background: #f1f3f4; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); border-radius: 15px; justify-content: space-around; padding:0px; overflow: hidden;}",
         "#Slider-template--22113195393332__multicolumn_CrLKdg li {background-color: transparent; border: none; text-align: center;}",
         "#Slider-template--22113195393332__multicolumn_CrLKdg li .multicolumn-card__info {padding: 0;}",
         ".link {margin: 0 !important; padding: 10px;}",
