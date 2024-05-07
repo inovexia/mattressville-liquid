@@ -3683,6 +3683,9 @@ details-disclosure>details {
 }
 
 
+#articleAccordion {
+  max-width: 930px;
+}
 
 #articleAccordion .invx-accordion {
   background-color: rgba(0, 0, 0, 0.02);
@@ -3727,4 +3730,25 @@ details-disclosure>details {
 #articleAccordion .invx-accordion.active::after {
   content: "-";
   font-size: 30px;
+}
+
+#Coupons\ and\ Deals_details {
+  position: relative;
+}
+
+#Coupons\ and\ Deals_details::after {
+  border: none;
+  content: "\e92e";
+  font-family: "GS-Starter-Icon";
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  margin-left: 5px;
+  text-transform: none;
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  z-index: -1;
 }
