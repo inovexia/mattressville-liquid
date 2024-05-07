@@ -3,6 +3,7 @@
     color: #fff;
     text-decoration: underline;
     cursor: pointer;
+    margin-left: 10px;
   }
   #invx-announcement-bar p {
     padding: 5px 0px;
@@ -25,13 +26,6 @@
   </div>
 </div>
 
-<script>
-  var bar = document.getElementById('invx-announcement-bar');
-  var dismiss = document.getElementById('invx-announcement-bar-dismiss');
-  dismiss.addEventListener('click', function () {
-    bar.style.display = 'none';
-  });
-</script>
 {% schema %}
 {
   "name": "Announcements",
@@ -50,7 +44,7 @@
     {
       "type": "richtext",
       "id": "announcement",
-      "default": "<p>Welcome to Mattressville  store</p>",
+      "default": "<p><a href=''>Premium Mattress Sale</a> | The Highest Rated Mattress Store | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.</p>",
       "label": "Announcement"
     },
     {

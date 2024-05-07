@@ -1,7 +1,7 @@
 {
   "sections": {
-    "slideshow_yh9aX9": {
-      "type": "landing-slideshow",
+    "invx-slider": {
+      "type": "invx-home-slider",
       "blocks": {
         "slide_PEgBhX": {
           "type": "slide",
@@ -654,7 +654,7 @@
     }
   },
   "order": [
-    "slideshow_yh9aX9",
+    "invx-slider",
     "multicolumn_Yk9bxe",
     "psb_reviews_reviews_01_Vr6JBB",
     "featured_collection_xLkaJK",
