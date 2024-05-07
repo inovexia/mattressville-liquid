@@ -115,6 +115,9 @@
     },
     "image_with_text_EKL6in": {
       "type": "image-with-text",
+      "custom_css": [
+        ".image-with-text__text-item.grid__item {display: none;}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
         "height": "medium",
