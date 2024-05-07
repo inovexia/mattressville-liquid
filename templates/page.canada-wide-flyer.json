@@ -101,8 +101,7 @@
         "button_jxFTbn"
       ],
       "custom_css": [
-        ".image-with-text__grid.grid.grid--gapless.grid--1-col.grid--2-col-tablet {max-width: 540px; margin: 0px auto;}",
-        ".image-with-text__text-item.grid__item {display: none;}"
+
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -116,6 +115,7 @@
     "image_with_text_EKL6in": {
       "type": "image-with-text",
       "custom_css": [
+        ".image-with-text__grid.grid.grid--gapless.grid--1-col.grid--2-col-tablet {max-width: 540px; margin: 0px auto;}",
         ".image-with-text__text-item.grid__item {display: none;}"
       ],
       "settings": {
