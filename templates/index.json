@@ -7,190 +7,70 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/welcome_to_Mattressville_banner_main.webp",
-            "slide_link": "\/collections\/all-mattresses",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "slide_link": "\/collections\/all-mattresses"
           }
         },
         "slide_gQ3iXy": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Why_Tempur-Pedic_is_the_King_of_Memory_Foam_Mattresses-mattressville.jpg",
-            "slide_link": "shopify:\/\/blogs\/featured-brands\/why-tempur-pedic-is-the-king-of-memory-foam-mattresses",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "slide_link": "shopify:\/\/blogs\/featured-brands\/why-tempur-pedic-is-the-king-of-memory-foam-mattresses"
           }
         },
         "slide_mp4EPY": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/younger_generations_are_opting_for_adjustable_beds.webp",
-            "slide_link": "shopify:\/\/blogs\/health-sleep-wellness\/why-adjustable-beds-aren-t-only-for-the-elderly",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "shopify:\/\/collections\/all-mattresses",
-            "button_style_secondary": false,
-            "box_align": "middle-right",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
+            "image": "shopify:\/\/shop_images\/younger_generations_are_opting_for_adjustable_beds_89d00b5b-1a02-47b5-88fa-8187893398e0.webp",
+            "slide_link": "shopify:\/\/blogs\/health-sleep-wellness\/why-adjustable-beds-aren-t-only-for-the-elderly"
           }
         },
         "slide_86rVjX": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/The_Best_Mattresses_of_2023-Mattressville.webp",
-            "slide_link": "shopify:\/\/blogs\/tips\/best-mattresses-of-2023",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
+            "image": "shopify:\/\/shop_images\/The_Best_Mattresses_of_2023-Mattressville_f1de219e-719b-43d1-9225-7b1aa77dcab7.webp",
+            "slide_link": "shopify:\/\/blogs\/tips\/best-mattresses-of-2023"
           }
         },
         "slide_mgniDF": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville_natura_banner_rev_2024_ddd17fac-ab54-4ae3-acc0-7c8dd0ed254c.jpg",
-            "slide_link": "shopify:\/\/collections\/brand-natura",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "slide_link": "shopify:\/\/collections\/brand-natura"
           }
         },
         "slide_CKrRRg": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
-            "slide_link": "shopify:\/\/blogs\/tips\/10-reasons-to-gift-a-mattress",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "slide_link": "shopify:\/\/blogs\/tips\/10-reasons-to-gift-a-mattress"
           }
         },
         "slide_yQaMJP": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville_kingsdown_coolwave_banner.jpg",
-            "slide_link": "shopify:\/\/products\/kingsdown-cool-wave-tight-top-mattress",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "slide_link": "shopify:\/\/products\/kingsdown-cool-wave-tight-top-mattress"
           }
         },
         "slide_9y8Uir": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville_banner_stearns_and_foster__2024.jpg",
-            "slide_link": "shopify:\/\/collections\/brand-stearns-and-foster",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "slide_link": "shopify:\/\/collections\/brand-stearns-and-foster"
           }
         },
         "slide_yTF6mG": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville_sealy_repreve_banner_2024.jpg",
-            "slide_link": "\/search?q=repreve&sort_by=price-ascending",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "slide_link": "\/search?q=repreve&sort_by=price-ascending"
           }
         },
         "slide_bTWUcd": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Tempur-pedic_home_banner_48a81cb1-840c-4199-a41e-3d9403c99dd5.jpg",
-            "slide_link": "shopify:\/\/collections\/brand-tempur-pedic",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "slide_link": "shopify:\/\/collections\/brand-tempur-pedic"
           }
         }
       },
@@ -284,7 +164,7 @@
         "img {border-radius: 15px;}",
         ".background-none .multicolumn-card__image-wrapper + .multicolumn-card__info {padding-top: 0; font-weight: 700; letter-spacing: 0;}",
         ".multicolumn h3 {text-decoration: none; font-size: inherit; margin-top: 1.5rem;}",
-        ".multicolumn a{text-decoration: none; }"
+        ".multicolumn a {text-decoration: none;}"
       ],
       "settings": {
         "title": "<strong>Shop By Categories <\/strong>",
