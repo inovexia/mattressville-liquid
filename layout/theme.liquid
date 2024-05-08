@@ -368,39 +368,21 @@ body {
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
-    {% if template == 'product' %}
+    {% comment %} 
+            * INVX *
+            Load custom scripts
+        {% endcomment %}
+    <script src="{{ 'invx-global.js' | asset_url }}" defer="defer"></script>
+
+    {% if template == 'index' %}
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+      <script src="{{ 'invx-scripts-home.js' | asset_url }}" defer="defer"></script>
+    {% endif %}
+
+    {% if template == 'product' or template == 'index' %}
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" defer></script>
-      <script>
-        let $lgSwiper = document.getElementById('lg-swiper');
-        var swiper = new Swiper('.mySwiperSmall', {
-          spaceBetween: 10,
-          freeMode: true,
-          watchSlidesProgress: true,
-        });
-        var swiper2 = new Swiper('.mySwiperMain', {
-          spaceBetween: 10,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          thumbs: {
-            swiper: swiper,
-          },
-          // Init lightGallery ince swiper is initilized
-          on: {
-            init: function () {
-              const lg = lightGallery($lgSwiper);
-        
-              // Before closing lightGallery, make sure swiper slide
-              // is aligned with the lightGallery active slide
-              $lgSwiper.addEventListener('lgBeforeClose', () => {
-                swiper.slideTo(lg.index, 0);
-              });
-            },
-          },
-        });
-      </script>
+      <script src="{{ 'invx-scripts-pdp.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script>
       document.addEventListener("DOMContentLoaded", function() {
