@@ -14,7 +14,8 @@
           class="footer-logo"
           loading="lazy"
           height="55"
-          width="322" />
+          width="322"
+        >
       {%- else -%}
         <img
           src="{{ 'mattressville-logo-white-slogan.png' | asset_img_url: 'master' }}"
@@ -22,7 +23,8 @@
           class="footer-logo"
           loading="lazy"
           height="55"
-          width="322" />
+          width="322"
+        >
       {%- endif -%}
     </div>
     <div class="end">
@@ -32,7 +34,10 @@
             <a
               class="menu-link"
               area-label="{{ item.title | escape }}"
-              href="{{ item.url }}/">{{ item.title | escape }}</a>
+              href="{{ item.url }}/"
+            >
+              {{- item.title | escape -}}
+            </a>
           {%- endfor -%}
         </div>
       </div>
@@ -46,7 +51,8 @@
                 alt="google_pay"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60"
+              >
             {%- endif -%}
             {%- if section.settings.enable_affirm_payment -%}
               <img
@@ -54,7 +60,8 @@
                 alt="affirm"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60"
+              >
             {%- endif -%}
             {%- if section.settings.enable_opay_payment -%}
               <img
@@ -62,7 +69,8 @@
                 alt="opay"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60"
+              >
             {%- endif -%}
             {%- if section.settings.enable_american_express_payment -%}
               <img
@@ -70,7 +78,8 @@
                 alt="american_express"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60"
+              >
             {%- endif -%}
             {%- if section.settings.enable_apple_pay_payment -%}
               <img
@@ -78,7 +87,8 @@
                 alt="apple_pay"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60"
+              >
             {%- endif -%}
             {%- if section.settings.enable_diners_club_payment -%}
               <img
@@ -86,7 +96,8 @@
                 alt="diners_club"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60"
+              >
             {%- endif -%}
             {%- if section.settings.enable_discover_payment -%}
               <img
@@ -94,7 +105,8 @@
                 alt="discover"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60"
+              >
             {%- endif -%}
             {%- if section.settings.enable_master_payment -%}
               <img
@@ -102,7 +114,8 @@
                 alt="master"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60"
+              >
             {%- endif -%}
             {%- if section.settings.enable_shopify_pay_payment -%}
               <img
@@ -110,7 +123,8 @@
                 alt="shopify_pay"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60"
+              >
             {%- endif -%}
             {%- if section.settings.enable_visa_payment -%}
               <img
@@ -118,7 +132,8 @@
                 alt="visa"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60"
+              >
             {%- endif -%}
             {%- if section.settings.enable_paypal_payment -%}
               <img
@@ -126,8 +141,9 @@
                 alt="paypal"
                 loading="lazy"
                 height="38"
-                width="60" />
-              {%- endif -%}
+                width="60"
+              >
+            {%- endif -%}
           </div>
           <div class="social-media">
             {%- if settings.social_twitter_link != blank -%}
@@ -136,7 +152,8 @@
                 target="_blank"
                 rel="nofollow noreferrer"
                 class="media-link"
-                area-label="Twitter">
+                area-label="Twitter"
+              >
                 <i class="gsi gs-twitter-alt"></i>
               </a>
             {%- endif -%}
@@ -146,7 +163,8 @@
                 target="_blank"
                 rel="nofollow noreferrer"
                 class="media-link"
-                area-label="Facebook">
+                area-label="Facebook"
+              >
                 <i class="gsi gs-facebook-alt"></i>
               </a>
             {%- endif -%}
@@ -156,7 +174,8 @@
                 target="_blank"
                 rel="nofollow noreferrer"
                 class="media-link"
-                area-label="Instagram">
+                area-label="Instagram"
+              >
                 <i class="gsi gs-instagram"></i>
               </a>
             {%- endif -%}
@@ -170,108 +189,120 @@
   </div>
 </div>
 
-{% schema %}
-  {
-    "name": "Footer Bottom",
-    "class": "footer-bottom",
-    "enabled_on": {
-      "groups": ["footer"]
+<script src="{{ 'invx-global.js' | asset_url }}" defer="defer"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" ></script>
+<script>
+  var swiper = new Swiper(".invx-home-slider", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+
     },
-    "settings": [
-      {
-        "type": "color",
-        "id": "text_color",
-        "label": "Text Color",
-        "default": "#ffffff"
-      },
-      {
-        "type": "image_picker",
-        "id": "footer_logo",
-        "label": "Footer Logo",
-        "info": "Uses default logo if nothing set"
-      },
-      {
-        "type": "link_list",
-        "id": "footer_menu",
-        "label": "Footer Menu"
-      },
-      {
-        "type": "text",
-        "id": "copyright_text",
-        "label": "Copy Right Text",
-        "default": "© 2023 online mattress store - mattressville.ca. All Rights Reserved."
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_american_express_payment",
-        "default": false,
-        "label": "Enable American Express Payment"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_affirm_payment",
-        "default": true,
-        "label": "Enable Affirm Payment"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_paypal_payment",
-        "default": true,
-        "label": "Enable PayPal Payment"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_opay_payment",
-        "default": true,
-        "label": "Enable OPay Payment"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_apple_pay_payment",
-        "default": false,
-        "label": "Enable Apple Pay Payment"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_diners_club_payment",
-        "default": false,
-        "label": "Enable Diners Club Payment"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_discover_payment",
-        "default": false,
-        "label": "Enable Discover Payment"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_google_pay_payment",
-        "default": true,
-        "label": "Enable Google Pay Payment"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_master_payment",
-        "default": true,
-        "label": "Enable Master Payment"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_shopify_pay_payment",
-        "default": false,
-        "label": "Enable Shopify Pay Payment"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_visa_payment",
-        "default": true,
-        "label": "Enable Visa Payment"
-      },
-      {
-        "type": "inline_richtext",
-        "id": "affirm_disclaimer",
-        "label": "Affirm Disclaimer"
-      }
-    ]
-  }
+  });
+</script>
+{% schema %}
+{
+  "name": "Footer Bottom",
+  "class": "footer-bottom",
+  "enabled_on": {
+    "groups": ["footer"]
+  },
+  "settings": [
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer Logo",
+      "info": "Uses default logo if nothing set"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer Menu"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copy Right Text",
+      "default": "© 2023 online mattress store - mattressville.ca. All Rights Reserved."
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_american_express_payment",
+      "default": false,
+      "label": "Enable American Express Payment"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_affirm_payment",
+      "default": true,
+      "label": "Enable Affirm Payment"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_paypal_payment",
+      "default": true,
+      "label": "Enable PayPal Payment"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_opay_payment",
+      "default": true,
+      "label": "Enable OPay Payment"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_apple_pay_payment",
+      "default": false,
+      "label": "Enable Apple Pay Payment"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_diners_club_payment",
+      "default": false,
+      "label": "Enable Diners Club Payment"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_discover_payment",
+      "default": false,
+      "label": "Enable Discover Payment"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_google_pay_payment",
+      "default": true,
+      "label": "Enable Google Pay Payment"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_master_payment",
+      "default": true,
+      "label": "Enable Master Payment"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_shopify_pay_payment",
+      "default": false,
+      "label": "Enable Shopify Pay Payment"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_visa_payment",
+      "default": true,
+      "label": "Enable Visa Payment"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "affirm_disclaimer",
+      "label": "Affirm Disclaimer"
+    }
+  ]
+}
 {% endschema %}

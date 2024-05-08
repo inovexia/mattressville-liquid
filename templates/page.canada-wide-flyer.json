@@ -6,27 +6,117 @@
       "settings": {
       }
     },
-    "image_with_text_EKL6in": {
-      "type": "image-with-text",
+    "multicolumn_q4qrrc": {
+      "type": "multicolumn",
       "blocks": {
-        "heading_RVCpXb": {
-          "type": "heading",
+        "column_tknjkg": {
+          "type": "column",
           "settings": {
-            "heading": "Canada Wide Flyer",
-            "heading_size": "h2"
+            "title": "",
+            "text": "",
+            "link_label": "GTA Flyer",
+            "link": "shopify:\/\/pages\/local-gta-flyer"
           }
         },
-        "text_ze8qzQ": {
-          "type": "text",
+        "column_3rxwUr": {
+          "type": "column",
+          "disabled": true,
           "settings": {
-            "text": "<p>There is currently no local promotion available. Check back soon.<\/p>",
-            "text_style": "body"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WcEp7A": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "Canada Wide Flyer",
+            "link": "shopify:\/\/pages\/canada-wide-flyer"
           }
         }
       },
       "block_order": [
-        "heading_RVCpXb",
-        "text_ze8qzQ"
+        "column_tknjkg",
+        "column_3rxwUr",
+        "column_WcEp7A"
+      ],
+      "custom_css": [
+        "#Slider-template--22113195721012__multicolumn_q4qrrc {align-items: center; background: #f1f3f4; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); border-radius: 15px; justify-content: space-around; padding: 0px; overflow: hidden;}",
+        "#Slider-template--22113195721012__multicolumn_q4qrrc li {background-color: transparent; border: none; text-align: center;}",
+        "#Slider-template--22113195721012__multicolumn_q4qrrc li .multicolumn-card__info {padding: 0;}",
+        ".link {margin: 0 !important; padding: 10px;}",
+        ".icon-wrap {display: none;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_aNKbf9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FtdFKK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Canada Wide Flyer",
+            "heading_size": "h1"
+          }
+        },
+        "text_jVUamn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>There is currently no local promotion available. Check back soon.<\/p>"
+          }
+        },
+        "button_jxFTbn": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FtdFKK",
+        "text_jVUamn",
+        "button_jxFTbn"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_EKL6in": {
+      "type": "image-with-text",
+      "custom_css": [
+        ".image-with-text__grid.grid.grid--gapless.grid--1-col.grid--2-col-tablet {max-width: 540px; margin: 0px auto;}",
+        ".image-with-text__text-item.grid__item {display: none;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
@@ -41,61 +131,14 @@
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "multicolumn_pWVmxp": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_4X4nKa": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/cta-image.jpg",
-            "title": "<a href=\"\/collections\/all-mattresses\" title=\"All Mattresses\">Shop All Mattresses<\/a>",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_GhNBjL": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bed.png",
-            "title": "<a href=\"https:\/\/mattressville.ca\/mattress-matchmaker\/\">Try our Mattress Matchmaker<\/a>",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_4X4nKa",
-        "column_GhNBjL"
-      ],
-      "custom_css": [
-        ".multicolumn.background-primary .multicolumn-card {background: transparent;}"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 100
       }
     }
   },
   "order": [
     "main",
-    "image_with_text_EKL6in",
-    "multicolumn_pWVmxp"
+    "multicolumn_q4qrrc",
+    "rich_text_aNKbf9",
+    "image_with_text_EKL6in"
   ]
 }

@@ -6,6 +6,67 @@
       "settings": {
       }
     },
+    "multicolumn_CrLKdg": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_xUV4De": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "GTA Flyer",
+            "link": "shopify:\/\/pages\/local-gta-flyer"
+          }
+        },
+        "column_mJp4Qk": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ypJ9zH": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "Canada Wide Flyer",
+            "link": "shopify:\/\/pages\/canada-wide-flyer"
+          }
+        }
+      },
+      "block_order": [
+        "column_xUV4De",
+        "column_mJp4Qk",
+        "column_ypJ9zH"
+      ],
+      "custom_css": [
+        "#Slider-template--22113195393332__multicolumn_CrLKdg {align-items: center; background: #f1f3f4; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); border-radius: 15px; justify-content: space-around; padding: 0px; overflow: hidden;}",
+        "#Slider-template--22113195393332__multicolumn_CrLKdg li {background-color: transparent; border: none; text-align: center;}",
+        "#Slider-template--22113195393332__multicolumn_CrLKdg li .multicolumn-card__info {padding: 0;}",
+        ".link {margin: 0 !important; padding: 10px;}",
+        ".icon-wrap {display: none;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_LmUW9y": {
       "type": "rich-text",
       "blocks": {
@@ -44,7 +105,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 12,
         "padding_bottom": 52
       }
     },
@@ -53,7 +114,7 @@
       "custom_css": [
         ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
         ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none;}",
-        "img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; width:540px; right: 50%; transform: translate(-50%, 0%);}"
+        "img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; width: 540px; right: 50%; transform: translate(-50%, 0%);}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
@@ -74,6 +135,7 @@
   },
   "order": [
     "main",
+    "multicolumn_CrLKdg",
     "rich_text_LmUW9y",
     "image_with_text_EKL6in"
   ]
