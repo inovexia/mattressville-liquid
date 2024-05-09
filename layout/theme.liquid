@@ -29,11 +29,14 @@
     <title>
       {{ page_title }}
       {%- if current_tags %}
-        | tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+        | tagged "{{ current_tags | join: ', ' }}"
+      {%- endif -%}
       {%- if current_page != 1 %}
-        | Page {{ current_page }}{% endif -%}
+        | Page {{ current_page -}}
+      {%- endif -%}
       {%- unless page_title contains shop.name %}
-        | {{ shop.name }}{% endunless -%}
+        | {{ shop.name -}}
+      {%- endunless -%}
     </title>
 
     {% if page_description %}
@@ -87,15 +90,15 @@
           {% endif %}
 
           {% liquid
-          assign background_color = scheme.settings.background
-          assign background_color_brightness = background_color | color_brightness
-          if background_color_brightness <= 26
-            assign background_color_contrast = background_color | color_lighten: 50
-          elsif background_color_brightness <= 65
-            assign background_color_contrast = background_color | color_lighten: 5
-          else
-            assign background_color_contrast = background_color | color_darken: 25
-          endif
+                assign background_color = scheme.settings.background
+                assign background_color_brightness = background_color | color_brightness
+                if background_color_brightness <= 26
+                  assign background_color_contrast = background_color | color_lighten: 50
+                elsif background_color_brightness <= 65
+                  assign background_color_contrast = background_color | color_lighten: 5
+                else
+                  assign background_color_contrast = background_color | color_darken: 25
+                endif
 %}
 
           --color-foreground: {{ scheme.settings.text.red }}, 
@@ -369,8 +372,8 @@ body {
     </ul>
 
     {% comment %} 
-            Load custom scripts
-        {% endcomment %}
+      Load custom scripts 
+    {% endcomment %}
     <script src="{{ 'invx-global.js' | asset_url }}" defer="defer"></script>
 
     {% if template == 'index' %}
