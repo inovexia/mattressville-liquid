@@ -46,6 +46,7 @@
     {% else %}
       <meta name="description" content="Mattressville's {{ page_title }} to choose for your best sleep, keep on exploring, we will bring you best offers there is.">
     {% endif %}
+
     {% if template == 'product' %}
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css">
@@ -56,6 +57,7 @@
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -70,6 +72,7 @@
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
+      {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
@@ -90,15 +93,15 @@
           {% endif %}
 
           {% liquid
-                assign background_color = scheme.settings.background
-                assign background_color_brightness = background_color | color_brightness
-                if background_color_brightness <= 26
-                  assign background_color_contrast = background_color | color_lighten: 50
-                elsif background_color_brightness <= 65
-                  assign background_color_contrast = background_color | color_lighten: 5
-                else
-                  assign background_color_contrast = background_color | color_darken: 25
-                endif
+          assign background_color = scheme.settings.background
+          assign background_color_brightness = background_color | color_brightness
+          if background_color_brightness <= 26
+            assign background_color_contrast = background_color | color_lighten: 50
+          elsif background_color_brightness <= 65
+            assign background_color_contrast = background_color | color_lighten: 5
+          else
+            assign background_color_contrast = background_color | color_darken: 25
+          endif
 %}
 
           --color-foreground: {{ scheme.settings.text.red }}, 
@@ -144,8 +147,6 @@
       }
 
       :root {
-        --accent-color: {{ settings.theme_accent }};
-        --secondary-color: {{ settings.theme_secondary }};
         --font-body-family: {{ settings.type_body_font.family }}, 
         {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
@@ -170,7 +171,7 @@
         --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
         --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
-      --page-width: {{ settings.page_width }}px;
+      --page-width: {{ settings.page_width | divided_by: 10 }}rem;
       --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
 
     --product-card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
@@ -319,6 +320,7 @@ body {
         type="font/woff2"
         crossorigin>
     {%- endunless -%}
+
     {%- unless settings.type_header_font.system? -%}
       <link
         rel="preload"
@@ -372,8 +374,8 @@ body {
     </ul>
 
     {% comment %} 
-      Load custom scripts 
-    {% endcomment %}
+                              Load custom scripts 
+                    {% endcomment %}
     <script src="{{ 'invx-global.js' | asset_url }}" defer="defer"></script>
 
     {% if template == 'index' %}
