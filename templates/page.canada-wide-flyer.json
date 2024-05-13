@@ -101,7 +101,7 @@
         "button_jxFTbn"
       ],
       "custom_css": [
-
+        ".rich-text .rich-text__wrapper {padding: 0;}"
       ],
       "settings": {
         "desktop_content_position": "center",
