@@ -3752,3 +3752,7 @@ details-disclosure>details {
   position: absolute;
   z-index: -1;
 }
+
+.fordeer-config-label span {
+  font-weight: 700 !important;
+}
