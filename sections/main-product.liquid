@@ -130,7 +130,7 @@
                 <div class="grid__item product__title" {{ block.shopify_attributes }}>
                   <h1>{{ product.title | escape }}</h1>
                 </div>
-                <div
+                {% comment %} <div
                   class="no-js-hidden"
                   id="price-{{ section.id }}"
                   role="status"
@@ -144,7 +144,7 @@
                     show_badges: true,
                     price_class: 'price--large'
                   -%}
-                </div>
+                </div> {% endcomment %}
                 {%- if product.quantity_price_breaks_configured? -%}
                   <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
                     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
@@ -164,6 +164,29 @@
                     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                     {{ form | payment_terms }}
                   {%- endform -%}
+                </div>
+              </div>
+              <div class="invx-custom-price-layout">
+                <div class="affirm-info">
+                  {%- when 'icon-with-text' -%}
+                    {% render 'icon-with-text', block: block %}
+                </div>
+                <div class="price-info">
+                  <div
+                  class="no-js-hidden"
+                  id="price-{{ section.id }}"
+                  role="status"
+                  {{ block.shopify_attributes }}
+                  class="grid__item"
+                >
+                  {%- render 'price',
+                    product: product,
+                    at_product: true,
+                    use_variant: true,
+                    show_badges: true,
+                    price_class: 'price--large'
+                  -%}
+                </div>
                 </div>
               </div>
             {%- when 'inventory' -%}
@@ -680,8 +703,8 @@
                   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
                 {%- endif -%}
               </product-recommendations>
-            {%- when 'icon-with-text' -%}
-              {% render 'icon-with-text', block: block %}
+            {% comment %} {%- when 'icon-with-text' -%}
+              {% render 'icon-with-text', block: block %} {% endcomment %}
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
