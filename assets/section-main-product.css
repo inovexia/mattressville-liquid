@@ -439,7 +439,7 @@ a.product__text {
   font-weight: 700;
   line-height: 33px;
   margin-bottom: 5px;
-  max-width: 490px;
+  max-width: 100%;
 }
 
 .product__title>a {
