@@ -470,7 +470,8 @@ a.product__text {
 
 .product .price__container h3 {
   margin-block: 0;
-  margin-right: 10px;
+  margin-right: 5px;
+  font-size: 16px;
 }
 
 .product .price dl {
@@ -1746,6 +1747,9 @@ a.product__text {
   flex-direction: unset;
   align-items: center;
   justify-content: end;
+  margin-bottom: 0;
+  padding-top: 35px;
+  padding-right: 40px;
 }
 
 .product-single .invx-custom-price-layout {
