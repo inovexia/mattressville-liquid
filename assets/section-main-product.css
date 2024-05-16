@@ -1760,3 +1760,9 @@ a.product__text {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.product-single #tabpane-information .metafield-rich_text_field p em {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+}

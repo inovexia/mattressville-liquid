@@ -101,104 +101,55 @@
       </div>
       <div id="tabpane-information" class="tab-pane">
         <div class="tab-container">
-            {%- if product.metafields.meta_data.info_tab != blank -%}
-              {{ product.metafields.meta_data.info_tab | replace: '!important', '' }}
-            {% else %}
-              <div class="product-info-tab">
-                <p><strong>COIL COUNT</strong></p>
-                <table class="table table-striped">
-                  <tbody>
-                    <tr>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">TWIN</th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">DOUBLE</th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">QUEEN</th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">KING</th>
-                    </tr>
-                    <tr>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">
-                      {%- if product.metafields.custom.twin_xl_price != blank -%}
-                        {{ product.metafields.custom.twin_xl_price }}
-                      {% endif %}
-                      </th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">
-                        {%- if product.metafields.custom.double_price != blank -%}
-                          {{ product.metafields.custom.double_price }}
-                        {% endif %}
-                      </th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">
-                        {%- if product.metafields.custom.queen_price != blank -%}
-                          {{ product.metafields.custom.queen_price }}
-                        {% endif %}
-                      </th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">
-                        {%- if product.metafields.custom.king_price != blank -%}
-                          {{ product.metafields.custom.king_price }}
-                        {% endif %}
-                      </th>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="table table-striped">
-                  <tbody>
-                    <tr>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">Concept</th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">Value</th>
-                    </tr>
-                    {%- if product.metafields.custom.model != blank -%}
-                      <tr>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">Model</th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">{{ product.metafields.custom.model }}</th>
-                    </tr>
-                    {% endif %}
-                    {%- if product.metafields.custom.style != blank -%}
-                    <tr>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">Style</th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">{{ product.metafields.custom.style }}</th>
-                    </tr>
-                  {% endif %}
-                  {%- if product.metafields.custom.firmness != blank -%}
-                    <tr>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">Firmness</th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">{{ product.metafields.custom.firmness }}</th>
-                    </tr>
-                  {% endif %}
-                    {%- if product.metafields.custom.mattress_height != blank -%}
-                    <tr>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">Mattress Height</th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">{{ product.metafields.custom.mattress_height }}</th>
-                    </tr>
-                  {% endif %}
-                    {%- if product.metafields.custom.collection != blank -%}
-                    <tr>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">Collection</th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">{{ product.metafields.custom.collection }}</th>
-                    </tr>
-                  {% endif %}
-                    {%- if product.metafields.custom.coil_type != blank -%}
-                    <tr>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">Coil Type</th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">{{ product.metafields.custom.coil_type }}</th>
-                    </tr>
-                  {% endif %}
-                    {%- if product.metafields.custom.recommended_for != blank -%}
-                    <tr>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">Recommended for</th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">{{ product.metafields.custom.recommended_for }}</th>
-                    </tr>
-                  {% endif %}
-                    {%- if product.metafields.custom.warranty != blank -%}
-                    <tr>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">Warranty</th>
-                      <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">{{ product.metafields.custom.warranty }}</th>
-                    </tr>
-                  {% endif %}
-                  </tbody>
-                </table>
-                  {%- if product.metafields.custom.product_table_description != blank -%}
-                <p><i>{{ product.metafields.custom.product_table_description }}</i></p>
-              {% endif %}
-              </div>
-            {% endif %}
+          {%- if product.metafields.meta_data.info_tab != blank -%}
+            {{ product.metafields.meta_data.info_tab | replace: '!important', '' }}
+          {% else %}
+          {%- if product.metafields.custom.information_coil_count_table != blank -%}
+            <p><strong>COIL COUNT</strong></p>
+            <table class="table table-striped">
+              <tbody>
+                {% assign coil_count_array = product.metafields.custom.information_coil_count_table | split: ',' %}
+                <tr>
+                  {% for item in coil_count_array %}
+                    {% assign parts = item | split: ':' %}
+                    {% assign clean_item = parts[0] | replace: '"', '' | replace: '[', '' | replace: ']', '' | strip %}
+                    <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">{{ clean_item }}</th>
+                  {% endfor %}
+                </tr>
+                <tr>
+                  {% for item in coil_count_array %}
+                    {% assign parts = item | split: ':' %}
+                    {% assign clean_item = parts[1] | replace: '"', '' | replace: '[', '' | replace: ']', '' | strip %}
+                    <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">{{ clean_item }}</th>
+                  {% endfor %}
+                </tr>
+              </tbody>
+            </table>
+          {%- endif -%}
+          {%- if product.metafields.custom.information_product_info_table != blank -%}
+            <table class="table table-striped">
+              <tbody>
+                {% assign product_info_array = product.metafields.custom.information_product_info_table | split: ',' %}
+                {% for item in product_info_array %}
+                  {% assign parts = item | split: ':' %}
+                  {% assign key = parts[0] | replace: '"', '' | replace: '[', '' | replace: ']', '' | strip %}
+                  {% assign value = parts[1] | replace: '"', '' | replace: '[', '' | replace: ']', '' | strip %}
+                  
+                <tr>
+                  <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">{{ key }}</th>
+                  <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top;">{{ value }}</th>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {%- endif -%}
+          {%-if product.metafields.custom.information_mixed_content != blank -%}
+            {{ product.metafields.custom.information_mixed_content |  metafield_tag }}
+          {%- endif -%}
+          {%-if product.metafields.custom.product_table_description != blank -%}
+            {{ product.metafields.custom.product_table_description |  metafield_tag }}
+          {%- endif -%}
+        {%- endif -%}
         </div>
       </div>
       <div id="tabpane-features" class="tab-pane">
