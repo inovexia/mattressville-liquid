@@ -3756,3 +3756,23 @@ details-disclosure>details {
 .fordeer-config-label span {
   font-weight: 700 !important;
 }
+
+
+#yotpo-reviews-tab .yotpo-reviews-tab-rounded-border {
+  border-radius: 6px 6px 0px 0px;
+}
+
+#yotpo-reviews-tab .yotpo-reviews-tab-floating-tab-right {
+  transform-origin: 30px 65px;
+  transform: rotate(-90deg);
+}
+
+#yotpo-reviews-tab .yotpo-reviews-tab-floating-tab .yotpo-floating-tab-text {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+#yotpo-reviews-tab .yotpo-reviews-tab-floating-tab {
+  padding: 10px 20px;
+}
