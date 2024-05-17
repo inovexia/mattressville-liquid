@@ -3776,3 +3776,7 @@ details-disclosure>details {
 #yotpo-reviews-tab .yotpo-reviews-tab-floating-tab {
   padding: 10px 20px;
 }
+
+.breadcrumbs .breadcrumbs__item.all-mattresses {
+  display: none;
+}
