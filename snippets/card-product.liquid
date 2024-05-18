@@ -68,7 +68,7 @@
         if variantOptionsLowercase contains targetTitle and targetVariant == null
           assign targetVariant = variant
           if card_product.url contains '?'
-            assign cardProductUrl = card_product.url | append: '?variant=' | append: targetVariant.id
+            assign cardProductUrl = card_product.url | append: '&variant=' | append: targetVariant.id
           else
             assign cardProductUrl = card_product.url | append: '?variant=' | append: targetVariant.id
           endif
@@ -287,7 +287,7 @@
                 </p>
               {%- endif -%}
             </div>
-            {% render 'price',
+            {% render 'invx-price',
               product: card_product,
               price_class: '',
               targetVariant: targetVariant,
