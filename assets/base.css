@@ -1147,6 +1147,19 @@ summary::-webkit-details-marker {
   }
 }
 
+@media screen and (min-width:0px) and (max-width: 600px) {
+  .grid--1-col-tablet-down.grid--peek .grid__item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:601px) and (max-width: 992px) {
+  .grid--1-col-tablet-down.grid--peek .grid__item {
+    width: 45% !important;
+    margin-right: 10px;
+  }
+}
+
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .slider--tablet.grid--peek .grid__item {
     width: calc(25% - var(--grid-desktop-horizontal-spacing) - 3rem);
