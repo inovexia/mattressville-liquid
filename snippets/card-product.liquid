@@ -34,47 +34,73 @@
     if ratio == 0 or ratio == null
       assign ratio = 1
     endif
+    
+    #############################################################################
+    #
+    # Logic for selecting the collection size variant or the first variant (queen)
+    #
+    #############################################################################
+    # Get first variant (queen)
+    assign first_variant = card_product.variants.first
+
+    # if this is the collections page, match the size variant title and the collection title
+    if template.name == 'collection' and collection.title contains 'Size' 
+      assign collection_title = collection.title | split: ' Size ' | first | upcase 
+      for productVariant in card_product.variants 
+        assign variant_title = productVariant.title | split: ' / ' | first | upcase  
+        if collection_title == variant_title 
+          assign targetVariant = productVariant
+          break 
+        endif 
+      endfor
+    
+    # otherwise, use the first variant
+    elsif first_variant
+      assign targetVariant = first_variant
+    # otherwise, use the default product
+    else
+      assign targetVariant = card_product
+    endif
+
+    
+    # Get the size filter from the query parameters
     assign results = null
     if collection != blank
       assign results = collection
     else
       assign results = search
     endif
-    assign filterSize = null
-    assign filterSizeCount = 0
+
+    assign size_filter = null
+    assign size_filter_count = 0
+
     for filter in results.filters
       for value in filter.active_values
         if filter.label contains 'Size'
-          if filterSize == null
-            assign filterSize = value.label
+          if size_filter == null
+            assign size_filter = value.label
+            for productVariant in card_product.variants 
+            assign variant_title = productVariant.title | split: ' / ' | first | upcase  
+            if size_filter == variant_title
+              assign targetVariant = productVariant
+              break 
+            endif 
+          endfor
           endif
-          assign filterSizeCount = filterSizeCount | plus: 1
+          assign size_filter_count = size_filter_count | plus: 1
         endif
       endfor
     endfor
-    assign targetTitle = 'queen' | downcase
-    if filterSizeCount > 0
-      if filterSize != null and filterSizeCount > 1
-        assign targetTitle = null
-      else
-        assign targetTitle = filterSize | downcase
-      endif
+
+    # Add the variant to the URL
+    if card_product.url contains '?'
+      assign cardProductURL = card_product.url | split: '?' | first | append: '?variant=' | append: targetVariant.id
+    else
+      assign cardProductURL = card_product.url | append: '?variant=' | append: targetVariant.id
     endif
-    assign targetVariant = null
-    assign cardProductUrl = card_product.url
-    if targetTitle != null
-      for variant in card_product.variants
-        assign variantOptionsLowercase = variant.options | join: ',' | downcase
-        if variantOptionsLowercase contains targetTitle and targetVariant == null
-          assign targetVariant = variant
-          if card_product.url contains '?'
-            assign cardProductUrl = card_product.url | append: '&variant=' | append: targetVariant.id
-          else
-            assign cardProductUrl = card_product.url | append: '?variant=' | append: targetVariant.id
-          endif
-        endif
-      endfor
-    endif
+    
+    ################################################################################
+
     assign vendorImage = null
     assign vendorImageH = 63
     assign vendorImageW = 195
@@ -127,7 +153,7 @@
             {% endif %}
           >
             <a
-              href="{{ cardProductUrl }}"
+              href="{{ cardProductURL }}"
               id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
               class="full-unstyled-link"
               title="{{ card_product.title | escape }}"
@@ -200,7 +226,7 @@
               {% endif %}
             >
               <a
-                href="{{ cardProductUrl }}"
+                href="{{ cardProductURL }}"
                 id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
                 class="full-unstyled-link"
                 title="{{ card_product.title | escape }}"
@@ -321,7 +347,7 @@
                   class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
                   aria-haspopup="dialog"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                  data-product-url="{{ cardProductUrl }}"
+                  data-product-url="{{ cardProductURL }}"
                 >
                   {{ 'products.product.choose_options' | t }}
                   {%- if horizontal_quick_add -%}
