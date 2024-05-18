@@ -2,6 +2,9 @@
   "sections": {
     "main": {
       "type": "main-list-collections",
+      "custom_css": [
+        ".pagination-wrapper{padding-bottom:5px;}"
+      ],
       "settings": {
         "title": "All Collections",
         "sort": "alphabetical",
