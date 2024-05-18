@@ -3,7 +3,7 @@
     "main": {
       "type": "main-list-collections",
       "custom_css": [
-        ".pagination-wrapper {padding-bottom: 5px;}"
+        ".pagination-wrapper {padding-bottom: 50px;}"
       ],
       "settings": {
         "title": "All Collections",
