@@ -3,14 +3,14 @@
     "main": {
       "type": "main-list-collections",
       "custom_css": [
-        ".pagination-wrapper{padding-bottom:5px;}"
+        ".pagination-wrapper {padding-bottom: 5px;}"
       ],
       "settings": {
         "title": "All Collections",
         "sort": "alphabetical",
         "image_ratio": "square",
         "columns_desktop": 2,
-        "columns_mobile": "2"
+        "columns_mobile": "1"
       }
     }
   },
