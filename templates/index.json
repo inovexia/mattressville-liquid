@@ -175,11 +175,11 @@
         "column_alignment": "left",
         "background_style": "none",
         "button_label": "Explore More",
-        "button_link": "shopify:\/\/collections\/all-mattresses",
+        "button_link": "shopify:\/\/collections",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 52,
+        "padding_top": 0,
         "padding_bottom": 4
       }
     },

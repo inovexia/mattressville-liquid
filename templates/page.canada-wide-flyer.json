@@ -101,7 +101,7 @@
         "button_jxFTbn"
       ],
       "custom_css": [
-
+        ".rich-text .rich-text__wrapper {padding: 0;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -120,7 +120,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
-        "height": "medium",
+        "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",

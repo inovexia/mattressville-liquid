@@ -100,13 +100,16 @@
         "text_JKAMFd",
         "button_DBMjTG"
       ],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper{padding: 0;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
         "padding_top": 12,
-        "padding_bottom": 52
+        "padding_bottom": 20
       }
     },
     "image_with_text_EKL6in": {
@@ -118,7 +121,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
-        "height": "medium",
+        "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",

@@ -164,6 +164,12 @@
 }
 @media (min-width: 992px) {
   .header-bottom .main-nav .main-menu .nav-area .nav-item .nav-link {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+@media (min-width: 1100px) {
+  .header-bottom .main-nav .main-menu .nav-area .nav-item .nav-link {
     font-size: 12px;
     line-height: 14px;
   }

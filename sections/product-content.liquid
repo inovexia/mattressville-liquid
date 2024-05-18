@@ -101,12 +101,82 @@
       </div>
       <div id="tabpane-information" class="tab-pane">
         <div class="tab-container">
-          {{ product.metafields.meta_data.info_tab | replace: '!important', '' }}
+          {%- if product.metafields.meta_data.info_tab != blank -%}
+            {{ product.metafields.meta_data.info_tab | replace: '!important', '' }}
+          {% else %}
+          {%- if product.metafields.custom.information_coil_count_table != blank -%}
+            <p><strong>COIL COUNT</strong></p>
+            <table class="table table-striped">
+              <tbody>
+                {% assign coil_count_array = product.metafields.custom.information_coil_count_table | split: ',' %}
+                <tr>
+                  {% for item in coil_count_array %}
+                    {% assign parts = item | split: ':' %}
+                    {% assign clean_item = parts[0] | replace: '"', '' | replace: '[', '' | replace: ']', '' | strip %}
+                    <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top; border-color:#dee2e6 !important;">{{ clean_item }}</th>
+                  {% endfor %}
+                </tr>
+                <tr>
+                  {% for item in coil_count_array %}
+                    {% assign parts = item | split: ':' %}
+                    {% assign clean_item = parts[1] | replace: '"', '' | replace: '[', '' | replace: ']', '' | strip %}
+                    <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top; border-color:#dee2e6 !important;">{{ clean_item }}</th>
+                  {% endfor %}
+                </tr>
+              </tbody>
+            </table>
+          {%- endif -%}
+          {%- if product.metafields.custom.information_product_info_table != blank -%}
+            <table class="table table-striped">
+              <tbody>
+                {% assign product_info_array = product.metafields.custom.information_product_info_table | split: ',' %}
+                {% for item in product_info_array %}
+                  {% assign parts = item | split: ':' %}
+                  {% assign key = parts[0] | replace: '"', '' | replace: '[', '' | replace: ']', '' | strip %}
+                  {% assign value = parts[1] | replace: '"', '' | replace: '[', '' | replace: ']', '' | strip %}
+                <tr>
+                  <th style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top; border-color:#dee2e6 !important;">{{ key }}</th>
+                  <td style="border-bottom:1px solid !important;border-left:1px solid !important;border-right:1px solid !important;border-top:1px solid !important;padding:8px;vertical-align:top; border-color:#dee2e6 !important;">{{ value }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {%- endif -%}
+          {%-if product.metafields.custom.information_mixed_content != blank -%}
+            {{ product.metafields.custom.information_mixed_content |  metafield_tag }}
+          {%- endif -%}
+          {% assign media_image_id = product.metafields.custom.feature_file_content %}
+          {% if media_image_id %}
+            {% assign media_image = media_image_id | media_image %}
+            {% if media_image %}
+              <img src="{{ media_image | img_url: 'master' }}" alt="Product Image">
+            {% endif %}
+          {% endif %}
+          {%-if product.metafields.custom.product_table_description != blank -%}
+            {{ product.metafields.custom.product_table_description |  metafield_tag }}
+          {%- endif -%}
+        {%- endif -%}
         </div>
       </div>
       <div id="tabpane-features" class="tab-pane">
         <div class="tab-container">
-          {{ product.metafields.meta_data.features_tab }}
+          {%-if product.metafields.meta_data.features_tab != blank -%}
+            {{ product.metafields.meta_data.features_tab }}
+          {% else %}
+          {%-if product.metafields.custom.feature_product_info_table != blank -%}
+            {{ product.metafields.custom.feature_product_info_table }}
+          {%- endif -%}
+            {%-if product.metafields.custom.feature_mixed_content != blank -%}
+              {{ product.metafields.custom.feature_mixed_content | metafield_tag }}
+            {%- endif -%}
+            {% assign feature_image_id = product.metafields.custom.feature_file_content %}
+            {% if feature_image_id %}
+              {% assign feature_media_image = feature_image_id | media_image %}
+              {% if feature_media_image %}
+                <img src="{{ feature_media_image | img_url: 'master' }}" alt="Product Image">
+              {% endif %}
+            {% endif %}
+          {%- endif -%}
         </div>
       </div>
       {%- for block in section.blocks -%}

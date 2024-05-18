@@ -123,7 +123,13 @@
               }
             }
           }
-
+          p{
+            span{
+              img{
+                width:100%;
+              }
+            }
+          }
           .light{
             opacity: 1;
             p {
@@ -163,6 +169,7 @@
             color: #212529;
             margin-bottom: 16px;
             width: 100%;
+            border-collapse: collapse;
 
             tbody {
               tr {
@@ -179,11 +186,17 @@
               }
             }
 
-            th,
+            th{
+              border: 1px solid #dee2e6 !important;
+              padding: 8px 8px 8px 20px !important;
+              vertical-align: top;
+              text-align: left;
+            }
             td {
               border: 1px solid #dee2e6 !important;
-              padding: 8px;
+              padding: 8px 8px 8px 20px !important;
               vertical-align: top;
+              text-align: left;
             }
           }
         }
