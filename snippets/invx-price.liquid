@@ -133,7 +133,9 @@
       <span class="price-item price-item--sale price-item--last">
         {{ money_price }}
       </span>
-      <small style="color:var(--accent-color);font-size: 10px;text-align:right;">PRICE [{{ variant_name }}]</small>
+      {%-  if template.name == 'collection' -%}
+        <small style="color:var(--accent-color);font-size: 10px;text-align:right;">PRICE [{{ variant_name }}]</small>
+      {%- endif -%}
     </div>
     {% comment %} End of sale price {% endcomment %}
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
@@ -153,7 +155,7 @@
   </div>
   {%- if show_badges -%}
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-      {{ 'products.product.on_sale' | t }}
+      {{ 'Save'  }} {{  compare_at_price | minus: price | money }}
     </span>
 
     <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
