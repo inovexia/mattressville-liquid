@@ -6,7 +6,7 @@
       "type": "invx-announcement-bar",
       "settings": {
         "background_color": "#d7355c",
-        "announcement": "<p><a target=\"_blank\" title=\"flash deals\">Premium Mattress Sale<\/a> | The Highest Rated Mattress Store | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.<\/p>",
+        "announcement": "<p><a href=\"\/collections\/accessories-flash-deals\" target=\"_blank\" title=\"Flash Deals\">Premium Mattress Sale<\/a> | The Highest Rated Mattress Store | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.<\/p>",
         "duration": "session"
       }
     },
