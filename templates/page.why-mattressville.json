@@ -231,7 +231,7 @@
           "settings": {
             "heading": "Referral Program",
             "icon": "none",
-            "row_content": "<p>With your Mattressville referral program account, you will be provided with a unique discount link that you can share with your friends to enjoy a number of benefits from us. Our referral program also gives you an opportunity to receive extra cash, free presents, additional discounts or store credit for your future purchases. Contact us online today for more details or give us a call at (888) 841 0905!<\/p>",
+            "row_content": "<p>With your Mattressville referral program account, you will be provided with a unique discount link that you can share with your friends to enjoy a number of benefits from us. Our referral program also gives you an opportunity to receive extra cash, free presents, additional discounts or store credit for your future purchases. Contact us online today for more details or give us a call at 905-212-7722!<\/p>",
             "page": ""
           }
         }
@@ -245,7 +245,7 @@
       ],
       "custom_css": [
         "h3 {font-size: 1.4em;}",
-        ".accordion {padding: 0; max-width:930px;}",
+        ".accordion {padding: 0; max-width: 930px;}",
         ".collapsible-content-wrapper-narrow {max-width: 100%;}"
       ],
       "settings": {
