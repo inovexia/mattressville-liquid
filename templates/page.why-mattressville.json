@@ -120,7 +120,7 @@
     "collapsible_multicolumn": {
       "type": "collapsible-multicolumn",
       "blocks": {
-        "column_GwnwJn": {
+        "column_X4GdeX": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville.ca_tempur-pedic-logo.png",
@@ -162,7 +162,7 @@
         }
       },
       "block_order": [
-        "column_GwnwJn",
+        "column_X4GdeX",
         "column_QQpqiM",
         "column_T9tT7g",
         "column_B8hBVB"
