@@ -3896,3 +3896,57 @@ body .home-slideshow-inner .invx-home-slider {
 .breadcrumbs .breadcrumbs__item.flash-deals {
   margin: 0;
 }
+
+.product .grid__item.product__media-wrapper {
+  height: fit-content;
+}
+
+.invx-custom-gallery-slider {
+  .swiper {
+    &.mySwiperMain {
+      #lg-swiper {
+        max-height: 500px;
+      }
+
+      .swiper-button-next {
+        display: block !important;
+        color: #000;
+      }
+
+      .swiper-button-prev {
+        display: block !important;
+        color: #000;
+      }
+    }
+
+    &.mySwiperSmall {
+      padding-bottom: 10px;
+
+      .swiper-wrapper {
+        justify-content: center;
+        align-items: center;
+        transform: none !important;
+
+        .swiper-slide {
+          width: 50px !important;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          &.swiper-slide-thumb-active {
+            border: 1px solid #000;
+          }
+        }
+      }
+
+    }
+
+    .swiper-slide {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
