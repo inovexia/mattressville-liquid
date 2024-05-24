@@ -3888,3 +3888,11 @@ body .home-slideshow-inner .invx-home-slider {
   border-radius: 0px 0px 15px 15px;
   overflow: hidden;
 }
+
+.breadcrumbs__item.accessories {
+  display: none;
+}
+
+.breadcrumbs__item.flash-deals {
+  margin: 0;
+}
