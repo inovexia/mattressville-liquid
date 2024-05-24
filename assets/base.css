@@ -3893,6 +3893,6 @@ body .home-slideshow-inner .invx-home-slider {
   display: none;
 }
 
-.breadcrumbs__item.flash-deals {
+.breadcrumbs .breadcrumbs__item.flash-deals {
   margin: 0;
 }
