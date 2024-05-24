@@ -18,7 +18,7 @@
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": true,
-        "enable_flash_deals": true,
+        "enable_flash_deals": false,
         "flash_deals_image": "shopify:\/\/shop_images\/flash-deals.png",
         "flash_deals_link": "shopify:\/\/collections\/flash-deals",
         "columns_mobile": "1",
