@@ -3793,3 +3793,72 @@ details-disclosure>details {
 .breadcrumbs .breadcrumbs__item.all-mattresses {
   display: none;
 }
+
+body .quick-add-modal__content-info .invx-custom-price-layout {
+  display: block !important;
+}
+
+body .quick-add-modal .comfort-scale .firm-meter {
+  width: 50%;
+}
+
+body .quick-add-modal__content-info .invx-custom-price-layout .affirm-info {
+  width: 100% !important;
+}
+
+body .quick-add-modal__content-info .invx-custom-price-layout .price-info {
+  width: 100% !important;
+}
+
+body .quick-add-modal__content-info .invx-custom-price-layout .price-info .price--large {
+  align-items: flex-start;
+}
+
+body .quick-add-modal__content-info .invx-custom-price-layout .price-info .price--large.price .price__container {
+  padding-top: 0;
+}
+
+@media screen and (max-width:455px) {
+  body .quick-add-modal .comfort-scale .firm-scale {
+    padding: 9px 10px;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width:750px) and (max-width:1200px) {
+  .quick-add-modal .grid__item.product__title h1 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .quick-add-modal .icon-with-text__item .h4.inline-richtext {
+    font-size: 12px;
+  }
+
+  body .quick-add-modal .price>.price__container {
+    padding-right: 0px;
+  }
+
+  body .quick-add-modal .comfort-scale .firm-meter {
+    width: 50%;
+  }
+
+  body .quick-add-modal .quantity-selector-btn .inventory-status {
+    margin-left: 0px;
+    font-size: 12px;
+  }
+
+  body .quick-add-modal .comfort-scale .firm-scale {
+    padding: 11px 10px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width:1201px) and (max-width:1400px) {
+  body .quick-add-modal .comfort-scale .firm-scale {
+    font-size: 14px;
+  }
+}
