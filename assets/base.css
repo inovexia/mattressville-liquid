@@ -3872,3 +3872,8 @@ body .home-slideshow-inner .invx-home-slider {
     font-size: 12px;
   }
 }
+
+.invx-home-slider .swiper-wrapper .swiper-slide {
+  background-color: rgba(255, 92, 123, 1);
+  border-radius: 30px;
+}
