@@ -3873,7 +3873,8 @@ body .home-slideshow-inner .invx-home-slider {
   }
 }
 
-.invx-home-slider .swiper-wrapper .swiper-slide {
+.invx-home-slider .swiper-wrapper .swiper-slide a {
   background-color: rgba(255, 92, 123, 1);
   border-radius: 30px;
+  width: 100%;
 }
