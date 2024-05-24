@@ -3878,3 +3878,19 @@ body .home-slideshow-inner .invx-home-slider {
   border-radius: 30px;
   width: 100%;
 }
+
+.facets #FacetFiltersForm #FacetsWrapperDesktop .facets__disclosure-vertical:nth-last-child(3) {
+  border-bottom: unset;
+  border-radius: unset;
+}
+
+.facets #FacetFiltersForm #FacetsWrapperDesktop .facets__disclosure-vertical:last-child {
+  border-bottom: 1px solid #00000020;
+  border-radius: 0 0 15px 15px;
+}
+
+.facets #FacetsWrapperDesktop {
+  border-bottom: 1px solid #00000020;
+  border-radius: 0px 0px 15px 15px;
+  overflow: hidden;
+}
