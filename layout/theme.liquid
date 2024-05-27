@@ -331,13 +331,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "sku": "{{ product.variants.first.sku }}",
   "mpn": "{{ product.variants.first.barcode }}",
   "brand": {
-    "@type": "Thing",
+    "@type": "Brand",
     "name": "{{ product.vendor }}"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "{{ product.metafields.rating.value }}",
-    "reviewCount": "{{ product.metafields.rating.count }}"
+    "ratingValue": "5",
+    "reviewCount": ""
   },
   "review": [
     {
@@ -361,7 +361,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "@type": "Offer",
     "url": "{{ shop.url }}{{ product.url }}",
     "priceCurrency": "{{ shop.currency }}",
-    "price": "{{ product.price | money_without_currency }}",
+    "price": "{{ product.price | money_without_trailing_zeros | replace: ',', '' }}",
     "priceValidUntil": "2024-12-31",
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
