@@ -318,6 +318,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     </script>
     {% render 'gp-head' %}
+    {% if template == 'product' %}
     <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
@@ -338,12 +339,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "ratingValue": "{{ product.metafields.rating.value }}",
     "reviewCount": "{{ product.metafields.rating.count }}"
   },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "{{ review.author }}"
+      },
+      "datePublished": "{{ review.date | date: '%Y-%m-%d' }}",
+      "description": "{{ review.body }}",
+      "name": "{{ review.title }}",
+      "reviewRating": {
+        "@type": "Rating",
+        "bestRating": "5",
+        "ratingValue": "{{ review.rating }}",
+        "worstRating": "1"
+      }
+    }
+  ],
   "offers": {
     "@type": "Offer",
     "url": "{{ shop.url }}{{ product.url }}",
     "priceCurrency": "{{ shop.currency }}",
     "price": "{{ product.price | money_without_currency }}",
-    "priceValidUntil": "2025-12-31",
+    "priceValidUntil": "2024-12-31",
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
     "shippingDetails": {
@@ -365,6 +384,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 }
 </script>
+{% endif %}
 
 
   </head>
