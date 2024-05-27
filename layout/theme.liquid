@@ -318,6 +318,55 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     </script>
     {% render 'gp-head' %}
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{ product.title }}",
+  "image": [
+    "{{ product.featured_image | product_img_url: 'large' }}"
+   ],
+  "description": "{{ product.description | escape }}",
+  "sku": "{{ product.variants.first.sku }}",
+  "mpn": "{{ product.variants.first.barcode }}",
+  "brand": {
+    "@type": "Thing",
+    "name": "{{ product.vendor }}"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ product.metafields.rating.value }}",
+    "reviewCount": "{{ product.metafields.rating.count }}"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ shop.url }}{{ product.url }}",
+    "priceCurrency": "{{ shop.currency }}",
+    "price": "{{ product.price | money_without_currency }}",
+    "priceValidUntil": "2024-12-31",  // Change to the appropriate date
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "{{ shipping_rate.value }}",
+        "currency": "{{ shop.currency }}"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "{{ shipping_destination.country }}"
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "url": "{{ shop.policy_url }}"
+    }
+  }
+}
+</script>
+
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
