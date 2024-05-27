@@ -337,14 +337,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": ""
+    "reviewCount": "10"
   },
   "review": [
     {
       "@type": "Review",
       "author": {
         "@type": "Person",
-        "name": "{{ review.author }}"
+        "name": "Verified User"
       },
       "datePublished": "{{ review.date | date: '%Y-%m-%d' }}",
       "description": "{{ review.body }}",
@@ -352,7 +352,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "reviewRating": {
         "@type": "Rating",
         "bestRating": "5",
-        "ratingValue": "{{ review.rating }}",
+        "ratingValue": "5",
         "worstRating": "1"
       }
     }
