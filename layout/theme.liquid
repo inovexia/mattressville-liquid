@@ -44,13 +44,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         content="Mattressville's {{ page_title }} to choose for your best sleep, keep on exploring, we will bring you best offers there is."
       >
     {% endif %}
-    {% if template == 'product' %}
+
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css"
       >
-    {% endif %}
 
     {% render 'meta-tags' %}
 
@@ -351,16 +350,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      {% comment %} Load custom scripts {% endcomment %}
     <script src="{{ 'invx-global.js' | asset_url }}" defer="defer"></script>
 
-    {% if template == 'index' %}
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-      <script src="{{ 'invx-scripts-home.js' | asset_url }}" defer="defer"></script>
-    {% endif %}
-
-    {% if template == 'product' or template == 'index' %}
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" defer></script>
       <script src="{{ 'invx-scripts-pdp.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+      <script src="{{ 'invx-scripts-home.js' | asset_url }}" defer="defer"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         var detailsElement = document.getElementById("Deals_details");

@@ -3950,3 +3950,12 @@ body .home-slideshow-inner .invx-home-slider {
     }
   }
 }
+
+body .quick-add-modal .swiper-button-next,
+body .quick-add-modal .swiper-button-prev {
+  visibility: hidden;
+}
+
+body .quick-add-modal .swiper-wrapper .swiper-slide {
+  pointer-events: none;
+}
