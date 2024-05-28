@@ -348,7 +348,16 @@ class FacetRemove extends HTMLElement {
   closeFilter(event) {
     event.preventDefault();
     const form = this.closest('facet-filters-form') || document.querySelector('facet-filters-form');
+    
+    // If URL is provided in the href, redirect after removing filters
+    const url = event.currentTarget.href || '';
+
     form.onActiveFilterClick(event);
+
+    // Redirect to the URL specified in the href attribute
+    if (url) {
+      window.location.href = url;
+    }
   }
 }
 
