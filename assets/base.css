@@ -3959,3 +3959,10 @@ body .quick-add-modal .swiper-button-prev {
 body .quick-add-modal .swiper-wrapper .swiper-slide {
   pointer-events: none;
 }
+
+.invx-home-slider .swiper-button-next:after,
+.invx-home-slider .swiper-button-prev:after {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+}
