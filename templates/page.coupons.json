@@ -47,25 +47,12 @@
             "button_label": "Start Saving",
             "button_link": "shopify:\/\/collections\/all-mattresses"
           }
-        },
-        "coupon_Nyk7zz": {
-          "type": "coupon",
-          "settings": {
-            "type": "other",
-            "code": "",
-            "title": "",
-            "description": "",
-            "expiry": "",
-            "button_label": "",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
         "coupon_yDC3bH",
         "coupon_FkNtma",
-        "coupon_KzhYWf",
-        "coupon_Nyk7zz"
+        "coupon_KzhYWf"
       ],
       "settings": {
         "tnc": "<p><em>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void the coupons.<\/em><\/p>",
