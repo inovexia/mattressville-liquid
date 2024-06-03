@@ -346,7 +346,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "@type": "Person",
         "name": "Verified User"
       },
-      "datePublished": "{{ review.date | date: '%Y-%m-%d' }}",
+      "datePublished": "{{ product.published_at | date: '%d-%m-%Y' }}",
       "description": "{{ review.body }}",
       "name": "{{ review.title }}",
       "reviewRating": {
