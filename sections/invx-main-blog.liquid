@@ -96,7 +96,7 @@
   {% assign featuredBlogs = path[2] %}
 {% endif %}
 {% comment %} 
-                                                                                              Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable. 
+                                                                                                  Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable. 
 {% endcomment %}
 {% for featuredBlog in featuredBlogs %}
   {% if blogs[featuredBlog].articles %}
@@ -145,12 +145,12 @@
   {%- paginate featuredArticles.articles by 6 -%}
     <div class="main-blog page-width page-width-no-padding section-{{ section.id }}-padding">
       {% comment %} 
-                                                                                                                                                                                                                                                                                          {% if blog.title != blank %} 
-                                                                                                                                                                                                                                                                                          <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"> 
-                                                                                                                                                                                                                                                                                          {{ blog.title | escape }} 
-                                                                                                                                                                                                                                                                                          </h1>
-                                                                                                                                                                                                                                                                                          {% endif %} 
-                                                                                                                                                                                                                  {% endcomment %}
+                                                                                                                                                                                                                                                                                                          {% if blog.title != blank %} 
+                                                                                                                                                                                                                                                                                                          <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"> 
+                                                                                                                                                                                                                                                                                                          {{ blog.title | escape }} 
+                                                                                                                                                                                                                                                                                                          </h1>
+                                                                                                                                                                                                                                                                                                          {% endif %} 
+                                                                                                                                                                                                                              {% endcomment %}
       <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
         {%- for article in featuredArticles.articles -%}
           <div
