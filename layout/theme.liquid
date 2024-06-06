@@ -15,7 +15,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% if canonical_url %}
       {% assign last_char = canonical_url | slice: -1 %}
       {% unless last_char == '/' %}
-        {% assign canonical_url = canonical_url | append: '/' %}
+        {% assign canonical_url = canonical_url %}
       {% endunless %}
       <link rel="canonical" href="{{ canonical_url }}">
     {% endif %}
