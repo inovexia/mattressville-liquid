@@ -23,7 +23,10 @@
                 </div>
                 <div class="menu">
                   {%- for item in block.settings.about_menu.links -%}
-                    <a class="menu-link" area-label="{{ item.title | escape }}" href="{{ item.url }}/">{{ item.title | escape }}</a>
+                    <a
+                      class="menu-link"
+                      area-label="{{ item.title | escape }}"
+                      href="{{ item.url }}/">{{ item.title | escape }}</a>
                   {%- endfor -%}
                 </div>
               </div>
@@ -51,78 +54,78 @@
             </div>
             <hr class="separator">
           </div>
-          {%- when 'locations_area' -%}
-            <div class="item">
-              <div class="header">
-                <button type="button" class="btn-toggle">
-                  <span>{{ block.settings.section_title | escape }}</span>
-                  <i class="gsi gs-chevron-down"></i>
-                </button>
-              </div>
-              <div class="collapse">
-                <div class="content location">
-                  <div class="locations">
-                    <div class="flex-fill">
-                      <ul class="list-unstyled">
-                        {%- for item in block.settings.locations_a.links -%}
-                          <li>
-                            <a rel="noreferrer nofollow" href="{{ item.url }}/">{{ item.title | escape }}</a>
-                          </li>
-                        {%- endfor -%}
-                      </ul>
-                    </div>
-                    <div class="flex-fill">
-                      <ul class="list-unstyled pl-0 mb-0">
-                        {%- for item in block.settings.locations_b.links -%}
-                          <li>
-                            <a rel="noreferrer nofollow" href="{{ item.url }}">{{ item.title | escape }}</a>
-                          </li>
-                        {%- endfor -%}
-                      </ul>
-                    </div>
+        {%- when 'locations_area' -%}
+          <div class="item">
+            <div class="header">
+              <button type="button" class="btn-toggle">
+                <span>{{ block.settings.section_title | escape }}</span>
+                <i class="gsi gs-chevron-down"></i>
+              </button>
+            </div>
+            <div class="collapse">
+              <div class="content location">
+                <div class="locations">
+                  <div class="flex-fill">
+                    <ul class="list-unstyled">
+                      {%- for item in block.settings.locations_a.links -%}
+                        <li>
+                          <a href="{{ item.url }}">{{ item.title | escape }}</a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                  <div class="flex-fill">
+                    <ul class="list-unstyled pl-0 mb-0">
+                      {%- for item in block.settings.locations_b.links -%}
+                        <li>
+                          <a rel="noreferrer nofollow" href="{{ item.url }}">{{ item.title | escape }}</a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
                   </div>
                 </div>
               </div>
-              <hr class="separator">
             </div>
-          {%- when 'brands_area' -%}
-            <div class="item">
-              <div class="header">
-                <button type="button" class="btn-toggle">
-                  <span>{{ block.settings.section_title | escape }}</span>
-                  <i class="gsi gs-chevron-down"></i>
-                </button>
-              </div>
-              <div class="collapse">
-                <div class="content brands">
-                  <div class="brands-list">
-                    {%- for item in block.settings.brands_menu.links -%}
-                      <div>
-                        <a area-label="{{ item.title | escape }}" href="{{ item.url }}/">{{ item.title | escape }}</a>
-                      </div>
-                    {%- endfor -%}
-                  </div>
+            <hr class="separator">
+          </div>
+        {%- when 'brands_area' -%}
+          <div class="item">
+            <div class="header">
+              <button type="button" class="btn-toggle">
+                <span>{{ block.settings.section_title | escape }}</span>
+                <i class="gsi gs-chevron-down"></i>
+              </button>
+            </div>
+            <div class="collapse">
+              <div class="content brands">
+                <div class="brands-list">
+                  {%- for item in block.settings.brands_menu.links -%}
+                    <div>
+                      <a area-label="{{ item.title | escape }}" href="{{ item.url }}/">{{ item.title | escape }}</a>
+                    </div>
+                  {%- endfor -%}
                 </div>
               </div>
-              <hr class="separator">
             </div>
-            {%- when 'affirm_disclaimer' -%}
-              <div class="item">
-                <div class="header">
-                  <button type="button" class="btn-toggle">
-                    <span>{{ block.settings.section_title | escape }}</span>
-                    <i class="gsi gs-chevron-down"></i>
-                  </button>
-                </div>
-                <div class="collapse">
-                  <div class="content about">
-                    <div class="description">
+            <hr class="separator">
+          </div>
+        {%- when 'affirm_disclaimer' -%}
+          <div class="item">
+            <div class="header">
+              <button type="button" class="btn-toggle">
+                <span>{{ block.settings.section_title | escape }}</span>
+                <i class="gsi gs-chevron-down"></i>
+              </button>
+            </div>
+            <div class="collapse">
+              <div class="content about">
+                <div class="description">
                   {{ block.settings.affirm_disclaimer }}
                 </div>
-                  </div>
-                </div>
-                <hr class="separator">
               </div>
+            </div>
+            <hr class="separator">
+          </div>
       {%- endcase -%}
     {%- endfor -%}
   </div>
@@ -132,11 +135,11 @@
         <div class="payment-mods">
           {%- if section.settings.enable_google_pay_payment -%}
             <img
-            src="{{ 'google_pay' | payment_type_img_url }}"
-            alt="google_pay"
-            loading="lazy"
-            height="38"
-            width="60" />
+              src="{{ 'google_pay' | payment_type_img_url }}"
+              alt="google_pay"
+              loading="lazy"
+              height="38"
+              width="60" />
           {%- endif -%}
           {%- if section.settings.enable_affirm_payment -%}
             <img
@@ -221,21 +224,33 @@
         </div>
       </div>
       <div class="copyright">
-        <p>{{section.settings.copyright_text}}</p>
+        <p>{{ section.settings.copyright_text }}</p>
       </div>
       <div class="social-media">
         {%- if settings.social_twitter_link != blank -%}
-          <a href="{{ settings.social_twitter_link }}" target="_blank" rel="nofollow noreferrer" class="media-link">
+          <a
+            href="{{ settings.social_twitter_link }}"
+            target="_blank"
+            rel="nofollow noreferrer"
+            class="media-link">
             <i class="gsi gs-twitter-alt"></i>
           </a>
         {%- endif -%}
         {%- if settings.social_facebook_link != blank -%}
-          <a href="{{ settings.social_facebook_link }}" target="_blank" rel="nofollow noreferrer" class="media-link">
+          <a
+            href="{{ settings.social_facebook_link }}"
+            target="_blank"
+            rel="nofollow noreferrer"
+            class="media-link">
             <i class="gsi gs-facebook-alt"></i>
           </a>
         {%- endif -%}
         {%- if settings.social_instagram_link != blank -%}
-          <a href="{{ settings.social_instagram_link }}" target="_blank" rel="nofollow noreferrer" class="media-link">
+          <a
+            href="{{ settings.social_instagram_link }}"
+            target="_blank"
+            rel="nofollow noreferrer"
+            class="media-link">
             <i class="gsi gs-instagram"></i>
           </a>
         {%- endif -%}
@@ -244,58 +259,58 @@
   </div>
 </div>
 {% javascript %}
-document.addEventListener("DOMContentLoaded", function() {
-  var accordionButtons = document.querySelectorAll(".accordion .btn-toggle");
+  document.addEventListener("DOMContentLoaded", function() {
+    var accordionButtons = document.querySelectorAll(".accordion .btn-toggle");
 
-  accordionButtons.forEach(function(button) {
-    button.addEventListener("click", function() {
-      var icon = this.querySelector(".gsi");
-      var collapse = this.closest(".item").querySelector(".collapse");
+    accordionButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        var icon = this.querySelector(".gsi");
+        var collapse = this.closest(".item").querySelector(".collapse");
 
-      document.querySelectorAll(".accordion .btn-toggle .gsi.gs-chevron-up").forEach(function(upIcon) {
-        upIcon.classList.add("gs-chevron-down");
-        upIcon.classList.remove("gs-chevron-up");
-      });
-
-      if (!collapse.classList.contains("show")) {
-        document.querySelectorAll(".collapse.show").forEach(function(shownCollapse) {
-          slideUp(shownCollapse);
-          shownCollapse.classList.remove("show");
+        document.querySelectorAll(".accordion .btn-toggle .gsi.gs-chevron-up").forEach(function(upIcon) {
+          upIcon.classList.add("gs-chevron-down");
+          upIcon.classList.remove("gs-chevron-up");
         });
 
-        slideDown(collapse);
-        collapse.classList.add("show");
-        icon.classList.add("gs-chevron-up");
-        icon.classList.remove("gs-chevron-down");
-      } else {
-        slideUp(collapse);
-        collapse.classList.remove("show");
-        icon.classList.add("gs-chevron-down");
-        icon.classList.remove("gs-chevron-up");
-      }
+        if (! collapse.classList.contains("show")) {
+          document.querySelectorAll(".collapse.show").forEach(function(shownCollapse) {
+            slideUp(shownCollapse);
+            shownCollapse.classList.remove("show");
+          });
+
+          slideDown(collapse);
+          collapse.classList.add("show");
+          icon.classList.add("gs-chevron-up");
+          icon.classList.remove("gs-chevron-down");
+        } else {
+          slideUp(collapse);
+          collapse.classList.remove("show");
+          icon.classList.add("gs-chevron-down");
+          icon.classList.remove("gs-chevron-up");
+        }
+      });
     });
+    function slideUp(element) {
+      element.style.transition = "max-height 0.3s";
+      element.style.maxHeight = element.scrollHeight + "px";
+      element.style.overflow = "hidden";
+      setTimeout(function() {
+        element.style.maxHeight = 0;
+        setTimeout(function() {
+          element.style.display = "none";
+        }, 300); // Wait for the transition to complete before hiding
+      }, 100);
+    }
+    function slideDown(element) {
+      element.style.transition = "max-height 0.3s";
+      element.style.display = "block";
+      element.style.overflow = "hidden";
+      element.style.maxHeight = element.scrollHeight + "px";
+      setTimeout(function() {
+        element.style.maxHeight = "unset";
+      }, 100);
+    }
   });
-  function slideUp(element) {
-    element.style.transition = "max-height 0.3s";
-    element.style.maxHeight = element.scrollHeight + "px";
-    element.style.overflow = "hidden";
-    setTimeout(function () {
-      element.style.maxHeight = 0;
-      setTimeout(function () {
-        element.style.display = "none";
-      }, 300); // Wait for the transition to complete before hiding
-    }, 100);
-  }
-  function slideDown(element) {
-    element.style.transition = "max-height 0.3s";
-    element.style.display = "block";
-    element.style.overflow = "hidden";
-    element.style.maxHeight = element.scrollHeight + "px";
-    setTimeout(function () {
-      element.style.maxHeight = "unset";
-    }, 100);
-  }
-});
 {% endjavascript %}
 {% schema %}
   {
