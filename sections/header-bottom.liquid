@@ -14,7 +14,7 @@
           </button>
         </div>
         <div class="end">
-          <a href="tel:{{ section.settings.phone_number }}">
+          <a href="tel:{{ section.settings.phone_number }}" aria-label="Contact number">
             <i class="gsi gs-phone"></i>
             <span>{{ section.settings.phone_number }}</span>
           </a>
@@ -46,7 +46,10 @@
                             {% endunless %}
                           {% endunless %}
                           <div class="dropdown-item">
-                            <a class="nav-link" href="{{ childlink_url }}">{{ childlink.title | escape }}</a>
+                            <a
+                              class="nav-link"
+                              href="{{ childlink_url }}"
+                              aria-label="Product list of {{ childlink.title | escape }}">{{ childlink.title | escape }}</a>
                           </div>
                         {%- endfor -%}
                       </div>
@@ -75,7 +78,10 @@
                 <div class="dropdown-menu">
                   {%- for childlink in link.links -%}
                     <div class="dropdown-item">
-                      <a class="nav-link" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                      <a
+                        class="nav-link"
+                        href="{{ childlink.url }}"
+                        aria-label="Product list of {{ childlink.title | escape }}">{{ childlink.title | escape }}</a>
                     </div>
                   {%- endfor -%}
                 </div>
@@ -104,7 +110,10 @@
  | default: '/pages/mattress-matchmaker'
  | url_escape
             -%}
-            <a class="nav-link" href="{{ matchMakerLink }}">{{ section.settings.match_maker_label }}</a>
+            <a
+              class="nav-link"
+              href="{{ matchMakerLink }}"
+              aria-label="Read more about mattress match maker">{{ section.settings.match_maker_label }}</a>
           </div>
         </div>
       </div>

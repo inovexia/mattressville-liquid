@@ -99,7 +99,10 @@
       <div class="home-slideshow-sidebar">
         <div class="sidebar-inner">
           {%- assign linkItemA = section.settings.link_item_a | default: "/pages/mattress-matchmaker" | url_escape -%}
-          <a class="sidebar-content" href="{{ linkItemA }}">
+          <a
+            class="sidebar-content"
+            href="{{ linkItemA }}"
+            aria-label="Read more about mattress maker page">
             {%- if section.settings.sidebar_image_a != blank -%}
               <img
                 src="{{ section.settings.sidebar_image_a | img_url: 'master' }}"
@@ -111,7 +114,10 @@
             <span class="card-title">{{ section.settings.label_item_a }}</span>
           </a>
           {%- assign linkItemB = section.settings.link_item_b | default: "/pages/coupons/" | url_escape -%}
-          <a class="sidebar-content" href="{{ linkItemB }}">
+          <a
+            class="sidebar-content"
+            href="{{ linkItemB }}"
+            aria-label="Read more about coupons and deals">
             {%- if section.settings.sidebar_image_b != blank -%}
               <img
                 src="{{ section.settings.sidebar_image_b | img_url: 'master' }}"
