@@ -366,17 +366,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "priceValidUntil": "2024-01-31T00:00:00+00:00",
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
-     "shippingDetails": {
+     "shippingDetails": [
+      {
         "@type": "OfferShippingDetails",
         "shippingDestination": {
           "@type": "DefinedRegion",
-          "addressCountry": "CA",
-          "addressRegion": "ON",
+          "addressCountry": "CA"
         },
         "shippingRate": {
           "@type": "MonetaryAmount",
-          "value": null,
+          "value": "25.00",
           "currency": "{{ shop.currency }}"
+        },
+        "shippingLabel": "Deliver to bedroom",
+        "shippingRateValidUntil": "2024-12-31",
+        "shippingRateCriteria": {
+          "@type": "QuantitativeValue",
+          "minPrice": "499.00",
+          "maxPrice": null
         },
         "deliveryTime": {
         "@type": "ShippingDeliveryTime",
@@ -394,11 +401,114 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }
         },
       },
+      {
+        "@type": "OfferShippingDetails",
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "CA"
+        },
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "85.00",
+          "currency": "{{ shop.currency }}"
+        },
+        "shippingLabel": "Deliver to bedroom",
+        "shippingRateValidUntil": "2024-12-31",
+        "shippingRateCriteria": {
+          "@type": "QuantitativeValue",
+          "minPrice": "0.00",
+          "maxPrice": "498.00"
+        },
+        "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue":1,
+            "maxValue": null,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": null,
+            "unitCode": "DAY"
+          }
+        },
+      },
+      {
+        "@type": "OfferShippingDetails",
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "CA"
+        },
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "45.00",
+          "currency": "{{ shop.currency }}"
+        },
+        "shippingLabel": "Delivery to bedroom + mattress disposal to curb",
+        "shippingRateValidUntil": "2024-12-31",
+        "shippingRateCriteria": {
+          "@type": "QuantitativeValue",
+          "minPrice": "499.00",
+          "maxPrice": null
+        },
+        "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue":1,
+            "maxValue": null,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": null,
+            "unitCode": "DAY"
+          }
+        },
+      },
+      {
+        "@type": "OfferShippingDetails",
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "CA"
+        },
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "105.00",
+          "currency": "{{ shop.currency }}"
+        },
+        "shippingLabel": "Delivery to bedroom + mattress disposal to curb",
+        "shippingRateValidUntil": "2024-12-31",
+        "shippingRateCriteria": {
+          "@type": "QuantitativeValue",
+          "minPrice": "0.00",
+          "maxPrice": "498.00"
+        },
+        "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue":1,
+          "maxValue": null,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": null,
+          "unitCode": "DAY"
+        }
+      },
+      }
+    ],
     "hasMerchantReturnPolicy": {
       "@type": "MerchantReturnPolicy",
       "applicableCountry": "CA",
       "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-      "merchantReturnDays": 60,
+      "merchantReturnDays":null,
       "returnMethod": "https://mattressville.ca/pages/refund-policy",
       "returnFees": "https://mattressville.ca/pages/refund-policy"
     }
