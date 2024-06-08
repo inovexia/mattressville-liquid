@@ -48,11 +48,11 @@
 
     {% render 'meta-tags' %}
 
-    <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'constants.js' | asset_url }}" defer></script>
+    <script src="{{ 'pubsub.js' | asset_url }}" defer></script>
+    <script src="{{ 'global.js' | asset_url }}" defer></script>
     {%- if settings.animations_reveal_on_scroll -%}
-      <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'animations.js' | asset_url }}" defer></script>
     {%- endif -%}
 
     {{ content_for_header }}
@@ -325,7 +325,7 @@ body {
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
       {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
-      <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'localization-form.js' | asset_url }}" defer></script>
     {%- endif -%}
 
     {%- if settings.predictive_search_enabled -%}
