@@ -10,8 +10,8 @@
   (function e() {
     var e = document.createElement('script');
     (e.type = 'text/javascript'),
-      (e.async = true),
-      (e.src = '//staticw2.yotpo.com/CvekGnxwoARDv2TIkrsamQxTKKuMvMgSSMeS2u2F/widget.js');
+    (e.async = true),
+    (e.src = '//staticw2.yotpo.com/CvekGnxwoARDv2TIkrsamQxTKKuMvMgSSMeS2u2F/widget.js');
     var t = document.getElementsByTagName('script')[0];
     t.parentNode.insertBefore(e, t);
   })();
@@ -24,27 +24,25 @@
       {%- case block.type -%}
         {%- when 'about_column' -%}
           {%- assign sectionTitleLink = block.settings.section_title_link
-            | default: '/pages/why-mattressville/'
-            | url_escape
+ | default: '/pages/why-mattressville'
+ | url_escape
           -%}
           {%- assign contactTitleLink = block.settings.contact_title_link
-            | default: '/pages/contact-us/'
-            | url_escape
+ | default: '/pages/contact-us'
+ | url_escape
           -%}
           <div class="about">
             <a
               class="section-title"
               area-label="{{ block.settings.section_title | escape }}"
-              href="{{ sectionTitleLink }}"
-            >
+              href="{{ sectionTitleLink }}">
               {{- block.settings.section_title | escape -}}
             </a>
             <span>{{ block.settings.section_content | escape }}</span>
             <a
               class="section-title"
               area-label="{{ block.settings.contact_title | escape }}"
-              href="{{ contactTitleLink }}"
-            >
+              href="{{ contactTitleLink }}">
               <span>{{ block.settings.contact_title | escape }}</span>
             </a>
             <p>{{ block.settings.contact_address | escape }}</p>
@@ -56,7 +54,7 @@
             <span class="section-title">{{ block.settings.section_title | escape }}</span>
             <div class="areas">
               {%- for brand in block.settings.brands_menu.links -%}
-                <a area-label="{{ brand.title | escape }}" href="{{ brand.url }}/">{{ brand.title | escape }}</a>
+                <a area-label="{{ brand.title | escape }}" href="{{ brand.url }}">{{ brand.title | escape }}</a>
               {%- endfor -%}
             </div>
           </div>
@@ -65,7 +63,7 @@
             <span class="section-title">{{ block.settings.section_title | escape }}</span>
             <div class="areas">
               {%- for style in block.settings.styles_menu.links -%}
-                <a area-label="{{ style.title | escape }}" href="{{ style.url }}/">{{ style.title | escape }}</a>
+                <a area-label="{{ style.title | escape }}" href="{{ style.url }}">{{ style.title | escape }}</a>
               {%- endfor -%}
             </div>
           </div>
@@ -75,14 +73,14 @@
             <div class="location-area">
               <div class="areas">
                 {%- for location_a in block.settings.locations_a.links -%}
-                  <a area-label="{{ location_a.title | escape }}" href="{{ location_a.url }}/">
+                  <a area-label="{{ location_a.title | escape }}" href="{{ location_a.url }}">
                     {{- location_a.title | escape -}}
                   </a>
                 {%- endfor -%}
               </div>
               <div class="areas">
                 {%- for location_b in block.settings.locations_b.links -%}
-                  <a area-label="{{ location_b.title | escape }}" href="{{ location_b.url }}/">
+                  <a area-label="{{ location_b.title | escape }}" href="{{ location_b.url }}">
                     {{- location_b.title | escape -}}
                   </a>
                 {%- endfor -%}
@@ -91,27 +89,27 @@
             <div class="footer-badges">
               <div class="badge-image">
                 <div id="y-badges" class="yotpo yotpo-badge badge-init">&nbsp;</div>
-                {% comment %}
-                  {%- if block.settings.match_maker_image != blank -%}
-                    <img
-                      src="{{ block.settings.review_image | img_url: 'master' }}"
-                      alt="Review Badge"
-                      class="footer-badge"
-                      loading="lazy"
-                      height="{{ block.settings.review_image_height }}"
-                      width="{{ block.settings.review_image_width }}"
-                    >
-                  {%- else -%}
-                    <img
-                      src="{{ 'badges-preview.png' | asset_img_url: 'master' }}"
-                      alt="Review Badge"
-                      class="footer-badge"
-                      loading="lazy"
-                      height="{{ block.settings.review_image_height }}"
-                      width="{{ block.settings.review_image_width }}"
-                    >
-                  {%- endif -%}
-                {% endcomment %}
+              {% comment %} 
+                {%- if block.settings.match_maker_image != blank -%} 
+                <img 
+                src="{{ block.settings.review_image | img_url: 'master' }}" 
+                alt="Review Badge" 
+                class="footer-badge" 
+                loading="lazy" 
+                height="{{ block.settings.review_image_height }}" 
+                width="{{ block.settings.review_image_width }}" 
+                >
+                {%- else -%} 
+                <img 
+                src="{{ 'badges-preview.png' | asset_img_url: 'master' }}" 
+                alt="Review Badge" 
+                class="footer-badge" 
+                loading="lazy" 
+                height="{{ block.settings.review_image_height }}" 
+                width="{{ block.settings.review_image_width }}" 
+                >
+                {%- endif -%} 
+              {% endcomment %}
               </div>
               <div class="badge-image">
                 {%- if block.settings.match_maker_image != blank -%}
@@ -121,8 +119,7 @@
                     class="footer-badge"
                     loading="lazy"
                     height="{{block.settings.award_image_height}}"
-                    width="{{block.settings.award_image_width}}"
-                  >
+                    width="{{block.settings.award_image_width}}">
                 {%- else -%}
                   <img
                     src="{{ 'badge.png' | asset_img_url: 'master' }}"
@@ -130,8 +127,7 @@
                     class="footer-badge"
                     loading="lazy"
                     height="{{ block.settings.award_image_height }}"
-                    width="{{ block.settings.award_image_width }}"
-                  >
+                    width="{{ block.settings.award_image_width }}">
                 {%- endif -%}
               </div>
             </div>
@@ -141,186 +137,186 @@
   </div>
 </div>
 {% schema %}
-{
-  "name": "Footer Top",
-  "class": "footer-top",
-  "enabled_on": {
-    "groups": ["footer"]
-  },
-  "settings": [
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#f1f3f4"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "about_column",
-      "name": "About Column",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "section_title",
-          "label": "Section Title",
-          "default": "About Us"
-        },
-        {
-          "type": "url",
-          "id": "section_title_link",
-          "label": "Section Title Link"
-        },
-        {
-          "type": "textarea",
-          "id": "section_content",
-          "label": "Section Content",
-          "default": "Mattressville is your one stop shop for deals and discounts on premium mattresses and sleep accessories so you can Have a Good Night, Every Night! Shop online or visit us in Mississauga near Toronto and find out why we are the highest rated mattress store."
-        },
-        {
-          "type": "text",
-          "id": "contact_title",
-          "label": "Contact Title",
-          "default": "Contact Us"
-        },
-        {
-          "type": "url",
-          "id": "contact_title_link",
-          "label": "Contact Title Link"
-        },
-        {
-          "type": "textarea",
-          "id": "contact_address",
-          "label": "Contact Address",
-          "default": "1911 Dundas St. East, Unit 18 Mississauga, On L4X 1M1"
-        },
-        {
-          "type": "text",
-          "id": "contact_number",
-          "label": "Contact Number",
-          "default": "905-212-7722"
-        },
-        {
-          "type": "text",
-          "id": "contact_mail",
-          "label": "Contact Mail",
-          "default": "info@mattressville.ca"
-        }
-      ]
+  {
+    "name": "Footer Top",
+    "class": "footer-top",
+    "enabled_on": {
+      "groups": ["footer"]
     },
-    {
-      "type": "brand_column",
-      "name": "Brand Column",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "section_title",
-          "label": "Section Title",
-          "default": "Brands"
-        },
-        {
-          "type": "link_list",
-          "id": "brands_menu",
-          "label": "Brands Menu"
-        }
-      ]
-    },
-    {
-      "type": "styles_column",
-      "name": "Styles Column",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "section_title",
-          "label": "Section Title",
-          "default": "Styles/Types"
-        },
-        {
-          "type": "link_list",
-          "id": "styles_menu",
-          "label": "Styles Menu"
-        }
-      ]
-    },
-    {
-      "type": "locations_column",
-      "name": "Locations Column",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "section_title",
-          "label": "Section Title",
-          "default": "Delivery Areas"
-        },
-        {
-          "type": "link_list",
-          "id": "locations_a",
-          "label": "Locations A"
-        },
-        {
-          "type": "link_list",
-          "id": "locations_b",
-          "label": "Locations B"
-        },
-        {
-          "type": "image_picker",
-          "id": "review_image",
-          "label": "Review Image"
-        },
-        {
-          "type": "number",
-          "id": "review_image_height",
-          "label": "Review Image Height",
-          "default": 135
-        },
-        {
-          "type": "number",
-          "id": "review_image_width",
-          "label": "Review Image Width",
-          "default": 155
-        },
-        {
-          "type": "image_picker",
-          "id": "award_image",
-          "label": "Award Image"
-        },
-        {
-          "type": "number",
-          "id": "award_image_height",
-          "label": "Award Image Height",
-          "default": 114
-        },
-        {
-          "type": "number",
-          "id": "award_image_width",
-          "label": "Award Image Width",
-          "default": 155
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Footer Top Columns",
-      "blocks": [
-        {
-          "type": "about_column"
-        },
-        {
-          "type": "brand_column"
-        },
-        {
-          "type": "styles_column"
-        },
-        {
-          "type": "locations_column"
-        }
-      ]
-    }
-  ]
-}
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#f1f3f4"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "about_column",
+        "name": "About Column",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "About Us"
+          },
+          {
+            "type": "url",
+            "id": "section_title_link",
+            "label": "Section Title Link"
+          },
+          {
+            "type": "textarea",
+            "id": "section_content",
+            "label": "Section Content",
+            "default": "Mattressville is your one stop shop for deals and discounts on premium mattresses and sleep accessories so you can Have a Good Night, Every Night! Shop online or visit us in Mississauga near Toronto and find out why we are the highest rated mattress store."
+          },
+          {
+            "type": "text",
+            "id": "contact_title",
+            "label": "Contact Title",
+            "default": "Contact Us"
+          },
+          {
+            "type": "url",
+            "id": "contact_title_link",
+            "label": "Contact Title Link"
+          },
+          {
+            "type": "textarea",
+            "id": "contact_address",
+            "label": "Contact Address",
+            "default": "1911 Dundas St. East, Unit 18 Mississauga, On L4X 1M1"
+          },
+          {
+            "type": "text",
+            "id": "contact_number",
+            "label": "Contact Number",
+            "default": "905-212-7722"
+          },
+          {
+            "type": "text",
+            "id": "contact_mail",
+            "label": "Contact Mail",
+            "default": "info@mattressville.ca"
+          }
+        ]
+      },
+      {
+        "type": "brand_column",
+        "name": "Brand Column",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "Brands"
+          },
+          {
+            "type": "link_list",
+            "id": "brands_menu",
+            "label": "Brands Menu"
+          }
+        ]
+      },
+      {
+        "type": "styles_column",
+        "name": "Styles Column",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "Styles/Types"
+          },
+          {
+            "type": "link_list",
+            "id": "styles_menu",
+            "label": "Styles Menu"
+          }
+        ]
+      },
+      {
+        "type": "locations_column",
+        "name": "Locations Column",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "Delivery Areas"
+          },
+          {
+            "type": "link_list",
+            "id": "locations_a",
+            "label": "Locations A"
+          },
+          {
+            "type": "link_list",
+            "id": "locations_b",
+            "label": "Locations B"
+          },
+          {
+            "type": "image_picker",
+            "id": "review_image",
+            "label": "Review Image"
+          },
+          {
+            "type": "number",
+            "id": "review_image_height",
+            "label": "Review Image Height",
+            "default": 135
+          },
+          {
+            "type": "number",
+            "id": "review_image_width",
+            "label": "Review Image Width",
+            "default": 155
+          },
+          {
+            "type": "image_picker",
+            "id": "award_image",
+            "label": "Award Image"
+          },
+          {
+            "type": "number",
+            "id": "award_image_height",
+            "label": "Award Image Height",
+            "default": 114
+          },
+          {
+            "type": "number",
+            "id": "award_image_width",
+            "label": "Award Image Width",
+            "default": 155
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Footer Top Columns",
+        "blocks": [
+          {
+            "type": "about_column"
+          },
+          {
+            "type": "brand_column"
+          },
+          {
+            "type": "styles_column"
+          },
+          {
+            "type": "locations_column"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}
