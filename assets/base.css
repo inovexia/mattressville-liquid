@@ -3960,9 +3960,16 @@ body .quick-add-modal .swiper-wrapper .swiper-slide {
   pointer-events: none;
 }
 
-.invx-home-slider .swiper-button-next:after,
-.invx-home-slider .swiper-button-prev:after {
+body .invx-home-slider .swiper-button-next:after,
+body .invx-home-slider .swiper-button-prev:after {
   position: absolute;
   top: 6px;
-  right: 8px;
+  right: 10px;
+  font-size: 16px !important;
+}
+
+body .home-slideshow-inner .swiper .swiper-button-next,
+body .home-slideshow-inner .swiper .swiper-button-prev {
+  height: 30px;
+  width: 30px;
 }
