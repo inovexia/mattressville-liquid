@@ -319,14 +319,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </script>
     {% render 'gp-head' %}
     {% if template == 'product' %}
-    <script type="application/ld+json">
+   <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
   "@type": "Product",
   "name": "{{ product.title }}",
   "image": [
     "{{ product.featured_image | product_img_url: 'large' }}"
-   ],
+  ],
   "description": "{{ product.description | escape }}",
   "sku": "{{ product.variants.first.sku }}",
   "mpn": "{{ product.variants.first.barcode }}",
@@ -347,7 +347,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "name": "Verified User"
       },
       "datePublished": "{{ product.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
-
       "description": "{{ review.body }}",
       "name": "{{ review.title }}",
       "reviewRating": {
@@ -366,13 +365,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "priceValidUntil": "2024-01-31T00:00:00+00:00",
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
-     "shippingDetails": [
+    "shippingDetails": [
       {
         "@type": "OfferShippingDetails",
         "shippingDestination": {
           "@type": "DefinedRegion",
           "addressCountry": "CA",
-          "addressRegion":"ON"
+          "addressRegion": "ON"
         },
         "shippingRate": {
           "@type": "MonetaryAmount",
@@ -387,10 +386,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "maxPrice": null
         },
         "deliveryTime": {
-        "@type": "ShippingDeliveryTime",
+          "@type": "ShippingDeliveryTime",
           "handlingTime": {
             "@type": "QuantitativeValue",
-            "minValue":1,
+            "minValue": 1,
             "maxValue": null,
             "unitCode": "DAY"
           },
@@ -400,14 +399,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "maxValue": null,
             "unitCode": "DAY"
           }
-        },
+        }
       },
       {
         "@type": "OfferShippingDetails",
         "shippingDestination": {
           "@type": "DefinedRegion",
           "addressCountry": "CA",
-          "addressRegion":"ON"
+          "addressRegion": "ON"
         },
         "shippingRate": {
           "@type": "MonetaryAmount",
@@ -422,10 +421,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "maxPrice": "498.00"
         },
         "deliveryTime": {
-        "@type": "ShippingDeliveryTime",
+          "@type": "ShippingDeliveryTime",
           "handlingTime": {
             "@type": "QuantitativeValue",
-            "minValue":1,
+            "minValue": 1,
             "maxValue": null,
             "unitCode": "DAY"
           },
@@ -435,14 +434,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "maxValue": null,
             "unitCode": "DAY"
           }
-        },
+        }
       },
       {
         "@type": "OfferShippingDetails",
         "shippingDestination": {
           "@type": "DefinedRegion",
           "addressCountry": "CA",
-          "addressRegion":"ON"
+          "addressRegion": "ON"
         },
         "shippingRate": {
           "@type": "MonetaryAmount",
@@ -457,10 +456,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "maxPrice": null
         },
         "deliveryTime": {
-        "@type": "ShippingDeliveryTime",
+          "@type": "ShippingDeliveryTime",
           "handlingTime": {
             "@type": "QuantitativeValue",
-            "minValue":1,
+            "minValue": 1,
             "maxValue": null,
             "unitCode": "DAY"
           },
@@ -470,14 +469,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "maxValue": null,
             "unitCode": "DAY"
           }
-        },
+        }
       },
       {
         "@type": "OfferShippingDetails",
         "shippingDestination": {
           "@type": "DefinedRegion",
           "addressCountry": "CA",
-          "addressRegion":"ON"
+          "addressRegion": "ON"
         },
         "shippingRate": {
           "@type": "MonetaryAmount",
@@ -492,33 +491,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "maxPrice": "498.00"
         },
         "deliveryTime": {
-        "@type": "ShippingDeliveryTime",
-        "handlingTime": {
-          "@type": "QuantitativeValue",
-          "minValue":1,
-          "maxValue": null,
-          "unitCode": "DAY"
-        },
-        "transitTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 1,
-          "maxValue": null,
-          "unitCode": "DAY"
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": null,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": null,
+            "unitCode": "DAY"
+          }
         }
-      },
       }
     ],
     "hasMerchantReturnPolicy": {
       "@type": "MerchantReturnPolicy",
       "applicableCountry": "CA",
       "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-      "merchantReturnDays":null,
-      "returnMethod": "https://mattressville.ca/pages/refund-policy",
-      "returnFees": "https://mattressville.ca/pages/refund-policy"
+      "merchantReturnDays":"10",
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
     }
   }
 }
 </script>
+
 {% endif %}
 
   </head>
