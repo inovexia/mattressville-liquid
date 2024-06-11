@@ -145,7 +145,7 @@
           {%-if product.metafields.custom.information_mixed_content != blank -%}
             {{ product.metafields.custom.information_mixed_content |  metafield_tag }}
           {%- endif -%}
-          {% assign media_image_id = product.metafields.custom.feature_file_content %}
+          {% assign media_image_id = product.metafields.custom.information_file_content %}
           {% if media_image_id %}
             {% assign media_image = media_image_id | media_image %}
             {% if media_image %}
