@@ -78,7 +78,7 @@
                     <ul class="list-unstyled pl-0 mb-0">
                       {%- for item in block.settings.locations_b.links -%}
                         <li>
-                          <a rel="noreferrer nofollow" href="{{ item.url }}">{{ item.title | escape }}</a>
+                          <a area-label="{{ item.title | escape }}" href="{{ item.url }}">{{ item.title | escape }}</a>
                         </li>
                       {%- endfor -%}
                     </ul>
