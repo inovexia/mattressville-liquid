@@ -5,6 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
+    {% assign tag_handles = 'on-your-side,on-your-back,toss-and-turn,soft,medium,firm,extra-firm,small,average,large,extra-large,modern,traditional' | split: ',' %}
+{% assign include_tag = false %}
+
+{% for tag_handle in tag_handles %}
+  {% if request.path contains tag_handle %}
+    {% assign include_tag = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if include_tag %}
+ <meta name="robots" content="noindex, nofollow">
+{% endif %}
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

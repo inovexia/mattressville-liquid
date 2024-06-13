@@ -3,11 +3,11 @@
   <div class="left-inner">
     <div class="left-wrapper">
       {%- if section.settings.show_breadcrumb -%}
-      <div class="bread-crumb">
-        <a class="home" href="/">Home</a>
-        <i class="gsi gs-chevron-right"></i>
-        <span>{{ section.settings.page_title }}</span>
-      </div>
+        <div class="bread-crumb">
+          <a class="home" href="/">Home</a>
+          <i class="gsi gs-chevron-right"></i>
+          <span>{{ section.settings.page_title }}</span>
+        </div>
       {%- endif -%}
       <h1 class="tool-title">{{ section.settings.page_title }}</h1>
       <div class="tool-area">
@@ -39,8 +39,19 @@
       </div>
       <button type="button" class="btn-start-quiz">
         <span>START QUIZ</span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="26" height="13" class="my-auto">
-          <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 26 13"
+          fill="none"
+          width="26"
+          height="13"
+          class="my-auto">
+          <path
+            d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
         </svg>
       </button>
     </div>
@@ -55,11 +66,26 @@
     </div>
   </div>
 </div>
-<form class="right-area" action="{{ "/collections/all-mattresses" | url }}" method="get">
-  <input type="hidden" name="sort_by" value="manual" />
-  <input type="hidden" name="filter.v.availability" value="1" />
-  <input type="hidden" name="filter.v.price.gte" value="" />
-  <input type="hidden" name="filter.v.price.lte" value="" />
+<form
+  class="right-area"
+  action="{{ "/collections/all-mattresses" | url }}"
+  method="get">
+  {% comment %} <input
+                        type="hidden"
+                        name="sort_by"
+                        value="manual" />
+                      <input
+                        type="hidden"
+                        name="filter.v.availability"
+                        value="1" />
+                      <input
+                        type="hidden"
+                        name="filter.v.price.gte"
+                        value="" />
+                      <input
+                        type="hidden"
+                        name="filter.v.price.lte"
+              value="" /> {% endcomment %}
   <div class="progress-wrapper">
     <div class="steps">
       <span class="step step-1 active">1</span>
@@ -74,13 +100,20 @@
   <div class="right-inner">
     <div class="quiz-box">
       <div id="question-1" class="question-blok active">
-        <input type="hidden" class="question-value" name="filter.p.tag" value="" />
+        <input
+          type="hidden"
+          class="question-value"
+          name="filter.p.tag"
+          value="" />
         <div class="question">
           <h3>In what position do you most comfortably sleep?</h3>
         </div>
         <div class="options-wrapper">
           <div class="vertical">
-            <button type="button" class="btn-quiz-option vertical-1" value="On Your Side">
+            <button
+              type="button"
+              class="btn-quiz-option vertical-1"
+              value="on-your-side">
               <img
                 alt="A pink colored vector image of a pillow and a human sleeping on it sideways."
                 class="image"
@@ -90,7 +123,10 @@
                 width="220" />
               <strong class="label">ON YOUR SIDE</strong>
             </button>
-            <button type="button" class="btn-quiz-option vertical-1" value="On Your Back">
+            <button
+              type="button"
+              class="btn-quiz-option vertical-1"
+              value="on-your-back">
               <img
                 alt="A pink colored vector image of a pillow and a human sleeping on it."
                 class="image"
@@ -100,7 +136,10 @@
                 width="220" />
               <strong class="label">ON YOUR BACK/STOMACH</strong>
             </button>
-            <button type="button" class="btn-quiz-option vertical-1" value="Toss and Turn">
+            <button
+              type="button"
+              class="btn-quiz-option vertical-1"
+              value="toss-and-turn">
               <img
                 alt="A pink colored vector image of a pillow and a human sleeping on it."
                 class="image"
@@ -114,13 +153,20 @@
         </div>
       </div>
       <div id="question-2" class="question-blok">
-        <input type="hidden" class="question-value" name="filter.p.tag" value="" />
+        <input
+          type="hidden"
+          class="question-value"
+          name="filter.p.tag"
+          value="" />
         <div class="question">
           <h3>What's your preferred mattress comfort level?</h3>
         </div>
         <div class="options-wrapper">
           <div class="grid">
-            <button type="button" class="btn-quiz-option grid-1" value="Soft">
+            <button
+              type="button"
+              class="btn-quiz-option grid-1"
+              value="soft">
               <img
                 alt="A pink colored vector image of a human sleeping but a pillow in his hand."
                 class="image"
@@ -130,7 +176,10 @@
                 width="220" />
               <strong class="label">SOFT</strong>
             </button>
-            <button type="button" class="btn-quiz-option grid-1" value="Medium">
+            <button
+              type="button"
+              class="btn-quiz-option grid-1"
+              value="medium">
               <img
                 alt="A pink colored vector image of a pillow and a human sleeping on it."
                 class="image"
@@ -140,7 +189,10 @@
                 width="220" />
               <strong class="label">MEDIUM</strong>
             </button>
-            <button type="button" class="btn-quiz-option grid-1" value="Firm">
+            <button
+              type="button"
+              class="btn-quiz-option grid-1"
+              value="firm">
               <img
                 alt="A pink colored vector image of a pillow and a human sleeping on it."
                 class="image"
@@ -150,7 +202,10 @@
                 width="220" />
               <strong class="label">FIRM</strong>
             </button>
-            <button type="button" class="btn-quiz-option grid-1" value="Extra Firm">
+            <button
+              type="button"
+              class="btn-quiz-option grid-1"
+              value="extra-firm">
               <img
                 alt="A pink colored vector image of a pillow and a human sleeping on it."
                 class="image"
@@ -164,13 +219,20 @@
         </div>
       </div>
       <div id="question-3" class="question-blok">
-        <input type="hidden" class="question-value" name="filter.p.tag" value="" />
+        <input
+          type="hidden"
+          class="question-value"
+          name="filter.p.tag"
+          value="" />
         <div class="question">
           <h3>What is your body type?</h3>
         </div>
         <div class="options-wrapper">
           <div class="grid">
-            <button type="button" class="btn-quiz-option grid-2" value="Small">
+            <button
+              type="button"
+              class="btn-quiz-option grid-2"
+              value="small">
               <strong class="label">SMALL</strong>
               <img
                 alt="q3o1"
@@ -181,7 +243,10 @@
                 width="220" />
               <span class="desc">Typically under 130lbs.</span>
             </button>
-            <button type="button" class="btn-quiz-option grid-2" value="Average">
+            <button
+              type="button"
+              class="btn-quiz-option grid-2"
+              value="average">
               <strong class="label">AVERAGE</strong>
               <img
                 alt="q3o2"
@@ -192,7 +257,10 @@
                 width="220" />
               <span class="desc">Between 130lbs and 210lbs.</span>
             </button>
-            <button type="button" class="btn-quiz-option grid-2" value="Large">
+            <button
+              type="button"
+              class="btn-quiz-option grid-2"
+              value="large">
               <strong class="label">LARGE</strong>
               <img
                 alt="q3o3"
@@ -203,7 +271,10 @@
                 width="220" />
               <span class="desc">Between 210lbs and 280lbs.</span>
             </button>
-            <button type="button" class="btn-quiz-option grid-2" value="Extra Large">
+            <button
+              type="button"
+              class="btn-quiz-option grid-2"
+              value="extra-large">
               <strong class="label">EXTRA LARGE</strong>
               <img
                 alt="q3o4"
@@ -218,36 +289,46 @@
         </div>
       </div>
       <div id="question-4" class="question-blok">
-        <input type="hidden" class="question-value" name="filter.p.tag" value="" />
+        <input
+          type="hidden"
+          class="question-value"
+          name="filter.p.tag"
+          value="" />
         <div class="question">
           <h3>What type of mattress are you interested in?</h3>
         </div>
         <div class="options-wrapper">
           <div class="vertical-full">
-            <button type="button" class="btn-quiz-option vertical-full-3" value="Modern">
+            <button
+              type="button"
+              class="btn-quiz-option vertical-full-3"
+              value="modern">
               <div class="start">
                 <img
-                alt="q4o1"
-                class="image"
-                height="160"
-                loading="lazy"
-                src="{{ 'q4o1.jpg' | asset_img_url: 'master' }}"
-                width="220" />
+                  alt="q4o1"
+                  class="image"
+                  height="160"
+                  loading="lazy"
+                  src="{{ 'q4o1.jpg' | asset_img_url: 'master' }}"
+                  width="220" />
               </div>
               <div class="end">
                 <strong class="label">FOAM CORE MATTRESS</strong>
                 <span class="desc">Special bedding is made with the newest in mattress technology including specialty longer lasting foams, innovative cooling systems and advanced pressure relief systems which help eliminate back pain and provide the best sleep possible.</span>
               </div>
             </button>
-            <button type="button" class="btn-quiz-option vertical-full-3" value="Traditional">
+            <button
+              type="button"
+              class="btn-quiz-option vertical-full-3"
+              value="traditional">
               <div class="start">
                 <img
-                alt="q4o2"
-                class="image"
-                height="160"
-                loading="lazy"
-                src="{{ 'q4o2.jpg' | asset_img_url: 'master' }}"
-                width="220" />
+                  alt="q4o2"
+                  class="image"
+                  height="160"
+                  loading="lazy"
+                  src="{{ 'q4o2.jpg' | asset_img_url: 'master' }}"
+                  width="220" />
               </div>
               <div class="end">
                 <strong class="label">TRADITIONAL INNERSPRING MATTRESS</strong>
@@ -259,181 +340,238 @@
       </div>
     </div>
     <div class="quiz-navigation">
-      <button type="button" class="btn-navigate prev" disabled="">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
-          <path d="M25 6.5L1 6.5M1 6.5L7 1M1 6.5L7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <button
+        type="button"
+        class="btn-navigate prev"
+        disabled="">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 26 13"
+          fill="none"
+          width="24"
+          height="11">
+          <path
+            d="M25 6.5L1 6.5M1 6.5L7 1M1 6.5L7 12"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
         </svg>
         <span class="label">PREV</span>
       </button>
       <button type="button" class="btn-navigate next">
         <span class="label">NEXT</span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
-          <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 26 13"
+          fill="none"
+          width="24"
+          height="11">
+          <path
+            d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
         </svg>
       </button>
-      <button type="submit" class="btn-navigate finish" style="display:none;">
+      <button
+        type="submit"
+        class="btn-navigate finish"
+        style="display:none;">
         <span class="label">FINISH</span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
-          <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 26 13"
+          fill="none"
+          width="24"
+          height="11">
+          <path
+            d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
         </svg>
       </button>
     </div>
   </div>
   <button type="button" class="btn-previous">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="26" height="13">
-      <path d="M25 6.5L1 6.5M1 6.5L7 1M1 6.5L7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 26 13"
+      fill="none"
+      width="26"
+      height="13">
+      <path
+        d="M25 6.5L1 6.5M1 6.5L7 1M1 6.5L7 12"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
     </svg>
     <span>PREVIOUS</span>
   </button>
 </form>
 {% javascript %}
-document.addEventListener("DOMContentLoaded", function() {
-  const startQuiz = document.querySelector('.matchmaker-section .btn-start-quiz');
-  const previousBtn = document.querySelector('.matchmaker-section .btn-previous');
-  const prev = document.querySelector('.matchmaker-section .quiz-navigation .prev');
-  const next = document.querySelector('.matchmaker-section .quiz-navigation .next');
-  const finish = document.querySelector('.matchmaker-section .quiz-navigation .finish');
-  const btnQuizOption = document.querySelectorAll('.matchmaker-section .btn-quiz-option');
-  let step = 1;
-  startQuiz.addEventListener('click', function() {
-    const leftArea = document.querySelector('.matchmaker-section .left-area');
-    const rightArea = document.querySelector('.matchmaker-section .right-area');
-    if (leftArea && rightArea) {
-      leftArea.classList.add('quiz-started');
-      rightArea.classList.add('start');
-    }
-  });
-  previousBtn.addEventListener('click', function() {
-    if (step > 1) {
-      prev.click();
-    }
-  });
-  btnQuizOption.forEach(function(button) {
-    button.addEventListener('click', function() {
-      const activeQuestionBlock = this.closest('.question-blok');
-      if (activeQuestionBlock) {
-        const activeOption = activeQuestionBlock.querySelector('.btn-quiz-option.active');
-        if (activeOption) {
-          activeOption.classList.remove('active');
-        }
-        activeQuestionBlock.querySelector('.question-value').value = this.value;
-        this.classList.add('active');
-        if (document.querySelector('.matchmaker-section .right-area').classList.contains('start')) {
-          if (step === 4) {
-            finish.click();
-          } else {
-            next.click();
+  document.addEventListener("DOMContentLoaded", function() {
+    const startQuiz = document.querySelector('.matchmaker-section .btn-start-quiz');
+    const previousBtn = document.querySelector('.matchmaker-section .btn-previous');
+    const prev = document.querySelector('.matchmaker-section .quiz-navigation .prev');
+    const next = document.querySelector('.matchmaker-section .quiz-navigation .next');
+    const finish = document.querySelector('.matchmaker-section .quiz-navigation .finish');
+    const btnQuizOption = document.querySelectorAll('.matchmaker-section .btn-quiz-option');
+    let step = 1;
+
+    startQuiz.addEventListener('click', function() {
+      const leftArea = document.querySelector('.matchmaker-section .left-area');
+      const rightArea = document.querySelector('.matchmaker-section .right-area');
+      if (leftArea && rightArea) {
+        leftArea.classList.add('quiz-started');
+        rightArea.classList.add('start');
+      }
+    });
+
+    previousBtn.addEventListener('click', function() {
+      if (step > 1) {
+        prev.click();
+      }
+    });
+
+    btnQuizOption.forEach(function(button) {
+      button.addEventListener('click', function() {
+        const activeQuestionBlock = this.closest('.question-blok');
+        if (activeQuestionBlock) {
+          const activeOption = activeQuestionBlock.querySelector('.btn-quiz-option.active');
+          if (activeOption) {
+            activeOption.classList.remove('active');
+          }
+          activeQuestionBlock.querySelector('.question-value').value = this.value;
+          this.classList.add('active');
+          if (document.querySelector('.matchmaker-section .right-area').classList.contains('start')) {
+            if (step === 4) {
+              finish.click();
+            } else {
+              next.click();
+            }
           }
         }
+      });
+    });
+
+    prev.addEventListener('click', function() {
+      if (step > 1) {
+        document.getElementById(`question-${step}`).classList.remove('active');
+        document.querySelector(`.progress-wrapper .bar`).classList.remove(`progress-${step}`);
+        step = step - 1;
+        document.querySelector(`.step-${step}`).classList.add('active');
+        document.getElementById(`question-${step}`).classList.add('active');
+        document.querySelector(`.progress-wrapper .bar`).classList.add(`progress-${step}`);
+      }
+      if (step < 2) {
+        prev.disabled = true;
+      } else {
+        prev.disabled = false;
+      }
+      if (step < 4) {
+        finish.style.display = 'none';
+        next.style.display = 'inline-block';
       }
     });
-  });
-  prev.addEventListener('click', function() {
-    if (step > 1) {
-      document.getElementById(`question-${step}`).classList.remove('active');
-      document.querySelector(`.progress-wrapper .bar`).classList.remove(`progress-${step}`);
-      step = step - 1;
-      document.querySelector(`.step-${step}`).classList.add('active');
-      document.getElementById(`question-${step}`).classList.add('active');
-      document.querySelector(`.progress-wrapper .bar`).classList.add(`progress-${step}`);
-    }
-    if (step < 2) {
-      prev.disabled = true;
-    } else {
-      prev.disabled = false;
-    }
-    if (step < 4) {
-      finish.style.display = 'none';
-      next.style.display = 'inline-block';
-    }
-  });
-  next.addEventListener('click', function() {
-    if (step < 4) {
-      document.getElementById(`question-${step}`).classList.remove('active');
-      document.querySelector(`.progress-wrapper .bar`).classList.remove(`progress-${step}`);
-      step = step + 1;
-      document.querySelector(`.step-${step}`).classList.add('active');
-      document.getElementById(`question-${step}`).classList.add('active');
-      document.querySelector(`.progress-wrapper .bar`).classList.add(`progress-${step}`);
-    } else {
-      // finish
-      finish.style.display = 'inline-block';
-      const formData = new FormData();
-      console.log('finish', 'filter.p.tag');
-    }
-    if (step > 1) {
-      prev.disabled = false;
-    } else {
-      prev.disabled = true;
-    }
-    if (step === 4) {
-      finish.style.display = 'inline-block';
-      next.style.display = 'none';
-    }
-  });
-  finish.addEventListener('click', function(e) {
-    e.preventDefault();
-    let valid = true;
-    document.querySelectorAll('.question-value').forEach(function(input) {
-      if (input.value === '') {
-        valid = false;
+
+    next.addEventListener('click', function() {
+      if (step < 4) {
+        document.getElementById(`question-${step}`).classList.remove('active');
+        document.querySelector(`.progress-wrapper .bar`).classList.remove(`progress-${step}`);
+        step = step + 1;
+        document.querySelector(`.step-${step}`).classList.add('active');
+        document.getElementById(`question-${step}`).classList.add('active');
+        document.querySelector(`.progress-wrapper .bar`).classList.add(`progress-${step}`);
+      } else { // finish
+        finish.style.display = 'inline-block';
+        const formData = new FormData();
+        console.log('finish', 'filter.p.tag');
+      }
+      if (step > 1) {
+        prev.disabled = false;
+      } else {
+        prev.disabled = true;
+      }
+      if (step === 4) {
+        finish.style.display = 'inline-block';
+        next.style.display = 'none';
       }
     });
-    if (!valid) {
-      alert('Please select all options');
-      return;
-    }
-    document.querySelectorAll(`.progress-wrapper .bar`).forEach(function(bar) {
-      bar.classList.remove(`progress-4`);
-      bar.classList.add(`progress-5`);
+
+    finish.addEventListener('click', function(e) {
+      e.preventDefault();
+      let valid = true;
+      const tags = [];
+      document.querySelectorAll('.question-value').forEach(function(input) {
+        if (input.value === '') {
+          valid = false;
+        } else {
+          tags.push(input.value);
+        }
+      });
+      if (! valid) {
+        alert('Please select all options');
+        return;
+      }
+
+      const tagsString = tags.join('+');
+      const redirectUrl = `/collections/all-mattresses/${tagsString}`;
+
+      document.querySelectorAll(`.progress-wrapper .bar`).forEach(function(bar) {
+        bar.classList.remove(`progress-4`);
+        bar.classList.add(`progress-5`);
+      });
+      document.querySelector(`.matchmaker-section`).classList.add(`please-wait`);
+      prev.disabled = true;
+      finish.disabled = true;
+
+// Redirect to the new URL
+      window.location.href = redirectUrl;
     });
-    document.querySelector(`.matchmaker-section`).classList.add(`please-wait`);
-    prev.disabled = true;
-    finish.disabled = true;
-    // Ensure correct access to the form associated with the finish button
-    const form = finish.closest('form');
-    if (form) {
-      form.submit();
-    }
   });
-});
+
 {% endjavascript %}
 {% schema %}
-{
-  "name": "Mattress Matchmaker",
-  "tag": "section",
-  "class": "matchmaker-section",
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_breadcrumb",
-      "label": "Show Breadbrumb",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "page_title",
-      "label": "Page Title",
-      "default": "Mattress Matchmaker"
-    },
-    {
-      "type": "text",
-      "id": "sub_title",
-      "label": "Sub Title",
-      "default": "Let's find your perfect mattress!"
-    },
-    {
-      "type": "text",
-      "id": "description",
-      "label": "Description",
-      "default": "Answer the following questions about your sleeping preferences so we can get your best match."
-    },
-    {
-      "type": "image_picker",
-      "id": "featured_image",
-      "label": "Featured Image",
-      "info": "Default will be used when nothing selected."
-    }
-  ]
-}
+  {
+    "name": "Mattress Matchmaker",
+    "tag": "section",
+    "class": "matchmaker-section",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_breadcrumb",
+        "label": "Show Breadbrumb",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "page_title",
+        "label": "Page Title",
+        "default": "Mattress Matchmaker"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Title",
+        "default": "Let's find your perfect mattress!"
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "label": "Description",
+        "default": "Answer the following questions about your sleeping preferences so we can get your best match."
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_image",
+        "label": "Featured Image",
+        "info": "Default will be used when nothing selected."
+      }
+    ]
+  }
 {% endschema %}
