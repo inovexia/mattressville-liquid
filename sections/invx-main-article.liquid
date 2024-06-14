@@ -72,7 +72,9 @@
           class="article-template__content page-width page-width-no-padding rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           itemprop="articleBody"
           {{ block.shopify_attributes }}>
-          {{ article.content }}
+          <div class="article-content">
+            {{ article.content }}
+          </div>
         </div>
 
       {%- when 'share' -%}
@@ -149,7 +151,7 @@
 
 
   {% comment %} {% assign my_metafield = article.metafields.custom.accordion %}
-    {{ my_metafield | json }} {% endcomment %}
+        {{ my_metafield | json }} {% endcomment %}
 
 
   <div class="article-template__back element-margin-top center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">

@@ -1,0 +1,53 @@
+{%- style -%}
+  .page-title {
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--secondary-color);
+    margin: 23px 0 27px;
+    position: relative;
+  }
+
+  .page-title::after {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    position: absolute;
+    border-bottom: 2px solid var(--accent-color);
+    left: 0;
+    bottom: -5px;
+  }
+
+  .content-{{ section.id }}
+  -padding {
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .content-{{ section.id }}-padding {
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="section">
+  <div class="page-header header-{{ section.id }}-padding">
+    <div class="page-width page-width-no-padding">
+      <h1 class="page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        {{ page.title | escape }}
+      </h1>
+    </div>
+  </div>
+  <div class="page-content content-{{ section.id }}-padding">
+    <div class="page-width page-width-no-padding">
+      <div class="content rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.main-page.name",
+    "tag": "section",
+    "settings": []
+  }
+{% endschema %}
