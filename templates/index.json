@@ -47,11 +47,11 @@
             "slide_link": "shopify:\/\/blogs\/featured-brands\/why-tempur-pedic-is-the-king-of-memory-foam-mattresses"
           }
         },
-        "slide_CKrRRg": {
+        "slide_9gwrCP": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
-            "slide_link": "shopify:\/\/blogs\/tips\/10-reasons-to-gift-a-mattress"
+            "image": "shopify:\/\/shop_images\/Mattress_Shopping_Checklist_A_Mattress_Buyer_s_Musts.jpg",
+            "slide_link": "shopify:\/\/blogs\/tips\/mattress-shopping-checklist-a-mattress-buyers-musts"
           }
         },
         "slide_9y8Uir": {
@@ -66,6 +66,13 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Tempur-pedic_home_banner_48a81cb1-840c-4199-a41e-3d9403c99dd5.jpg",
             "slide_link": "shopify:\/\/collections\/tempur-pedic"
+          }
+        },
+        "slide_CKrRRg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
+            "slide_link": "shopify:\/\/blogs\/tips\/10-reasons-to-gift-a-mattress"
           }
         },
         "slide_mgniDF": {
@@ -96,9 +103,10 @@
         "slide_86rVjX",
         "slide_yTF6mG",
         "slide_gQ3iXy",
-        "slide_CKrRRg",
+        "slide_9gwrCP",
         "slide_9y8Uir",
         "slide_bTWUcd",
+        "slide_CKrRRg",
         "slide_mgniDF",
         "slide_yQaMJP",
         "slide_mp4EPY"
