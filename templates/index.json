@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "invx-slider": {
@@ -72,6 +81,13 @@
             "image": "shopify:\/\/shop_images\/Tempur-pedic_home_banner_48a81cb1-840c-4199-a41e-3d9403c99dd5.jpg",
             "slide_link": "shopify:\/\/collections\/tempur-pedic"
           }
+        },
+        "slide_R3VJF6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_canada_day_home_banner.jpg",
+            "slide_link": ""
+          }
         }
       },
       "block_order": [
@@ -84,7 +100,8 @@
         "slide_yQaMJP",
         "slide_9y8Uir",
         "slide_yTF6mG",
-        "slide_bTWUcd"
+        "slide_bTWUcd",
+        "slide_R3VJF6"
       ],
       "custom_css": [
         "slideshow-component {margin-top: 20px;}",
