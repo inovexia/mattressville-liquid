@@ -1,14 +1,14 @@
 {% comment %} 
-                                                            Renders a product media gallery. Should be used with 'media-gallery.js'
-                                                            Also see 'product-media-modal'
-                                                           
-                                                            Accepts: 
-                                                            - product: {Object} Product liquid object 
-                                                            - variant_images: {Array} Product images associated with a variant 
-                                                            - is_duplicate: {Boolean} Prevents rendering uneeded elements and duplicate ids for subsequent instances
-                                                           
-                                                            Usage:
-                                                            {% render 'product-media-gallery', is_duplicate: true %} 
+                                                              Renders a product media gallery. Should be used with 'media-gallery.js'
+                                                              Also see 'product-media-modal'
+                                                             
+                                                              Accepts: 
+                                                              - product: {Object} Product liquid object 
+                                                              - variant_images: {Array} Product images associated with a variant 
+                                                              - is_duplicate: {Boolean} Prevents rendering uneeded elements and duplicate ids for subsequent instances
+                                                             
+                                                              Usage:
+                                                              {% render 'product-media-gallery', is_duplicate: true %} 
 {% endcomment %}
 
 {%- liquid
@@ -53,7 +53,7 @@
             href="{{ media | img_url: 'master' }}"
             class="swiper-slide">
 
-            <img src="{{ media | img_url: 'master' }}" />
+            <img src="{{ media | img_url: 'master' }}" alt="Product Image {{ forloop.index }}" />
           </a>
         {%- endunless -%}
       {%- endfor -%}
@@ -66,7 +66,7 @@
       {%- for media in product.media -%}
         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
           <div class="swiper-slide">
-            <img src="{{ media | img_url }}" />
+            <img src="{{ media | img_url }}" alt="Product Image {{ forloop.index }}" />
           </div>
         {%- endunless -%}
       {%- endfor -%}
