@@ -14,7 +14,21 @@
     assign og_url = request.origin
   endif
 %}
-<meta name="robots" content="index, follow">
+{% assign tag_handles = 'on-your-side,on-your-back,toss-and-turn,soft,medium,firm,extra-firm,small,average,large,extra-large,modern,traditional' | split: ',' %}
+{% assign include_tag = false %}
+{% if request.path contains '/collections/all-mattresses/' %}
+  {% for tag_handle in tag_handles %}
+    {% if request.path contains tag_handle %}
+      {% assign include_tag = false %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if include_tag %}
+  <meta name="robots" content="index, follow">
+{% endif %}
+
 <meta name="HandheldFriendly" content="true">
 {% if page_title != blank %}
   <meta name="keywords" content="{{ page_title }}">
