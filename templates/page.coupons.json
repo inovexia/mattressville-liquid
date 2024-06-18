@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "layout": "theme-sidebar",
   "sections": {
@@ -47,12 +56,26 @@
             "button_label": "Start Saving",
             "button_link": "shopify:\/\/collections\/all-mattresses"
           }
+        },
+        "coupon_pLL44K": {
+          "type": "coupon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_canada10_coupon.png",
+            "type": "other",
+            "code": "CANADA10",
+            "title": "10% OFF COUPON",
+            "description": "",
+            "expiry": "July 5, 2024",
+            "button_label": "",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
         "coupon_yDC3bH",
         "coupon_FkNtma",
-        "coupon_KzhYWf"
+        "coupon_KzhYWf",
+        "coupon_pLL44K"
       ],
       "settings": {
         "tnc": "<p><em>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void the coupons.<\/em><\/p>",
