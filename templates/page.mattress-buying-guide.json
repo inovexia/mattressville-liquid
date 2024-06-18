@@ -11,7 +11,7 @@
       "type": "rich-text",
       "blocks": {
         "heading_ayGhc9": {
-          "type": "heading",
+          "type": "text",
           "settings": {
             "heading": "MATTRESS SIZES",
             "heading_size": "h1"
