@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-   {% assign tag_handles = 'on-your-side,on-your-back,toss-and-turn,soft,medium,firm,extra-firm,small,average,large,extra-large,modern,traditional' | split: ',' %}
+  {% assign tag_handles = 'on-your-side,on-your-back,toss-and-turn,soft,medium,firm,extra-firm,small,average,large,extra-large,modern,traditional' | split: ',' %}
 {% assign include_tag = false %}
+
 {% if request.path contains '/collections/all-mattresses/' %}
   {% for tag_handle in tag_handles %}
     {% if request.path contains tag_handle %}
@@ -17,10 +18,11 @@
 {% endif %}
 
 {% if include_tag %}
- <meta name="robots" content="noindex, nofollow">
- {% else %}
- <meta name="robots" content="index, follow">
+  <meta name="robots" content="noindex, nofollow">
+{% else %}
+  <meta name="robots" content="index, follow">
 {% endif %}
+
 
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
