@@ -13,8 +13,7 @@
         "heading_ayGhc9": {
           "type": "text",
           "settings": {
-            "heading": "MATTRESS SIZES",
-            "heading_size": "h1"
+            "text": "<h1>MATTRESS SIZES<\/h1>"
           }
         }
       },
