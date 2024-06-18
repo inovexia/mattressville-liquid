@@ -125,8 +125,8 @@
       "type": "image-with-text",
       "custom_css": [
         ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
-        ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none;}",
-        "img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit:unset; width: 540px; right: 50%; transform: translate(-50%, 0%);}"
+        ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
+        "img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 540px; right: 50%; transform: translate(-50%, 0%);}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/mattressville_canada_day_flyer_24.png",
