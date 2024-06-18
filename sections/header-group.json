@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -6,7 +15,7 @@
       "type": "invx-announcement-bar",
       "settings": {
         "background_color": "#d7355c",
-        "announcement": "<p><a href=\"\/collections\/all-mattresses\" target=\"_blank\" title=\"All Mattresses\">Premium Mattress Sale<\/a> | The Highest Rated Mattress Store | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.<\/p>",
+        "announcement": "<p><a href=\"https:\/\/mattressville.ca\/pages\/coupons\/\" target=\"_blank\" title=\"https:\/\/mattressville.ca\/pages\/coupons\/\">Canada Day Mattress Sale is ON NOW  <\/a> | Up to an Additional 20% OFF<\/p>",
         "duration": "session"
       }
     },
@@ -33,7 +42,7 @@
       "type": "header-mid",
       "settings": {
         "text_color": "#ffffff",
-        "phone_number": "1905-212-7722",
+        "phone_number": "1-905-212-7722",
         "contact_us_page": "contact-us",
         "offer_text": "FREE Shipping over $499"
       }
