@@ -19,7 +19,7 @@
 {% if request.path contains '/collections/all-mattresses/' %}
   {% for tag_handle in tag_handles %}
     {% if request.path contains tag_handle %}
-      {% assign include_tag = false %}
+      {% assign include_tag = true %}
       {% break %}
     {% endif %}
   {% endfor %}
