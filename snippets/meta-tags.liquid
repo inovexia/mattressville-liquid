@@ -14,10 +14,10 @@
     assign og_url = request.origin
   endif
 %}
-<meta name="robots" content="index, follow">
+{% comment %} <meta name="robots" content="index, follow"> {% endcomment %}
 <meta name="HandheldFriendly" content="true">
 {% if page_title != blank %}
-<meta name="keywords" content="{{ page_title }}">
+  <meta name="keywords" content="{{ page_title }}">
 {% endif %}
 <meta property="og:site_name" content="{{ shop.name }}">
 <meta property="og:url" content="{{ og_url }}">
