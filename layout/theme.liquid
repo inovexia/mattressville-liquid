@@ -323,7 +323,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {
   "@context": "https://schema.org/",
   "@type": "Product",
-  "name": "{{ product.title }}",
+  "name": "{{ product.title | replace: '"', '' }}",
   "image": [
     "{{ product.featured_image | product_img_url: 'large' }}"
   ],
