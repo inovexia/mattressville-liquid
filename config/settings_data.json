@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/mattressville-logo-no-slogan.png",
@@ -49,7 +58,7 @@
     "card_shadow_blur": 10,
     "all_collection_title": "All Products",
     "all_collection_desc": "",
-    "collection_card_style": "card",
+    "collection_card_style": "standard",
     "collection_card_image_padding": 6,
     "collection_card_text_alignment": "center",
     "collection_card_color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
