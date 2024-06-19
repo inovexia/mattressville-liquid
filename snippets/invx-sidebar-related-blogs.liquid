@@ -4,7 +4,7 @@
 {% assign featuredArticles = false %}
 
 {% comment %} 
-  Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable. 
+    Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable. 
 {% endcomment %}
 {% for featuredBlog in featuredBlogs %}
   {% if blogs[featuredBlog].articles %}
@@ -17,7 +17,7 @@
 {% endfor %}
 
 {% comment %} 
-  If featuredArticles is not false we should have articles to show 
+    If featuredArticles is not false we should have articles to show 
 {% endcomment %}
 {% if featuredArticles %}
   {% assign featuredArticles = featuredArticles | sort: 'published_at' | reverse %}
@@ -31,7 +31,7 @@
               src="{{ article.image.src | image_url: width: 220 }}"
               width="100%"
               height="auto"
-              alt="Related article image">
+              alt="Recent article image">
           {% endif %}
           <p>
             {{ article.title -}}
