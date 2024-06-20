@@ -82,7 +82,7 @@
         "heading_kw7Jrx": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>🍁The Great CanadianMattress Sale 2024 (<\/strong><em><strong>July 1st-July 5th<\/strong><\/em><strong>)🍁<\/strong>",
+            "heading": "<strong>🍁The Great Canadian Mattress Sale 2024 (<\/strong><em><strong>July 1st-July 5th<\/strong><\/em><strong>)🍁<\/strong>",
             "heading_size": "h1"
           }
         },
@@ -127,7 +127,7 @@
         ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
         ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
         "img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 540px; right: 50%; transform: translate(-50%, 0%);}",
-        ".global-media-settings{border:none !important;}"
+        ".global-media-settings {border: none !important;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/mattressville_canada_day_flyer_24.png",
