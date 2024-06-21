@@ -306,8 +306,8 @@
   border-top: none;
 }
 .header-bottom .main-nav .main-menu .nav-area .dropdown-menu.mega-menu .all-item {
-  display: flex;
-  justify-content: flex-end;
+  display: block;
+  float: right;
 }
 .header-bottom .main-nav .main-menu .nav-area .dropdown-menu.mega-menu .all-item .mega-menu-bottom-link {
   align-items: center;

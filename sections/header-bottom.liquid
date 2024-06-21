@@ -58,12 +58,23 @@
                 {%- endfor -%}
               </div>
               <div class="all-item">
-                {%- assign megaMenuBottomLink = section.settings.mega_menu_bottom_link
+                {%- assign megaMenuBottomLink1 = section.settings.mega_menu_bottom_link
  | default: '/collections/all-mattresses'
  | url_escape
                 -%}
-                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink }}">
+                {%- assign megaMenuBottomLink2 = section.settings.mega_menu_bottom_link2
+ | default: '/collections'
+ | url_escape
+                -%}
+                {%- assign megaMenuBottomLink3 = section.settings.mega_menu_bottom_link3
+ | default: '/collections/all-mattresses'
+ | url_escape
+                -%}
+                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink1 }}">
                   {{- section.settings.mega_menu_bottom_label -}}
+                </a>
+                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink2 }}">
+                  {{- section.settings.mega_menu_bottom_label2 -}}
                 </a>
               </div>
             </div>

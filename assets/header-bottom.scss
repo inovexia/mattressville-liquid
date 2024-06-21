@@ -328,8 +328,8 @@
             }
 
             .all-item {
-              display: flex;
-              justify-content: flex-end;
+              display:block;
+              float: right;
 
               .mega-menu-bottom-link {
                 align-items: center;
