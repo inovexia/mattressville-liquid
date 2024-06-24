@@ -29,28 +29,31 @@
         "column_NJKdTF": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/mattressville_sealy_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Sealy",
+            "link": "shopify:\/\/collections\/sealy"
           }
         },
         "column_XePek9": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/mattressville_beautyrest_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Beautyrest",
+            "link": "shopify:\/\/collections\/beautyrest"
           }
         },
         "column_e9KcNN": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/mattressville_icomfort_by_serta_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Serta iComfort",
+            "link": "shopify:\/\/collections\/serta-icomfort"
           }
         }
       },
@@ -60,14 +63,14 @@
         "column_e9KcNN"
       ],
       "settings": {
-        "title": "Multicolumn",
+        "title": "All Brands",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "",
         "columns_mobile": "1",
