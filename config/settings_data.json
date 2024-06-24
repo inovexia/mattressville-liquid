@@ -21,7 +21,7 @@
     "page_width": 1360,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 4,
-    "spacing_grid_vertical": 8,
+    "spacing_grid_vertical": 40,
     "animations_reveal_on_scroll": true,
     "animations_hover_elements": "default",
     "buttons_border_thickness": 0,
