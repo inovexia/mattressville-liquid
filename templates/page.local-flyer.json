@@ -86,12 +86,6 @@
             "heading_size": "h1"
           }
         },
-        "text_JKAMFd": {
-          "type": "text",
-          "settings": {
-            "text": "<p>💤Once upon a restless night, in the vast Canadian land, a dream was born.<br\/>A dream that would revolutionize the way you sleep...💤<\/p><p>Introducing the <strong>Great Canadian Mattress Sale<\/strong> 2024, brought to you exclusively by Mattressville.ca<\/p><p><em>Picture this:<\/em> You sink into a world of tranquility as you lay on your new mattress, feeling the gentle<br\/>embrace of plush comfort. It's as if the worries of the day melt away, and you are transported to a serene oasis of uninterrupted slumber. This dream can be your reality with Mattressville.ca.<\/p><p>Mattressville<em> already<\/em> has a reputation for being <strong>#1 in customer service<\/strong> and providing<br\/>premium high end mattresses.. and we are doing something really great in honor of Canada day during the sale week!<\/p><p>Shop during <strong>The<\/strong> <strong>Great Canadian Mattress Sale<\/strong> and save big on brand name mattresses at<br\/>Mattressville. Save more with <em>special pricing<\/em> on select products, <em>and<\/em> back by popular demand…multiple coupons! 😲<\/p><p>That means save even more on your premium mattress purchases, with our tiered offers:<\/p><ul><li><strong>CANADA10 (10% OFF Orders $500-$1,499)<\/strong><\/li><li><strong>CANADA15 (15% OFF Orders $1,500 - $2,499)<\/strong><\/li><li><strong>CANADA20 (20% OFF Orders $2,500+)<\/strong><\/li><\/ul><p><strong>Why our customers love this sale:<\/strong><\/p><p>We understand the importance of a good night's sleep. We believe that a quality mattress is the key to<br\/>unlocking your full potential every single day. That's why we have curated a<br\/>collection of the finest mattresses, meticulously designed to cater to your<br\/>unique needs.<\/p><p>During most mattress sales, retailers and websites alike will typically offer some kind of perk like<br\/>free delivery, save the tax, or a discount on select items. At Mattressville<br\/>you will save much more then with special Canada pricing on select products,<br\/>free delivery on orders over $499,  and save more with our Canada day<br\/>coupons.<\/p><p>✅ Here's why you'll love our mattresses:<\/p><p>1️⃣ Superior Comfort:Experience the blissful embrace of a new mattress that lulls you into a<br\/>deep, uninterrupted sleep.<\/p><p>2️⃣ Unmatched Quality:Each premium mattress is crafted with the utmost precision and attention to<br\/>detail, ensuring long-lasting durability.<\/p><p>3️⃣ Tailored Support: Find the perfect mattress designed to contour to your body,<br\/>providing customized support for every curve and contour.<\/p><p>4️⃣ Health and Wellness:Enjoy improved sleep quality, reduced stress, and enhanced overall well-being.<\/p><p>Treat yourself and your loved ones so you too can have a good night, <em>every night!<\/em><\/p><p>For more reasons on why you too will love our Canada day mattress sale, check out, \"<a href=\"https:\/\/mattressville.ca\/blog\/why-our-canada-day-mattress-sale-is-better-than-others\/\" target=\"_blank\" title=\"canada day mattress sale 2024\"><em>Why Our CANADA DAY MATTRESS SALE Is Better Than Others<\/em><\/a>\".<\/p><p>It's time to wake upto a new level of comfort, brought to you by Mattressville.ca. The Great<br\/>Canadian Mattress Sale 2024 awaits – don't miss out! Shop now and transform the<br\/>way you sleep, forever.🛏️<\/p><p><em>*coupons cannot be combined with other coupons, promos, or bundles<\/em><\/p><p><strong>Canada Day Mattress Sale Starts July 1st, 12:00 am ~ Ends July 5th, 11:59 pm<\/strong><\/p>"
-          }
-        },
         "button_DBMjTG": {
           "type": "button",
           "settings": {
@@ -106,7 +100,6 @@
       },
       "block_order": [
         "heading_kw7Jrx",
-        "text_JKAMFd",
         "button_DBMjTG"
       ],
       "custom_css": [
@@ -144,12 +137,86 @@
         "padding_top": 0,
         "padding_bottom": 100
       }
+    },
+    "home_banner_8mg686": {
+      "type": "home-banner",
+      "settings": {
+        "custom_text_title": "",
+        "custom_text_body": "<p>💤Once upon a restless night, in the vast Canadian land, a dream was born. A dream that would revolutionize the way you sleep...💤<\/p><p>Introducing the <strong>Great Canadian Mattress Sale<\/strong> 2024, brought to you exclusively by Mattressville.ca<\/p><p><em>Picture this:<\/em> You sink into a world of tranquility as you lay on your new mattress, feeling the gentle embrace of plush comfort. It's as if the worries of the day melt away, and you are transported to a serene oasis of uninterrupted slumber. This dream can be your reality with Mattressville.ca.<\/p><p>Mattressville<em> already<\/em> has a reputation for being <strong>#1 in customer service<\/strong> and providing premium high end mattresses.. and we are doing something really great in honor of Canada day during the sale week!<\/p><p>Shop during <strong>The<\/strong> <strong>Great Canadian Mattress Sale<\/strong> and save big on brand name mattresses at Mattressville. Save more with <em>special pricing<\/em> on select products, <em>and<\/em> back by popular demand…multiple coupons! 😲<\/p><p><strong>Why our customers love this sale:<\/strong><\/p><p>We understand the importance of a good night's sleep. We believe that a quality mattress is the key to unlocking your full potential every single day. That's why we have curated a collection of the finest mattresses, meticulously designed to cater to your unique needs.<\/p><p>During most mattress sales, retailers and websites alike will typically offer some kind of perk like free delivery, save the tax, or a discount on select items. At Mattressville you will save much more then with special Canada pricing on select products, free delivery on orders over $499,  and save more with our Canada day coupons:<\/p><p><\/p>"
+      }
+    },
+    "coupons_row_f4PH8R": {
+      "type": "coupons-row",
+      "blocks": {
+        "row_6iFfEt": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_canada20_coupon.png",
+            "caption": "",
+            "heading": "",
+            "text": "<p><strong>CANADA20: 20% OFF Orders $2,500+<\/strong><\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_qnGBky": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_canada15_coupon.png",
+            "caption": "",
+            "heading": "",
+            "text": "<p><strong>CANADA15: 15% OFF Orders $1,500 - $2,499<\/strong><\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_xVK9NE": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_canada10_coupon_f7a5e8a8-6a5f-4ad2-af8f-f1e87356f1a3.png",
+            "caption": "",
+            "heading": "",
+            "text": "<p><strong>CANADA10: 10% OFF Orders $500-$1,499<\/strong><\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_6iFfEt",
+        "row_qnGBky",
+        "row_xVK9NE"
+      ],
+      "settings": {
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "align-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "home_banner_q4JqdB": {
+      "type": "home-banner",
+      "settings": {
+        "custom_text_title": "",
+        "custom_text_body": "<p>✅ Here's why you'll love our mattresses:<\/p><p>1️⃣ Superior Comfort: Experience the blissful embrace of a new mattress that lulls you into a deep, uninterrupted sleep.<\/p><p>2️⃣ Unmatched Quality: Each premium mattress is crafted with the utmost precision and attention to<br\/>detail, ensuring long-lasting durability.<\/p><p>3️⃣ Tailored Support: Find the perfect mattress designed to contour to your body, providing customized support for every curve and contour.<\/p><p>4️⃣ Health and Wellness: Enjoy improved sleep quality, reduced stress, and enhanced overall well-being.<\/p><p>Treat yourself and your loved ones so you too can have a good night, <em>every night!<\/em><\/p><p>For more reasons on why you too will love our Canada day mattress sale, check out, \"<a href=\"https:\/\/mattressville.ca\/blog\/why-our-canada-day-mattress-sale-is-better-than-others\/\" target=\"_blank\" title=\"canada day mattress sale 2024\"><em>Why Our CANADA DAY MATTRESS SALE Is Better Than Others<\/em><\/a>\".<\/p><p>It's time to wake upto a new level of comfort, brought to you by Mattressville.ca. The Great Canadian Mattress Sale 2024 awaits – don't miss out! Shop now and transform the way you sleep, forever.🛏️<\/p><p><em>*coupons cannot be combined with other coupons, promos, or bundles<\/em><\/p><p><strong>Canada Day Mattress Sale Starts July 1st, 12:00 am ~ Ends July 5th, 11:59 pm<\/strong><\/p>"
+      }
     }
   },
   "order": [
     "main",
     "multicolumn_CrLKdg",
     "rich_text_LmUW9y",
-    "image_with_text_EKL6in"
+    "image_with_text_EKL6in",
+    "home_banner_8mg686",
+    "coupons_row_f4PH8R",
+    "home_banner_q4JqdB"
   ]
 }

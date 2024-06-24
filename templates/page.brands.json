@@ -29,51 +29,134 @@
         "column_NJKdTF": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/mattressville_sealy_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Sealy",
+            "link": "shopify:\/\/collections\/sealy"
           }
         },
         "column_XePek9": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/mattressville_beautyrest_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Beautyrest",
+            "link": "shopify:\/\/collections\/beautyrest"
           }
         },
         "column_e9KcNN": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/mattressville_icomfort_by_serta_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Serta iComfort",
+            "link": "shopify:\/\/collections\/serta-icomfort"
+          }
+        },
+        "column_G7yydC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_tempurpedic_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Tempur-Pedic",
+            "link": "shopify:\/\/collections\/tempur-pedic"
+          }
+        },
+        "column_pj8bFm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_stearns_foster_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Stearns & Foster",
+            "link": "shopify:\/\/collections\/stearns-and-foster"
+          }
+        },
+        "column_9xCgkM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_kingsdown_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Kingsdown",
+            "link": "shopify:\/\/collections\/kingsdown"
+          }
+        },
+        "column_kkeGQE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_brand_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Mattressville",
+            "link": "shopify:\/\/collections\/mattressville"
+          }
+        },
+        "column_TFALTp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_galaxy_brand_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Galaxy Bedding",
+            "link": "shopify:\/\/collections\/galaxy-bedding"
+          }
+        },
+        "column_dr3VR4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_natura_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Natura",
+            "link": "shopify:\/\/collections\/natura"
+          }
+        },
+        "column_TRRMhQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_serta_mattresses_9ff85e20-fd0f-45c4-af5d-6ae96050e500.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Serta",
+            "link": "shopify:\/\/collections\/serta"
           }
         }
       },
       "block_order": [
         "column_NJKdTF",
         "column_XePek9",
-        "column_e9KcNN"
+        "column_e9KcNN",
+        "column_G7yydC",
+        "column_pj8bFm",
+        "column_9xCgkM",
+        "column_kkeGQE",
+        "column_TFALTp",
+        "column_dr3VR4",
+        "column_TRRMhQ"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
-        "title": "Multicolumn",
+        "title": "All Brands",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
         "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 52
       }
     },
     "multicolumn_8BApPV": {
