@@ -55,12 +55,89 @@
             "link_label": "Serta iComfort",
             "link": "shopify:\/\/collections\/serta-icomfort"
           }
+        },
+        "column_G7yydC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_tempurpedic_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Tempur-Pedic",
+            "link": "shopify:\/\/collections\/tempur-pedic"
+          }
+        },
+        "column_pj8bFm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_stearns_foster_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Stearns & Foster",
+            "link": "shopify:\/\/collections\/stearns-and-foster"
+          }
+        },
+        "column_9xCgkM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_kingsdown_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Kingsdown",
+            "link": "shopify:\/\/collections\/kingsdown"
+          }
+        },
+        "column_kkeGQE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_brand_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Mattressville",
+            "link": "shopify:\/\/collections\/mattressville"
+          }
+        },
+        "column_TFALTp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_galaxy_brand_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Galaxy Bedding",
+            "link": "shopify:\/\/collections\/galaxy-bedding"
+          }
+        },
+        "column_dr3VR4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_natura_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Natura",
+            "link": "shopify:\/\/collections\/natura"
+          }
+        },
+        "column_TRRMhQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_serta_mattresses_9ff85e20-fd0f-45c4-af5d-6ae96050e500.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Serta",
+            "link": "shopify:\/\/collections\/serta"
+          }
         }
       },
       "block_order": [
         "column_NJKdTF",
         "column_XePek9",
-        "column_e9KcNN"
+        "column_e9KcNN",
+        "column_G7yydC",
+        "column_pj8bFm",
+        "column_9xCgkM",
+        "column_kkeGQE",
+        "column_TFALTp",
+        "column_dr3VR4",
+        "column_TRRMhQ"
       ],
       "settings": {
         "title": "All Brands",
