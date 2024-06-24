@@ -144,12 +144,20 @@
         "padding_top": 0,
         "padding_bottom": 100
       }
+    },
+    "home_banner_q4JqdB": {
+      "type": "home-banner",
+      "settings": {
+        "custom_text_title": "",
+        "custom_text_body": "<p>Add yo<\/p><p>✅ Here's why you'll love our mattresses:<\/p><p>1️⃣ Superior Comfort: Experience the blissful embrace of a new mattress that lulls you into a deep, uninterrupted sleep.<\/p><p>2️⃣ Unmatched Quality: Each premium mattress is crafted with the utmost precision and attention to<br\/>detail, ensuring long-lasting durability.<\/p><p>3️⃣ Tailored Support: Find the perfect mattress designed to contour to your body, providing customized support for every curve and contour.<\/p><p>4️⃣ Health and Wellness: Enjoy improved sleep quality, reduced stress, and enhanced overall well-being.<\/p><p>Treat yourself and your loved ones so you too can have a good night, <em>every night!<\/em><\/p><p>For more reasons on why you too will love our Canada day mattress sale, check out, \"<a href=\"https:\/\/mattressville.ca\/blog\/why-our-canada-day-mattress-sale-is-better-than-others\/\" target=\"_blank\" title=\"canada day mattress sale 2024\"><em>Why Our CANADA DAY MATTRESS SALE Is Better Than Others<\/em><\/a>\".<\/p><p>It's time to wake upto a new level of comfort, brought to you by Mattressville.ca. The Great Canadian Mattress Sale 2024 awaits – don't miss out! Shop now and transform the way you sleep, forever.🛏️<\/p><p><em>*coupons cannot be combined with other coupons, promos, or bundles<\/em><\/p><p><strong>Canada Day Mattress Sale Starts July 1st, 12:00 am ~ Ends July 5th, 11:59 pm<\/strong><\/p>"
+      }
     }
   },
   "order": [
     "main",
     "multicolumn_CrLKdg",
     "rich_text_LmUW9y",
-    "image_with_text_EKL6in"
+    "image_with_text_EKL6in",
+    "home_banner_q4JqdB"
   ]
 }
