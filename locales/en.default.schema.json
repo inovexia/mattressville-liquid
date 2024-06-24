@@ -1848,6 +1848,12 @@
     "main-list-collections": {
       "name": "Collections list page",
       "settings": {
+        "meta_title": {
+          "label": "Meta Title"
+        },
+        "meta_description": {
+          "label": "Meta Description"
+        },
         "title": {
           "label": "Heading"
         },
