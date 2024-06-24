@@ -154,7 +154,7 @@
             "image": "shopify:\/\/shop_images\/mattressville_canada20_coupon.png",
             "caption": "",
             "heading": "",
-            "text": "<p><strong>CANADA20: 20% OFF Orders $2,500+<\/strong><\/p>",
+            "text": "<ul><li><strong>CANADA20: 20% OFF Orders $2,500+<\/strong><\/li><\/ul>",
             "button_label": "",
             "button_link": ""
           }
@@ -165,7 +165,7 @@
             "image": "shopify:\/\/shop_images\/mattressville_canada15_coupon.png",
             "caption": "",
             "heading": "",
-            "text": "<p><strong>CANADA15: 15% OFF Orders $1,500 - $2,499<\/strong><\/p>",
+            "text": "<ul><li><strong>CANADA15: 15% OFF Orders $1,500 - $2,499<\/strong><\/li><\/ul>",
             "button_label": "",
             "button_link": ""
           }
@@ -176,7 +176,7 @@
             "image": "shopify:\/\/shop_images\/mattressville_canada10_coupon_f7a5e8a8-6a5f-4ad2-af8f-f1e87356f1a3.png",
             "caption": "",
             "heading": "",
-            "text": "<p><strong>CANADA10: 10% OFF Orders $500-$1,499<\/strong><\/p>",
+            "text": "<ul><li><strong>CANADA10: 10% OFF Orders $500-$1,499<\/strong><\/li><\/ul>",
             "button_label": "",
             "button_link": ""
           }
