@@ -420,7 +420,7 @@
           "type": "image",
           "settings": {
             "background_image": "shopify:\/\/shop_images\/mattressville_flash_deals_small_a42b2aa8-7487-4c2e-b3eb-6a936f200d2d.webp",
-            "link_to": "shopify:\/\/collections\/clearance"
+            "link_to": "shopify:\/\/collections\/flash-deals"
           }
         }
       },
@@ -458,7 +458,7 @@
         ".collection__description a:hover {color: #095f86;}"
       ],
       "settings": {
-        "title": "<strong>Today's Deal<\/strong>",
+        "title": "<strong>Today's Deals<\/strong>",
         "heading_size": "h1",
         "description": "<p><a href=\"\/collections\/todays-deals\" title=\"Today's Deals\">Explore more<\/a><\/p>",
         "show_description": false,

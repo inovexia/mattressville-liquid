@@ -55,6 +55,10 @@
         "mega_menu": "mega-menu",
         "mega_menu_bottom_label": "VIEW ALL MATTRESSES",
         "mega_menu_bottom_link": "",
+        "mega_menu_bottom_label2": "VIEW ALL COLLECTIONS",
+        "mega_menu_bottom_link2": "",
+        "mega_menu_bottom_label3": "VIEW ALL BRANDS",
+        "mega_menu_bottom_link3": "shopify:\/\/pages\/brands",
         "bottom_menu": "main",
         "match_maker_label": "Mattress Matchmaker",
         "match_maker_link": "\/pages\/mattress-matchmaker\/"
