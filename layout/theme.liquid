@@ -25,7 +25,11 @@
     {%- endunless -%}
 
     <title>
+      {% if template == 'list-collections' %}
+        Collections - Shop All Mattresses, Bedding & Accessories
+      {% else %}
       {{ page_title }}
+      {% endif %}
       {%- if current_tags %} | tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} | Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} | {{ shop.name }}{% endunless -%}
