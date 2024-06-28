@@ -95,6 +95,12 @@
             "image": "shopify:\/\/shop_images\/younger_generations_are_opting_for_adjustable_beds_89d00b5b-1a02-47b5-88fa-8187893398e0.webp",
             "slide_link": "shopify:\/\/blogs\/health-sleep-wellness\/why-adjustable-beds-aren-t-only-for-the-elderly"
           }
+        },
+        "slide_pbndLR": {
+          "type": "slide",
+          "settings": {
+            "slide_link": ""
+          }
         }
       },
       "block_order": [
@@ -109,7 +115,8 @@
         "slide_CKrRRg",
         "slide_mgniDF",
         "slide_yQaMJP",
-        "slide_mp4EPY"
+        "slide_mp4EPY",
+        "slide_pbndLR"
       ],
       "custom_css": [
         "slideshow-component {margin-top: 20px;}",
