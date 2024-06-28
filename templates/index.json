@@ -12,25 +12,19 @@
     "invx-slider": {
       "type": "invx-home-slider",
       "blocks": {
-        "slide_R3VJF6": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_canada_day_home_banner.png",
-            "slide_link": "https:\/\/mattressville.ca\/pages\/local-gta-flyer"
-          }
-        },
         "slide_PEgBhX": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/welcome_to_Mattressville_banner_main.webp",
             "slide_link": "\/collections\/all-mattresses"
           }
         },
-        "slide_86rVjX": {
+        "slide_R3VJF6": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/The_Best_Mattresses_of_2024-Mattressville_home.png",
-            "slide_link": "shopify:\/\/blogs\/tips\/best-mattresses-of-2023"
+            "image": "shopify:\/\/shop_images\/mattressville_canada_day_home_banner.png",
+            "slide_link": "https:\/\/mattressville.ca\/pages\/local-gta-flyer"
           }
         },
         "slide_yTF6mG": {
@@ -40,18 +34,11 @@
             "slide_link": "\/search?q=repreve&sort_by=price-ascending"
           }
         },
-        "slide_gQ3iXy": {
+        "slide_86rVjX": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Why_Tempur-Pedic_is_the_King_of_Memory_Foam_Mattresses-mattressville.jpg",
-            "slide_link": "shopify:\/\/blogs\/featured-brands\/why-tempur-pedic-is-the-king-of-memory-foam-mattresses"
-          }
-        },
-        "slide_9gwrCP": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Mattress_Shopping_Checklist_A_Mattress_Buyer_s_Musts.jpg",
-            "slide_link": "shopify:\/\/blogs\/tips\/mattress-shopping-checklist-a-mattress-buyers-musts"
+            "image": "shopify:\/\/shop_images\/The_Best_Mattresses_of_2024-Mattressville_home.png",
+            "slide_link": "shopify:\/\/blogs\/tips\/best-mattresses-of-2023"
           }
         },
         "slide_9y8Uir": {
@@ -66,6 +53,27 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Tempur-pedic_home_banner_48a81cb1-840c-4199-a41e-3d9403c99dd5.jpg",
             "slide_link": "shopify:\/\/collections\/tempur-pedic"
+          }
+        },
+        "slide_gQ3iXy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Why_Tempur-Pedic_is_the_King_of_Memory_Foam_Mattresses-mattressville.jpg",
+            "slide_link": "shopify:\/\/blogs\/featured-brands\/why-tempur-pedic-is-the-king-of-memory-foam-mattresses"
+          }
+        },
+        "slide_pbndLR": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_canada_day_blog_header.png",
+            "slide_link": "shopify:\/\/blogs\/promotions\/why-our-canada-day-mattress-sale-is-better-than-others"
+          }
+        },
+        "slide_9gwrCP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mattress_Shopping_Checklist_A_Mattress_Buyer_s_Musts.jpg",
+            "slide_link": "shopify:\/\/blogs\/tips\/mattress-shopping-checklist-a-mattress-buyers-musts"
           }
         },
         "slide_CKrRRg": {
@@ -95,28 +103,22 @@
             "image": "shopify:\/\/shop_images\/younger_generations_are_opting_for_adjustable_beds_89d00b5b-1a02-47b5-88fa-8187893398e0.webp",
             "slide_link": "shopify:\/\/blogs\/health-sleep-wellness\/why-adjustable-beds-aren-t-only-for-the-elderly"
           }
-        },
-        "slide_pbndLR": {
-          "type": "slide",
-          "settings": {
-            "slide_link": ""
-          }
         }
       },
       "block_order": [
-        "slide_R3VJF6",
         "slide_PEgBhX",
-        "slide_86rVjX",
+        "slide_R3VJF6",
         "slide_yTF6mG",
-        "slide_gQ3iXy",
-        "slide_9gwrCP",
+        "slide_86rVjX",
         "slide_9y8Uir",
         "slide_bTWUcd",
+        "slide_gQ3iXy",
+        "slide_pbndLR",
+        "slide_9gwrCP",
         "slide_CKrRRg",
         "slide_mgniDF",
         "slide_yQaMJP",
-        "slide_mp4EPY",
-        "slide_pbndLR"
+        "slide_mp4EPY"
       ],
       "custom_css": [
         "slideshow-component {margin-top: 20px;}",
