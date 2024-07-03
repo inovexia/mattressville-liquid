@@ -873,6 +873,124 @@
               "price" : {{ variant.price | divided_by: 100.00 | json }},
               "priceCurrency" : {{ cart.currency.iso_code | json }},
               "url" : {{ request.origin | append: variant.url | json }},
+              "shippingDetails": [
+                {
+                  "@type": "OfferShippingDetails",
+                  "shippingDestination": {
+                    "@type": "DefinedRegion",
+                    "addressCountry": "CA",
+                    "addressRegion": "ON"
+                  },
+                  "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "25.00",
+                    "currency": "{{ shop.currency }}"
+                  },
+                  "shippingLabel": "Deliver to bedroom",
+                  "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue":1,
+                      "maxValue":3,
+                      "unitCode":"DAY"
+                    },
+                    "transitTime": {
+                      "@type":"QuantitativeValue",
+                      "minValue":3,
+                      "maxValue":9,
+                      "unitCode": "DAY"
+                    }
+                  }
+                },
+                {
+                  "@type": "OfferShippingDetails",
+                  "shippingDestination": {
+                    "@type": "DefinedRegion",
+                    "addressCountry": "CA",
+                    "addressRegion": "ON"
+                  },
+                  "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "85.00",
+                    "currency": "{{ shop.currency }}"
+                  },
+                  "shippingLabel": "Deliver to bedroom",
+                  "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue":1,
+                      "maxValue":3,
+                      "unitCode":"DAY"
+                    },
+                    "transitTime": {
+                      "@type":"QuantitativeValue",
+                      "minValue":3,
+                      "maxValue":9,
+                      "unitCode":"DAY"
+                    }
+                  }
+                },
+                {
+                  "@type": "OfferShippingDetails",
+                  "shippingDestination": {
+                    "@type": "DefinedRegion",
+                    "addressCountry": "CA",
+                    "addressRegion": "ON"
+                  },
+                  "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "45.00",
+                    "currency": "{{ shop.currency }}"
+                  },
+                  "shippingLabel": "Delivery to bedroom + mattress disposal to curb",
+                  "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue":1,
+                      "maxValue":3,
+                      "unitCode":"DAY"
+                    },
+                    "transitTime": {
+                      "@type":"QuantitativeValue",
+                      "minValue":3,
+                      "maxValue":9,
+                      "unitCode":"DAY"
+                    }
+                  }
+                },
+                {
+                  "@type": "OfferShippingDetails",
+                  "shippingDestination": {
+                    "@type": "DefinedRegion",
+                    "addressCountry": "CA",
+                    "addressRegion": "ON"
+                  },
+                  "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "105.00",
+                    "currency": "{{ shop.currency }}"
+                  },
+                  "shippingLabel": "Delivery to bedroom + mattress disposal to curb",
+                  "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue":1,
+                      "maxValue":3,
+                      "unitCode":"DAY"
+                    },
+                    "transitTime": {
+                      "@type":"QuantitativeValue",
+                      "minValue":3,
+                      "maxValue":9,
+                      "unitCode":"DAY"
+                    }
+                  }
+                }
+              ],
               "hasMerchantReturnPolicy": {
                 "@type": "MerchantReturnPolicy",
                 "applicableCountry": "CA",
