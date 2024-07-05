@@ -3973,3 +3973,18 @@ body .home-slideshow-inner .swiper .swiper-button-prev {
   height: 30px;
   width: 30px;
 }
+
+.brands-page .multicolumn-card__image-wrapper.multicolumn-card__image-wrapper--full-width.multicolumn-card-spacing {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.brands-page .multicolumn-card__image-wrapper.multicolumn-card__image-wrapper--full-width.multicolumn-card-spacing img {
+  border-radius: 10px;
+}
+
+.brands-page .multicolumn-card__info a {
+  color: #000;
+}
