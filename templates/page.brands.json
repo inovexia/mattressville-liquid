@@ -24,7 +24,7 @@
       }
     },
     "multicolumn_TXKULc": {
-      "type": "multicolumn",
+      "type": "multicolumn-brands",
       "blocks": {
         "column_NJKdTF": {
           "type": "column",
@@ -160,7 +160,7 @@
       }
     },
     "multicolumn_8BApPV": {
-      "type": "multicolumn",
+      "type": "multicolumn-brands",
       "blocks": {
         "column_eCBJA8": {
           "type": "column",
