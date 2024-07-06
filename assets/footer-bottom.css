@@ -23,7 +23,8 @@
     margin-block: auto;
   }
   .footer-bottom .bottom-inner .logo-area .footer-logo {
-    margin-right: 30px;
+    margin-right: 0px;
+    width: 90%;
   }
   .footer-bottom .end {
     display: flex;
