@@ -96,7 +96,7 @@
   {% assign featuredBlogs = path[2] %}
 {% endif %}
 {% comment %} 
-  Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable. 
+                                                                  Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable. 
 {% endcomment %}
 {% for featuredBlog in featuredBlogs %}
   {% if blogs[featuredBlog].articles %}
@@ -105,8 +105,28 @@
     {% else %}
       {% assign featuredArticles = blogs[featuredBlog] %}
     {% endif %}
-  {% endif %}
+  {% endif %}{% endfor %}
+
+{% comment %} Pagination and concat all articles {% endcomment %}
+{% assign blog_handles = "tips,promotions,announcements,how-to-user-guide,health-sleep-wellness,featured-brands,industry-info,accessory-guide" | split: "," %}
+{% assign all_articles = "" %}
+{% for handle in blog_handles %}
+  {% assign articles = blogs[handle].articles %}
+  {% assign all_articles = all_articles | concat: articles %}
 {% endfor %}
+{% assign all_articles = all_articles | sort: 'date', 'desc' %}
+{% assign articles_per_page = 6 %}
+{% assign total_articles = all_articles.size %}
+{% assign total_pages = total_articles | divided_by: articles_per_page | ceil %}
+{% assign offsets = articles_per_page | times: current_page | minus: articles_per_page %}
+{% if current_page == 1 %}
+  {% assign paginated_articles = all_articles | slice: "1", articles_per_page %}
+{% else %}
+  {% assign paginated_articles = all_articles | slice: offsets, articles_per_page %}
+{% endif %}
+
+{% comment %} End Pagination and concat all articles {% endcomment %}
+
 
 <div class="blog-inner">
   {% if blog.title %}
@@ -141,35 +161,145 @@
   </div>
 </div>
 
-{% if featuredArticles %}
-  {%- paginate featuredArticles.articles by 6 -%}
+{% if template == "page.blog-page" %}
+
     <div class="main-blog page-width page-width-no-padding section-{{ section.id }}-padding">
-      {% comment %} 
-                        {% if blog.title != blank %} 
-                        <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"> 
-                        {{ blog.title | escape }} 
-                        </h1>
-                        {% endif %} 
-                  {% endcomment %}
       <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
-        {%- for article in featuredArticles.articles -%}
+        {%- for article in paginated_articles -%}
           <div
             class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {% if settings.animations_reveal_on_scroll %}
             data-cascade
             style="--animation-order: {{ forloop.index }};"
             {% endif %}>
-            {%- render 'article-card', article: article, media_height: section.settings.image_height, media_aspect_ratio: article.image.aspect_ratio, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: true -%}
+            {%- render 'article-card'
+              , article: article
+              , media_height: section.settings.image_height
+              , media_aspect_ratio: article.image.aspect_ratio
+              , show_image: section.settings.show_image
+              , show_date: section.settings.show_date
+              , show_author: section.settings.show_author
+              , show_excerpt: true -%}
           </div>
         {%- endfor -%}
       </div>
+      {{ 'component-pagination.css' | asset_url | stylesheet_tag }}
+      <div class="pagination-wrapper">
+          <nav class="pagination" role="navigation">
+            <ul class="pagination__list list-unstyled" role="list">
+              {% if current_page > 1 %}
+                <li>
+                  <a
+                    href="?page={{ current_page | minus: 1 }}"
+                    class="btn-navigate prev"
+                    aria-label="Prev"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
+                      <path d="M25 6.5L1 6.5M1 6.5L7 1M1 6.5L7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <span class="label">PREV</span>
+                  </a>
+                </li>
+              {%- endif -%}
 
-      {%- if paginate.pages > 1 -%}
-        {%- render 'pagination'
-          , paginate: paginate -%}
-      {%- endif -%}
+              {% assign max_pages_to_display = 5 %}
+              {% assign half_max = max_pages_to_display | divided_by: 2 %}
+              {% assign start_page = current_page | minus: half_max | ceil %}
+              {% assign end_page = current_page | plus: half_max | ceil %}
+
+              {% if start_page > 1 %}
+                {% if start_page > 2 %}
+                  <li>
+                    <span class="ellipsis">...</span>
+                  </li>
+                {% endif %}
+                <li>
+                  <a href="?page=1" class="btn-paginate" aria-label="Pagination">1</a>
+                </li>
+              {% endif %}
+
+              {% for page in (1..total_pages) %}
+                {% if page >= start_page and page <= end_page %}
+                  <li>
+                    <a
+                      href="?page={{ page }}"
+                      class="btn-paginate {% if page == current_page %}active{% endif %}"
+                      aria-label="Pagination"
+                    >
+                      {{ page }}
+                    </a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+
+              {% if end_page < total_pages %}
+                {% assign remaining_pages = total_pages | minus: end_page %}
+                {% if remaining_pages > 1 %}
+                  <li>
+                    <span class="ellipsis">...</span>
+                  </li>
+                {% endif %}
+                <li>
+                  <a href="?page={{ total_pages }}" class="btn-paginate" aria-label="Pagination">{{ total_pages }}</a>
+                </li>
+              {% endif %}
+
+              {% if current_page < total_pages %}
+                <li>
+                  <a
+                    href="?page={{ current_page | plus: 1 }}"
+                    class="btn-navigate next"
+                    aria-label="{{current_page}}"
+                  >
+                    <span class="label">NEXT</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
+                      <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </li>
+              {% endif %}
+            </ul>
+          </nav>
+        </div>
     </div>
-  {%- endpaginate -%}
+{% else %}
+  {% if featuredArticles %}
+    {%- paginate featuredArticles.articles by 6 -%}
+      <div class="main-blog page-width page-width-no-padding section-{{ section.id }}-padding">
+        {% comment %} 
+                                                                                    {% if blog.title != blank %} 
+                                                                                    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"> 
+                                                                                    {{ blog.title | escape }} 
+                                                                                    </h1>
+                                                                                    {% endif %} 
+                                                                {% endcomment %}
+        <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+          {%- for article in featuredArticles.articles -%}
+            <div
+              class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+              {% endif %}>
+              {%- render 'article-card'
+                , article: article
+                , media_height: section.settings.image_height
+                , media_aspect_ratio: article.image.aspect_ratio
+                , show_image: section.settings.show_image
+                , show_date: section.settings.show_date
+                , show_author: section.settings.show_author
+                , show_excerpt: true -%}
+            </div>
+          {%- endfor -%}
+        </div>
+
+        {%- if paginate.pages > 1 -%}
+          {%- render 'pagination'
+            , paginate: paginate -%}
+        {%- endif -%}
+      </div>
+    {%- endpaginate -%}
+  {%- endif -%}
 {%- endif -%}
 
 {% schema %}
