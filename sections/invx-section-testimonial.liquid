@@ -1,4 +1,4 @@
-{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+{{ 'swiper-bundle.minified.css' | asset_url | stylesheet_tag }}
 {{ 'invx-testimonial.css' | asset_url | stylesheet_tag }}
 
 {%- capture minify -%}
@@ -104,102 +104,102 @@
 </script>
 
 {% schema %}
-{
-  "name": "Testimonials",
-  "tag": "section",
-  "class": "testimonials",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
-  "settings": [
-    {
-      "type": "header",
-      "content": "Heading settings"
+  {
+    "name": "Testimonials",
+    "tag": "section",
+    "class": "testimonials",
+    "disabled_on": {
+      "groups": ["header", "footer"]
     },
-    {
-      "label": "Heading",
-      "type": "text",
-      "id": "heading",
-      "default": "What Our Customers Are Saying"
-    },
-    {
-      "type": "color",
-      "id": "heading_color",
-      "label": "Heading color",
-      "default": "#535353"
-    },
-    {
-      "label": "Section Background",
-      "id": "section_background_image",
-      "type": "image_picker"
-    }
-  ],
-  "blocks": [
-    {
-      "name": "Testimonial",
-      "type": "slide",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "review_image",
-          "label": "Customer image",
-          "info": "Recommended 1:1 ratio, square image"
-        },
-        {
-          "type": "select",
-          "id": "review_stars",
-          "label": "Review rating",
-          "options": [
-            {
-              "value": "5",
-              "label": "5"
-            },
-            {
-              "value": "4",
-              "label": "4"
-            },
-            {
-              "value": "3",
-              "label": "3"
-            },
-            {
-              "value": "2",
-              "label": "2"
-            },
-            {
-              "value": "1",
-              "label": "1"
-            }
-          ],
-          "default": "5"
-        },
-        {
-          "type": "text",
-          "id": "review_title",
-          "label": "Review Title"
-        },
-        {
-          "type": "text",
-          "id": "review_subtitle",
-          "label": "Review Subtitle"
-        },
-        {
-          "type": "text",
-          "id": "reviewer_name",
-          "label": "Reviewer Name"
-        },
-        {
-          "type": "richtext",
-          "id": "review_text",
-          "label": "Review Text"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Testimonials"
-    }
-  ]
-}
+    "settings": [
+      {
+        "type": "header",
+        "content": "Heading settings"
+      },
+      {
+        "label": "Heading",
+        "type": "text",
+        "id": "heading",
+        "default": "What Our Customers Are Saying"
+      },
+      {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading color",
+        "default": "#535353"
+      },
+      {
+        "label": "Section Background",
+        "id": "section_background_image",
+        "type": "image_picker"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Testimonial",
+        "type": "slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "review_image",
+            "label": "Customer image",
+            "info": "Recommended 1:1 ratio, square image"
+          },
+          {
+            "type": "select",
+            "id": "review_stars",
+            "label": "Review rating",
+            "options": [
+              {
+                "value": "5",
+                "label": "5"
+              },
+              {
+                "value": "4",
+                "label": "4"
+              },
+              {
+                "value": "3",
+                "label": "3"
+              },
+              {
+                "value": "2",
+                "label": "2"
+              },
+              {
+                "value": "1",
+                "label": "1"
+              }
+            ],
+            "default": "5"
+          },
+          {
+            "type": "text",
+            "id": "review_title",
+            "label": "Review Title"
+          },
+          {
+            "type": "text",
+            "id": "review_subtitle",
+            "label": "Review Subtitle"
+          },
+          {
+            "type": "text",
+            "id": "reviewer_name",
+            "label": "Reviewer Name"
+          },
+          {
+            "type": "richtext",
+            "id": "review_text",
+            "label": "Review Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Testimonials"
+      }
+    ]
+  }
 {% endschema %}
