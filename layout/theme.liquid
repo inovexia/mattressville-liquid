@@ -58,10 +58,11 @@
       >
     {% endif %}
 
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css"
+        media="print" onload="this.media='all'"
       >
 
     {% render 'meta-tags' %}
@@ -290,7 +291,7 @@
       }
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+    <link href="{{ 'base.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">
     {{ 'gsi.css' | asset_url | stylesheet_tag: preload: true }}
     {%- unless settings.type_body_font.system? -%}
       <link
