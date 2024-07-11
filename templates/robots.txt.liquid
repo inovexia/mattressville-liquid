@@ -5,9 +5,14 @@
 {% for group in robots.default_groups %}
   {{- group.user_agent -}}
 
-  {% for rule in group.rules %}
+  {% comment %} {% for rule in group.rules %}
     {{- rule -}}
-  {% endfor %}
+  {% endfor %} {% endcomment %}
+  {%- for rule in group.rules -%}
+    {%- unless rule.directive == 'Disallow' and rule.value == '/checkouts/' -%}
+      {{ rule }}
+    {%- endunless -%}
+  {%- endfor -%}
 
   {%- if group.sitemap != blank -%}
     {{ group.sitemap }}
