@@ -191,40 +191,6 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "newsletter_8erTqr": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_W76GnA": {
-          "type": "heading",
-          "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_7MwFhH": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Be the first to know about new our promos and exclusive offers, plus receive a coupon for 5% off your next purchase.<\/p>"
-          }
-        },
-        "email_form_rg46HQ": {
-          "type": "email_form",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "heading_W76GnA",
-        "paragraph_7MwFhH",
-        "email_form_rg46HQ"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -234,7 +200,6 @@
     "home_banner_8mg686",
     "image_with_text_EKL6in",
     "featured_collection_z77bb9",
-    "rich_text_ML8qFz",
-    "newsletter_8erTqr"
+    "rich_text_ML8qFz"
   ]
 }
