@@ -99,10 +99,17 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
+        },
+        "text_YGkzMc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get ready for two days of incredible savings during our Prime Day Mattress Sale! July 16th and 17th only, enjoy up to 40% off on select mattresses. Upgrade your sleep without breaking the bank—these exclusive deals are here for a limited time only!<\/p>"
+          }
         }
       },
       "block_order": [
-        "button_DBMjTG"
+        "button_DBMjTG",
+        "text_YGkzMc"
       ],
       "custom_css": [
         ".rich-text .rich-text__wrapper {padding: 0;}"
