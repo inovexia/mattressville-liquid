@@ -78,6 +78,9 @@
     },
     "home_banner_8mg686": {
       "type": "home-banner",
+      "custom_css": [
+        ".container {align-items: center;justify-content: center; }"
+      ],
       "settings": {
         "custom_text_title": "Prime Day 2024",
         "custom_text_body": "<p>Get ready for two days of incredible savings during our Prime Day Mattress Sale! July 16th and 17th only, enjoy up to 40% off on<br\/>select mattresses. Upgrade your sleep without breaking the bank—these exclusive deals are here for a limited time only!<\/p>"
