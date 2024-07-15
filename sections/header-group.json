@@ -15,7 +15,7 @@
       "type": "invx-announcement-bar",
       "settings": {
         "background_color": "#d7355c",
-        "announcement": "<p>Premium Mattress Sale | The Highest Rated Mattress Store | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.<\/p>",
+        "announcement": "<p><a href=\"https:\/\/mattressville.ca\/pages\/local-gta-flyer\" target=\"_blank\" title=\"prime day mattress sale flyer\">Prime Day Mattress Sale Mississauga, Toronto, GTA Jul 16-17<\/a> | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.<\/p>",
         "duration": "session"
       }
     },
