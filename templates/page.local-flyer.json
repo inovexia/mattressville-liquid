@@ -76,19 +76,22 @@
         "padding_bottom": 36
       }
     },
-    "home_banner_8mg686": {
-      "type": "home-banner",
-      "custom_css": [
-
-      ],
-      "settings": {
-        "custom_text_title": "Prime Day 2024",
-        "custom_text_body": "<p>Get ready for two days of incredible savings during our Prime Day Mattress Sale! July 16th and 17th only, enjoy up to 40% off <br\/>on select mattresses. Upgrade your sleep without breaking the bank—these exclusive deals are here for a limited time only!<\/p>"
-      }
-    },
     "rich_text_LmUW9y": {
       "type": "rich-text",
       "blocks": {
+        "heading_AUbNxt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Prime Day 2023",
+            "heading_size": "h1"
+          }
+        },
+        "text_YGkzMc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get ready for two days of incredible savings during our Prime Day Mattress Sale! July 16th and 17th only, enjoy up to 40% off on select mattresses. Upgrade your sleep without breaking the bank—these exclusive deals are here for a limited time only!<\/p>"
+          }
+        },
         "button_DBMjTG": {
           "type": "button",
           "settings": {
@@ -99,17 +102,12 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
-        },
-        "text_YGkzMc": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Get ready for two days of incredible savings during our Prime Day Mattress Sale! July 16th and 17th only, enjoy up to 40% off on select mattresses. Upgrade your sleep without breaking the bank—these exclusive deals are here for a limited time only!<\/p>"
-          }
         }
       },
       "block_order": [
-        "button_DBMjTG",
-        "text_YGkzMc"
+        "heading_AUbNxt",
+        "text_YGkzMc",
+        "button_DBMjTG"
       ],
       "custom_css": [
         ".rich-text .rich-text__wrapper {padding: 0;}"
@@ -206,7 +204,6 @@
   "order": [
     "main",
     "multicolumn_CrLKdg",
-    "home_banner_8mg686",
     "rich_text_LmUW9y",
     "image_with_text_EKL6in",
     "featured_collection_z77bb9",
