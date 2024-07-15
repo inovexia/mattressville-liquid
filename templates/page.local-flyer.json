@@ -76,15 +76,22 @@
         "padding_bottom": 36
       }
     },
+    "home_banner_8mg686": {
+      "type": "home-banner",
+      "settings": {
+        "custom_text_title": "Prime Day 2024",
+        "custom_text_body": "<p>Get ready for two days of incredible savings during our Prime Day Mattress Sale! On July 16th and 17th only, enjoy up to 40% off on select mattresses. Upgrade your sleep without breaking the bank—these exclusive deals are here for a limited time only!<\/p>"
+      }
+    },
     "rich_text_LmUW9y": {
       "type": "rich-text",
       "blocks": {
         "button_DBMjTG": {
           "type": "button",
           "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/prime-day-mattress-sale",
+            "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -104,13 +111,6 @@
         "full_width": true,
         "padding_top": 12,
         "padding_bottom": 20
-      }
-    },
-    "home_banner_8mg686": {
-      "type": "home-banner",
-      "settings": {
-        "custom_text_title": "Prime Day 2024",
-        "custom_text_body": "<p>Get ready for two days of incredible savings during our Prime Day Mattress Sale! On July 16th and 17th only, enjoy up to 40% off on select mattresses. Upgrade your sleep without breaking the bank—these exclusive deals are here for a limited time only!<\/p>"
       }
     },
     "image_with_text_EKL6in": {
@@ -196,8 +196,8 @@
   "order": [
     "main",
     "multicolumn_CrLKdg",
-    "rich_text_LmUW9y",
     "home_banner_8mg686",
+    "rich_text_LmUW9y",
     "image_with_text_EKL6in",
     "featured_collection_z77bb9",
     "rich_text_ML8qFz"
