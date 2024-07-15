@@ -122,7 +122,7 @@
         ".global-media-settings {border: none !important;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
+        "image": "shopify:\/\/shop_images\/Prime_Day_Mattress_SALE_Flyer.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -140,12 +140,12 @@
     "featured_collection_z77bb9": {
       "type": "featured-collection",
       "settings": {
-        "title": "Todays Deals",
+        "title": "Prime Day Sale",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "todays-deals",
+        "collection": "prime-day-mattress-sale",
         "products_to_show": 9,
         "columns_desktop": 1,
         "full_width": true,
@@ -172,7 +172,7 @@
           "type": "button",
           "settings": {
             "button_label": "VIEW ALL",
-            "button_link": "shopify:\/\/collections\/todays-deals",
+            "button_link": "shopify:\/\/collections\/prime-day-mattress-sale",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
