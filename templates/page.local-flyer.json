@@ -110,7 +110,8 @@
         "button_DBMjTG"
       ],
       "custom_css": [
-        ".rich-text .rich-text__wrapper {padding: 0;}"
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button.button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -155,7 +156,7 @@
         "description_style": "body",
         "collection": "prime-day-mattress-sale",
         "products_to_show": 4,
-        "columns_desktop": 1,
+        "columns_desktop": 3,
         "full_width": true,
         "show_view_all": true,
         "view_all_style": "outline",
