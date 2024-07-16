@@ -148,7 +148,6 @@
     },
     "featured_collection_z77bb9": {
       "type": "featured-collection",
-      "disabled": true,
       "custom_css": [
         ".collection .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
       ],
