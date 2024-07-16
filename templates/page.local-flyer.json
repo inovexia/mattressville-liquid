@@ -160,7 +160,7 @@
         "collection": "prime-day-mattress-sale",
         "products_to_show": 3,
         "columns_desktop": 2,
-        "full_width": false,
+        "full_width": true,
         "show_view_all": true,
         "view_all_style": "outline",
         "enable_desktop_slider": true,
