@@ -110,8 +110,7 @@
         "button_DBMjTG"
       ],
       "custom_css": [
-        ".rich-text .rich-text__wrapper {padding: 0;}",
-        ".rich-text__blocks .button.button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+        ".rich-text .rich-text__wrapper {padding: 0;}"
       ],
       "settings": {
         "desktop_content_position": "center",
