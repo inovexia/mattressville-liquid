@@ -331,6 +331,7 @@
       }
     </script>
     {% render 'gp-head' %}
+    <!-- Product Schema -->
     {% if template == 'product' %}
    <script type="application/ld+json">
 {
@@ -340,7 +341,7 @@
   "image": [
     "{{ product.featured_image | product_img_url: 'large' }}"
   ],
-  "description": "{{ product.description | escape }}",
+  "description": {{ product.description | strip_html | json }},
   "sku": "{{ product.variants.first.sku }}",
   "mpn": "{{ product.variants.first.barcode }}",
   "brand": {
@@ -375,7 +376,7 @@
     "url": "{{ shop.url }}{{ product.url }}",
     "priceCurrency": "{{ shop.currency }}",
     "price": "{{ product.price | money_without_currency | replace: ',', '' }}",
-    "priceValidUntil": "2024-12-31T00:00:00+00:00",
+    "priceValidUntil": "2024-12-31",
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
     "shippingDetails": [

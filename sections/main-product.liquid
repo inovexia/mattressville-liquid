@@ -866,12 +866,10 @@
           {%- for variant in product.variants -%}
             {
               "@type" : "Offer",
-              {%- if variant.sku != blank -%}
-                "sku": {{ variant.sku | json }},
-              {%- endif -%}
+              "sku":"",
               "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
               "price" : {{ variant.price | divided_by: 100.00 | json }},
-              "priceValidUntil": "2024-12-31T00:00:00+00:00",
+              "priceValidUntil": "2024-12-31",
               "priceCurrency" : {{ cart.currency.iso_code | json }},
               "url" : {{ request.origin | append: variant.url | json }},
               "shippingDetails": [
