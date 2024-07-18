@@ -338,7 +338,6 @@
   "@context": "https://schema.org/",
   "@type": "Product",
   "name": "{{ product.title | replace: '"', '' }}",
-  "url": {{ shop.url }}{{product.url}},
   "image": [
     "{{ product.featured_image | product_img_url: 'large' }}"
   ],
