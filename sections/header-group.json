@@ -15,7 +15,7 @@
       "type": "invx-announcement-bar",
       "settings": {
         "background_color": "#d7355c",
-        "announcement": "<p><a href=\"https:\/\/mattressville.ca\/pages\/local-gta-flyer\" target=\"_blank\" title=\"prime day mattress sale flyer\">Prime Day Mattress Sale<\/a> Mississauga, Toronto, GTA, Jul 16- Extended to 19th | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.<\/p>",
+        "announcement": "<p><a href=\"https:\/\/mattressville.ca\/pages\/local-gta-flyer\" target=\"_blank\" title=\"prime day mattress sale flyer\">Prime Day Mattress Sale<\/a> Mississauga, Toronto, GTA, Jul 16- Extended until 19th | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.<\/p>",
         "duration": "session"
       }
     },
