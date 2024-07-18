@@ -29,6 +29,7 @@
         },
         "slide_yTF6mG": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville_sealy_repreve_banner_2024.jpg",
             "slide_link": "\/search?q=repreve&sort_by=price-ascending"
@@ -57,6 +58,7 @@
         },
         "slide_cpmGbX": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Prime_Day_Mattress_sale_home.png",
             "slide_link": "https:\/\/mattressville.ca\/pages\/local-gta-flyer"
@@ -93,6 +95,7 @@
         },
         "slide_LJPiPU": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Prime_Day_Mattress_sale_home.png",
             "slide_link": "https:\/\/mattressville.ca\/pages\/local-gta-flyer"
