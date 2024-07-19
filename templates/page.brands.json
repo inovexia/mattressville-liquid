@@ -99,11 +99,11 @@
         "column_TFALTp": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_galaxy_brand_mattresses.jpg",
+            "image": "shopify:\/\/shop_images\/mattresses_under_50.jpg",
             "title": "",
             "text": "",
-            "link_label": "Galaxy Bedding",
-            "link": "shopify:\/\/collections\/galaxy-bedding"
+            "link_label": "Marshall Mattresses",
+            "link": "shopify:\/\/collections\/marshall-mattresses"
           }
         },
         "column_dr3VR4": {
