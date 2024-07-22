@@ -26,6 +26,8 @@
           {% assign vendorImage = 'sf.jpg' | asset_img_url: 'master' %}
         {% when 'Tempur-Pedic' %}
           {% assign vendorImage = 'tempur.jpg' | asset_img_url: 'master' %}
+        {% when 'Marshall' %}
+          {% assign vendorImage = 'marshall-mattress.jpg' | asset_img_url: 'master' %}
       {% endcase %}
 
 {{ 'product-content.css' | asset_url | stylesheet_tag }}
