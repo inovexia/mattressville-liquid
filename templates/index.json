@@ -12,14 +12,6 @@
     "invx-slider": {
       "type": "invx-home-slider",
       "blocks": {
-        "slide_rrXMWR": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Prime_Day_Mattress_sale_home_d9b4dedd-d12f-4b2c-9e99-2960f214c217.png",
-            "slide_link": "https:\/\/mattressville.ca\/pages\/local-gta-flyer"
-          }
-        },
         "slide_PEgBhX": {
           "type": "slide",
           "settings": {
@@ -27,19 +19,11 @@
             "slide_link": "\/collections\/all-mattresses"
           }
         },
-        "slide_yTF6mG": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_sealy_repreve_banner_2024.jpg",
-            "slide_link": "\/search?q=repreve&sort_by=price-ascending"
-          }
-        },
-        "slide_86rVjX": {
+        "slide_yQaMJP": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/The_Best_Mattresses_of_2024-Mattressville_home.png",
-            "slide_link": "shopify:\/\/blogs\/tips\/best-mattresses-of-2023"
+            "image": "shopify:\/\/shop_images\/mattressville_kingsdown_coolwave_banner.jpg",
+            "slide_link": "shopify:\/\/products\/kingsdown-cool-wave-tight-top-mattress"
           }
         },
         "slide_9y8Uir": {
@@ -49,6 +33,13 @@
             "slide_link": "shopify:\/\/collections\/stearns-and-foster"
           }
         },
+        "slide_k4wTAU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Marshall_mattresses_home.png",
+            "slide_link": "shopify:\/\/collections\/marshall-mattresses"
+          }
+        },
         "slide_bTWUcd": {
           "type": "slide",
           "settings": {
@@ -56,12 +47,25 @@
             "slide_link": "shopify:\/\/collections\/tempur-pedic"
           }
         },
-        "slide_cpmGbX": {
+        "slide_mgniDF": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Prime_Day_Mattress_sale_home.png",
-            "slide_link": "https:\/\/mattressville.ca\/pages\/local-gta-flyer"
+            "image": "shopify:\/\/shop_images\/mattressville_natura_banner_rev_2024_ddd17fac-ab54-4ae3-acc0-7c8dd0ed254c.jpg",
+            "slide_link": "shopify:\/\/collections\/natura"
+          }
+        },
+        "slide_86rVjX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/The_Best_Mattresses_of_2024-Mattressville_home.png",
+            "slide_link": "shopify:\/\/blogs\/tips\/best-mattresses-of-2023"
+          }
+        },
+        "slide_9gwrCP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mattress_Shopping_Checklist_A_Mattress_Buyer_s_Musts.jpg",
+            "slide_link": "shopify:\/\/blogs\/tips\/mattress-shopping-checklist-a-mattress-buyers-musts"
           }
         },
         "slide_gQ3iXy": {
@@ -69,6 +73,20 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Why_Tempur-Pedic_is_the_King_of_Memory_Foam_Mattresses-mattressville.jpg",
             "slide_link": "shopify:\/\/blogs\/featured-brands\/why-tempur-pedic-is-the-king-of-memory-foam-mattresses"
+          }
+        },
+        "slide_CKrRRg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
+            "slide_link": "shopify:\/\/blogs\/tips\/10-reasons-to-gift-a-mattress"
+          }
+        },
+        "slide_mp4EPY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/younger_generations_are_opting_for_adjustable_beds_89d00b5b-1a02-47b5-88fa-8187893398e0.webp",
+            "slide_link": "shopify:\/\/blogs\/health-sleep-wellness\/why-adjustable-beds-aren-t-only-for-the-elderly"
           }
         },
         "slide_pbndLR": {
@@ -79,66 +97,29 @@
             "slide_link": "shopify:\/\/blogs\/promotions\/why-our-canada-day-mattress-sale-is-better-than-others"
           }
         },
-        "slide_9gwrCP": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Mattress_Shopping_Checklist_A_Mattress_Buyer_s_Musts.jpg",
-            "slide_link": "shopify:\/\/blogs\/tips\/mattress-shopping-checklist-a-mattress-buyers-musts"
-          }
-        },
-        "slide_CKrRRg": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
-            "slide_link": "shopify:\/\/blogs\/tips\/10-reasons-to-gift-a-mattress"
-          }
-        },
-        "slide_LJPiPU": {
+        "slide_yTF6mG": {
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Prime_Day_Mattress_sale_home.png",
-            "slide_link": "https:\/\/mattressville.ca\/pages\/local-gta-flyer"
-          }
-        },
-        "slide_mgniDF": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_natura_banner_rev_2024_ddd17fac-ab54-4ae3-acc0-7c8dd0ed254c.jpg",
-            "slide_link": "shopify:\/\/collections\/natura"
-          }
-        },
-        "slide_yQaMJP": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_kingsdown_coolwave_banner.jpg",
-            "slide_link": "shopify:\/\/products\/kingsdown-cool-wave-tight-top-mattress"
-          }
-        },
-        "slide_mp4EPY": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/younger_generations_are_opting_for_adjustable_beds_89d00b5b-1a02-47b5-88fa-8187893398e0.webp",
-            "slide_link": "shopify:\/\/blogs\/health-sleep-wellness\/why-adjustable-beds-aren-t-only-for-the-elderly"
+            "image": "shopify:\/\/shop_images\/mattressville_sealy_repreve_banner_2024.jpg",
+            "slide_link": "\/search?q=repreve&sort_by=price-ascending"
           }
         }
       },
       "block_order": [
-        "slide_rrXMWR",
         "slide_PEgBhX",
-        "slide_yTF6mG",
-        "slide_86rVjX",
-        "slide_9y8Uir",
-        "slide_bTWUcd",
-        "slide_cpmGbX",
-        "slide_gQ3iXy",
-        "slide_pbndLR",
-        "slide_9gwrCP",
-        "slide_CKrRRg",
-        "slide_LJPiPU",
-        "slide_mgniDF",
         "slide_yQaMJP",
-        "slide_mp4EPY"
+        "slide_9y8Uir",
+        "slide_k4wTAU",
+        "slide_bTWUcd",
+        "slide_mgniDF",
+        "slide_86rVjX",
+        "slide_9gwrCP",
+        "slide_gQ3iXy",
+        "slide_CKrRRg",
+        "slide_mp4EPY",
+        "slide_pbndLR",
+        "slide_yTF6mG"
       ],
       "custom_css": [
         "slideshow-component {margin-top: 20px;}",
