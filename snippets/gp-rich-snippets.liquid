@@ -24,8 +24,8 @@
                   {%- assign array_builder="" -%}
                   {%- for review_data_item in product_review_array -%}
                     {%- assign review_data1=review_data|split:review_data_item -%}
-                    {%- assign review_data2=review_data1[1]|split:"=" -%} {%- assign review_data3=review_data2[1]|split:"'" -%} {%- assign review_data_value=review_data3[1]|plus:1|minus:1 -%}
-                    {%- assign array_builder=array_builder|append:review_data_value|append:'_' -%}
+                    {%- assign review_data2=review_data1[1]|split:"=" -%}
+                    {%- assign review_data3=review_data2[1]|split:"'" -%} {%- assign review_data_value=review_data3[1]|plus:1|minus:1 -%} {%- assign array_builder=array_builder|append:review_data_value|append:'_' -%}
                     {%- endfor -%}
 
                     {%- assign review_data_array=array_builder|split:'_' -%}
@@ -78,31 +78,7 @@
                                       {% endcase %}
                                       {% endif %}
                                       {%- assign cv_schema = product.selected_or_first_available_variant -%}
-                                      {
-                                          "@context": "http://schema.org/",
-                                          "@type": "Product",
 
-                                          {%- if GEMPAGES and GEMPAGES['currentReviews'] and g_review_count != 0 -%}
-                                          "aggregateRating" : {
-                                            "@type": "AggregateRating",
-                                            "ratingValue": "{{ g_rating_value }}",
-                                            "reviewCount": "{{ g_review_count }}"
-                                          },
-                                          {%- endif -%}
-                                          "name": {{ product.title|json }},
-                                          "url": {{ shop.url|append:product.url|json }},
-                                          {%- if product.featured_image -%}
-                                            {%- assign image_size=product.featured_image.width|append:'x' -%} "image" : [{{ product.featured_image.src|img_url:image_size|prepend:"https:"|json }}],
-                                            {%- endif -%}
-                                            "description": {{ product.description|strip_html|json }},
-                                            {%- if cv_schema.sku!=blank -%}
-                                              "sku": {{ cv_schema.sku|json }},
-                                              {%- endif -%}
-                                              "brand": {
-                                                "@type": "Brand",
-                                                "name": {{ product.vendor|json }}
-                                              }
-                                            }
       </script>
     {% when "index" %}
     {% when "collection" %}
