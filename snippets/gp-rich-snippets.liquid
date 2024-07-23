@@ -6,7 +6,7 @@
   {% case request.page_type %}
     {% when "page" %}
     {% when "product" %}
-      <script type="application/ld+json">
+      {% comment %} <script type="application/ld+json">
         {% if GEMPAGES and GEMPAGES['currentReviews'] %}
           {%- assign g_review_count = 0 -%}
           {%- assign g_rating_value = 0 -%}
@@ -103,7 +103,7 @@
                                                 "name": {{ product.vendor|json }}
                                               }
                                             }
-      </script>
+      </script> {% endcomment %}
     {% when "index" %}
     {% when "collection" %}
     {% when "article" %}
