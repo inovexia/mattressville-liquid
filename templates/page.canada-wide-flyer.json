@@ -119,7 +119,7 @@
         "description_style": "body",
         "collection": "mattress-in-a-box",
         "products_to_show": 7,
-        "columns_desktop": 4,
+        "columns_desktop": 2,
         "full_width": true,
         "show_view_all": true,
         "view_all_style": "link",
