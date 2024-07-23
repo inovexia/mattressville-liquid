@@ -843,16 +843,13 @@
       endif
     -%}
     <script type="application/ld+json">
+
     {
       "@context": "http://schema.org",
       "@type": "Product",
       "name": "{{ product.title }}",
       "image": "{{ product.featured_image | img_url: 'master' }}",
       "description": {{ product.description | strip_html | json }},
-    }
-    </script>
-    <script type="application/ld+json">
-    {
       "offers": {
         "@type": "Offer",
         "shippingDetails": {
