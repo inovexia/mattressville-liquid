@@ -842,47 +842,6 @@
         assign seo_media = product.featured_media
       endif
     -%}
-    <script type="application/ld+json">
-
-    {
-      "@context": "http://schema.org",
-      "@type": "Product",
-      "name": "{{ product.title }}",
-      "image": "{{ product.featured_image | img_url: 'master' }}",
-      "description": {{ product.description | strip_html | json }},
-      "offers": {
-        "@type": "Offer",
-        "shippingDetails": {
-          "@type": "OfferShippingDetails",
-          "shippingRate": {
-            "@type": "MonetaryAmount",
-            "value": 3.49,
-            "currency": "USD"
-          },
-          "shippingDestination": {
-            "@type": "DefinedRegion",
-            "addressCountry": "US"
-          },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 0,
-              "maxValue": 1,
-              "unitCode": "DAY"
-            },
-            "transitTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 1,
-              "maxValue": 5,
-              "unitCode": "DAY"
-            }
-          }
-    }
-    }
-    }
-          </script>
-
 
     {% comment %} <script type="application/ld+json">
       {
