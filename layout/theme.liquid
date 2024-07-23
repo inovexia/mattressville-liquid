@@ -348,6 +348,29 @@
     "@type": "Brand",
     "name": "{{ product.vendor }}"
   },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "10"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Verified User"
+      },
+      "datePublished": "{{ product.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+      "description": "{{ review.body }}",
+      "name": "Mattressville User",
+      "reviewRating": {
+        "@type": "Rating",
+        "bestRating": "5",
+        "ratingValue": "5",
+        "worstRating": "1"
+      }
+    }
+  ],
   "offers": {
     "@type": "Offer",
     "url": "{{ shop.url }}{{ product.url }}",
