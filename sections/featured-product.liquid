@@ -614,7 +614,7 @@
   endif
 -%}
 
-<script type="application/ld+json">
+{% comment %} <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
     "@type": "Product",
@@ -634,7 +634,7 @@
       "name": {{ product.vendor | json }}
     }
   }
-</script>
+</script> {% endcomment %}
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
