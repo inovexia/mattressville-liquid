@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "layout": "theme-sidebar",
   "sections": {
@@ -73,32 +82,20 @@
         "heading_FtdFKK": {
           "type": "heading",
           "settings": {
-            "heading": "Canada Wide Flyer",
+            "heading": "Canada Flyer",
             "heading_size": "h1"
           }
         },
         "text_jVUamn": {
           "type": "text",
           "settings": {
-            "text": "<p>There is currently no local promotion available. Check back soon.<\/p>"
-          }
-        },
-        "button_jxFTbn": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<p>Find your dream mattress at Mattressville! We offer a wide selection of premium mattresses   in stock and ready to be shipped  Canada wide. Save up to 40% on premium mattress brands! Click below to see all products available Canada wide.<\/p>"
           }
         }
       },
       "block_order": [
         "heading_FtdFKK",
-        "text_jVUamn",
-        "button_jxFTbn"
+        "text_jVUamn"
       ],
       "custom_css": [
         ".rich-text .rich-text__wrapper {padding: 0;}"
@@ -106,10 +103,38 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 12,
         "padding_bottom": 20
+      }
+    },
+    "featured_collection_3LjbzR": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Mattress in a Box",
+        "heading_size": "h1",
+        "description": "<p>These products are in stock and ready to be shipped across Canada<\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "mattress-in-a-box",
+        "products_to_show": 5,
+        "columns_desktop": 2,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_with_text_EKL6in": {
@@ -139,6 +164,7 @@
     "main",
     "multicolumn_q4qrrc",
     "rich_text_aNKbf9",
+    "featured_collection_3LjbzR",
     "image_with_text_EKL6in"
   ]
 }
