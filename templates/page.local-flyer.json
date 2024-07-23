@@ -82,21 +82,21 @@
         "heading_AUbNxt": {
           "type": "heading",
           "settings": {
-            "heading": "Prime Day 2024",
+            "heading": "Local GTA Flyer",
             "heading_size": "h1"
           }
         },
         "text_YGkzMc": {
           "type": "text",
           "settings": {
-            "text": "<p>Get ready for two days of incredible savings during our Prime Day Mattress Sale! July 16th and 17th only, enjoy up to 40% off on select mattresses. Upgrade your sleep without breaking the bank—these exclusive deals are here for a limited time only!<\/p><p>All <em>sale item prices<\/em> are already adjusted, just shop and add to cart.<\/p>"
+            "text": "<p>Discover your dream mattress at Mattressville! We offer a wide selection of all types of mattresses, including innerspring, memory foam, hybrid, and latex. Find the perfect comfort level and support for your needs, all at competitive prices. Save up to 40% on premium mattress brands!<\/p>"
           }
         },
         "button_DBMjTG": {
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/prime-day-mattress-sale",
+            "button_link": "shopify:\/\/collections\/all-mattresses",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -131,7 +131,7 @@
         ".global-media-settings {border: none !important;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Prime_Day_Mattress_SALE_Flyer.png",
+        "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -144,37 +144,6 @@
         "mobile_content_alignment": "center",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "featured_collection_z77bb9": {
-      "type": "featured-collection",
-      "custom_css": [
-        ".collection .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
-      ],
-      "settings": {
-        "title": "Prime Day Sale",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "prime-day-mattress-sale",
-        "products_to_show": 6,
-        "columns_desktop": 3,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_style": "link",
-        "enable_desktop_slider": true,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": true,
-        "show_rating": true,
-        "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 72,
-        "padding_bottom": 4
       }
     },
     "rich_text_ML8qFz": {
@@ -194,7 +163,6 @@
     "multicolumn_CrLKdg",
     "rich_text_LmUW9y",
     "image_with_text_EKL6in",
-    "featured_collection_z77bb9",
     "rich_text_ML8qFz"
   ]
 }
