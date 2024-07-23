@@ -6,7 +6,7 @@
   {% case request.page_type %}
     {% when "page" %}
     {% when "product" %}
-      {% comment %} <script type="application/ld+json">
+      <script type="application/ld+json">
         {% if GEMPAGES and GEMPAGES['currentReviews'] %}
           {%- assign g_review_count = 0 -%}
           {%- assign g_rating_value = 0 -%}
@@ -25,7 +25,8 @@
                   {%- for review_data_item in product_review_array -%}
                     {%- assign review_data1=review_data|split:review_data_item -%}
                     {%- assign review_data2=review_data1[1]|split:"=" -%}
-                    {%- assign review_data3=review_data2[1]|split:"'" -%} {%- assign review_data_value=review_data3[1]|plus:1|minus:1 -%} {%- assign array_builder=array_builder|append:review_data_value|append:'_' -%}
+                    {%- assign review_data3=review_data2[1]|split:"'" -%}
+                    {%- assign review_data_value=review_data3[1]|plus:1|minus:1 -%} {%- assign array_builder=array_builder|append:review_data_value|append:'_' -%}
                     {%- endfor -%}
 
                     {%- assign review_data_array=array_builder|split:'_' -%}
@@ -103,7 +104,7 @@
                                                 "name": {{ product.vendor|json }}
                                               }
                                             }
-      </script> {% endcomment %}
+      </script>
     {% when "index" %}
     {% when "collection" %}
     {% when "article" %}
