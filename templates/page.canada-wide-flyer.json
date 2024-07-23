@@ -91,14 +91,27 @@
           "settings": {
             "text": "<p>Find your dream mattress at Mattressville! We offer a wide selection of premium mattresses   in stock and ready to be shipped  Canada wide. Save up to 40% on premium mattress brands! Click below to see all products available Canada wide.<\/p>"
           }
+        },
+        "button_eWqY3T": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/mattress-in-a-box",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
         }
       },
       "block_order": [
         "heading_FtdFKK",
-        "text_jVUamn"
+        "text_jVUamn",
+        "button_eWqY3T"
       ],
       "custom_css": [
-        ".rich-text .rich-text__wrapper {padding: 0;}"
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -118,7 +131,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "mattress-in-a-box",
-        "products_to_show": 8,
+        "products_to_show": 6,
         "columns_desktop": 2,
         "full_width": true,
         "show_view_all": true,
@@ -128,11 +141,11 @@
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
-        "show_vendor": false,
+        "show_vendor": true,
         "show_rating": false,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
