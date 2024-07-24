@@ -49,7 +49,7 @@
               {% endif %}
             >
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-              <a href="{{ article.url }}">
+              <a href="{{ article.url }}" aria-label="{{ article.title }}">
                 <img
                   srcset="
                     {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
@@ -75,10 +75,10 @@
             </div>
           </div>
         {%- endif -%}
-        <a href="{{ article.url }}" class="card__content">
+        <a href="{{ article.url }}" class="card__content" aria-label="Read More">
           <div class="card__information">
             <h3 class="card_heading{% if show_excerpt %} h2{% endif %}">
-              <a href="{{ article.url }}" class="full-unstyled-link">
+              <a href="{{ article.url }}" class="full-unstyled-link" aria-label="Read More">
                 {{ article.title | truncate: 50 | escape }}
               </a>
             </h3>
@@ -116,7 +116,7 @@
       </div>
       <div class="card__information">
         <h3 class="card_heading{% if show_excerpt %} h2{% endif %}">
-          <a href="{{ article.url }}" class="full-unstyled-link">
+          <a href="{{ article.url }}" class="full-unstyled-link" aria-label="{{ article.title }}">
             {{ article.title | truncate: 50 | escape }}
           </a>
         </h3>
@@ -146,7 +146,7 @@
         {%- endif -%}
       </div>
       <div class="social-media-icon">
-        <a class="btn-read-more" href="{{ article.url }}">
+        <a class="btn-read-more" href="{{ article.url }}" aria-label="Read More">
           <span class="btn-label">READ MORE</span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
             <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
