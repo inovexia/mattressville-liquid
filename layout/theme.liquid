@@ -350,8 +350,8 @@
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "10"
+    "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}0{% endif %}",
+    "reviewCount": "{% if product.metafields.yotpo.reviews_count > "0" %}{{ product.metafields.yotpo.reviews_count }}{% else %}0{% endif %}"
   },
   "review": [
     {
@@ -365,9 +365,9 @@
       "name": "Mattressville User",
       "reviewRating": {
         "@type": "Rating",
-        "bestRating": "5",
-        "ratingValue": "5",
-        "worstRating": "1"
+        "bestRating": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}0{% endif %}",
+        "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}0{% endif %}",
+        "worstRating": "{% if product.metafields.yotpo.reviews_average > "0" %}1{% else %}0{% endif %}"
       }
     }
   ],
