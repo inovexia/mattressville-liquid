@@ -5,6 +5,7 @@
         {
           "id": {{ item.id | json }},
           "tags": {{ item.tags | json }},
+          "title": {{ item.title | json}},
           "handle":{{ item.handle | json }},
           "available":{{ item.available | json }},
           "inventory":{{ item.first_available_variant.inventory_quantity | json }},
