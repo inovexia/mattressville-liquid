@@ -1,29 +1,37 @@
-{% assign featuredBlogs = 'tips' %}
-
-{% assign featuredArticles = false %}
+{% assign featuredBlogs = 'tips,promotions,announcements,how-to-user-guide,health-sleep-wellness,featured-brands,industry-info,accessory-guide' %}{% assign featuredArticles = false %}
 
 {% comment %} 
-    Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable. 
+                        Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable. 
+  
+  {% for featuredBlog in featuredBlogs %}
+    {% if blogs[featuredBlog].articles %}
+      {% if featuredArticles %}
+        {% assign featuredArticles = featuredArticles | concat: blogs[featuredBlog].articles %}
+      {% else %}
+        {% assign featuredArticles = blogs[featuredBlog].articles %}
+      {% endif %}
+    {% endif %}{% endfor %}
+  {% endcomment %}
+
+{% comment %} 
+                        If featuredArticles is not false we should have articles to show 
 {% endcomment %}
-{% for featuredBlog in featuredBlogs %}
-  {% if blogs[featuredBlog].articles %}
-    {% if featuredArticles %}
-      {% assign featuredArticles = featuredArticles | concat: blogs[featuredBlog].articles %}
-    {% else %}
-      {% assign featuredArticles = blogs[featuredBlog].articles %}
-    {% endif %}
-  {% endif %}
+
+{% comment %} Latest Blogs {% endcomment %}
+{% comment %} Pagination and concat all articles {% endcomment %}
+{% assign blog_handles = "tips,promotions,announcements,how-to-user-guide,health-sleep-wellness,featured-brands,industry-info,accessory-guide" | split: "," %}
+{% assign all_articles = "" %}
+{% for handle in blog_handles %}
+  {% assign articles = blogs[handle].articles %}
+  {% assign all_articles = all_articles | concat: articles %}
 {% endfor %}
+{% assign all_articles = all_articles | sort: 'published_at' | reverse %}
 
-{% comment %} 
-    If featuredArticles is not false we should have articles to show 
-{% endcomment %}
-{% if featuredArticles %}
-  {% assign featuredArticles = featuredArticles | sort: 'published_at' | reverse %}
+{% if all_articles %}
 
   <ul class="invx_sidebar_menu_ul recent-blogs">
-    {% for article in featuredArticles limit: 5 %}
-      <li class="invx_sidebar_menu_li">
+    {% for article in all_articles limit: 6 %}
+      <li class="invx_sidebar_menu_li latest-article-{{ forloop.index }}">
         <a href="{{ article.url }}">
           {% if article.image %}
             <img

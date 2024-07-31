@@ -114,7 +114,7 @@
   {% assign articles = blogs[handle].articles %}
   {% assign all_articles = all_articles | concat: articles %}
 {% endfor %}
-{% assign all_articles = all_articles | sort: 'date', 'desc' %}
+{% assign all_articles = all_articles | sort: 'published_at' | reverse %}
 {% assign articles_per_page = 6 %}
 {% assign total_articles = all_articles.size %}
 {% assign total_pages = total_articles | divided_by: articles_per_page | ceil %}

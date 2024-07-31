@@ -3988,3 +3988,7 @@ body .home-slideshow-inner .swiper .swiper-button-prev {
 .brands-page .multicolumn-card__info a {
   color: #000;
 }
+
+.recent-blogs .latest-article-1 {
+  display: none;
+}
