@@ -3992,3 +3992,21 @@ body .home-slideshow-inner .swiper .swiper-button-prev {
 .recent-blogs .latest-article-1 {
   display: none;
 }
+
+
+header #invx-announcement-bar #invx-announcement-bar-dismiss {
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+header #invx-announcement-bar p {
+  padding: 5px 0px;
+  margin: 0px;
+}
+
+header #invx-announcement-bar p,
+header #invx-announcement-bar a {
+  color: #fff;
+}
