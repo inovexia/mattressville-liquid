@@ -49,10 +49,8 @@
               name="q"
               value="{{ search.terms | escape }}"
               placeholder="{{ 'general.search.search' | t }}" 
-              
-              {%- if settings.predictive_search_enabled -%} 
 
-                aria-owns="predictive-search-results"
+              {%- if settings.predictive_search_enabled -%}  aria-owns="predictive-search-results"  
                 aria-controls="predictive-search-results"
                 aria-haspopup="listbox"
                 aria-autocomplete="list"
