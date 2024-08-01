@@ -31,7 +31,7 @@
           {%- for item in section.settings.footer_menu.links -%}
             <a
               class="menu-link"
-              area-label="{{ item.title | escape }}"
+              title="{{ item.title | escape }}"
               href="{{ item.url }}">
               {{- item.title | escape -}}
             </a>
