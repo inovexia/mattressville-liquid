@@ -1,15 +1,15 @@
 {%- comment -%} 
-  { 
-  "name": "Gallery 01", 
-  "author": "PusherCommerce" 
-  "description": "Please DO NOT copy in any form. Any act of copying will be sued and held responsible with the law" 
-  "Semiwrite": "Yes",
-  } 
+    { 
+    "name": "Gallery 01", 
+    "author": "PusherCommerce" 
+    "description": "Please DO NOT copy in any form. Any act of copying will be sued and held responsible with the law" 
+    "Semiwrite": "Yes",
+    } 
 {%- endcomment -%}
 
 {% comment %} 
-  Custom padding for keep layout mobile.
-  Note that: 12 + 3 = 15 ( 15 is orignal padding of Bootstrap) 
+    Custom padding for keep layout mobile.
+    Note that: 12 + 3 = 15 ( 15 is orignal padding of Bootstrap) 
 {% endcomment %}
 
 {% comment %} For desktop  {% endcomment %}
@@ -160,12 +160,12 @@
                 {% capture filename %}{{ image_url_parts | last | split: "." | first }}{% endcapture %}
                 {% assign alt_text = filename | replace: "_", " " | replace: "-", " " | capitalize %}
                 <{{ wrapper }}
-                                aria-label="{{ alt_text }}"
-                                  class="psb-img-wrapper"
-                                  {%- if wrapper == 'a' -%}
-                                    href="{{ block.settings.link_to }}"
-                                  {%- endif -%}
-                                >
+                                                  aria-label="{{ alt_text }}"
+                                                    class="psb-img-wrapper" 
+                                                    {%- if wrapper == 'a' -%}
+                                                      href="{{ block.settings.link_to }}"
+                                                    {%- endif -%}
+                                                  >
                   {% if block.settings.background_image == blank %}
                     {% capture current_placeholder_image %}
                     {% cycle
