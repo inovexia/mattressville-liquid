@@ -48,8 +48,7 @@
               type="search"
               name="q"
               value="{{ search.terms | escape }}"
-
-              {%- if settings.predictive_search_enabled -%}  aria-owns="predictive-search-results"  
+              aria-owns="predictive-search-results"  
                 aria-controls="predictive-search-results"
                 aria-haspopup="listbox"
                 aria-autocomplete="list"
@@ -57,6 +56,7 @@
                 autocapitalize="off"
                 spellcheck="false"
                 placeholder="{{ 'general.search.search' | t }}" 
+                {%- if settings.predictive_search_enabled -%}
               {%- endif -%}
             >
             <label class="field__label" for="{{ input_id }}">{{ 'general.search.search' | t }}</label>
