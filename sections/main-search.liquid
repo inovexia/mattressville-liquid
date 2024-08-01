@@ -282,15 +282,14 @@
                 method="get"
                 role="search"
                 class="search">
-                <div class="field demo">
+                <div class="field">
                   <input
                     class="search__input field__input"
                     id="Search-In-Template"
                     type="search"
                     name="q"
                     value="{{ search.terms | escape }}"
-                    placeholder="{{ 'general.search.search' | t }}"
-
+                    placeholder="{{ 'general.search.search' | t }}" 
                     {%- if settings.predictive_search_enabled -%}
                     role="combobox"
                     aria-owns="predictive-search-results"
