@@ -54,9 +54,7 @@
                 autocomplete="off"
                 autocapitalize="off"
                 spellcheck="false"
-                placeholder="Search" 
-                {%- if settings.predictive_search_enabled -%}
-                value="{{ search.terms | escape }}"
+                placeholder="Search" value="{{ search.terms | escape }}" {%- if settings.predictive_search_enabled -%}
               {%- endif -%}
             >
             <label class="field__label" for="{{ input_id }}">{{ 'general.search.search' | t }}</label>
