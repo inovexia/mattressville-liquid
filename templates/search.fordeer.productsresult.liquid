@@ -13,11 +13,11 @@
           "compare_at_price_max":{{ item.compare_at_price_max | json }},
           "compare_at_price_min":{{ item.compare_at_price_min | json }},
           "compare_at_price": "{{ item.compare_at_price | money_without_currency }}",
-          "price":"{{ item.price | money_without_currency }}",
-          "price_with_currency": "{{ item.price | money_without_trailing_zeros }}",
+          "price":{{ item.price | money_without_currency | json }},
+          "price_with_currency": {{ item.price | money_without_trailing_zeros | json }},
           "price_max":{{ item.price_max | json }},
           "images": [{% for image in item.images %}{"src": {{ image.src | json }}, "id": {{ image.id  | json }} }{% unless forloop.last %},{% endunless %}{% endfor %}],
-          "featured_image":"{{ item.featured_image }}",
+          "featured_image":{{ item.featured_image | json }},
           "metafields": {
             
           },
@@ -28,7 +28,7 @@
           "weight_in_unit": {{ item.first_available_variant.weight_in_unit | json }},
           "weight_unit": {{ item.first_available_variant.weight_unit | json }},
           "publish_at":"{{ item.published_at }}",
-          "create_at": "{{ item.created_at }}",
+          "created_at": "{{ item.created_at }}",
           "inventory_management":{{ item.first_available_variant.inventory_management | json }},
           "inventory_policy":{{ item.first_available_variant.inventory_policy | json }},
           "inventory_quantity": [{% for varian in item.variants %}{{ varian.inventory_quantity }}{% unless forloop.last %},{% endunless %}{% endfor %}],
