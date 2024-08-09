@@ -15,7 +15,7 @@
       "type": "invx-announcement-bar",
       "settings": {
         "background_color": "#d7355c",
-        "announcement": "<p><strong>Limited Offer:<\/strong> 20%On The Champion’s Recovery Bundle, 10% Off Everything Else | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.<\/p>",
+        "announcement": "<p><strong>Limited Offer: <\/strong>Save 20% On The Champion’s Recovery Bundle, 10% Off Everything Else | Financing Available: Buy Now, Pay Over Time with AFFIRM.<\/p>",
         "duration": "session"
       }
     },
