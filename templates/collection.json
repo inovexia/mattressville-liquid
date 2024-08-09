@@ -48,10 +48,17 @@
           "settings": {
             "shortcode": "attu"
           }
+        },
+        "bundler_custom_bundle_GzRqJD": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "attu"
+          }
         }
       },
       "block_order": [
-        "bundler_custom_bundle_6FgAB7"
+        "bundler_custom_bundle_6FgAB7",
+        "bundler_custom_bundle_GzRqJD"
       ],
       "settings": {
         "include_margins": true
