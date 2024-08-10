@@ -82,21 +82,21 @@
         "heading_AUbNxt": {
           "type": "heading",
           "settings": {
-            "heading": "Local GTA Flyer",
+            "heading": "Champion’s Recovery Bundle Flyer",
             "heading_size": "h1"
           }
         },
         "text_YGkzMc": {
           "type": "text",
           "settings": {
-            "text": "<p>Discover your dream mattress at Mattressville! We offer a wide selection of all types of mattresses, including innerspring, memory foam, hybrid, and latex. Find the perfect comfort level and support for your needs, all at competitive prices. Save up to 40% on premium mattress brands!<\/p>"
+            "text": "<p>For a limited time, enjoy 20% off when you purchase one of the Champion’s Recovery Bundles. All other non-bundled purchases over $499 are 10% off (<em>automatically applied at checkout<\/em>).<\/p><p>Read more about how <a href=\"https:\/\/mattressville.ca\/blogs\/health-sleep-wellness\/the-secret-known-by-athletes\" title=\"The Secret Known By Athletes to Improve Health & Well Being\">proper sleep improves athletic performance<\/a>.<\/p><p>Offer Ends August 15th<\/p>"
           }
         },
         "button_DBMjTG": {
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/all-mattresses",
+            "button_link": "shopify:\/\/collections\/champions-recovery-bundle",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -124,6 +124,7 @@
     },
     "image_with_text_EKL6in": {
       "type": "image-with-text",
+      "disabled": true,
       "custom_css": [
         ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
         ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
@@ -146,15 +147,49 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_ML8qFz": {
-      "type": "rich-text",
+    "1723249160fbdeb0d3": {
+      "type": "apps",
+      "blocks": {
+        "bundler_custom_bundle_hQFnX6": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "attu"
+          }
+        },
+        "bundler_custom_bundle_Gd78TC": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw3"
+          }
+        },
+        "bundler_custom_bundle_4WDPwG": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw6"
+          }
+        },
+        "bundler_custom_bundle_Uy6LiU": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw7"
+          }
+        },
+        "bundler_custom_bundle_XxqNTL": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw8"
+          }
+        }
+      },
+      "block_order": [
+        "bundler_custom_bundle_hQFnX6",
+        "bundler_custom_bundle_Gd78TC",
+        "bundler_custom_bundle_4WDPwG",
+        "bundler_custom_bundle_Uy6LiU",
+        "bundler_custom_bundle_XxqNTL"
+      ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "include_margins": true
       }
     }
   },
@@ -163,6 +198,6 @@
     "multicolumn_CrLKdg",
     "rich_text_LmUW9y",
     "image_with_text_EKL6in",
-    "rich_text_ML8qFz"
+    "1723249160fbdeb0d3"
   ]
 }
