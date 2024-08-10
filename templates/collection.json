@@ -82,7 +82,7 @@
         "bundler_custom_bundle_BReVYz"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": false
       }
     }
   },
