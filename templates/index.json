@@ -111,13 +111,6 @@
             "image": "shopify:\/\/shop_images\/mattressville_canada_day_blog_header.png",
             "slide_link": "shopify:\/\/blogs\/promotions\/why-our-canada-day-mattress-sale-is-better-than-others"
           }
-        },
-        "slide_yTF6mG": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_sealy_repreve_banner_2024.jpg",
-            "slide_link": "\/search?q=repreve&sort_by=price-ascending"
-          }
         }
       },
       "block_order": [
@@ -134,8 +127,7 @@
         "slide_gQ3iXy",
         "slide_CKrRRg",
         "slide_mp4EPY",
-        "slide_pbndLR",
-        "slide_yTF6mG"
+        "slide_pbndLR"
       ],
       "custom_css": [
         "slideshow-component {margin-top: 20px;}",
