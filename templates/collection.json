@@ -66,13 +66,20 @@
           "settings": {
             "shortcode": "atw7"
           }
+        },
+        "bundler_custom_bundle_BReVYz": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw8"
+          }
         }
       },
       "block_order": [
         "bundler_custom_bundle_6FgAB7",
         "bundler_custom_bundle_CGQFgr",
         "bundler_custom_bundle_DwiFyn",
-        "bundler_custom_bundle_AEYkmU"
+        "bundler_custom_bundle_AEYkmU",
+        "bundler_custom_bundle_BReVYz"
       ],
       "settings": {
         "include_margins": true
