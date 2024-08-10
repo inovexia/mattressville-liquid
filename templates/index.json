@@ -12,8 +12,16 @@
     "invx-slider": {
       "type": "invx-home-slider",
       "blocks": {
+        "slide_z4RH7k": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Champions_Bundle.png",
+            "slide_link": "shopify:\/\/collections\/champions-recovery-bundle"
+          }
+        },
         "slide_PEgBhX": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/welcome_to_Mattressville_banner_main.webp",
             "slide_link": "\/collections\/all-mattresses"
@@ -52,6 +60,13 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville_natura_banner_rev_2024_ddd17fac-ab54-4ae3-acc0-7c8dd0ed254c.jpg",
             "slide_link": "shopify:\/\/collections\/natura"
+          }
+        },
+        "slide_dXGeag": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Champions_Bundle.png",
+            "slide_link": "shopify:\/\/collections\/champions-recovery-bundle"
           }
         },
         "slide_86rVjX": {
@@ -107,12 +122,14 @@
         }
       },
       "block_order": [
+        "slide_z4RH7k",
         "slide_PEgBhX",
         "slide_yQaMJP",
         "slide_9y8Uir",
         "slide_k4wTAU",
         "slide_bTWUcd",
         "slide_mgniDF",
+        "slide_dXGeag",
         "slide_86rVjX",
         "slide_9gwrCP",
         "slide_gQ3iXy",
