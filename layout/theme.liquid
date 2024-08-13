@@ -39,7 +39,7 @@
       {% endif %}
       {%- if current_tags %} | tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} | Page {{ current_page }}{% endif -%}
-      {%- if page_title contains shop.name %} | {{ shop.name }}{% endif -%}
+      {%- if page_title %} | {{ shop.name }}{% endif -%}
     </title>
 
     {% if template == 'list-collections' %}
