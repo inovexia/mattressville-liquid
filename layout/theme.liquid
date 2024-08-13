@@ -39,7 +39,6 @@
       {% endif %}
       {%- if current_tags %} | tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} | Page {{ current_page }}{% endif -%}
- 
     </title>
 
     {% if template == 'list-collections' %}
