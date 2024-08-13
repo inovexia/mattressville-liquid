@@ -15,7 +15,7 @@
       "type": "invx-announcement-bar",
       "settings": {
         "background_color": "#d7355c",
-        "announcement": "<p><a href=\"\/collections\/all-mattresses\" target=\"_blank\" title=\"All Mattresses\">Mattress Sale<\/a> Mississauga, Toronto, GTA | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.<\/p>",
+        "announcement": "<p><strong>Limited Offer: <\/strong>Save 20% On The <a href=\"https:\/\/mattressville.ca\/pages\/local-gta-flyer\" title=\"Champion's Recovery Bundle\">Champion’s Recovery Bundle<\/a>, 10% Off Everything Else | Financing Available: Buy Now, Pay Over Time with AFFIRM.<\/p>",
         "duration": "session"
       }
     },

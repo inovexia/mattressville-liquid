@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "banner": {
@@ -14,7 +23,7 @@
         ".collection--empty container .regular .underlined-link {display: none;}"
       ],
       "settings": {
-        "products_per_page": 9,
+        "products_per_page": 6,
         "columns_desktop": 2,
         "color_scheme": "",
         "image_ratio": "square",
@@ -30,10 +39,60 @@
         "padding_top": 0,
         "padding_bottom": 36
       }
+    },
+    "1723242152a5b5c1fe": {
+      "type": "apps",
+      "blocks": {
+        "bundler_custom_bundle_6FgAB7": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "attu"
+          }
+        },
+        "bundler_custom_bundle_CGQFgr": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw3"
+          }
+        },
+        "bundler_custom_bundle_DwiFyn": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw6"
+          }
+        },
+        "bundler_custom_bundle_AEYkmU": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw7"
+          }
+        },
+        "bundler_custom_bundle_BReVYz": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw8"
+          }
+        }
+      },
+      "block_order": [
+        "bundler_custom_bundle_6FgAB7",
+        "bundler_custom_bundle_CGQFgr",
+        "bundler_custom_bundle_DwiFyn",
+        "bundler_custom_bundle_AEYkmU",
+        "bundler_custom_bundle_BReVYz"
+      ],
+      "disabled": true,
+      "custom_css": [
+
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "1723242152a5b5c1fe"
   ]
 }

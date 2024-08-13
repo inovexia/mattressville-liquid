@@ -12,8 +12,16 @@
     "invx-slider": {
       "type": "invx-home-slider",
       "blocks": {
+        "slide_z4RH7k": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Champions_Bundle_HOME_93ead916-72d8-4674-a5c4-2e533519fb43.png",
+            "slide_link": "shopify:\/\/collections\/champions-recovery-bundle"
+          }
+        },
         "slide_PEgBhX": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/welcome_to_Mattressville_banner_main.webp",
             "slide_link": "\/collections\/all-mattresses"
@@ -54,11 +62,25 @@
             "slide_link": "shopify:\/\/collections\/natura"
           }
         },
+        "slide_dXGeag": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Champions_Bundle_HOME_93ead916-72d8-4674-a5c4-2e533519fb43.png",
+            "slide_link": "shopify:\/\/collections\/champions-recovery-bundle"
+          }
+        },
         "slide_86rVjX": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/The_Best_Mattresses_of_2024-Mattressville_home.png",
             "slide_link": "shopify:\/\/blogs\/tips\/best-mattresses-of-2023"
+          }
+        },
+        "slide_dQJUbb": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/The_Secret_Known_By_Athletes_To_Improve_Health_Well_Being_1047_x_427_px.png",
+            "slide_link": "https:\/\/mattressville.ca\/blogs\/health-sleep-wellness\/the-secret-known-by-athletes"
           }
         },
         "slide_9gwrCP": {
@@ -96,30 +118,24 @@
             "image": "shopify:\/\/shop_images\/mattressville_canada_day_blog_header.png",
             "slide_link": "shopify:\/\/blogs\/promotions\/why-our-canada-day-mattress-sale-is-better-than-others"
           }
-        },
-        "slide_yTF6mG": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_sealy_repreve_banner_2024.jpg",
-            "slide_link": "\/search?q=repreve&sort_by=price-ascending"
-          }
         }
       },
       "block_order": [
+        "slide_z4RH7k",
         "slide_PEgBhX",
         "slide_yQaMJP",
         "slide_9y8Uir",
         "slide_k4wTAU",
         "slide_bTWUcd",
         "slide_mgniDF",
+        "slide_dXGeag",
         "slide_86rVjX",
+        "slide_dQJUbb",
         "slide_9gwrCP",
         "slide_gQ3iXy",
         "slide_CKrRRg",
         "slide_mp4EPY",
-        "slide_pbndLR",
-        "slide_yTF6mG"
+        "slide_pbndLR"
       ],
       "custom_css": [
         "slideshow-component {margin-top: 20px;}",
@@ -376,6 +392,24 @@
         "section_padding_bottom_mobile": 0
       }
     },
+    "172323866386539f91": {
+      "type": "apps",
+      "blocks": {
+        "bundler_custom_bundle_HA7BWt": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "disabled": true,
+          "settings": {
+            "shortcode": ""
+          }
+        }
+      },
+      "block_order": [
+        "bundler_custom_bundle_HA7BWt"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "featured_collection_xLkaJK": {
       "type": "featured-collection",
       "custom_css": [
@@ -572,6 +606,7 @@
     "invx-slider",
     "multicolumn_Yk9bxe",
     "psb_reviews_reviews_01_Vr6JBB",
+    "172323866386539f91",
     "featured_collection_xLkaJK",
     "psb_gallery_gallery_01_pQmz4F",
     "featured_collection_BY7Ca9",
