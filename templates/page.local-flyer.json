@@ -294,6 +294,7 @@
         "featured_collection_Yqkk7q",
         "featured_collection_7cktbg"
       ],
+      "disabled": true,
       "settings": {
         "title": "Collections",
         "heading_size": "h1",
