@@ -120,7 +120,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 12,
-        "padding_bottom": 20
+        "padding_bottom": 16
       }
     },
     "collection_list_NRFCEM": {
@@ -145,7 +145,7 @@
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
@@ -176,7 +176,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 16
       }
     },
     "image_banner_etEfnq": {
@@ -311,7 +311,7 @@
     "featured_collection_AAqpH7": {
       "type": "featured-collection",
       "settings": {
-        "title": "Kingsdown Mattresses",
+        "title": "",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -332,7 +332,7 @@
         "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     }
