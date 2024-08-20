@@ -230,7 +230,7 @@
       "settings": {
         "container_width": "psb-container",
         "line_height": 1,
-        "line_color": "#ccc"
+        "line_color": "#cccccc"
       }
     },
     "rich_text_fgdiqy": {
@@ -273,7 +273,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "kingsdown",
-        "products_to_show": 6,
+        "products_to_show": 5,
         "columns_desktop": 1,
         "full_width": true,
         "show_view_all": false,
@@ -286,8 +286,8 @@
         "show_vendor": true,
         "show_rating": true,
         "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 0,
         "padding_bottom": 0
       }
