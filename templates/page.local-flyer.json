@@ -88,6 +88,7 @@
         },
         "text_YGkzMc": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Don't just dream of a better night's sleep – experience it with Marshall! <\/strong>Experience the luxurious softness, supportive structure, and unbeatable value of Marshall Mattresses. <br\/>See for yourself how Marshall turns dreams into a reality, <br\/><strong>Come <\/strong><em><strong>feel the difference<\/strong><\/em><strong> at Mattressville today!<\/strong><\/p>"
           }
@@ -147,6 +148,50 @@
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "rich_text_CLDgr6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wkpzcE": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Marshall Mattresses Now on Sale",
+            "heading_size": "h1"
+          }
+        },
+        "text_QQAhfc": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Don't just dream of a better night's sleep – experience it with Marshall! <\/strong>Experience the luxurious softness, supportive structure, and unbeatable value of Marshall Mattresses. <br\/>See for yourself how Marshall turns dreams into a reality, <br\/><strong>Come <\/strong><em><strong>feel the difference<\/strong><\/em><strong> at Mattressville today!<\/strong><\/p>"
+          }
+        },
+        "button_zcYr6P": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/marshall-mattresses",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wkpzcE",
+        "text_QQAhfc",
+        "button_zcYr6P"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 16
       }
     },
     "rich_text_HY8fGM": {
@@ -404,6 +449,7 @@
     "multicolumn_CrLKdg",
     "rich_text_LmUW9y",
     "collection_list_NRFCEM",
+    "rich_text_CLDgr6",
     "rich_text_HY8fGM",
     "rich_text_fgdiqy",
     "image_banner_etEfnq",
