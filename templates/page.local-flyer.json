@@ -146,7 +146,38 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 36
+        "padding_bottom": 16
+      }
+    },
+    "rich_text_HY8fGM": {
+      "type": "rich-text",
+      "blocks": {
+        "button_fmgQJC": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/marshall-mattresses",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_fmgQJC"
+      ],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 16
       }
     },
     "rich_text_fgdiqy": {
@@ -342,6 +373,7 @@
     "multicolumn_CrLKdg",
     "rich_text_LmUW9y",
     "collection_list_NRFCEM",
+    "rich_text_HY8fGM",
     "rich_text_fgdiqy",
     "image_banner_etEfnq",
     "image_with_text_EKL6in",
