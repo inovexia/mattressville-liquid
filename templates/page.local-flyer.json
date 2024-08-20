@@ -225,6 +225,14 @@
         "padding_bottom": 40
       }
     },
+    "psb_utilities_line_ficaQA": {
+      "type": "psb-utilities-line",
+      "settings": {
+        "container_width": "psb-container",
+        "line_height": 1,
+        "line_color": "#ccc"
+      }
+    },
     "rich_text_fgdiqy": {
       "type": "rich-text",
       "blocks": {
@@ -451,6 +459,7 @@
     "collection_list_NRFCEM",
     "rich_text_CLDgr6",
     "rich_text_HY8fGM",
+    "psb_utilities_line_ficaQA",
     "rich_text_fgdiqy",
     "image_banner_etEfnq",
     "image_with_text_EKL6in",
