@@ -76,43 +76,28 @@
         "padding_bottom": 36
       }
     },
-    "image_banner_etEfnq": {
-      "type": "image-banner",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Champions_Bundle_flyer_0fc0c885-c300-4464-b83e-0c66889445ac.png",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "rich_text_LmUW9y": {
       "type": "rich-text",
       "blocks": {
         "heading_AUbNxt": {
           "type": "heading",
           "settings": {
-            "heading": "Sleep Like An Olymic Champion",
+            "heading": "Marshall Mattresses Now on Sale",
             "heading_size": "h1"
           }
         },
         "text_YGkzMc": {
           "type": "text",
           "settings": {
-            "text": "<p>For a limited time, enjoy 20% off when you purchase one of the Champion’s Recovery Bundles. All other non-bundled purchases over $499 are 10% off (<em>automatically applied at checkout<\/em>).<\/p><p>Read more about how <a href=\"https:\/\/mattressville.ca\/blogs\/health-sleep-wellness\/the-secret-known-by-athletes\" title=\"The Secret Known By Athletes to Improve Health & Well Being\">proper sleep improves athletic performance<\/a>.<\/p><p>Offer Ends August 15th<\/p>"
+            "text": "<p>Marshall mattresses are now available at Mattressville. Come and try one today in store and see why Marshall has been making dreams into a reality for over a century!<\/p>"
           }
         },
         "button_DBMjTG": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/champions-recovery-bundle",
+            "button_link": "shopify:\/\/collections\/marshall-mattresses",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -136,6 +121,79 @@
         "full_width": true,
         "padding_top": 12,
         "padding_bottom": 20
+      }
+    },
+    "collection_list_NRFCEM": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_Kay6Aw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "marshall-mattresses"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_Kay6Aw"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 1,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_fgdiqy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KdRTeh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Best Deals on Kingsdown Mattresses",
+            "heading_size": "h1"
+          }
+        },
+        "text_CiQDix": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The best deals on Kingsdown mattresses available only at Mattressville. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KdRTeh",
+        "text_CiQDix"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_etEfnq": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Stay_Tuned.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "image_with_text_EKL6in": {
@@ -204,17 +262,90 @@
         "bundler_custom_bundle_Uy6LiU",
         "bundler_custom_bundle_XxqNTL"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
+      }
+    },
+    "collection_list_GrH6mC": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_PaCULc": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_Yqkk7q": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_7cktbg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_PaCULc",
+        "featured_collection_Yqkk7q",
+        "featured_collection_7cktbg"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_AAqpH7": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Kingsdown Mattresses",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "kingsdown",
+        "products_to_show": 5,
+        "columns_desktop": 1,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
     "multicolumn_CrLKdg",
-    "image_banner_etEfnq",
     "rich_text_LmUW9y",
+    "collection_list_NRFCEM",
+    "rich_text_fgdiqy",
+    "image_banner_etEfnq",
     "image_with_text_EKL6in",
-    "1723249160fbdeb0d3"
+    "1723249160fbdeb0d3",
+    "collection_list_GrH6mC",
+    "featured_collection_AAqpH7"
   ]
 }
