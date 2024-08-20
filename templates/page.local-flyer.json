@@ -245,6 +245,7 @@
         },
         "text_CiQDix": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Dream Big. Sleep Better. Save Huge. <\/strong>Mattressville is offering <em><strong>exclusive deals<\/strong><\/em> on the luxurious Kingsdown mattresses you love. <strong>Don't miss out on these incredible deals!<\/strong> <br\/><strong>Visit Mattressville today<\/strong> and <em>experience the difference<\/em> a <strong>Kingsdown mattress<\/strong> can make.<\/p>"
           }
@@ -260,6 +261,65 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 60,
+        "padding_bottom": 16
+      }
+    },
+    "featured_collection_AAqpH7": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "kingsdown",
+        "products_to_show": 6,
+        "columns_desktop": 1,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_QkRFdp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_i9PafT": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Best Deals on Kingsdown Mattresses",
+            "heading_size": "h1"
+          }
+        },
+        "text_EqqjRB": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Dream Big. Sleep Better. Save Huge. <\/strong>Mattressville is offering <em><strong>exclusive deals<\/strong><\/em> on the luxurious Kingsdown mattresses you love. <strong>Don't miss out on these incredible deals!<\/strong> <br\/><strong>Visit Mattressville today<\/strong> and <em>experience the difference<\/em> a <strong>Kingsdown mattress<\/strong> can make.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_i9PafT",
+        "text_EqqjRB"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
         "padding_bottom": 16
       }
     },
@@ -303,34 +363,6 @@
         "mobile_content_alignment": "center",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "featured_collection_AAqpH7": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "kingsdown",
-        "products_to_show": 6,
-        "columns_desktop": 1,
-        "full_width": true,
-        "show_view_all": false,
-        "view_all_style": "link",
-        "enable_desktop_slider": true,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": true,
-        "show_rating": true,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 16
       }
     },
     "rich_text_dtFKYq": {
@@ -461,9 +493,10 @@
     "rich_text_HY8fGM",
     "psb_utilities_line_ficaQA",
     "rich_text_fgdiqy",
+    "featured_collection_AAqpH7",
+    "rich_text_QkRFdp",
     "image_banner_etEfnq",
     "image_with_text_EKL6in",
-    "featured_collection_AAqpH7",
     "rich_text_dtFKYq",
     "1723249160fbdeb0d3",
     "collection_list_GrH6mC"
