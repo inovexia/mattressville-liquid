@@ -12,14 +12,6 @@
     "invx-slider": {
       "type": "invx-home-slider",
       "blocks": {
-        "slide_z4RH7k": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Champions_Bundle_HOME_93ead916-72d8-4674-a5c4-2e533519fb43.png",
-            "slide_link": "shopify:\/\/collections\/champions-recovery-bundle"
-          }
-        },
         "slide_PEgBhX": {
           "type": "slide",
           "settings": {
@@ -34,11 +26,11 @@
             "slide_link": "shopify:\/\/products\/kingsdown-cool-wave-tight-top-mattress"
           }
         },
-        "slide_9y8Uir": {
+        "slide_bTWUcd": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_banner_stearns_and_foster__2024.jpg",
-            "slide_link": "shopify:\/\/collections\/stearns-and-foster"
+            "image": "shopify:\/\/shop_images\/Tempur-pedic_home_banner_48a81cb1-840c-4199-a41e-3d9403c99dd5.jpg",
+            "slide_link": "shopify:\/\/collections\/tempur-pedic"
           }
         },
         "slide_k4wTAU": {
@@ -48,11 +40,11 @@
             "slide_link": "shopify:\/\/collections\/marshall-mattresses"
           }
         },
-        "slide_bTWUcd": {
+        "slide_9y8Uir": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Tempur-pedic_home_banner_48a81cb1-840c-4199-a41e-3d9403c99dd5.jpg",
-            "slide_link": "shopify:\/\/collections\/tempur-pedic"
+            "image": "shopify:\/\/shop_images\/mattressville_banner_stearns_and_foster__2024.jpg",
+            "slide_link": "shopify:\/\/collections\/stearns-and-foster"
           }
         },
         "slide_mgniDF": {
@@ -62,25 +54,11 @@
             "slide_link": "shopify:\/\/collections\/natura"
           }
         },
-        "slide_dXGeag": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Champions_Bundle_HOME_93ead916-72d8-4674-a5c4-2e533519fb43.png",
-            "slide_link": "shopify:\/\/collections\/champions-recovery-bundle"
-          }
-        },
         "slide_86rVjX": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/The_Best_Mattresses_of_2024-Mattressville_home.png",
             "slide_link": "shopify:\/\/blogs\/tips\/best-mattresses-of-2023"
-          }
-        },
-        "slide_dQJUbb": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/The_Secret_Known_By_Athletes_To_Improve_Health_Well_Being_1047_x_427_px.png",
-            "slide_link": "https:\/\/mattressville.ca\/blogs\/health-sleep-wellness\/the-secret-known-by-athletes"
           }
         },
         "slide_9gwrCP": {
@@ -97,18 +75,28 @@
             "slide_link": "shopify:\/\/blogs\/featured-brands\/why-tempur-pedic-is-the-king-of-memory-foam-mattresses"
           }
         },
+        "slide_mp4EPY": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/younger_generations_are_opting_for_adjustable_beds_89d00b5b-1a02-47b5-88fa-8187893398e0.webp",
+            "slide_link": "shopify:\/\/blogs\/health-sleep-wellness\/why-adjustable-beds-aren-t-only-for-the-elderly"
+          }
+        },
         "slide_CKrRRg": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
             "slide_link": "shopify:\/\/blogs\/tips\/10-reasons-to-gift-a-mattress"
           }
         },
-        "slide_mp4EPY": {
+        "slide_dQJUbb": {
           "type": "slide",
+          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/younger_generations_are_opting_for_adjustable_beds_89d00b5b-1a02-47b5-88fa-8187893398e0.webp",
-            "slide_link": "shopify:\/\/blogs\/health-sleep-wellness\/why-adjustable-beds-aren-t-only-for-the-elderly"
+            "image": "shopify:\/\/shop_images\/The_Secret_Known_By_Athletes_To_Improve_Health_Well_Being_1047_x_427_px.png",
+            "slide_link": "https:\/\/mattressville.ca\/blogs\/health-sleep-wellness\/the-secret-known-by-athletes"
           }
         },
         "slide_pbndLR": {
@@ -121,20 +109,18 @@
         }
       },
       "block_order": [
-        "slide_z4RH7k",
         "slide_PEgBhX",
         "slide_yQaMJP",
-        "slide_9y8Uir",
-        "slide_k4wTAU",
         "slide_bTWUcd",
+        "slide_k4wTAU",
+        "slide_9y8Uir",
         "slide_mgniDF",
-        "slide_dXGeag",
         "slide_86rVjX",
-        "slide_dQJUbb",
         "slide_9gwrCP",
         "slide_gQ3iXy",
-        "slide_CKrRRg",
         "slide_mp4EPY",
+        "slide_CKrRRg",
+        "slide_dQJUbb",
         "slide_pbndLR"
       ],
       "custom_css": [

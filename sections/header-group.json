@@ -15,7 +15,7 @@
       "type": "invx-announcement-bar",
       "settings": {
         "background_color": "#d7355c",
-        "announcement": "<p><strong>Limited Offer: <\/strong>Save 20% On The <a href=\"https:\/\/mattressville.ca\/pages\/local-gta-flyer\" title=\"Champion's Recovery Bundle\">Champion’s Recovery Bundle<\/a>, 10% Off Everything Else | Financing Available: Buy Now, Pay Over Time with AFFIRM.<\/p>",
+        "announcement": "<p><strong>New Product Alert:<\/strong> <a href=\"\/collections\/marshall-mattresses\" title=\"Marshall Mattresses\">Marshall Mattresses<\/a> Now On Sale | Financing Available: Buy Now, Pay Over Time with AFFIRM.<\/p>",
         "duration": "session"
       }
     },
