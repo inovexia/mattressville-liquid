@@ -222,7 +222,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 0,
-        "padding_bottom": 16
+        "padding_bottom": 40
       }
     },
     "rich_text_fgdiqy": {
@@ -251,7 +251,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 60,
         "padding_bottom": 16
       }
     },
