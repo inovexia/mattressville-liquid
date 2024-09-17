@@ -1,0 +1,64 @@
+{%- style -%}
+  .invx-sub-footer {
+    background-color: #eff9f9;
+    padding: 20px 0;
+  }
+  .invx-sub-footer .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding: 0;
+    list-style: none;
+    column-gap: 100px;
+    row-gap: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .invx-sub-footer img {
+    border-radius: 15px;
+  }
+  .invx-sub-footer p {
+    font-size: 1.1em;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-top: 10px;
+    color: #535353;
+  }
+
+  .invx-sub-footer a {
+    text-decoration: none;
+  }
+{%- endstyle -%}
+<section class="invx-sub-footer">
+  <div class="page-width d-flex">
+    <div class=" center">
+      <a href="{{ shop.url }}/collections/all-mattresses">
+        <img
+          src="{{ 'cta-image.jpg' | asset_img_url: 'master' }}"
+          alt="Review Badge"
+          class="sub-footer-image"
+          loading="lazy"
+          height="auto"
+          width="190"
+        >
+        <p class="mm-link">Shop All Mattresses</p>
+      </a>
+    </div>
+    <div class=" center">
+      <a href="{{ shop.url }}/pages/mattress-matchmaker">
+        <img
+          src="{{ 'mattressville.ca_blog_mattress-buying-guide-for-couples_.png' | asset_img_url: 'master' }}"
+          alt="Review Badge"
+          class="sub-footer-image"
+          loading="lazy"
+          height="auto"
+          width="190"
+        >
+        <p class="mm-link">
+          Try Our <br>
+          Mattresses Matchmaker
+        </p>
+      </a>
+    </div>
+  </div>
+</section>

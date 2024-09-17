@@ -1,0 +1,49 @@
+<div
+  class="announcement-bar"
+  id="invx-announcement-bar"
+  style="background-color: {{ section.settings.background_color }};">
+  <div class="page-width " style="display: flex; align-items: center">
+    {{ section.settings.announcement }}
+    <span id="invx-announcement-bar-dismiss">Dismiss</span>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Announcements",
+    "class": "section",
+    "tag": "section",
+    "enabled_on": {
+      "groups": ["header"]
+    },
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#D7355C"
+      },
+      {
+        "type": "richtext",
+        "id": "announcement",
+        "default": "<p><a href=''>Premium Mattress Sale</a> | The Highest Rated Mattress Store | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.</p>",
+        "label": "Announcement"
+      },
+      {
+        "type": "select",
+        "id": "duration",
+        "label": "Duration to hide banner",
+        "options": [
+          {
+            "value": "session",
+            "label": "For the current session"
+          },
+          {
+            "value": "page",
+            "label": "Till the page reloads"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

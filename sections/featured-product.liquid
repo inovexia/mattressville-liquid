@@ -20,9 +20,9 @@
   }
 {%- endstyle -%}
 
-<script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-info.js' | asset_url }}" defer></script>
+<script src="{{ 'show-more.js' | asset_url }}" defer></script>
+<script src="{{ 'price-per-item.js' | asset_url }}" defer></script>
 
 {%- liquid
   assign product = section.settings.product
@@ -591,12 +591,12 @@
   </div>
 </section>
 
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer></script>
 {%- if section.settings.image_zoom == 'hover' -%}
-  <script id="EnableZoomOnHover-featured" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
+  <script id="EnableZoomOnHover-featured" src="{{ 'magnify.js' | asset_url }}" defer></script>
 {%- endif %}
 {%- if request.design_mode -%}
-  <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'theme-editor.js' | asset_url }}" defer></script>
 {%- endif -%}
 
 {%- if first_3d_model -%}
@@ -614,7 +614,7 @@
   endif
 -%}
 
-<script type="application/ld+json">
+{% comment %} <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
     "@type": "Product",
@@ -632,32 +632,9 @@
     "brand": {
       "@type": "Brand",
       "name": {{ product.vendor | json }}
-    },
-    "offers": [
-      {%- for variant in product.variants -%}
-        {
-          "@type" : "Offer",
-          {%- if variant.sku != blank -%}
-            "sku": {{ variant.sku | json }},
-          {%- endif -%}
-          {%- if variant.barcode.size == 12 -%}
-              "gtin12": {{ variant.barcode | json }},
-          {%- endif -%}
-          {%- if variant.barcode.size == 13 -%}
-            "gtin13": {{ variant.barcode | json }},
-          {%- endif -%}
-          {%- if variant.barcode.size == 14 -%}
-            "gtin14": {{ variant.barcode | json }},
-          {%- endif -%}
-          "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
-          "price" : {{ variant.price | divided_by: 100.00 | json }},
-          "priceCurrency" : {{ cart.currency.iso_code | json }},
-          "url" : {{ request.origin | append: variant.url | json }}
-        }{% unless forloop.last %},{% endunless %}
-      {%- endfor -%}
-    ]
+    }
   }
-</script>
+</script> {% endcomment %}
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -687,8 +664,8 @@
 </script>
 
 {% if product.media.size > 0 %}
-  <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-modal.js' | asset_url }}" defer></script>
+  <script src="{{ 'media-gallery.js' | asset_url }}" defer></script>
 {% endif %}
 
 {% schema %}

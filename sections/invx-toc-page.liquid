@@ -1,0 +1,117 @@
+{%- style -%}
+  .page-title {
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--secondary-color);
+    margin: 23px 0 27px;
+    position: relative;
+  }
+
+  .page-title::after {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    position: absolute;
+    border-bottom: 2px solid var(--accent-color);
+    left: 0;
+    bottom: -5px;
+  }
+
+  .content-{{ section.id }}
+  -padding {
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .content-{{ section.id }}-padding {
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="section">
+  <div class="page-header header-{{ section.id }}-padding">
+    <div class="page-width page-width-no-padding">
+      <h1 class="page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        {{ page.title | escape }}
+      </h1>
+    </div>
+  </div>
+  <div class="page-content content-{{ section.id }}-padding">
+    <div class="page-width page-width-no-padding">
+      <div class="content rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <div class="article-inner-content">
+          <div id="toc"></div>
+          {{ page.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function(){
+      // Create a TOC container
+      var toc = $('<ul></ul>');
+      
+      var currentH2 = null;
+      var currentH3 = null;
+  
+      $('.article-inner-content').find('h2, h3, h4').each(function(index, element){
+          var heading = $(this);
+          var id = 'heading-' + index;
+          heading.attr('id', id);
+  
+          var tocItem = $('<li></li>');
+          var tocLink = $('<a></a>').attr('href', '#' + id).text(heading.text());
+          tocItem.append(tocLink);
+  
+          if (heading.is('h2')) {
+              currentH2 = $('<ul></ul>');
+              toc.append(tocItem.append(currentH2));
+              currentH3 = null;
+          } else if (heading.is('h3')) {
+              if (!currentH2) {
+                  currentH2 = $('<ul></ul>');
+                  toc.append(currentH2);
+              }
+              currentH3 = $('<ul></ul>');
+              currentH2.append(tocItem.append(currentH3));
+          } else if (heading.is('h4')) {
+              if (!currentH3) {
+                  currentH3 = $('<ul></ul>');
+                  if (currentH2) {
+                      currentH2.append(currentH3);
+                  } else {
+                      toc.append(currentH3);
+                  }
+              }
+              currentH3.append(tocItem);
+          }
+      });
+  
+      $('#toc').append('<h2>Table of Contents</h2>').append(toc);
+  
+      // Smooth scroll to the section when a TOC link is clicked
+      $('#toc a').on('click', function(event){
+          event.preventDefault();
+          var target = $(this.getAttribute('href'));
+          if(target.length){
+              $('html, body').stop().animate({
+                  scrollTop: target.offset().top
+              }, 1000);
+          }
+      });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "t:sections.main-page.name",
+    "tag": "section",
+    "settings": []
+  }
+{% endschema %}

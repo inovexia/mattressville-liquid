@@ -1,12 +1,12 @@
-{% comment %}
-  {{ product.metafields.meta_data.softness_score }}
-  Renders product comfort-scale.
-  Accepts:
-  - product: {Object} product object
-  - is_card: {Boolean} Show the product rating. Default: false
-
-  Usage:
-  {% render 'comfort-scale', product: product %}
+{% comment %} 
+        {{ product.metafields.meta_data.softness_score }}
+        Renders product comfort-scale.
+        Accepts: 
+        - product: {Object} product object 
+        - is_card: {Boolean} Show the product rating. Default: false
+       
+        Usage:
+        {% render 'comfort-scale', product: product %} 
 {% endcomment %}
 {%- liquid
   assign targetTitle = "queen" | downcase
@@ -31,10 +31,11 @@
 %}
 {% if level > 0 %}
   {{ 'comfort-scale.css' | asset_url | stylesheet_tag }}
-  <div class="comfort-scale">
-    {% if is_card == false %}
-      <h4>Comfort Scale</h4>
-    {% endif %}    
+    <div class="comfort-scale">
+    {% comment %} {% if is_card == false %}
+                  <h4>Comfort Scale</h4>
+            {% endif %} {% endcomment %}
+    <div class="firm-scale">COMFORT SCALE</div>
     <div class="firm-meter">
       <h6 class="firmness">
         <span class="d-block">Soft</span>

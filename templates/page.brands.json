@@ -1,0 +1,216 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "header_color": "#ffffff",
+        "header_bg_color": "#ff5c78",
+        "header_bg_color_opacity": 60,
+        "header_bg_image": "shopify:\/\/shop_images\/city-shot.jpg",
+        "header_padding_top": 70,
+        "header_padding_bottom": 70,
+        "header_margin_bottom": 30,
+        "padding_bottom": 28
+      }
+    },
+    "multicolumn_TXKULc": {
+      "type": "multicolumn-brands",
+      "blocks": {
+        "column_NJKdTF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_sealy_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Sealy",
+            "link": "shopify:\/\/collections\/sealy"
+          }
+        },
+        "column_XePek9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_beautyrest_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Beautyrest",
+            "link": "shopify:\/\/collections\/beautyrest"
+          }
+        },
+        "column_e9KcNN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_icomfort_by_serta_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Serta iComfort",
+            "link": "shopify:\/\/collections\/serta-icomfort"
+          }
+        },
+        "column_G7yydC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_tempurpedic_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Tempur-Pedic",
+            "link": "shopify:\/\/collections\/tempur-pedic"
+          }
+        },
+        "column_pj8bFm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_stearns_foster_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Stearns & Foster",
+            "link": "shopify:\/\/collections\/stearns-and-foster"
+          }
+        },
+        "column_9xCgkM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_kingsdown_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Kingsdown",
+            "link": "shopify:\/\/collections\/kingsdown"
+          }
+        },
+        "column_kkeGQE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_brand_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Mattressville",
+            "link": "shopify:\/\/collections\/mattressville"
+          }
+        },
+        "column_TFALTp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattresses_under_50.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Marshall Mattresses",
+            "link": "shopify:\/\/collections\/marshall-mattresses"
+          }
+        },
+        "column_dr3VR4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_natura_mattresses.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Natura",
+            "link": "shopify:\/\/collections\/natura"
+          }
+        },
+        "column_TRRMhQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_serta_mattresses_9ff85e20-fd0f-45c4-af5d-6ae96050e500.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Serta",
+            "link": "shopify:\/\/collections\/serta"
+          }
+        }
+      },
+      "block_order": [
+        "column_NJKdTF",
+        "column_XePek9",
+        "column_e9KcNN",
+        "column_G7yydC",
+        "column_pj8bFm",
+        "column_9xCgkM",
+        "column_kkeGQE",
+        "column_TFALTp",
+        "column_dr3VR4",
+        "column_TRRMhQ"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "title": "All Brands",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_8BApPV": {
+      "type": "multicolumn-brands",
+      "blocks": {
+        "column_eCBJA8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cta-image.jpg",
+            "title": "<a href=\"\/collections\/all-mattresses\" title=\"All Mattresses\">Shop All Mattresses<\/a>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wwn7RA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bed.png",
+            "title": "<a href=\"https:\/\/mattressville.ca\/mattress-matchmaker\/\">Try our Mattress Matchmaker<\/a>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_eCBJA8",
+        "column_wwn7RA"
+      ],
+      "custom_css": [
+        ".multicolumn.background-primary .multicolumn-card {background: transparent;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-6",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_TXKULc",
+    "multicolumn_8BApPV"
+  ]
+}

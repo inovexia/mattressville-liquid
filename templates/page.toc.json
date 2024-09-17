@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "invx-toc-page",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

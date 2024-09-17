@@ -107,6 +107,10 @@
   height: auto;
 }
 
+.card__content .card__information .card-information .vendor-information .vendor-img.Marshall {
+  max-width: 100px;
+}
+
 .card__media,
 .card .media {
   bottom: 0;

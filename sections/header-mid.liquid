@@ -17,11 +17,15 @@
           </a>
         {%- endif -%}
       </div>
+      {% comment %} {%- if section.settings.show_social and social_icons -%} {% endcomment %}
+      {%- render 'header-social-icons' -%}
+      {% comment %} {%- endif -%} {% endcomment %}
+
       {%- if section.settings.offer_text != blank -%}
-      <div class="offer">
-        <p>{{ section.settings.offer_text }}</p>
-      </div>
-    {%- endif -%}
+        <div class="offer">
+          <p>{{ section.settings.offer_text }}</p>
+        </div>
+      {%- endif -%}
     </div>
   </div>
 </div>

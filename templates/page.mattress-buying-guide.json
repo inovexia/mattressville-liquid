@@ -3,6 +3,7 @@
   "sections": {
     "main": {
       "type": "invx-main-page",
+      "disabled": true,
       "settings": {
       }
     },
@@ -10,10 +11,9 @@
       "type": "rich-text",
       "blocks": {
         "heading_ayGhc9": {
-          "type": "heading",
+          "type": "text",
           "settings": {
-            "heading": "MATTRESS SIZES",
-            "heading_size": "h1"
+            "text": "<h1>MATTRESS SIZES<\/h1>"
           }
         }
       },
@@ -21,7 +21,7 @@
         "heading_ayGhc9"
       ],
       "custom_css": [
-        ".rich-text__wrapper { width: unset; }"
+        ".rich-text__wrapper {width: unset;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -46,7 +46,8 @@
         "text_HJBgXR"
       ],
       "custom_css": [
-        ".rich-text {border-radius: 15px; width: unset; }"
+        ".rich-text {border-radius: 15px; width: unset;}",
+        ".isolate .rich-text h4 {font-size: 20px; font-weight: 500; margin: 10px 0px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -70,7 +71,7 @@
         "text_tPNYfm": {
           "type": "text",
           "settings": {
-            "text": "<p>The characteristics of a mattress are mostly dictated by the build, the main types are:<\/p><h3><strong>Innerspring<\/strong><\/h3><p>Innerspring or open coil mattresses are build with a system of connected springs, arranged in rows and connected to each other at the top and bottom by a spiral helical wire. An outer rod is sometimes added around the outside to strengthen the perimeter of the mattress. Innerspring sprung mattresses come in large variety of tensions, from very firm down to softer options.<\/p><h3><strong>Pocket Coil<\/strong><\/h3><p><a href=\"https:\/\/mattressville.ca\/all-mattresses\/pocket-coil\/\">Pocket coil mattresses<\/a> contain many individual springs, housed in fabric pockets, all working independantly of each other. This arrangement means that support is offered from the edge to the very centre of the mattress and means significantly less-roll together when two people are on it. Amounts of individual springs vary, the more pocket springs a mattress has, the more supportive it will be. Pocket coil mattresses can be a great investment, as they provide a supportive sleeping environment.<\/p><h3><strong>Memory Foam<\/strong><\/h3><p>Famously developed by NASA in the 1960’s <a href=\"https:\/\/mattressville.ca\/all-mattresses\/memory-foam\/\">Memory Foam Mattresses<\/a> relieve pressure on the body by distributing your weight evenly, providing ultimate support. In Addition, the flexible structure of Memory Foam Mattresses means they can absorb movement and mould to your individual body shape for a great night’s sleep. Some customers have found memory foam to be too warm to sleep on, this is why there is an increase in popularity of our Formeflex Cool Gel memory foam mattresses, featuring the cooling properties of Thermo Cool Cover and Flex Gel Memory foam to regulate the temperature.<\/p><h3><strong>Latex mattress<\/strong><\/h3><p><a href=\"https:\/\/mattressville.ca\/all-mattresses\/organic-latex\/\">Latex<\/a> can be Natural (organic) and blend synthetic latex. Natural Latex is made of white milky sap juice which is tapped from the bark of the ‘Hevea Brasiliensis’ or Rubber Tree and probably is one of the most environmentally beneficial products in mattress industry that you can find.<\/p><p>Natural Latex has better anti-bacterial properties than any other bedding material. The excellent breathing properties of Natural Latex prevents moisture build-up, which is the major cause of bacterial growth and dust mite infestation.<\/p><p><a href=\"https:\/\/mattressville.ca\/all-mattresses\/organic-latex\/\">Natural latex mattresses<\/a> are also recommended for people who suffer from allergies, respiratory problems, hay fever, eczema and asthma. At the final stage of production natural latex goes through a double-washing process that makes it as contaminant free as it’s possible to get.<\/p>"
+            "text": "<p>The characteristics of a mattress are mostly dictated by the build, the main types are:<\/p><h3><strong>Innerspring<\/strong><\/h3><p>Innerspring or open coil mattresses are build with a system of connected springs, arranged in rows and connected to each other at the top and bottom by a spiral helical wire. An outer rod is sometimes added around the outside to strengthen the perimeter of the mattress. Innerspring sprung mattresses come in large variety of tensions, from very firm down to softer options.<\/p><h3><strong>Pocket Coil<\/strong><\/h3><p><a href=\"https:\/\/mattressville.ca\/collections\/pocket-coil\/\" title=\"https:\/\/mattressville.ca\/collections\/pocket-coil\/\">Pocket coil mattresses<\/a> contain many individual springs, housed in fabric pockets, all working independantly of each other. This arrangement means that support is offered from the edge to the very centre of the mattress and means significantly less-roll together when two people are on it. Amounts of individual springs vary, the more pocket springs a mattress has, the more supportive it will be. Pocket coil mattresses can be a great investment, as they provide a supportive sleeping environment.<\/p><h3><strong>Memory Foam<\/strong><\/h3><p>Famously developed by NASA in the 1960’s <a href=\"\/collections\/memory-foam\" title=\"Memory Foam Mattresses\">Memory Foam Mattresses<\/a> relieve pressure on the body by distributing your weight evenly, providing ultimate support. In Addition, the flexible structure of Memory Foam Mattresses means they can absorb movement and mould to your individual body shape for a great night’s sleep. Some customers have found memory foam to be too warm to sleep on, this is why there is an increase in popularity of our Formeflex Cool Gel memory foam mattresses, featuring the cooling properties of Thermo Cool Cover and Flex Gel Memory foam to regulate the temperature.<\/p><h3><strong>Latex mattress<\/strong><\/h3><p><a href=\"\/collections\/organic-latex\" title=\"Organic Latex Mattresses\">Latex<\/a> can be Natural (organic) and blend synthetic latex. Natural Latex is made of white milky sap juice which is tapped from the bark of the ‘Hevea Brasiliensis’ or Rubber Tree and probably is one of the most environmentally beneficial products in mattress industry that you can find.<\/p><p>Natural Latex has better anti-bacterial properties than any other bedding material. The excellent breathing properties of Natural Latex prevents moisture build-up, which is the major cause of bacterial growth and dust mite infestation.<\/p><p><a href=\"\/collections\/organic-latex\" title=\"Organic Latex Mattresses\">Natural latex mattresses<\/a> are also recommended for people who suffer from allergies, respiratory problems, hay fever, eczema and asthma. At the final stage of production natural latex goes through a double-washing process that makes it as contaminant free as it’s possible to get.<\/p>"
           }
         }
       },
@@ -79,14 +80,14 @@
         "text_tPNYfm"
       ],
       "custom_css": [
-        "@media screen and (min-width: 990px) {.rich-text__blocks {max-width: 100%;}}",
-        ".rich-text__wrapper { width: unset; padding: 0; }",
-        ".rich-text__wrapper a { color: #098fc7; text-decoration: none;background-color: transparent; }",
-        ".rich-text__wrapper a:hover { text-decoration: underline; }"
+        "@media screen and (min-width: 990px) {.rich-text__blocks {max-width: 100%; }}",
+        ".rich-text__wrapper {width: unset; padding: 0;}",
+        ".rich-text__wrapper a {color: #098fc7; text-decoration: none; background-color: transparent;}",
+        ".rich-text__wrapper a:hover {text-decoration: underline;}"
       ],
       "settings": {
         "desktop_content_position": "left",
-        "content_alignment": "left",
+        "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,

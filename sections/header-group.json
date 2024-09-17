@@ -1,37 +1,22 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement_bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement_LDchzp": {
-          "type": "announcement",
-          "settings": {
-            "text": "Premium Mattress Sale | The Highest Rated Mattress Store | Financing Available: Buy Now, Pay Over Time! Select AFFIRM at Checkout.",
-            "link": "shopify:\/\/collections\/all-mattresses"
-          }
-        },
-        "announcement_MtDm69": {
-          "type": "announcement",
-          "settings": {
-            "text": "FREE Shipping over $499",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "announcement_LDchzp",
-        "announcement_MtDm69"
-      ],
+    "invx-announcement": {
+      "type": "invx-announcement-bar",
       "settings": {
-        "color_scheme": "scheme-5",
-        "show_line_separator": true,
-        "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_country_selector": false,
-        "enable_language_selector": false
+        "background_color": "#d7355c",
+        "announcement": "<p><strong>New Product Alert:<\/strong> <a href=\"\/collections\/marshall-mattresses\" title=\"Marshall Mattresses\">Marshall Mattresses<\/a> Now On Sale | Financing Available: Buy Now, Pay Over Time with AFFIRM.<\/p>",
+        "duration": "session"
       }
     },
     "header": {
@@ -53,36 +38,11 @@
         "padding_bottom": 8
       }
     },
-    "announcement_bar_3xBxrG": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement_znVyhB": {
-          "type": "announcement",
-          "settings": {
-            "text": "1905-212-7722",
-            "link": "tel:1905-212-7722"
-          }
-        }
-      },
-      "block_order": [
-        "announcement_znVyhB"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "",
-        "show_line_separator": false,
-        "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 10,
-        "enable_country_selector": false,
-        "enable_language_selector": false
-      }
-    },
     "header-mid": {
       "type": "header-mid",
       "settings": {
         "text_color": "#ffffff",
-        "phone_number": "1905-212-7722",
+        "phone_number": "1-905-212-7722",
         "contact_us_page": "contact-us",
         "offer_text": "FREE Shipping over $499"
       }
@@ -90,11 +50,15 @@
     "header-bottom": {
       "type": "header-bottom",
       "settings": {
-        "phone_number": "1905-212-7722",
+        "phone_number": "1-905-212-7722",
         "meta_menu_title": "All Mattresses",
         "mega_menu": "mega-menu",
         "mega_menu_bottom_label": "VIEW ALL MATTRESSES",
         "mega_menu_bottom_link": "",
+        "mega_menu_bottom_label2": "VIEW ALL COLLECTIONS",
+        "mega_menu_bottom_link2": "",
+        "mega_menu_bottom_label3": "VIEW ALL BRANDS",
+        "mega_menu_bottom_link3": "shopify:\/\/pages\/brands",
         "bottom_menu": "main",
         "match_maker_label": "Mattress Matchmaker",
         "match_maker_link": "\/pages\/mattress-matchmaker\/"
@@ -102,9 +66,8 @@
     }
   },
   "order": [
-    "announcement_bar",
+    "invx-announcement",
     "header",
-    "announcement_bar_3xBxrG",
     "header-mid",
     "header-bottom"
   ]

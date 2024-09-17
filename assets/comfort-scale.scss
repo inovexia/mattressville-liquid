@@ -1,6 +1,6 @@
 .comfort-scale {
   display: flex;
-  flex-direction: column;
+  width:100%;
   margin-bottom: 6px;
 
   h4{
@@ -10,10 +10,23 @@
     letter-spacing: 0.13rem;
     margin-block: 0;
   }
+  .firm-scale{
+    display: none;
+    flex-grow: 1;
+    background-color: #535353;
+    color: #ffffff;
+    padding: 7px 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+  }
 
   .firm-meter {
     display: flex;
     flex-direction: column;
+    flex-shrink: 1;
+    width:100%;
 
     .firmness {
       color: var(--secondary-color);

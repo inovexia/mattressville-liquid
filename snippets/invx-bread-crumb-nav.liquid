@@ -7,6 +7,8 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .breadcrumbs__item {
@@ -14,7 +16,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 70%;
+    font-size: 13px;
   }
 
   .breadcrumbs__item:not(:last-child):after {
@@ -32,6 +34,8 @@
     font-weight: 700;
     text-decoration: none;
     white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .breadcrumbs__link[aria-current='page'] {
@@ -49,7 +53,10 @@
 {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
   {%- assign t = template | split: '.' | first -%}
 
-  <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+  <nav
+    class="breadcrumbs"
+    role="navigation"
+    aria-label="breadcrumbs">
     <ol class="breadcrumbs__list">
       <li class="breadcrumbs__item">
         <a class="breadcrumbs__link home" href="/">Home</a>
@@ -57,61 +64,119 @@
       {%- case t -%}
         {%- when 'page' -%}
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title | truncate: 20 }}</a>
+            <a
+              class="breadcrumbs__link"
+              href="{{ page.url }}"
+              aria-current="page">{{ page.title | truncate: 20 }}</a>
           </li>
-        {%- when 'product' -%}
+        {%- when 'products' -%}
           {%- if collection.url -%}
             <li class="breadcrumbs__item">
               {{ collection.title | link_to: collection.url }}
             </li>
           {%- endif -%}
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">
+            <a
+              class="breadcrumbs__link"
+              href="{{ product.url }}"
+              aria-current="page">
               {{- product.title | truncate: 20 -}}
             </a>
           </li>
+        {%- when 'product' -%}
+          {% assign is_accessories = false %}
+
+          {% for collection in product.collections %}
+            {% if collection.handle == "accessories" %}
+              {% assign is_accessories = true %}
+            {% endif %}
+          {% endfor %}
+
+          <li class="breadcrumbs__item">
+            {% if is_accessories %}
+              <a href="/collections/accessories">Accessories</a>
+            {% else %}
+              <a href="/collections/all-mattresses">All Mattresses</a>
+            {% endif %}
+          </li>
         {%- when 'collection' and collection.handle -%}
+          {%- if collection.handle == "accessories" or collection.handle == "pillows" or collection.handle == "bed-frames" or collection.handle == "mattress-protectors" or collection.handle == "box-springs" or collection.handle == "mattress-toppers" -%}
+            <li class="breadcrumbs__item {{ collection.handle }}">
+              <a href="/collections/accessories">Accessories</a>
+            </li>
+          {%- else -%}
+            <li class="breadcrumbs__item {{ collection.handle }}">
+              <a href="/collections/all-mattresses">All Mattresses</a>
+            </li>
+          {%- endif -%}
           {%- if current_tags -%}
             <li class="breadcrumbs__item">
               {{ collection.title | link_to: collection.url }}
             </li>
             <li class="breadcrumbs__item">
               {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
-              <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: ' + ' }}</a>
+              <a
+                class="breadcrumbs__link tags-list"
+                href="{{ tag_url }}"
+                aria-current="page">{{ current_tags | join: ' + ' | truncate: 20 }}</a>
             </li>
           {%- else -%}
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">
+              <a
+                class="breadcrumbs__link"
+                href="{{ collection.url }}"
+                aria-current="page">
                 {{- collection.title | truncate: 20 -}}
               </a>
             </li>
           {%- endif -%}
         {%- when 'blog' -%}
-          {%- if current_tags -%}
-            <li class="breadcrumbs__item">
-              {{ blog.title | link_to: blog.url | truncate: 20 }}
-            </li>
-            <li class="breadcrumbs__item">
-              {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
-              <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: ' + ' }}</a>
-            </li>
-          {%- else -%}
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="{{ blog.url }}" aria-current="page">{{ blog.title | truncate: 20 }}</a>
-            </li>
-          {%- endif -%}
+          <li class="breadcrumbs__item">
+            Blog
+          </li>
+        {% comment %} 
+                                                                                                                                                                                                                  {%- if current_tags -%}
+                                          
+                                                                                                                                                                                                                  <li class="breadcrumbs__item"> 
+                                                                                                                                                                                                                  {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%} 
+                                                                                                                                                                                                                  <a 
+                                                                                                                                                                                                                  class="breadcrumbs__link" 
+                                                                                                                                                                                                                  href="{{ tag_url }}" 
+                                                                                                                                                                                                                  aria-current="page">{{ current_tags | join: ' + ' }}</a>
+                                                                                                                                                                                                                  </li> 
+                                          
+                                                                                                                                                                                                                  {%- else -%}
+                                                                                                                                                                                                                  <li class="breadcrumbs__item"> 
+                                                                                                                                                                                                                  <a 
+                                                                                                                                                                                                                  class="breadcrumbs__link" 
+                                                                                                                                                                                                                  href="{{ blog.url }}" 
+                                                                                                                                                                                                                  aria-current="page">{{ blog.title | truncate: 20 }}</a>
+                                                                                                                                                                                                                  </li>
+                                                                                                                                                                                                                  {%- endif -%} 
+                                                                                                                                                                        {% endcomment %}
         {%- when 'article' -%}
           <li class="breadcrumbs__item">
-            {{ blog.title | link_to: blog.url }}
+            <a href="/pages/blog">Blog</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="{{ article.url }}" aria-current="page">
-              {{- article.title | truncate: 20 -}}
-            </a>
+            {{ blog.title }}
           </li>
+        {% comment %} 
+                                                                                                                                                                                                                                      <li class="breadcrumbs__item">
+                                                                                                                                                                                                                                        <a
+                                                                                                                                                                                                                                          class="breadcrumbs__link"
+                                                                                                                                                                                                                                          href="{{ article.url }}"
+                                                                                                                                                                                                                                          aria-current="page">
+                                                                                                                                                                                                                                          {{- article.title | truncate: 20 -}}
+                                                                                                                                                                                                                                        </a>
+                                                                                                                                                                                                                                      </li>
+                                                                                                                                                                                        {% endcomment %}
         {%- else -%}
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">
+            <a
+              class="breadcrumbs__link"
+              href="{{ request.path }}"
+              aria-current="page">
               {{- page_title | truncate: 20 -}}
             </a>
           </li>

@@ -105,7 +105,8 @@
         "text_zUzLHV"
       ],
       "custom_css": [
-        ".rich-text__wrapper {padding: 0;}"
+        ".rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks {max-width: 100%;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -119,14 +120,14 @@
     "collapsible_multicolumn": {
       "type": "collapsible-multicolumn",
       "blocks": {
-        "column_GwnwJn": {
+        "column_X4GdeX": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville.ca_tempur-pedic-logo.png",
             "title": "<strong>TEMPUR-PEDIC<\/strong>",
             "text": "<p>Tempur-Pedic® mattresses are designed to help you relax and sleep better. It is more than a typical memory foam mattress. TEMPUR® material is not typical memory foam. Their proprietary formulation changed the way the world sleeps.<\/p>",
-            "link_label": "View Stearns & Foster Products",
-            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
+            "link_label": "View Tempur-Pedic products",
+            "link": "shopify:\/\/collections\/tempur-pedic"
           }
         },
         "column_QQpqiM": {
@@ -135,8 +136,8 @@
             "image": "shopify:\/\/shop_images\/mattressville.ca_seally-logo.png",
             "title": "<strong>SEALLY<\/strong>",
             "text": "<p>Since 1881, Sealy has built mattresses that focus on support, comfort, and value. Sealy Posturepedic mattresses are designed to give you the rest you need to wake up renewed, refreshed, and ready to face your day.<\/p>",
-            "link_label": "View Stearns & Foster Products",
-            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
+            "link_label": "View Sealy products",
+            "link": "shopify:\/\/collections\/sealy"
           }
         },
         "column_T9tT7g": {
@@ -146,7 +147,7 @@
             "title": "<strong>STEARNS & FOSTER<\/strong>",
             "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>",
             "link_label": "View Stearns & Foster Products",
-            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
+            "link": "shopify:\/\/collections\/stearns-and-foster"
           }
         },
         "column_B8hBVB": {
@@ -155,19 +156,19 @@
             "image": "shopify:\/\/shop_images\/mattressville.ca_beautyrest-logo.png",
             "title": "<strong>BEAUTYREST<\/strong>",
             "text": "<p>Sleep is more than a necessity and a mattress should represent something more than the utility. Beautyrest Black® is where technology and luxury intertwine to take you far beyond mere comfort. It's about sleep that indulges the senses. Sleep that refuses to compromise. Sleep that's so completely restorative and inspiring, it borders on the sacred.<\/p>",
-            "link_label": "View Stearns & Foster Products",
-            "link": "shopify:\/\/collections\/brand-stearns-and-foster"
+            "link_label": "View Beautyrest products",
+            "link": "shopify:\/\/collections\/beautyrest"
           }
         }
       },
       "block_order": [
-        "column_GwnwJn",
+        "column_X4GdeX",
         "column_QQpqiM",
         "column_T9tT7g",
         "column_B8hBVB"
       ],
       "custom_css": [
-        
+        ".section-template--22113196278068__collapsible_multicolumn-padding {padding: 0;}"
       ],
       "settings": {
         "title": "",
@@ -230,7 +231,7 @@
           "settings": {
             "heading": "Referral Program",
             "icon": "none",
-            "row_content": "<p>With your Mattressville referral program account, you will be provided with a unique discount link that you can share with your friends to enjoy a number of benefits from us. Our referral program also gives you an opportunity to receive extra cash, free presents, additional discounts or store credit for your future purchases. Contact us online today for more details or give us a call at (888) 841 0905!<\/p>",
+            "row_content": "<p>With your Mattressville referral program account, you will be provided with a unique discount link that you can share with your friends to enjoy a number of benefits from us. Our referral program also gives you an opportunity to receive extra cash, free presents, additional discounts or store credit for your future purchases. Contact us online today for more details or give us a call at 905-212-7722!<\/p>",
             "page": ""
           }
         }
@@ -244,7 +245,8 @@
       ],
       "custom_css": [
         "h3 {font-size: 1.4em;}",
-        ".accordion {padding: 0;}"
+        ".accordion {padding: 0; max-width: 930px;}",
+        ".collapsible-content-wrapper-narrow {max-width: 100%;}"
       ],
       "settings": {
         "caption": "",
@@ -281,6 +283,9 @@
       "block_order": [
         "heading_azWRtK",
         "text_pN7b38"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {padding: 0;}"
       ],
       "settings": {
         "desktop_content_position": "left",
@@ -431,7 +436,7 @@
         "column_bLVQJB": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville.ca_progress-50.jpg",
+            "image": "shopify:\/\/shop_images\/65percent.jpg",
             "title": "",
             "text": "<h4><strong>Total Savings<\/strong><\/h4>",
             "link_label": "",
@@ -444,7 +449,8 @@
       ],
       "custom_css": [
         ".multicolumn-card {padding-top: 20px; border-radius: 5px; box-shadow: -5px -2px 8px #ccc;}",
-        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 100%; max-width: 120px;}"
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 100%; max-width: 120px;}",
+        ".animate--slide-in {padding-left: 0; padding-right: 0; max-width: 100%;}"
       ],
       "settings": {
         "title": "",

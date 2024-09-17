@@ -14,7 +14,7 @@
           class="footer-logo"
           loading="lazy"
           height="55"
-          width="322" />
+          width="322">
       {%- else -%}
         <img
           src="{{ 'mattressville-logo-white-slogan.png' | asset_img_url: 'master' }}"
@@ -22,7 +22,7 @@
           class="footer-logo"
           loading="lazy"
           height="55"
-          width="322" />
+          width="322">
       {%- endif -%}
     </div>
     <div class="end">
@@ -31,8 +31,10 @@
           {%- for item in section.settings.footer_menu.links -%}
             <a
               class="menu-link"
-              area-label="{{ item.title | escape }}"
-              href="{{ item.url }}/">{{ item.title | escape }}</a>
+              title="{{ item.title | escape }}"
+              href="{{ item.url }}">
+              {{- item.title | escape -}}
+            </a>
           {%- endfor -%}
         </div>
       </div>
@@ -46,7 +48,7 @@
                 alt="google_pay"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60">
             {%- endif -%}
             {%- if section.settings.enable_affirm_payment -%}
               <img
@@ -54,7 +56,7 @@
                 alt="affirm"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60">
             {%- endif -%}
             {%- if section.settings.enable_opay_payment -%}
               <img
@@ -62,7 +64,7 @@
                 alt="opay"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60">
             {%- endif -%}
             {%- if section.settings.enable_american_express_payment -%}
               <img
@@ -70,7 +72,7 @@
                 alt="american_express"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60">
             {%- endif -%}
             {%- if section.settings.enable_apple_pay_payment -%}
               <img
@@ -78,7 +80,7 @@
                 alt="apple_pay"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60">
             {%- endif -%}
             {%- if section.settings.enable_diners_club_payment -%}
               <img
@@ -86,7 +88,7 @@
                 alt="diners_club"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60">
             {%- endif -%}
             {%- if section.settings.enable_discover_payment -%}
               <img
@@ -94,7 +96,7 @@
                 alt="discover"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60">
             {%- endif -%}
             {%- if section.settings.enable_master_payment -%}
               <img
@@ -102,7 +104,7 @@
                 alt="master"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60">
             {%- endif -%}
             {%- if section.settings.enable_shopify_pay_payment -%}
               <img
@@ -110,7 +112,7 @@
                 alt="shopify_pay"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60">
             {%- endif -%}
             {%- if section.settings.enable_visa_payment -%}
               <img
@@ -118,7 +120,7 @@
                 alt="visa"
                 loading="lazy"
                 height="38"
-                width="60" />
+                width="60">
             {%- endif -%}
             {%- if section.settings.enable_paypal_payment -%}
               <img
@@ -126,17 +128,16 @@
                 alt="paypal"
                 loading="lazy"
                 height="38"
-                width="60" />
-              {%- endif -%}
+                width="60">
+            {%- endif -%}
           </div>
           <div class="social-media">
             {%- if settings.social_twitter_link != blank -%}
               <a
                 href="{{ settings.social_twitter_link }}"
                 target="_blank"
-                rel="nofollow noreferrer"
                 class="media-link"
-                area-label="Twitter">
+                title="Twitter">
                 <i class="gsi gs-twitter-alt"></i>
               </a>
             {%- endif -%}
@@ -144,9 +145,8 @@
               <a
                 href="{{ settings.social_facebook_link }}"
                 target="_blank"
-                rel="nofollow noreferrer"
                 class="media-link"
-                area-label="Facebook">
+                title="Facebook">
                 <i class="gsi gs-facebook-alt"></i>
               </a>
             {%- endif -%}
@@ -154,15 +154,17 @@
               <a
                 href="{{ settings.social_instagram_link }}"
                 target="_blank"
-                rel="nofollow noreferrer"
                 class="media-link"
-                area-label="Instagram">
+                title="Instagram">
                 <i class="gsi gs-instagram"></i>
               </a>
             {%- endif -%}
           </div>
         </div>
       </div>
+    </div>
+    <div>
+      <p>{{ section.settings.affirm_disclaimer }}</p>
     </div>
   </div>
 </div>
@@ -263,6 +265,11 @@
         "id": "enable_visa_payment",
         "default": true,
         "label": "Enable Visa Payment"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "affirm_disclaimer",
+        "label": "Affirm Disclaimer"
       }
     ]
   }

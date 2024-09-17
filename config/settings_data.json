@@ -1,10 +1,19 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/mattressville-logo-no-slogan.png",
     "logo_width": 260,
     "favicon": "shopify:\/\/shop_images\/favicon_862dbb71-c24a-4a7a-bd64-12a92645a18f.png",
-    "theme_accent": "#d7355c",
-    "theme_secondary": "#535353",
+    "theme_accent": "#ff5c7b",
+    "theme_secondary": "#212529",
     "type_header_font": "roboto_n7",
     "heading_scale": 100,
     "type_body_font": "roboto_n4",
@@ -12,8 +21,8 @@
     "page_width": 1360,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 4,
-    "spacing_grid_vertical": 8,
-    "animations_reveal_on_scroll": true,
+    "spacing_grid_vertical": 40,
+    "animations_reveal_on_scroll": false,
     "animations_hover_elements": "default",
     "buttons_border_thickness": 0,
     "buttons_border_opacity": 100,
@@ -49,7 +58,7 @@
     "card_shadow_blur": 10,
     "all_collection_title": "All Products",
     "all_collection_desc": "",
-    "collection_card_style": "card",
+    "collection_card_style": "standard",
     "collection_card_image_padding": 6,
     "collection_card_text_alignment": "center",
     "collection_card_color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
@@ -103,10 +112,10 @@
     "sale_badge_color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
     "sold_out_badge_color_scheme": "scheme-3",
     "social_facebook_link": "https:\/\/www.facebook.com\/mattressville",
-    "social_instagram_link": "https:\/\/www.instagram.com\/mattressvilleca",
-    "social_youtube_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/mattressvilleca\/",
+    "social_youtube_link": "https:\/\/www.youtube.com\/@Mattressville",
     "social_tiktok_link": "",
-    "social_twitter_link": "https:\/\/twitter.com\/mattressville1",
+    "social_twitter_link": "https:\/\/x.com\/mattressville1",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
     "social_tumblr_link": "",
@@ -125,7 +134,7 @@
     "checkout_input_background_color_mode": "white",
     "checkout_heading_font": "Roboto",
     "checkout_body_font": "Roboto",
-    "checkout_button_color": "#d7355c",
+    "checkout_button_color": "#ff5c7b",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -163,12 +172,6 @@
           "product": ""
         }
       },
-      "9365423049038898845": {
-        "type": "shopify:\/\/apps\/tawk-to-live-chat\/blocks\/widget-embed-code\/91169e75-f163-40ce-90e0-9059f3c9b772",
-        "disabled": true,
-        "settings": {
-        }
-      },
       "7046932070715527255": {
         "type": "shopify:\/\/apps\/puco-sections-blocks\/blocks\/app-embed-javascript\/f1ea0cb9-0193-44b7-bab7-d0fd6bec6cbf",
         "disabled": false,
@@ -181,8 +184,14 @@
         "settings": {
         }
       },
-      "10534424223343191814": {
-        "type": "shopify:\/\/apps\/customer-dashboard\/blocks\/app-embed\/f81081fd-cd04-43ee-897a-18ef0e5d9b04",
+      "9365423049038898845": {
+        "type": "shopify:\/\/apps\/tawk-to-live-chat\/blocks\/widget-embed-code\/91169e75-f163-40ce-90e0-9059f3c9b772",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "9159514687852383098": {
+        "type": "shopify:\/\/apps\/avada-seo-suite\/blocks\/avada-seo\/15507c6e-1aa3-45d3-b698-7e175e033440",
         "disabled": false,
         "settings": {
         }
@@ -193,7 +202,7 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#535353",
+          "text": "#212529",
           "button": "#535353",
           "button_label": "#ffffff",
           "secondary_button_label": "#535353",
@@ -204,7 +213,7 @@
         "settings": {
           "background": "#f3f3f3",
           "background_gradient": "",
-          "text": "#535353",
+          "text": "#212529",
           "button": "#535353",
           "button_label": "#f3f3f3",
           "secondary_button_label": "#535353",
@@ -239,7 +248,7 @@
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#d7355c",
+          "button_label": "#ff5c7b",
           "secondary_button_label": "#ffffff",
           "shadow": "#535353"
         }
@@ -250,7 +259,7 @@
           "background_gradient": "",
           "text": "#535353",
           "button": "#535353",
-          "button_label": "#d7355c",
+          "button_label": "#ff5c7b",
           "secondary_button_label": "#535353",
           "shadow": "#f1f3f4"
         }
@@ -260,9 +269,9 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#000000",
-          "button": "#d7355c",
+          "button": "#ff5c7b",
           "button_label": "#ffffff",
-          "secondary_button_label": "#d7355c",
+          "secondary_button_label": "#ff5c7b",
           "shadow": "#535353"
         }
       }
@@ -271,7 +280,7 @@
   "presets": {
     "Default": {
       "logo_width": 260,
-      "theme_accent": "#d7355c",
+      "theme_accent": "#ff5c7b",
       "theme_secondary": "#535353",
       "color_schemes": {
         "scheme-1": {
@@ -320,11 +329,11 @@
         },
         "scheme-5": {
           "settings": {
-            "background": "#d7355c",
+            "background": "#ff5c7b",
             "background_gradient": "",
             "text": "#FFFFFF",
             "button": "#FFFFFF",
-            "button_label": "#d7355c",
+            "button_label": "#ff5c7b",
             "secondary_button_label": "#FFFFFF",
             "shadow": "#535353"
           }
@@ -335,7 +344,7 @@
             "background_gradient": "",
             "text": "#535353",
             "button": "#535353",
-            "button_label": "#d7355c",
+            "button_label": "#ff5c7b",
             "secondary_button_label": "#535353",
             "shadow": "#f1f3f4"
           }
@@ -469,10 +478,23 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "details[id*=\"filter.p.tag\"] {display: none;}",
-      ".content > p > img {border-radius: 25px;}",
+      "\/*details[id*=\"filter.p.tag\"] {display: none;}",
+      "*\/.content > p > img {border-radius: 25px;}",
       ".collection-hero__image-page-width img {border-radius: 25px; box-shadow: 0 0 10px -8px var(--secondary-color);}",
-      "@media screen and (min-width: 750px) {.facets__form-vertical {width: 30rem; }}"
+      "@media screen and (min-width: 750px) {.facets__form-vertical {width: 30rem; }}",
+      "body .collection-hero__description span,body .collection-hero__description p {font-size: 16px; line-height: 24px; color: #535353;}",
+      "body {color: #212529;}",
+      ".quantity-selector-btn {display: flex; align-items: center;}",
+      ".quantity-selector-btn .inventory-status {margin-left: 20px;}",
+      ".quantity-selector-btn .inventory-status .in-s {color: rgb(34, 139, 34); text-transform: uppercase;}",
+      ".quantity-selector-btn .inventory-status .out-s {color: #ff5c7b; text-transform: uppercase;}",
+      " \/* Why Mattressville Page *\/.multicolumn-card__info ul li {text-decoration: none; color: #212529; line-height: 30px; font-size: 13px; border-bottom: none; font-family: \"Roboto\", sans-serif;}",
+      " \/* Why Mattressville *\/.page-width.section-template--22113196278068__multicolumn_PHYEYn-padding.isolate.scroll-trigger.animate--slide-in {padding: 0;}",
+      ".section-template--22113196278068__multicolumn_NtqcKh-padding {padding-left: 0; padding-right: 0;}",
+      "#Slide-template--22113196278068__multicolumn_A9Ngk7-2 .multicolumn-card__info a:first-child {pointer-events: none;}",
+      ".section-template--22113195491636__rich_text_9MpUtR-padding .rich-text__text.rte.scroll-trigger.animate--slide-in {color: #212529;}",
+      "@media (prefers-reduced-motion: no-preference) {.scroll-trigger.animate--slide-in {transform: unset; }}",
+      ".article-template__content p img {border: none;}"
     ]
   }
 }

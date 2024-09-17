@@ -1,209 +1,140 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
-    "slideshow_yh9aX9": {
-      "type": "landing-slideshow",
+    "invx-slider": {
+      "type": "invx-home-slider",
       "blocks": {
         "slide_PEgBhX": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/welcome_to_Mattressville_banner_main.webp",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_gQ3iXy": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Why_Tempur-Pedic_is_the_King_of_Memory_Foam_Mattresses-mattressville.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_mp4EPY": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/younger_generations_are_opting_for_adjustable_beds.webp",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "shopify:\/\/collections\/all",
-            "button_style_secondary": false,
-            "box_align": "middle-right",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_86rVjX": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/The_Best_Mattresses_of_2023-Mattressville.webp",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_mgniDF": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_natura_banner_rev_2024_ddd17fac-ab54-4ae3-acc0-7c8dd0ed254c.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_CKrRRg": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "slide_link": "\/collections\/all-mattresses"
           }
         },
         "slide_yQaMJP": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/mattressville_kingsdown_coolwave_banner.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_9y8Uir": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_banner_stearns_and_foster__2024.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_yTF6mG": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mattressville_sealy_repreve_banner_2024.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "slide_link": "shopify:\/\/products\/kingsdown-cool-wave-tight-top-mattress"
           }
         },
         "slide_bTWUcd": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Tempur-pedic_home_banner_48a81cb1-840c-4199-a41e-3d9403c99dd5.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "slide_link": "shopify:\/\/collections\/tempur-pedic"
+          }
+        },
+        "slide_k4wTAU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Marshall_mattresses_home.png",
+            "slide_link": "shopify:\/\/collections\/marshall-mattresses"
+          }
+        },
+        "slide_9y8Uir": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_banner_stearns_and_foster__2024.jpg",
+            "slide_link": "shopify:\/\/collections\/stearns-and-foster"
+          }
+        },
+        "slide_mgniDF": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_natura_banner_rev_2024_ddd17fac-ab54-4ae3-acc0-7c8dd0ed254c.jpg",
+            "slide_link": "shopify:\/\/collections\/natura"
+          }
+        },
+        "slide_86rVjX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/The_Best_Mattresses_of_2024-Mattressville_home.png",
+            "slide_link": "shopify:\/\/blogs\/tips\/best-mattresses-of-2023"
+          }
+        },
+        "slide_9gwrCP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mattress_Shopping_Checklist_A_Mattress_Buyer_s_Musts.jpg",
+            "slide_link": "shopify:\/\/blogs\/tips\/mattress-shopping-checklist-a-mattress-buyers-musts"
+          }
+        },
+        "slide_gQ3iXy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Why_Tempur-Pedic_is_the_King_of_Memory_Foam_Mattresses-mattressville.jpg",
+            "slide_link": "shopify:\/\/blogs\/featured-brands\/why-tempur-pedic-is-the-king-of-memory-foam-mattresses"
+          }
+        },
+        "slide_mp4EPY": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/younger_generations_are_opting_for_adjustable_beds_89d00b5b-1a02-47b5-88fa-8187893398e0.webp",
+            "slide_link": "shopify:\/\/blogs\/health-sleep-wellness\/why-adjustable-beds-aren-t-only-for-the-elderly"
+          }
+        },
+        "slide_CKrRRg": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
+            "slide_link": "shopify:\/\/blogs\/tips\/10-reasons-to-gift-a-mattress"
+          }
+        },
+        "slide_dQJUbb": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/The_Secret_Known_By_Athletes_To_Improve_Health_Well_Being_1047_x_427_px.png",
+            "slide_link": "https:\/\/mattressville.ca\/blogs\/health-sleep-wellness\/the-secret-known-by-athletes"
+          }
+        },
+        "slide_pbndLR": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mattressville_canada_day_blog_header.png",
+            "slide_link": "shopify:\/\/blogs\/promotions\/why-our-canada-day-mattress-sale-is-better-than-others"
           }
         }
       },
       "block_order": [
         "slide_PEgBhX",
+        "slide_yQaMJP",
+        "slide_bTWUcd",
+        "slide_k4wTAU",
+        "slide_9y8Uir",
+        "slide_mgniDF",
+        "slide_86rVjX",
+        "slide_9gwrCP",
         "slide_gQ3iXy",
         "slide_mp4EPY",
-        "slide_86rVjX",
-        "slide_mgniDF",
         "slide_CKrRRg",
-        "slide_yQaMJP",
-        "slide_9y8Uir",
-        "slide_yTF6mG",
-        "slide_bTWUcd"
+        "slide_dQJUbb",
+        "slide_pbndLR"
       ],
       "custom_css": [
-        "slideshow-component {margin-top: 20px;}"
+        "slideshow-component {margin-top: 20px;}",
+        ".home-slideshow {width: 80%;}",
+        ".home-slideshow .media {background-color: transparent;}",
+        ".home-slideshow a,.home-slideshow img {border-radius: 15px;}",
+        ".slideshow__controls {display: none;}"
       ],
       "settings": {
         "slide_height": "adapt_image",
-        "slider_visual": "counter",
+        "slider_visual": "dots",
         "auto_rotate": true,
-        "change_slides_speed": 5,
+        "change_slides_speed": 3,
         "image_behavior": "none",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
@@ -223,9 +154,9 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/category1.webp",
-            "title": "",
+            "title": "MATTRESS IN A BOX",
             "text": "",
-            "link_label": "MATTRESS IN A BOX",
+            "link_label": "",
             "link": "shopify:\/\/collections\/mattress-in-a-box"
           }
         },
@@ -233,9 +164,9 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/category2.webp",
-            "title": "",
+            "title": "MEMORY FOAM MATTRESSES",
             "text": "",
-            "link_label": "MEMORY FOAM MATTRESSES",
+            "link_label": "",
             "link": "shopify:\/\/collections\/memory-foam"
           }
         },
@@ -243,19 +174,19 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/category3.webp",
-            "title": "",
+            "title": "ADJUSTABLE BED BASES",
             "text": "",
-            "link_label": "ADJUSTABLE BED BASES",
-            "link": "shopify:\/\/collections\/accessories-adjustable-beds"
+            "link_label": "",
+            "link": "shopify:\/\/collections\/adjustable-beds"
           }
         },
         "column_fcPXDa": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/category4.webp",
-            "title": "",
+            "title": "MATTRESS UNDER $500",
             "text": "",
-            "link_label": "MATTRESS UNDER $500",
+            "link_label": "",
             "link": "shopify:\/\/collections\/mattresses-under-500"
           }
         }
@@ -268,7 +199,9 @@
       ],
       "custom_css": [
         "img {border-radius: 15px;}",
-        ".background-none .multicolumn-card__image-wrapper + .multicolumn-card__info {padding-top: 0; font-weight: 700; letter-spacing: 0;}"
+        ".background-none .multicolumn-card__image-wrapper + .multicolumn-card__info {padding-top: 0; font-weight: 700; letter-spacing: 0;}",
+        ".multicolumn h3 {text-decoration: none; font-size: inherit; margin-top: 1.5rem;}",
+        ".multicolumn a {text-decoration: none;}"
       ],
       "settings": {
         "title": "<strong>Shop By Categories <\/strong>",
@@ -279,12 +212,12 @@
         "column_alignment": "left",
         "background_style": "none",
         "button_label": "Explore More",
-        "button_link": "shopify:\/\/collections\/all-mattresses",
+        "button_link": "shopify:\/\/collections",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 12,
-        "padding_bottom": 20
+        "padding_top": 0,
+        "padding_bottom": 4
       }
     },
     "psb_reviews_reviews_01_Vr6JBB": {
@@ -298,7 +231,7 @@
             "review_text": "",
             "review_name": "",
             "position": "",
-            "url_product": ""
+            "url_product": "shopify:\/\/collections\/beautyrest"
           }
         },
         "review_6jCr9J": {
@@ -309,7 +242,7 @@
             "review_text": "",
             "review_name": "",
             "position": "",
-            "url_product": ""
+            "url_product": "shopify:\/\/collections\/mattressville"
           }
         },
         "review_WpzmbW": {
@@ -320,7 +253,7 @@
             "review_text": "",
             "review_name": "",
             "position": "",
-            "url_product": ""
+            "url_product": "shopify:\/\/collections\/stearns-and-foster"
           }
         },
         "review_Lh6wpj": {
@@ -331,7 +264,7 @@
             "review_text": "",
             "review_name": "",
             "position": "",
-            "url_product": ""
+            "url_product": "shopify:\/\/collections\/tempur-pedic"
           }
         },
         "review_m3fQBC": {
@@ -342,7 +275,7 @@
             "review_text": "",
             "review_name": "",
             "position": "",
-            "url_product": ""
+            "url_product": "shopify:\/\/collections\/kingsdown"
           }
         },
         "review_46XecM": {
@@ -353,7 +286,7 @@
             "review_text": "",
             "review_name": "",
             "position": "",
-            "url_product": ""
+            "url_product": "shopify:\/\/collections\/serta-icomfort"
           }
         },
         "review_krBYzi": {
@@ -364,7 +297,7 @@
             "review_text": "",
             "review_name": "",
             "position": "",
-            "url_product": ""
+            "url_product": "shopify:\/\/collections\/sealy"
           }
         },
         "review_8tciHD": {
@@ -375,18 +308,18 @@
             "review_text": "",
             "review_name": "",
             "position": "",
-            "url_product": ""
+            "url_product": "shopify:\/\/collections\/natura"
           }
         },
         "review_a7AtDC": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/galaxy.webp",
+            "review_image": "shopify:\/\/shop_images\/marshall-mattress.svg",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
             "position": "",
-            "url_product": ""
+            "url_product": "shopify:\/\/collections\/marshall-mattresses"
           }
         },
         "review_PQEP6e": {
@@ -397,7 +330,7 @@
             "review_text": "",
             "review_name": "",
             "position": "",
-            "url_product": ""
+            "url_product": "shopify:\/\/collections\/serta"
           }
         }
       },
@@ -431,8 +364,8 @@
         "enable_pagination": false,
         "enable_navigation": false,
         "pagination_type": "bullets",
-        "background_color": "#e9f3f3",
-        "swiper_control_color": "#d7355c",
+        "background_color": "#eff9f9",
+        "swiper_control_color": "#ff5c7b",
         "review-background-color": "rgba(0,0,0,0)",
         "stars-color": "#ffa500",
         "text_color": "#000000",
@@ -445,6 +378,24 @@
         "section_padding_bottom_mobile": 0
       }
     },
+    "172323866386539f91": {
+      "type": "apps",
+      "blocks": {
+        "bundler_custom_bundle_HA7BWt": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "disabled": true,
+          "settings": {
+            "shortcode": ""
+          }
+        }
+      },
+      "block_order": [
+        "bundler_custom_bundle_HA7BWt"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "featured_collection_xLkaJK": {
       "type": "featured-collection",
       "custom_css": [
@@ -455,16 +406,16 @@
       "settings": {
         "title": "<strong>Trending Products<\/strong>",
         "heading_size": "h1",
-        "description": "<p><a href=\"\/collections\/all-mattresses\" title=\"All Mattresses\">Explore More<\/a><\/p>",
+        "description": "<p><a href=\"\/collections\/trending-products\" title=\"Trending Products\">Explore More<\/a><\/p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "all-mattresses",
+        "collection": "trending-products",
         "products_to_show": 4,
-        "columns_desktop": 2,
+        "columns_desktop": 4,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "outline",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
         "image_ratio": "square",
         "image_shape": "default",
@@ -474,8 +425,8 @@
         "enable_quick_add": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 20,
-        "padding_bottom": 4
+        "padding_top": 52,
+        "padding_bottom": 20
       }
     },
     "psb_gallery_gallery_01_pQmz4F": {
@@ -492,14 +443,14 @@
           "type": "image",
           "settings": {
             "background_image": "shopify:\/\/shop_images\/mattressville_clearance_small_8af409af-79e4-41d0-960c-115baae569dd.webp",
-            "link_to": "shopify:\/\/collections\/accessories-flash-deals"
+            "link_to": "shopify:\/\/collections\/clearance"
           }
         },
         "image_zqFU4b": {
           "type": "image",
           "settings": {
             "background_image": "shopify:\/\/shop_images\/mattressville_flash_deals_small_a42b2aa8-7487-4c2e-b3eb-6a936f200d2d.webp",
-            "link_to": "shopify:\/\/collections\/clearance"
+            "link_to": "shopify:\/\/collections\/flash-deals"
           }
         }
       },
@@ -537,14 +488,14 @@
         ".collection__description a:hover {color: #095f86;}"
       ],
       "settings": {
-        "title": "<strong>Today's Deal<\/strong>",
+        "title": "<strong>Today's Deals<\/strong>",
         "heading_size": "h1",
-        "description": "<p><a href=\"\/collections\/flash-deals\" title=\"Premium Mattress Deals\">Explore more<\/a><\/p>",
+        "description": "<p><a href=\"\/collections\/todays-deals\" title=\"Today's Deals\">Explore more<\/a><\/p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "flash-deals",
+        "collection": "todays-deals",
         "products_to_show": 4,
-        "columns_desktop": 2,
+        "columns_desktop": 4,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "outline",
@@ -558,7 +509,7 @@
         "enable_quick_add": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 24,
+        "padding_top": 52,
         "padding_bottom": 20
       }
     },
@@ -638,9 +589,10 @@
     }
   },
   "order": [
-    "slideshow_yh9aX9",
+    "invx-slider",
     "multicolumn_Yk9bxe",
     "psb_reviews_reviews_01_Vr6JBB",
+    "172323866386539f91",
     "featured_collection_xLkaJK",
     "psb_gallery_gallery_01_pQmz4F",
     "featured_collection_BY7Ca9",

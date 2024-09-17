@@ -3,8 +3,8 @@
 
 {% assign featuredArticles = false %}
 
-{% comment %}
-  Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable.
+{% comment %} 
+    Grab the last 50 (default) articles from each Blog. Add the articles to the featureArticles variable. 
 {% endcomment %}
 {% for featuredBlog in featuredBlogs %}
   {% if blogs[featuredBlog].articles %}
@@ -16,8 +16,8 @@
   {% endif %}
 {% endfor %}
 
-{% comment %}
-  If featuredArticles is not false we should have articles to show
+{% comment %} 
+    If featuredArticles is not false we should have articles to show 
 {% endcomment %}
 {% if featuredArticles %}
   {% assign featuredArticles = featuredArticles | sort: 'published_at' | reverse %}
@@ -27,7 +27,11 @@
       <li class="invx_sidebar_menu_li">
         <a href="{{ article.url }}">
           {% if article.image %}
-            <img src="{{ article.image.src | image_url: width: 220 }}" width="100%" height="auto">
+            <img
+              src="{{ article.image.src | image_url: width: 220 }}"
+              width="100%"
+              height="auto"
+              alt="Recent article image">
           {% endif %}
           <p>
             {{ article.title -}}

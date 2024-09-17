@@ -1,6 +1,12 @@
 .footer-bottom {
   display: none;
 }
+.footer-bottom .bottom-inner div p a {
+  color: #098fc7;
+}
+.footer-bottom .bottom-inner div p a:hover {
+  color: #098fc7;
+}
 @media (min-width: 992px) {
   .footer-bottom {
     display: block;
@@ -10,13 +16,15 @@
   }
   .footer-bottom .bottom-inner {
     display: flex;
+    flex-wrap: wrap;
   }
   .footer-bottom .bottom-inner .logo-area {
     font-style: 1px;
     margin-block: auto;
   }
   .footer-bottom .bottom-inner .logo-area .footer-logo {
-    margin-right: 30px;
+    margin-right: 0px;
+    width: 90%;
   }
   .footer-bottom .end {
     display: flex;

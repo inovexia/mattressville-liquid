@@ -1,11 +1,11 @@
-{%- comment -%}
-  {
-    "name": "Reviews 01",
-    "author": "PusherCommerce"
-    "description": "Please DO NOT copy in any form. Any act of copying will be sued and held responsible with the law",
-    "Semiwrite": "Yes",
-    "App": "S"
-  }
+{%- comment -%} 
+  { 
+  "name": "Reviews 01", 
+  "author": "PusherCommerce" 
+  "description": "Please DO NOT copy in any form. Any act of copying will be sued and held responsible with the law", 
+  "Semiwrite": "Yes", 
+  "App": "S"
+  } 
 {%- endcomment -%}
 {%- capture minify -%}
   {% comment %}
@@ -211,24 +211,24 @@
 {%- endcapture -%}
 {{ minify | strip_newlines }}
 
-<div id="psb-{{ section.id }}" class="psb-{{ section.id }} psb-section psb-reviews-reviews-01" style="display: none;">
+<div
+  id="psb-{{ section.id }}"
+  class="psb-{{ section.id }} psb-section psb-reviews-reviews-01"
+  style="display: none;">
   <div class="{{ section.settings.container_width }}">
     <div class="psb-review-heading psb-block-space">
       <{{ section.settings.heading_tag }}
-        class="psb-utilities-heading__heading psb-rte"
-        style="--heading-color: {{ section.settings.heading_color }}"
-      >
+                class="psb-utilities-heading__heading psb-rte"
+                style="--heading-color: {{ section.settings.heading_color }}"
+              >
         {{ section.settings.heading }}
-      </{{ section.settings.heading_tag }}>
-      <div
-        class="psb-utilities-heading__subheading psb-rte psb-block-space"
-        style="--subheading-color: {{ section.settings.subheading_color }}"
-      >
-        {{ section.settings.subheading }}
+        </{{ section.settings.heading_tag }}>
+        <div class="psb-utilities-heading__subheading psb-rte psb-block-space" style="--subheading-color: {{ section.settings.subheading_color }}">
+          {{ section.settings.subheading }}
+        </div>
       </div>
-    </div>
-    <div class="psb-relative psb-block-space">
-      <psb-swiper data-config='
+      <div class="psb-relative psb-block-space">
+        <psb-swiper data-config='
           {
             "pagination": {
               "el": "#psb-{{ section.id }} .swiper-pagination",
@@ -258,46 +258,45 @@
             }
           }
         '>
-        <div class="swiper">
-          <div class="psb-reviews-container swiper-wrapper">
-            {%- for block in section.blocks -%}
-              <div class="psb-reviews-item swiper-slide" {{ block.shopify_attributes }}>
-                <div class="psb-reviews-info">
-                  {%- if block.settings.review_image != blank -%}
-                    <img
-                      src="{{ block.settings.review_image | img_url: '450x450', crop: 'center' }}"
-                      alt="avatar"
-                      sizes="100%"
-                      loading="lazy"
-                      width="75"
-                      height="75"
-                    >
-                  {%- else -%}
-                    <img
-                      src="https://cdn.shopify.com/s/files/1/0663/5887/0235/files/team02.jpg"
-                      alt="avatar"
-                      sizes="100%"
-                      loading="lazy"
-                      width="75"
-                      height="75"
-                    >
-                  {%- endif -%}
-                  <div>
-                    {% if block.settings.url_product -%}
-                      <a href="{{ block.settings.url_product }}">
-                        <div>{{ block.settings.review_name }}</div>
-                        <div>{{ block.settings.position }}</div>
-                      </a>
-                    {%- else %}
-                      <div>
-                        <div>{{ block.settings.review_name }}</div>
-                        <div>{{ block.settings.position }}</div>
-                      </div>
-                    {%- endif %}
+          <div class="swiper">
+            <div class="psb-reviews-container swiper-wrapper">
+              {%- for block in section.blocks -%}
+                <div class="psb-reviews-item swiper-slide" {{ block.shopify_attributes }}>
+                  <div class="psb-reviews-info">
+                    <a href="{{ block.settings.url_product }}">
+                      {%- if block.settings.review_image != blank -%}
+                        <img
+                          src="{{ block.settings.review_image | img_url: '450x450', crop: 'center' }}"
+                          alt="avatar"
+                          loading="lazy"
+                          width="75"
+                          height="75">
+                      {%- else -%}
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/0663/5887/0235/files/team02.jpg"
+                          alt="avatar"
+                          sizes="100%"
+                          loading="lazy"
+                          width="75"
+                          height="75">
+                      {%- endif -%}
+                    </a>
+                    <div>
+                      {% if block.settings.url_product -%}
+                        <a href="{{ block.settings.url_product }}">
+                          <div>{{ block.settings.review_name }}</div>
+                          <div>{{ block.settings.position }}</div>
+                        </a>
+                      {%- else %}
+                        <div>
+                          <div>{{ block.settings.review_name }}</div>
+                          <div>{{ block.settings.position }}</div>
+                        </div>
+                      {%- endif %}
 
-                    {% if section.settings.enable_star %}
-                      <div class="psb-rating-wrapper">
-                        {%- capture rating_item -%}
+                      {% if section.settings.enable_star %}
+                        <div class="psb-rating-wrapper">
+                          {%- capture rating_item -%}
                           <div class="psb-rating-item">
                             <svg
                               class="svg-inline--fa fa-star"
@@ -315,447 +314,447 @@
                             <!-- <i class="fas fa-star"></i> Font Awesome fontawesome.com -->
                           </div>
                         {%- endcapture -%}
-                        {% if block.settings.review_stars == '5' %}
-                          <div class="psb-review-rating">
-                            {{ rating_item }}
-                            {{ rating_item }}
-                            {{ rating_item }}
-                            {{ rating_item }}
-                            {{ rating_item }}
-                          </div>
-                        {% elsif block.settings.review_stars == '4' %}
-                          <div class="psb-review-rating">
-                            {{ rating_item }}
-                            {{ rating_item }}
-                            {{ rating_item }}
-                            {{ rating_item }}
-                          </div>
-                        {% elsif block.settings.review_stars == '3' %}
-                          <div class="psb-review-rating">
-                            {{ rating_item }}
-                            {{ rating_item }}
-                            {{ rating_item }}
-                          </div>
-                        {% elsif block.settings.review_stars == '2' %}
-                          <div class="psb-review-rating">
-                            {{ rating_item }}
-                            {{ rating_item }}
-                          </div>
-                        {% elsif block.settings.review_stars == '1' %}
-                          <div class="psb-review-rating">
-                            {{ rating_item }}
-                          </div>
-                        {% endif %}
-                      </div>
-                    {% endif %}
+                          {% if block.settings.review_stars == '5' %}
+                            <div class="psb-review-rating">
+                              {{ rating_item }}
+                              {{ rating_item }}
+                              {{ rating_item }}
+                              {{ rating_item }}
+                              {{ rating_item }}
+                            </div>
+                          {% elsif block.settings.review_stars == '4' %}
+                            <div class="psb-review-rating">
+                              {{ rating_item }}
+                              {{ rating_item }}
+                              {{ rating_item }}
+                              {{ rating_item }}
+                            </div>
+                          {% elsif block.settings.review_stars == '3' %}
+                            <div class="psb-review-rating">
+                              {{ rating_item }}
+                              {{ rating_item }}
+                              {{ rating_item }}
+                            </div>
+                          {% elsif block.settings.review_stars == '2' %}
+                            <div class="psb-review-rating">
+                              {{ rating_item }}
+                              {{ rating_item }}
+                            </div>
+                          {% elsif block.settings.review_stars == '1' %}
+                            <div class="psb-review-rating">
+                              {{ rating_item }}
+                            </div>
+                          {% endif %}
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                  <div class="psb-review-text">
+                    {{ block.settings.review_text }}
                   </div>
                 </div>
-                <div class="psb-review-text">
-                  {{ block.settings.review_text }}
-                </div>
-              </div>
-            {%- endfor -%}
+              {%- endfor -%}
+            </div>
           </div>
-        </div>
-        <div class="psb-swiper-control">
-          {% if section.settings.enable_navigation %}
-            <div class="swiper-button-prev"></div>
-          {% endif %}
-          {% if section.settings.enable_pagination %}
-            <div class="swiper-pagination"></div>
-          {% endif %}
-          {% if section.settings.enable_navigation %}
-            <div class="swiper-button-next"></div>
-          {% endif %}
-        </div>
-      </psb-swiper>
+          <div class="psb-swiper-control">
+            {% if section.settings.enable_navigation %}
+              <div class="swiper-button-prev"></div>
+            {% endif %}
+            {% if section.settings.enable_pagination %}
+              <div class="swiper-pagination"></div>
+            {% endif %}
+            {% if section.settings.enable_navigation %}
+              <div class="swiper-button-next"></div>
+            {% endif %}
+          </div>
+        </psb-swiper>
+      </div>
     </div>
   </div>
-</div>
 
-{% schema %}
-{
-  "name": "⚡︎PSB: Reviews 01",
-  "tag": "section",
-  "settings": [
+  {% schema %}
     {
-      "type": "select",
-      "id": "container_width",
-      "options": [
-        {
-          "value": "psb-container",
-          "label": "Container"
-        },
-        {
-          "value": "psb-container-fluid",
-          "label": "Container Fluid"
-        },
-        {
-          "value": "psb-container-fullwidth",
-          "label": "Container Fullwidth"
-        }
-      ],
-      "default": "psb-container",
-      "label": "Container width"
-    },
-    {
-      "type": "header",
-      "content": "Heading settings"
-    },
-    {
-      "type": "richtext",
-      "id": "heading",
-      "default": "<p>Talk about your brand</p>",
-      "label": "Heading"
-    },
-    {
-      "type": "select",
-      "id": "heading_tag",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        },
-        {
-          "value": "div",
-          "label": "Div"
-        }
-      ],
-      "default": "h2",
-      "label": "Heading size"
-    },
-    {
-      "type": "richtext",
-      "id": "subheading",
-      "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-      "label": "Subheading"
-    },
-    {
-      "type": "color",
-      "id": "heading_color",
-      "label": "Heading color",
-      "default": "#000"
-    },
-    {
-      "type": "color",
-      "id": "subheading_color",
-      "label": "Subheading color",
-      "default": "#585454"
-    },
-    {
-      "type": "header",
-      "content": "Main settings"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_star",
-      "label": "Enable star",
-      "default": false
-    },
-    {
-      "type": "range",
-      "id": "border_radius",
-      "min": 0,
-      "max": 50,
-      "step": 2,
-      "unit": "px",
-      "label": "Border radius",
-      "default": 12
-    },
-    {
-      "type": "header",
-      "content": "Slider settings"
-    },
-    {
-      "type": "range",
-      "id": "slider_per_view",
-      "min": 1,
-      "max": 10,
-      "step": 0.1,
-      "unit": "pic",
-      "label": "Slider Per View",
-      "default": 3.3
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_loop",
-      "label": "Enable loop",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_autoplay",
-      "label": "Enable auto play",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_pagination",
-      "label": "Enable pagination",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_navigation",
-      "label": "Enable navigation",
-      "default": true
-    },
-    {
-      "type": "select",
-      "id": "pagination_type",
-      "options": [
-        {
-          "value": "bullets",
-          "label": "Bullets"
-        },
-        {
-          "value": "fraction",
-          "label": "Fraction"
-        }
-      ],
-      "default": "fraction",
-      "label": "Pagination type"
-    },
-    {
-      "type": "header",
-      "content": "Color"
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background color",
-      "default": "transparent"
-    },
-    {
-      "type": "color",
-      "id": "swiper_control_color",
-      "label": "Slider control color",
-      "default": "#57301b"
-    },
-    {
-      "type": "color",
-      "label": "Review background color",
-      "id": "review-background-color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "label": "Stars color",
-      "id": "stars-color",
-      "default": "#FFA500"
-    },
-    {
-      "type": "color",
-      "label": "Text color",
-      "id": "text_color",
-      "default": "#4B4B4B"
-    },
-    {
-      "type": "color",
-      "label": "Border color",
-      "id": "border_color",
-      "default": "#d3d3d3"
-    },
-    {
-      "type": "header",
-      "content": "Desktop"
-    },
-    {
-      "type": "select",
-      "id": "text_align",
-      "options": [
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "right",
-          "label": "Right"
-        }
-      ],
-      "default": "center",
-      "label": "Text align",
-      "info": "On Desktop"
-    },
-    {
-      "type": "range",
-      "id": "section_padding_top",
-      "min": 0,
-      "max": 500,
-      "step": 5,
-      "unit": "px",
-      "label": "Section padding-top",
-      "default": 50
-    },
-    {
-      "type": "range",
-      "id": "section_padding_bottom",
-      "min": 0,
-      "max": 500,
-      "step": 5,
-      "unit": "px",
-      "label": "Section padding-bottom",
-      "default": 50
-    },
-    {
-      "type": "header",
-      "content": "Mobile"
-    },
-    {
-      "type": "select",
-      "id": "text_align_mobile",
-      "options": [
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "right",
-          "label": "Right"
-        }
-      ],
-      "default": "center",
-      "label": "Text align",
-      "info": "On Mobile"
-    },
-    {
-      "type": "range",
-      "id": "section_padding_top_mobile",
-      "min": 0,
-      "max": 500,
-      "step": 5,
-      "unit": "px",
-      "label": "Section padding-top",
-      "default": 35
-    },
-    {
-      "type": "range",
-      "id": "section_padding_bottom_mobile",
-      "min": 0,
-      "max": 500,
-      "step": 5,
-      "unit": "px",
-      "label": "Section padding-bottom",
-      "default": 35
-    }
-  ],
-  "blocks": [
-    {
-      "type": "Review",
-      "name": "Review item",
+      "name": "⚡︎PSB: Reviews 01",
+      "tag": "section",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "review_image",
-          "label": "Customer image",
-          "info": "Recommended 1:1 ratio, square image"
-        },
-        {
           "type": "select",
-          "id": "review_stars",
-          "label": "Review rating",
+          "id": "container_width",
           "options": [
             {
-              "value": "5",
-              "label": "5"
+              "value": "psb-container",
+              "label": "Container"
             },
             {
-              "value": "4",
-              "label": "4"
+              "value": "psb-container-fluid",
+              "label": "Container Fluid"
             },
             {
-              "value": "3",
-              "label": "3"
-            },
-            {
-              "value": "2",
-              "label": "2"
-            },
-            {
-              "value": "1",
-              "label": "1"
+              "value": "psb-container-fullwidth",
+              "label": "Container Fullwidth"
             }
           ],
-          "default": "5"
+          "default": "psb-container",
+          "label": "Container width"
+        },
+        {
+          "type": "header",
+          "content": "Heading settings"
         },
         {
           "type": "richtext",
-          "id": "review_text",
-          "label": "Review text",
-          "default": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.</p>"
+          "id": "heading",
+          "default": "<p>Talk about your brand</p>",
+          "label": "Heading"
         },
         {
-          "type": "text",
-          "id": "review_name",
-          "label": "Reviewer name",
-          "default": "Mason Peter"
+          "type": "select",
+          "id": "heading_tag",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            },
+            {
+              "value": "div",
+              "label": "Div"
+            }
+          ],
+          "default": "h2",
+          "label": "Heading size"
         },
         {
-          "type": "text",
-          "id": "position",
-          "label": "Position or other info, etc.",
-          "default": "@ceo_mason"
+          "type": "richtext",
+          "id": "subheading",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "Subheading"
         },
         {
-          "type": "url",
-          "id": "url_product",
-          "label": "Reviewer or product url, etc."
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading color",
+          "default": "#000"
+        },
+        {
+          "type": "color",
+          "id": "subheading_color",
+          "label": "Subheading color",
+          "default": "#585454"
+        },
+        {
+          "type": "header",
+          "content": "Main settings"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_star",
+          "label": "Enable star",
+          "default": false
+        },
+        {
+          "type": "range",
+          "id": "border_radius",
+          "min": 0,
+          "max": 50,
+          "step": 2,
+          "unit": "px",
+          "label": "Border radius",
+          "default": 12
+        },
+        {
+          "type": "header",
+          "content": "Slider settings"
+        },
+        {
+          "type": "range",
+          "id": "slider_per_view",
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "pic",
+          "label": "Slider Per View",
+          "default": 3.3
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_loop",
+          "label": "Enable loop",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_autoplay",
+          "label": "Enable auto play",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_pagination",
+          "label": "Enable pagination",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_navigation",
+          "label": "Enable navigation",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "pagination_type",
+          "options": [
+            {
+              "value": "bullets",
+              "label": "Bullets"
+            },
+            {
+              "value": "fraction",
+              "label": "Fraction"
+            }
+          ],
+          "default": "fraction",
+          "label": "Pagination type"
+        },
+        {
+          "type": "header",
+          "content": "Color"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "transparent"
+        },
+        {
+          "type": "color",
+          "id": "swiper_control_color",
+          "label": "Slider control color",
+          "default": "#57301b"
+        },
+        {
+          "type": "color",
+          "label": "Review background color",
+          "id": "review-background-color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "label": "Stars color",
+          "id": "stars-color",
+          "default": "#FFA500"
+        },
+        {
+          "type": "color",
+          "label": "Text color",
+          "id": "text_color",
+          "default": "#4B4B4B"
+        },
+        {
+          "type": "color",
+          "label": "Border color",
+          "id": "border_color",
+          "default": "#d3d3d3"
+        },
+        {
+          "type": "header",
+          "content": "Desktop"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Text align",
+          "info": "On Desktop"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top",
+          "min": 0,
+          "max": 500,
+          "step": 5,
+          "unit": "px",
+          "label": "Section padding-top",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "section_padding_bottom",
+          "min": 0,
+          "max": 500,
+          "step": 5,
+          "unit": "px",
+          "label": "Section padding-bottom",
+          "default": 50
+        },
+        {
+          "type": "header",
+          "content": "Mobile"
+        },
+        {
+          "type": "select",
+          "id": "text_align_mobile",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Text align",
+          "info": "On Mobile"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top_mobile",
+          "min": 0,
+          "max": 500,
+          "step": 5,
+          "unit": "px",
+          "label": "Section padding-top",
+          "default": 35
+        },
+        {
+          "type": "range",
+          "id": "section_padding_bottom_mobile",
+          "min": 0,
+          "max": 500,
+          "step": 5,
+          "unit": "px",
+          "label": "Section padding-bottom",
+          "default": 35
         }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "⚡︎PSB: Reviews 01",
-      "settings": {
-        "heading": "<p>TESTIMONIALS</p>",
-        "subheading": "",
-        "enable_star": true,
-        "slider_per_view": 3
-      },
+      ],
       "blocks": [
         {
-          "type": "Review"
-        },
+          "type": "Review",
+          "name": "Review item",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "review_image",
+              "label": "Customer image",
+              "info": "Recommended 1:1 ratio, square image"
+            },
+            {
+              "type": "select",
+              "id": "review_stars",
+              "label": "Review rating",
+              "options": [
+                {
+                  "value": "5",
+                  "label": "5"
+                },
+                {
+                  "value": "4",
+                  "label": "4"
+                },
+                {
+                  "value": "3",
+                  "label": "3"
+                },
+                {
+                  "value": "2",
+                  "label": "2"
+                },
+                {
+                  "value": "1",
+                  "label": "1"
+                }
+              ],
+              "default": "5"
+            },
+            {
+              "type": "richtext",
+              "id": "review_text",
+              "label": "Review text",
+              "default": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.</p>"
+            },
+            {
+              "type": "text",
+              "id": "review_name",
+              "label": "Reviewer name",
+              "default": "Mason Peter"
+            },
+            {
+              "type": "text",
+              "id": "position",
+              "label": "Position or other info, etc.",
+              "default": "@ceo_mason"
+            },
+            {
+              "type": "url",
+              "id": "url_product",
+              "label": "Reviewer or product url, etc."
+            }
+          ]
+        }
+      ],
+      "presets": [
         {
-          "type": "Review"
-        },
-        {
-          "type": "Review"
-        },
-        {
-          "type": "Review"
+          "name": "⚡︎PSB: Reviews 01",
+          "settings": {
+            "heading": "<p>TESTIMONIALS</p>",
+            "subheading": "",
+            "enable_star": true,
+            "slider_per_view": 3
+          },
+          "blocks": [
+            {
+              "type": "Review"
+            },
+            {
+              "type": "Review"
+            },
+            {
+              "type": "Review"
+            },
+            {
+              "type": "Review"
+            }
+          ]
         }
       ]
     }
-  ]
-}
-{% endschema %}
+  {% endschema %}

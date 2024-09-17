@@ -83,6 +83,14 @@
       padding-top: 0.5rem;
     }
   }
+
+  .header__icon {
+    text-decoration: none;
+  }
+
+  .header__icon .gsi{
+    font-size: 22px;
+  }
 </style>
 
 {%- style -%}
@@ -109,12 +117,12 @@
   }
 {%- endstyle -%}
 
-<script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'details-disclosure.js' | asset_url }}" defer></script>
+<script src="{{ 'details-modal.js' | asset_url }}" defer></script>
+<script src="{{ 'cart-notification.js' | asset_url }}" defer></script>
+<script src="{{ 'search-form.js' | asset_url }}" defer></script>
 {%- if settings.cart_type == "drawer" -%}
-  <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'cart-drawer.js' | asset_url }}" defer></script>
 {%- endif -%}
 
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
@@ -129,7 +137,7 @@
   </symbol>
 
   <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
-    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor"/>
   </symbol>
 </svg>
 
@@ -175,7 +183,7 @@
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {%- if settings.logo != blank -%}
-              <div class="header__heading-logo-wrapper">
+              <span class="header__heading-logo-wrapper">
                 {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
                 {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
                 {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
@@ -183,13 +191,13 @@
                 {{ settings.logo | image_url: width: 600 | image_tag:
                   class: 'header__heading-logo motion-reduce',
                   widths: widths,
-                  height: logo_height,
+                  height:"30",
                   width: settings.logo_width,
                   alt: logo_alt,
                   sizes: sizes,
                   preload: true
                 }}
-              </div>
+              </span>
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>
             {%- endif -%}
@@ -223,7 +231,7 @@
                 {{ settings.logo | image_url: width: 600 | image_tag:
                   class: 'header__heading-logo',
                   widths: widths,
-                  height: logo_height,
+                  height:"30",
                   width: settings.logo_width,
                   alt: logo_alt,
                   sizes: sizes,
@@ -298,12 +306,9 @@
         {%- endif -%}
       </div>
       {% render 'header-search', input_id: 'Search-In-Modal' %}
-      {%- if section.settings.show_social and social_icons -%}
-        {%- render 'header-social-icons' -%}
-      {%- endif -%}
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
-          {% render 'icon-account' %}
+          <i class="gsi gs-user"></i>
           <span class="visually-hidden">
             {%- liquid
               if customer
@@ -324,13 +329,11 @@
       {%- endfor -%}
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-        {%- liquid
-          if cart == empty
-            render 'icon-cart-empty'
-          else
-            render 'icon-cart'
-          endif
-        -%}
+        {%- if cart != empty -%}
+          <i class="gsi gs-shopping-cart"></i>
+        {%- else -%}
+          <i class="gsi gs-shopping-cart"></i>
+        {%- endif -%}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
           <div class="cart-count-bubble">

@@ -1,45 +1,83 @@
-{% comment %}
+{% comment %} 
   Renders social icons.
-  Accepts:
+  Accepts: 
   - class: {String} a class to be added to the <ul> element (optional).
-
+ 
   Usage:
-  {% render 'header-social-icons',
-    class: 'my-class'
-  %}
+  {% render 'header-social-icons', 
+  class: 'my-class'
+  %} 
 {% endcomment %}
+{{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 {%- style -%}
-  .header-social-icons{
+  .header-social-icons {
     display: none;
+
+    /*
+   border-left: 2px solid #e6e6e6; 
+   border-right: 2px solid #e6e6e6;
+*/
   }
 
-  @media (min-width:990px){
-    .header-social-icons{
+  @media (min-width: 990px) {
+    .header-social-icons {
       display: flex;
+      margin-right: 10px;
     }
+
+    .list-social__item {}
+
+  .list-social__link {
+    text-decoration: none;
   }
+
+  .list-social__link .gsi {
+    font-size: 16px;
+    color: #fff;
+  }
+}
 {%- endstyle -%}
 
 <ul class="header-social-icons list-unstyled list-social{% if class %} {{ class}}{% endif %}" role="list">
   {%- if settings.social_facebook_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
-        {%- render 'icon-facebook-alt' -%}
+      <a
+        href="{{ settings.social_facebook_link }}"
+        class="link list-social__link"
+        aria-label="Read more about {{ 'general.social.links.facebook' | t }}">
+        <i class="gsi gs-facebook-alt"></i>
         <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
       </a>
     </li>
   {%- endif -%}
   {%- if settings.social_instagram_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_instagram_link }}" class="link list-social__link">
-        {%- render 'icon-instagram-alt' -%}
+      <a
+        href="{{ settings.social_instagram_link }}"
+        class="link list-social__link"
+        aria-label="Read more about {{ 'general.social.links.instagram' | t }}">
+        <i class="gsi gs-instagram"></i>
         <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_twitter_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_twitter_link }}"
+        class="link list-social__link"
+        aria-label="Read more about {{ 'general.social.links.twitter' | t }}">
+        <i class="gsi gs-twitter-alt"></i>
+        <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
       </a>
     </li>
   {%- endif -%}
   {%- if settings.social_youtube_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_youtube_link }}" class="link list-social__link">
+      <a
+        href="{{ settings.social_youtube_link }}"
+        class="link list-social__link"
+        aria-label="Read more about {{ 'general.social.links.youtube' | t }}">
         {%- render 'icon-youtube' -%}
         <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
       </a>
@@ -47,23 +85,21 @@
   {%- endif -%}
   {%- if settings.social_tiktok_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_tiktok_link }}" class="link list-social__link">
+      <a
+        href="{{ settings.social_tiktok_link }}"
+        class="link list-social__link"
+        aria-label="Read more about {{ 'general.social.links.tiktok' | t }}">
         {%- render 'icon-tiktok' -%}
         <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
       </a>
     </li>
   {%- endif -%}
-  {%- if settings.social_twitter_link != blank -%}
-    <li class="list-social__item">
-      <a href="{{ settings.social_twitter_link }}" class="link list-social__link">
-        {%- render 'icon-twitter-alt' -%}
-        <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-      </a>
-    </li>
-  {%- endif -%}
   {%- if settings.social_pinterest_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_pinterest_link }}" class="link list-social__link">
+      <a
+        href="{{ settings.social_pinterest_link }}"
+        class="link list-social__link"
+        aria-label="Read more about {{ 'general.social.links.pinterest' | t }}">
         {%- render 'icon-pinterest' -%}
         <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
       </a>
@@ -71,7 +107,10 @@
   {%- endif -%}
   {%- if settings.social_snapchat_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_snapchat_link }}" class="link list-social__link">
+      <a
+        href="{{ settings.social_snapchat_link }}"
+        class="link list-social__link"
+        aria-label="Read more about {{ 'general.social.links.snapchat' | t }}">
         {%- render 'icon-snapchat' -%}
         <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
       </a>
@@ -79,7 +118,10 @@
   {%- endif -%}
   {%- if settings.social_tumblr_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_tumblr_link }}" class="link list-social__link">
+      <a
+        href="{{ settings.social_tumblr_link }}"
+        class="link list-social__link"
+        aria-label="Read more about {{ 'general.social.links.tumblr' | t }}">
         {%- render 'icon-tumblr' -%}
         <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
       </a>
@@ -87,7 +129,10 @@
   {%- endif -%}
   {%- if settings.social_vimeo_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_vimeo_link }}" class="link list-social__link">
+      <a
+        href="{{ settings.social_vimeo_link }}"
+        class="link list-social__link"
+        aria-label="Read more about {{ 'general.social.links.vimeo' | t }}">
         {%- render 'icon-vimeo' -%}
         <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
       </a>

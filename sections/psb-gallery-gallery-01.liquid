@@ -1,21 +1,20 @@
-{%- comment -%}
-  {
-    "name": "Gallery 01",
-    "author": "PusherCommerce"
-    "description": "Please DO NOT copy in any form. Any act of copying will be sued and held responsible with the law"
-    "Semiwrite": "Yes",
-  }
+{%- comment -%} 
+      { 
+      "name": "Gallery 01", 
+      "author": "PusherCommerce" 
+      "description": "Please DO NOT copy in any form. Any act of copying will be sued and held responsible with the law" 
+      "Semiwrite": "Yes",
+      } 
 {%- endcomment -%}
 
-{% comment %}
-  Custom padding for keep layout mobile.
-  Note that: 12 + 3 = 15 ( 15 is orignal padding of Bootstrap)
+{% comment %} 
+      Custom padding for keep layout mobile.
+      Note that: 12 + 3 = 15 ( 15 is orignal padding of Bootstrap) 
 {% endcomment %}
 
 {% comment %} For desktop  {% endcomment %}
 {% assign custom_row_padding_desktop = 10 %}
-{% assign custom_column_padding_desktop = 15 | minus: custom_row_padding_desktop %}
-{% assign custom_gutter_desktop = custom_column_padding_desktop %}
+{% assign custom_column_padding_desktop = 15 | minus: custom_row_padding_desktop %}{% assign custom_gutter_desktop = custom_column_padding_desktop %}
 
 {% comment %} For mobile {% endcomment %}
 {% assign custom_row_padding = 12 %}
@@ -135,279 +134,287 @@
 {%- endcapture -%}
 {{ minify | strip_newlines }}
 
-<div id="psb-{{ section.id }}" class="psb-{{ section.id }} psb-section psb-gallery-gallery-01" style="display: none;">
+<div
+  id="psb-{{ section.id }}"
+  class="psb-{{ section.id }} psb-section psb-gallery-gallery-01"
+  style="display: none;">
   <div class="{{ section.settings.container_width }}">
     {% if section.settings.heading_text != blank %}
       <{{ section.settings.heading_tag }} class="psb-section-title">
         {{ section.settings.heading_text | escape }}
-      </{{ section.settings.heading_tag }}>
-    {% endif %}
-    <div class="psb-row {% if section.settings.enable_keep_layout %}is-keep-layout{% endif %}">
-      {% for block in section.blocks %}
-        {% case block.type %}
-          {% when 'image' %}
-            <div class="{% if section.settings.enable_keep_layout %}psb-col-4{% endif %} psb-col-md-4 image-column" {{ block.shopify_attributes }}>
-              {% liquid
-                if block.settings.link_to != blank
-                  assign wrapper = 'a'
-                else
-                  assign wrapper = 'div'
-                endif
-              %}
-              {% capture image_url_parts %}{{ "files/mattressville_clearance_small_8af409af-79e4-41d0-960c-115baae569dd.webp" | split: "/" }}{% endcapture %}
-              {% capture filename %}{{ image_url_parts | last | split: "." | first }}{% endcapture %}
-              {% assign alt_text = filename | replace: "_", " " | replace: "-", " " | capitalize %}
-              <{{ wrapper }}
-                {%- if wrapper == 'a' -%}
-                  href="{{ block.settings.link_to }}"
-                {%- endif -%}
-                aria-label="{{ alt_text }}"
-                class="psb-img-wrapper"
-              >
-                {% if block.settings.background_image == blank %}
-                  {% capture current_placeholder_image %}
+        </{{ section.settings.heading_tag }}>
+      {% endif %}
+      <div class="psb-row {% if section.settings.enable_keep_layout %}is-keep-layout{% endif %}">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'image' %}
+              <div class="{% if section.settings.enable_keep_layout %}psb-col-4{% endif %} psb-col-md-4 image-column" {{ block.shopify_attributes }}>
+                {% liquid
+                  if block.settings.link_to != blank
+                    assign wrapper = 'a'
+                  else
+                    assign wrapper = 'div'
+                  endif
+                %}
+                {% capture image_url_parts %}{{ "files/mattressville_clearance_small_8af409af-79e4-41d0-960c-115baae569dd.webp" | split: "/" }}{% endcapture %}
+                {% capture filename %}{{ image_url_parts | last | split: "." | first }}{% endcapture %}
+                {% assign alt_text = filename | replace: "_", " " | replace: "-", " " | capitalize %}
+                <{{ wrapper }}
+                                                                    aria-label="{{ alt_text }}"
+                                                                      class="psb-img-wrapper" 
+                                                                      {%- if wrapper == 'a' -%}
+                                                                         href="{{ block.settings.link_to }}"
+                                                                      {%- endif -%}
+                                                                    >
+                  {% if block.settings.background_image == blank %}
+                    {% capture current_placeholder_image %}
                     {% cycle
                       'https://cdn.shopify.com/s/files/1/0663/5887/0235/files/grooms-prep-kit-for-wedding_1500x.jpg',
                       'https://cdn.shopify.com/s/files/1/0663/5887/0235/files/flatlay-of-travel-essentials_1500x.jpg',
                       'https://cdn.shopify.com/s/files/1/0663/5887/0235/files/mans-hands-lean-on-ledge_1500x.jpg'
                     %}
                   {% endcapture %}
-                  <img src="{{ current_placeholder_image }}" alt="Placeholder image" width="1500" height="1500" loading="lazy">
-                {% else %}
-                  {{ block.settings.background_image | image_url: width: 1500 | image_tag: loading: 'lazy', alt: alt_text }}
-                {% endif %}
-              </{{ wrapper }}>
-            </div>
-        {% endcase %}
-      {% endfor %}
+                    <img
+                      src="{{ current_placeholder_image }}"
+                      alt="Placeholder image"
+                      width="1500"
+                      height="1500"
+                      loading="lazy">
+                  {% else %}
+                    {{ block.settings.background_image | image_url: width: 413.33 | image_tag: loading: 'lazy', alt: alt_text }}
+                  {% endif %}
+                </{{ wrapper }}>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
     </div>
   </div>
-</div>
 
-{% schema %}
-{
-  "name": "⚡︎PSB: Gallery 01",
-  "tag": "section",
-  "settings": [
-    {
-      "type": "select",
-      "id": "container_width",
-      "options": [
-        {
-          "value": "psb-container",
-          "label": "Container"
-        },
-        {
-          "value": "psb-container-fluid",
-          "label": "Container Fluid"
-        },
-        {
-          "value": "psb-container-fullwidth",
-          "label": "Container Fullwidth"
-        }
-      ],
-      "default": "psb-container",
-      "label": "Container width"
-    },
-    {
-      "type": "header",
-      "content": "Main settings"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_keep_layout",
-      "default": false,
-      "label": "Enable keep Desktop layout on Mobile",
-      "info": "By default, on Mobile version, the images will be spread vertically. This option helps bring the desktop-like layout to Mobile."
-    },
-    {
-      "type": "select",
-      "id": "img_proportion",
-      "label": "Image ratio",
-      "options": [
-        {
-          "value": "100%",
-          "label": "1:1"
-        },
-        {
-          "value": "133%",
-          "label": "3:4"
-        },
-        {
-          "value": "150%",
-          "label": "2:3"
-        },
-        {
-          "value": "177%",
-          "label": "9:16"
-        },
-        {
-          "value": "56%",
-          "label": "16:9"
-        },
-        {
-          "value": "66%",
-          "label": "3:2"
-        },
-        {
-          "value": "75%",
-          "label": "4:3"
-        }
-      ],
-      "default": "100%"
-    },
-    {
-      "type": "header",
-      "content": "Section heading"
-    },
-    {
-      "type": "textarea",
-      "id": "heading_text",
-      "label": "Heading text",
-      "default": "Gallery"
-    },
-    {
-      "type": "select",
-      "id": "heading_tag",
-      "label": "Heading tag",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        }
-      ],
-      "default": "h2"
-    },
-    {
-      "type": "checkbox",
-      "id": "inherit_fonts",
-      "default": false,
-      "label": "Inherit font sizes from theme"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text color",
-      "default": "#262424"
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background color",
-      "default": "transparent"
-    },
-    {
-      "type": "select",
-      "id": "text_align",
-      "label": "Heading align",
-      "options": [
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "header",
-      "content": "Desktop"
-    },
-    {
-      "type": "range",
-      "id": "section_padding_top",
-      "min": 0,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "label": "Section padding-top",
-      "default": 50
-    },
-    {
-      "type": "range",
-      "id": "section_padding_bottom",
-      "min": 0,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "label": "Section padding-bottom",
-      "default": 50
-    },
-    {
-      "type": "header",
-      "content": "Mobile"
-    },
-    {
-      "type": "range",
-      "id": "section_padding_top_mobile",
-      "min": 0,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "label": "Section padding-top",
-      "default": 50
-    },
-    {
-      "type": "range",
-      "id": "section_padding_bottom_mobile",
-      "min": 0,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "label": "Section padding-bottom",
-      "default": 50
-    }
-  ],
-  "blocks": [
-    {
-      "name": "Image",
-      "type": "image",
-      "limit": 9,
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "background_image",
-          "label": "Image"
-        },
-        {
-          "type": "url",
-          "id": "link_to",
-          "label": "Link to"
-        }
-      ]
-    }
-  ],
-  "presets": [
+  {% schema %}
     {
       "name": "⚡︎PSB: Gallery 01",
-      "settings": {
-        "container_width": "psb-container-fluid",
-        "heading_text": "Our Watches",
-        "img_proportion": "150%"
-      },
+      "tag": "section",
+      "settings": [
+        {
+          "type": "select",
+          "id": "container_width",
+          "options": [
+            {
+              "value": "psb-container",
+              "label": "Container"
+            },
+            {
+              "value": "psb-container-fluid",
+              "label": "Container Fluid"
+            },
+            {
+              "value": "psb-container-fullwidth",
+              "label": "Container Fullwidth"
+            }
+          ],
+          "default": "psb-container",
+          "label": "Container width"
+        },
+        {
+          "type": "header",
+          "content": "Main settings"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_keep_layout",
+          "default": false,
+          "label": "Enable keep Desktop layout on Mobile",
+          "info": "By default, on Mobile version, the images will be spread vertically. This option helps bring the desktop-like layout to Mobile."
+        },
+        {
+          "type": "select",
+          "id": "img_proportion",
+          "label": "Image ratio",
+          "options": [
+            {
+              "value": "100%",
+              "label": "1:1"
+            },
+            {
+              "value": "133%",
+              "label": "3:4"
+            },
+            {
+              "value": "150%",
+              "label": "2:3"
+            },
+            {
+              "value": "177%",
+              "label": "9:16"
+            },
+            {
+              "value": "56%",
+              "label": "16:9"
+            },
+            {
+              "value": "66%",
+              "label": "3:2"
+            },
+            {
+              "value": "75%",
+              "label": "4:3"
+            }
+          ],
+          "default": "100%"
+        },
+        {
+          "type": "header",
+          "content": "Section heading"
+        },
+        {
+          "type": "textarea",
+          "id": "heading_text",
+          "label": "Heading text",
+          "default": "Gallery"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading tag",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            }
+          ],
+          "default": "h2"
+        },
+        {
+          "type": "checkbox",
+          "id": "inherit_fonts",
+          "default": false,
+          "label": "Inherit font sizes from theme"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#262424"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "transparent"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Heading align",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "header",
+          "content": "Desktop"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "unit": "px",
+          "label": "Section padding-top",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "section_padding_bottom",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "unit": "px",
+          "label": "Section padding-bottom",
+          "default": 50
+        },
+        {
+          "type": "header",
+          "content": "Mobile"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top_mobile",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "unit": "px",
+          "label": "Section padding-top",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "section_padding_bottom_mobile",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "unit": "px",
+          "label": "Section padding-bottom",
+          "default": 50
+        }
+      ],
       "blocks": [
         {
-          "type": "image"
-        },
+          "name": "Image",
+          "type": "image",
+          "limit": 9,
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "background_image",
+              "label": "Image"
+            },
+            {
+              "type": "url",
+              "id": "link_to",
+              "label": "Link to"
+            }
+          ]
+        }
+      ],
+      "presets": [
         {
-          "type": "image"
-        },
-        {
-          "type": "image"
+          "name": "⚡︎PSB: Gallery 01",
+          "settings": {
+            "container_width": "psb-container-fluid",
+            "heading_text": "Our Watches",
+            "img_proportion": "150%"
+          },
+          "blocks": [
+            {
+              "type": "image"
+            },
+            {
+              "type": "image"
+            },
+            {
+              "type": "image"
+            }
+          ]
         }
       ]
     }
-  ]
-}
-{% endschema %}
+  {% endschema %}

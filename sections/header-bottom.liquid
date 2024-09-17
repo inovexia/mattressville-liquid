@@ -14,7 +14,7 @@
           </button>
         </div>
         <div class="end">
-          <a href="tel:{{ section.settings.phone_number }}">
+          <a href="tel:{{ section.settings.phone_number }}" aria-label="Contact number">
             <i class="gsi gs-phone"></i>
             <span>{{ section.settings.phone_number }}</span>
           </a>
@@ -26,7 +26,9 @@
             <a
               href="#"
               class="dropdown-toggle nav-link"
-              role="button">{{ section.settings.meta_menu_title }}</a>
+              role="button">
+              {{- section.settings.meta_menu_title -}}
+            </a>
             <div class="dropdown-menu mega-menu">
               <div class="mega-menu-area">
                 {%- for link in section.settings.mega_menu.links -%}
@@ -39,12 +41,15 @@
                           {% assign childlink_url = childlink.url %}
                           {% unless canonical_url contains '?' or childlink_url contains '?' %}
                             {% assign last_char = childlink_url | slice: -1 %}
-                            {% unless last_char == "/" %}
-                              {% assign childlink_url = childlink_url | append: "/" %}
+                            {% unless last_char == '/' %}
+                              {% assign childlink_url = childlink_url %}
                             {% endunless %}
                           {% endunless %}
                           <div class="dropdown-item">
-                            <a class="nav-link" href="{{ childlink_url }}">{{ childlink.title | escape }}</a>
+                            <a
+                              class="nav-link"
+                              href="{{ childlink_url }}"
+                              aria-label="Product list of {{ childlink.title | escape }}">{{ childlink.title | escape }}</a>
                           </div>
                         {%- endfor -%}
                       </div>
@@ -53,20 +58,44 @@
                 {%- endfor -%}
               </div>
               <div class="all-item">
-                {%- assign megaMenuBottomLink = section.settings.mega_menu_bottom_link | default: "/collections/all-mattresses" | url_escape -%}
-                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink }}">{{ section.settings.mega_menu_bottom_label }}</a>
+                {%- assign megaMenuBottomLink1 = section.settings.mega_menu_bottom_link
+ | default: '/collections/all-mattresses'
+ | url_escape
+                -%}
+                {%- assign megaMenuBottomLink2 = section.settings.mega_menu_bottom_link2
+ | default: '/collections'
+ | url_escape
+                -%}
+                {%- assign megaMenuBottomLink3 = section.settings.mega_menu_bottom_link3
+ | default: '/collections/all-mattresses'
+ | url_escape
+                -%}
+                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink1 }}">
+                  {{- section.settings.mega_menu_bottom_label -}}
+                </a>
+                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink2 }}">
+                  {{- section.settings.mega_menu_bottom_label2 -}}
+                </a>
+                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink3 }}">
+                  {{- section.settings.mega_menu_bottom_label3 -}}
+                </a>
               </div>
             </div>
           </div>
           {%- for link in section.settings.bottom_menu.links -%}
             {%- assign hasChildren = link.links | empty | default: false -%}
             <div class="nav-item {%- if hasChildren -%}{{" dropdown"}}{%- endif -%}">
-              <a class=" {%- if hasChildren -%}{{"dropdown-toggle "}}{%- endif -%}nav-link" href="{{ link.url }}">{{- link.title | escape -}}</a>
+              <a class=" {%- if hasChildren -%}{{"dropdown-toggle "}}{%- endif -%}nav-link" href="{{ link.url }}">
+                {{- link.title | escape -}}
+              </a>
               {%- if hasChildren -%}
                 <div class="dropdown-menu">
                   {%- for childlink in link.links -%}
                     <div class="dropdown-item">
-                      <a class="nav-link" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                      <a
+                        class="nav-link"
+                        href="{{ childlink.url }}"
+                        aria-label="Product list of {{ childlink.title | escape }}">{{ childlink.title | escape }}</a>
                     </div>
                   {%- endfor -%}
                 </div>
@@ -76,12 +105,12 @@
           <div class="has-icon nav-item">
             {%- if section.settings.match_maker_image != blank -%}
               <img
-                src="{{ section.settings.match_maker_image | img_url: 'master' }}"
+                src="{{ section.settings.match_maker_image | image_url: 'master' }}"
                 alt="bed"
                 width="26"
                 height="25"
                 loading="lazy"
-                class="icon" />
+                class="icon">
             {%- else -%}
               <img
                 src="{{ 'bed-xs.png' | asset_img_url: 'master' }}"
@@ -89,10 +118,16 @@
                 width="26"
                 height="25"
                 loading="lazy"
-                class="icon" />
+                class="icon">
             {%- endif -%}
-            {%- assign matchMakerLink = section.settings.match_maker_link | default: "/pages/mattress-matchmaker" | url_escape -%}
-            <a class="nav-link" href="{{ matchMakerLink }}">{{ section.settings.match_maker_label }}</a>
+            {%- assign matchMakerLink = section.settings.match_maker_link
+ | default: '/pages/mattress-matchmaker'
+ | url_escape
+            -%}
+            <a
+              class="nav-link"
+              href="{{ matchMakerLink }}"
+              aria-label="Read more about mattress match maker">{{ section.settings.match_maker_label }}</a>
           </div>
         </div>
       </div>
@@ -100,79 +135,78 @@
   </div>
 </div>
 {% javascript %}
-document.addEventListener("DOMContentLoaded", function() {
-  var mainNavDropdownToggles = document.querySelectorAll(".main-nav .dropdown-toggle");
-  var dropdownMenus = document.querySelectorAll(".dropdown-menu");
-  var mainMenu = document.querySelector(".main-menu");
-  var mainMenuToggle = document.querySelector(".main-menu-toggle");
-  mainNavDropdownToggles.forEach(function(toggle) {
-    toggle.addEventListener("click", function(e) {
-      e.preventDefault();
-      var menu = this.nextElementSibling;
+  document.addEventListener('DOMContentLoaded', function() {
+    var mainNavDropdownToggles = document.querySelectorAll('.main-nav .dropdown-toggle');
+    var dropdownMenus = document.querySelectorAll('.dropdown-menu');
+    var mainMenu = document.querySelector('.main-menu');
+    var mainMenuToggle = document.querySelector('.main-menu-toggle');
+    mainNavDropdownToggles.forEach(function(toggle) {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        var menu = this.nextElementSibling;
 
-      if (!menu.classList.contains("open")) {
+        if (! menu.classList.contains('open')) {
+          closeOpenDropdownMenus();
+          menu.classList.add('open');
+          slideDown(menu);
+        } else {
+          menu.classList.remove('open');
+          slideUp(menu);
+        }
+      });
+    });
+    dropdownMenus.forEach(function(menu) {
+      menu.querySelector('.nav-link').addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    });
+    document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (mainMenu.classList.contains('open')) {
+          slideUp(mainMenu);
+        }
+      });
+    });
+    mainMenuToggle.addEventListener('click', function() {
+      mainMenu.classList.toggle('open');
+      slideToggle(mainMenu);
+    });
+    document.addEventListener('click', function(e) {
+      if (! e.target.closest('.main-nav')) {
         closeOpenDropdownMenus();
-        menu.classList.add("open");
-        slideDown(menu);
-      } else {
-        menu.classList.remove("open");
+      }
+    });
+    function closeOpenDropdownMenus() {
+      document.querySelectorAll('.main-nav .dropdown-menu.open').forEach(function(menu) {
+        menu.classList.remove('open');
         slideUp(menu);
+      });
+    }
+    function slideUp(element) {
+      element.style.transition = 'max-height 0.3s';
+      element.style.maxHeight = 0;
+      element.style.overflow = 'hidden';
+      setTimeout(function() {
+        element.style.display = 'none';
+      }, 100);
+    }
+    function slideDown(element) {
+      element.style.transition = 'max-height 0.3s';
+      element.style.display = 'block';
+      element.style.overflow = 'hidden';
+      element.style.maxHeight = element.scrollHeight + 'px';
+      setTimeout(function() {
+        element.style.maxHeight = 'unset';
+      }, 100);
+    }
+    function slideToggle(element) {
+      if (element.clientHeight > 0) {
+        slideUp(element);
+      } else {
+        slideDown(element);
       }
-    });
-  });
-  dropdownMenus.forEach(function(menu) {
-    menu.querySelector(".nav-link").addEventListener("click", function(e) {
-      e.stopPropagation();
-    });
-  });
-  document.querySelectorAll(".nav-link:not(.dropdown-toggle)").forEach(function(link) {
-    link.addEventListener("click", function() {
-      if (mainMenu.classList.contains("open")) {
-        slideUp(mainMenu);
-      }
-    });
-  });
-  mainMenuToggle.addEventListener("click", function() {
-    mainMenu.classList.toggle("open");
-    slideToggle(mainMenu);
-  });
-  document.addEventListener("click", function(e) {
-    if (!e.target.closest(".main-nav")) {
-      closeOpenDropdownMenus();
     }
   });
-  function closeOpenDropdownMenus() {
-    document.querySelectorAll(".main-nav .dropdown-menu.open").forEach(function(menu) {
-      menu.classList.remove("open");
-      slideUp(menu);
-    });
-  }
-  function slideUp(element) {
-    element.style.transition = "max-height 0.3s";
-    element.style.maxHeight = 0;
-    element.style.overflow = "hidden";
-    setTimeout(function () {
-      element.style.display = "none";
-    }, 100);
-  }
-  function slideDown(element) {
-    element.style.transition = "max-height 0.3s";
-    element.style.display = "block";
-    element.style.overflow = "hidden";
-    element.style.maxHeight = element.scrollHeight + "px";
-    setTimeout(function () {
-      element.style.maxHeight = "unset";
-    }, 100);
-  }
-  function slideToggle(element) {
-    if (element.clientHeight > 0) {
-      slideUp(element);
-    } else {
-      slideDown(element);
-    }
-  }
-});
-
 {% endjavascript %}
 {% schema %}
   {
@@ -209,6 +243,28 @@ document.addEventListener("DOMContentLoaded", function() {
         "type": "url",
         "id": "mega_menu_bottom_link",
         "label": "Mega Menu Bottom Link"
+      },
+      {
+        "type": "text",
+        "id": "mega_menu_bottom_label2",
+        "default": "VIEW ALL COLLECTIONS",
+        "label": "Mega Menu Bottom Label2"
+      },
+      {
+        "type": "url",
+        "id": "mega_menu_bottom_link2",
+        "label": "Mega Menu Bottom Link2"
+      },
+      {
+        "type": "text",
+        "id": "mega_menu_bottom_label3",
+        "default": "VIEW ALL BRANDS",
+        "label": "Mega Menu Bottom Label3"
+      },
+      {
+        "type": "url",
+        "id": "mega_menu_bottom_link3",
+        "label": "Mega Menu Bottom Link3"
       },
       {
         "type": "link_list",

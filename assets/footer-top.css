@@ -98,10 +98,22 @@
   }
   .footer-top .footer-inner .footer-badges {
     align-items: center;
-    bottom: -60px;
+    bottom: -75px;
     display: flex;
     justify-content: center;
     position: absolute;
     right: 60px;
   }
+}
+
+#yotpo_testimonials_btn {
+  display: none;
+}
+
+#y-badges {
+  pointer-events: none;
+}
+
+.yotpo.testimonials {
+  display: none;
 }

@@ -36,15 +36,27 @@
           }
         },
         "yotpo_product_photo_reviews_star_rating_7iziTr": {
-          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
+          }
+        },
+        "custom_liquid_yFxECU": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr>"
           }
         },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button"
+          }
+        },
+        "custom_liquid_BxNYxP": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr>"
           }
         },
         "quantity_selector": {
@@ -55,7 +67,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
         },
@@ -77,15 +89,20 @@
         "caption",
         "icon_with_text_apLJb3",
         "yotpo_product_photo_reviews_star_rating_7iziTr",
+        "custom_liquid_yFxECU",
         "variant_picker",
+        "custom_liquid_BxNYxP",
         "quantity_selector",
         "buy_buttons",
         "comfort_scale",
         "share"
       ],
       "custom_css": [
-        ".icon-with-text__item {align-items: baseline;}",
-        ".icon-with-text--vertical img {width: 65px; height: auto;}"
+        ".product__info-container .icon-with-text {margin-bottom: 0; margin-top: 0px;}",
+        ".icon-with-text__item {align-items: baseline; flex-direction: column; gap: 8px;}",
+        "@media (min-width: 990px) {.icon-with-text__item {margin-top: 0px; }}",
+        ".icon-with-text--vertical img {width: 65px; height: auto;}",
+        ".icon-with-text__item .h4.inline-richtext {font-size: 11px; margin-bottom: 24px; font-weight: 400; line-height: 1.5;}"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -99,7 +116,7 @@
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
+        "padding_top": 32,
         "padding_bottom": 12
       }
     },
@@ -107,7 +124,7 @@
       "type": "product-content",
       "blocks": {
         "yotpo_product_photo_reviews_reviews_ngj838": {
-          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
