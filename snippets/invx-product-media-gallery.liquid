@@ -1,14 +1,14 @@
 {% comment %} 
-                                                              Renders a product media gallery. Should be used with 'media-gallery.js'
-                                                              Also see 'product-media-modal'
-                                                             
-                                                              Accepts: 
-                                                              - product: {Object} Product liquid object 
-                                                              - variant_images: {Array} Product images associated with a variant 
-                                                              - is_duplicate: {Boolean} Prevents rendering uneeded elements and duplicate ids for subsequent instances
-                                                             
-                                                              Usage:
-                                                              {% render 'product-media-gallery', is_duplicate: true %} 
+                                                                  Renders a product media gallery. Should be used with 'media-gallery.js'
+                                                                  Also see 'product-media-modal'
+                                                                 
+                                                                  Accepts: 
+                                                                  - product: {Object} Product liquid object 
+                                                                  - variant_images: {Array} Product images associated with a variant 
+                                                                  - is_duplicate: {Boolean} Prevents rendering uneeded elements and duplicate ids for subsequent instances
+                                                                 
+                                                                  Usage:
+                                                                  {% render 'product-media-gallery', is_duplicate: true %} 
 {% endcomment %}
 
 {%- liquid
@@ -51,7 +51,8 @@
           <a
             data-lg-size="1600-1200"
             href="{{ media | img_url: 'master' }}"
-            class="swiper-slide">
+            class="swiper-slide"
+            rel="lightbox">
 
             <img src="{{ media | img_url: 'master' }}" alt="Product Image {{ forloop.index }}" />
           </a>
