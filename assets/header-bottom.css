@@ -73,6 +73,7 @@
 .header-bottom .main-nav .mobile-bottom .end {
   flex-shrink: 1;
   display: flex;
+  align-items: center;
 }
 .header-bottom .main-nav .mobile-bottom .end a {
   align-items: center;
