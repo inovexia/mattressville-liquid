@@ -2,32 +2,34 @@
 {% assign vendorImageH = 63 %}
 {% assign vendorImageW = "auto" %}
     {% case product.vendor %}
-    {% when 'Beautyrest' %}
-      {% assign vendorImage = 'beauty.jpg' | asset_img_url: 'master' %}
-    {% when 'Beaudoin' %}
-      {% assign vendorImage = 'beaudoin.jpg' | asset_img_url: 'master' %}
+      {% when 'Beautyrest' %}
+        {% assign vendorImage = 'beauty.jpg' | asset_img_url: 'master' %}
+      {% when 'Beaudoin' %}
+        {% assign vendorImage = 'beaudoin.jpg' | asset_img_url: 'master' %}
       {% when 'EcoComfort' %} 
         {% assign vendorImage = 'ecocomfort.jpg' | asset_img_url: 'master' %}
-        {% when 'Galaxy Bedding' %}
-          {% assign vendorImage = 'galaxy.jpg' | asset_img_url: 'master' %}
-        {% when 'Kingsdown' %}
-          {% assign vendorImage = 'kingsdown.jpg' | asset_img_url: 'master' %}
-        {% when 'Mattressville' %}
-          {% assign vendorImage = 'mville-new.jpg' | asset_img_url: 'master' %}
-        {% when 'Natura' %}
-          {% assign vendorImage = 'natura-icon.jpg' | asset_img_url: 'master' %}
-        {% when 'Sealy' %}
-          {%  assign vendorImage = 'sealy-vendor.jpg' | asset_img_url: 'master' %}
-        {% when 'Serta' %}
-          {% assign vendorImage = 'serta-new.jpg' | asset_img_url: 'master' %}
-        {% when 'Serta iComfort' %}
-          {% assign vendorImage = 'iComfort.jpg' | asset_img_url: 'master' %}
-        {% when 'Stearns & Foster' %}
-          {% assign vendorImage = 'sf.jpg' | asset_img_url: 'master' %}
-        {% when 'Tempur-Pedic' %}
-          {% assign vendorImage = 'tempur.jpg' | asset_img_url: 'master' %}
-        {% when 'Marshall' %}
-          {% assign vendorImage = 'marshall-mattress.jpg' | asset_img_url: 'master' %}
+      {% when 'Galaxy Bedding' %}
+        {% assign vendorImage = 'galaxy.jpg' | asset_img_url: 'master' %}
+      {% when 'Kingsdown' %}
+        {% assign vendorImage = 'kingsdown.jpg' | asset_img_url: 'master' %}
+      {% when 'Mattressville' %}
+        {% assign vendorImage = 'mville-new.jpg' | asset_img_url: 'master' %}
+      {% when 'Natura' %}
+        {% assign vendorImage = 'natura-icon.jpg' | asset_img_url: 'master' %}
+      {% when 'Sealy' %}
+        {%  assign vendorImage = 'sealy-vendor.jpg' | asset_img_url: 'master' %}
+      {% when 'Serta' %}
+        {% assign vendorImage = 'serta-new.jpg' | asset_img_url: 'master' %}
+      {% when 'Serta iComfort' %}
+        {% assign vendorImage = 'iComfort.jpg' | asset_img_url: 'master' %}
+      {% when 'Stearns & Foster' %}
+        {% assign vendorImage = 'sf.jpg' | asset_img_url: 'master' %}
+      {% when 'Tempur-Pedic' %}
+        {% assign vendorImage = 'tempur.jpg' | asset_img_url: 'master' %}
+      {% when 'Marshall' %}
+        {% assign vendorImage = 'marshall-mattress.jpg' | asset_img_url: 'master' %}
+      {% when 'Orthex' %}
+        {% assign vendorImage = 'orthex-logo.png' | asset_img_url: 'master' %}
       {% endcase %}
 
 {{ 'product-content.css' | asset_url | stylesheet_tag }}
