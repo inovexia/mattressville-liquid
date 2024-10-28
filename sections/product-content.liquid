@@ -1,6 +1,6 @@
 {% assign vendorImage = null %}
-{% assign vendorImageH = 63 %}
-{% assign vendorImageW = "auto" %}
+{% assign vendorImageH = "auto" %}
+{% assign vendorImageW = "100%" %}
     {% case product.vendor %}
       {% when 'Beautyrest' %}
         {% assign vendorImage = 'beauty.jpg' | asset_img_url: 'master' %}
@@ -66,8 +66,9 @@
                     alt="{{ product.vendor }}"
                     class="vendor-img"
                     loading="lazy"
-                    height="{{ vendorImageH }}"
-                    width="{{ vendorImageW }}" />
+                    height="auto"
+                    width="100%" 
+                    style="max-width:200px" />
               {%- endif -%}
                 {%- if product.title != blank -%}
                   <h4>{{ product.title }}</h4>
@@ -77,8 +78,9 @@
                   {{ product.description }}
                 {%- endif -%}
                 <div class="affirm-text">
-                  <p>Buy now pay over time! Financing available via Affirm.<br>Learn more on <a href="https://helpcenter.affirm.com/s/" rel="noopener noreferrer"> <img
-                  src={{'affirm-icon.png' | asset_img_url: 'master' }}                  alt="{{ product.vendor }}"
+                  <p>Buy now pay over time! Financing available via Affirm.<br>Learn more on <a href="https://helpcenter.affirm.com/s/" rel="noopener noreferrer"> 
+                  <img
+                  src={{'affirm-icon.png' | asset_img_url: 'master' }} alt="{{ product.vendor }}"
                   class="vendor-img"
                   loading="lazy"
                   height="30"
