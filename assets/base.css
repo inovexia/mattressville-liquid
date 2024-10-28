@@ -239,7 +239,7 @@ h5,
   font-weight: var(--font-heading-weight);
   letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
   color: rgb(var(--color-foreground));
-  line-height: calc(1 + 0.3/max (1, var(--font-heading-scale)));
+  line-height: calc(1 + 0.3 / max (1, var(--font-heading-scale)));
   word-break: break-word;
 }
 .hxl {
@@ -3289,7 +3289,7 @@ header #invx-announcement-bar a {
     text-align: center;
   }
 }
-.trustanalytica_badge_container a {
+.trustanalytica_badge_container_md .ta-badge-container {
   margin-left: auto;
   margin-right: auto;
 }
