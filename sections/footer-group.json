@@ -122,7 +122,7 @@
         "badge_logos_mAAfCV": {
           "type": "badge_logos",
           "settings": {
-            "trust_analytica": "",
+            "trust_analytica": "shopify://shop_images/mattressville.trustanalytica.png",
             "best_rated": "shopify://shop_images/Three-Best-Rated-Business-Excellence-Awards-2022.webp",
             "web_excellence": "shopify://shop_images/logo2_wea_gl_nobg.png",
             "logo_image_height": 135,
