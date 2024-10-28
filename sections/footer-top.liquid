@@ -92,11 +92,19 @@
       {%- case block.type -%}
         {%- when 'badge_logos' -%}
           <div class="badge-image">
+            {% if block.settings.best_rated != blank %}
              <div class="trustanalytica_badge_container">
                 <a href="https://trustanalytica.org/ca/on/mississauga/best-adjustable-beds" title="trustanalytica">
-                  <img src={{'mattressville.trustanalytica.png' | asset_img_url: 'master'}} alt="Trustanalytica Badge" width="135px" height="auto">
+                  <img
+                    src="{{ block.settings.trust_analytica | image_url }}"
+                    alt="Three best business excellence award 2022 badge"
+                    class="footer-badge"
+                    loading="lazy"
+                    height="auto"
+                    width="{{ block.settings.logo_image_width }}">
                 </a>
-            </div>
+              </div>
+            {% endif %}
           </div>
 
           <div class="badge-image">
@@ -272,7 +280,7 @@
         "limit": 4,
         "settings": [
           {
-            "type": "textarea",
+            "type": "image_picker",
             "id": "trust_analytica",
             "label": "Trust Analytica Logo"
           },
@@ -285,11 +293,6 @@
             "type": "image_picker",
             "id": "web_excellence",
             "label": "Web Excellence Logo"
-          },
-          {
-            "type": "image_picker",
-            "id": "review_image",
-            "label": "Yotpo Review Logo"
           },
           {
             "type": "number",
