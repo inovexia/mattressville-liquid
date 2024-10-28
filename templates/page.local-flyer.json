@@ -1,1 +1,620 @@
-{"layout":"theme-sidebar","sections":{"main":{"type":"invx-main-page","settings":{}},"multicolumn_CrLKdg":{"type":"multicolumn","blocks":{"column_xUV4De":{"type":"column","settings":{"title":"","text":"","link_label":"GTA Flyer","link":"shopify:\/\/pages\/local-gta-flyer"}},"column_mJp4Qk":{"type":"column","disabled":true,"settings":{"title":"Column","text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","link_label":"","link":""}},"column_ypJ9zH":{"type":"column","settings":{"title":"","text":"","link_label":"Canada Wide Flyer","link":"shopify:\/\/pages\/canada-wide-flyer"}}},"block_order":["column_xUV4De","column_mJp4Qk","column_ypJ9zH"],"custom_css":["#Slider-template--22113195393332__multicolumn_CrLKdg {align-items: center; background: #f1f3f4; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); border-radius: 15px; justify-content: space-around; padding: 0px; overflow: hidden;}","#Slider-template--22113195393332__multicolumn_CrLKdg li {background-color: transparent; border: none; text-align: center;}","#Slider-template--22113195393332__multicolumn_CrLKdg li .multicolumn-card__info {padding: 0;}",".link {margin: 0 !important; padding: 10px;}",".icon-wrap {display: none;}"],"settings":{"title":"","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":2,"column_alignment":"center","background_style":"primary","button_label":"","button_link":"","color_scheme":"","columns_mobile":"2","swipe_on_mobile":false,"padding_top":12,"padding_bottom":36}},"rich_text_HY8fGM":{"type":"rich-text","blocks":{"button_fmgQJC":{"type":"button","settings":{"button_label":"Shop Now","button_link":"shopify:\/\/collections\/marshall-mattresses","button_style_secondary":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["button_fmgQJC"],"disabled":true,"custom_css":[".rich-text .rich-text__wrapper {padding: 0;}",".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":0,"padding_bottom":40}},"rich_text_LmUW9y":{"type":"rich-text","blocks":{"heading_AUbNxt":{"type":"heading","settings":{"heading":"Marshall Mattresses Now on Sale","heading_size":"h1"}},"text_YGkzMc":{"type":"text","settings":{"text":"<p><strong>Don't just dream of a better night's sleep – experience it with Marshall! <\/strong>Experience the luxurious softness, supportive structure, and unbeatable value of Marshall Mattresses. <br\/>See for yourself how Marshall turns dreams into a reality, <br\/><strong>Come <\/strong><em><strong>feel the difference<\/strong><\/em><strong> at Mattressville today!<\/strong><\/p>"}},"button_DBMjTG":{"type":"button","settings":{"button_label":"Shop Now","button_link":"shopify:\/\/collections\/marshall-mattresses","button_style_secondary":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_AUbNxt","text_YGkzMc","button_DBMjTG"],"disabled":true,"custom_css":[".rich-text .rich-text__wrapper {padding: 0;}",".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"],"settings":{"desktop_content_position":"left","content_alignment":"center","color_scheme":"","full_width":false,"padding_top":12,"padding_bottom":16}},"rich_text_DtyBjf":{"type":"rich-text","blocks":{"heading_VVe8mf":{"type":"heading","settings":{"heading":"SPOOKTACULAR HALLOWEEN SALE FLYER","heading_size":"h1"}}},"block_order":["heading_VVe8mf"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":0,"padding_bottom":0}},"image_with_text_zVawM7":{"type":"image-with-text","custom_css":[".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}","img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 500px; right: 50%; transform: translate(-50%, 0%);}",".global-media-settings {border: none !important;}"],"settings":{"image":"shopify:\/\/shop_images\/halloween_mattress_sale_2024_flyer_5.5_x_8.4_in_d71ea39d-07f8-4f67-98db-e35418e03c23.png","height":"large","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"center","content_layout":"no-overlap","section_color_scheme":"","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","padding_top":20,"padding_bottom":20}},"rich_text_6xRmg4":{"type":"rich-text","blocks":{"text_743jUz":{"type":"text","settings":{"text":"<p><strong>Spooky Season Savings Alert!<\/strong> 🎃 This Halloween, sleep like the <em>dead<\/em> with unbeatable prices on all our top mattresses. From spine-chilling discounts to monstrous markdowns, grab your perfect mattress before the sale disappears. Deals so good, they’re scary!<\/p>"}},"button_GnfGwy":{"type":"button","settings":{"button_label":"Shop Sale Items","button_link":"shopify:\/\/collections\/spooktacular-mattress-sale","button_style_secondary":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["text_743jUz","button_GnfGwy"],"custom_css":[".rich-text .rich-text__wrapper {padding: 0;}",".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":0,"padding_bottom":52}},"psb_utilities_line_FrHYJq":{"type":"psb-utilities-line","settings":{"container_width":"psb-container","line_height":1,"line_color":"#cccccc"}},"image_with_text_dL7YBh":{"type":"image-with-text","disabled":true,"custom_css":[".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}","img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 500px; right: 50%; transform: translate(-50%, 0%);}",".global-media-settings {border: none !important;}"],"settings":{"image":"shopify:\/\/shop_images\/Prime_Day_Mattress_SALE_Flyer_Fall_2024.png","height":"large","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"center","content_layout":"overlap","section_color_scheme":"","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","padding_top":0,"padding_bottom":0}},"rich_text_hK34aJ":{"type":"rich-text","blocks":{"heading_P6GQTb":{"type":"heading","settings":{"heading":"Marshall Mattresses Now on Sale","heading_size":"h1"}}},"block_order":["heading_P6GQTb"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":44,"padding_bottom":0}},"collection_list_NRFCEM":{"type":"collection-list","blocks":{"featured_collection_Kay6Aw":{"type":"featured_collection","settings":{"collection":"marshall-mattresses"}}},"block_order":["featured_collection_Kay6Aw"],"settings":{"title":"","heading_size":"h1","image_ratio":"square","columns_desktop":1,"color_scheme":"","show_view_all":false,"columns_mobile":"1","swipe_on_mobile":false,"padding_top":12,"padding_bottom":0}},"rich_text_CLDgr6":{"type":"rich-text","blocks":{"heading_wkpzcE":{"type":"heading","disabled":true,"settings":{"heading":"Marshall Mattresses Now on Sale","heading_size":"h1"}},"text_QQAhfc":{"type":"text","settings":{"text":"<p><strong>Don't just dream of a better night's sleep – experience it with Marshall! <\/strong>Experience the luxurious softness, supportive structure, and unbeatable value of Marshall Mattresses. <br\/>See for yourself how Marshall turns dreams into a reality, <br\/><strong>Come <\/strong><em><strong>feel the difference<\/strong><\/em><strong> at Mattressville today!<\/strong><\/p>"}},"button_zcYr6P":{"type":"button","settings":{"button_label":"View All","button_link":"shopify:\/\/collections\/marshall-mattresses","button_style_secondary":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_wkpzcE","text_QQAhfc","button_zcYr6P"],"custom_css":[".rich-text .rich-text__wrapper {padding: 0;}",".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":0,"padding_bottom":44}},"psb_utilities_line_ficaQA":{"type":"psb-utilities-line","settings":{"container_width":"psb-container","line_height":1,"line_color":"#cccccc"}},"rich_text_fgdiqy":{"type":"rich-text","blocks":{"heading_KdRTeh":{"type":"heading","settings":{"heading":"Best Deals on Kingsdown Mattresses","heading_size":"h1"}},"text_CiQDix":{"type":"text","settings":{"text":"<p><strong>Dream Big. Sleep Better. Save Huge. <\/strong>Mattressville is offering <em><strong>exclusive deals<\/strong><\/em> on the luxurious Kingsdown mattresses you love. <strong>Don't miss out on these incredible deals!<\/strong> <br\/><strong>Visit Mattressville today<\/strong> and <em>experience the difference<\/em> a <strong>Kingsdown mattress<\/strong> can make.<\/p>"}}},"block_order":["heading_KdRTeh","text_CiQDix"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":28,"padding_bottom":16}},"featured_collection_AAqpH7":{"type":"featured-collection","settings":{"title":"","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"kingsdown","products_to_show":5,"columns_desktop":1,"full_width":true,"show_view_all":false,"view_all_style":"link","enable_desktop_slider":true,"color_scheme":"","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":true,"show_rating":true,"enable_quick_add":true,"columns_mobile":"1","swipe_on_mobile":true,"padding_top":0,"padding_bottom":52}},"rich_text_QkRFdp":{"type":"rich-text","blocks":{"heading_i9PafT":{"type":"heading","settings":{"heading":"Best Deals on Kingsdown Mattresses","heading_size":"h1"}},"text_EqqjRB":{"type":"text","settings":{"text":"<p><strong>Dream Big. Sleep Better. Save Huge. <\/strong>Mattressville is offering <em><strong>exclusive deals<\/strong><\/em> on the luxurious Kingsdown mattresses you love.  <strong>Don't miss out on these <br\/>incredible deals!<\/strong> <br\/><strong>Visit Mattressville today<\/strong> and <em>experience the difference<\/em> a  <strong>Kingsdown mattress<\/strong> can make.<\/p>"}}},"block_order":["heading_i9PafT","text_EqqjRB"],"disabled":true,"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":0,"padding_bottom":16}},"image_banner_etEfnq":{"type":"image-banner","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Stay_Tuned.png","image_overlay_opacity":0,"image_height":"large","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"image_with_text_EKL6in":{"type":"image-with-text","disabled":true,"custom_css":[".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}","img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 540px; right: 50%; transform: translate(-50%, 0%);}",".global-media-settings {border: none !important;}"],"settings":{"image":"shopify:\/\/shop_images\/Stay_Tuned.png","height":"large","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"center","content_layout":"no-overlap","section_color_scheme":"","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","padding_top":0,"padding_bottom":0}},"rich_text_dtFKYq":{"type":"rich-text","blocks":{"button_HVgt3F":{"type":"button","settings":{"button_label":"View All","button_link":"shopify:\/\/collections\/kingsdown","button_style_secondary":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["button_HVgt3F"],"custom_css":[".rich-text .rich-text__wrapper {padding: 0;}",".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":0,"padding_bottom":36}},"psb_utilities_line_BErMjr":{"type":"psb-utilities-line","settings":{"container_width":"psb-container","line_height":1,"line_color":"#cccccc"}},"1723249160fbdeb0d3":{"type":"apps","blocks":{"bundler_custom_bundle_hQFnX6":{"type":"shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664","settings":{"shortcode":"attu"}},"bundler_custom_bundle_Gd78TC":{"type":"shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664","settings":{"shortcode":"atw3"}},"bundler_custom_bundle_4WDPwG":{"type":"shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664","settings":{"shortcode":"atw6"}},"bundler_custom_bundle_Uy6LiU":{"type":"shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664","settings":{"shortcode":"atw7"}},"bundler_custom_bundle_XxqNTL":{"type":"shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664","settings":{"shortcode":"atw8"}}},"block_order":["bundler_custom_bundle_hQFnX6","bundler_custom_bundle_Gd78TC","bundler_custom_bundle_4WDPwG","bundler_custom_bundle_Uy6LiU","bundler_custom_bundle_XxqNTL"],"disabled":true,"settings":{"include_margins":true}}},"order":["main","multicolumn_CrLKdg","rich_text_HY8fGM","rich_text_LmUW9y","rich_text_DtyBjf","image_with_text_zVawM7","rich_text_6xRmg4","psb_utilities_line_FrHYJq","image_with_text_dL7YBh","rich_text_hK34aJ","collection_list_NRFCEM","rich_text_CLDgr6","psb_utilities_line_ficaQA","rich_text_fgdiqy","featured_collection_AAqpH7","rich_text_QkRFdp","image_banner_etEfnq","image_with_text_EKL6in","rich_text_dtFKYq","psb_utilities_line_BErMjr","1723249160fbdeb0d3"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme-sidebar",
+  "sections": {
+    "main": {
+      "type": "invx-main-page",
+      "settings": {
+      }
+    },
+    "multicolumn_CrLKdg": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_xUV4De": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "GTA Flyer",
+            "link": "shopify://pages/local-gta-flyer"
+          }
+        },
+        "column_mJp4Qk": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ypJ9zH": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "Canada Wide Flyer",
+            "link": "shopify://pages/canada-wide-flyer"
+          }
+        }
+      },
+      "block_order": [
+        "column_xUV4De",
+        "column_mJp4Qk",
+        "column_ypJ9zH"
+      ],
+      "custom_css": [
+        "#Slider-template--22113195393332__multicolumn_CrLKdg {align-items: center; background: #f1f3f4; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); border-radius: 15px; justify-content: space-around; padding: 0px; overflow: hidden;}",
+        "#Slider-template--22113195393332__multicolumn_CrLKdg li {background-color: transparent; border: none; text-align: center;}",
+        "#Slider-template--22113195393332__multicolumn_CrLKdg li .multicolumn-card__info {padding: 0;}",
+        ".link {margin: 0 !important; padding: 10px;}",
+        ".icon-wrap {display: none;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_HY8fGM": {
+      "type": "rich-text",
+      "blocks": {
+        "button_fmgQJC": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/marshall-mattresses",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_fmgQJC"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "rich_text_LmUW9y": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AUbNxt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Marshall Mattresses Now on Sale",
+            "heading_size": "h1"
+          }
+        },
+        "text_YGkzMc": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Don't just dream of a better night's sleep – experience it with Marshall! </strong>Experience the luxurious softness, supportive structure, and unbeatable value of Marshall Mattresses. <br/>See for yourself how Marshall turns dreams into a reality, <br/><strong>Come </strong><em><strong>feel the difference</strong></em><strong> at Mattressville today!</strong></p>"
+          }
+        },
+        "button_DBMjTG": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/marshall-mattresses",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AUbNxt",
+        "text_YGkzMc",
+        "button_DBMjTG"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 12,
+        "padding_bottom": 16
+      }
+    },
+    "rich_text_DtyBjf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VVe8mf": {
+          "type": "heading",
+          "settings": {
+            "heading": "SPOOKTACULAR HALLOWEEN SALE FLYER",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VVe8mf"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_zVawM7": {
+      "type": "image-with-text",
+      "custom_css": [
+        ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
+        ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
+        "img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 500px; right: 50%; transform: translate(-50%, 0%);}",
+        ".global-media-settings {border: none !important;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/halloween_mattress_sale_2024_flyer_5.5_x_8.4_in_d71ea39d-07f8-4f67-98db-e35418e03c23.png",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_6xRmg4": {
+      "type": "rich-text",
+      "blocks": {
+        "text_743jUz": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Spooky Season Savings Alert!</strong> 🎃 This Halloween, sleep like the <em>dead</em> with unbeatable prices on all our top mattresses. From spine-chilling discounts to monstrous markdowns, grab your perfect mattress before the sale disappears. Deals so good, they’re scary!</p>"
+          }
+        },
+        "button_GnfGwy": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Sale Items",
+            "button_link": "shopify://collections/spooktacular-mattress-sale",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_743jUz",
+        "button_GnfGwy"
+      ],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "psb_utilities_line_FrHYJq": {
+      "type": "psb-utilities-line",
+      "settings": {
+        "container_width": "psb-container",
+        "line_height": 1,
+        "line_color": "#cccccc"
+      }
+    },
+    "image_with_text_dL7YBh": {
+      "type": "image-with-text",
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
+        ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
+        "img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 500px; right: 50%; transform: translate(-50%, 0%);}",
+        ".global-media-settings {border: none !important;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Prime_Day_Mattress_SALE_Flyer_Fall_2024.png",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_hK34aJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_P6GQTb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Marshall Mattresses Now on Sale",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_P6GQTb"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 44,
+        "padding_bottom": 0
+      }
+    },
+    "collection_list_NRFCEM": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_Kay6Aw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "marshall-mattresses"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_Kay6Aw"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 1,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_CLDgr6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wkpzcE": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Marshall Mattresses Now on Sale",
+            "heading_size": "h1"
+          }
+        },
+        "text_QQAhfc": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Don't just dream of a better night's sleep – experience it with Marshall! </strong>Experience the luxurious softness, supportive structure, and unbeatable value of Marshall Mattresses. <br/>See for yourself how Marshall turns dreams into a reality, <br/><strong>Come </strong><em><strong>feel the difference</strong></em><strong> at Mattressville today!</strong></p>"
+          }
+        },
+        "button_zcYr6P": {
+          "type": "button",
+          "settings": {
+            "button_label": "View All",
+            "button_link": "shopify://collections/marshall-mattresses",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wkpzcE",
+        "text_QQAhfc",
+        "button_zcYr6P"
+      ],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 44
+      }
+    },
+    "psb_utilities_line_ficaQA": {
+      "type": "psb-utilities-line",
+      "settings": {
+        "container_width": "psb-container",
+        "line_height": 1,
+        "line_color": "#cccccc"
+      }
+    },
+    "rich_text_fgdiqy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KdRTeh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Best Deals on Kingsdown Mattresses",
+            "heading_size": "h1"
+          }
+        },
+        "text_CiQDix": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Dream Big. Sleep Better. Save Huge. </strong>Mattressville is offering <em><strong>exclusive deals</strong></em> on the luxurious Kingsdown mattresses you love. <strong>Don't miss out on these incredible deals!</strong> <br/><strong>Visit Mattressville today</strong> and <em>experience the difference</em> a <strong>Kingsdown mattress</strong> can make.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KdRTeh",
+        "text_CiQDix"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 16
+      }
+    },
+    "featured_collection_AAqpH7": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "kingsdown",
+        "products_to_show": 5,
+        "columns_desktop": 1,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_QkRFdp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_i9PafT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Best Deals on Kingsdown Mattresses",
+            "heading_size": "h1"
+          }
+        },
+        "text_EqqjRB": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Dream Big. Sleep Better. Save Huge. </strong>Mattressville is offering <em><strong>exclusive deals</strong></em> on the luxurious Kingsdown mattresses you love.  <strong>Don't miss out on these <br/>incredible deals!</strong> <br/><strong>Visit Mattressville today</strong> and <em>experience the difference</em> a  <strong>Kingsdown mattress</strong> can make.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_i9PafT",
+        "text_EqqjRB"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "image_banner_etEfnq": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Stay_Tuned.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "image_with_text_EKL6in": {
+      "type": "image-with-text",
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
+        ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
+        "img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 540px; right: 50%; transform: translate(-50%, 0%);}",
+        ".global-media-settings {border: none !important;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Stay_Tuned.png",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_dtFKYq": {
+      "type": "rich-text",
+      "blocks": {
+        "button_HVgt3F": {
+          "type": "button",
+          "settings": {
+            "button_label": "View All",
+            "button_link": "shopify://collections/kingsdown",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_HVgt3F"
+      ],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "psb_utilities_line_BErMjr": {
+      "type": "psb-utilities-line",
+      "settings": {
+        "container_width": "psb-container",
+        "line_height": 1,
+        "line_color": "#cccccc"
+      }
+    },
+    "1723249160fbdeb0d3": {
+      "type": "apps",
+      "blocks": {
+        "bundler_custom_bundle_hQFnX6": {
+          "type": "shopify://apps/bundler/blocks/custom-bundle/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "attu"
+          }
+        },
+        "bundler_custom_bundle_Gd78TC": {
+          "type": "shopify://apps/bundler/blocks/custom-bundle/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw3"
+          }
+        },
+        "bundler_custom_bundle_4WDPwG": {
+          "type": "shopify://apps/bundler/blocks/custom-bundle/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw6"
+          }
+        },
+        "bundler_custom_bundle_Uy6LiU": {
+          "type": "shopify://apps/bundler/blocks/custom-bundle/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw7"
+          }
+        },
+        "bundler_custom_bundle_XxqNTL": {
+          "type": "shopify://apps/bundler/blocks/custom-bundle/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "atw8"
+          }
+        }
+      },
+      "block_order": [
+        "bundler_custom_bundle_hQFnX6",
+        "bundler_custom_bundle_Gd78TC",
+        "bundler_custom_bundle_4WDPwG",
+        "bundler_custom_bundle_Uy6LiU",
+        "bundler_custom_bundle_XxqNTL"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_CrLKdg",
+    "rich_text_HY8fGM",
+    "rich_text_LmUW9y",
+    "rich_text_DtyBjf",
+    "image_with_text_zVawM7",
+    "rich_text_6xRmg4",
+    "psb_utilities_line_FrHYJq",
+    "image_with_text_dL7YBh",
+    "rich_text_hK34aJ",
+    "collection_list_NRFCEM",
+    "rich_text_CLDgr6",
+    "psb_utilities_line_ficaQA",
+    "rich_text_fgdiqy",
+    "featured_collection_AAqpH7",
+    "rich_text_QkRFdp",
+    "image_banner_etEfnq",
+    "image_with_text_EKL6in",
+    "rich_text_dtFKYq",
+    "psb_utilities_line_BErMjr",
+    "1723249160fbdeb0d3"
+  ]
+}

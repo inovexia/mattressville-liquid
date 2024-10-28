@@ -1,1 +1,493 @@
-{"layout":"theme-sidebar","sections":{"main":{"type":"invx-main-page","custom_css":[],"settings":{}},"multicolumn_PHYEYn":{"type":"multicolumn","blocks":{"column_64GfrG":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mattressville.ca_icon-rewards.png","title":"","text":"<p><strong>Awesome referral rewards program,<\/strong> as well as the best deals & offers.<\/p>","link_label":"","link":""}},"column_anm7Ek":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mattressville.ca_icon-price.png","title":"","text":"<p><strong>No traditional retail prices<\/strong> when shopping with us, we buy in bulk direct from the factory and maintain low overhead costs.<\/p>","link_label":"","link":""}},"column_eg4YVK":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mattressville.ca_icon-retail.png","title":"","text":"<p><strong>No costly retail space<\/strong>, fancy showrooms, high administrative costs, or expensive advertising budgets.<\/p>","link_label":"","link":""}},"column_zVXWye":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mattressville.ca_icon-support.png","title":"","text":"<p>Non-commissioned, friendly and knowledgeable <strong>Sleep Consultants will help you select the perfect mattress.<\/strong><\/p>","link_label":"","link":""}}},"block_order":["column_64GfrG","column_anm7Ek","column_eg4YVK","column_zVXWye"],"custom_css":["multicolumn.background-primary .multicolumn-card {background-color: #fff;}",".multicolumn-card {display: flex; justify-content: space-around; padding-left: 10px; border: 0px solid #ccc; border-radius: 15px;}",".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}","@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",".multicolumn-card .multicolumn-card__info {text-align: left; width: 100%;}"],"settings":{"title":"","heading_size":"h2","image_width":"third","image_ratio":"circle","columns_desktop":2,"column_alignment":"center","background_style":"primary","button_label":"","button_link":"","color_scheme":"","columns_mobile":"1","swipe_on_mobile":false,"padding_top":0,"padding_bottom":36}},"rich_text_jANkzF":{"type":"rich-text","blocks":{"heading_BQy8PN":{"type":"heading","settings":{"heading":"Quality Mattress Brands","heading_size":"h1"}},"text_zUzLHV":{"type":"text","settings":{"text":"<p>At Mattressville, we believe that more options don’t necessarily mean better. That’s why we carefully curate our selection of brand-name mattresses based on reviews, ratings, and customer feedback. Unlike generic brands, our name-brand options offer patented features and superior materials, providing you with unmatched comfort and quality. Rest assured, our thoughtfully chosen mattresses are designed to give you the best sleep experience possible.<\/p>"}}},"block_order":["heading_BQy8PN","text_zUzLHV"],"custom_css":[".rich-text__wrapper {padding: 0;}",".rich-text__blocks {max-width: 100%;}"],"settings":{"desktop_content_position":"center","content_alignment":"left","color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}},"collapsible_multicolumn":{"type":"collapsible-multicolumn","blocks":{"column_X4GdeX":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mattressville.ca_tempur-pedic-logo.png","title":"<strong>TEMPUR-PEDIC<\/strong>","text":"<p>Tempur-Pedic® mattresses are designed to help you relax and sleep better. It is more than a typical memory foam mattress. TEMPUR® material is not typical memory foam. Their proprietary formulation changed the way the world sleeps.<\/p>","link_label":"View Tempur-Pedic products","link":"shopify:\/\/collections\/tempur-pedic"}},"column_QQpqiM":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Kingsdown_Logo.png","title":"<strong>KINGSDOWN<\/strong>","text":"<p>With over 100 years of experience in designing and manufacturing mattresses, they have the know-how and expertise to offer our customers the best night's sleep possible. Kingsdown is committed to creating the highest quality mattresses while maintaining competitive pricing compared to many other name-brand mattresses.<\/p>","link_label":"View Kingsdown products","link":"https:\/\/mattressville.ca\/collections\/kingsdown"}},"column_T9tT7g":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/sf_logo.png","title":"<strong>STEARNS & FOSTER<\/strong>","text":"<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now<\/p>","link_label":"View Stearns & Foster Products","link":"shopify:\/\/collections\/stearns-and-foster"}},"column_B8hBVB":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/marshall-mattress.svg","title":"<strong>MARSHALL<\/strong>","text":"<p>Marshall Mattresses are crafted with a heritage of quality sleep,dating back to the invention of the pocket coil spring system.For over a century,Marshall has been dedicated to providing exceptional comfort and support,night after night.<\/p>","link_label":"View Marshall products","link":"https:\/\/mattressville.ca\/collections\/marshall-mattresses"}}},"block_order":["column_X4GdeX","column_QQpqiM","column_T9tT7g","column_B8hBVB"],"custom_css":[".section-template--22113196278068__collapsible_multicolumn-padding {padding: 0;}"],"settings":{"title":"","heading_size":"h2","image_width":"half","image_ratio":"adapt","columns_desktop":2,"column_alignment":"left","background_style":"none","button_label":"","button_link":"","color_scheme":"","columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"collapsible_content_6cG7tA":{"type":"collapsible-content","blocks":{"collapsible_row_BEekTh":{"type":"collapsible_row","settings":{"heading":"Full Manufacturer Warranty","icon":"none","row_content":"<p>Purchasing a new mattress is an investment, and you should have peace of mind that your investment is protected — that’s why all of our mattresses come with a full manufacturer warranty. This means that if you ever have an issue with your new mattress in the future, you can contact us and we will guide you through the warranty process. Our exceptional after-sales service team works tirelessly to make the warranty process as simple and easy as possible, so you can shop at Mattressville with confidence.<\/p>","page":""}},"collapsible_row_m6z8qw":{"type":"collapsible_row","settings":{"heading":"Sleep Guarantee","icon":"none","row_content":"<p>It's not uncommon for customers to test out a mattress at the store for a few minutes, purchase it with the expectation that it will satisfy their needs, and then after some time, realize that it's too soft or too firm. We understand that the few minutes you get to test out a mattress in-store may not be a good indicator of whether your choice will be right for you in the long-term — and that's where our Comfort Guarantee comes in. A comfortable bed is key to getting a good night's sleep. Our Comfort Guarantee is offered to underline our commitment to providing a great night's sleep. The Comfort Guarantee allows for the replacement of a mattress if you find your original purchase to be of the wrong comfort level. Although it rarely happens that our customers are unsatisfied with their new mattress purchase, we are so confident in our range of quality mattresses that we're willing to give you a couple of months to try out your selection. If you feel at any point that you're not getting the best night's sleep with your new mattress, you can contact us to arrange an exchange for a new mattress.<\/p>","page":""}},"collapsible_row_6UMbwX":{"type":"collapsible_row","settings":{"heading":"Price Match Guarantee","icon":"none","row_content":"<p>One of the things you'll discover when shopping with Mattressville is that our products are always priced below what you'll find retail stores. In fact, we're so confident you won't find a better price anywhere else that we offer a 'Price Match Guarantee.' We will beat any competitor's price by 5%, so you can shop with peace of mind.<\/p>","page":""}},"collapsible_row_WdkXkb":{"type":"collapsible_row","settings":{"heading":"Mattress Sleep Experts","icon":"none","row_content":"<p>When you make the decision to get a new mattress it may seem like all of them are the same, with differences only in size and thickness. However, not all mattresses are created equal — there are different types and sizes of mattresses, made from different materials, and constructed using different materials. The key to getting quality sleep is finding the mattress that best suits your sleep style and sleep needs. Our non-commissioned, friendly, highly professional and knowledgeable Sleep Consultants can help you select the perfect mattress with no pressure.<\/p>","page":""}},"collapsible_row_JKezXT":{"type":"collapsible_row","settings":{"heading":"Referral Program","icon":"none","row_content":"<p>With your Mattressville referral program account, you will be provided with a unique discount link that you can share with your friends to enjoy a number of benefits from us. Our referral program also gives you an opportunity to receive extra cash, free presents, additional discounts or store credit for your future purchases. Contact us online today for more details or give us a call at 905-212-7722!<\/p>","page":""}}},"block_order":["collapsible_row_BEekTh","collapsible_row_m6z8qw","collapsible_row_6UMbwX","collapsible_row_WdkXkb","collapsible_row_JKezXT"],"custom_css":["h3 {font-size: 1.4em;}",".accordion {padding: 0; max-width: 930px;}",".collapsible-content-wrapper-narrow {max-width: 100%;}"],"settings":{"caption":"","heading":"Frequently Asked Questions","heading_size":"h1","heading_alignment":"left","layout":"none","color_scheme":"","container_color_scheme":"","open_first_collapsible_row":true,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":36,"padding_bottom":36}},"rich_text_EBibEQ":{"type":"rich-text","blocks":{"heading_azWRtK":{"type":"heading","settings":{"heading":"Reasonable Prices, Best Quality","heading_size":"h1"}},"text_pN7b38":{"type":"text","settings":{"text":"<p>Alluring and cheap outlet store prices can lead to spending more down the line, while the average Big Box Store prices are usually inflated. Here at Mattressville, we aim to provide you the premium sleeping experience with brand name mattresses at fair and competitive prices without compromising on quality.<\/p>"}}},"block_order":["heading_azWRtK","text_pN7b38"],"custom_css":[".rich-text__wrapper {padding: 0;}"],"settings":{"desktop_content_position":"left","content_alignment":"left","color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}},"multicolumn_A9Ngk7":{"type":"multicolumn","blocks":{"column_rNMUbc":{"type":"column","settings":{"title":"BIG BOX RETAILERS","text":"<ul><li>✕ Huge Price\/Good Quality<\/li><li>✓ Brand Name Products<\/li><li>✓ Fully Manufacturer Warranty<\/li><li>✓ Sleep Guarantee<\/li><li>✓ Price Match Guarantee<\/li><li>✓ Mattress\/ Sleep Experts<\/li><li>✕ Referral Program<\/li><\/ul>","link_label":"","link":""}},"column_xWLbFH":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mattressville-logo-no-slogan.png","title":"","text":"<ul><li>✓ Reasonable Price\/Good Quality<\/li><li>✓ Brand Name Products<\/li><li>✓ Fully Manufacturer Warranty<\/li><li>✓ Sleep Guarantee<\/li><li>✓ Price Match Guarantee<\/li><li>✓ Mattress\/ Sleep Experts<\/li><li>✓ Referral Program<\/li><\/ul>","link_label":"Shop Now","link":"shopify:\/\/collections\/all-mattresses"}},"column_CM9eQY":{"type":"column","settings":{"title":"OUTLET STORES","text":"<ul><li>✕ Cheap Price\/Poor Quality<\/li><li>✕ Usually no Brand Name Products<\/li><li>✕ Difficult Warranty<\/li><li>✓ Sleep Guarantee<\/li><li>✓ Price Match Guarantee<\/li><li>✕ Mattress\/ Sleep Experts<\/li><li>✕ Referral Program<\/li><\/ul>","link_label":"","link":""}}},"block_order":["column_rNMUbc","column_xWLbFH","column_CM9eQY"],"custom_css":[".multicolumn.background-primary .multicolumn-card {background: #fff;}",".multicolumn-card {background: #ffffff; border-radius: 15px; border: 1px solid #f1f3f4; overflow: hidden; text-align: left; box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.05);}",".multicolumn li:nth-child(2) .multicolumn-card {height: 114%; z-index: 1000 !important; position: relative; transform: scale(1.02); margin-top: -7%;}",".multicolumn li:nth-child(3) .multicolumn-card {z-index: -1 !important;}",".multicolumn ul {list-style: none; font-size: 0.9em;}"],"settings":{"title":"","heading_size":"h2","image_width":"full","image_ratio":"adapt","columns_desktop":3,"column_alignment":"left","background_style":"primary","button_label":"","button_link":"","color_scheme":"scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"multicolumn_NtqcKh":{"type":"multicolumn","blocks":{"column_V4YNHd":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mattressville.ca_progress-25.png","title":"No Expensive Showroom","text":"<p>We keep our rent cost low with No Prime Retail Locatrion and space saving design. It allow us to save and evaluate our product prices without hidden or extra costs.<\/p>","link_label":"","link":""}},"column_crLVVp":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mattressville.ca_progress-13.png","title":"Low Administrative Cost","text":"<p>We use only necessary administrative expenses, implementing different saving strategies that significantly allow us to cut out business costs.<\/p>","link_label":"","link":""}},"column_yHJ7He":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mattressville.ca_progress-10.png","title":"Non-Commissioned Staff","text":"<p>Non-commisioned sales approach helps to alleviate the pressure typical mattress sales can place upon the customer. Our Friendly Sleep Consultants work to make your mattress buying experience as comfortable and pleasant as possible.<\/p>","link_label":"","link":""}},"column_YtcDiy":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mattressville.ca_progress-17.png","title":"Bulk Buying Power","text":"<p>We are always on the lookout for exceptional mattress deals and promotions from our suppliers. We buy in bulk and negotiate the lowest prices and then pass all the savings directly on to you. We utilize our buying power to offer the best price for brand nan mattresses.<\/p>","link_label":"","link":""}}},"block_order":["column_V4YNHd","column_crLVVp","column_yHJ7He","column_YtcDiy"],"custom_css":[".multicolumn-card {background: #fff; display: flex; justify-content: space-around; padding-left: 10px; border-radius: 5px; box-shadow: -5px -1px 8px #ccc;}",".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}","@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",".multicolumn-card .multicolumn-card__info {text-align: left; width: 100%;}"],"settings":{"title":"Our Business Strategy","heading_size":"h1","image_width":"third","image_ratio":"circle","columns_desktop":2,"column_alignment":"center","background_style":"primary","button_label":"","button_link":"","color_scheme":"","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"multicolumn_fK9pNm":{"type":"multicolumn","blocks":{"column_bLVQJB":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/65percent.jpg","title":"<strong>Total Savings<\/strong>","text":"","link_label":"SHOP NOW","link":"https:\/\/mattressville.ca\/collections\/all-mattresses"}}},"block_order":["column_bLVQJB"],"custom_css":[".multicolumn-card {padding-top: 20px; border-radius: 5px; box-shadow: -5px -2px 8px #ccc;}",".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 100%; max-width: 120px;}",".animate--slide-in {padding-left: 0; padding-right: 0; max-width: 100%;}"],"settings":{"title":"","heading_size":"h1","image_width":"third","image_ratio":"circle","columns_desktop":1,"column_alignment":"center","background_style":"none","button_label":"","button_link":"","color_scheme":"","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}}},"order":["main","multicolumn_PHYEYn","rich_text_jANkzF","collapsible_multicolumn","collapsible_content_6cG7tA","rich_text_EBibEQ","multicolumn_A9Ngk7","multicolumn_NtqcKh","multicolumn_fK9pNm"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme-sidebar",
+  "sections": {
+    "main": {
+      "type": "invx-main-page",
+      "custom_css": [
+
+      ],
+      "settings": {
+      }
+    },
+    "multicolumn_PHYEYn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_64GfrG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mattressville.ca_icon-rewards.png",
+            "title": "",
+            "text": "<p><strong>Awesome referral rewards program,</strong> as well as the best deals & offers.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_anm7Ek": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mattressville.ca_icon-price.png",
+            "title": "",
+            "text": "<p><strong>No traditional retail prices</strong> when shopping with us, we buy in bulk direct from the factory and maintain low overhead costs.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_eg4YVK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mattressville.ca_icon-retail.png",
+            "title": "",
+            "text": "<p><strong>No costly retail space</strong>, fancy showrooms, high administrative costs, or expensive advertising budgets.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zVXWye": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mattressville.ca_icon-support.png",
+            "title": "",
+            "text": "<p>Non-commissioned, friendly and knowledgeable <strong>Sleep Consultants will help you select the perfect mattress.</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_64GfrG",
+        "column_anm7Ek",
+        "column_eg4YVK",
+        "column_zVXWye"
+      ],
+      "custom_css": [
+        "multicolumn.background-primary .multicolumn-card {background-color: #fff;}",
+        ".multicolumn-card {display: flex; justify-content: space-around; padding-left: 10px; border: 0px solid #ccc; border-radius: 15px;}",
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}",
+        "@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",
+        ".multicolumn-card .multicolumn-card__info {text-align: left; width: 100%;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_jANkzF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BQy8PN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Quality Mattress Brands",
+            "heading_size": "h1"
+          }
+        },
+        "text_zUzLHV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Mattressville, we believe that more options don’t necessarily mean better. That’s why we carefully curate our selection of brand-name mattresses based on reviews, ratings, and customer feedback. Unlike generic brands, our name-brand options offer patented features and superior materials, providing you with unmatched comfort and quality. Rest assured, our thoughtfully chosen mattresses are designed to give you the best sleep experience possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BQy8PN",
+        "text_zUzLHV"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks {max-width: 100%;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_multicolumn": {
+      "type": "collapsible-multicolumn",
+      "blocks": {
+        "column_X4GdeX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mattressville.ca_tempur-pedic-logo.png",
+            "title": "<strong>TEMPUR-PEDIC</strong>",
+            "text": "<p>Tempur-Pedic® mattresses are designed to help you relax and sleep better. It is more than a typical memory foam mattress. TEMPUR® material is not typical memory foam. Their proprietary formulation changed the way the world sleeps.</p>",
+            "link_label": "View Tempur-Pedic products",
+            "link": "shopify://collections/tempur-pedic"
+          }
+        },
+        "column_QQpqiM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Kingsdown_Logo.png",
+            "title": "<strong>KINGSDOWN</strong>",
+            "text": "<p>With over 100 years of experience in designing and manufacturing mattresses, they have the know-how and expertise to offer our customers the best night's sleep possible. Kingsdown is committed to creating the highest quality mattresses while maintaining competitive pricing compared to many other name-brand mattresses.</p>",
+            "link_label": "View Kingsdown products",
+            "link": "https://mattressville.ca/collections/kingsdown"
+          }
+        },
+        "column_T9tT7g": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/sf_logo.png",
+            "title": "<strong>STEARNS & FOSTER</strong>",
+            "text": "<p>Stearns and Foster was established in 1846 and has been this nation's luxury brand for many years. The upholstery materials used in S&F products are usually the best available. Durability and comfort have long been the reputation of this brand. Looking for a Stearns & Foster Mattress Sale? Check our deals now</p>",
+            "link_label": "View Stearns & Foster Products",
+            "link": "shopify://collections/stearns-and-foster"
+          }
+        },
+        "column_B8hBVB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/marshall-mattress.svg",
+            "title": "<strong>MARSHALL</strong>",
+            "text": "<p>Marshall Mattresses are crafted with a heritage of quality sleep,dating back to the invention of the pocket coil spring system.For over a century,Marshall has been dedicated to providing exceptional comfort and support,night after night.</p>",
+            "link_label": "View Marshall products",
+            "link": "https://mattressville.ca/collections/marshall-mattresses"
+          }
+        }
+      },
+      "block_order": [
+        "column_X4GdeX",
+        "column_QQpqiM",
+        "column_T9tT7g",
+        "column_B8hBVB"
+      ],
+      "custom_css": [
+        ".section-template--22113196278068__collapsible_multicolumn-padding {padding: 0;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_6cG7tA": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_BEekTh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Full Manufacturer Warranty",
+            "icon": "none",
+            "row_content": "<p>Purchasing a new mattress is an investment, and you should have peace of mind that your investment is protected — that’s why all of our mattresses come with a full manufacturer warranty. This means that if you ever have an issue with your new mattress in the future, you can contact us and we will guide you through the warranty process. Our exceptional after-sales service team works tirelessly to make the warranty process as simple and easy as possible, so you can shop at Mattressville with confidence.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_m6z8qw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Sleep Guarantee",
+            "icon": "none",
+            "row_content": "<p>It's not uncommon for customers to test out a mattress at the store for a few minutes, purchase it with the expectation that it will satisfy their needs, and then after some time, realize that it's too soft or too firm. We understand that the few minutes you get to test out a mattress in-store may not be a good indicator of whether your choice will be right for you in the long-term — and that's where our Comfort Guarantee comes in. A comfortable bed is key to getting a good night's sleep. Our Comfort Guarantee is offered to underline our commitment to providing a great night's sleep. The Comfort Guarantee allows for the replacement of a mattress if you find your original purchase to be of the wrong comfort level. Although it rarely happens that our customers are unsatisfied with their new mattress purchase, we are so confident in our range of quality mattresses that we're willing to give you a couple of months to try out your selection. If you feel at any point that you're not getting the best night's sleep with your new mattress, you can contact us to arrange an exchange for a new mattress.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6UMbwX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Price Match Guarantee",
+            "icon": "none",
+            "row_content": "<p>One of the things you'll discover when shopping with Mattressville is that our products are always priced below what you'll find retail stores. In fact, we're so confident you won't find a better price anywhere else that we offer a 'Price Match Guarantee.' We will beat any competitor's price by 5%, so you can shop with peace of mind.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WdkXkb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Mattress Sleep Experts",
+            "icon": "none",
+            "row_content": "<p>When you make the decision to get a new mattress it may seem like all of them are the same, with differences only in size and thickness. However, not all mattresses are created equal — there are different types and sizes of mattresses, made from different materials, and constructed using different materials. The key to getting quality sleep is finding the mattress that best suits your sleep style and sleep needs. Our non-commissioned, friendly, highly professional and knowledgeable Sleep Consultants can help you select the perfect mattress with no pressure.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JKezXT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Referral Program",
+            "icon": "none",
+            "row_content": "<p>With your Mattressville referral program account, you will be provided with a unique discount link that you can share with your friends to enjoy a number of benefits from us. Our referral program also gives you an opportunity to receive extra cash, free presents, additional discounts or store credit for your future purchases. Contact us online today for more details or give us a call at 905-212-7722!</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_BEekTh",
+        "collapsible_row_m6z8qw",
+        "collapsible_row_6UMbwX",
+        "collapsible_row_WdkXkb",
+        "collapsible_row_JKezXT"
+      ],
+      "custom_css": [
+        "h3 {font-size: 1.4em;}",
+        ".accordion {padding: 0; max-width: 930px;}",
+        ".collapsible-content-wrapper-narrow {max-width: 100%;}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_EBibEQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_azWRtK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Reasonable Prices, Best Quality",
+            "heading_size": "h1"
+          }
+        },
+        "text_pN7b38": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Alluring and cheap outlet store prices can lead to spending more down the line, while the average Big Box Store prices are usually inflated. Here at Mattressville, we aim to provide you the premium sleeping experience with brand name mattresses at fair and competitive prices without compromising on quality.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_azWRtK",
+        "text_pN7b38"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {padding: 0;}"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_A9Ngk7": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_rNMUbc": {
+          "type": "column",
+          "settings": {
+            "title": "BIG BOX RETAILERS",
+            "text": "<ul><li>✕ Huge Price/Good Quality</li><li>✓ Brand Name Products</li><li>✓ Fully Manufacturer Warranty</li><li>✓ Sleep Guarantee</li><li>✓ Price Match Guarantee</li><li>✓ Mattress/ Sleep Experts</li><li>✕ Referral Program</li></ul>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xWLbFH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mattressville-logo-no-slogan.png",
+            "title": "",
+            "text": "<ul><li>✓ Reasonable Price/Good Quality</li><li>✓ Brand Name Products</li><li>✓ Fully Manufacturer Warranty</li><li>✓ Sleep Guarantee</li><li>✓ Price Match Guarantee</li><li>✓ Mattress/ Sleep Experts</li><li>✓ Referral Program</li></ul>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/all-mattresses"
+          }
+        },
+        "column_CM9eQY": {
+          "type": "column",
+          "settings": {
+            "title": "OUTLET STORES",
+            "text": "<ul><li>✕ Cheap Price/Poor Quality</li><li>✕ Usually no Brand Name Products</li><li>✕ Difficult Warranty</li><li>✓ Sleep Guarantee</li><li>✓ Price Match Guarantee</li><li>✕ Mattress/ Sleep Experts</li><li>✕ Referral Program</li></ul>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_rNMUbc",
+        "column_xWLbFH",
+        "column_CM9eQY"
+      ],
+      "custom_css": [
+        ".multicolumn.background-primary .multicolumn-card {background: #fff;}",
+        ".multicolumn-card {background: #ffffff; border-radius: 15px; border: 1px solid #f1f3f4; overflow: hidden; text-align: left; box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.05);}",
+        ".multicolumn li:nth-child(2) .multicolumn-card {height: 114%; z-index: 1000 !important; position: relative; transform: scale(1.02); margin-top: -7%;}",
+        ".multicolumn li:nth-child(3) .multicolumn-card {z-index: -1 !important;}",
+        ".multicolumn ul {list-style: none; font-size: 0.9em;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-8a9d13db-0f17-4925-a4ae-75e91b5e9e6f",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_NtqcKh": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_V4YNHd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mattressville.ca_progress-25.png",
+            "title": "No Expensive Showroom",
+            "text": "<p>We keep our rent cost low with No Prime Retail Locatrion and space saving design. It allow us to save and evaluate our product prices without hidden or extra costs.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_crLVVp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mattressville.ca_progress-13.png",
+            "title": "Low Administrative Cost",
+            "text": "<p>We use only necessary administrative expenses, implementing different saving strategies that significantly allow us to cut out business costs.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yHJ7He": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mattressville.ca_progress-10.png",
+            "title": "Non-Commissioned Staff",
+            "text": "<p>Non-commisioned sales approach helps to alleviate the pressure typical mattress sales can place upon the customer. Our Friendly Sleep Consultants work to make your mattress buying experience as comfortable and pleasant as possible.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YtcDiy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mattressville.ca_progress-17.png",
+            "title": "Bulk Buying Power",
+            "text": "<p>We are always on the lookout for exceptional mattress deals and promotions from our suppliers. We buy in bulk and negotiate the lowest prices and then pass all the savings directly on to you. We utilize our buying power to offer the best price for brand nan mattresses.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_V4YNHd",
+        "column_crLVVp",
+        "column_yHJ7He",
+        "column_YtcDiy"
+      ],
+      "custom_css": [
+        ".multicolumn-card {background: #fff; display: flex; justify-content: space-around; padding-left: 10px; border-radius: 5px; box-shadow: -5px -1px 8px #ccc;}",
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 50px;}",
+        "@media (min-width: 768px) {.multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 25%; max-width: 70px; }}",
+        ".multicolumn-card .multicolumn-card__info {text-align: left; width: 100%;}"
+      ],
+      "settings": {
+        "title": "Our Business Strategy",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_fK9pNm": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bLVQJB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/65percent.jpg",
+            "title": "<strong>Total Savings</strong>",
+            "text": "",
+            "link_label": "SHOP NOW",
+            "link": "https://mattressville.ca/collections/all-mattresses"
+          }
+        }
+      },
+      "block_order": [
+        "column_bLVQJB"
+      ],
+      "custom_css": [
+        ".multicolumn-card {padding-top: 20px; border-radius: 5px; box-shadow: -5px -2px 8px #ccc;}",
+        ".multicolumn-card .multicolumn-card__image-wrapper {text-align: center; width: 100%; max-width: 120px;}",
+        ".animate--slide-in {padding-left: 0; padding-right: 0; max-width: 100%;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_PHYEYn",
+    "rich_text_jANkzF",
+    "collapsible_multicolumn",
+    "collapsible_content_6cG7tA",
+    "rich_text_EBibEQ",
+    "multicolumn_A9Ngk7",
+    "multicolumn_NtqcKh",
+    "multicolumn_fK9pNm"
+  ]
+}
