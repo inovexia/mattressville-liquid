@@ -14,7 +14,9 @@
       }
     },
     "custom_reviews": {
-      "type": "custom-yotpo-reviews"
+      "type": "custom-yotpo-reviews",
+      "settings": {
+      }
     }
   },
   "order": [

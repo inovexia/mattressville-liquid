@@ -120,23 +120,12 @@
           data-id="{{ section.id }}">
           {% render 'invx-bread-crumb-nav' %}
           {% if collection.products.size > 0 %}
-            {% render 'facets'
-              ,
- results: collection
-              ,
- enable_filtering: section.settings.enable_filtering
-              ,
- enable_sorting: section.settings.enable_sorting
-              ,
- filter_type: section.settings.filter_type
-              ,
- paginate: paginate
-            %}
+            {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type, paginate: paginate %}
           {% endif %}
           {% if section.settings.enable_flash_deals and section.settings.flash_deals_image != blank -%}
             <a href="{{ section.settings.flash_deals_link }}" class="flash-deals">
               <img
-                src="{{ section.settings.flash_deals_image | img_url: 'master' }}"
+                src="{{ section.settings.flash_deals_image | image_url: 'master' }}"
                 alt="Flash Deals"
                 class="flash-deals-img"
                 height="150"
@@ -144,6 +133,14 @@
                 loading="lazy" />
             </a>
           {%- endif -%}
+
+          <div class="trustanalytica_badge_container_md">
+            {% assign page_url = request.path %}
+            {% if page_url == '/collections/adjustable-beds' %}
+                <a href="https://trustanalytica.org/ca/on/mississauga/best-adjustable-beds" title="trustanalytica"><div class="trustanalytica-badge"></div></a>
+            {% endif %}
+          </div>
+
         </aside>
       {%- endif -%}
       <div

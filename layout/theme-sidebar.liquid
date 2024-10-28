@@ -6,18 +6,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
 
-    {% comment %} 
-      {% if canonical_url %}
-        {% assign last_char = canonical_url | slice: -1 %}
-        {% unless last_char == '/' %}
-          {% assign canonical_url = canonical_url %}
-        {% endunless %}
-        <link rel="canonical" href="{{ canonical_url }}">
-      {% endif %}
-    {% endcomment %}
-      
-    {% assign new_canonical_url = 'https://' | append: request.host | append: request.path %}
-    <link rel="canonical" href="{{ new_canonical_url }}">
+    {% if canonical_url %}
+      {% assign new_canonical_url = 'https://' | append: request.host | append: request.path %}
+      <link rel="canonical" href="{{ new_canonical_url }}">
+    {% endif %}
 
     {%- if settings.favicon != blank -%}
       <link

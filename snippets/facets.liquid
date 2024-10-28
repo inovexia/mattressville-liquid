@@ -1023,6 +1023,7 @@
             {%- endif -%}
           </div>
         </form>
+
       </facet-filters-form>
     </details>
   </menu-drawer>
@@ -1074,6 +1075,7 @@
   {% comment %} Sort, product count and filter pills at the end when filter is type of Drawer for the correct tabbing order {% endcomment %}
   {%- if enable_sorting and filter_type == 'drawer' -%}
     <facet-filters-form class="facets small-hide">
+
       <form id="FacetSortDrawerForm" class="facets__form">
         <div class="facet-filters sorting caption small-hide">
           <div class="facet-filters__field">

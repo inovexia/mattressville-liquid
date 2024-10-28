@@ -23,14 +23,8 @@
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when 'about_column' -%}
-          {%- assign sectionTitleLink = block.settings.section_title_link
- | default: '/pages/why-mattressville'
- | url_escape
-          -%}
-          {%- assign contactTitleLink = block.settings.contact_title_link
- | default: '/pages/contact-us'
- | url_escape
-          -%}
+          {%- assign sectionTitleLink = block.settings.section_title_link | default: '/pages/why-mattressville' | url_escape -%}
+          {%- assign contactTitleLink = block.settings.contact_title_link | default: '/pages/contact-us' | url_escape -%}
           <div class="about">
             <a
               class="section-title"
@@ -39,15 +33,17 @@
               {{- block.settings.section_title | escape -}}
             </a>
             <span>{{ block.settings.section_content | escape }}</span>
-            <a
-              class="section-title"
-              title="{{ block.settings.contact_title | escape }}"
-              href="{{ contactTitleLink }}">
-              <span>{{ block.settings.contact_title | escape }}</span>
-            </a>
-            <p>{{ block.settings.contact_address | escape }}</p>
-            <p>{{ block.settings.contact_number | escape }}</p>
-            <span class="mail-us">{{ block.settings.contact_mail | escape }}</span>
+            <div class="footer-contact">
+              <a
+                class="section-title"
+                title="{{ block.settings.contact_title | escape }}"
+                href="{{ contactTitleLink }}">
+                <span>{{ block.settings.contact_title | escape }}</span>
+              </a>
+              <p>{{ block.settings.contact_address | escape }}</p>
+              <p>{{ block.settings.contact_number | escape }}</p>
+              <span class="mail-us">{{ block.settings.contact_mail | escape }}</span>
+            </div>
           </div>
         {%- when 'brand_column' -%}
           <div class="brands">
@@ -86,55 +82,59 @@
                 {%- endfor -%}
               </div>
             </div>
-            <div class="footer-badges">
-              <div class="badge-image">
-                <div id="y-badges" class="yotpo yotpo-badge badge-init">&nbsp;</div>
-              {% comment %} 
-                                                {%- if block.settings.match_maker_image != blank -%} 
-                                                <img 
-                                                src="{{ block.settings.review_image | img_url: 'master' }}" 
-                                                alt="Review Badge" 
-                                                class="footer-badge" 
-                                                loading="lazy" 
-                                                height="{{ block.settings.review_image_height }}" 
-                                                width="{{ block.settings.review_image_width }}" 
-                                                >
-                                                {%- else -%} 
-                                                <img 
-                                                src="{{ 'badges-preview.png' | asset_img_url: 'master' }}" 
-                                                alt="Review Badge" 
-                                                class="footer-badge" 
-                                                loading="lazy" 
-                                                height="{{ block.settings.review_image_height }}" 
-                                                width="{{ block.settings.review_image_width }}" 
-                                                >
-                                                {%- endif -%} 
-                                          {% endcomment %}
-              </div>
-              <div class="badge-image">
-                {%- if block.settings.match_maker_image != blank -%}
-                  <img
-                    src="{{ block.settings.award_image | img_url: 'master' }}"
-                    alt="Three best business excellence award 2022 badge"
-                    class="footer-badge"
-                    loading="lazy"
-                    height="{{block.settings.award_image_height}}"
-                    width="{{block.settings.award_image_width}}">
-                {%- else -%}
-                  <img
-                    src="{{ 'badge.png' | asset_img_url: 'master' }}"
-                    alt="Three best business excellence award 2022 badge"
-                    class="footer-badge"
-                    loading="lazy"
-                    height="{{ block.settings.award_image_height }}"
-                    width="{{ block.settings.award_image_width }}">
-                {%- endif -%}
-              </div>
-            </div>
           </div>
       {%- endcase -%}
     {%- endfor -%}
   </div>
+  
+  <div class="footer-badges">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'badge_logos' -%}
+          <div class="badge-image">
+             <div class="trustanalytica_badge_container">
+                <img src={{'mattressville.trustanalytica.png' | asset_img_url: 'master'}} alt="Trustanalytica Badge" width="100%" height="auto">               
+            </div>
+          </div>
+
+          <div class="badge-image">
+            {%- if block.settings.best_rated != blank -%}
+              <a href="https://threebestrated.ca/mattress-stores-in-mississauga-on" target="_blank" title="Best Rated">
+                <img
+                  src="{{ block.settings.best_rated | image_url }}"
+                  alt="Three best business excellence award 2022 badge"
+                  class="footer-badge"
+                  loading="lazy"
+                  height="auto"
+                  width="{{ block.settings.logo_image_width }}">
+              </a>
+            {%- endif -%}
+          </div>
+      
+          <div class="badge-image">    
+            {%- if block.settings.web_excellence != blank -%}
+              <a href="https://we-awards.com/winner/mattressville-website/" target="_blank" title="Web Excellence">
+                <img
+                  src="{{ block.settings.web_excellence | image_url }}"
+                  alt="Three best business excellence award 2022 badge"
+                  class="footer-badge"
+                  loading="lazy"
+                  height="auto"
+                  width="{{ block.settings.logo_image_width }}">
+              </a>
+            {%- endif -%}
+          </div>
+          
+          <div class="badge-image">
+            <a href="https://mattressville.ca/pages/reviews" title="Yotpo">
+              <div id="y-badges" class="yotpo yotpo-badge badge-init">&nbsp;</div>
+            </a>
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+    
+  </div>
+
 </div>
 {% schema %}
   {
@@ -261,41 +261,46 @@
             "type": "link_list",
             "id": "locations_b",
             "label": "Locations B"
+          },          
+        ]
+      },
+      {
+        "type": "badge_logos",
+        "name": "Badge Logos",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "trust_analytica",
+            "label": "Trust Analytica Logo"
+          },
+          {
+            "type": "image_picker",
+            "id": "best_rated",
+            "label": "Best Rated Logo"
+          },
+          {
+            "type": "image_picker",
+            "id": "web_excellence",
+            "label": "Web Excellence Logo"
           },
           {
             "type": "image_picker",
             "id": "review_image",
-            "label": "Review Image"
+            "label": "Yotpo Review Logo"
           },
           {
             "type": "number",
-            "id": "review_image_height",
-            "label": "Review Image Height",
+            "id": "logo_image_height",
+            "label": "Logo Height",
             "default": 135
           },
           {
             "type": "number",
-            "id": "review_image_width",
-            "label": "Review Image Width",
+            "id": "logo_image_width",
+            "label": "Logo Image Width",
             "default": 155
           },
-          {
-            "type": "image_picker",
-            "id": "award_image",
-            "label": "Award Image"
-          },
-          {
-            "type": "number",
-            "id": "award_image_height",
-            "label": "Award Image Height",
-            "default": 114
-          },
-          {
-            "type": "number",
-            "id": "award_image_width",
-            "label": "Award Image Width",
-            "default": 155
-          }
         ]
       }
     ],

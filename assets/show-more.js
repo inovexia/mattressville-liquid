@@ -1,27 +1,2 @@
-if (!customElements.get('show-more-button')) {
-  customElements.define(
-    'show-more-button',
-    class ShowMoreButton extends HTMLElement {
-      constructor() {
-        super();
-        const button = this.querySelector('button');
-        button.addEventListener('click', (event) => {
-          this.expandShowMore(event);
-          const nextElementToFocus = event.target.closest('.parent-display').querySelector('.show-more-item');
-          if (nextElementToFocus && !nextElementToFocus.classList.contains('hidden') && nextElementToFocus.querySelector('input')) {
-            nextElementToFocus.querySelector('input').focus();
-          }
-        });
-      }
-      expandShowMore(event) {
-        const parentDisplay = event.target.closest('[id^="Show-More-"]').closest('.parent-display');
-        const parentWrap = parentDisplay.querySelector('.parent-wrap');
-        this.querySelectorAll('.label-text').forEach((element) => element.classList.toggle('hidden'));
-        parentDisplay.querySelectorAll('.show-more-item').forEach((item) => item.classList.toggle('hidden'));
-        if (!this.querySelector('.label-show-less')) {
-          this.classList.add('hidden');
-        }
-      }
-    }
-  );
-}
+customElements.get("show-more-button")||customElements.define("show-more-button",class extends HTMLElement{constructor(){super(),this.querySelector("button").addEventListener("click",event=>{this.expandShowMore(event);const nextElementToFocus=event.target.closest(".parent-display").querySelector(".show-more-item");nextElementToFocus&&!nextElementToFocus.classList.contains("hidden")&&nextElementToFocus.querySelector("input")&&nextElementToFocus.querySelector("input").focus()})}expandShowMore(event){const parentDisplay=event.target.closest('[id^="Show-More-"]').closest(".parent-display"),parentWrap=parentDisplay.querySelector(".parent-wrap");this.querySelectorAll(".label-text").forEach(element=>element.classList.toggle("hidden")),parentDisplay.querySelectorAll(".show-more-item").forEach(item=>item.classList.toggle("hidden")),this.querySelector(".label-show-less")||this.classList.add("hidden")}});
+//# sourceMappingURL=/s/files/1/0558/6780/1757/t/19/assets/show-more.js.map?v=1725103456

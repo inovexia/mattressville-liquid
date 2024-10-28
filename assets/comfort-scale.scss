@@ -56,7 +56,7 @@
       &.level-1 {
         .meter-block {
           &:nth-child(1) {
-            border-bottom-color: #f3ec3a;
+            border-bottom-color: #e4a854;
           }
         }
       }
@@ -64,10 +64,10 @@
       &.level-2 {
         .meter-block {
           &:nth-child(1) {
-            border-bottom-color: #f3ec3a;
+            border-bottom-color: #e4a854;
           }
           &:nth-child(2) {
-            border-bottom-color: #f99b1e;
+            border-bottom-color: #93a445;
           }
         }
       }
@@ -75,13 +75,13 @@
       &.level-3 {
         .meter-block {
           &:nth-child(1) {
-            border-bottom-color: #f3ec3a;
+            border-bottom-color: #e4a854;
           }
           &:nth-child(2) {
-            border-bottom-color: #f99b1e;
+            border-bottom-color: #93a445;
           }
           &:nth-child(3) {
-            border-bottom-color: #ef3224;
+            border-bottom-color: #1c94d3;
           }
         }
       }
@@ -89,16 +89,16 @@
       &.level-4 {
         .meter-block {
           &:nth-child(1) {
-            border-bottom-color: #f3ec3a;
+            border-bottom-color: #e4a854;
           }
           &:nth-child(2) {
-            border-bottom-color: #f99b1e;
+            border-bottom-color: #93a445;
           }
           &:nth-child(3) {
-            border-bottom-color: #ef3224;
+            border-bottom-color: #1c94d3;
           }
           &:nth-child(4) {
-            border-bottom-color: #a51d47;
+            border-bottom-color: #c91d52;
           }
         }
       }
