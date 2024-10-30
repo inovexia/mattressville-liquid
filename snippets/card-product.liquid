@@ -131,6 +131,8 @@
         assign vendorImage = 'tempur.jpg' | asset_img_url: 'master'
       when 'Marshall'
         assign vendorImage = 'marshall-mattress.jpg' | asset_img_url: 'master'
+      when 'Orthex'
+        assign vendorImage = 'orthex-logo.png' | asset_img_url: 'master'
     endcase
   %}
   <div class="card-wrapper product-card-wrapper">
@@ -254,8 +256,10 @@
                     alt="{{ card_product.vendor }}"
                     class="vendor-img {{ card_product.vendor }}"
                     loading="lazy"
-                    height="{{ vendorImageH }}"
-                    width="{{ vendorImageW }}">
+                    height="auto"
+                    width="100%"
+                    style="max-width:140px;"
+                  >
                 {%- else -%}
                   <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
                 {%- endif -%}
