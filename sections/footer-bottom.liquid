@@ -8,13 +8,7 @@
   <div class="bottom-inner">
     <div class="logo-area">
       {%- if section.settings.footer_logo != blank -%}
-        <img
-          src="{{ section.settings.footer_logo | img_url: 'master' }}"
-          alt="Mattressville logo in grey colored text"
-          class="footer-logo"
-          loading="lazy"
-          height="55"
-          width="322">
+        {{ section.settings.footer_logo | image_url: width: 250 : height: 'auto' | image_tag : class: ''  }}
       {%- else -%}
         <img
           src="{{ 'mattressville-logo-white-slogan.png' | asset_img_url: 'master' }}"
