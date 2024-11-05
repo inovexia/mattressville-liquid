@@ -98,7 +98,7 @@
             {% if block.settings.best_rated != blank %}
              <div class="trustanalytica_badge_container">
                 <a href="https://trustanalytica.org/ca/on/mississauga/best-adjustable-beds" title="trustanalytica" arai-label="Trustanalytica" target="_blank">
-                  {{ block.settings.trust_analytica | image_url: width: 'auto' | image_tag : class: 'footer-badge'  }}
+                  {{ block.settings.trust_analytica | image_url: height: block.settings.logo_image_height | image_tag : class: 'footer-badge'  }}
                 </a>
               </div>
             {% endif %}

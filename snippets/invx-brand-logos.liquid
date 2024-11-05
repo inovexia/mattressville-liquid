@@ -1,0 +1,50 @@
+{% 
+
+    assign vendorImage = ''
+    case card_product.vendor
+        when 'Beautyrest'
+            assign vendorImage = 'vendor-beauty.jpg' | asset_img_url: 'master'
+        when 'Beaudoin'
+            assign vendorImage = 'brands/beaudoin.jpg' | asset_img_url: 'master'
+        when 'EcoComfort'
+            assign vendorImage = 'brands/ecocomfort.jpg' | asset_img_url: 'master'
+        when 'Galaxy Bedding'
+            assign vendorImage = 'brands/galaxy.jpg' | asset_img_url: 'master'
+        when 'Kingsdown'
+            assign vendorImage = 'brands/kingsdown.jpg' | asset_img_url: 'master'
+        when 'Mattressville'
+            assign vendorImage = 'brands/mville-new.jpg' | asset_img_url: 'master'
+        when 'Natura'
+            assign vendorImage = 'brands/natura.jpg' | asset_img_url: 'master'
+        when 'Sealy'
+            assign vendorImage = 'brands/sealy.png' | asset_img_url: 'master'
+        when 'Serta'
+            assign vendorImage = 'brands/serta.jpg' | asset_img_url: 'master'
+        when 'Serta iComfort'
+            assign vendorImage = 'brands/iComfort.jpg' | asset_img_url: 'master'
+        when 'Stearns & Foster'
+            assign vendorImage = 'brands/sf.jpg' | asset_img_url: 'master'
+        when 'Tempur-Pedic'
+            assign vendorImage = 'brands/tempur.jpg' | asset_img_url: 'master'
+        when 'Marshall'
+            assign vendorImage = 'brands/marshall-mattress.jpg' | asset_img_url: 'master'
+        when 'Orthex'
+            assign vendorImage = 'brands/orthex-logo.png' | asset_img_url: 'master'
+    endcase
+%}
+{%- if show_vendor -%}
+    <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+    {%- if vendorImage != '' -%}
+        <img
+            src="{{ vendorImage }}"
+            alt="{{ card_product.vendor }}"
+            class="vendor-img {{ card_product.vendor }}"
+            loading="lazy"
+            height="auto"
+            width="100%"
+            style="max-width:140px;"
+        >
+    {%- else -%}
+        <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
+    {%- endif -%}
+{%- endif -%}

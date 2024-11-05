@@ -98,42 +98,6 @@
     else
       assign cardProductURL = card_product.url | append: '?variant=' | append: targetVariant.id
     endif
-
-    ################################################################################
-
-    assign vendorImage = null
-    assign vendorImageH = 63
-    assign vendorImageW = 195
-    case card_product.vendor
-      when 'Beautyrest'
-        assign vendorImage = 'beauty.jpg' | asset_img_url: 'master'
-      when 'Beaudoin'
-        assign vendorImage = 'beaudoin.jpg' | asset_img_url: 'master'
-      when 'EcoComfort'
-        assign vendorImage = 'ecocomfort.jpg' | asset_img_url: 'master'
-      when 'Galaxy Bedding'
-        assign vendorImage = 'galaxy.jpg' | asset_img_url: 'master'
-      when 'Kingsdown'
-        assign vendorImage = 'kingsdown.jpg' | asset_img_url: 'master'
-      when 'Mattressville'
-        assign vendorImage = 'mville-new.jpg' | asset_img_url: 'master'
-      when 'Natura'
-        assign vendorImage = 'natura.jpg' | asset_img_url: 'master'
-      when 'Sealy'
-        assign vendorImage = 'sealy.jpg' | asset_img_url: 'master'
-      when 'Serta'
-        assign vendorImage = 'serta.jpg' | asset_img_url: 'master'
-      when 'Serta iComfort'
-        assign vendorImage = 'iComfort.jpg' | asset_img_url: 'master'
-      when 'Stearns & Foster'
-        assign vendorImage = 'sf.jpg' | asset_img_url: 'master'
-      when 'Tempur-Pedic'
-        assign vendorImage = 'tempur.jpg' | asset_img_url: 'master'
-      when 'Marshall'
-        assign vendorImage = 'marshall-mattress.jpg' | asset_img_url: 'master'
-      when 'Orthex'
-        assign vendorImage = 'orthex-logo.png' | asset_img_url: 'master'
-    endcase
   %}
   <div class="card-wrapper product-card-wrapper">
     <div class="
@@ -248,22 +212,8 @@
         <div class="card__information">
           <div class="card-information">
             <div class="vendor-information">
-              {%- if show_vendor -%}
-                <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-                {%- if vendorImage != null -%}
-                  <img
-                    src="{{ vendorImage }}"
-                    alt="{{ card_product.vendor }}"
-                    class="vendor-img {{ card_product.vendor }}"
-                    loading="lazy"
-                    height="auto"
-                    width="100%"
-                    style="max-width:140px;"
-                  >
-                {%- else -%}
-                  <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
-                {%- endif -%}
-              {%- endif -%}
+              {% render 'invx-brand-logos', card_product: card_product, show_vendor: show_vendor %}
+              
               <span class="caption-large light">{{ block.settings.description | escape }}</span>
               {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
                 {% liquid
@@ -299,18 +249,7 @@
                 </p>
               {%- endif -%}
             </div>
-            {% render 'invx-price'
-              ,
- product: card_product
-              ,
- price_class: ''
-              ,
- targetVariant: targetVariant
-              ,
- use_target_variant: true
-              ,
- show_compare_at_price: true
-            %}
+            {% render 'invx-price', product: card_product, price_class: '', targetVariant: targetVariant, use_target_variant: true, show_compare_at_price: true %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               <div class="card__information-volume-pricing-note">
                 <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
