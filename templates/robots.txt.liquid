@@ -8,9 +8,9 @@
         {{- rule -}}
     {% endfor %} {% endcomment %}
   {%- for rule in group.rules -%}
-    {%- unless rule.directive == 'Disallow' and rule.value == '/collections/*sort_by*' -%}
+    {% comment %} {%- unless rule.directive == 'Disallow' and rule.value == '/collections/*sort_by*' -%} {% endcomment %}
       {{ rule }}
-    {%- endunless -%}
+    {% comment %} {%- endunless -%} {% endcomment %}
   {%- endfor -%}
 
   {%- if group.sitemap != blank -%}
