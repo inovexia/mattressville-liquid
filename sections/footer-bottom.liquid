@@ -28,6 +28,7 @@
               title="{{ item.title | escape }}"
               href="{{ item.url }}">
               {{- item.title | escape -}}
+              aria-label="{{ item.title | escape }}"
             </a>
           {%- endfor -%}
         </div>
@@ -131,6 +132,7 @@
                 href="{{ settings.social_twitter_link }}"
                 target="_blank"
                 class="media-link"
+                aria-label="Twitter Logo"
                 title="Twitter">
                 <i class="gsi gs-twitter-alt"></i>
               </a>
@@ -140,6 +142,7 @@
                 href="{{ settings.social_facebook_link }}"
                 target="_blank"
                 class="media-link"
+                aria-label="Facebook Logo"
                 title="Facebook">
                 <i class="gsi gs-facebook-alt"></i>
               </a>
@@ -149,6 +152,7 @@
                 href="{{ settings.social_instagram_link }}"
                 target="_blank"
                 class="media-link"
+                aria-label="nstagram Logo"
                 title="Instagram">
                 <i class="gsi gs-instagram"></i>
               </a>

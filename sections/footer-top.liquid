@@ -30,6 +30,7 @@
             <a
               class="section-title"
               title="{{ block.settings.section_title | escape }}"
+              aria-label="{{ block.settings.section_title | escape }}"
               href="{{ sectionTitleLink }}">
               {{- block.settings.section_title | escape -}}
             </a>
@@ -38,6 +39,7 @@
               <a
                 class="section-title"
                 title="{{ block.settings.contact_title | escape }}"
+                aria-label="{{ block.settings.contact_title | escape }}"
                 href="{{ contactTitleLink }}">
                 <span>{{ block.settings.contact_title | escape }}</span>
               </a>
@@ -51,7 +53,7 @@
             <span class="section-title">{{ block.settings.section_title | escape }}</span>
             <div class="areas">
               {%- for brand in block.settings.brands_menu.links -%}
-                <a title="{{ brand.title | escape }}" href="{{ brand.url }}">{{ brand.title | escape }}</a>
+                <a title="{{ brand.title | escape }}" href="{{ brand.url }}" aria-label="{{ brand.title | escape }}">{{ brand.title | escape }}</a>
               {%- endfor -%}
             </div>
           </div>
@@ -60,7 +62,7 @@
             <span class="section-title">{{ block.settings.section_title | escape }}</span>
             <div class="areas">
               {%- for style in block.settings.styles_menu.links -%}
-                <a title="{{ style.title | escape }}" href="{{ style.url }}">{{ style.title | escape }}</a>
+                <a title="{{ style.title | escape }}" href="{{ style.url }}" aria-label="{{ style.title | escape }}">{{ style.title | escape }}</a>
               {%- endfor -%}
             </div>
           </div>
@@ -70,14 +72,14 @@
             <div class="location-area">
               <div class="areas">
                 {%- for location_a in block.settings.locations_a.links -%}
-                  <a title="{{ location_a.title | escape }}" href="{{ location_a.url }}">
+                  <a title="{{ location_a.title | escape }}" href="{{ location_a.url }}" aria-label="{{ location_a.title | escape }}">
                     {{- location_a.title | escape -}}
                   </a>
                 {%- endfor -%}
               </div>
               <div class="areas">
                 {%- for location_b in block.settings.locations_b.links -%}
-                  <a title="{{ location_b.title | escape }}" href="{{ location_b.url }}">
+                  <a title="{{ location_b.title | escape }}" href="{{ location_b.url }}" aria-label="{{ location_b.title | escape }}">
                     {{- location_b.title | escape -}}
                   </a>
                 {%- endfor -%}
@@ -95,7 +97,7 @@
           <div class="badge-image">
             {% if block.settings.best_rated != blank %}
              <div class="trustanalytica_badge_container">
-                <a href="https://trustanalytica.org/ca/on/mississauga/best-adjustable-beds" title="trustanalytica" target="_blank">
+                <a href="https://trustanalytica.org/ca/on/mississauga/best-adjustable-beds" title="trustanalytica" arai-label="Trustanalytica" target="_blank">
                   {{ block.settings.trust_analytica | image_url: width: 'auto' | image_tag : class: 'footer-badge'  }}
                 </a>
               </div>
@@ -104,7 +106,7 @@
           
           <div class="badge-image">
             {%- if block.settings.best_rated != blank -%}
-              <a href="https://threebestrated.ca/mattress-stores-in-mississauga-on" target="_blank" title="Best Rated">
+              <a href="https://threebestrated.ca/mattress-stores-in-mississauga-on" target="_blank" title="Best Rated" aria-label="Best Rated">
                 {{ block.settings.best_rated | image_url: width: block.settings.logo_image_width | image_tag : class: 'footer-badge'  }}
               </a>
             {%- endif -%}
@@ -112,14 +114,14 @@
           
           <div class="badge-image">    
             {%- if block.settings.web_excellence != blank -%}
-              <a href="https://we-awards.com/winner/mattressville-website/" target="_blank" title="Web Excellence">
+              <a href="https://we-awards.com/winner/mattressville-website/" target="_blank" title="Web Excellence"  aria-label="Web Excellence">
                 {{ block.settings.web_excellence | image_url: width: block.settings.logo_image_width | image_tag : class: 'footer-badge'  }}
               </a>
             {%- endif -%}
           </div>
           
           <div class="badge-image">
-            <a href="https://mattressville.ca/pages/reviews" title="Yotpo">
+            <a href="https://mattressville.ca/pages/reviews" title="Yotpo" aria-label="Yotpo">
               <div id="y-badges" class="yotpo yotpo-badge badge-init"></div>
             </a>
           </div>

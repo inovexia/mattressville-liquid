@@ -3,16 +3,16 @@
   <div class="page-width">
     <div class="inner">
       <div class="contact">
-        <a href="tel:{{ section.settings.phone_number | remove: "-"}}">
+        <a href="tel:{{ section.settings.phone_number | remove: "-"}}" aria-label="Contact number">
           <i class="gsi gs-phone"></i>
           <span>{{ section.settings.phone_number }}</span>
         </a>
         {%- if section.settings.contact_us_page != blank -%}
-          <a href="{{ section.settings.contact_us_page.url }}">
+          <a href="{{ section.settings.contact_us_page.url }}" aria-label="{{ section.settings.contact_us_page.title }}">
             <span>{{ section.settings.contact_us_page.title }}</span>
           </a>
         {%- else -%}
-          <a href="/contact-us/">
+          <a href="/contact-us/" aria-label="{{ Contact us }}">
             <span>Contact Us</span>
           </a>
         {%- endif -%}
