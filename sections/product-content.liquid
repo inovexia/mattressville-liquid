@@ -27,7 +27,7 @@
             <div class="description-left flex-grow-1">
               <div class="vendor-details">
                 
-                {% render 'invx-brand-logos', card_product: card_product, show_vendor: show_vendor %}
+                {% render 'invx-brand-logos', card_product: product, show_vendor: true %}
 
                 {%- if product.title != blank -%}
                   <h4>{{ product.title }}</h4>
