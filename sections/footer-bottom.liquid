@@ -8,7 +8,7 @@
   <div class="bottom-inner">
     <div class="logo-area">
       {%- if section.settings.footer_logo != blank -%}
-        {{ section.settings.footer_logo | image_url: width: 250 : height: 'auto' | image_tag : class: ''  }}
+        {{ section.settings.footer_logo | image_url: width: 250 | image_tag : class: ''  }}
       {%- else -%}
         <img
           src="{{ 'mattressville-logo-white-slogan.png' | asset_img_url: 'master' }}"

@@ -96,7 +96,7 @@
             {% if block.settings.best_rated != blank %}
              <div class="trustanalytica_badge_container">
                 <a href="https://trustanalytica.org/ca/on/mississauga/best-adjustable-beds" title="trustanalytica" target="_blank">
-                  {{ block.settings.trust_analytica | image_url: width: 'auto' : height: '120' | image_tag : class: 'footer-badge'  }}
+                  {{ block.settings.trust_analytica | image_url: width: 'auto' | image_tag : class: 'footer-badge'  }}
                 </a>
               </div>
             {% endif %}
@@ -105,7 +105,7 @@
           <div class="badge-image">
             {%- if block.settings.best_rated != blank -%}
               <a href="https://threebestrated.ca/mattress-stores-in-mississauga-on" target="_blank" title="Best Rated">
-                {{ block.settings.best_rated | image_url: width: block.settings.logo_image_width : height: block.settings.logo_image_height | image_tag : class: 'footer-badge'  }}
+                {{ block.settings.best_rated | image_url: width: block.settings.logo_image_width | image_tag : class: 'footer-badge'  }}
               </a>
             {%- endif -%}
           </div>
@@ -113,7 +113,7 @@
           <div class="badge-image">    
             {%- if block.settings.web_excellence != blank -%}
               <a href="https://we-awards.com/winner/mattressville-website/" target="_blank" title="Web Excellence">
-                {{ block.settings.web_excellence | image_url: width: block.settings.logo_image_width : height: block.settings.logo_image_height | image_tag : class: 'footer-badge'  }}
+                {{ block.settings.web_excellence | image_url: width: block.settings.logo_image_width | image_tag : class: 'footer-badge'  }}
               </a>
             {%- endif -%}
           </div>
