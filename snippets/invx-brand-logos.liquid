@@ -1,6 +1,5 @@
 {% 
-
-    assign vendorImage = ''
+    assign vendorImage = '';
     case card_product.vendor
         when 'Beautyrest'
             assign vendorImage = 'vendor-beauty.jpg' | asset_img_url: 'master'
