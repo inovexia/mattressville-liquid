@@ -19,14 +19,6 @@
             "slide_link": "/collections/all-mattresses"
           }
         },
-        "slide_BiREET": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/halloween_mattress_sale_home_2024_0b1a0e30-16ba-4d80-9cd3-faec4dccea96.png",
-            "slide_link": "shopify://collections/spooktacular-mattress-sale"
-          }
-        },
         "slide_n4V3KT": {
           "type": "slide",
           "settings": {
@@ -67,13 +59,6 @@
           "settings": {
             "image": "shopify://shop_images/Marshall_mattresses_home.png",
             "slide_link": "shopify://collections/marshall-mattresses"
-          }
-        },
-        "slide_8ybLiU": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/halloween_mattress_sale_home_2024_0b1a0e30-16ba-4d80-9cd3-faec4dccea96.png",
-            "slide_link": "shopify://collections/spooktacular-mattress-sale"
           }
         },
         "slide_9y8Uir": {
@@ -122,14 +107,12 @@
       },
       "block_order": [
         "slide_PEgBhX",
-        "slide_BiREET",
         "slide_n4V3KT",
         "slide_N7jLUx",
         "slide_yQaMJP",
         "slide_bTWUcd",
         "slide_dJqdk3",
         "slide_k4wTAU",
-        "slide_8ybLiU",
         "slide_9y8Uir",
         "slide_mgniDF",
         "slide_86rVjX",
