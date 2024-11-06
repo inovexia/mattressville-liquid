@@ -26,9 +26,10 @@
             <a
               class="menu-link"
               title="{{ item.title | escape }}"
-              href="{{ item.url }}">
-              {{- item.title | escape -}}
+              href="{{ item.url }}"
               aria-label="{{ item.title | escape }}"
+            >
+              {{- item.title | escape -}}              
             </a>
           {%- endfor -%}
         </div>
