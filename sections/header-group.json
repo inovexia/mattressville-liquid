@@ -15,7 +15,7 @@
       "type": "invx-announcement-bar",
       "settings": {
         "background_color": "#d7355c",
-        "announcement": "<p><a href=\"/pages/local-gta-flyer\" title=\"Halloween Mattress Sale Flyer\">Halloween Mattress Sale 20% OFF Applied at Checkout</a> | Financing Available: Buy Now, Pay Over Time with AFFIRM</p>",
+        "announcement": "<p><a target=\"_blank\" title=\"Marshall Mattresses\"><strong>Marshall Mattresses</strong></a> Now On Sale | Financing Available: Buy Now, Pay Over Time with AFFIRM</p>",
         "duration": "session"
       }
     },
