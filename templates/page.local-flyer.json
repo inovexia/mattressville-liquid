@@ -160,6 +160,7 @@
       "blocks": {
         "heading_VVe8mf": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "SPOOKTACULAR HALLOWEEN SALE FLYER",
             "heading_size": "h1"
@@ -169,6 +170,7 @@
       "block_order": [
         "heading_VVe8mf"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -180,6 +182,7 @@
     },
     "image_with_text_zVawM7": {
       "type": "image-with-text",
+      "disabled": true,
       "custom_css": [
         ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
         ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
@@ -207,12 +210,14 @@
       "blocks": {
         "text_743jUz": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Spooky Season Savings Alert!</strong> 🎃 This Halloween, sleep like the <em>dead</em> with unbeatable prices on all our top mattresses. From spine-chilling discounts to monstrous markdowns, grab your perfect mattress before the sale disappears. Deals so good, they’re scary! </p><p><em>**20% Discount AUTO APPLIED at checkout on all sale items</em></p>"
           }
         },
         "button_GnfGwy": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Shop Sale Items",
             "button_link": "shopify://collections/spooktacular-mattress-sale",
@@ -227,6 +232,7 @@
         "text_743jUz",
         "button_GnfGwy"
       ],
+      "disabled": true,
       "custom_css": [
         ".rich-text .rich-text__wrapper {padding: 0;}",
         ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
@@ -242,6 +248,7 @@
     },
     "psb_utilities_line_FrHYJq": {
       "type": "psb-utilities-line",
+      "disabled": true,
       "settings": {
         "container_width": "psb-container",
         "line_height": 1,
@@ -292,7 +299,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 44,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
