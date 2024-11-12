@@ -19,6 +19,12 @@
             "slide_link": "/collections/all-mattresses"
           }
         },
+        "slide_Mk648G": {
+          "type": "slide",
+          "settings": {
+            "slide_link": ""
+          }
+        },
         "slide_n4V3KT": {
           "type": "slide",
           "settings": {
@@ -107,6 +113,7 @@
       },
       "block_order": [
         "slide_PEgBhX",
+        "slide_Mk648G",
         "slide_n4V3KT",
         "slide_N7jLUx",
         "slide_yQaMJP",
@@ -604,9 +611,7 @@
     },
     "newsletter_De6KAC": {
       "type": "home-newsletter",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "background_color": "#eff9f9",
         "heading": "Mattressville",
