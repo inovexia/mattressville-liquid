@@ -32,7 +32,7 @@
 {% endcase %}
  {% endcomment %}
 
-{%- assign vendor = card_product.vendor -%}
+{%- assign vendor = card_product.vendor | remove: ' '  -%}
 
 {%- if show_vendor -%}
     
