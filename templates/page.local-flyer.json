@@ -186,7 +186,7 @@
         ".global-media-settings {border: none !important;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/mattressville_black_friday_flyer_v4.png",
+        "image": "shopify://shop_images/mattressville_black_friday_flyer.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
