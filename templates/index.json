@@ -14,9 +14,17 @@
       "blocks": {
         "slide_PEgBhX": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Homepage_welcome_banner_a7d8782b-c7a1-425b-9603-80954be77ee7.png",
             "slide_link": "/collections/all-mattresses"
+          }
+        },
+        "slide_Ad9GFP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mattressville_black_friday_home2023_banner.png",
+            "slide_link": "shopify://collections/black-friday-cyber-monday-mattress-sale"
           }
         },
         "slide_n4V3KT": {
@@ -47,6 +55,13 @@
             "slide_link": "shopify://collections/tempur-pedic"
           }
         },
+        "slide_k4wTAU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Marshall_mattresses_home.png",
+            "slide_link": "shopify://collections/marshall-mattresses"
+          }
+        },
         "slide_dJqdk3": {
           "type": "slide",
           "settings": {
@@ -54,11 +69,11 @@
             "slide_link": "shopify://pages/reviews"
           }
         },
-        "slide_k4wTAU": {
+        "slide_7qJMtL": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Marshall_mattresses_home.png",
-            "slide_link": "shopify://collections/marshall-mattresses"
+            "image": "shopify://shop_images/mattressville_black_friday_home2023_banner.png",
+            "slide_link": "shopify://collections/black-friday-cyber-monday-mattress-sale"
           }
         },
         "slide_9y8Uir": {
@@ -107,12 +122,14 @@
       },
       "block_order": [
         "slide_PEgBhX",
+        "slide_Ad9GFP",
         "slide_n4V3KT",
         "slide_N7jLUx",
         "slide_yQaMJP",
         "slide_bTWUcd",
-        "slide_dJqdk3",
         "slide_k4wTAU",
+        "slide_dJqdk3",
+        "slide_7qJMtL",
         "slide_9y8Uir",
         "slide_mgniDF",
         "slide_86rVjX",
