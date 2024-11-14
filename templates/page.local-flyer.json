@@ -159,9 +159,8 @@
       "blocks": {
         "heading_VVe8mf": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "SPOOKTACULAR HALLOWEEN SALE FLYER",
+            "heading": "BLACK FRIDAY & CYBER MONDAY MATTRESS SALE",
             "heading_size": "h1"
           }
         }
@@ -169,7 +168,6 @@
       "block_order": [
         "heading_VVe8mf"
       ],
-      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -181,7 +179,6 @@
     },
     "image_with_text_zVawM7": {
       "type": "image-with-text",
-      "disabled": true,
       "custom_css": [
         ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
         ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
@@ -189,7 +186,7 @@
         ".global-media-settings {border: none !important;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/halloween_mattress_sale_2024_flyer_5.5_x_8.4_in_7dc324f5-646e-4d85-a271-8fbc78409214.png",
+        "image": "shopify://shop_images/mattressville_black_friday_flyer_v4.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -209,14 +206,12 @@
       "blocks": {
         "text_743jUz": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "<p><strong>Spooky Season Savings Alert!</strong> 🎃 This Halloween, sleep like the <em>dead</em> with unbeatable prices on all our top mattresses. From spine-chilling discounts to monstrous markdowns, grab your perfect mattress before the sale disappears. Deals so good, they’re scary! </p><p><em>**20% Discount AUTO APPLIED at checkout on all sale items</em></p>"
+            "text": "<p><strong>Black Friday Mattress Savings Alert! </strong>🛒 This BFCM, upgrade your sleep with jaw-dropping deals on all our best mattresses. Discounts up to 20% and massive markdowns, this is your chance to grab the perfect mattress at a price you won’t believe. Don’t wait—these deals will disappear on November 30th!</p><p><em><strong>10% - 15% - 20% Discounts AUTO APPLIED at checkout on all sale items</strong></em></p>"
           }
         },
         "button_GnfGwy": {
           "type": "button",
-          "disabled": true,
           "settings": {
             "button_label": "Shop Sale Items",
             "button_link": "shopify://collections/black-friday-cyber-monday-mattress-sale",
@@ -231,7 +226,6 @@
         "text_743jUz",
         "button_GnfGwy"
       ],
-      "disabled": true,
       "custom_css": [
         ".rich-text .rich-text__wrapper {padding: 0;}",
         ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
