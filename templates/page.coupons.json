@@ -72,6 +72,32 @@
             "button_link": "https://mattressville.ca/collections/all-mattresses"
           }
         },
+        "coupon_wB4ADm": {
+          "type": "coupon",
+          "settings": {
+            "image": "shopify://shop_images/bfcm15_coupon.png",
+            "type": "other",
+            "code": "BFCM1015",
+            "title": "Black Friday and Cyber Monday 15% OFF COUPON",
+            "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code:<strong>BFCM15 (15% OFF all Orders from $1,500-$2,499)</strong> at the checkout page. Mattressville reserves the right to void the coupons.</p>",
+            "expiry": "November 14, 2024",
+            "button_label": "Start Saving",
+            "button_link": "https://mattressville.ca/collections/all-mattresses"
+          }
+        },
+        "coupon_QtLCtp": {
+          "type": "coupon",
+          "settings": {
+            "image": "shopify://shop_images/bfcm20_coupon.png",
+            "type": "other",
+            "code": "BFCM20",
+            "title": "Black Friday and Cyber Monday 20% OFF COUPON",
+            "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code:<strong>BFCM20 (20% OFF all Orders from $2,500 and up)</strong> at the checkout page. Mattressville reserves the right to void the coupons.</p>",
+            "expiry": "November 14, 2024",
+            "button_label": "Start Saving",
+            "button_link": "https://mattressville.ca/collections/all-mattresses"
+          }
+        },
         "coupon_VBCMkP": {
           "type": "coupon",
           "settings": {
@@ -98,19 +124,6 @@
             "button_link": "https://mattressville.ca/collections/all-mattresses"
           }
         },
-        "coupon_wB4ADm": {
-          "type": "coupon",
-          "settings": {
-            "image": "shopify://shop_images/bfcm15_coupon.png",
-            "type": "other",
-            "code": "BFCM1015",
-            "title": "Black Friday and Cyber Monday 15% OFF COUPON",
-            "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code:<strong>BFCM15 (15% OFF all Orders from $1,500-$2,499)</strong> at the checkout page. Mattressville reserves the right to void the coupons.</p>",
-            "expiry": "November 14, 2024",
-            "button_label": "Start Saving",
-            "button_link": "https://mattressville.ca/collections/all-mattresses"
-          }
-        },
         "coupon_zLfBaQ": {
           "type": "coupon",
           "settings": {
@@ -123,31 +136,6 @@
             "button_label": "Start Saving",
             "button_link": "https://mattressville.ca/collections/all-mattresses"
           }
-        },
-        "coupon_QtLCtp": {
-          "type": "coupon",
-          "settings": {
-            "image": "shopify://shop_images/bfcm20_coupon.png",
-            "type": "other",
-            "code": "BFCM20",
-            "title": "Black Friday and Cyber Monday 20% OFF COUPON",
-            "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code:<strong>BFCM20 (20% OFF all Orders from $2,500 and up)</strong> at the checkout page. Mattressville reserves the right to void the coupons.</p>",
-            "expiry": "November 14, 2024",
-            "button_label": "Start Saving",
-            "button_link": "https://mattressville.ca/collections/all-mattresses"
-          }
-        },
-        "coupon_de9Eet": {
-          "type": "coupon",
-          "settings": {
-            "type": "other",
-            "code": "",
-            "title": "",
-            "description": "",
-            "expiry": "",
-            "button_label": "",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
@@ -155,12 +143,11 @@
         "coupon_FkNtma",
         "coupon_KzhYWf",
         "coupon_pLL44K",
+        "coupon_wB4ADm",
+        "coupon_QtLCtp",
         "coupon_VBCMkP",
         "coupon_7iyAJi",
-        "coupon_wB4ADm",
-        "coupon_zLfBaQ",
-        "coupon_QtLCtp",
-        "coupon_de9Eet"
+        "coupon_zLfBaQ"
       ],
       "settings": {
         "tnc": "<p><em>*Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville has the right to void the coupons.</em></p>",
