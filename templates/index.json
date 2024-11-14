@@ -604,9 +604,7 @@
     },
     "newsletter_De6KAC": {
       "type": "home-newsletter",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "background_color": "#eff9f9",
         "heading": "Mattressville",
