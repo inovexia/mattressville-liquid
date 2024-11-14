@@ -12,8 +12,7 @@
   "sections": {
     "main": {
       "type": "invx-main-page",
-      "settings": {
-      }
+      "settings": {}
     },
     "multicolumn_CrLKdg": {
       "type": "multicolumn",
@@ -220,7 +219,7 @@
           "disabled": true,
           "settings": {
             "button_label": "Shop Sale Items",
-            "button_link": "shopify://collections/spooktacular-mattress-sale",
+            "button_link": "shopify://collections/black-friday-cyber-monday-mattress-sale",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
