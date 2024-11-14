@@ -1,3 +1,4 @@
+{% comment %} 
 {% assign vendorImage = '' %}
 {% case card_product.vendor %}
     {% when 'Beautyrest' %}
@@ -29,18 +30,21 @@
     {% when 'Orthex' %}
         {% assign vendorImage = 'vendor-orthex.png' | asset_img_url: '140x' %}
 {% endcase %}
+ {% endcomment %}
+
+{%- assign vendor = card_product.vendor -%}
 
 {%- if show_vendor -%}
     
     <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
     {%- if vendorImage != empty -%}
         <img
-            src="{{ vendorImage }}"
-            alt="{{ card_product.vendor }}"
-            class="vendor-img {{ card_product.vendor }}"
+            src="{{ 'vendor-' | append: vendor | append: '.png' | asset_img_url: '140x' }}"
+            alt="{{ vendor }}"
+            class="vendor-img {{ vendor }}"
             loading="lazy"            
         >
     {%- else -%}
-        <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
+        <div class="caption-with-letter-spacing light">{{ vendor }}</div>
     {%- endif -%}
 {%- endif -%}
