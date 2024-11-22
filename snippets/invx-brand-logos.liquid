@@ -37,12 +37,14 @@
 {%- if show_vendor -%}
     
     <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-    {%- if vendorImage != empty -%}
+    {%- if vendor != empty -%}
         <img
-            src="{{ 'vendor-' | append: vendor | append: '.png' | asset_img_url: '140x' }}"
+            src="{{ 'vendor-' | append: vendor | append: '.png' | asset_img_url: 'master' }}"
             alt="{{ vendor }}"
             class="vendor-img {{ vendor }}"
-            loading="lazy"            
+            loading="lazy"
+            width="100%"
+            height="auto"
         >
     {%- else -%}
         <div class="caption-with-letter-spacing light">{{ vendor }}</div>
