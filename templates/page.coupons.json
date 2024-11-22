@@ -19,6 +19,7 @@
       "blocks": {
         "coupon_yDC3bH": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/300OFF.png",
             "type": "other",
@@ -32,6 +33,7 @@
         },
         "coupon_FkNtma": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Save_100_Coupon.webp",
             "type": "other",
@@ -45,6 +47,7 @@
         },
         "coupon_KzhYWf": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Save_50_Coupon.webp",
             "type": "other",
@@ -57,6 +60,45 @@
           }
         },
         "coupon_pLL44K": {
+          "type": "coupon",
+          "settings": {
+            "image": "shopify://shop_images/bfcm10_coupon.png",
+            "type": "other",
+            "code": "BFCM10",
+            "title": "Black Friday and Cyber Monday 10% OFF COUPON",
+            "description": "<p><strong>BFCM10 (10% OFF all Orders from $500-$1,499) </strong>is <em>automatically applied</em><strong> </strong>at checkout page. Must be presented at the time of purchase in store. Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville reserves the right to void the coupons.</p>",
+            "expiry": "November 30, 2024",
+            "button_label": "Start Saving",
+            "button_link": "shopify://collections/black-friday-cyber-monday-mattress-sale"
+          }
+        },
+        "coupon_wB4ADm": {
+          "type": "coupon",
+          "settings": {
+            "image": "shopify://shop_images/bfcm15_coupon.png",
+            "type": "other",
+            "code": "BFCM1015",
+            "title": "Black Friday and Cyber Monday 15% OFF COUPON",
+            "description": "<p><strong>BFCM15 (15% OFF all Orders from $1,500-$2,499)</strong> is <em>automatically applied</em><strong> </strong>at checkout page. Must be presented at the time of purchase in store. Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville reserves the right to void the coupons.</p>",
+            "expiry": "November 30, 2024",
+            "button_label": "Start Saving",
+            "button_link": "shopify://collections/black-friday-cyber-monday-mattress-sale"
+          }
+        },
+        "coupon_QtLCtp": {
+          "type": "coupon",
+          "settings": {
+            "image": "shopify://shop_images/bfcm20_coupon.png",
+            "type": "other",
+            "code": "BFCM20",
+            "title": "Black Friday and Cyber Monday 20% OFF COUPON",
+            "description": "<p><strong>BFCM20 (20% OFF all Orders $2,500 and up)</strong> is <em>automatically applied</em><strong> </strong>at checkout page. Must be presented at the time of purchase in store. Coupons can not be combined with any other offer or discount and do not have a cash value. Mattressville reserves the right to void the coupons.</p>",
+            "expiry": "November 30, 2024",
+            "button_label": "Start Saving",
+            "button_link": "shopify://collections/black-friday-cyber-monday-mattress-sale"
+          }
+        },
+        "coupon_VBCMkP": {
           "type": "coupon",
           "settings": {
             "image": "shopify://shop_images/mattressville_canada10_coupon_f7a5e8a8-6a5f-4ad2-af8f-f1e87356f1a3.png",
@@ -101,6 +143,9 @@
         "coupon_FkNtma",
         "coupon_KzhYWf",
         "coupon_pLL44K",
+        "coupon_wB4ADm",
+        "coupon_QtLCtp",
+        "coupon_VBCMkP",
         "coupon_7iyAJi",
         "coupon_zLfBaQ"
       ],

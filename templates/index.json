@@ -14,9 +14,17 @@
       "blocks": {
         "slide_PEgBhX": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Homepage_welcome_banner_a7d8782b-c7a1-425b-9603-80954be77ee7.png",
             "slide_link": "/collections/all-mattresses"
+          }
+        },
+        "slide_Ad9GFP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mattressville_black_friday_home2023_banner.png",
+            "slide_link": "shopify://collections/black-friday-cyber-monday-mattress-sale"
           }
         },
         "slide_n4V3KT": {
@@ -47,31 +55,38 @@
             "slide_link": "shopify://collections/tempur-pedic"
           }
         },
-        "slide_dJqdk3": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/OVER_500_Customers_reviews.png",
-            "slide_link": "shopify://pages/reviews"
-          }
-        },
         "slide_k4wTAU": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Marshall_mattresses_home.png",
+            "image": "shopify://shop_images/marshall_home_banner_v2.png",
             "slide_link": "shopify://collections/marshall-mattresses"
+          }
+        },
+        "slide_dJqdk3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/homepage_highest_rated_reviews_banner_mattressville.png",
+            "slide_link": "shopify://pages/reviews"
+          }
+        },
+        "slide_7qJMtL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mattressville_black_friday_home2023_banner.png",
+            "slide_link": "shopify://collections/black-friday-cyber-monday-mattress-sale"
           }
         },
         "slide_9y8Uir": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/mattressville_banner_stearns_and_foster__2024.jpg",
+            "image": "shopify://shop_images/mattressville_banner_4__2024.png",
             "slide_link": "shopify://collections/stearns-and-foster"
           }
         },
         "slide_mgniDF": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/mattressville_natura_banner_rev_2024_ddd17fac-ab54-4ae3-acc0-7c8dd0ed254c.jpg",
+            "image": "shopify://shop_images/mattressville_natura_banner_rev_2024.png",
             "slide_link": "shopify://collections/natura"
           }
         },
@@ -107,12 +122,14 @@
       },
       "block_order": [
         "slide_PEgBhX",
+        "slide_Ad9GFP",
         "slide_n4V3KT",
         "slide_N7jLUx",
         "slide_yQaMJP",
         "slide_bTWUcd",
-        "slide_dJqdk3",
         "slide_k4wTAU",
+        "slide_dJqdk3",
+        "slide_7qJMtL",
         "slide_9y8Uir",
         "slide_mgniDF",
         "slide_86rVjX",
@@ -381,7 +398,7 @@
         "review_krBYzi": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify://shop_images/Sealy-Corporation-brand.svg",
+            "review_image": "shopify://shop_images/Sealy-Corporation-brand_1_1.svg",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",
@@ -414,7 +431,7 @@
         "review_PQEP6e": {
           "type": "Review",
           "settings": {
-            "review_image": "shopify://shop_images/sertamattress.png",
+            "review_image": "shopify://shop_images/2019_Serta_Can_Logo_80.png",
             "review_stars": "5",
             "review_text": "",
             "review_name": "",

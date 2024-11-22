@@ -12,8 +12,7 @@
   "sections": {
     "main": {
       "type": "invx-main-page",
-      "settings": {
-      }
+      "settings": {}
     },
     "multicolumn_CrLKdg": {
       "type": "multicolumn",
@@ -160,9 +159,8 @@
       "blocks": {
         "heading_VVe8mf": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "SPOOKTACULAR HALLOWEEN SALE FLYER",
+            "heading": "Black Friday Mattress Sale 2024",
             "heading_size": "h1"
           }
         }
@@ -170,7 +168,6 @@
       "block_order": [
         "heading_VVe8mf"
       ],
-      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -182,7 +179,6 @@
     },
     "image_with_text_zVawM7": {
       "type": "image-with-text",
-      "disabled": true,
       "custom_css": [
         ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
         ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
@@ -190,7 +186,7 @@
         ".global-media-settings {border: none !important;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/halloween_mattress_sale_2024_flyer_5.5_x_8.4_in_7dc324f5-646e-4d85-a271-8fbc78409214.png",
+        "image": "shopify://shop_images/mattressville_black_friday_flyer.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -210,17 +206,15 @@
       "blocks": {
         "text_743jUz": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "<p><strong>Spooky Season Savings Alert!</strong> 🎃 This Halloween, sleep like the <em>dead</em> with unbeatable prices on all our top mattresses. From spine-chilling discounts to monstrous markdowns, grab your perfect mattress before the sale disappears. Deals so good, they’re scary! </p><p><em>**20% Discount AUTO APPLIED at checkout on all sale items</em></p>"
+            "text": "<p><strong>Black Friday Mattress Savings Alert! </strong>🛒 This BFCM, upgrade your sleep with jaw-dropping deals on all our best mattresses. Mattressville<em> already</em> has a reputation for being <strong>#1 in customer service</strong> and providing premium high-end mattresses.. and we are doing something really big<br/>for <strong>Black Friday</strong> and <strong>Cyber Monday.</strong></p><p>Shop during our <strong>Black Friday Mattress Sale</strong> and save up to 20% plus massive markdowns, this is your chance to grab the perfect mattress at a price you won’t believe.😲</p><ul><li><strong>BFCM10 (10% OFF Orders $500-$1499)</strong></li><li><strong>BFCM15 (15% OFF Order $1500-$2499)</strong></li><li><strong>BFCM20 (20% OFF Order $2500+)</strong></li></ul><p><em><strong>Discounts AUTO APPLIED at checkout on all sale items.</strong></em></p><p>Treat yourself and your loved ones so you too can have a good night, <em>every night! </em>Don't forget to check out our blog: <a href=\"https://mattressville.ca/blog/5-tips-for-buying-a-mattress-on-black-friday-and-cyber-monday/\" title=\"7 Tips For Buying a Mattress on Black Friday and Cyber Monday 2023\"><strong>7 Tips For Buying a Mattress on Black Friday and Cyber Monday</strong></a></p><p><em>*coupons cannot be combined with other coupons, promos, or bundles</em></p><p><strong>Black Friday Mattress Sale Starts on now ~ Ends Cyber Monday, December 2nd, 11:59 pm</strong></p>"
           }
         },
         "button_GnfGwy": {
           "type": "button",
-          "disabled": true,
           "settings": {
             "button_label": "Shop Sale Items",
-            "button_link": "shopify://collections/spooktacular-mattress-sale",
+            "button_link": "shopify://collections/black-friday-cyber-monday-mattress-sale",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -232,7 +226,6 @@
         "text_743jUz",
         "button_GnfGwy"
       ],
-      "disabled": true,
       "custom_css": [
         ".rich-text .rich-text__wrapper {padding: 0;}",
         ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
