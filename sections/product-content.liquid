@@ -32,12 +32,12 @@
                   {{ product.description }}
                 {%- endif -%}
 
-                {%- for block in section.blocks -%}
+                {% comment %} {%- for block in section.blocks -%}
                   {%- case block.type -%}
                     {%- when '@app' -%}
                         {% render block %}
                   {%- endcase -%}
-                {%- endfor -%}
+                {%- endfor -%} {% endcomment %}
                 <div class="affirm-text">
                   <p>Buy now pay over time! Financing available via Affirm.<br>Learn more on <a href="https://helpcenter.affirm.com/s/" rel="noopener noreferrer"> 
                   <img
@@ -116,9 +116,9 @@
           {%- endif -%}
           {% assign media_image_id = product.metafields.custom.information_file_content %}
           {% if media_image_id %}
-            {% assign media_image = media_image_id | media_image %}
+            {% assign media_image = media_image_id | file_url %}
             {% if media_image %}
-              <img src="{{ media_image | img_url: 'master' }}" alt="Product Image">
+              <img src="{{ media_image | image_url: 'master' }}" alt="Product Image" width="100%" height="auto">
             {% endif %}
           {% endif %}
           {%-if product.metafields.custom.product_table_description != blank -%}
@@ -140,9 +140,9 @@
             {%- endif -%}
             {% assign feature_image_id = product.metafields.custom.feature_file_content %}
             {% if feature_image_id %}
-              {% assign feature_media_image = feature_image_id | media_image %}
+              {% assign feature_media_image = feature_image_id | file_url %}
               {% if feature_media_image %}
-                <img src="{{ feature_media_image | img_url: 'master' }}" alt="Product Image" style="width:100%">
+                <img src="{{ feature_media_image | image_url: 'master' }}" alt="Product Image" style="" width="100%" height="auto">
               {% endif %}
             {% endif %}
           {%- endif -%}
