@@ -125,7 +125,7 @@
                   {{ form | payment_terms }}
                 {%- endform -%}
               </div>
-            {%- when 'price_block' -%}
+            {%- when 'essentials' -%}
               <div class="grid">
                 <div class="grid__item product__title" {{ block.shopify_attributes }}>
 
@@ -754,10 +754,10 @@
             or collection.title contains '`'
             or collection.title contains '~'
           %}
-            {% assign valid_collections = valid_collections | append: collection.title | append: ',' | append: ' ' %}
-          {% endunless %}
+            {% assign valid_collections = valid_collections | strip_html | append: collection.title | append: ", "  %}
+         {% endunless %}
         {% endfor %}
-        {{ valid_collections | remove_end: ',' }}
+        {{ valid_collections }}
       </div>
     </div>
     {%- if section.settings.media_position == 'right' -%}
@@ -1071,7 +1071,7 @@
     },
     {
       "type": "essentials",
-      "name": "Essentials",
+      "name": "Price Block",
       "limit": 1
     },
     {

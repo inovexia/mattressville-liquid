@@ -54,7 +54,7 @@
             class="swiper-slide"
             rel="lightbox[gallery]">
 
-            <img src="{{ media | img_url: 'master' }}" alt="Product Image {{ forloop.index }}" />
+            <img src="{{ media | img_url: 'master' }}" alt="Product Image {{ forloop.index }}" width="100%" height="auto" />
           </a>
         {%- endunless -%}
       {%- endfor -%}
@@ -67,7 +67,7 @@
       {%- for media in product.media -%}
         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
           <div class="swiper-slide">
-            <img src="{{ media | img_url }}" alt="Product Image {{ forloop.index }}" />
+            <img src="{{ media | img_url }}" alt="Product Image {{ forloop.index }}" width="100%" height="auto" />
           </div>
         {%- endunless -%}
       {%- endfor -%}
