@@ -25,15 +25,11 @@
         },
         "caption": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.metafields.descriptors.subtitle.value }}",
             "text_style": "subtitle"
           }
-        },
-        "essentials_XbMJNa": {
-          "type": "essentials",
-          "disabled": true,
-          "settings": {}
         },
         "affirm_pay_over_time_messaging_product_block_3HfxRh": {
           "type": "shopify://apps/affirm-pay-over-time-messaging/blocks/product-block/6dce54be-130d-4d13-9636-1e8f611b3071",
@@ -45,6 +41,10 @@
             "public_api_key": "",
             "price_selector": ""
           }
+        },
+        "essentials_XbMJNa": {
+          "type": "essentials",
+          "settings": {}
         },
         "icon_with_text_apLJb3": {
           "type": "icon-with-text",
@@ -110,8 +110,8 @@
         "vendor",
         "title_4diFiT",
         "caption",
-        "essentials_XbMJNa",
         "affirm_pay_over_time_messaging_product_block_3HfxRh",
+        "essentials_XbMJNa",
         "icon_with_text_apLJb3",
         "yotpo_product_photo_reviews_star_rating_7iziTr",
         "custom_liquid_yFxECU",
