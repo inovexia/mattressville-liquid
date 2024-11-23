@@ -38,13 +38,15 @@
     
     <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
     {%- if vendor != empty -%}
+        {%  assign imgUrl = 'vendor-' | append: vendor | append: '.png' | asset_img_url: '140x' %}
         <img
-            src="{{ 'vendor-' | append: vendor | append: '.png' | asset_img_url: 'master' }}"
+            src="{{ 'vendor-' | append: vendor | append: '.png' | asset_img_url: '140x' }}"
             alt="{{ vendor }}"
             class="vendor-img {{ vendor }}"
             loading="lazy"
             width="100%"
             height="auto"
+            style="max-height:80px;max-width:140px;"
         >
     {%- else -%}
         <div class="caption-with-letter-spacing light">{{ vendor }}</div>
