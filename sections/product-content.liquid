@@ -11,14 +11,9 @@
       <div class="tab-item">
         <a href="#tabpane-features" role="tab" class="tab">FEATURES</a>
       </div>
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when '@app' -%}
-            <div class="tab-item">
-              <a href="#tabpane-reviews" role="tab" class="tab">REVIEWS</a>
-            </div>
-        {%- endcase -%}
-      {%- endfor -%}
+      <div class="tab-item">
+        <a href="#tabpane-reviews" role="tab" class="tab">REVIEWS</a>
+      </div>      
     </div>
     <div class="tab-content">
       <div id="tabpane-description" class="tab-pane active">
@@ -36,27 +31,36 @@
                {%- if product.description != blank -%}
                   {{ product.description }}
                 {%- endif -%}
+
+                {%- for block in section.blocks -%}
+                  {%- case block.type -%}
+                    {%- when '@app' -%}
+                        {% render block %}
+                  {%- endcase -%}
+                {%- endfor -%}
                 <div class="affirm-text">
                   <p>Buy now pay over time! Financing available via Affirm.<br>Learn more on <a href="https://helpcenter.affirm.com/s/" rel="noopener noreferrer"> 
                   <img
-                  src={{'affirm-icon.png' | asset_img_url: 'master' }} alt="{{ product.vendor }}"
+                  src="{{ 'affirm-icon.png' | asset_img_url: 'master' }}" alt="{{ product.vendor }}"
                   class="vendor-img"
                   loading="lazy"
                   height="30"
                   width="auto" /></a>
                  </p>
                 </div>
+
             </div>
+
             <div class="description-right flex-shrink-1">
               <div class="mv-logo">
-                <img src={{'mattressville-slogan.png' | asset_img_url: 'master'}} alt="Mattressville">
+                <img src="{{ 'mattressville-slogan.png' | asset_img_url: 'master'}}" alt="Mattressville" width="100%" height="auto" style="max-width:250px">
               </div>
               <div class="coupon-logo">
                 <a href="/pages/coupons" class="coupon-link-text">Don't Forget To Check</a>
                 <a href="/pages/coupons" class="coupon-link-text">Coupons & Deals</a>
                 <div class="coupon-image">
                   <a href="/pages/coupons" class="coupon-link-text">
-                    <img src={{'gift-lg.png' | asset_img_url: 'master'}} alt="Coupon gift">
+                    <img src="{{'gift-lg.png' | asset_img_url: '140x'}}" alt="Coupon gift" width="100%" height="auto" style="max-width:100px">
                   </a>
                 </div>
               </div>
@@ -144,16 +148,16 @@
           {%- endif -%}
         </div>
       </div>
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when '@app' -%}
-            <div id="tabpane-reviews" class="tab-pane">
-              <div class="tab-container">
-                {% render block %}
-              </div>
-            </div>
-        {%- endcase -%}
-      {%- endfor -%}
+      <div id="tabpane-reviews" class="tab-pane">
+        <div class="tab-container">
+          {%- for block in section.blocks -%}            
+            {%- case block.type -%}
+            {%- when '@app' -%}
+              {% render block %}
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
     </div>
   </div>
 </div>
