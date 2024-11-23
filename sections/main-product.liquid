@@ -125,11 +125,9 @@
                   {{ form | payment_terms }}
                 {%- endform -%}
               </div>
-            {%- when 'price_block' -%}
+            {%- when 'essentials' -%}
              
               <div class="invx-custom-price-layout">
-
-                <div class="affirm-info"></div>
 
                 <div class="price-info">
                   <div
@@ -1050,7 +1048,7 @@
       "limit": 1
     },
     {
-      "type": "price_block",
+      "type": "essentials",
       "name": "Price Block",
       "limit": 1
     },

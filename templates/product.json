@@ -42,8 +42,8 @@
             "price_selector": ""
           }
         },
-        "price_block_XbMJNa": {
-          "type": "price_block",
+        "essentials_XbMJNa": {
+          "type": "essentials",
           "settings": {}
         },
         "icon_with_text_apLJb3": {
@@ -111,7 +111,7 @@
         "title_4diFiT",
         "caption",
         "affirm_pay_over_time_messaging_product_block_3HfxRh",
-        "price_block_XbMJNa",
+        "essentials_XbMJNa",
         "icon_with_text_apLJb3",
         "yotpo_product_photo_reviews_star_rating_7iziTr",
         "custom_liquid_yFxECU",
