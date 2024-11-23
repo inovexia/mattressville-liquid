@@ -125,26 +125,30 @@
                   {{ form | payment_terms }}
                 {%- endform -%}
               </div>
-            {%- when 'essentials' -%}
-              <div class="grid">
-                <div class="grid__item product__title" {{ block.shopify_attributes }}>
+            {%- when 'price_block' -%}
+             
+              <div class="invx-custom-price-layout">
 
+                <div class="affirm-info"></div>
+
+                <div class="price-info">
+                  <div
+                    class="no-js-hidden"
+                    id="price-{{ section.id }}"
+                    role="status"
+                    {{ block.shopify_attributes }}
+                    class="grid__item"
+                  >
+                    {%- render 'invx-price',
+                      product: product,
+                      at_product: true,
+                      use_variant: true,
+                      show_badges: true,
+                      price_class: 'price--large'
+                    -%}
+                  </div>
                 </div>
-                {% comment %} <div
-                  class="no-js-hidden"
-                  id="price-{{ section.id }}"
-                  role="status"
-                  {{ block.shopify_attributes }}
-                  class="grid__item"
-                >
-                  {%- render 'price',
-                    product: product,
-                    at_product: true,
-                    use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large'
-                  -%}
-                </div> {% endcomment %}
+
                 {%- if product.quantity_price_breaks_configured? -%}
                   <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
                     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
@@ -165,31 +169,7 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
-              </div>
 
-              <div class="invx-custom-price-layout">
-
-                <div class="affirm-info" >
-
-                </div>
-
-                <div class="price-info">
-                  <div
-                    class="no-js-hidden"
-                    id="price-{{ section.id }}"
-                    role="status"
-                    {{ block.shopify_attributes }}
-                    class="grid__item"
-                  >
-                    {%- render 'invx-price',
-                      product: product,
-                      at_product: true,
-                      use_variant: true,
-                      show_badges: true,
-                      price_class: 'price--large'
-                    -%}
-                  </div>
-                </div>
               </div>
             {%- when 'inventory' -%}
               <p
@@ -1070,7 +1050,7 @@
       "limit": 1
     },
     {
-      "type": "essentials",
+      "type": "price_block",
       "name": "Price Block",
       "limit": 1
     },
