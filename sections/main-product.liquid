@@ -125,10 +125,10 @@
                   {{ form | payment_terms }}
                 {%- endform -%}
               </div>
-            {%- when 'essentials' -%}
+            {%- when 'price_block' -%}
               <div class="grid">
                 <div class="grid__item product__title" {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}</h1>
+
                 </div>
                 {% comment %} <div
                   class="no-js-hidden"
@@ -166,27 +166,29 @@
                   {%- endform -%}
                 </div>
               </div>
+
               <div class="invx-custom-price-layout">
-                <div class="affirm-info" id="affirm-message">
-                  {% comment %} {%- when 'icon-with-text' -%}
-                    {% render 'icon-with-text', block: block %} {% endcomment %}
+
+                <div class="affirm-info" >
+
                 </div>
+
                 <div class="price-info">
                   <div
-                  class="no-js-hidden"
-                  id="price-{{ section.id }}"
-                  role="status"
-                  {{ block.shopify_attributes }}
-                  class="grid__item"
-                >
-                  {%- render 'invx-price',
-                    product: product,
-                    at_product: true,
-                    use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large'
-                  -%}
-                </div>
+                    class="no-js-hidden"
+                    id="price-{{ section.id }}"
+                    role="status"
+                    {{ block.shopify_attributes }}
+                    class="grid__item"
+                  >
+                    {%- render 'invx-price',
+                      product: product,
+                      at_product: true,
+                      use_variant: true,
+                      show_badges: true,
+                      price_class: 'price--large'
+                    -%}
+                  </div>
                 </div>
               </div>
             {%- when 'inventory' -%}
