@@ -181,13 +181,13 @@ body .product-single .share-button {
   margin: 0;
 }
 body .product-single .product__info-wrapper .product-form {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
+  /* align-items: center;
+  justify-content: space-between; */
   margin-bottom: 0;
 }
 body .product-single .product__info-wrapper .product-form .form {
-  width: 50%;
+  width: 100%;
 }
 body .product-single .product__info-wrapper .product-form .kaktus-w-wishlist-button__wrap {
   background-color: transparent !important;

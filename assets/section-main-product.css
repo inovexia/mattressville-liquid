@@ -11,22 +11,32 @@
 .product__media-wrapper {
   padding-left: 0;
 }
+/*********** Custom changes ***********/
+.product__text.inline-richtext.caption-with-letter-spacing {
+  display: inline-block;
+  width: fit-content;
+  min-width: 50px;
+  margin-right: 20px;
+}
+.product-single #shopify-block-yotpo_product_photo_reviews_star_rating_7iziTr {
+  display: inline-block;
+}
 @media screen and (max-width: 500px) {
   .product-single .invx-custom-price-layout {
-    display: block !important;
+    display: block;
   }
   .invx-custom-price-layout .affirm-info,
   .invx-custom-price-layout .price-info {
-    width: 100% !important;
+    width: 100%;
   }
 }
 @media screen and (min-width: 750px) {
   .product-single .invx-custom-price-layout {
-    display: block !important;
+    display: block;
   }
   .invx-custom-price-layout .affirm-info,
   .invx-custom-price-layout .price-info {
-    width: 100% !important;
+    width: 100%;
   }
   .product__column-sticky {
     display: block;
@@ -56,14 +66,21 @@
     display: none;
   }
 }
+
 @media screen and (min-width: 990px) {
+  /*   .product-single #shopify-block-affirm_pay_over_time_messaging_product_block_3HfxRh {
+    display: inline-block;
+    width: 45%;
+  }
+ */
   .product-single .invx-custom-price-layout {
-    display: flex !important;
-    align-items: flex-end;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
   }
   .invx-custom-price-layout .affirm-info,
   .invx-custom-price-layout .price-info {
-    width: 50% !important;
+    width: 100%;
   }
   .product--large:not(.product--no-media) .product__media-wrapper {
     max-width: 40%;
@@ -1419,14 +1436,14 @@ a.product__text {
   /* padding-top: 35px;
   padding-right: 40px; */
 }
-.product-single .invx-custom-price-layout {
+/* .product-single .invx-custom-price-layout {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
   margin-bottom: 10px;
-}
+} */
 .product-single #tabpane-information .metafield-rich_text_field p em {
   width: 100%;
   display: inline-block;

@@ -60,18 +60,7 @@
         <span class="product-form__error-message"></span>
       </div>
 
-      {%- form 'product'
-        ,
- product
-        ,
- id: product_form_id
-        ,
- class: 'form'
-        ,
- novalidate: 'novalidate'
-        ,
- data-type: 'add-to-cart-form'
-      -%}
+      {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
         <input
           type="hidden"
           name="id"
@@ -138,9 +127,7 @@
   {%- if show_pickup_availability -%}
     {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
-    {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
- | where: 'pick_up_enabled', true
-    -%}
+    {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
     <pickup-availability
       class="product__pickup-availabilities no-js-hidden quick-add-hidden"
