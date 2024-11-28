@@ -23,7 +23,7 @@
       "type": "header",
       "settings": {
         "logo_position": "middle-left",
-        "menu": "wishlist",
+        "menu": "",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "none",
         "show_social": true,
