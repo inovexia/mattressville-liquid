@@ -19,6 +19,12 @@
             "text_style": "uppercase"
           }
         },
+        "yotpo_product_photo_reviews_star_rating_7iziTr": {
+          "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "title_4diFiT": {
           "type": "title",
           "settings": {}
@@ -60,12 +66,6 @@
             "heading_3": ""
           }
         },
-        "yotpo_product_photo_reviews_star_rating_7iziTr": {
-          "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "custom_liquid_yFxECU": {
           "type": "custom_liquid",
           "settings": {
@@ -75,7 +75,7 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "dropdown"
           }
         },
         "custom_liquid_BxNYxP": {
@@ -108,12 +108,12 @@
       },
       "block_order": [
         "vendor",
+        "yotpo_product_photo_reviews_star_rating_7iziTr",
         "title_4diFiT",
         "caption",
         "affirm_pay_over_time_messaging_product_block_3HfxRh",
         "essentials_XbMJNa",
         "icon_with_text_apLJb3",
-        "yotpo_product_photo_reviews_star_rating_7iziTr",
         "custom_liquid_yFxECU",
         "variant_picker",
         "custom_liquid_BxNYxP",
