@@ -30,7 +30,7 @@
   display: inline-block;
 }
 
-.product-single #Quantity-Form-template--22501241880884__main {
+.product-single .product-form__input.product-form__quantity {
   display: inline-block;
   width: 60%;
 }
