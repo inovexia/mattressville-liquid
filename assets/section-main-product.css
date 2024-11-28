@@ -21,6 +21,17 @@
 .product-single #shopify-block-yotpo_product_photo_reviews_star_rating_7iziTr {
   display: inline-block;
 }
+
+.product-single #Quantity-Form-template--22501241880884__main {
+  display: inline-block;
+  width: 60%;
+}
+.product-single #shopify-block-swishlist_simple_wishlist_wishlist_product_button_npGmeQ {
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+}
+
 @media screen and (max-width: 500px) {
   .product-single .invx-custom-price-layout {
     display: block;
@@ -294,7 +305,7 @@ fieldset.product-form__input .form__label {
   margin-bottom: 0;
 }
 .product__info-container > * + * {
-  margin: 1.5rem 0;
+  margin: 0.5rem 0;
 }
 .product-single .product__info-container .grid {
   margin-bottom: 0;
