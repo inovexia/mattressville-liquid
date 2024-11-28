@@ -149,21 +149,17 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "410654874852735521": {
         "type": "shopify://apps/fordeer-product-labels/blocks/badge/6efba0f5-50fb-446d-8a52-da07098aad0c",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "7570552984445421165": {
         "type": "shopify://apps/yotpo-product-photo-reviews/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "14339172867238703359": {
         "type": "shopify://apps/yotpo-product-photo-reviews/blocks/reviews_tab/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
@@ -175,26 +171,27 @@
       "7046932070715527255": {
         "type": "shopify://apps/puco-sections-blocks/blocks/app-embed-javascript/f1ea0cb9-0193-44b7-bab7-d0fd6bec6cbf",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "12723626199553905971": {
         "type": "shopify://apps/puco-sections-blocks/blocks/app-embed-stylesheet/f1ea0cb9-0193-44b7-bab7-d0fd6bec6cbf",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "9365423049038898845": {
         "type": "shopify://apps/tawk-to-live-chat/blocks/widget-embed-code/91169e75-f163-40ce-90e0-9059f3c9b772",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "9159514687852383098": {
         "type": "shopify://apps/avada-seo-suite/blocks/avada-seo/15507c6e-1aa3-45d3-b698-7e175e033440",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
+      },
+      "8813254906777318544": {
+        "type": "shopify://apps/k-wish-list-advanced-wishlist/blocks/app-embeded/21053a4c-1902-4720-aab8-ebfc69de009a",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
