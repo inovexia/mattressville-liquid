@@ -15,7 +15,7 @@
       "type": "invx-announcement-bar",
       "settings": {
         "background_color": "#d7355c",
-        "announcement": "<p><a href=\"/pages/local-gta-flyer\" target=\"_blank\" title=\"Greater Toronto Area Flyer\"><strong>Black Friday Mattress Sale</strong></a> on Now. BFCM Deals Applied At Checkout | Buy Now, Pay Over Time with AFFIRM</p>",
+        "announcement": "<p><a href=\"/pages/local-gta-flyer\" target=\"_blank\" title=\"Greater Toronto Area Flyer\"><strong>Black Friday & Cyber Monday Mattress Sale</strong></a> on Now. BFCM Deals Applied At Checkout | Buy Now, Pay Over Time with AFFIRM</p>",
         "duration": "session"
       }
     },
