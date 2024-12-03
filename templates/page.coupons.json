@@ -19,7 +19,6 @@
       "blocks": {
         "coupon_yDC3bH": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/300OFF.png",
             "type": "other",
@@ -33,7 +32,6 @@
         },
         "coupon_FkNtma": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Save_100_Coupon.webp",
             "type": "other",
@@ -60,6 +58,7 @@
         },
         "coupon_pLL44K": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfcm10_coupon.png",
             "type": "other",
@@ -73,6 +72,7 @@
         },
         "coupon_wB4ADm": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfcm15_coupon.png",
             "type": "other",
@@ -86,6 +86,7 @@
         },
         "coupon_QtLCtp": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfcm20_coupon.png",
             "type": "other",
@@ -99,6 +100,7 @@
         },
         "coupon_VBCMkP": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/mattressville_canada10_coupon_f7a5e8a8-6a5f-4ad2-af8f-f1e87356f1a3.png",
             "type": "other",
@@ -112,6 +114,7 @@
         },
         "coupon_7iyAJi": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/mattressville_canada15_coupon.png",
             "type": "other",
@@ -125,6 +128,7 @@
         },
         "coupon_zLfBaQ": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/mattressville_canada20_coupon.png",
             "type": "other",
