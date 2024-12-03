@@ -168,6 +168,7 @@
       "block_order": [
         "heading_VVe8mf"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -179,6 +180,7 @@
     },
     "image_with_text_zVawM7": {
       "type": "image-with-text",
+      "disabled": true,
       "custom_css": [
         ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
         ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
@@ -226,6 +228,7 @@
         "text_743jUz",
         "button_GnfGwy"
       ],
+      "disabled": true,
       "custom_css": [
         ".rich-text .rich-text__wrapper {padding: 0;}",
         ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
