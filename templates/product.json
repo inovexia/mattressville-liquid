@@ -20,7 +20,7 @@
           }
         },
         "yotpo_product_photo_reviews_star_rating_7iziTr": {
-          "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
@@ -51,6 +51,14 @@
         "essentials_XbMJNa": {
           "type": "essentials",
           "settings": {}
+        },
+        "inventory_XBRzgq": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
         },
         "icon_with_text_apLJb3": {
           "type": "icon-with-text",
@@ -119,6 +127,7 @@
         "caption",
         "affirm_pay_over_time_messaging_product_block_3HfxRh",
         "essentials_XbMJNa",
+        "inventory_XBRzgq",
         "icon_with_text_apLJb3",
         "custom_liquid_yFxECU",
         "variant_picker",
@@ -156,7 +165,7 @@
       "type": "product-content",
       "blocks": {
         "yotpo_product_photo_reviews_reviews_ngj838": {
-          "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }

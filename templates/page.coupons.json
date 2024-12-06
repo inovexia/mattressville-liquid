@@ -19,48 +19,46 @@
       "blocks": {
         "coupon_yDC3bH": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/300OFF.png",
             "type": "other",
             "code": "SAVE300",
             "title": "SAVE $300 COUPON",
             "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE300 ($300 OFF all Orders from $1,500 and Up)</strong> at the checkout page. Mattressville reserves the right to void the coupons.</p>",
-            "expiry": "November 17 , 2024",
+            "expiry": "December 14 , 2024",
             "button_label": "Start Saving",
             "button_link": "shopify://collections/all-mattresses"
           }
         },
         "coupon_FkNtma": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Save_100_Coupon.webp",
             "type": "other",
             "code": "SAVE100",
             "title": "SAVE $100 COUPON",
             "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE100 ($100 OFF all Orders from $1,000 to $1,499) </strong>at the checkout page. Mattressville reserves the right to void the coupons.</p>",
-            "expiry": "November 17, 2024",
+            "expiry": "December 14, 2024",
             "button_label": "Start Saving",
             "button_link": "shopify://collections/all-mattresses"
           }
         },
         "coupon_KzhYWf": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Save_50_Coupon.webp",
             "type": "other",
             "code": "SAVE50",
             "title": "SAVE $50 COUPON",
             "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE50 ($50 OFF all Orders from $499 to $999) </strong>at the checkout page. Mattressville reserves the right to void the coupons.</p>",
-            "expiry": "November 17, 2024",
+            "expiry": "December 14, 2024",
             "button_label": "Start Saving",
             "button_link": "shopify://collections/all-mattresses"
           }
         },
         "coupon_pLL44K": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfcm10_coupon.png",
             "type": "other",
@@ -74,6 +72,7 @@
         },
         "coupon_wB4ADm": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfcm15_coupon.png",
             "type": "other",
@@ -87,6 +86,7 @@
         },
         "coupon_QtLCtp": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfcm20_coupon.png",
             "type": "other",
@@ -100,6 +100,7 @@
         },
         "coupon_VBCMkP": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/mattressville_canada10_coupon_f7a5e8a8-6a5f-4ad2-af8f-f1e87356f1a3.png",
             "type": "other",
@@ -113,6 +114,7 @@
         },
         "coupon_7iyAJi": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/mattressville_canada15_coupon.png",
             "type": "other",
@@ -126,6 +128,7 @@
         },
         "coupon_zLfBaQ": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/mattressville_canada20_coupon.png",
             "type": "other",
