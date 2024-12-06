@@ -3306,6 +3306,6 @@ header #invx-announcement-bar a {
   --image-padding: var(--product-card-image-padding);
   --text-alignment: var(--product-card-text-alignment);
 }
-.st-product-card .st-atc-button {
+.st-product-card.st-product-card--wishlist .st-atc-button {
   background-color: var(--accent-color);
 }
