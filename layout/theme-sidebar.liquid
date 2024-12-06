@@ -300,11 +300,12 @@ body {
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-  {{ 'gsi.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'gsi.css' | asset_url | stylesheet_tag: preload: true }}
 
     {% comment %} Include CSS for sidebar {% endcomment %}
     {{ 'theme-sidebar.css' | asset_url | stylesheet_tag }}
 
+    {% comment %} 
     {%- unless settings.type_body_font.system? -%}
       <link
         rel="preload"
@@ -321,6 +322,7 @@ body {
         type="font/woff2"
         crossorigin>
     {%- endunless -%}
+    {% endcomment %}
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
       {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
@@ -341,6 +343,9 @@ body {
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    <link rel="stylesheet" href="{{ 'mattressville.css' | asset_url }}" media="" >
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
