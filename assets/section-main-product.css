@@ -1188,6 +1188,13 @@ a.product__text {
   align-items: center;
   gap: 0.5rem;
 }
+@media screen and (min-width: 990px) {
+  .product__inventory {
+    width: 40%;
+    float: right;
+    padding-top: 10px;
+  }
+}
 .product--no-media .product__inventory {
   justify-content: center;
 }
