@@ -3293,4 +3293,19 @@ header #invx-announcement-bar a {
   margin-left: auto;
   margin-right: auto;
 }
-/*# sourceMappingURL=/s/files/1/0558/6780/1757/t/19/assets/base.css.map?v=1725103455 */
+/* Wishlist page styling */
+.st-product-card.st-product-card--wishlist {
+  --border-radius: var(--product-card-corner-radius);
+  --border-width: var(--product-card-border-width);
+  --border-opacity: var(--product-card-border-opacity);
+  --shadow-horizontal-offset: var(--product-card-shadow-horizontal-offset);
+  --shadow-vertical-offset: var(--product-card-shadow-vertical-offset);
+  --shadow-blur-radius: var(--product-card-shadow-blur-radius);
+  --shadow-opacity: var(--product-card-shadow-opacity);
+  --shadow-visible: var(--product-card-shadow-visible);
+  --image-padding: var(--product-card-image-padding);
+  --text-alignment: var(--product-card-text-alignment);
+}
+.st-product-card .st-atc-button {
+  background-color: var(--accent-color);
+}
