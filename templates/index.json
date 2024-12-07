@@ -103,6 +103,13 @@
             "image": "shopify://shop_images/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
             "slide_link": "shopify://blogs/tips/10-reasons-to-gift-a-mattress"
           }
+        },
+        "slide_ameJgH": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Aireloom_Exclusively_at_Mattressville_Banner.png",
+            "slide_link": "shopify://collections/aireloom"
+          }
         }
       },
       "block_order": [
@@ -118,7 +125,8 @@
         "slide_86rVjX",
         "slide_9gwrCP",
         "slide_gQ3iXy",
-        "slide_CKrRRg"
+        "slide_CKrRRg",
+        "slide_ameJgH"
       ],
       "custom_css": [
         "slideshow-component {margin-top: 20px;}",
