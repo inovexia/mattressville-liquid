@@ -3309,3 +3309,7 @@ header #invx-announcement-bar a {
 .st-product-card.st-product-card--wishlist .st-atc-button {
   background-color: var(--accent-color);
 }
+/* Product page vendor image */
+.vendor-details img.vendor-img {
+  margin-right: 20px;
+}
