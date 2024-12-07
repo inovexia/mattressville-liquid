@@ -411,6 +411,17 @@
             "url_product": "shopify://collections/marshall-mattresses"
           }
         },
+        "review_aGhCAM": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify://shop_images/vendor-Aireloom.png",
+            "review_stars": "5",
+            "review_text": "",
+            "review_name": "",
+            "position": "",
+            "url_product": ""
+          }
+        },
         "review_PQEP6e": {
           "type": "Review",
           "settings": {
@@ -433,6 +444,7 @@
         "review_krBYzi",
         "review_8tciHD",
         "review_a7AtDC",
+        "review_aGhCAM",
         "review_PQEP6e"
       ],
       "custom_css": [
