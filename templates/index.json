@@ -26,6 +26,34 @@
             "slide_link": "shopify://collections/aireloom"
           }
         },
+        "slide_k4wTAU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/marshall_home_banner_v2.png",
+            "slide_link": "shopify://collections/marshall-mattresses"
+          }
+        },
+        "slide_bTWUcd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Tempur-pedic_home_banner_48a81cb1-840c-4199-a41e-3d9403c99dd5.jpg",
+            "slide_link": "shopify://collections/tempur-pedic"
+          }
+        },
+        "slide_yQaMJP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mattressville_kingsdown_coolwave_banner.jpg",
+            "slide_link": "shopify://products/kingsdown-cool-wave-tight-top-mattress"
+          }
+        },
+        "slide_dJqdk3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/homepage_highest_rated_reviews_banner_mattressville.png",
+            "slide_link": "shopify://pages/reviews"
+          }
+        },
         "slide_n4V3KT": {
           "type": "slide",
           "settings": {
@@ -38,34 +66,6 @@
           "settings": {
             "image": "shopify://shop_images/Sealy_Sale_Banner.png",
             "slide_link": "shopify://collections/sealy"
-          }
-        },
-        "slide_yQaMJP": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/mattressville_kingsdown_coolwave_banner.jpg",
-            "slide_link": "shopify://products/kingsdown-cool-wave-tight-top-mattress"
-          }
-        },
-        "slide_bTWUcd": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Tempur-pedic_home_banner_48a81cb1-840c-4199-a41e-3d9403c99dd5.jpg",
-            "slide_link": "shopify://collections/tempur-pedic"
-          }
-        },
-        "slide_k4wTAU": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/marshall_home_banner_v2.png",
-            "slide_link": "shopify://collections/marshall-mattresses"
-          }
-        },
-        "slide_dJqdk3": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/homepage_highest_rated_reviews_banner_mattressville.png",
-            "slide_link": "shopify://pages/reviews"
           }
         },
         "slide_9y8Uir": {
@@ -115,12 +115,12 @@
       "block_order": [
         "slide_PEgBhX",
         "slide_ameJgH",
+        "slide_k4wTAU",
+        "slide_bTWUcd",
+        "slide_yQaMJP",
+        "slide_dJqdk3",
         "slide_n4V3KT",
         "slide_N7jLUx",
-        "slide_yQaMJP",
-        "slide_bTWUcd",
-        "slide_k4wTAU",
-        "slide_dJqdk3",
         "slide_9y8Uir",
         "slide_mgniDF",
         "slide_86rVjX",
