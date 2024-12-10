@@ -643,7 +643,7 @@
         "include_margins": true
       }
     },
-    "image_with_text_xTf96J": {
+    "image_with_text_pj6awM": {
       "type": "image-with-text",
       "custom_css": [
         ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
@@ -653,16 +653,16 @@
       ],
       "settings": {
         "image": "shopify://shop_images/mattressville_boxing_day_flyer_2024.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
+        "height": "medium",
+        "desktop_image_width": "small",
         "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
         "content_layout": "no-overlap",
         "section_color_scheme": "",
         "color_scheme": "",
         "image_behavior": "none",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -691,6 +691,6 @@
     "rich_text_dtFKYq",
     "psb_utilities_line_BErMjr",
     "1723249160fbdeb0d3",
-    "image_with_text_xTf96J"
+    "image_with_text_pj6awM"
   ]
 }
