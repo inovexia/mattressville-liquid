@@ -319,10 +319,26 @@
           "settings": {
             "text": "<p><strong>Luxury at Its Finest – Aireloom by Kluft. </strong>Experience unparalleled comfort with Aireloom mattresses, where California design meets handcrafted excellence. These premium mattresses are meticulously crafted using the finest materials, offering unmatched support, breathability, and luxury. As one of the select retailers to carry Aireloom by Kluft, we proudly to bring you this exclusive collection designed to elevate your sleep to the next level. Visit us today to explore the Aireloom by Kluft collection.</p>"
           }
+        },
+        "button_HLUmyz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Aireloom",
+            "button_link": "shopify://collections/aireloom",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
         }
       },
       "block_order": [
-        "text_yCVyTQ"
+        "text_yCVyTQ",
+        "button_HLUmyz"
+      ],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -335,6 +351,7 @@
     },
     "featured_collection_8wd9fL": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "California Design - Handmade",
         "heading_size": "h2",
@@ -496,6 +513,7 @@
     },
     "featured_collection_AAqpH7": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -513,7 +531,7 @@
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
-        "show_vendor": false,
+        "show_vendor": true,
         "show_rating": false,
         "enable_quick_add": true,
         "columns_mobile": "1",
