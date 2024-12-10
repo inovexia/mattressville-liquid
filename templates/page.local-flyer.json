@@ -163,15 +163,6 @@
         "padding_bottom": 52
       }
     },
-    "psb_utilities_line_FrHYJq": {
-      "type": "psb-utilities-line",
-      "disabled": true,
-      "settings": {
-        "container_width": "psb-container",
-        "line_height": 1,
-        "line_color": "#cccccc"
-      }
-    },
     "image_with_text_dL7YBh": {
       "type": "image-with-text",
       "disabled": true,
@@ -199,7 +190,6 @@
     },
     "psb_utilities_line_BErMjr": {
       "type": "psb-utilities-line",
-      "disabled": true,
       "settings": {
         "container_width": "psb-container",
         "line_height": 1,
@@ -616,34 +606,6 @@
         "padding_top": 0,
         "padding_bottom": 36
       }
-    },
-    "featured_collection_AndJkC": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "kingsdown",
-        "products_to_show": 5,
-        "columns_desktop": 1,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_style": "link",
-        "enable_desktop_slider": true,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": true,
-        "show_rating": true,
-        "enable_quick_add": true,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -652,7 +614,6 @@
     "rich_text_DtyBjf",
     "image_with_text_zVawM7",
     "rich_text_6xRmg4",
-    "psb_utilities_line_FrHYJq",
     "image_with_text_dL7YBh",
     "psb_utilities_line_BErMjr",
     "rich_text_6JT9Lf",
@@ -670,7 +631,6 @@
     "collection_list_4dyGwc",
     "rich_text_fgdiqy",
     "image_with_text_EKL6in",
-    "rich_text_dtFKYq",
-    "featured_collection_AndJkC"
+    "rich_text_dtFKYq"
   ]
 }
