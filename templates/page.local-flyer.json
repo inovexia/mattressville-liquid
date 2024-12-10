@@ -197,6 +197,15 @@
         "padding_bottom": 0
       }
     },
+    "psb_utilities_line_BErMjr": {
+      "type": "psb-utilities-line",
+      "disabled": true,
+      "settings": {
+        "container_width": "psb-container",
+        "line_height": 1,
+        "line_color": "#cccccc"
+      }
+    },
     "rich_text_6JT9Lf": {
       "type": "rich-text",
       "blocks": {
@@ -481,16 +490,32 @@
         "line_color": "#cccccc"
       }
     },
-    "rich_text_fgdiqy": {
+    "rich_text_Ye4p7T": {
       "type": "rich-text",
       "blocks": {
-        "heading_KdRTeh": {
+        "heading_VicVdY": {
           "type": "heading",
           "settings": {
             "heading": "Best Deals on Kingsdown Mattresses",
             "heading_size": "h1"
           }
-        },
+        }
+      },
+      "block_order": [
+        "heading_VicVdY"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_fgdiqy": {
+      "type": "rich-text",
+      "blocks": {
         "text_CiQDix": {
           "type": "text",
           "settings": {
@@ -499,7 +524,6 @@
         }
       },
       "block_order": [
-        "heading_KdRTeh",
         "text_CiQDix"
       ],
       "settings": {
@@ -509,35 +533,6 @@
         "full_width": true,
         "padding_top": 28,
         "padding_bottom": 16
-      }
-    },
-    "featured_collection_AAqpH7": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "kingsdown",
-        "products_to_show": 5,
-        "columns_desktop": 1,
-        "full_width": true,
-        "show_view_all": false,
-        "view_all_style": "link",
-        "enable_desktop_slider": true,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": true,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 52
       }
     },
     "image_with_text_EKL6in": {
@@ -596,58 +591,72 @@
         "padding_bottom": 36
       }
     },
-    "psb_utilities_line_BErMjr": {
-      "type": "psb-utilities-line",
-      "settings": {
-        "container_width": "psb-container",
-        "line_height": 1,
-        "line_color": "#cccccc"
-      }
-    },
-    "1723249160fbdeb0d3": {
-      "type": "apps",
+    "featured_product_PWWJqJ": {
+      "type": "featured-product",
       "blocks": {
-        "bundler_custom_bundle_hQFnX6": {
-          "type": "shopify://apps/bundler/blocks/custom-bundle/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+        "text_xVwhXE": {
+          "type": "text",
           "settings": {
-            "shortcode": "attu"
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
           }
         },
-        "bundler_custom_bundle_Gd78TC": {
-          "type": "shopify://apps/bundler/blocks/custom-bundle/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+        "title_PcDrfG": {
+          "type": "title",
           "settings": {
-            "shortcode": "atw3"
+            "heading_size": "h1"
           }
         },
-        "bundler_custom_bundle_4WDPwG": {
-          "type": "shopify://apps/bundler/blocks/custom-bundle/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+        "price_YqCWrQ": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_3DKDKt": {
+          "type": "variant_picker",
           "settings": {
-            "shortcode": "atw6"
+            "picker_type": "button"
           }
         },
-        "bundler_custom_bundle_Uy6LiU": {
-          "type": "shopify://apps/bundler/blocks/custom-bundle/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+        "quantity_selector_RFGE6W": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_Hzzpt3": {
+          "type": "buy_buttons",
           "settings": {
-            "shortcode": "atw7"
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
           }
         },
-        "bundler_custom_bundle_XxqNTL": {
-          "type": "shopify://apps/bundler/blocks/custom-bundle/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+        "share_pMrDQG": {
+          "type": "share",
           "settings": {
-            "shortcode": "atw8"
+            "share_label": "Share"
           }
         }
       },
       "block_order": [
-        "bundler_custom_bundle_hQFnX6",
-        "bundler_custom_bundle_Gd78TC",
-        "bundler_custom_bundle_4WDPwG",
-        "bundler_custom_bundle_Uy6LiU",
-        "bundler_custom_bundle_XxqNTL"
+        "text_xVwhXE",
+        "title_PcDrfG",
+        "price_YqCWrQ",
+        "variant_picker_3DKDKt",
+        "quantity_selector_RFGE6W",
+        "buy_buttons_Hzzpt3",
+        "share_pMrDQG"
       ],
-      "disabled": true,
       "settings": {
-        "include_margins": true
+        "product": "kingsdown-cool-wave-tight-top-mattress",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -659,6 +668,7 @@
     "rich_text_6xRmg4",
     "psb_utilities_line_FrHYJq",
     "image_with_text_dL7YBh",
+    "psb_utilities_line_BErMjr",
     "rich_text_6JT9Lf",
     "image_with_text_pj6awM",
     "rich_text_W9h3PV",
@@ -670,11 +680,10 @@
     "collection_list_NRFCEM",
     "rich_text_CLDgr6",
     "psb_utilities_line_ficaQA",
+    "rich_text_Ye4p7T",
     "rich_text_fgdiqy",
-    "featured_collection_AAqpH7",
     "image_with_text_EKL6in",
     "rich_text_dtFKYq",
-    "psb_utilities_line_BErMjr",
-    "1723249160fbdeb0d3"
+    "featured_product_PWWJqJ"
   ]
 }
