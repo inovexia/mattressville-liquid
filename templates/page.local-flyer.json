@@ -581,6 +581,10 @@
     },
     "featured_collection_fzHXqH": {
       "type": "featured-collection",
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
       "settings": {
         "title": "Best Deals on Kingsdown",
         "heading_size": "h2",
