@@ -351,6 +351,7 @@
     },
     "featured_collection_8wd9fL": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "California Design - Handmade",
         "heading_size": "h2",
