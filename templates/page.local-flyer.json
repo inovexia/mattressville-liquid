@@ -581,6 +581,7 @@
     },
     "featured_collection_fzHXqH": {
       "type": "featured-collection",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "title": "Best Deals on Kingsdown",
