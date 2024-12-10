@@ -208,6 +208,7 @@
       "blocks": {
         "text_743jUz": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Black Friday & Cyber Monday Mattress Savings Alert! </strong>🛒 This BFCM, upgrade your sleep with jaw-dropping deals on all our best mattresses. Mattressville<em> already</em> has a reputation for being <strong>#1 in customer service</strong> and providing premium high-end mattresses.. and we are doing something really big<br/>for <strong>Black Friday</strong> and <strong>Cyber Monday.</strong></p><p>Shop during our <strong>Black Friday Mattress Sale</strong> and save up to 20% plus massive markdowns, this is your chance to grab the perfect mattress at a price you won’t believe.😲</p><ul><li><strong>BFCM10 (10% OFF Orders $500-$1499)</strong></li><li><strong>BFCM15 (15% OFF Order $1500-$2499)</strong></li><li><strong>BFCM20 (20% OFF Order $2500+)</strong></li></ul><p><em><strong>Discounts AUTO APPLIED at checkout on all sale items.</strong></em></p><p>Treat yourself and your loved ones so you too can have a good night, <em>every night! </em>Don't forget to check out our blog: <a href=\"https://mattressville.ca/blog/5-tips-for-buying-a-mattress-on-black-friday-and-cyber-monday/\" title=\"7 Tips For Buying a Mattress on Black Friday and Cyber Monday 2023\"><strong>7 Tips For Buying a Mattress on Black Friday and Cyber Monday</strong></a></p><p><em>*coupons cannot be combined with other coupons, promos, or bundles</em></p><p><strong>Black Friday Mattress Sale Starts on now ~ Ends Cyber Monday, December 2nd, 11:59 pm</strong></p>"
           }
@@ -274,6 +275,48 @@
         "mobile_content_alignment": "center",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "rich_text_W9h3PV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9XbjMf": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_CKak3p": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Boxing Day Mega Mattress Savings Alert! 🛒</strong>This Boxing Day, upgrade your sleep with unbeatable deals on premium mattresses.  Mattressville is the biggest retailer of premium high-end mattresses—Find out why we are the highest rated mattress store. We’re going all out for this year’s Boxing Day Sale!</p><p><strong>Shop during our Boxing Day Mattress Sale and save up to 60% with massive markdowns.</strong> It’s your chance to grab the perfect mattress at prices you won’t believe! 😲</p><ul><li><strong>BOX10</strong> (10% OFF Orders $500-$1499)</li><li><strong>BOX15</strong> (15% OFF Orders $1500-$2499)</li><li><strong>BOX20</strong> (20% OFF Orders $2500+)</li></ul><p><em>Discounts AUTO APPLIED at checkout on all sale items.</em></p><p>Treat yourself or your loved ones so you can have a good night, every night. Don’t wait—these deals are only available for a limited time!</p><p>Don't forget to check out our blog: <a href=\"https://mattressville.ca/blogs/promotions/8-things-not-to-do-when-shopping-during-a-boxing-day-mattress-sale\" target=\"_blank\" title=\"https://mattressville.ca/blogs/promotions/8-things-not-to-do-when-shopping-during-a-boxing-day-mattress-sale\"><strong>8 Things NOT To Do When Shopping During A Boxing Day Mattress Sale</strong></a></p><p><em>Coupons cannot be combined with other discounts, promos, or bundles.</em></p><p><strong>Black Friday Mattress Sale Starts on now ~ Ends Cyber Monday, December 2nd, 11:59 pm</strong></p>"
+          }
+        },
+        "button_qFF4fN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_9XbjMf",
+        "text_CKak3p",
+        "button_qFF4fN"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_hK34aJ": {
@@ -607,6 +650,7 @@
     "rich_text_6xRmg4",
     "psb_utilities_line_FrHYJq",
     "image_with_text_dL7YBh",
+    "rich_text_W9h3PV",
     "rich_text_hK34aJ",
     "collection_list_NRFCEM",
     "rich_text_CLDgr6",
