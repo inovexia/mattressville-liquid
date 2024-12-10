@@ -587,7 +587,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "",
+        "collection": "kingsdown",
         "products_to_show": 5,
         "columns_desktop": 1,
         "full_width": true,
