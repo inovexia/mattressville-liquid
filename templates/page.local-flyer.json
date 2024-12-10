@@ -513,6 +513,32 @@
         "padding_bottom": 0
       }
     },
+    "collection_list_4dyGwc": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_zrpYh7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "kingsdown"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_zrpYh7"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "rich_text_fgdiqy": {
       "type": "rich-text",
       "blocks": {
@@ -590,74 +616,6 @@
         "padding_top": 0,
         "padding_bottom": 36
       }
-    },
-    "featured_product_PWWJqJ": {
-      "type": "featured-product",
-      "blocks": {
-        "text_xVwhXE": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_PcDrfG": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_YqCWrQ": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_3DKDKt": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector_RFGE6W": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_Hzzpt3": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_pMrDQG": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_xVwhXE",
-        "title_PcDrfG",
-        "price_YqCWrQ",
-        "variant_picker_3DKDKt",
-        "quantity_selector_RFGE6W",
-        "buy_buttons_Hzzpt3",
-        "share_pMrDQG"
-      ],
-      "settings": {
-        "product": "kingsdown-cool-wave-tight-top-mattress",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "small",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -681,9 +639,9 @@
     "rich_text_CLDgr6",
     "psb_utilities_line_ficaQA",
     "rich_text_Ye4p7T",
+    "collection_list_4dyGwc",
     "rich_text_fgdiqy",
     "image_with_text_EKL6in",
-    "rich_text_dtFKYq",
-    "featured_product_PWWJqJ"
+    "rich_text_dtFKYq"
   ]
 }
