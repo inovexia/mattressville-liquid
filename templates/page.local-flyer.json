@@ -190,6 +190,7 @@
     },
     "psb_utilities_line_BErMjr": {
       "type": "psb-utilities-line",
+      "disabled": true,
       "settings": {
         "container_width": "psb-container",
         "line_height": 1,
