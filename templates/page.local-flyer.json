@@ -75,85 +75,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_HY8fGM": {
-      "type": "rich-text",
-      "blocks": {
-        "button_fmgQJC": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/marshall-mattresses",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button_fmgQJC"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".rich-text .rich-text__wrapper {padding: 0;}",
-        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 40
-      }
-    },
-    "rich_text_LmUW9y": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_AUbNxt": {
-          "type": "heading",
-          "settings": {
-            "heading": "Marshall Mattresses Now on Sale",
-            "heading_size": "h1"
-          }
-        },
-        "text_YGkzMc": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Don't just dream of a better night's sleep – experience it with Marshall! </strong>Experience the luxurious softness, supportive structure, and unbeatable value of Marshall Mattresses. <br/>See for yourself how Marshall turns dreams into a reality, <br/><strong>Come </strong><em><strong>feel the difference</strong></em><strong> at Mattressville today!</strong></p>"
-          }
-        },
-        "button_DBMjTG": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/marshall-mattresses",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_AUbNxt",
-        "text_YGkzMc",
-        "button_DBMjTG"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".rich-text .rich-text__wrapper {padding: 0;}",
-        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
-      ],
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": false,
-        "padding_top": 12,
-        "padding_bottom": 16
-      }
-    },
     "rich_text_DtyBjf": {
       "type": "rich-text",
       "blocks": {
@@ -208,7 +129,6 @@
       "blocks": {
         "text_743jUz": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "<p><strong>Black Friday & Cyber Monday Mattress Savings Alert! </strong>🛒 This BFCM, upgrade your sleep with jaw-dropping deals on all our best mattresses. Mattressville<em> already</em> has a reputation for being <strong>#1 in customer service</strong> and providing premium high-end mattresses.. and we are doing something really big<br/>for <strong>Black Friday</strong> and <strong>Cyber Monday.</strong></p><p>Shop during our <strong>Black Friday Mattress Sale</strong> and save up to 20% plus massive markdowns, this is your chance to grab the perfect mattress at a price you won’t believe.😲</p><ul><li><strong>BFCM10 (10% OFF Orders $500-$1499)</strong></li><li><strong>BFCM15 (15% OFF Order $1500-$2499)</strong></li><li><strong>BFCM20 (20% OFF Order $2500+)</strong></li></ul><p><em><strong>Discounts AUTO APPLIED at checkout on all sale items.</strong></em></p><p>Treat yourself and your loved ones so you too can have a good night, <em>every night! </em>Don't forget to check out our blog: <a href=\"https://mattressville.ca/blog/5-tips-for-buying-a-mattress-on-black-friday-and-cyber-monday/\" title=\"7 Tips For Buying a Mattress on Black Friday and Cyber Monday 2023\"><strong>7 Tips For Buying a Mattress on Black Friday and Cyber Monday</strong></a></p><p><em>*coupons cannot be combined with other coupons, promos, or bundles</em></p><p><strong>Black Friday Mattress Sale Starts on now ~ Ends Cyber Monday, December 2nd, 11:59 pm</strong></p>"
           }
@@ -291,6 +211,7 @@
       "block_order": [
         "heading_iTkdJK"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -302,6 +223,7 @@
     },
     "image_with_text_pj6awM": {
       "type": "image-with-text",
+      "disabled": true,
       "custom_css": [
         ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
         ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
@@ -349,6 +271,7 @@
         "text_CKak3p",
         "button_7a4wy7"
       ],
+      "disabled": true,
       "custom_css": [
         ".rich-text .rich-text__wrapper {padding: 0;}",
         ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
@@ -422,14 +345,6 @@
     "rich_text_CLDgr6": {
       "type": "rich-text",
       "blocks": {
-        "heading_wkpzcE": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Marshall Mattresses Now on Sale",
-            "heading_size": "h1"
-          }
-        },
         "text_QQAhfc": {
           "type": "text",
           "settings": {
@@ -449,7 +364,6 @@
         }
       },
       "block_order": [
-        "heading_wkpzcE",
         "text_QQAhfc",
         "button_zcYr6P"
       ],
@@ -530,54 +444,6 @@
         "swipe_on_mobile": true,
         "padding_top": 0,
         "padding_bottom": 52
-      }
-    },
-    "rich_text_QkRFdp": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_i9PafT": {
-          "type": "heading",
-          "settings": {
-            "heading": "Best Deals on Kingsdown Mattresses",
-            "heading_size": "h1"
-          }
-        },
-        "text_EqqjRB": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Dream Big. Sleep Better. Save Huge. </strong>Mattressville is offering <em><strong>exclusive deals</strong></em> on the luxurious Kingsdown mattresses you love.  <strong>Don't miss out on these <br/>incredible deals!</strong> <br/><strong>Visit Mattressville today</strong> and <em>experience the difference</em> a  <strong>Kingsdown mattress</strong> can make.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_i9PafT",
-        "text_EqqjRB"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 16
-      }
-    },
-    "image_banner_etEfnq": {
-      "type": "image-banner",
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/Stay_Tuned.png",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
       }
     },
     "image_with_text_EKL6in": {
@@ -689,13 +555,65 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "collection_list_EVfJkE": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_FjA3yY": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "aireloom"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_FjA3yY"
+      ],
+      "settings": {
+        "title": "Just in- Aireloom Mattresses",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_8wd9fL": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "California Design - Handmade",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "aireloom",
+        "products_to_show": 5,
+        "columns_desktop": 1,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "multicolumn_CrLKdg",
-    "rich_text_HY8fGM",
-    "rich_text_LmUW9y",
     "rich_text_DtyBjf",
     "image_with_text_zVawM7",
     "rich_text_6xRmg4",
@@ -711,11 +629,11 @@
     "psb_utilities_line_ficaQA",
     "rich_text_fgdiqy",
     "featured_collection_AAqpH7",
-    "rich_text_QkRFdp",
-    "image_banner_etEfnq",
     "image_with_text_EKL6in",
     "rich_text_dtFKYq",
     "psb_utilities_line_BErMjr",
-    "1723249160fbdeb0d3"
+    "1723249160fbdeb0d3",
+    "collection_list_EVfJkE",
+    "featured_collection_8wd9fL"
   ]
 }
