@@ -362,6 +362,14 @@
         "padding_bottom": 52
       }
     },
+    "psb_utilities_line_Ytf8dU": {
+      "type": "psb-utilities-line",
+      "settings": {
+        "container_width": "psb-container",
+        "line_height": 1,
+        "line_color": "#ccc"
+      }
+    },
     "rich_text_hK34aJ": {
       "type": "rich-text",
       "blocks": {
@@ -381,7 +389,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 0,
+        "padding_top": 28,
         "padding_bottom": 0
       }
     },
@@ -696,6 +704,7 @@
     "rich_text_6JT9Lf",
     "image_with_text_pj6awM",
     "rich_text_W9h3PV",
+    "psb_utilities_line_Ytf8dU",
     "rich_text_hK34aJ",
     "collection_list_NRFCEM",
     "rich_text_CLDgr6",
