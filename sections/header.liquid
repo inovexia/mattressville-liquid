@@ -471,7 +471,7 @@
 
 <script type="application/ld+json">
   {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "Organization",
     "name": {{ shop.name | json }},
     {% if settings.logo %}
@@ -489,6 +489,13 @@
       {{ settings.social_vimeo_link | json }}
     ],
     "url": {{ request.origin | append: page.url | json }}
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-905-212-7722",
+    "contactType": "Customer Service",
+    "areaServed": "CA",
+    "availableLanguage": "English"
+  }
   }
 </script>
 
