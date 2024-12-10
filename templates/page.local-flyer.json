@@ -570,7 +570,7 @@
         "featured_collection_FjA3yY"
       ],
       "settings": {
-        "title": "Just in - Aireloom Mattresses by KLUFT",
+        "title": "Aireloom Mattresses by KLUFT",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 3,
@@ -586,7 +586,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "California Design - Handmade",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
