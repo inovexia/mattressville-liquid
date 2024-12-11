@@ -229,7 +229,7 @@
         ".global-media-settings {border: none !important;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/mattressville_boxing_day_flyer_2024.jpg",
+        "image": "shopify://shop_images/mattressville_boxing_day_flyer_2024.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
