@@ -43,18 +43,6 @@
             "button_link": "shopify://collections/all-mattresses"
           }
         },
-        "coupon_EnjgVC": {
-          "type": "coupon",
-          "settings": {
-            "type": "other",
-            "code": "",
-            "title": "",
-            "description": "",
-            "expiry": "",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
         "coupon_KzhYWf": {
           "type": "coupon",
           "settings": {
@@ -156,7 +144,6 @@
       "block_order": [
         "coupon_yDC3bH",
         "coupon_FkNtma",
-        "coupon_EnjgVC",
         "coupon_KzhYWf",
         "coupon_pLL44K",
         "coupon_wB4ADm",
