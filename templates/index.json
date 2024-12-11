@@ -14,9 +14,17 @@
       "blocks": {
         "slide_PEgBhX": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Homepage_welcome_banner_a7d8782b-c7a1-425b-9603-80954be77ee7.png",
             "slide_link": "/collections/all-mattresses"
+          }
+        },
+        "slide_7iTRrX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/matressville_boxingday_banner.png",
+            "slide_link": "shopify://pages/local-gta-flyer"
           }
         },
         "slide_ameJgH": {
@@ -61,6 +69,20 @@
             "slide_link": "shopify://collections/adjustable-beds"
           }
         },
+        "slide_pNYEnp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/matressville_boxingday_banner.png",
+            "slide_link": "shopify://collections/boxing-day-mattress-mega-sale"
+          }
+        },
+        "slide_CKrRRg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
+            "slide_link": "shopify://blogs/tips/10-reasons-to-gift-a-mattress"
+          }
+        },
         "slide_N7jLUx": {
           "type": "slide",
           "settings": {
@@ -95,38 +117,24 @@
             "image": "shopify://shop_images/Mattress_Shopping_Checklist_A_Mattress_Buyer_s_Musts.jpg",
             "slide_link": "shopify://blogs/tips/mattress-shopping-checklist-a-mattress-buyers-musts"
           }
-        },
-        "slide_gQ3iXy": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Why_Tempur-Pedic_is_the_King_of_Memory_Foam_Mattresses-mattressville.jpg",
-            "slide_link": "shopify://blogs/featured-brands/why-tempur-pedic-is-the-king-of-memory-foam-mattresses"
-          }
-        },
-        "slide_CKrRRg": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Gifting_Comfort_10_Reasons_To_Gift_A_Mattress.jpg",
-            "slide_link": "shopify://blogs/tips/10-reasons-to-gift-a-mattress"
-          }
         }
       },
       "block_order": [
         "slide_PEgBhX",
+        "slide_7iTRrX",
         "slide_ameJgH",
         "slide_k4wTAU",
         "slide_bTWUcd",
         "slide_yQaMJP",
         "slide_dJqdk3",
         "slide_n4V3KT",
+        "slide_pNYEnp",
+        "slide_CKrRRg",
         "slide_N7jLUx",
         "slide_9y8Uir",
         "slide_mgniDF",
         "slide_86rVjX",
-        "slide_9gwrCP",
-        "slide_gQ3iXy",
-        "slide_CKrRRg"
+        "slide_9gwrCP"
       ],
       "custom_css": [
         "slideshow-component {margin-top: 20px;}",
