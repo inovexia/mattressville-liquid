@@ -257,7 +257,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Sale Items",
-            "button_link": "shopify://collections/all-mattresses",
+            "button_link": "shopify://collections/boxing-day-mattress-mega-sale",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
