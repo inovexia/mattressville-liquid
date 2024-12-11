@@ -2,30 +2,31 @@
   # Caution! Please read https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt before proceeding to make changes to this file. 
 {% endcomment %}
 {% for group in robots.default_groups %}
-{{ group.user_agent }}
+  {{- group.user_agent -}}
 
-{%- for rule in group.rules -%}
-    {{ rule }}
-{%- endfor -%}
-  
-{%- if group.user_agent.value == '*' -%}
-{{ 'Disallow: /*?q=*' }}
-{{ 'Disallow: /*?variant=' }}
-{{ 'Disallow: /*?sort_by=' }}
-{{ 'Disallow: /*&page=' }}
-{{ 'Disallow: /collections/*?filter.v.' }}
-{{ 'Disallow: /collections/*?sort_by=' }}
-{{ 'Disallow: /*?page=' }}
-{{ 'Disallow: /*?pr_prod_strat=' }}
-{{ 'Disallow: /*?filter.' }}
-{{ 'Disallow: /*?orderby=' }}
-{{ 'Disallow: /*?v=' }}
-{{ 'Disallow: /*?size=' }}
-{{ 'Disallow: /*?wordfence_lh=' }}
-{{ 'Disallow: /*.atom' }}
-{%- endif -%}
+  {% comment %} {% for rule in group.rules %}
+        {{- rule -}}
+    {% endfor %} {% endcomment %}
+  {%- for rule in group.rules -%}
+    {% comment %} {%- unless rule.directive == 'Disallow' and rule.value == '/collections/*sort_by*' -%} {% endcomment %}
+      {{ rule }}
+    {% comment %} {%- endunless -%} {% endcomment %}
+  {%- endfor -%}
 
   {%- if group.sitemap != blank -%}
     {{ group.sitemap }}
   {%- endif -%}
 {% endfor %}
+Disallow: /*?variant=
+Disallow: /*?sort_by=
+Disallow: /*&page=
+Disallow: /collections/*?filter.v.
+Disallow: /collections/*?sort_by=
+Disallow: /*?page=
+Disallow: /*?pr_prod_strat=
+Disallow: /*?filter.
+Disallow: /*?orderby=
+Disallow: /*?v=
+Disallow: /*?size=
+Disallow: /*?wordfence_lh=
+Disallow: /*.atom
