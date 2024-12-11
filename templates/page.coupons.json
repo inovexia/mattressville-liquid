@@ -38,9 +38,21 @@
             "code": "SAVE100",
             "title": "SAVE $100 COUPON",
             "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE100 ($100 OFF all Orders from $1,000 to $1,499) </strong>at the checkout page. Mattressville reserves the right to void the coupons.</p>",
-            "expiry": "December 14, 2024",
+            "expiry": "December 12, 2024",
             "button_label": "Start Saving",
             "button_link": "shopify://collections/all-mattresses"
+          }
+        },
+        "coupon_EnjgVC": {
+          "type": "coupon",
+          "settings": {
+            "type": "other",
+            "code": "",
+            "title": "",
+            "description": "",
+            "expiry": "",
+            "button_label": "",
+            "button_link": ""
           }
         },
         "coupon_KzhYWf": {
@@ -144,6 +156,7 @@
       "block_order": [
         "coupon_yDC3bH",
         "coupon_FkNtma",
+        "coupon_EnjgVC",
         "coupon_KzhYWf",
         "coupon_pLL44K",
         "coupon_wB4ADm",
