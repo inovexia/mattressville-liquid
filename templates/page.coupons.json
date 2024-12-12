@@ -58,6 +58,19 @@
             "button_link": "shopify://collections/all-mattresses"
           }
         },
+        "coupon_pTnxAJ": {
+          "type": "coupon",
+          "settings": {
+            "image": "shopify://shop_images/Boxing_Day_Save_10_Coupon.png",
+            "type": "other",
+            "code": "BOX15",
+            "title": "15% OFF COUPON",
+            "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. <strong>BOX15 (15% OFF all Orders from $1,500 to $2,499). Auto applied at checkout. </strong>Mattressville reserves the right to void the coupons.</p>",
+            "expiry": "December 26, 2024",
+            "button_label": "Start Saving",
+            "button_link": "shopify://collections/all-mattresses"
+          }
+        },
         "coupon_KzhYWf": {
           "type": "coupon",
           "disabled": true,
@@ -161,6 +174,7 @@
         "coupon_yDC3bH",
         "coupon_FkNtma",
         "coupon_zDUmCg",
+        "coupon_pTnxAJ",
         "coupon_KzhYWf",
         "coupon_pLL44K",
         "coupon_wB4ADm",
