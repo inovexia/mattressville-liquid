@@ -10,11 +10,8 @@
 
 {%- if group.user_agent.value == '*' -%}
 {{ 'Disallow: /*?q=*' }}
-{{ 'Disallow: /*?variant=' }}
 {{ 'Disallow: /*?sort_by=' }}
 {{ 'Disallow: /*&page=' }}
-{{ 'Disallow: /collections/*?filter.v.' }}
-{{ 'Disallow: /collections/*?sort_by=' }}
 {{ 'Disallow: /*?page=' }}
 {{ 'Disallow: /*?pr_prod_strat=' }}
 {{ 'Disallow: /*?filter.' }}
