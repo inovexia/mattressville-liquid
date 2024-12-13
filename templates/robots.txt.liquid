@@ -10,6 +10,7 @@
 
 {%- if group.user_agent.value == '*' -%}
 {{ 'Disallow: /*?q=*' }}
+{{ 'Disallow: /*?variant=' }}
 {{ 'Disallow: /*?sort_by=' }}
 {{ 'Disallow: /*&page=' }}
 {{ 'Disallow: /collections/*?filter.v.' }}
