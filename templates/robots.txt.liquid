@@ -2,13 +2,6 @@
   # Caution! Please read https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt before proceeding to make changes to this file. 
 {% endcomment %}
 
-{% for group in robots.default_groups %}
-{{ group.user_agent }}
-
-{%- for rule in group.rules -%}
-    {{ rule }}
-{%- endfor -%}
-
 User-agent: Googlebot
 Allow: /
 User-agent: Googlebot-Image
@@ -21,6 +14,15 @@ User-agent: Bingbot
 Allow: /
 User-agent: GPTBot
 Allow: /
+
+{% for group in robots.default_groups %}
+{{ group.user_agent }}
+
+{%- for rule in group.rules -%}
+    {{ rule }}
+{%- endfor -%}
+
+
 
   
 {%- if group.user_agent.value == '*' -%}
