@@ -1,9 +1,6 @@
 {%- comment -%} 
   # Caution! Please read https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt before proceeding to make changes to this file. 
 {% endcomment %}
-{%- if user_agent.value == 'Googlebot' -%}
-  Allow: /
-{%- endif -%}
 
 {% for group in robots.default_groups %}
 {{ group.user_agent }}
@@ -12,7 +9,8 @@
     {{ rule }}
 {%- endfor -%}
 
-
+User-agent: Googlebot
+Allow: /
 User-agent: Googlebot-Image
 Allow: /images/
 User-agent: AdsBot-Google
