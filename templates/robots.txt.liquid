@@ -7,7 +7,20 @@
 {%- for rule in group.rules -%}
     {{ rule }}
 {%- endfor -%}
-
+  
+User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Image
+Allow: /images/
+User-agent: AdsBot-Google
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: GPTBot
+Allow: /
+  
 {%- if group.user_agent.value == '*' -%}
 {{ 'Disallow: /*?q=*' }}
 {{ 'Disallow: /*?sort_by=' }}
