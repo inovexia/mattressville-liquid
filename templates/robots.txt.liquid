@@ -7,9 +7,10 @@
 {%- for rule in group.rules -%}
     {{ rule }}
 {%- endfor -%}
-  
-User-agent: Googlebot
-Allow: /
+
+{%- if group.user_agent.value == 'Googlebot' -%}
+  Allow: /
+{%- endif -%}
 User-agent: Googlebot-Image
 Allow: /images/
 User-agent: AdsBot-Google
@@ -20,6 +21,7 @@ User-agent: Bingbot
 Allow: /
 User-agent: GPTBot
 Allow: /
+
   
 {%- if group.user_agent.value == '*' -%}
 {{ 'Disallow: /*?q=*' }}
