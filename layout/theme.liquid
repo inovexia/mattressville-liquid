@@ -9,15 +9,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
      
-    
-    <!-- My CODE -->
-    {% if template contains 'collection' and current_tags %}
-    <meta name="robots" content="noindex" />
+     
+    {% if template contains 'collection' and current_tags %} 
     <link rel="canonical" href="{{ shop.url }}{{ collection.url }}" />
     {% else %}
     <link rel="canonical" href="{{ canonical_url }}" />
-    {% endif %}
-    <!-- My CODE -->
+    {% endif %} 
 
     {% comment %} 
       {% assign canonical_url = 'https://' | append: request.host | append: request.path %}
