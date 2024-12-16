@@ -24,8 +24,7 @@
     {% endif %}
   {% endfor %}
 {% endif %}
-
-{% if include_tag %}
+{% if include_tag or (template contains 'collection' and current_tags) %}
   <meta name="robots" content="noindex, nofollow">
 {% else %}
   <meta name="robots" content="index, follow">
