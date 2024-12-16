@@ -11,7 +11,14 @@
     
     {% assign new_canonical_url = 'https://' | append: request.host | append: request.path %}
     <link rel="canonical" href="{{ new_canonical_url }}">
-        
+
+    {% if template contains 'collection' and current_tags %}
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href="{{ shop.url }}{{ collection.url }}" />
+    {% else %}
+    <link rel="canonical" href="{{ canonical_url }}" />
+    {% endif %}
+
     {% comment %} 
       {% assign canonical_url = 'https://' | append: request.host | append: request.path %}
       {% assign last_char = canonical_url | slice: -1 %}
