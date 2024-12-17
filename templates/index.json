@@ -503,7 +503,7 @@
           "settings": {
             "feature_title": "Free Shipping",
             "feature_text": "On Orders Over $499",
-            "feature_url": "",
+            "feature_url": "shopify://pages/local-delivery",
             "hide_image": false
           }
         },
