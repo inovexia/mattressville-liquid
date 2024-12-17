@@ -3,7 +3,7 @@
   <div class="page-width">
     <div class="inner">
       <div class="contact">
-        <a href="tel:+1{{ section.settings.phone_number | remove: "-"}}" aria-label="Contact number">
+        <a target="_top" href="tel:+{{ section.settings.phone_number | remove: "-"}}" aria-label="Contact number">
           <i class="gsi gs-phone"></i>
           <span>{{ section.settings.phone_number }}</span>
         </a>

@@ -80,6 +80,7 @@
       "blocks": {
         "heading_VVe8mf": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Black Friday & Cyber Monday Mattress Sale 2024",
             "heading_size": "h1"
@@ -89,7 +90,6 @@
       "block_order": [
         "heading_VVe8mf"
       ],
-      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -203,7 +203,7 @@
         "heading_iTkdJK": {
           "type": "heading",
           "settings": {
-            "heading": "Boxing Day Mega Mattress Sale 2024",
+            "heading": "Boxing Day Mattress Mega Sale",
             "heading_size": "h1"
           }
         }
@@ -211,7 +211,6 @@
       "block_order": [
         "heading_iTkdJK"
       ],
-      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -223,7 +222,6 @@
     },
     "image_with_text_pj6awM": {
       "type": "image-with-text",
-      "disabled": true,
       "custom_css": [
         ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
         ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
@@ -231,7 +229,7 @@
         ".global-media-settings {border: none !important;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/mattressville_boxing_day_flyer_2024.jpg",
+        "image": "shopify://shop_images/mattressville_boxing_day_flyer_2024.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -252,14 +250,14 @@
         "text_CKak3p": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Boxing Day Mega Mattress Savings Alert! 🛒</strong>This Boxing Day, upgrade your sleep with unbeatable deals on premium mattresses.  Mattressville is the biggest retailer of premium high-end mattresses—Find out why we are the highest rated mattress store. We’re going all out for this year’s Boxing Day Sale!</p><p><strong>Shop during our Boxing Day Mattress Sale and save up to 60% with massive markdowns.</strong> It’s your chance to grab the perfect mattress at prices you won’t believe! 😲</p><ul><li><strong>BOX10</strong> (10% OFF Orders $500-$1499)</li><li><strong>BOX15</strong> (15% OFF Orders $1500-$2499)</li><li><strong>BOX20</strong> (20% OFF Orders $2500+)</li></ul><p><em>Discounts AUTO APPLIED at checkout on all sale items.</em></p><p>Treat yourself or your loved ones so you can have a good night, every night. Don’t wait—these deals are only available for a limited time!</p><p>Don't forget to check out our blog: <a href=\"https://mattressville.ca/blogs/promotions/8-things-not-to-do-when-shopping-during-a-boxing-day-mattress-sale\" target=\"_blank\" title=\"https://mattressville.ca/blogs/promotions/8-things-not-to-do-when-shopping-during-a-boxing-day-mattress-sale\"><strong>8 Things NOT To Do When Shopping During A Boxing Day Mattress Sale</strong></a></p><p><em>Coupons cannot be combined with other discounts, promos, or bundles.</em></p><p><strong>Black Friday Mattress Sale Starts on now ~ Ends Cyber Monday, December 2nd, 11:59 pm</strong></p>"
+            "text": "<p><strong>Boxing Day Mega Mattress Savings Alert! 🛒</strong>This Boxing Day, upgrade your sleep with unbeatable deals on premium mattresses.  Mattressville is the biggest retailer of premium high-end mattresses—Find out why we are the highest rated mattress store. We’re going all out for this year’s Boxing Day Sale!</p><p><strong>Shop during our Boxing Day Mattress Sale and save up to 60% with massive markdowns.</strong> It’s your chance to grab the perfect mattress at prices you won’t believe! 😲</p><ul><li><strong>BOX10</strong> (10% OFF Orders $500-$1499)</li><li><strong>BOX15</strong> (15% OFF Orders $1500-$2499)</li><li><strong>BOX20</strong> (20% OFF Orders $2500+)</li></ul><p><em>Discounts AUTO APPLIED at checkout on all sale items.</em></p><p>Treat yourself or your loved ones so you can have a good night, every night. Don’t wait—these deals are only available for a limited time!</p><p>Don't forget to check out our blog: <a href=\"/blogs/promotions/10-things-not-to-do-when-shopping-during-a-boxing-day-mattress-sale\" target=\"_blank\" title=\"10 Things NOT To Do When Shopping During A Boxing Day Mattress Sale\"><strong>10 Things NOT To Do When Shopping During A Boxing Day Mattress Sale</strong></a></p><p><em>Coupons cannot be combined with other discounts, promos, or bundles.</em></p><p><strong>Boxing Day Mattress Mega Sale starts now ~ Ends December 26th, 11:59 pm</strong></p>"
           }
         },
         "button_7a4wy7": {
           "type": "button",
           "settings": {
             "button_label": "Shop Sale Items",
-            "button_link": "shopify://collections/all-mattresses",
+            "button_link": "shopify://collections/boxing-day-mattress-mega-sale",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -271,7 +269,6 @@
         "text_CKak3p",
         "button_7a4wy7"
       ],
-      "disabled": true,
       "custom_css": [
         ".rich-text .rich-text__wrapper {padding: 0;}",
         ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
@@ -347,35 +344,6 @@
         "full_width": true,
         "padding_top": 0,
         "padding_bottom": 44
-      }
-    },
-    "featured_collection_8wd9fL": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "California Design - Handmade",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "aireloom",
-        "products_to_show": 3,
-        "columns_desktop": 1,
-        "full_width": true,
-        "show_view_all": false,
-        "view_all_style": "link",
-        "enable_desktop_slider": true,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": true,
-        "show_rating": true,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "psb_utilities_line_Ytf8dU": {
@@ -607,6 +575,36 @@
         "padding_top": 0,
         "padding_bottom": 36
       }
+    },
+    "featured_collection_fzHXqH": {
+      "type": "featured-collection",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "title": "Best Deals on Kingsdown",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "kingsdown",
+        "products_to_show": 5,
+        "columns_desktop": 2,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -622,7 +620,6 @@
     "rich_text_W9h3PV",
     "collection_list_EVfJkE",
     "rich_text_7AXBRM",
-    "featured_collection_8wd9fL",
     "psb_utilities_line_Ytf8dU",
     "rich_text_hK34aJ",
     "collection_list_NRFCEM",
@@ -632,6 +629,7 @@
     "collection_list_4dyGwc",
     "rich_text_fgdiqy",
     "image_with_text_EKL6in",
-    "rich_text_dtFKYq"
+    "rich_text_dtFKYq",
+    "featured_collection_fzHXqH"
   ]
 }

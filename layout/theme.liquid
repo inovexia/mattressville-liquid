@@ -8,10 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    
-    {% assign new_canonical_url = 'https://' | append: request.host | append: request.path %}
-    <link rel="canonical" href="{{ new_canonical_url }}">
-        
+     
+     
+    {% if template contains 'collection' and current_tags %} 
+    <link rel="canonical" href="{{ shop.url }}{{ collection.url }}" />
+    {% else %}
+    <link rel="canonical" href="{{ canonical_url }}" />
+    {% endif %} 
+
     {% comment %} 
       {% assign canonical_url = 'https://' | append: request.host | append: request.path %}
       {% assign last_char = canonical_url | slice: -1 %}
@@ -335,8 +339,7 @@
     
     <!-- Product Schema -->
     {% if template == 'product' %}
-     {% comment %} 
-      <script type="application/ld+json" defer>
+     <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
         "@type": "Product",
@@ -377,7 +380,7 @@
           "url": "{{ shop.url }}{{ product.url }}",
           "priceCurrency": "{{ shop.currency }}",
           "price": "{{ product.price | money_without_currency | replace: ',', '' }}",
-          "priceValidUntil": "2030-01-01",
+          "priceValidUntil": "2025-12-01",
           "itemCondition": "https://schema.org/NewCondition",
           "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
           "shippingDetails": [

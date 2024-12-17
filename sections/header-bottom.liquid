@@ -15,7 +15,7 @@
         </div>
         <div class="end">
           <i class="gsi gs-phone"></i>
-          <a href="tel:+1{{ section.settings.phone_number | remove: "-"}}" aria-label="Contact1 number">
+          <a target="_top" href="tel:+{{ section.settings.phone_number | remove: "-"}}" aria-label="Contact number">
             {{ section.settings.phone_number }}
           </a>
         </div>
