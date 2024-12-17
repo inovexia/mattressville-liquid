@@ -339,7 +339,8 @@
     
     <!-- Product Schema -->
     {% if template == 'product' %}
-     <script type="application/ld+json">
+     {% comment %}
+      <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
         "@type": "Product",
@@ -513,6 +514,7 @@
         }
       }
       </script>
+      {% endcomment %}
       {% endcomment %}
 
 {% endif %}
