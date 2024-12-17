@@ -495,22 +495,95 @@
         "section_padding_bottom_mobile": 0
       }
     },
-    "172323866386539f91": {
-      "type": "apps",
+    "ss_feature_1_9CcpJD": {
+      "type": "ss-feature-1",
       "blocks": {
-        "bundler_custom_bundle_HA7BWt": {
-          "type": "shopify://apps/bundler/blocks/custom-bundle/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
-          "disabled": true,
+        "image_GfddGn": {
+          "type": "image",
           "settings": {
-            "shortcode": ""
+            "feature_title": "Free Shipping",
+            "feature_text": "On Orders Over $499",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_QAqrCg": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Price-match guarantee",
+            "feature_text": "We’ll Beat Any Competitor’s Price",
+            "feature_url": "shopify://pages/price-match-guarantee",
+            "hide_image": false
+          }
+        },
+        "image_rBfaJp": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Hassle-free exchange",
+            "feature_text": "Shop Worry-Free This Boxing Day",
+            "feature_url": "shopify://pages/refund-policy",
+            "hide_image": false
+          }
+        },
+        "image_4M8MmF": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Highest Rated on Google",
+            "feature_text": "Customer Satisfaction #1 Priority",
+            "feature_url": "shopify://pages/reviews",
+            "hide_image": false
           }
         }
       },
       "block_order": [
-        "bundler_custom_bundle_HA7BWt"
+        "image_GfddGn",
+        "image_QAqrCg",
+        "image_rBfaJp",
+        "image_4M8MmF"
       ],
       "settings": {
-        "include_margins": true
+        "feature_row": 4,
+        "feature_row_mobile": 1,
+        "feature_gap": 20,
+        "feature_gap_mobile": 20,
+        "feature_padding_vertical": 0,
+        "feature_padding_horizontal": 0,
+        "feature_radius": 16,
+        "feature_border_thickness": 0,
+        "feature_shadow": false,
+        "feature_heading_custom": false,
+        "feature_heading_font": "josefin_sans_n4",
+        "feature_heading_size": 14,
+        "feature_heading_size_mobile": 12,
+        "feature_heading_height": 130,
+        "feature_heading_mt": 8,
+        "feature_text_custom": false,
+        "feature_text_font": "josefin_sans_n4",
+        "feature_text_size": 12,
+        "feature_text_size_mobile": 12,
+        "feature_text_height": 130,
+        "feature_text_mt": 4,
+        "feature_icon_size": 42,
+        "feature_icon_size_mobile": 42,
+        "feature_bg": "#FFFFFF",
+        "feature_border_color": "#000000",
+        "feature_shadow_color": "#000000",
+        "feature_heading_color": "#000000",
+        "feature_text_color": "#000000",
+        "feature_icon_color": "#000000",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
       }
     },
     "featured_collection_xLkaJK": {
@@ -708,7 +781,7 @@
     "ss_feature_1_TH7EM7",
     "multicolumn_Yk9bxe",
     "psb_reviews_reviews_01_Vr6JBB",
-    "172323866386539f91",
+    "ss_feature_1_9CcpJD",
     "featured_collection_xLkaJK",
     "psb_gallery_gallery_01_pQmz4F",
     "featured_collection_BY7Ca9",
