@@ -9,6 +9,49 @@
  */
 {
   "sections": {
+    "product-grid": {
+      "type": "invx-main-collection-product-grid",
+      "custom_css": [
+        ".collection--empty container .regular .underlined-link {display: none;}"
+      ],
+      "settings": {
+        "products_per_page": 9,
+        "columns_desktop": 2,
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "enable_flash_deals": false,
+        "flash_deals_image": "shopify://shop_images/flash-deals.png",
+        "flash_deals_link": "shopify://collections/flash-deals",
+        "columns_mobile": "1",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "1734474631d37cf729": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_carousel_hcqcTV": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews_carousel/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_carousel_hcqcTV"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "ss_feature_1_AKqWGz": {
       "type": "ss-feature-1",
       "blocks": {
@@ -99,54 +142,11 @@
         "border_thickness": 0,
         "lazy": true
       }
-    },
-    "product-grid": {
-      "type": "invx-main-collection-product-grid",
-      "custom_css": [
-        ".collection--empty container .regular .underlined-link {display: none;}"
-      ],
-      "settings": {
-        "products_per_page": 9,
-        "columns_desktop": 2,
-        "color_scheme": "",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "enable_filtering": true,
-        "filter_type": "vertical",
-        "enable_sorting": true,
-        "enable_flash_deals": false,
-        "flash_deals_image": "shopify://shop_images/flash-deals.png",
-        "flash_deals_link": "shopify://collections/flash-deals",
-        "columns_mobile": "1",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "1734474631d37cf729": {
-      "type": "apps",
-      "blocks": {
-        "yotpo_product_reviews_reviews_carousel_hcqcTV": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews_carousel/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "yotpo_product_reviews_reviews_carousel_hcqcTV"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
-    "ss_feature_1_AKqWGz",
     "product-grid",
-    "1734474631d37cf729"
+    "1734474631d37cf729",
+    "ss_feature_1_AKqWGz"
   ]
 }
