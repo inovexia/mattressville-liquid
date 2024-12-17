@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "product-grid": {
@@ -19,15 +28,147 @@
         "filter_type": "vertical",
         "enable_sorting": true,
         "enable_flash_deals": false,
-        "flash_deals_image": "shopify:\/\/shop_images\/flash-deals.png",
-        "flash_deals_link": "shopify:\/\/collections\/flash-deals",
+        "flash_deals_image": "shopify://shop_images/flash-deals.png",
+        "flash_deals_link": "shopify://collections/flash-deals",
         "columns_mobile": "1",
         "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "ss_feature_1_AKqWGz": {
+      "type": "ss-feature-1",
+      "blocks": {
+        "image_4ETgUA": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Free Shipping",
+            "feature_text": "On Orders Over $499",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_nWBE4n": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Price-match guarantee",
+            "feature_text": "We’ll Beat Any Competitor’s Price",
+            "feature_url": "shopify://pages/price-match-guarantee",
+            "hide_image": false
+          }
+        },
+        "image_gR6AA3": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Hassle-free exchange",
+            "feature_text": "Shop Worry-Free This Boxing Day",
+            "feature_url": "shopify://pages/refund-policy",
+            "hide_image": false
+          }
+        },
+        "image_eYU6KB": {
+          "type": "image",
+          "settings": {
+            "feature_title": "4.9 Highest Rated on Google",
+            "feature_text": "Customer Satisfaction #1 Priority",
+            "feature_url": "shopify://pages/reviews",
+            "hide_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_4ETgUA",
+        "image_nWBE4n",
+        "image_gR6AA3",
+        "image_eYU6KB"
+      ],
+      "settings": {
+        "feature_row": 4,
+        "feature_row_mobile": 1,
+        "feature_gap": 20,
+        "feature_gap_mobile": 20,
+        "feature_padding_vertical": 0,
+        "feature_padding_horizontal": 0,
+        "feature_radius": 16,
+        "feature_border_thickness": 0,
+        "feature_shadow": false,
+        "feature_heading_custom": false,
+        "feature_heading_font": "josefin_sans_n4",
+        "feature_heading_size": 14,
+        "feature_heading_size_mobile": 12,
+        "feature_heading_height": 130,
+        "feature_heading_mt": 8,
+        "feature_text_custom": false,
+        "feature_text_font": "josefin_sans_n4",
+        "feature_text_size": 12,
+        "feature_text_size_mobile": 12,
+        "feature_text_height": 130,
+        "feature_text_mt": 4,
+        "feature_icon_size": 42,
+        "feature_icon_size_mobile": 42,
+        "feature_bg": "#FFFFFF",
+        "feature_border_color": "#000000",
+        "feature_shadow_color": "#000000",
+        "feature_heading_color": "#000000",
+        "feature_text_color": "#000000",
+        "feature_icon_color": "#000000",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "home_banner_9fDwyt": {
+      "type": "home-banner",
+      "settings": {
+        "custom_text_title": "Title",
+        "custom_text_body": "<p>Add your text here</p>"
+      }
+    },
+    "collapsible_content_ke7iqT": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Tr8bPw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "price_tag",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Tr8bPw"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Collapsible content",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "product-grid"
+    "product-grid",
+    "ss_feature_1_AKqWGz",
+    "home_banner_9fDwyt",
+    "collapsible_content_ke7iqT"
   ]
 }
