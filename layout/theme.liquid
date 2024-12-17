@@ -332,9 +332,11 @@
       }
     </script>
     {% render 'gp-head' %}
+    
     <!-- Product Schema -->
     {% if template == 'product' %}
-     <script type="application/ld+json" defer>
+     {% comment %} 
+      <script type="application/ld+json" defer>
       {
         "@context": "https://schema.org/",
         "@type": "Product",
@@ -508,6 +510,7 @@
         }
       }
       </script>
+      {% endcomment %}
 
 {% endif %}
     <script async src="https://app.trustanalytica.com/badge/reputation/pH6Gh5jSfgLx_Kt-6zS_ualxvUPCrMcf15ybvrYKJ3zJC6gppVy9XrGT-GN3Ny2Fycdymg.js" ></script>
