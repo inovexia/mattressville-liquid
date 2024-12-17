@@ -636,36 +636,63 @@
         "collapsible_row_wKgYMJ": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Why Shop Mattressville’s Boxing Day Mattress Sale?",
+            "heading": "What are the best Boxing Day mattress deals for 2024?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>The best Boxing Day mattress deals at Mattressville include up to <strong>60% off</strong> all products including premium mattresses from top brands. Whether you’re looking for memory foam, hybrid, or luxury mattresses, our Boxing Day sale promotion offers unbeatable discounts you won’t find any other time of the year.</p><p>All products are <strong>already marked down. </strong>For <strong>special pricing</strong> on select products, be sure to check out our <a href=\"/pages/local-gta-flyer\" target=\"_blank\" title=\"Boxing Day Mattress Mega Sale – Save Up to 60% on Luxury Mattresses\"><strong>Boxing Day Collection</strong></a> If you need assistance, our team is happy to help!</p>",
             "page": ""
           }
         },
         "collapsible_row_nVnJH8": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Exclusive Boxing Day Mattress Deals: Save Up to 60%",
+            "heading": "How much can I save during Mattressville’s Boxing Day Mattress Sale?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>During our <strong>Boxing Day Mattress Sale</strong>, you can save up to <strong>60%</strong> on a wide range of mattresses. In addition to these steep discounts, we also offer exclusive deals like free local delivery on orders over $499. It’s the perfect opportunity to upgrade your sleep at a fraction of the price.</p>",
             "page": ""
           }
         },
         "collapsible_row_GzwdXe": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Premium Brands at Boxing Day Prices – Tempur-Pedic, Sealy & More",
+            "heading": "Which mattress brands are on sale this Boxing Day?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>We’re offering deep discounts on leading mattress brands, including:</p><ul><li><strong>Aireloom by Kluft</strong></li><li><strong>Marshall</strong></li><li><strong>Stearns & Foster</strong></li><li><strong>Tempur-Pedic</strong></li><li><strong>Kingsdown</strong></li><li><strong>Natura</strong></li><li><strong>Sealy</strong></li><li><strong>Serta</strong></li></ul><p><strong>...and more!</strong></p>",
             "page": ""
           }
         },
         "collapsible_row_ymkKq9": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Limited Stock: Don’t Miss These Boxing Day Savings!",
+            "heading": "When does Mattressville’s Boxing Day Mattress Sale start and end?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Our Boxing Day Mattress Sale starts on <strong>December 26th, 2024</strong>, and runs for a limited time while supplies last. To avoid missing out on your preferred mattress, we recommend shopping early—stock moves fast during Boxing Day sales.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_mckN6C": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer free delivery or trial periods during the Boxing Day Sale?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes! We offer <strong>free delivery on orders over $499</strong> during the Boxing Day sale. Additionally, many of our mattresses come with a <strong>90-day Comfort Guarantee</strong>, allowing you to swap your mattress if it’s not the perfect fit. Visit our showroom or contact us online to learn more.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xbjegP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I claim discounts during Mattressville’s Boxing Day Mattress Sale?",
+            "icon": "check_mark",
+            "row_content": "<p>Claiming your discount is easy! The advertised prices are already marked down and <strong>Boxing Day discounts</strong> are automatically applied at <strong>checkout</strong>, so you’ll see your savings instantly. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_UeQher": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I choose the right mattress during the Boxing Day Sale?",
+            "icon": "check_mark",
+            "row_content": "<p>To find the perfect mattress, consider the following:</p><ul><li><strong>Sleeping Position:</strong> Side sleepers need softer mattresses; back and stomach sleepers benefit from firmer options.</li><li><strong>Budget:</strong> Our sale offers a range of options for every price point.</li><li><strong>Size:</strong> Choose a mattress that fits your room and sleep needs—Queen, King, or California King are popular picks.</li><li>TRY our <a href=\"/pages/mattress-matchmaker\" title=\"Mattress Matchmaker\">Mattress Matchmaker </a>shopping assistant </li></ul><p>If you’re unsure, our <strong>mattress experts</strong> are here to help online, over the phone, or in-person at our <strong>Mississauga showroom</strong>.</p>",
             "page": ""
           }
         }
@@ -674,12 +701,15 @@
         "collapsible_row_wKgYMJ",
         "collapsible_row_nVnJH8",
         "collapsible_row_GzwdXe",
-        "collapsible_row_ymkKq9"
+        "collapsible_row_ymkKq9",
+        "collapsible_row_mckN6C",
+        "collapsible_row_xbjegP",
+        "collapsible_row_UeQher"
       ],
       "settings": {
         "caption": "",
-        "heading": "Collapsible content",
-        "heading_size": "h1",
+        "heading": "<strong>Frequently Asked Questions About Our Boxing Day Mattress Sale 2024</strong>",
+        "heading_size": "h2",
         "heading_alignment": "center",
         "layout": "none",
         "color_scheme": "",
