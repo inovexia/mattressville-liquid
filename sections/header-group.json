@@ -15,7 +15,7 @@
       "type": "invx-announcement-bar",
       "settings": {
         "background_color": "#d7355c",
-        "announcement": "<p><em>Early Access:</em> <a href=\"/pages/local-gta-flyer\" title=\"Boxing Day Mattress Sale 2024\"><strong>Boxing Day Mattress Sale</strong> View Deals</a> | Buy Now, Pay Over Time with AFFIRM</p>",
+        "announcement": "<p><em>Early Access:</em> <a href=\"/pages/local-gta-flyer\" title=\"Boxing Day Mattress Sale 2024\"><strong>Boxing Day Mattress Sale</strong></a> | Buy Now, Pay Over Time with AFFIRM</p>",
         "duration": "session"
       }
     },
