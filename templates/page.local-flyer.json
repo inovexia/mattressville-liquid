@@ -203,7 +203,7 @@
         "heading_iTkdJK": {
           "type": "heading",
           "settings": {
-            "heading": "Boxing Day Mattress Mega Sale – Save Up to 60% on Luxury Mattresses",
+            "heading": "Why Shop Mattressville’s Boxing Day Mattress Sale?",
             "heading_size": "h1"
           }
         }
@@ -247,10 +247,31 @@
     "rich_text_W9h3PV": {
       "type": "rich-text",
       "blocks": {
+        "heading_zqz63J": {
+          "type": "heading",
+          "settings": {
+            "heading": "Exclusive Boxing Day Mattress Deals: Save Up to 60%",
+            "heading_size": "h1"
+          }
+        },
+        "heading_Y8i3Af": {
+          "type": "heading",
+          "settings": {
+            "heading": "Premium Brands at Boxing Day Prices – Tempur-Pedic, Stearns & Foster, Marshall, Aireloom and more!",
+            "heading_size": "h2"
+          }
+        },
         "text_CKak3p": {
           "type": "text",
           "settings": {
             "text": "<p><strong>Boxing Day Mega Mattress Savings Alert! 🛒</strong>This Boxing Day, upgrade your sleep with unbeatable deals on premium mattresses.  Mattressville is the biggest retailer of premium high-end mattresses—Find out why we are the highest rated mattress store. We’re going all out for this year’s Boxing Day Sale!</p><p><strong>Shop during our Boxing Day Mattress Sale and save up to 60% with massive markdowns.</strong> It’s your chance to grab the perfect mattress at prices you won’t believe! 😲</p><ul><li><strong>BOX10</strong> (10% OFF Orders $500-$1499)</li><li><strong>BOX15</strong> (15% OFF Orders $1500-$2499)</li><li><strong>BOX20</strong> (20% OFF Orders $2500+)</li></ul><p><em>Discounts AUTO APPLIED at checkout on all sale items.</em></p><p>Treat yourself or your loved ones so you can have a good night, every night. Don’t wait—these deals are only available for a limited time!</p><p>Don't forget to check out our blog: <a href=\"/blogs/promotions/10-things-not-to-do-when-shopping-during-a-boxing-day-mattress-sale\" target=\"_blank\" title=\"10 Things NOT To Do When Shopping During A Boxing Day Mattress Sale\"><strong>10 Things NOT To Do When Shopping During A Boxing Day Mattress Sale</strong></a></p><p><em>Coupons cannot be combined with other discounts, promos, or bundles.</em></p><p><strong>Boxing Day Mattress Mega Sale starts now ~ Ends December 26th, 11:59 pm</strong></p>"
+          }
+        },
+        "heading_KNizjn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Limited Stock: Don’t Miss These Boxing Day Savings!",
+            "heading_size": "h2"
           }
         },
         "button_7a4wy7": {
@@ -266,7 +287,10 @@
         }
       },
       "block_order": [
+        "heading_zqz63J",
+        "heading_Y8i3Af",
         "text_CKak3p",
+        "heading_KNizjn",
         "button_7a4wy7"
       ],
       "custom_css": [
@@ -278,7 +302,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 24,
+        "padding_top": 4,
         "padding_bottom": 52
       }
     },
@@ -605,6 +629,67 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_ezWJBY": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_wKgYMJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why Shop Mattressville’s Boxing Day Mattress Sale?",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_nVnJH8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Exclusive Boxing Day Mattress Deals: Save Up to 60%",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_GzwdXe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Premium Brands at Boxing Day Prices – Tempur-Pedic, Sealy & More",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_ymkKq9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Limited Stock: Don’t Miss These Boxing Day Savings!",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_wKgYMJ",
+        "collapsible_row_nVnJH8",
+        "collapsible_row_GzwdXe",
+        "collapsible_row_ymkKq9"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Collapsible content",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -630,6 +715,7 @@
     "rich_text_fgdiqy",
     "image_with_text_EKL6in",
     "rich_text_dtFKYq",
-    "featured_collection_fzHXqH"
+    "featured_collection_fzHXqH",
+    "collapsible_content_ezWJBY"
   ]
 }
