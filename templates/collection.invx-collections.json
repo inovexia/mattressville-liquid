@@ -125,10 +125,91 @@
         "border_thickness": 0,
         "lazy": true
       }
+    },
+    "psb_reviews_reviews_01_4EVF6W": {
+      "type": "psb-reviews-reviews-01",
+      "blocks": {
+        "review_DXppXC": {
+          "type": "Review",
+          "settings": {
+            "review_image": "shopify://shop_images/Untitled_design_9fae2536-0338-4b14-b267-a72e42e03ab4.png",
+            "review_stars": "5",
+            "review_text": "<p>The salesperson was courteous and accommodating, answering all my questions with patience and without any pressure.</p>",
+            "review_name": "Erika H.",
+            "position": "I will definitely recommend Mattressville",
+            "url_product": "https://mattressville.ca/pages/reviews#:~:text=5%20star%20rating,definitely%20recommend%20Mattressville."
+          }
+        },
+        "review_9aUPyK": {
+          "type": "Review",
+          "settings": {
+            "review_stars": "5",
+            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.</p>",
+            "review_name": "Mason Peter",
+            "position": "@ceo_mason",
+            "url_product": ""
+          }
+        },
+        "review_eB3cPX": {
+          "type": "Review",
+          "settings": {
+            "review_stars": "5",
+            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.</p>",
+            "review_name": "Mason Peter",
+            "position": "@ceo_mason",
+            "url_product": ""
+          }
+        },
+        "review_HtRnTk": {
+          "type": "Review",
+          "settings": {
+            "review_stars": "5",
+            "review_text": "<p>With this app, I don't even need a developer. It also saves me a lot of design time. I officially launched my brand today and I wanted to thank this app for being a huge part of this journey.</p>",
+            "review_name": "Mason Peter",
+            "position": "@ceo_mason",
+            "url_product": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_DXppXC",
+        "review_9aUPyK",
+        "review_eB3cPX",
+        "review_HtRnTk"
+      ],
+      "settings": {
+        "container_width": "psb-container",
+        "heading": "<p>TESTIMONIALS</p>",
+        "heading_tag": "h2",
+        "subheading": "",
+        "heading_color": "#000",
+        "subheading_color": "#585454",
+        "enable_star": true,
+        "border_radius": 12,
+        "slider_per_view": 3,
+        "enable_loop": false,
+        "enable_autoplay": false,
+        "enable_pagination": true,
+        "enable_navigation": true,
+        "pagination_type": "fraction",
+        "background_color": "transparent",
+        "swiper_control_color": "#57301b",
+        "review-background-color": "#ffffff",
+        "stars-color": "#FFA500",
+        "text_color": "#4B4B4B",
+        "border_color": "#d3d3d3",
+        "text_align": "center",
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "text_align_mobile": "center",
+        "section_padding_top_mobile": 35,
+        "section_padding_bottom_mobile": 35
+      }
     }
   },
   "order": [
     "product-grid",
-    "ss_feature_1_AKqWGz"
+    "ss_feature_1_AKqWGz",
+    "psb_reviews_reviews_01_4EVF6W"
   ]
 }
