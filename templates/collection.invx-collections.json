@@ -125,10 +125,28 @@
         "border_thickness": 0,
         "lazy": true
       }
+    },
+    "1734474631d37cf729": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_carousel_hcqcTV": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews_carousel/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_carousel_hcqcTV"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "product-grid",
+    "1734474631d37cf729",
     "ss_feature_1_AKqWGz"
   ]
 }
