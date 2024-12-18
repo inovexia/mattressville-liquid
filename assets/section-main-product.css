@@ -36,10 +36,16 @@
   display: inline-block;
   width: 60%;
 }
-.product-single #shopify-block-swishlist_simple_wishlist_wishlist_product_button_ARaKRW {
+.product-single .product-form__input.product-form__quantity + div {
+
   display: inline-block;
-  width: 30%;
+
+  width: 40%;
+
   vertical-align: middle;
+
+  margin-bottom: 0px;
+
 }
 
 @media screen and (max-width: 500px) {
@@ -88,6 +94,18 @@
   }
 }
 
+.invx-sale-text{
+
+  font-size: 1.3rem !important;
+
+  color: #F0321F !important; 
+
+  margin-top: 0px !important;
+
+  width: 50%;
+
+}
+
 @media screen and (min-width: 990px) {
   /*   .product-single #shopify-block-affirm_pay_over_time_messaging_product_block_3HfxRh {
     display: inline-block;
@@ -98,6 +116,7 @@
     width: 50%;
     display: inline-block;
     vertical-align: top;
+     margin-bottom: 0px;
   }
   .invx-custom-price-layout .affirm-info,
   .invx-custom-price-layout .price-info {
@@ -1184,15 +1203,25 @@ a.product__text {
   flex-shrink: 0;
 }
 .product__inventory {
+
+  padding-top: 25px;
+
   display: flex;
+
   align-items: center;
+
   gap: 0.5rem;
+
+  justify-content: right;
+
+  float:right;
+
 }
 @media screen and (min-width: 990px) {
   .product__inventory {
     width: 40%;
     float: right;
-    padding-top: 10px;
+    padding-top: 25px;
   }
 }
 .product--no-media .product__inventory {
@@ -1450,9 +1479,29 @@ a.product__text {
   font-size: 20px;
 }
 .product-single .price__sale span .saved-amount {
+
   font-size: 11px !important;
-  opacity: 0.8;
+
+  opacity: 1;
+
   font-style: italic !important;
+
+  background-color: #d7355c;
+
+  color: #fff !important;
+
+  padding: 2px;
+
+  
+
+}
+
+
+
+.price__sale span{
+
+  text-align: left !important;
+
 }
 .product-single .price > .price__container {
   align-items: flex-end;
