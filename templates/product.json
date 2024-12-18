@@ -16,7 +16,9 @@
           "type": "text",
           "settings": {
             "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
+            "text_style": "uppercase",
+            "text_icon": "",
+            "text_color": "#000000"
           }
         },
         "yotpo_product_photo_reviews_star_rating_7iziTr": {
@@ -34,7 +36,9 @@
           "disabled": true,
           "settings": {
             "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
+            "text_style": "subtitle",
+            "text_icon": "&nbsp;",
+            "text_color": "#000000"
           }
         },
         "affirm_pay_over_time_messaging_product_block_3HfxRh": {
@@ -48,16 +52,25 @@
             "price_selector": ""
           }
         },
-        "essentials_XbMJNa": {
-          "type": "essentials",
-          "settings": {}
-        },
         "inventory_XBRzgq": {
           "type": "inventory",
           "settings": {
             "text_style": "body",
             "inventory_threshold": 10,
             "show_inventory_quantity": true
+          }
+        },
+        "essentials_XbMJNa": {
+          "type": "essentials",
+          "settings": {}
+        },
+        "text_VqUtyK": {
+          "type": "text",
+          "settings": {
+            "text": "Sale ends <strong>Dec 26 2024</strong>",
+            "text_style": "body",
+            "text_icon": "<svg width=\"1.2rem\" height=\"1.2rem\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"stroke: #F0321F;\">\n                      <path d=\"M4.51555 7C3.55827 8.4301 3 10.1499 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3V6M12 12L8 8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n                    </svg>",
+            "text_color": "#f0321f"
           }
         },
         "icon_with_text_apLJb3": {
@@ -126,8 +139,9 @@
         "title_4diFiT",
         "caption",
         "affirm_pay_over_time_messaging_product_block_3HfxRh",
-        "essentials_XbMJNa",
         "inventory_XBRzgq",
+        "essentials_XbMJNa",
+        "text_VqUtyK",
         "icon_with_text_apLJb3",
         "custom_liquid_yFxECU",
         "variant_picker",
