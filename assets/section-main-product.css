@@ -369,7 +369,7 @@ fieldset.product-form__input .form__label {
   .price--on-sale
   .price__sale
   .price-item.price-item--sale {
-  color: var(--accent-color);
+  color: #d7355c;
   font-size: 36px;
   font-weight: 700;
   line-height: 42px;
