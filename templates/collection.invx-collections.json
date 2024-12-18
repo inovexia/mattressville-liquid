@@ -169,9 +169,8 @@
       },
       "block_order": [
         "column_mfyAgd",
-        "column_MWxy3f",
+        "column_MWxy3f"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
