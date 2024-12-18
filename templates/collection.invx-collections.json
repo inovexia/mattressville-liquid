@@ -98,6 +98,7 @@
         "image_gR6AA3",
         "image_eYU6KB"
       ],
+      "disabled": true,
       "settings": {
         "feature_row": 4,
         "feature_row_mobile": 2,
