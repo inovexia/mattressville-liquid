@@ -149,8 +149,9 @@
         "column_mfyAgd": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/cta-image.jpg",
+            "title": "<a href=\"/collections/all-mattresses\" title=\"All Mattresses\">Shop All Mattresses</a>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -158,17 +159,9 @@
         "column_MWxy3f": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_dE6VTN": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/bed.png",
+            "title": "<a href=\"https://mattressville.ca/mattress-matchmaker/\">Try our Mattress Matchmaker</a>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -177,20 +170,19 @@
       "block_order": [
         "column_mfyAgd",
         "column_MWxy3f",
-        "column_dE6VTN"
       ],
       "disabled": true,
       "settings": {
-        "title": "Multicolumn",
+        "title": "",
         "heading_size": "h1",
-        "image_width": "full",
+        "image_width": "third",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
+        "columns_desktop": 2,
+        "column_alignment": "center",
         "background_style": "primary",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
-        "color_scheme": "",
+        "color_scheme": "scheme-6",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
