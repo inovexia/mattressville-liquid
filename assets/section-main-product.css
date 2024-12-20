@@ -47,7 +47,7 @@
 }
 
 .st-wishlist-button span {
-  font-weight: semi bold;
+  font-weight: 600;
 }
 
 .product-single .product-form__input.product-form__quantity + div > button {
