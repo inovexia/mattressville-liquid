@@ -52,13 +52,6 @@
         "include_margins": true
       }
     },
-    "home_banner_nhHyEY": {
-      "type": "home-banner",
-      "settings": {
-        "custom_text_title": "Add Text here",
-        "custom_text_body": "<p>Read more text section</p>"
-      }
-    },
     "ss_feature_1_AKqWGz": {
       "type": "ss-feature-1",
       "blocks": {
@@ -199,7 +192,6 @@
   "order": [
     "product-grid",
     "1734474631d37cf729",
-    "home_banner_nhHyEY",
     "ss_feature_1_AKqWGz",
     "multicolumn_fVkMH7"
   ]
