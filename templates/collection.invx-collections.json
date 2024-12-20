@@ -52,12 +52,11 @@
         "include_margins": true
       }
     },
-    "home_banner_DRKLMa": {
+    "home_banner_DyHWii": {
       "type": "home-banner",
-      "disabled": true,
       "settings": {
-        "custom_text_title": "Add Text here",
-        "custom_text_body": "<p>Add your text here</p>"
+        "custom_text_title": "text",
+        "custom_text_body": "<p>Text add</p>"
       }
     },
     "ss_feature_1_AKqWGz": {
@@ -200,7 +199,7 @@
   "order": [
     "product-grid",
     "1734474631d37cf729",
-    "home_banner_DRKLMa",
+    "home_banner_DyHWii",
     "ss_feature_1_AKqWGz",
     "multicolumn_fVkMH7"
   ]
