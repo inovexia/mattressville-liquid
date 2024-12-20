@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "layout": "theme-sidebar",
   "sections": {
@@ -25,8 +34,7 @@
         },
         "content": {
           "type": "content",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -35,11 +43,72 @@
         "share",
         "content"
       ],
+      "settings": {}
+    },
+    "collapsible_content_dVhFEG": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_eY3LLF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_Trn76A": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_yD7xiB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_9C4QUK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_eY3LLF",
+        "collapsible_row_Trn76A",
+        "collapsible_row_yD7xiB",
+        "collapsible_row_9C4QUK"
+      ],
       "settings": {
+        "caption": "",
+        "heading": "Collapsible content",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collapsible_content_dVhFEG"
   ]
 }
