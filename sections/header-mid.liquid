@@ -1,4 +1,5 @@
 {{ 'header-mid.css' | asset_url | stylesheet_tag }}
+
 <div class="header-mid" style="color: {{ section.settings.text_color }};">
   <div class="page-width">
     <div class="inner">
@@ -8,7 +9,10 @@
           <span>{{ section.settings.phone_number }}</span>
         </a>
         {%- if section.settings.contact_us_page != blank -%}
-          <a href="{{ section.settings.contact_us_page.url }}" aria-label="{{ section.settings.contact_us_page.title }}">
+          <a
+            href="{{ section.settings.contact_us_page.url }}"
+            aria-label="{{ section.settings.contact_us_page.title }}"
+          >
             <span>{{ section.settings.contact_us_page.title }}</span>
           </a>
         {%- else -%}
@@ -17,10 +21,7 @@
           </a>
         {%- endif -%}
       </div>
-      {% comment %} {%- if section.settings.show_social and social_icons -%} {% endcomment %}
       {%- render 'header-social-icons' -%}
-      {% comment %} {%- endif -%} {% endcomment %}
-
       {%- if section.settings.offer_text != blank -%}
         <div class="offer">
           <p>{{ section.settings.offer_text }}</p>
@@ -29,13 +30,26 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const headerMid = document.querySelector('.header-mid');
+    const stickyOffset = 60; // Desired fixed position from the top
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > stickyOffset) {
+        headerMid.classList.add("sticky");
+      } else {
+        headerMid.classList.remove("sticky");
+      }
+    });
+  });
+</script>
+
 {% schema %}
 {
-  "name": "t:sections.header-mid.name",
+  "name": "Header Mid",
   "class": "header-mid-section",
-  "enabled_on": {
-    "groups": ["header"]
-  },
   "settings": [
     {
       "type": "color",
@@ -59,7 +73,55 @@
       "id": "offer_text",
       "label": "Offer Text",
       "default": "FREE Shipping over $499"
-    }
+    },
+
+
   ]
 }
 {% endschema %}
+{% comment %}
+  {
+     "type": "select",
+     "id": "sticky_header_type",
+     "label": "Sticky Header Type",
+     "options": [
+       {
+         "value": "none",
+         "label": "None"
+       },
+       {
+         "value": "on-scroll-up",
+         "label": "Sticky on Scroll Up"
+       },
+       {
+         "value": "always",
+         "label": "Always Sticky"
+       },
+       {
+         "value": "reduce-logo-size",
+         "label": "Sticky with Reduced Logo Size"
+       }
+     ],
+     "default": "on-scroll-up"
+   }
+{% endcomment %}
+
+{% style %}
+  .header-mid {
+    position: relative ;
+    z-index: 10 !important;
+
+    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    box-shadow: none;
+  }
+
+  .header-mid.sticky {
+    position: fixed !important;
+    top: 60px !important; /* Fixed position from the top */
+    left: 0;
+    width: 100%;
+    z-index: 999 !important;
+    /* Optional: Add a background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visibility */
+  }
+{% endstyle %}

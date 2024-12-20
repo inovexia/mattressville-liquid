@@ -1,4 +1,5 @@
 {{ 'header-bottom.css' | asset_url | stylesheet_tag }}
+
 <div class="header-bottom">
   <div class="page-width">
     <div class="main-nav">
@@ -7,7 +8,8 @@
           <button
             type="button"
             class="main-menu-toggle"
-            aria-label="Toggle Nav Drop Down">
+            aria-label="Toggle Nav Drop Down"
+          >
             <span class="stripe"></span>
             <span class="stripe"></span>
             <span class="stripe"></span>
@@ -22,12 +24,14 @@
       </div>
       <div class="main-menu">
         <div class="nav-area">
+          <!-- Mega Menu -->
           <div class="nav-item has-mega-menu dropdown">
             <a
               href="#"
               class="dropdown-toggle nav-link"
               aria-label="{{ section.settings.meta_menu_title }}"
-              role="button">
+              role="button"
+            >
               {{- section.settings.meta_menu_title -}}
             </a>
             <div class="dropdown-menu mega-menu">
@@ -50,7 +54,10 @@
                             <a
                               class="nav-link"
                               href="{{ childlink_url }}"
-                              aria-label="Product list of {{ childlink.title | escape }}">{{ childlink.title | escape }}</a>
+                              aria-label="Product list of {{ childlink.title | escape }}"
+                            >
+                              {{- childlink.title | escape -}}
+                            </a>
                           </div>
                         {%- endfor -%}
                       </div>
@@ -59,9 +66,18 @@
                 {%- endfor -%}
               </div>
               <div class="all-item">
-                {%- assign megaMenuBottomLink1 = section.settings.mega_menu_bottom_link | default: '/collections/all-mattresses' | url_escape -%}
-                {%- assign megaMenuBottomLink2 = section.settings.mega_menu_bottom_link2 | default: '/collections' | url_escape -%}
-                {%- assign megaMenuBottomLink3 = section.settings.mega_menu_bottom_link3 | default: '/collections/all-mattresses' | url_escape -%}
+                {%- assign megaMenuBottomLink1 = section.settings.mega_menu_bottom_link
+                  | default: '/collections/all-mattresses'
+                  | url_escape
+                -%}
+                {%- assign megaMenuBottomLink2 = section.settings.mega_menu_bottom_link2
+                  | default: '/collections'
+                  | url_escape
+                -%}
+                {%- assign megaMenuBottomLink3 = section.settings.mega_menu_bottom_link3
+                  | default: '/collections/all-mattresses'
+                  | url_escape
+                -%}
                 <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink1 }}">
                   {{- section.settings.mega_menu_bottom_label -}}
                 </a>
@@ -74,10 +90,16 @@
               </div>
             </div>
           </div>
+
+          <!-- Bottom Menu -->
           {%- for link in section.settings.bottom_menu.links -%}
             {%- assign hasChildren = link.links | empty | default: false -%}
             <div class="nav-item {%- if hasChildren -%}{{" dropdown"}}{%- endif -%}">
-              <a class=" {%- if hasChildren -%}{{"dropdown-toggle "}}{%- endif -%}nav-link" href="{{ link.url }}" aria-label="{{ link.title | escape }}">
+              <a
+                class=" {%- if hasChildren -%}{{"dropdown-toggle "}}{%- endif -%}nav-link"
+                href="{{ link.url }}"
+                aria-label="{{ link.title | escape }}"
+              >
                 {{- link.title | escape -}}
               </a>
               {%- if hasChildren -%}
@@ -87,13 +109,18 @@
                       <a
                         class="nav-link"
                         href="{{ childlink.url }}"
-                        aria-label="Product list of {{ childlink.title | escape }}">{{ childlink.title | escape }}</a>
+                        aria-label="Product list of {{ childlink.title | escape }}"
+                      >
+                        {{- childlink.title | escape -}}
+                      </a>
                     </div>
                   {%- endfor -%}
                 </div>
               {%- endif -%}
             </div>
           {%- endfor -%}
+
+          <!-- Match Maker Image and Link -->
           <div class="has-icon nav-item">
             {%- if section.settings.match_maker_image != blank -%}
               <img
@@ -102,7 +129,8 @@
                 width="26"
                 height="25"
                 loading="lazy"
-                class="icon">
+                class="icon"
+              >
             {%- else -%}
               <img
                 src="{{ 'bed-xs.png' | asset_img_url: 'master' }}"
@@ -110,25 +138,45 @@
                 width="26"
                 height="25"
                 loading="lazy"
-                class="icon">
+                class="icon"
+              >
             {%- endif -%}
-            {%- assign matchMakerLink = section.settings.match_maker_link | default: '/pages/mattress-matchmaker' | url_escape -%}
+            {%- assign matchMakerLink = section.settings.match_maker_link
+              | default: '/pages/mattress-matchmaker'
+              | url_escape
+            -%}
             <a
               class="nav-link"
               href="{{ matchMakerLink }}"
-              aria-label="Read more about mattress match maker">{{ section.settings.match_maker_label }}</a>
+              aria-label="Read more about mattress match maker"
+            >
+              {{- section.settings.match_maker_label -}}
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-{% javascript %}
-  document.addEventListener('DOMContentLoaded', function() {
-    var mainNavDropdownToggles = document.querySelectorAll('.main-nav .dropdown-toggle');
-    var dropdownMenus = document.querySelectorAll('.dropdown-menu');
-    var mainMenu = document.querySelector('.main-menu');
-    var mainMenuToggle = document.querySelector('.main-menu-toggle');
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const headerBottom = document.querySelector('.header-bottom');
+    const stickyOffset = 60; // Desired fixed position from the top
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > stickyOffset) {
+        headerBottom.classList.add("sticky");
+      } else {
+        headerBottom.classList.remove("sticky");
+      }
+    });
+
+    const mainNavDropdownToggles = document.querySelectorAll('.main-nav .dropdown-toggle');
+    const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+    const mainMenu = document.querySelector('.main-menu');
+    const mainMenuToggle = document.querySelector('.main-menu-toggle');
+
     mainNavDropdownToggles.forEach(function(toggle) {
       toggle.addEventListener('click', function(e) {
         e.preventDefault();
@@ -144,11 +192,13 @@
         }
       });
     });
+
     dropdownMenus.forEach(function(menu) {
       menu.querySelector('.nav-link').addEventListener('click', function(e) {
         e.stopPropagation();
       });
     });
+
     document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(function(link) {
       link.addEventListener('click', function() {
         if (mainMenu.classList.contains('open')) {
@@ -156,21 +206,25 @@
         }
       });
     });
+
     mainMenuToggle.addEventListener('click', function() {
       mainMenu.classList.toggle('open');
       slideToggle(mainMenu);
     });
+
     document.addEventListener('click', function(e) {
       if (! e.target.closest('.main-nav')) {
         closeOpenDropdownMenus();
       }
     });
+
     function closeOpenDropdownMenus() {
       document.querySelectorAll('.main-nav .dropdown-menu.open').forEach(function(menu) {
         menu.classList.remove('open');
         slideUp(menu);
       });
     }
+
     function slideUp(element) {
       element.style.transition = 'max-height 0.3s';
       element.style.maxHeight = 0;
@@ -179,6 +233,7 @@
         element.style.display = 'none';
       }, 100);
     }
+
     function slideDown(element) {
       element.style.transition = 'max-height 0.3s';
       element.style.display = 'block';
@@ -188,6 +243,7 @@
         element.style.maxHeight = 'unset';
       }, 100);
     }
+
     function slideToggle(element) {
       if (element.clientHeight > 0) {
         slideUp(element);
@@ -196,86 +252,102 @@
       }
     }
   });
-{% endjavascript %}
-{% schema %}
-  {
-    "name": "t:sections.header-bottom.name",
-    "class": "header-bottom-section",
-    "enabled_on": {
-      "groups": ["header"]
-    },
-    "settings": [
-      {
-        "type": "text",
-        "id": "phone_number",
-        "label": "Phone Number",
-        "default": "1905-212-7722"
-      },
-      {
-        "type": "text",
-        "id": "meta_menu_title",
-        "default": "All Mattresses",
-        "label": "Mega Menu Title"
-      },
-      {
-        "type": "link_list",
-        "id": "mega_menu",
-        "label": "Mega Menu"
-      },
-      {
-        "type": "text",
-        "id": "mega_menu_bottom_label",
-        "default": "VIEW ALL MATTRESSES",
-        "label": "Mega Menu Bottom Label"
-      },
-      {
-        "type": "url",
-        "id": "mega_menu_bottom_link",
-        "label": "Mega Menu Bottom Link"
-      },
-      {
-        "type": "text",
-        "id": "mega_menu_bottom_label2",
-        "default": "VIEW ALL COLLECTIONS",
-        "label": "Mega Menu Bottom Label2"
-      },
-      {
-        "type": "url",
-        "id": "mega_menu_bottom_link2",
-        "label": "Mega Menu Bottom Link2"
-      },
-      {
-        "type": "text",
-        "id": "mega_menu_bottom_label3",
-        "default": "VIEW ALL BRANDS",
-        "label": "Mega Menu Bottom Label3"
-      },
-      {
-        "type": "url",
-        "id": "mega_menu_bottom_link3",
-        "label": "Mega Menu Bottom Link3"
-      },
-      {
-        "type": "link_list",
-        "id": "bottom_menu",
-        "label": "Bottom Menu"
-      },
-      {
-        "type": "image_picker",
-        "id": "match_maker_image",
-        "label": "Mach Maker Image"
-      },
-      {
-        "type": "text",
-        "id": "match_maker_label",
-        "default": "Mattress Matchmaker",
-        "label": "Match Maker Label"
-      },
-      {
-        "type": "url",
-        "id": "match_maker_link",
-        "label": "Match Maker Link"
-      }
-    ]
+</script>
+
+{% style %}
+  .header-bottom {
+    position: relative;
+    z-index: 10 !important;
+    transition: top 0.3s ease-in-out;
   }
+
+  .header-bottom.sticky {
+    position: fixed !important;
+    top: 100px !important; /* Fixed position from the top */
+    left: 0;
+    width: 100%;
+    z-index: 999 !important;
+    background-color: #ffffff; /* Optional: Add a background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visibility */
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Header Bottom",
+  "class": "header-bottom-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Number",
+      "default": "1905-212-7722"
+    },
+    {
+      "type": "text",
+      "id": "meta_menu_title",
+      "default": "All Mattresses",
+      "label": "Mega Menu Title"
+    },
+    {
+      "type": "link_list",
+      "id": "mega_menu",
+      "label": "Mega Menu"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_bottom_label",
+      "default": "VIEW ALL MATTRESSES",
+      "label": "Mega Menu Bottom Label"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_bottom_link",
+      "label": "Mega Menu Bottom Link"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_bottom_label2",
+      "default": "VIEW ALL COLLECTIONS",
+      "label": "Mega Menu Bottom Label2"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_bottom_link2",
+      "label": "Mega Menu Bottom Link2"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_bottom_label3",
+      "default": "VIEW ALL BRANDS",
+      "label": "Mega Menu Bottom Label3"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_bottom_link3",
+      "label": "Mega Menu Bottom Link3"
+    },
+    {
+      "type": "link_list",
+      "id": "bottom_menu",
+      "label": "Bottom Menu"
+    },
+    {
+      "type": "image_picker",
+      "id": "match_maker_image",
+      "label": "Match Maker Image"
+    },
+    {
+      "type": "text",
+      "id": "match_maker_label",
+      "default": "Mattress Matchmaker",
+      "label": "Match Maker Label"
+    },
+    {
+      "type": "url",
+      "id": "match_maker_link",
+      "label": "Match Maker Link"
+    }
+  ]
+}
 {% endschema %}
