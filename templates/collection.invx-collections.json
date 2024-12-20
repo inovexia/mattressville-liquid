@@ -54,6 +54,7 @@
     },
     "home_banner_DRKLMa": {
       "type": "home-banner",
+      "disabled": true,
       "settings": {
         "custom_text_title": "Add Text here",
         "custom_text_body": "<p>Add your text here</p>"
