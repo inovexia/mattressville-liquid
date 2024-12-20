@@ -57,6 +57,7 @@
       "blocks": {
         "heading_7tfimy": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Talk about your brand",
             "heading_size": "h1"
@@ -65,25 +66,13 @@
         "text_UGDd9t": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "button_3Wfd3M": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<p><em>Have a good night, every night!</em></p>"
           }
         }
       },
       "block_order": [
         "heading_7tfimy",
-        "text_UGDd9t",
-        "button_3Wfd3M"
+        "text_UGDd9t"
       ],
       "settings": {
         "desktop_content_position": "center",
