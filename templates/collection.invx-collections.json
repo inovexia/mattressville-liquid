@@ -52,37 +52,6 @@
         "include_margins": true
       }
     },
-    "rich_text_BGH7K8": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_7tfimy": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text_UGDd9t": {
-          "type": "text",
-          "settings": {
-            "text": "<p><em>Have a good night, every night!</em></p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_7tfimy",
-        "text_UGDd9t"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "ss_feature_1_AKqWGz": {
       "type": "ss-feature-1",
       "blocks": {
@@ -223,7 +192,6 @@
   "order": [
     "product-grid",
     "1734474631d37cf729",
-    "rich_text_BGH7K8",
     "ss_feature_1_AKqWGz",
     "multicolumn_fVkMH7"
   ]
