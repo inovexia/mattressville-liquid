@@ -1630,6 +1630,9 @@ a.product__text {
     display: flex !important;
     flex-direction: column-reverse !important;
   }
+  .invx-sale-text {
+    font-size: 1rem !important;
+  }
 }
 
 /*# sourceMappingURL=/s/files/1/0558/6780/1757/t/19/assets/section-main-product.css.map?v=1725103456 */
