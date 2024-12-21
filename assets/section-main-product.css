@@ -1614,12 +1614,9 @@ a.product__text {
   }
 }
 
-@media (max-width: 350px) {
-  .product__info-container
-    .price--on-sale
-    .price__sale
-    span:not(.price-item.price-item--sale) {
-    font-size: 1.2rem !important;
+@media screen and (max-width: 350px) {
+  .product-single .price-item.price-item--sale.price-item--last span {
+    display: none !important;
   }
 
   .product__info-container
@@ -1628,5 +1625,11 @@ a.product__text {
     .price-item.price-item--sale {
     font-size: 25px;
   }
+
+  .price__sale {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
 }
+
 /*# sourceMappingURL=/s/files/1/0558/6780/1757/t/19/assets/section-main-product.css.map?v=1725103456 */
