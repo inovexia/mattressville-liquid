@@ -1614,7 +1614,7 @@ a.product__text {
   }
 }
 
-@media screen and (max-width: 330px) {
+@media (max-width: 350px) {
   .product__info-container
     .price--on-sale
     .price__sale
