@@ -1615,15 +1615,18 @@ a.product__text {
 }
 
 @media screen and (max-width: 330px) {
-  .price-item price-item--sale price-item--last span {
-    font-size: 1.2rem;
+  .product__info-container
+    .price--on-sale
+    .price__sale
+    span:not(.price-item.price-item--sale) {
+    font-size: 1.2rem !important;
   }
 
   .product__info-container
     .price--on-sale
     .price__sale
     .price-item.price-item--sale {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=/s/files/1/0558/6780/1757/t/19/assets/section-main-product.css.map?v=1725103456 */
