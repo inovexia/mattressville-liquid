@@ -1615,9 +1615,12 @@ a.product__text {
 }
 
 @media screen and (max-width: 350px) {
-  
+  .product__inventory{
+    float: left !important;
+  }
   .invx-custom-price-layout {
    width: 100% !important;
+    display: inline-block !important;
   }
 }
 
