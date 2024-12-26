@@ -1615,23 +1615,9 @@ a.product__text {
 }
 
 @media screen and (max-width: 350px) {
-  .product-single .price-item.price-item--sale.price-item--last span {
-    display: none !important;
-  }
-
-  .product__info-container
-    .price--on-sale
-    .price__sale
-    .price-item.price-item--sale {
-    font-size: 25px;
-  }
-
-  .price__sale {
-    display: flex !important;
-    flex-direction: column-reverse !important;
-  }
-  .invx-sale-text {
-    font-size: 1rem !important;
+  
+  .invx-custom-price-layout {
+   width: 100% !important;
   }
 }
 
