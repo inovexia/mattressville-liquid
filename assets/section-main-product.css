@@ -1626,6 +1626,9 @@ a.product__text {
   .product__info-container .price--on-sale .price__sale .price-item.price-item--sale{
     font-size: 25px !important;
   }
+  .invx-sale-text {
+    width: 100% !important
+  }
 }
 
 /*# sourceMappingURL=/s/files/1/0558/6780/1757/t/19/assets/section-main-product.css.map?v=1725103456 */
