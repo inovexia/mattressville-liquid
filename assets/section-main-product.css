@@ -546,7 +546,8 @@ a.product__text {
 .button--full-width,
 .shopify-payment-button {
   flex: 1 1 50%;
-  width: 50%;
+  /* width: 50%; */
+  width: 100%;
 }
 .product--no-media .product__info-container > modal-opener {
   display: block;
