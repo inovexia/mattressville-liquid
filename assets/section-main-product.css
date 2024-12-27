@@ -1615,7 +1615,7 @@ a.product__text {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .product__inventory{
     float: left !important;
   }
