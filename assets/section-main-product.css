@@ -540,7 +540,7 @@ a.product__text {
 }
 .product-form__buttons {
   align-items: flex-start;
-  display: flex;
+  /* display: flex; */
   gap: 16px;
 }
 .button--full-width,
