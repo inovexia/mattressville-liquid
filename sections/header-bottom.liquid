@@ -1,5 +1,15 @@
 {{ 'header-bottom.css' | asset_url | stylesheet_tag }}
 
+
+<style>
+
+.invx-mega-menu{
+  overflow: scroll;
+    height: calc(100vh - 55px);
+}
+  
+</style>
+
 <div class="header-bottom">
   <div class="page-width">
     <div class="main-nav">
@@ -34,7 +44,7 @@
             >
               {{- section.settings.meta_menu_title -}}
             </a>
-            <div class="dropdown-menu mega-menu">
+            <div class="dropdown-menu mega-menu invx-mega-menu">
               <div class="mega-menu-area">
                 {%- for link in section.settings.mega_menu.links -%}
                   {%- assign hasChildren = link.links | empty | default: false -%}
