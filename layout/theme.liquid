@@ -358,7 +358,7 @@
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "{{ product.metafields.yotpo.reviews_average }}",
-          "reviewCount": "{{ product.metafields.yotpo.reviews_count }}"
+          "ratingCount": "{{ product.metafields.yotpo.reviews_count }}"
         },
         {% endif %}
         "review": {
@@ -372,9 +372,9 @@
             "name": "Mattressville User",
             "reviewRating": {
               "@type": "Rating",
-              "bestRating": "{% if product.metafields.yotpo.reviews_average  > "0" %}{{ product.metafields.yotpo.best_ratings }}{% else %}5{% endif %}",
-              "ratingValue": "{% if product.metafields.yotpo.reviews_average  > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}No reviews yet.{% endif %}",
-              "worstRating": "{% if product.metafields.yotpo.reviews_average  > "0" %}{{ product.metafields.yotpo.worst_ratings }}{% else %}0{% endif %}"
+              {% comment %} "bestRating": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}5{% endif %}", {% endcomment %}
+              "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}5{% endif %}",
+              {% comment %} "worstRating": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}0{% endif %}" {% endcomment %}
             }
           },
         "offers": {
