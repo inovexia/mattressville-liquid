@@ -131,6 +131,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "f521a4e4-ae14-4461-a441-abf877860c28": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
         }
       },
       "block_order": [
@@ -150,7 +156,8 @@
         "swishlist_simple_wishlist_wishlist_product_button_ARaKRW",
         "buy_buttons",
         "comfort_scale",
-        "share"
+        "share",
+        "f521a4e4-ae14-4461-a441-abf877860c28"
       ],
       "custom_css": [
         ".product__info-container .icon-with-text {margin-bottom: 0; margin-top: 0px;}",
