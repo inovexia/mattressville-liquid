@@ -339,7 +339,6 @@
     
     <!-- Product Schema -->
     {% if template == 'product' %}
-      {% comment %}
       <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
@@ -355,11 +354,13 @@
           "@type": "Brand",
           "name": "{{ product.vendor }}"
         },
+        {% if product.metafields.yotpo.reviews_count and product.metafields.yotpo.reviews_count != "0" %}
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}4.5{% endif %}",
-          "reviewCount": "{% if product.metafields.yotpo.reviews_count > "0" %}{{ product.metafields.yotpo.reviews_count }}{% else %}10{% endif %}"
+          "ratingValue": "{{ product.metafields.yotpo.reviews_average }}",
+          "reviewCount": "{{ product.metafields.yotpo.reviews_count }}"
         },
+        {% endif %}
         "review": {
             "@type": "Review",
             "author": {
@@ -514,7 +515,6 @@
         }
       }
     </script>
-    {% endcomment %}
 
   {% endif %}
     <script async src="https://app.trustanalytica.com/badge/reputation/pH6Gh5jSfgLx_Kt-6zS_ualxvUPCrMcf15ybvrYKJ3zJC6gppVy9XrGT-GN3Ny2Fycdymg.js" defer ></script>
