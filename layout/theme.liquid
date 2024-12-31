@@ -372,7 +372,7 @@
             "name": "Mattressville User",
             "reviewRating": {
               "@type": "Rating",
-              "bestRating": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}5{% endif %}",
+              "bestRating": "{% if product.metafields.yotpo.best_rating > "0" %}{{ product.metafields.yotpo.best_rating }}{% else %}5{% endif %}",
               "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}5{% endif %}",
               "worstRating": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}0{% endif %}"
             }
