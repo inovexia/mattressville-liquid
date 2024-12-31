@@ -339,7 +339,6 @@
     
     <!-- Product Schema -->
     {% if template == 'product' %}
-     {% comment %}
       <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
@@ -357,8 +356,8 @@
         },
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}1{% endif %}",
-          "reviewCount": "{% if product.metafields.yotpo.reviews_count > "0" %}{{ product.metafields.yotpo.reviews_count }}{% else %}1{% endif %}"
+          "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}0{% endif %}",
+          "reviewCount": "{% if product.metafields.yotpo.reviews_count > "0" %}{{ product.metafields.yotpo.reviews_count }}{% else %}0{% endif %}"
         },
         "review": {
             "@type": "Review",
@@ -373,7 +372,7 @@
               "@type": "Rating",
               "bestRating": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}5{% endif %}",
               "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}5{% endif %}",
-              "worstRating": "{% if product.metafields.yotpo.reviews_average > "0" %}1{% else %}1{% endif %}"
+              "worstRating": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}0{% endif %}"
             }
           },
         "offers": {
@@ -513,12 +512,10 @@
           }
         }
       }
-      </script>
-      {% endcomment %}
-      {% endcomment %}
+    </script>
 
-{% endif %}
-    <script async src="https://app.trustanalytica.com/badge/reputation/pH6Gh5jSfgLx_Kt-6zS_ualxvUPCrMcf15ybvrYKJ3zJC6gppVy9XrGT-GN3Ny2Fycdymg.js" ></script>
+  {% endif %}
+    <script async src="https://app.trustanalytica.com/badge/reputation/pH6Gh5jSfgLx_Kt-6zS_ualxvUPCrMcf15ybvrYKJ3zJC6gppVy9XrGT-GN3Ny2Fycdymg.js" defer ></script>
 
     <!-- Hotjar Tracking Code for https://www.mattressville.ca/ -->
 <script>
