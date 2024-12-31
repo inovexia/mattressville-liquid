@@ -373,7 +373,7 @@
             "reviewRating": {
               "@type": "Rating",
               "bestRating": "{% if product.metafields.yotpo.reviews_count > "0" %}{{ product.metafields.yotpo.best_rating }}{% else %}5{% endif %}",
-              "ratingValue": "{% if product.metafields.yotpo.reviews_count > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}5{% endif %}",
+              "ratingValue": "{% if product.metafields.yotpo.reviews_count > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}No reviews yet.{% endif %}",
               "worstRating": "{% if product.metafields.yotpo.reviews_count > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}0{% endif %}"
             }
           },
