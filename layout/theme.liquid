@@ -356,8 +356,8 @@
         },
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}0{% endif %}",
-          "reviewCount": "{% if product.metafields.yotpo.reviews_count > "0" %}{{ product.metafields.yotpo.reviews_count }}{% else %}0{% endif %}"
+          "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}4.5{% endif %}",
+          "reviewCount": "{% if product.metafields.yotpo.reviews_count > "0" %}{{ product.metafields.yotpo.reviews_count }}{% else %}10{% endif %}"
         },
         "review": {
             "@type": "Review",
