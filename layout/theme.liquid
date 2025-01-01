@@ -354,13 +354,11 @@
           "@type": "Brand",
           "name": "{{ product.vendor }}"
         },
-        {% if product.metafields.yotpo.reviews_count and product.metafields.yotpo.reviews_count != "0" %}
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "{{ product.metafields.yotpo.reviews_average }}",
-          "ratingCount": "{{ product.metafields.yotpo.reviews_count }}"
+          "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}0{% endif %}",
+          "ratingCount": "{% if product.metafields.yotpo.reviews_count > "0" %}{{ product.metafields.yotpo.reviews_count }}{% else %}0{% endif %}"
         },
-        {% endif %}
         "review": {
             "@type": "Review",
             "author": {
@@ -372,9 +370,9 @@
             "name": "Mattressville User",
             "reviewRating": {
               "@type": "Rating",
-              "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}5{% endif %}",
+              "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}5{% endif %}"
             }
-          },
+        },
         "offers": {
           "@type": "Offer",
           "url": "{{ shop.url }}{{ product.url }}",
