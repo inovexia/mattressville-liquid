@@ -355,28 +355,28 @@
           "name": "{{ product.vendor }}"
         },
         {% if product.metafields.yotpo.reviews_average > "0" %}
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "{{ product.metafields.yotpo.reviews_average }}",
-          "ratingCount": "{{ product.metafields.yotpo.reviews_count }}",
-          "bestRating": "5",
-          "worstRating": "0"
-        },
-      {% endif %}
-        "review": {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Verified User"
-            },
-            "datePublished": "{{ product.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
-            "description": "{{ review.body }}",
-            "name": "Mattressville User",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "{% if product.metafields.yotpo.reviews_average > "0" %}{{ product.metafields.yotpo.reviews_average }}{% else %}5{% endif %}"
-            }
-        },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "{{ product.metafields.yotpo.reviews_average }}",
+            "ratingCount": "{{ product.metafields.yotpo.reviews_count }}",
+            "bestRating": "5",
+            "worstRating": "0"
+          },
+          "review": {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Verified User"
+              },
+              "datePublished": "{{ product.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+              "description": "{{ review.body }}",
+              "name": "Mattressville User",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "{{ product.metafields.yotpo.reviews_average }}"
+              }
+          },
+        {% endif %}
         "offers": {
           "@type": "Offer",
           "url": "{{ shop.url }}{{ product.url }}",
