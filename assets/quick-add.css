@@ -85,7 +85,7 @@
   }
   .quick-add-modal__content {
     bottom: var(--modal-height-offset);
-    margin-top: 150px !important;
+    margin-top: 190px !important;
   }
   .quick-add-modal__content-info > * {
     max-height: 100%;
