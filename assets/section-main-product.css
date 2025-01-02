@@ -56,7 +56,7 @@
 
 @media screen and (max-width: 500px) {
   .product-single .invx-custom-price-layout {
-    display: block;
+    display: inline-block;
   }
   .invx-custom-price-layout .affirm-info,
   .invx-custom-price-layout .price-info {
@@ -65,7 +65,7 @@
 }
 @media screen and (min-width: 750px) {
   .product-single .invx-custom-price-layout {
-    display: block;
+    display: inline-block;
   }
   .invx-custom-price-layout .affirm-info,
   .invx-custom-price-layout .price-info {
