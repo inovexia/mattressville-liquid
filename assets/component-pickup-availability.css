@@ -58,7 +58,7 @@ pickup-availability-drawer {
 pickup-availability-drawer[open] {
   transform: translate(0);
   opacity: 1;
-  z-index: 999 !important;
+ 
 }
 @media screen and (min-width: 750px) {
   pickup-availability-drawer {
