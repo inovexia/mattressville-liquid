@@ -69,6 +69,7 @@ pickup-availability-drawer[open] {
     opacity: 1;
     transform: translate(0);
     animation: animateDrawerOpen var(--duration-default) ease;
+    z-index: 999;
   }
 }
 .pickup-availability-header {
