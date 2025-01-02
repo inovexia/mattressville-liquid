@@ -3120,7 +3120,7 @@ details-disclosure > details {
   display: none;
 }
 body .quick-add-modal__content-info .invx-custom-price-layout {
-  display: block !important;
+  display: inline-block !important;
 }
 body .quick-add-modal .comfort-scale .firm-meter {
   width: 50%;
