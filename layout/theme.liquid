@@ -376,6 +376,26 @@
                 "ratingValue": "{{ product.metafields.yotpo.reviews_average }}"
               }
           },
+        {% else %}
+         "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "{{ product.metafields.yotpo.reviews_average }}",
+            "ratingCount": "{{ product.metafields.yotpo.reviews_count }}",
+          },
+          "review": {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Verified User"
+              },
+              "datePublished": "{{ product.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+              "description": "{{ review.body }}",
+              "name": "Mattressville User",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "{{ product.metafields.yotpo.reviews_average }}"
+              }
+          },
         {% endif %}
         "offers": {
           "@type": "Offer",
