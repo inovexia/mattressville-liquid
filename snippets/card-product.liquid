@@ -248,6 +248,33 @@
                     {{ 'accessibility.total_reviews' | t -}}
                   </span>
                 </p>
+              {%- else show_rating and card_product.metafields.reviews.rating.value = blank -%}
+                {% liquid
+                  assign rating_decimal = 0
+                  assign decimal = card_product.metafields.reviews.rating.value.rating | modulo: 1                
+               %}
+                <div
+                  class="rating"
+                  role="img"
+                  aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: card_product.metafields.reviews.rating.value, rating_max: card_product.metafields.reviews.rating.value.scale_max }}">
+                  <span
+                    aria-hidden="true"
+                    class="rating-star"
+                    style="--rating: {{ card_product.metafields.reviews.rating.value.rating | floor }}; --rating-max: 5; --rating-decimal: {{ rating_decimal }};"></span>
+                </div>
+                <p class="rating-text caption">
+                  <span aria-hidden="true">
+                    {{- card_product.metafields.reviews.rating.value }} /
+                    {{ card_product.metafields.reviews.rating.value.scale_max -}}
+                  </span>
+                </p>
+                <p class="rating-count caption">
+                  <span aria-hidden="true">({{ card_product.metafields.reviews.rating_count }})</span>
+                  <span class="visually-hidden">
+                    {{- card_product.metafields.reviews.rating_count }}
+                    {{ 'accessibility.total_reviews' | t -}}
+                  </span>
+                </p>
               {%- endif -%}
             </div>
             {% render 'invx-price', product: card_product, price_class: '', targetVariant: targetVariant, use_target_variant: true, show_compare_at_price: true %}
