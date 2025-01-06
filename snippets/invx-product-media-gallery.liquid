@@ -45,15 +45,14 @@
 
 <div class="invx-custom-gallery-slider">
   <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiperMain">
-    <div class="swiper-wrapper" id="lg-swiper">
+    <div class="swiper-wrapper" id="lg-swiper{{ id_append }}">
       {%- for media in product.media -%}
         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
           <a
             data-lg-size="1600-1200"
             href="{{ media | img_url: 'master' }}"
             class="swiper-slide"
-            rel="lightbox[gallery]">
-
+            rel="lightbox[gallery-{{ id_append }}]">
             <img src="{{ media | img_url: 'master' }}" alt="Product Image {{ forloop.index }}" width="100%" height="auto" />
           </a>
         {%- endunless -%}
@@ -74,3 +73,28 @@
     </div>
   </div>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.invx-custom-gallery-slider').forEach((gallery) => {
+      const mainSwiper = new Swiper(gallery.querySelector('.mySwiperMain'), {
+        navigation: {
+          nextEl: gallery.querySelector('.swiper-button-next'),
+          prevEl: gallery.querySelector('.swiper-button-prev'),
+        },
+        pagination: {
+          el: gallery.querySelector('.swiper-pagination'),
+          clickable: true,
+        },
+      });
+
+      const thumbsSwiper = new Swiper(gallery.querySelector('.mySwiperSmall'), {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+      });
+
+      mainSwiper.thumbs.swiper = thumbsSwiper;
+    });
+  });
+</script>
