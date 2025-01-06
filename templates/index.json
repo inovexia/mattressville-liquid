@@ -19,14 +19,6 @@
             "slide_link": "/collections/all-mattresses"
           }
         },
-        "slide_7iTRrX": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/matressville_boxingday_banner.png",
-            "slide_link": "shopify://pages/local-gta-flyer"
-          }
-        },
         "slide_ameJgH": {
           "type": "slide",
           "settings": {
@@ -67,13 +59,6 @@
           "settings": {
             "image": "shopify://shop_images/Adjustable_beds_Mattress_home_banner_b39e74ff-0d63-43ee-9e8c-b9fd62c09aef.png",
             "slide_link": "shopify://collections/adjustable-beds"
-          }
-        },
-        "slide_pNYEnp": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/matressville_boxingday_banner.png",
-            "slide_link": "shopify://collections/boxing-day-mattress-mega-sale"
           }
         },
         "slide_CKrRRg": {
@@ -121,14 +106,12 @@
       },
       "block_order": [
         "slide_PEgBhX",
-        "slide_7iTRrX",
         "slide_ameJgH",
         "slide_k4wTAU",
         "slide_bTWUcd",
         "slide_yQaMJP",
         "slide_dJqdk3",
         "slide_n4V3KT",
-        "slide_pNYEnp",
         "slide_CKrRRg",
         "slide_N7jLUx",
         "slide_9y8Uir",
