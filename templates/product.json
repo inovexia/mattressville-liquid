@@ -90,7 +90,7 @@
         "custom_liquid_yFxECU": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<hr>"
+            "custom_liquid": "<hr>\n\n\n<hr>\n  \n      <div class=\"grid__item product__media-wrapper invx-product-gallery\">\n        {% render 'invx-product-media-gallery', variant_images: variant_images %}\n      </div>\n\n\n<style>\n@media (max-width: 700px) {\n  .invx-product-gallery {\n    display: block; /* Ensure it's visible on small screens */\n  }\n}\n\n@media (min-width: 701px) {\n  .invx-product-gallery {\n    display: none; /* Hide for larger screens */\n  }\n}\n</style>"
           }
         },
         "variant_picker": {
