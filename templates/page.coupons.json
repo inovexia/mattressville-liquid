@@ -45,6 +45,7 @@
         },
         "coupon_zDUmCg": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Boxing_Day_Save_10_Coupon.png",
             "type": "other",
@@ -58,6 +59,7 @@
         },
         "coupon_pTnxAJ": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Boxing_Day_Save_15_Coupon.png",
             "type": "other",
@@ -71,6 +73,7 @@
         },
         "coupon_G4wYmU": {
           "type": "coupon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Boxing_Day_Save_20_Coupon.png",
             "type": "other",
@@ -84,7 +87,6 @@
         },
         "coupon_KzhYWf": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Save_50_Coupon.webp",
             "type": "other",
