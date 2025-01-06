@@ -19,7 +19,6 @@
       "blocks": {
         "coupon_yDC3bH": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/300OFF.png",
             "type": "other",
@@ -33,7 +32,6 @@
         },
         "coupon_FkNtma": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Save_100_Coupon.webp",
             "type": "other",
@@ -89,7 +87,6 @@
         },
         "coupon_KzhYWf": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Save_50_Coupon.webp",
             "type": "other",
