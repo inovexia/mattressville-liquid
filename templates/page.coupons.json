@@ -19,7 +19,6 @@
       "blocks": {
         "coupon_yDC3bH": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/300OFF.png",
             "type": "other",
