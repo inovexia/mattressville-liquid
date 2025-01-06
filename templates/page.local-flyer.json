@@ -202,6 +202,7 @@
       "blocks": {
         "heading_iTkdJK": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Why Shop Mattressville’s Boxing Day Mattress Sale?",
             "heading_size": "h1"
@@ -211,6 +212,7 @@
       "block_order": [
         "heading_iTkdJK"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -222,6 +224,7 @@
     },
     "image_with_text_pj6awM": {
       "type": "image-with-text",
+      "disabled": true,
       "custom_css": [
         ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
         ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
@@ -293,6 +296,7 @@
         "heading_KNizjn",
         "button_7a4wy7"
       ],
+      "disabled": true,
       "custom_css": [
         ".rich-text .rich-text__wrapper {padding: 0;}",
         ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
@@ -706,6 +710,7 @@
         "collapsible_row_xbjegP",
         "collapsible_row_UeQher"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>Frequently Asked Questions About Our Boxing Day Mattress Sale 2024</strong>",
