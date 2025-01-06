@@ -14,7 +14,6 @@
       "blocks": {
         "slide_PEgBhX": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Homepage_welcome_banner_a7d8782b-c7a1-425b-9603-80954be77ee7.png",
             "slide_link": "/collections/all-mattresses"
@@ -22,6 +21,7 @@
         },
         "slide_7iTRrX": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/matressville_boxingday_banner.png",
             "slide_link": "shopify://pages/local-gta-flyer"
