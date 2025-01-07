@@ -52,6 +52,10 @@
             "price_selector": ""
           }
         },
+        "essentials_XbMJNa": {
+          "type": "essentials",
+          "settings": {}
+        },
         "inventory_XBRzgq": {
           "type": "inventory",
           "settings": {
@@ -59,10 +63,6 @@
             "inventory_threshold": 10,
             "show_inventory_quantity": true
           }
-        },
-        "essentials_XbMJNa": {
-          "type": "essentials",
-          "settings": {}
         },
         "text_VqUtyK": {
           "type": "text",
@@ -139,8 +139,8 @@
         "title_4diFiT",
         "caption",
         "affirm_pay_over_time_messaging_product_block_3HfxRh",
-        "inventory_XBRzgq",
         "essentials_XbMJNa",
+        "inventory_XBRzgq",
         "text_VqUtyK",
         "icon_with_text_apLJb3",
         "custom_liquid_yFxECU",
