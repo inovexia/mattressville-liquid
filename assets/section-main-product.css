@@ -1273,7 +1273,7 @@ a.product__text {
   flex-shrink: 0;
 }
 .product__inventory {
-  padding-top: 25px;
+  
 
   display: flex;
 
@@ -1283,13 +1283,14 @@ a.product__text {
 
   justify-content: right;
 
-  float: right;
+  
 }
 @media screen and (min-width: 990px) {
   .product__inventory {
     width: 40%;
-    float: right;
-    padding-top: 25px;
+   float: right;
+   position: relative;
+    top: -30px;
   }
 }
 .product--no-media .product__inventory {
