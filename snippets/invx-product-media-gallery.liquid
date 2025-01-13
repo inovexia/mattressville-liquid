@@ -96,5 +96,13 @@
 
       mainSwiper.thumbs.swiper = thumbsSwiper;
     });
+
+     const mainSlider = gallery.querySelector('.mySwiperMain .swiper-wrapper');
+    if (mainSlider && !mainSlider.classList.contains('lg-initialized')) {
+      lightGallery(mainSlider, {
+        selector: 'a[rel="lightbox[gallery]"]',
+      });
+    }
+  });
   });
 </script>
