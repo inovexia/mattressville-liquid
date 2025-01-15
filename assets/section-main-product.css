@@ -1619,7 +1619,7 @@ a.product__text {
 @media screen and (max-width: 420px) {
   .product__inventory{
     float: left !important;
-    
+    display: contents;
   }
   .invx-custom-price-layout {
    width: 100% !important;
