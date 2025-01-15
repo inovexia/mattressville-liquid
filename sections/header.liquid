@@ -115,6 +115,38 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  @media screen and (min-width: 421px) {
+    .desktop_logo {
+      display:block
+      
+    }
+
+    .mobile_logo{
+      display:none
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .desktop_logo {
+      display:none
+      
+    }
+
+    .mobile_logo{
+      display:block
+    }
+
+    .invx_mobile_logo{
+      display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+      height: 50px
+    }
+  }
+
+  
 {%- endstyle -%}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer></script>
@@ -165,7 +197,7 @@
       assign localization_forms = true
     endif
   -%}
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+  <header class="invx_mobile_logo header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     {%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
@@ -183,7 +215,7 @@
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {%- if settings.logo != blank -%}
-              <span class="header__heading-logo-wrapper">
+              <span class="header__heading-logo-wrapper desktop_logo">
                 {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
                 {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
                 {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
@@ -201,6 +233,30 @@
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>
             {%- endif -%}
+            
+       <!-- mobile-logo -->
+            {%- if settings.logo_mobile != blank -%}
+              <span class="header__heading-logo-wrapper mobile_logo">
+                {%- assign logo_alt = settings.logo_mobile.alt | default: shop.name | escape -%}
+                {%- assign logo_height = settings.logo_width_mobile | divided_by: settings.logo.aspect_ratio -%}
+                {% capture sizes %}(max-width: {{ settings.logo_width_mobile | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+                {% capture widths %}{{ settings.logo_width_mobile }}, {{ settings.logo_width_mobile | times: 1.5 | round }}, {{ settings.logo_width_mobile | times: 2 }}{% endcapture %}
+                {{ settings.logo_mobile | image_url: width: 600 | image_tag:
+                  class: 'header__heading-logo motion-reduce',
+                  widths: widths,
+                  height:"30",
+                  width: settings.logo_width_mobile,
+                  alt: logo_alt,
+                  sizes: sizes,
+                  preload: true
+                }}
+              </span>
+            {%- else -%}
+              <span class="h2">{{ shop.name }}</span>
+            {%- endif -%}
+
+       <!-- mobile-logo end -->
+            
           </a>
       {%- if request.page_type == 'index' -%}
         </h1>
