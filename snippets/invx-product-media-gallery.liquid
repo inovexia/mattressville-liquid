@@ -61,7 +61,7 @@
       {%- for media in product.media -%}
         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
           <a
-            data-lg-size="1600-1200"
+            <!-- data-lg-size="1600-1200" -->
             href="{{ media | img_url: 'master' }}"
             class="swiper-slide"
             rel="lightbox[gallery]">
