@@ -26,7 +26,31 @@
       }
     }
 
-     
+     @media (min-width: 701px) {
+      .invx-lg-product-gallery {
+        display: block;
+      }
+           #shopify-block-AYUR1MkhYRGRqcDBXQ__affirm_pay_over_time_messaging_product_block_3HfxRh{
+              display: block;
+           }
+           #shopify-block-AbDUwMHl1MExTT2dYY__affirm_pay_over_time_messaging_product_block_MmdkYj{
+             display: none;
+           }
+
+          
+    }
+
+    @media (max-width: 700px) {
+      .invx-lg-product-gallery {
+        display: none; 
+      }
+      #shopify-block-AYUR1MkhYRGRqcDBXQ__affirm_pay_over_time_messaging_product_block_3HfxRh{
+             display: none;
+           }
+      #shopify-block-AbDUwMHl1MExTT2dYY__affirm_pay_over_time_messaging_product_block_MmdkYj{
+             display: block;
+           }
+    }
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer></script>
