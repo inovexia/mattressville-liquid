@@ -12,6 +12,7 @@
     "logo": "shopify://shop_images/mattressville-logo-no-slogan.png",
     "logo_width": 260,
     "favicon": "shopify://shop_images/favicon_862dbb71-c24a-4a7a-bd64-12a92645a18f.png",
+    "logo_mobile": "shopify://shop_images/mville_logo_short.png",
     "theme_accent": "#ff5c7b",
     "theme_secondary": "#212529",
     "type_header_font": "roboto_n7",
