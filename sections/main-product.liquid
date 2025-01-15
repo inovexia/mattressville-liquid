@@ -27,16 +27,30 @@
     }
 
      @media (min-width: 701px) {
-  .invx-lg-product-gallery {
-    display: block; /* Ensure it's visible on small screens */
-  }
-}
+      .invx-lg-product-gallery {
+        display: block;
+      }
+           #shopify-block-AZmhBVTU2WUpYTzRrS__affirm_pay_over_time_messaging_product_block_3HfxRh{
+              display: block;
+           }
+           #shopify-block-AbzlmK05uTXNXYUhKb__affirm_pay_over_time_messaging_product_block_EjXCrB{
+             display: none;
+           }
 
-@media (max-width: 700px) {
-  .invx-lg-product-gallery {
-    display: none; /* Hide for larger screens */
-  }
-}
+          
+    }
+
+    @media (max-width: 700px) {
+      .invx-lg-product-gallery {
+        display: none; 
+      }
+      #shopify-block-AZmhBVTU2WUpYTzRrS__affirm_pay_over_time_messaging_product_block_3HfxRh{
+             display: none;
+           }
+      #shopify-block-AbzlmK05uTXNXYUhKb__affirm_pay_over_time_messaging_product_block_EjXCrB{
+             display: block;
+           }
+    }
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer></script>
