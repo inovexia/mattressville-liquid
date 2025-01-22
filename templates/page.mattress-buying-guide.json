@@ -202,25 +202,43 @@
           "settings": {
             "heading": "8. How do I clean and maintain my mattress?",
             "icon": "check_mark",
-            "row_content": "<p>Use a mattress protector to prevent stains and dust buildup. Regularly vacuum your mattress and rotate it every 3-6 months to prolong its lifespan.</p>",
+            "row_content": "<p>Use a mattress protector to prevent stains and dust buildup. Regularly vacuum your mattress and rotate it every 3-6 months to prolong its lifespan. Read more on <a href=\"https://mattressville.ca/blogs/how-to-user-guide/how-to-clean-a-mattress-a-complete-guide?_pos=1&_sid=6f735409c&_ss=r\" target=\"_blank\" title=\"https://mattressville.ca/blogs/how-to-user-guide/how-to-clean-a-mattress-a-complete-guide?_pos=1&_sid=6f735409c&_ss=r\">How to Clean a Mattress: A Complete Guide</a></p>",
             "page": ""
           }
         },
         "collapsible_row_gHmYDY": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "How does sleep boost immunity and overall health?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Getting sufficient high-quality sleep strengthens your immune system by allowing the body to produce infection-fighting cells and proteins. Sleep also helps regulate stress hormones, reduce inflammation, and improve recovery from illnesses. To maintain a strong immune system, aim for 7-9 hours of sleep per night. Learn more in our blog: <a href=\"https://mattressville.ca/blogs/health-sleep-wellness/how-sleep-boosts-immunity-for-better-health\">How Sleep Boosts Immunity for Better Health</a>.</p>",
             "page": ""
           }
         },
         "collapsible_row_3Jw6tN": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "How does sleep impact weight management?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Sleep plays a significant role in weight management by regulating hormones that control hunger and appetite. Poor sleep increases levels of ghrelin (hunger hormone) and decreases leptin (satiety hormone), making it harder to resist overeating. Additionally, lack of sleep affects metabolism and energy levels, leading to reduced physical activity and higher calorie consumption. To maintain a healthy weight, aim for 7-9 hours of quality sleep nightly. Learn more in our blog: <a href=\"https://mattressville.ca/blogs/health-sleep-wellness/the-role-of-sleep-in-weight-management\">The Role of Sleep in Weight Management</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_mBNgwy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does sleep affect mental health?",
+            "icon": "check_mark",
+            "row_content": "<p>Sleep and mental health are closely linked. Quality sleep helps regulate mood, improve cognitive function, and reduce stress. Chronic sleep deprivation can increase the risk of anxiety, depression, and other mental health disorders. Creating a consistent sleep schedule and choosing a comfortable, supportive mattress can significantly improve mental well-being. Learn more in our blog: <a href=\"https://mattressville.ca/blogs/health-sleep-wellness/sleep-and-mental-health-what-you-need-to-know\">Sleep and Mental Health: What You Need to Know</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CPg6c4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can buying a new mattress improve your quality of life?",
+            "icon": "check_mark",
+            "row_content": "<p>Absolutely! A new mattress can significantly improve your quality of life by enhancing sleep quality, reducing aches and pains, and boosting overall well-being. The right mattress provides proper spinal alignment and reduces pressure points, helping you wake up refreshed and energized. Learn more in our blog: <a href=\"https://mattressville.ca/blogs/health-sleep-wellness/can-buying-a-new-mattress-improve-your-quality-of-life\">Can Buying a New Mattress Improve Your Quality of Life?</a>.</p>",
             "page": ""
           }
         }
@@ -235,7 +253,9 @@
         "collapsible_row_LX68Ri",
         "collapsible_row_kMqPGd",
         "collapsible_row_gHmYDY",
-        "collapsible_row_3Jw6tN"
+        "collapsible_row_3Jw6tN",
+        "collapsible_row_mBNgwy",
+        "collapsible_row_CPg6c4"
       ],
       "settings": {
         "caption": "",
