@@ -61,6 +61,13 @@
             "slide_link": "shopify://collections/adjustable-beds"
           }
         },
+        "slide_86rVjX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/bestmattresses-banner.jpg",
+            "slide_link": "shopify://blogs/tips/best-mattresses-of-2023"
+          }
+        },
         "slide_CKrRRg": {
           "type": "slide",
           "disabled": true,
@@ -90,11 +97,10 @@
             "slide_link": "shopify://collections/natura"
           }
         },
-        "slide_86rVjX": {
+        "slide_dXxXKr": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/bestmattresses-banner.jpg",
-            "slide_link": "shopify://blogs/tips/best-mattresses-of-2023"
+            "slide_link": ""
           }
         },
         "slide_9gwrCP": {
@@ -113,11 +119,12 @@
         "slide_yQaMJP",
         "slide_dJqdk3",
         "slide_n4V3KT",
+        "slide_86rVjX",
         "slide_CKrRRg",
         "slide_N7jLUx",
         "slide_9y8Uir",
         "slide_mgniDF",
-        "slide_86rVjX",
+        "slide_dXxXKr",
         "slide_9gwrCP"
       ],
       "custom_css": [
