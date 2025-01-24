@@ -12,11 +12,12 @@
           <a
             href="{{ section.settings.contact_us_page.url }}"
             aria-label="{{ section.settings.contact_us_page.title }}"
+            class="contactus"
           >
             <span>{{ section.settings.contact_us_page.title }}</span>
           </a>
         {%- else -%}
-          <a href="/contact-us/" aria-label="Contact us">
+          <a href="/contact-us/" aria-label="Contact us" class="contactus">
             <span>Contact Us</span>
           </a>
         {%- endif -%}
