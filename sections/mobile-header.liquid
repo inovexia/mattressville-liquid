@@ -1,6 +1,906 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<link rel="stylesheet" href="{{ 'mobile-header.css' | asset_url }}?v={{ 'now' | date: '%s' }}">
+<link rel="stylesheet" href="{{ 'header-bottom.css' | asset_url }}?v={{ 'now' | date: '%s' }}">
+
+
+
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- if settings.predictive_search_enabled -%}
+  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
+{%- if section.settings.menu_type_desktop == 'mega' -%}
+  <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>{{ 'component-mega-menu.css' | asset_url | stylesheet_tag }}</noscript>
+{%- endif -%}
+
+{%- if settings.cart_type == "drawer" -%}
+  {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+  {{ 'component-cart.css' | asset_url | stylesheet_tag }}
+  {{ 'component-totals.css' | asset_url | stylesheet_tag }}
+  {{ 'component-price.css' | asset_url | stylesheet_tag }}
+  {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
+
+<style>
+  header-drawer {
+    justify-self: start;
+    margin-left: -1.2rem;
   }
+
+  {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
+    .scrolled-past-header .header__heading-logo-wrapper {
+      width: 75%;
+    }
+  {%- endif -%}
+
+  {%- if section.settings.menu_type_desktop != "drawer" -%}
+    @media screen and (min-width: 990px) {
+      header-drawer {
+        display: none;
+      }
+    }
+  {%- endif -%}
+
+  .menu-drawer-page-width {
+    display: flex;
+  }
+
+  .list-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .list-menu--inline {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  summary.list-menu__item {
+    padding-right: 2.7rem;
+  }
+
+  .list-menu__item {
+    display: flex;
+    align-items: center;
+    line-height: calc(1 + 0.3 / var(--font-body-scale));
+  }
+
+  .list-menu__item--link {
+    text-decoration: none;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    line-height: calc(1 + 0.8 / var(--font-body-scale));
+  }
+
+  @media screen and (min-width: 750px) {
+    .list-menu__item--link {
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
+  }
+
+  .header__icon {
+    text-decoration: none;
+  }
+
+  .header__icon .gsi{
+    font-size: 22px;
+  }
+
+  .menu-drawer-container{
+    
+    height: 44px;
+    padding-left: 10px;
+
+  }
+</style>
+
+{%- style -%}
+  .header {
+    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 1.5rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 1.5rem;
+  }
+
+  .section-header {
+    position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-header {
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .header {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (min-width: 421px) {
+    .desktop_logo {
+      display:block
+      
+    }
+
+    .mobile_logo{
+      display:none
+    }
+    .mobile-header{
+      display:none
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .desktop_logo {
+      display:none
+      
+    }
+
+    .mobile_logo{
+      display:block
+    }
+
+    .invx_mobile_logo{
+      display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+      height: 50px
+    }
+
+    
+  }
+
+  
+{%- endstyle -%}
+
+<script src="{{ 'details-disclosure.js' | asset_url }}" defer></script>
+<script src="{{ 'details-modal.js' | asset_url }}" defer></script>
+<script src="{{ 'cart-notification.js' | asset_url }}" defer></script>
+<script src="{{ 'search-form.js' | asset_url }}" defer></script>
+{%- if settings.cart_type == "drawer" -%}
+  <script src="{{ 'cart-drawer.js' | asset_url }}" defer></script>
+{%- endif -%}
+
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+  <symbol id="icon-search" viewbox="0 0 18 19" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"/>
+  </symbol>
+
+  <symbol id="icon-reset" class="icon icon-close"  fill="none" viewBox="0 0 18 18" stroke="currentColor">
+    <circle r="8.5" cy="9" cx="9" stroke-opacity="0.2"/>
+    <path d="M6.82972 6.82915L1.17193 1.17097" stroke-linecap="round" stroke-linejoin="round" transform="translate(5 5)"/>
+    <path d="M1.22896 6.88502L6.77288 1.11523" stroke-linecap="round" stroke-linejoin="round" transform="translate(5 5)"/>
+  </symbol>
+
+  <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+
+
+
+
+<!-- new changes -->
+
+
+
+<style>
+@media (max-width: 450px) {
+  .invx-mega-menu{
+  overflow: scroll !important;
+    height: calc(100vh - 55px) !important;
+}
+  
+}
+
+  
+</style>
+
+<div class="mobile-header">
+  <div class="page-width">
+    <div class="mobile-main-nav" >
+      <div class="mobile-bottom">
+        <div class="start">
+          <button
+            type="button"
+            class="mobile-menu-toggle"
+            aria-label="Toggle Nav Drop Down"
+          >
+            <span class="stripe"></span>
+            <span class="stripe"></span>
+            <span class="stripe"></span>
+          </button>
+        </div>
+        <div class="end">
+           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+                    {%- if settings.logo_mobile != blank -%}
+              <span class="header__heading-logo-wrapper mobile_logo">
+                {%- assign logo_alt = settings.logo_mobile.alt | default: shop.name | escape -%}
+                {%- assign logo_height = settings.logo_width_mobile | divided_by: settings.logo.aspect_ratio -%}
+                {% capture sizes %}(max-width: {{ settings.logo_width_mobile | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+                {% capture widths %}{{ settings.logo_width_mobile }}, {{ settings.logo_width_mobile | times: 1.5 | round }}, {{ settings.logo_width_mobile | times: 2 }}{% endcapture %}
+                {{ settings.logo_mobile | image_url: width: 600 | image_tag:
+                  class: 'header__heading-logo motion-reduce',
+                  widths: widths,
+                  height:"30",
+                  width: settings.logo_width_mobile,
+                  alt: logo_alt,
+                  sizes: sizes,
+                  preload: true
+                }}
+              </span>
+            {%- else -%}
+              <span class="h2">{{ shop.name }}</span>
+            {%- endif -%}
+
+       <!-- mobile-logo end -->
+            
+          </a>
+      {%- if request.page_type == 'index' -%}
+        
+      {%- endif -%}
+    
+
+    {%- liquid
+      if section.settings.menu != blank
+        if section.settings.menu_type_desktop == 'dropdown'
+          render 'header-dropdown-menu'
+        elsif section.settings.menu_type_desktop != 'drawer'
+          render 'header-mega-menu'
+        endif
+      endif
+    %}
+
+    {%- if section.settings.logo_position == 'middle-center' -%}
+      {%- if request.page_type == 'index' -%}
+        <h1 class="header__heading">
+      {%- endif -%}
+          <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+            {%- if settings.logo != blank -%}
+              <div class="header__heading-logo-wrapper">
+                {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+                {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+                {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, 50vw{% endcapture %}
+                {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+                {{ settings.logo | image_url: width: 600 | image_tag:
+                  class: 'header__heading-logo',
+                  widths: widths,
+                  height:"30",
+                  width: settings.logo_width,
+                  alt: logo_alt,
+                  sizes: sizes,
+                  preload: true
+                }}
+              </div>
+            {%- else -%}
+              <span class="h2">{{ shop.name }}</span>
+            {%- endif -%}
+          </a>
+      {%- if request.page_type == 'index' -%}
+        </h1>
+      {%- endif -%}
+    {%- endif -%}
+
+    <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
+      <div class="desktop-localization-wrapper">
+        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+          <noscript class="small-hide medium-hide">
+            {%- form 'localization', id: 'HeaderCountryMobileFormNoScript', class: 'localization-form' -%}
+              <div class="localization-form__select">
+                <h2 class="visually-hidden" id="HeaderCountryMobileLabelNoScript">{{ 'localization.country_label' | t }}</h2>
+                <select class="localization-selector link" name="country_code" aria-labelledby="HeaderCountryMobileLabelNoScript">
+                  {%- for country in localization.available_countries -%}
+                    <option value="{{ country.iso_code }}" {%- if country.iso_code == localization.country.iso_code %} selected{% endif %}>
+                      {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                    </option>
+                  {%- endfor -%}
+                </select>
+                {% render 'icon-caret' %}
+              </div>
+              <button class="button button--tertiary">{{ 'localization.update_country' | t }}</button>
+            {%- endform -%}
+          </noscript>
+
+          <localization-form class="small-hide medium-hide no-js-hidden">
+            {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
+              <div>
+                <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
+                {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {% endif %}
+
+        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+          <noscript class="small-hide medium-hide">
+            {%- form 'localization', id: 'HeaderLanguageMobileFormNoScript', class: 'localization-form' -%}
+              <div class="localization-form__select">
+                <h2 class="visually-hidden" id="HeaderLanguageMobileLabelNoScript">{{ 'localization.language_label' | t }}</h2>
+                <select class="localization-selector link" name="locale_code" aria-labelledby="HeaderLanguageMobileLabelNoScript">
+                  {%- for language in localization.available_languages -%}
+                    <option value="{{ language.iso_code }}" lang="{{ language.iso_code }}" {%- if language.iso_code == localization.language.iso_code %} selected{% endif %}>
+                      {{ language.endonym_name | capitalize }}
+                    </option>
+                  {%- endfor -%}
+                </select>
+                {% render 'icon-caret' %}
+              </div>
+              <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
+            {%- endform -%}
+          </noscript>
+
+          <localization-form class="small-hide medium-hide no-js-hidden">
+            {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
+              <div>
+                <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
+                {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {%- endif -%}
+      </div>
+      {% render 'header-search', input_id: 'Search-In-Modal' %}
+
+      {%- if shop.customer_accounts_enabled -%}
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+          <i class="gsi gs-user"></i>
+          <span class="visually-hidden">
+            {%- liquid
+              if customer
+                echo 'customer.account_fallback' | t
+              else
+                echo 'customer.log_in' | t
+              endif
+            -%}
+          </span>
+        </a>
+      {%- endif -%}
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            {% render block %}
+        {%- endcase -%}
+      {%- endfor -%}
+
+      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+        {%- if cart != empty -%}
+          <i class="gsi gs-shopping-cart"></i>
+        {%- else -%}
+          <i class="gsi gs-shopping-cart"></i>
+        {%- endif -%}
+        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        {%- if cart != empty -%}
+          <div class="cart-count-bubble">
+            {%- if cart.item_count < 100 -%}
+              <span aria-hidden="true">{{ cart.item_count }}</span>
+            {%- endif -%}
+            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+          </div>
+        {%- endif -%}
+      </a>
+      
+      <a href="/pages/wishlist" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+          <i class="gsi gs-wishlist st-wishlist-details-button" data-type="manually"></i>
+      </a>
+    </div>
+ 
+
+
+{%- if settings.cart_type == "notification" -%}
+  {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}
+{%- endif -%}
+
+       
+      </div>
+      <div class="mobile-menu">
+        <div class="mobile-nav-area">
+          <!-- Mega Menu -->
+          <div class="mobile-nav-item has-mega-menu dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle nav-link"
+              aria-label="{{ section.settings.meta_menu_title }}"
+              role="button"
+            >
+              {{- section.settings.meta_menu_title -}}
+            </a>
+            <div class="dropdown-menu mega-menu invx-mega-menu">
+              <div class="mega-menu-area">
+                {%- for link in section.settings.mega_menu.links -%}
+                  {%- assign hasChildren = link.links | empty | default: false -%}
+                  <div class="mega-menus">
+                    <h5>{{- link.title | escape -}}</h5>
+                    {%- if hasChildren -%}
+                      <div class="inner-menu">
+                        {%- for childlink in link.links -%}
+                          {% assign childlink_url = childlink.url %}
+                          {% unless canonical_url contains '?' or childlink_url contains '?' %}
+                            {% assign last_char = childlink_url | slice: -1 %}
+                            {% unless last_char == '/' %}
+                              {% assign childlink_url = childlink_url %}
+                            {% endunless %}
+                          {% endunless %}
+                          <div class="dropdown-item">
+                            <a
+                              class="nav-link"
+                              href="{{ childlink_url }}"
+                              aria-label="Product list of {{ childlink.title | escape }}"
+                            >
+                              {{- childlink.title | escape -}}
+                            </a>
+                          </div>
+                        {%- endfor -%}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+              </div>
+              <div class="all-item">
+                {%- assign megaMenuBottomLink1 = section.settings.mega_menu_bottom_link
+                  | default: '/collections/all-mattresses'
+                  | url_escape
+                -%}
+                {%- assign megaMenuBottomLink2 = section.settings.mega_menu_bottom_link2
+                  | default: '/collections'
+                  | url_escape
+                -%}
+                {%- assign megaMenuBottomLink3 = section.settings.mega_menu_bottom_link3
+                  | default: '/collections/all-mattresses'
+                  | url_escape
+                -%}
+                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink1 }}">
+                  {{- section.settings.mega_menu_bottom_label -}}
+                </a>
+                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink2 }}">
+                  {{- section.settings.mega_menu_bottom_label2 -}}
+                </a>
+                <a class="mega-menu-bottom-link" href="{{ megaMenuBottomLink3 }}">
+                  {{- section.settings.mega_menu_bottom_label3 -}}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Menu -->
+          {%- for link in section.settings.bottom_menu.links -%}
+            {%- assign hasChildren = link.links | empty | default: false -%}
+            <div class="mobile-nav-item {%- if hasChildren -%}{{" dropdown"}}{%- endif -%}">
+              <a
+                class=" {%- if hasChildren -%}{{"dropdown-toggle "}}{%- endif -%}nav-link"
+                href="{{ link.url }}"
+                aria-label="{{ link.title | escape }}"
+              >
+                {{- link.title | escape -}}
+              </a>
+              {%- if hasChildren -%}
+                <div class="dropdown-menu">
+                  {%- for childlink in link.links -%}
+                    <div class="dropdown-item">
+                      <a
+                        class="nav-link"
+                        href="{{ childlink.url }}"
+                        aria-label="Product list of {{ childlink.title | escape }}"
+                      >
+                        {{- childlink.title | escape -}}
+                      </a>
+                    </div>
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+
+          <!-- Match Maker Image and Link -->
+          <div class="has-icon mobile-nav-item">
+            {%- if section.settings.match_maker_image != blank -%}
+              <img
+                src="{{ section.settings.match_maker_image | image_url: 'master' }}"
+                alt="bed"
+                width="26"
+                height="25"
+                loading="lazy"
+                class="icon"
+              >
+            {%- else -%}
+              <img
+                src="{{ 'bed-xs.png' | asset_img_url: 'master' }}"
+                alt="bed"
+                width="26"
+                height="25"
+                loading="lazy"
+                class="icon"
+              >
+            {%- endif -%}
+            {%- assign matchMakerLink = section.settings.match_maker_link
+              | default: '/pages/mattress-matchmaker'
+              | url_escape
+            -%}
+            <a
+              class="nav-link"
+              href="{{ matchMakerLink }}"
+              aria-label="Read more about mattress match maker"
+            >
+              {{- section.settings.match_maker_label -}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileheader = document.querySelector('.mobile-header');
+    const stickyOffset = 60; // Desired fixed position from the top
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > stickyOffset) {
+        mobileheader.classList.add("sticky");
+      } else {
+        mobileheader.classList.remove("sticky");
+      }
+    });
+
+    const mobilemainNavDropdownToggles = document.querySelectorAll('.mobile-main-nav .dropdown-toggle');
+    const mobiledropdownMenus = document.querySelectorAll('.dropdown-menu');
+    const mobilemainMenu = document.querySelector('.mobile-menu');
+    const mobilemainMenuToggle = document.querySelector('.mobile-menu-toggle');
+
+    mobilemainNavDropdownToggles.forEach(function(toggle) {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        var menu = this.nextElementSibling;
+
+        if (! menu.classList.contains('open')) {
+          closeOpenDropdownMenus();
+          menu.classList.add('open');
+          slideDown(menu);
+        } else {
+          menu.classList.remove('open');
+          slideUp(menu);
+        }
+      });
+    });
+
+    mobiledropdownMenus.forEach(function(menu) {
+      menu.querySelector('.nav-link').addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    });
+
+    document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (mobilemainMenu.classList.contains('open')) {
+          slideUp(mobilemainMenu);
+        }
+      });
+    });
+
+    mobilemainMenuToggle.addEventListener('click', function() {
+      mobilemainMenu.classList.toggle('open');
+      slideToggle(mobilemainMenu);
+    });
+
+    document.addEventListener('click', function(e) {
+      if (! e.target.closest('.mobile-main-nav')) {
+        closeOpenDropdownMenus();
+      }
+    });
+
+    function closeOpenDropdownMenus() {
+      document.querySelectorAll('.mobile-main-nav .dropdown-menu.open').forEach(function(menu) {
+        menu.classList.remove('open');
+        slideUp(menu);
+      });
+    }
+
+    function slideUp(element) {
+      element.style.transition = 'max-height 0.3s';
+      element.style.maxHeight = 0;
+      element.style.overflow = 'hidden';
+      setTimeout(function() {
+        element.style.display = 'none';
+      }, 100);
+    }
+
+    function slideDown(element) {
+      element.style.transition = 'max-height 0.3s';
+      element.style.display = 'block';
+      element.style.overflow = 'hidden';
+      element.style.maxHeight = element.scrollHeight + 'px';
+      setTimeout(function() {
+        element.style.maxHeight = 'unset';
+      }, 100);
+    }
+
+    function slideToggle(element) {
+      if (element.clientHeight > 0) {
+        slideUp(element);
+      } else {
+        slideDown(element);
+      }
+    }
+  });
+</script>
+
+{% style %}
+  .mobile-header {
+    position: relative;
+    
+    transition: top 0.3s ease-in-out;
+  }
+
+  .mobile-header.sticky {
+    position: fixed !important;
+    top: 100px !important; /* Fixed position from the top */
+    left: 0;
+    width: 100%;
+    z-index: 999 !important;
+    background-color: #ffffff; /* Optional: Add a background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visibility */
+  }
+
+ @media (max-width: 990px){
+   .mobile-header.sticky {
+      top: 138px !important;
+    }
+ }
+
+  @media (max-width: 420px){
+   .mobile-header.sticky {
+      top: 0px !important;
+    }
+ }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Mobile Header",
+  "class": "header-mobile-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Number",
+      "default": "1905-212-7722"
+    },
+    {
+      "type": "text",
+      "id": "meta_menu_title",
+      "default": "All Mattresses",
+      "label": "Mega Menu Title"
+    },
+    {
+      "type": "link_list",
+      "id": "mega_menu",
+      "label": "Mega Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "bottom_menu",
+      "label": "Bottom Menu"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_bottom_label",
+      "default": "VIEW ALL MATTRESSES",
+      "label": "Mega Menu Bottom Label"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_bottom_link",
+      "label": "Mega Menu Bottom Link"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_bottom_label2",
+      "default": "VIEW ALL COLLECTIONS",
+      "label": "Mega Menu Bottom Label 2"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_bottom_link2",
+      "label": "Mega Menu Bottom Link 2"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_bottom_label3",
+      "default": "VIEW ALL BRANDS",
+      "label": "Mega Menu Bottom Label 3"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_bottom_link3",
+      "label": "Mega Menu Bottom Link 3"
+    },
+    
+    {
+      "type": "image_picker",
+      "id": "match_maker_image",
+      "label": "Match Maker Image"
+    },
+    {
+      "type": "text",
+      "id": "match_maker_label",
+      "default": "Mattress Matchmaker",
+      "label": "Match Maker Label"
+    },
+    {
+      "type": "url",
+      "id": "match_maker_link",
+      "label": "Match Maker Link"
+    },
+    {
+      "type": "select",
+      "id": "logo_position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top Left"
+        },
+        {
+          "value": "top-center",
+          "label": "Top Center"
+        },
+        {
+          "value": "middle-left",
+          "label": "Middle Left"
+        },
+        {
+          "value": "middle-center",
+          "label": "Middle Center"
+        }
+      ],
+      "default": "middle-left",
+      "label": "Logo Position"
+    },
+    
+    {
+      "type": "select",
+      "id": "menu_type_desktop",
+      "options": [
+        {
+          "value": "dropdown",
+          "label": "Dropdown"
+        },
+        {
+          "value": "mega",
+          "label": "Mega Menu"
+        },
+        {
+          "value": "drawer",
+          "label": "Drawer"
+        }
+      ],
+      "default": "dropdown",
+      "label": "Menu Type (Desktop)"
+    },
+    {
+      "type": "select",
+      "id": "sticky_header_type",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "on-scroll-up",
+          "label": "On Scroll Up"
+        },
+        {
+          "value": "always",
+          "label": "Always"
+        },
+        {
+          "value": "reduce-logo-size",
+          "label": "Reduce Logo Size"
+        }
+      ],
+      "default": "on-scroll-up",
+      "label": "Sticky Header Type"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "default": true,
+      "label": "Show Social Icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_line_separator",
+      "default": true,
+      "label": "Show Line Separator"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "menu_color_scheme",
+      "label": "Menu Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_country_selector",
+      "default": true,
+      "label": "Enable Country Selector"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_language_selector",
+      "default": true,
+      "label": "Enable Language Selector"
+    },
+    {
+      "type": "select",
+      "id": "mobile_logo_position",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "center",
+      "label": "Mobile Logo Position"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 8
+    }
+  ],
+  "blocks": [
+   
+  ]
+}
 {% endschema %}
