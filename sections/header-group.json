@@ -21,14 +21,47 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        "@media screen and (max-width: 420px) {.invx-header {display: none; }}"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "",
-        "menu_type_desktop": "dropdown",
+        "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
         "show_social": true,
         "show_line_separator": true,
         "color_scheme": "scheme-1",
+        "menu_color_scheme": "",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "mobile-header": {
+      "type": "mobile-header",
+      "settings": {
+        "phone_number": "1-905-212-7722",
+        "meta_menu_title": "All Mattresses",
+        "mega_menu": "mega-menu",
+        "bottom_menu": "main",
+        "mega_menu_bottom_label": "VIEW ALL MATTRESSES",
+        "mega_menu_bottom_link": "",
+        "mega_menu_bottom_label2": "VIEW ALL COLLECTIONS",
+        "mega_menu_bottom_link2": "",
+        "mega_menu_bottom_label3": "VIEW ALL BRANDS",
+        "mega_menu_bottom_link3": "shopify://pages/brands",
+        "match_maker_label": "Mattress Matchmaker",
+        "match_maker_link": "/pages/mattress-matchmaker/",
+        "logo_position": "middle-left",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_social": true,
+        "show_line_separator": true,
+        "color_scheme": "",
         "menu_color_scheme": "",
         "enable_country_selector": true,
         "enable_language_selector": true,
@@ -68,6 +101,7 @@
   "order": [
     "invx-announcement",
     "header",
+    "mobile-header",
     "header-mid",
     "header-bottom"
   ]
