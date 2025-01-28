@@ -66,14 +66,16 @@
     "image_banner_wbJYeT": {
       "type": "image-banner",
       "settings": {
+        "link": "",
+        "new_tab": false,
         "image": "shopify://shop_images/woman_trying_mattress_in__store.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
+        "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
-        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
@@ -177,14 +179,16 @@
     "image_banner_7HVKTN": {
       "type": "image-banner",
       "settings": {
+        "link": "shopify://pages/mattress-matchmaker",
+        "new_tab": true,
         "image": "shopify://shop_images/sleep_positions.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
+        "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
-        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
@@ -310,14 +314,16 @@
     "image_banner_xP9mUp": {
       "type": "image-banner",
       "settings": {
+        "link": "",
+        "new_tab": false,
         "image": "shopify://shop_images/couple_trying_mattress_in_store.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
+        "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
-        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
