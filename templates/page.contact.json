@@ -12,8 +12,7 @@
   "sections": {
     "main": {
       "type": "invx-main-page",
-      "settings": {
-      }
+      "settings": {}
     },
     "multicolumn_EqKKpi": {
       "type": "multicolumn-2",
@@ -21,8 +20,8 @@
         "column_g8ex8P": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/phone-1.png",
-            "title": "<strong>Call Us Now<\/strong>",
+            "image": "shopify://shop_images/phone-1.png",
+            "title": "<strong>Call Us Now</strong>",
             "text": "",
             "link_label": "905-212-7722",
             "link": "tel:905-212-7722"
@@ -31,9 +30,9 @@
         "column_mCLkF3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/location-1.png",
-            "title": "<strong>Visit Mattressville<\/strong>",
-            "text": "<p>1911 Dundas St. East, Unit 18 Mississauga, On L4X 1M1<\/p>",
+            "image": "shopify://shop_images/location-1.png",
+            "title": "<strong>Visit Mattressville</strong>",
+            "text": "<p>1911 Dundas St. East, Unit 18 Mississauga, On L4X 1M1</p>",
             "link_label": "",
             "link": ""
           }
@@ -41,9 +40,9 @@
         "column_XwX96H": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/clock-1.png",
-            "title": "<strong>Working hours<\/strong>",
-            "text": "<p>Monday to Friday:11am to 7pm <br\/>Saturday:11am to 6pm <br\/>Sunday:12pm to 5pm<\/p>",
+            "image": "shopify://shop_images/clock-1.png",
+            "title": "<strong>Working hours</strong>",
+            "text": "<p>Monday to Friday:11am to 7pm <br/>Saturday:11am to 6pm <br/>Sunday:12pm to 5pm</p>",
             "link_label": "",
             "link": ""
           }
@@ -74,11 +73,27 @@
         "padding_bottom": 0
       }
     },
+    "image_banner_r7eWeK": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/mattressville_location.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "form": {
       "type": "contact-form",
       "custom_css": [
-        ".contact.page-width {padding-inline: 0;}",
-        "@media (min-width: 990px) { #ContactForm {max-width: 60%;margin: 0 auto;} }"
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
       ],
       "settings": {
         "heading": "",
@@ -92,6 +107,7 @@
   "order": [
     "main",
     "multicolumn_EqKKpi",
+    "image_banner_r7eWeK",
     "form"
   ]
 }

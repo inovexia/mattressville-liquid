@@ -10,6 +10,12 @@
 {
   "layout": "theme-sidebar",
   "sections": {
+    "main": {
+      "type": "invx-main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {}
+    },
     "rich_text_9MpUtR": {
       "type": "rich-text",
       "blocks": {
@@ -72,11 +78,6 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
-    },
-    "main": {
-      "type": "invx-main-page",
-      "disabled": true,
-      "settings": {}
     },
     "rich_text_DAPVzA": {
       "type": "rich-text",
@@ -503,10 +504,10 @@
     }
   },
   "order": [
+    "main",
     "rich_text_9MpUtR",
     "rich_text_zEWcPW",
     "image_banner_wbJYeT",
-    "main",
     "rich_text_DAPVzA",
     "custom_html_3T9BYH",
     "rich_text_aPzEfi",
