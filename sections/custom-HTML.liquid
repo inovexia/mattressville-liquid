@@ -1,6 +1,75 @@
+<div id="ecomposer-custom-section">  
+
+  {%- if section.settings.title != blank -%}
+
+  <div class="ecomposer-custom-title"><h2>{{section.settings.title}}</h2></div>  
+
+  {%- endif -%}    
+
+  <div class="ecomposer-custom-code">{{section.settings.custom_HTML}}</div>
+
+  <p class="ecomposer-credit">Powered by <a href="//www.ecomposer.io" target="_blank">ecomposer.io</a></p>
+
+</div>
+
+<style> 
+
+  #ecomposer-custom-section{position:relative;}
+
+  .ecomposer-custom-title{text-align:center;}
+
+  .ecomposer-credit{text-align:right;font-size:11px; margin-bottom:20px;font-style:italic;}
+
+</style>
+
+
 {% schema %}
+
   {
-    "name": "Section name",
-    "settings": []
+
+    "name": "HTML",
+
+    "settings": [
+
+      {
+
+        "type": "text",
+
+        "id": "title",
+
+        "label": "Title"
+
+      },
+
+      {
+
+        "type":"textarea",
+
+        "id": "custom_HTML",
+
+        "label": "HTML"
+
+      }
+
+    ],
+
+    "presets": [
+
+      {
+
+        "name": "Custom HTML",
+
+        "category": "ecomposer",
+
+        "settings": {
+
+
+        }
+
+      }
+
+    ]
+
   }
+
 {% endschema %}
