@@ -30,13 +30,18 @@
       "block_order": [
         "heading_pHwBRc"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.rich-text__blocks {max-width: 100%; }}",
+        ".rich-text__wrapper {width: unset; padding: 0;}",
+        ".rich-text__wrapper a {color: #098fc7; text-decoration: none; background-color: transparent;}",
+        ".rich-text__wrapper a:hover {text-decoration: underline;}"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 20,
         "padding_bottom": 0
       }
     },
@@ -53,7 +58,12 @@
       "block_order": [
         "text_7CbLQ8"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.rich-text__blocks {max-width: 100%; }}",
+        ".rich-text__wrapper {width: unset; padding: 0;}",
+        ".rich-text__wrapper a {color: #098fc7; text-decoration: none; background-color: transparent;}",
+        ".rich-text__wrapper a:hover {text-decoration: underline;}"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -66,16 +76,14 @@
     "image_banner_wbJYeT": {
       "type": "image-banner",
       "settings": {
-        "link": "",
-        "new_tab": false,
         "image": "shopify://shop_images/woman_trying_mattress_in__store.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
-        "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
@@ -111,6 +119,7 @@
     },
     "custom_html_3T9BYH": {
       "type": "custom-HTML",
+      "disabled": true,
       "custom_css": [
         ".mv-table {width: 100%; max-width: 800px; margin: 20px auto; border-collapse: collapse; font-size: 16px; color: #333; /* Text color, adjust as needed */}",
         ".mv-table thead {background-color: #2c2e83; /* Adjust to match your brand color */ color: #ffffff; /* Table header text color */}",
@@ -179,16 +188,14 @@
     "image_banner_7HVKTN": {
       "type": "image-banner",
       "settings": {
-        "link": "shopify://pages/mattress-matchmaker",
-        "new_tab": true,
         "image": "shopify://shop_images/sleep_positions.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
-        "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
@@ -278,6 +285,7 @@
     },
     "custom_html_Ga6mYt": {
       "type": "custom-HTML",
+      "disabled": true,
       "settings": {
         "title": "",
         "custom_HTML": "<body>\n\n\n  <meta charset=\"UTF-8\">\n  <title>Flipped Coordinate Bar Chart</title>\n  <style>\n    body {\n      margin: 0;\n      padding: 20px;\n      font-family: Arial, sans-serif;\n      background: #fafafa;\n    }\n    h1 {\n      text-align: center;\n      margin-bottom: 5px;\n    }\n    .chart-container {\n      display: flex;\n      justify-content: center;\n      margin: 0 auto;\n      max-width: 600px;\n    }\n    svg {\n      background: #fff;\n      border: 1px solid #ccc;\n    }\n    .legend {\n      text-align: center;\n      font-size: 14px;\n      color: #333;\n      margin: 0 auto 10px;\n    }\n    .legend span {\n      display: inline-block;\n      margin-right: 25px;\n    }\n    .color-box {\n      width: 12px;\n      height: 12px;\n      display: inline-block;\n      vertical-align: middle;\n      margin-right: 4px;\n      border: 1px solid #999;\n    }\n  </style>\n\n\n\n<h1>Mattress Budget vs. Longevity</h1>\n\n<div class=\"legend\">\n  <span>\n    <span class=\"color-box\" style=\"background:#53C68C;\"></span>\n    Cost (1–5)\n  </span>\n  <span>\n    <span class=\"color-box\" style=\"background:#647DEE;\"></span>\n    Lifespan (0–10 yrs)\n  </span>\n</div>\n\n<div class=\"chart-container\">\n  <svg width=\"600\" height=\"350\" xmlns=\"http://www.w3.org/2000/svg\">\n    <rect x=\"0\" y=\"0\" width=\"600\" height=\"350\" fill=\"#fff\"></rect>\n\n    <!-- Flipped coordinates group -->\n    <g transform=\"translate(0,280) scale(1,-1)\">\n      <!-- Axis line at the bottom -->\n      <line x1=\"40\" y1=\"0\" x2=\"560\" y2=\"0\" stroke=\"#999\" stroke-width=\"2\"></line>\n\n      <!-- Innerspring -->\n      <g transform=\"translate(60,0)\">\n        <!-- Cost=1.5 -> 30px high -->\n        <rect x=\"0\" y=\"0\" width=\"20\" height=\"30\" fill=\"#53C68C\"></rect>\n        <!-- Lifespan=5 -> 100px high -->\n        <rect x=\"30\" y=\"0\" width=\"20\" height=\"100\" fill=\"#647DEE\"></rect>\n      </g>\n\n      <!-- Pocket Coil -->\n      <g transform=\"translate(160,0)\">\n        <!-- Cost=3 -> 60px high -->\n        <rect x=\"0\" y=\"0\" width=\"20\" height=\"60\" fill=\"#53C68C\"></rect>\n        <!-- Lifespan=7 -> 140px high -->\n        <rect x=\"30\" y=\"0\" width=\"20\" height=\"140\" fill=\"#647DEE\"></rect>\n      </g>\n\n      <!-- Memory Foam -->\n      <g transform=\"translate(260,0)\">\n        <!-- Cost=3.5 -> 70px high -->\n        <rect x=\"0\" y=\"0\" width=\"20\" height=\"70\" fill=\"#53C68C\"></rect>\n        <!-- Lifespan=8 -> 160px high -->\n        <rect x=\"30\" y=\"0\" width=\"20\" height=\"160\" fill=\"#647DEE\"></rect>\n      </g>\n\n      <!-- Hybrid -->\n      <g transform=\"translate(360,0)\">\n        <!-- Cost=4 -> 80px high -->\n        <rect x=\"0\" y=\"0\" width=\"20\" height=\"80\" fill=\"#53C68C\"></rect>\n        <!-- Lifespan=9 -> 180px high -->\n        <rect x=\"30\" y=\"0\" width=\"20\" height=\"180\" fill=\"#647DEE\"></rect>\n      </g>\n\n      <!-- Latex -->\n      <g transform=\"translate(460,0)\">\n        <!-- Cost=5 -> 100px high -->\n        <rect x=\"0\" y=\"0\" width=\"20\" height=\"100\" fill=\"#53C68C\"></rect>\n        <!-- Lifespan=11 -> 220px high -->\n        <rect x=\"30\" y=\"0\" width=\"20\" height=\"220\" fill=\"#647DEE\"></rect>\n      </g>\n    </g>\n\n    <!-- Mattress labels at the bottom (normal coordinates) -->\n    <g>\n      <text x=\"75\" y=\"305\" text-anchor=\"middle\" font-size=\"14\" fill=\"#333\">\n        Innerspring\n      </text>\n      <text x=\"175\" y=\"305\" text-anchor=\"middle\" font-size=\"14\" fill=\"#333\">\n        Pocket Coil\n      </text>\n      <text x=\"275\" y=\"305\" text-anchor=\"middle\" font-size=\"14\" fill=\"#333\">\n        Memory Foam\n      </text>\n      <text x=\"375\" y=\"305\" text-anchor=\"middle\" font-size=\"14\" fill=\"#333\">\n        Hybrid\n      </text>\n      <text x=\"475\" y=\"305\" text-anchor=\"middle\" font-size=\"14\" fill=\"#333\">\n        Latex\n      </text>\n    </g>\n  </svg>\n</div>\n\n\n</body>"
@@ -314,16 +322,14 @@
     "image_banner_xP9mUp": {
       "type": "image-banner",
       "settings": {
-        "link": "",
-        "new_tab": false,
         "image": "shopify://shop_images/couple_trying_mattress_in_store.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
-        "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
