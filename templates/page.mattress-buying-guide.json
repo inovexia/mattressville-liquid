@@ -402,7 +402,7 @@
           "settings": {
             "heading": "What is the best mattress for back pain?",
             "icon": "check_mark",
-            "row_content": "<p>Memory foam and hybrid mattresses are often recommended for back pain because they provide excellent support and contouring. Learn more in our blog: <a href=\"https://mattressville.ca/blogs/tips/best-mattresses-for-back-pain\">Best Mattresses for Back Pain</a>.</p>",
+            "row_content": "<p>Memory foam and hybrid mattresses are often recommended for back pain because they provide excellent support and contouring. Learn more in our blog: <a href=\"/blogs/health-sleep-wellness/how-to-improve-your-spine-health\" title=\"7 Ways You Can Improve Your Spine Health and Wellness\">Best Mattresses for Back Pain</a>.</p>",
             "page": ""
           }
         },
@@ -420,7 +420,7 @@
           "settings": {
             "heading": "What firmness level should I choose?",
             "icon": "check_mark",
-            "row_content": "<p>The right firmness depends on your sleeping position and body weight. Side sleepers often prefer softer mattresses, while back and stomach sleepers benefit from medium to firm options. Check out our blog on <a href=\"https://mattressville.ca/blogs/tips/choosing-the-right-firmness\">choosing the right firmness</a>.</p>",
+            "row_content": "<p>The right firmness depends on your sleeping position and body weight. Side sleepers often prefer softer mattresses, while back and stomach sleepers benefit from medium to firm options. Check out our blog on <a href=\"/blogs/tips/finding-the-right-mattress-firmness\" title=\"The Goldilocks Effect: Finding the Right Mattress Firmness\">choosing the right firmness</a>.</p>",
             "page": ""
           }
         },
@@ -438,7 +438,7 @@
           "settings": {
             "heading": "Can I return a mattress if I don’t like it?",
             "icon": "check_mark",
-            "row_content": "<p>Yes, most of our mattresses come with a trial period. Check our <a href=\"https://mattressville.ca/pages/trial-period-policy\">trial period policy</a> for details.</p>",
+            "row_content": "<p>Yes, most of our mattresses come with a trial period. Check our <a href=\"/pages/90-day-comfort-guarantee\" title=\"90 Day Comfort Guarantee\">trial period policy</a> for details.</p>",
             "page": ""
           }
         },
