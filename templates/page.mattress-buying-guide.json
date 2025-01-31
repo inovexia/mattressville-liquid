@@ -30,7 +30,12 @@
       "block_order": [
         "heading_pHwBRc"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.rich-text__blocks {max-width: 100%; }}",
+        ".rich-text__wrapper {width: unset; padding: 0;}",
+        ".rich-text__wrapper a {color: #098fc7; text-decoration: none; background-color: transparent;}",
+        ".rich-text__wrapper a:hover {text-decoration: underline;}"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
