@@ -142,7 +142,6 @@
     },
     "custom_html_3T9BYH": {
       "type": "custom-HTML",
-      "disabled": true,
       "custom_css": [
         ".mv-table {width: 100%; max-width: 800px; margin: 20px auto; border-collapse: collapse; font-size: 16px; color: #333; /* Text color, adjust as needed */}",
         ".mv-table thead {background-color: #2c2e83; /* Adjust to match your brand color */ color: #ffffff; /* Table header text color */}",
@@ -308,6 +307,7 @@
     },
     "custom_html_Ga6mYt": {
       "type": "custom-HTML",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "title": "",
