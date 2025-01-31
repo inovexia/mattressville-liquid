@@ -501,7 +501,7 @@
           "settings": {
             "heading": "Does a higher price always mean better quality?",
             "icon": "check_mark",
-            "row_content": "<ol><li>Not always. Comfort is personal. Try different types to find your match.</li></ol>",
+            "row_content": "<p>Not always. Comfort is personal. Try different types to find your match.</p>",
             "page": ""
           }
         }
