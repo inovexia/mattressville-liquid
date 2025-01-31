@@ -195,7 +195,6 @@
       "block_order": [
         "heading_ayGhc9"
       ],
-      "disabled": true,
       "custom_css": [
         ".rich-text__wrapper {width: unset;}"
       ],
@@ -308,7 +307,6 @@
     },
     "custom_html_Ga6mYt": {
       "type": "custom-HTML",
-      "disabled": true,
       "custom_css": [],
       "settings": {
         "title": "",
