@@ -47,18 +47,18 @@
             "slide_link": "shopify://products/kingsdown-cool-wave-tight-top-mattress"
           }
         },
+        "slide_9y8Uir": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mattressville_banner_4__2024.png",
+            "slide_link": "shopify://collections/stearns-and-foster"
+          }
+        },
         "slide_dJqdk3": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/homepage_highest_rated_reviews_banner_mattressville.png",
             "slide_link": "shopify://pages/reviews"
-          }
-        },
-        "slide_n4V3KT": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Adjustable_beds_Mattress_home_banner_b39e74ff-0d63-43ee-9e8c-b9fd62c09aef.png",
-            "slide_link": "shopify://collections/adjustable-beds"
           }
         },
         "slide_86rVjX": {
@@ -68,12 +68,11 @@
             "slide_link": "shopify://blogs/tips/best-mattresses-of-2023"
           }
         },
-        "slide_CKrRRg": {
+        "slide_n4V3KT": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Gifting_Comfort_Christmas_home.png",
-            "slide_link": "shopify://blogs/tips/10-reasons-to-gift-a-mattress"
+            "image": "shopify://shop_images/Adjustable_beds_Mattress_home_banner_b39e74ff-0d63-43ee-9e8c-b9fd62c09aef.png",
+            "slide_link": "shopify://collections/adjustable-beds"
           }
         },
         "slide_N7jLUx": {
@@ -81,13 +80,6 @@
           "settings": {
             "image": "shopify://shop_images/Sealy_Sale_Banner.png",
             "slide_link": "shopify://collections/sealy"
-          }
-        },
-        "slide_9y8Uir": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/mattressville_banner_4__2024.png",
-            "slide_link": "shopify://collections/stearns-and-foster"
           }
         },
         "slide_mgniDF": {
@@ -103,6 +95,14 @@
             "image": "shopify://shop_images/Mattress_Shopping_Checklist_A_Mattress_Buyer_s_Musts.jpg",
             "slide_link": "shopify://blogs/tips/mattress-shopping-checklist-a-mattress-buyers-musts"
           }
+        },
+        "slide_CKrRRg": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Gifting_Comfort_Christmas_home.png",
+            "slide_link": "shopify://blogs/tips/10-reasons-to-gift-a-mattress"
+          }
         }
       },
       "block_order": [
@@ -111,14 +111,14 @@
         "slide_k4wTAU",
         "slide_bTWUcd",
         "slide_yQaMJP",
-        "slide_dJqdk3",
-        "slide_n4V3KT",
-        "slide_86rVjX",
-        "slide_CKrRRg",
-        "slide_N7jLUx",
         "slide_9y8Uir",
+        "slide_dJqdk3",
+        "slide_86rVjX",
+        "slide_n4V3KT",
+        "slide_N7jLUx",
         "slide_mgniDF",
-        "slide_9gwrCP"
+        "slide_9gwrCP",
+        "slide_CKrRRg"
       ],
       "custom_css": [
         "slideshow-component {margin-top: 20px;}",
