@@ -547,6 +547,12 @@
             </div>
           {%- endfor -%}
 
+           <div class="has-icon mobile-nav-item">
+            <a href="/pages/wishlist" class="nav-link" id="cart-icon-bubble">
+              {{- section.settings.my_wishlist_menu -}}
+            </a>
+          </div>
+
           <!-- Match Maker Image and Link -->
           <div class="has-icon mobile-nav-item">
             {%- if section.settings.match_maker_image != blank -%}
@@ -798,6 +804,12 @@
       "type": "url",
       "id": "mega_menu_bottom_link3",
       "label": "Mega Menu Bottom Link 3"
+    },
+
+    {
+      "type": "text",
+      "id": "my_wishlist_menu",
+      "label": "My Wishlist"
     },
     
     {
