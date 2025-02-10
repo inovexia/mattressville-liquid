@@ -682,6 +682,33 @@
   });
 </script>
 
+
+      <script>
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".mega-menus").forEach((menu) => {
+    const toggleBtn = menu.querySelector(".toggle-btn");
+    const innerMenu = menu.querySelector(".inner-menu");
+
+    if (toggleBtn && innerMenu) {
+      toggleBtn.addEventListener("click", function () {
+        if (innerMenu.style.maxHeight) {
+          innerMenu.style.maxHeight = null; // Collapse
+          innerMenu.style.opacity = "0";
+          toggleBtn.textContent = "+";
+        } else {
+          innerMenu.style.maxHeight = innerMenu.scrollHeight + "px"; // Expand
+          innerMenu.style.opacity = "1";
+          toggleBtn.textContent = "−";
+        }
+      });
+    }
+  });
+});
+
+</script>
+
 {% style %}
   .mobile-header {
     position: relative;
