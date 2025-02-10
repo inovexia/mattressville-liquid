@@ -164,6 +164,41 @@
       display: none !important;
     }
 
+  .mega-menu-area {
+    display: flex;
+    flex-direction: column; /* Each mega-menus in a separate row */
+  }
+
+  .mega-menus {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Header with + button */
+  .mega-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .inner-menu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  font-weight: bold;
+}
+
     
   }
 
@@ -428,7 +463,10 @@
                 {%- for link in section.settings.mega_menu.links -%}
                   {%- assign hasChildren = link.links | empty | default: false -%}
                   <div class="mega-menus">
-                    <h5>{{- link.title | escape -}}</h5>
+                  <div class="mega-header">
+              <h5>{{ link.title | escape }}</h5>
+              <span class="toggle-btn">+</span>
+            </div>
                     {%- if hasChildren -%}
                       <div class="inner-menu">
                         {%- for childlink in link.links -%}
