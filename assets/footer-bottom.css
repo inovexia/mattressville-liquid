@@ -79,6 +79,7 @@
   }
   .footer-bottom .end .footer-below .right-side .social-media {
     display: flex;
+    align-items: center;
   }
   .footer-bottom .end .footer-below .right-side .social-media .media-link {
     background-color: transparent;
