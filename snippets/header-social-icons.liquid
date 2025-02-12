@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 {% comment %} 
   Renders social icons.
   Accepts: 
@@ -23,6 +25,7 @@
     .header-social-icons {
       display: flex;
       margin-right: 10px;
+      align-items: center;
     }
 
     .list-social__item {}
@@ -67,7 +70,7 @@
         href="{{ settings.social_twitter_link }}"
         class="link list-social__link"
         aria-label="Read more about {{ 'general.social.links.twitter' | t }}">
-        <i class="gsi gs-twitter-alt"></i>
+         <i class="fa-brands fa-lg fa-x-twitter" style="color: white;"></i>
         <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
       </a>
     </li>
@@ -78,7 +81,7 @@
         href="{{ settings.social_youtube_link }}"
         class="link list-social__link"
         aria-label="Read more about {{ 'general.social.links.youtube' | t }}">
-        {%- render 'icon-youtube' -%}
+         <i class="fa-brands fa-youtube fa-lg" style="color: white"></i>
         <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
       </a>
     </li>
