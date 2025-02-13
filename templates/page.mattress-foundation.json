@@ -280,6 +280,14 @@
         "padding_top": 12,
         "padding_bottom": 8
       }
+    },
+    "psb_utilities_space_xYCx84": {
+      "type": "psb-utilities-space",
+      "settings": {
+        "space_mobile": 20,
+        "space_tablet": 20,
+        "space_desktop": 20
+      }
     }
   },
   "order": [
@@ -291,6 +299,7 @@
     "collection_list_mGpRnd",
     "custom_html_K4kBGH",
     "rich_text_kUCmMX",
+    "psb_utilities_space_xYCx84",
     "custom_html_eF6mAB",
     "collapsible_content_tfmwXW",
     "rich_text_crgdhk"
