@@ -13,7 +13,10 @@
     "main": {
       "type": "invx-main-page",
       "disabled": true,
-      "custom_css": [],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
       "settings": {}
     },
     "rich_text_9MpUtR": {
