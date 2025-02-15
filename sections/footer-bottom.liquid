@@ -160,6 +160,17 @@
                 <i class="gsi gs-instagram"></i>
               </a>
             {%- endif -%}
+
+             {%- if settings.social_youtube_link != blank -%}
+              <a
+                href="{{ settings.social_youtube_link }}"
+                target="_blank"
+                class="media-link"
+                aria-label="youtube logo"
+                title="Youtube">
+                <i class="fa-brands fa-youtube fa-lg" style="color: white"></i>
+              </a>
+            {%- endif -%}
           </div>
         </div>
       </div>
