@@ -32,7 +32,7 @@
           "settings": {
             "image": "shopify://shop_images/location-1.png",
             "title": "<strong>Visit Mattressville</strong>",
-            "text": "<p>1911 Dundas St. East, Unit 18 Mississauga, On L4X 1M1</p>",
+            "text": "<p><a href=\"https://www.google.com/maps?rlz=1C1CHBF_enCA1070CA1070&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIGCAIQRRg8MgYIAxBFGDwyBggEEEUYPDIGCAUQRRg9MgYIBhBFGEEyBggHEEUYQdIBCDIwNjJqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=ca&sa=X&geocode=KUlar9gHOCuIMf_dJCb28x5s&daddr=1911+Dundas+St+E+unit+18,+Mississauga,+ON+L4X+1M1\" target=\"_blank\" title=\"Mattressville Directions\">1911 Dundas St. East, Unit 18 Mississauga, On L4X 1M1</a></p>",
             "link_label": "",
             "link": ""
           }
@@ -76,16 +76,14 @@
     "image_banner_r7eWeK": {
       "type": "image-banner",
       "settings": {
-        "link": "https://www.google.com/maps/dir//Mattressville,+1911+Dundas+St+E+unit+18,+Mississauga,+ON+L4X+1M1/@43.6214608,-79.5733414,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x882b3807d8af5a49:0x6c1ef3f62624ddff!2m2!1d-79.5725479!2d43.6209004?entry=ttu&g_ep=EgoyMDI1MDEyNi4wIKXMDSoASAFQAw%3D%3D",
-        "new_tab": false,
         "image": "shopify://shop_images/mattressville_location.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
-        "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
