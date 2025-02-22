@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -15,7 +15,7 @@
         "header_color": "#ffffff",
         "header_bg_color": "#ff5c78",
         "header_bg_color_opacity": 60,
-        "header_bg_image": "shopify:\/\/shop_images\/city-shot.jpg",
+        "header_bg_image": "shopify://shop_images/city-shot.jpg",
         "header_padding_top": 70,
         "header_padding_bottom": 70,
         "header_margin_bottom": 30,
@@ -61,7 +61,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Only_Use_Your_Bed_for_Sleep.png",
+        "image": "shopify://shop_images/Only_Use_Your_Bed_for_Sleep.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "middle-center",
@@ -87,7 +87,7 @@
         "text_eFqTVX": {
           "type": "text",
           "settings": {
-            "text": "<p>TEST Bedmatch<\/p>"
+            "text": "<p>TEST Bedmatch</p>"
           }
         },
         "button_am4tEY": {
@@ -142,7 +142,7 @@
         "image_FgtQpQ": {
           "type": "image",
           "settings": {
-            "feature_title": "Hassle-free exchange",
+            "feature_title": "90-Day Hassle-free exchange",
             "feature_text": "Receive a slip for exchanges",
             "feature_url": "",
             "hide_image": false
@@ -217,7 +217,7 @@
         "heading": "TEST Bedmatch",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "",
@@ -232,7 +232,7 @@
           "type": "column",
           "settings": {
             "title": "TEST Bedmatch",
-            "text": "<p>TEST Bedmatch<\/p>",
+            "text": "<p>TEST Bedmatch</p>",
             "link_label": "",
             "link": ""
           }
@@ -241,7 +241,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -250,7 +250,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -287,7 +287,7 @@
           "settings": {
             "heading": "TEST Bedmatch",
             "icon": "check_mark",
-            "row_content": "<p>TEST BedmatchTEST BedmatchTEST BedmatchTEST BedmatchTEST Bedmatch<\/p>",
+            "row_content": "<p>TEST BedmatchTEST BedmatchTEST BedmatchTEST BedmatchTEST Bedmatch</p>",
             "page": ""
           }
         },
@@ -347,8 +347,8 @@
         "column_eCBJA8": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cta-image.jpg",
-            "title": "<a href=\"\/collections\/all-mattresses\" title=\"All Mattresses\">Shop All Mattresses<\/a>",
+            "image": "shopify://shop_images/cta-image.jpg",
+            "title": "<a href=\"/collections/all-mattresses\" title=\"All Mattresses\">Shop All Mattresses</a>",
             "text": "",
             "link_label": "",
             "link": ""
@@ -357,8 +357,8 @@
         "column_wwn7RA": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bed.png",
-            "title": "<a href=\"https:\/\/mattressville.ca\/mattress-matchmaker\/\">Try our Mattress Matchmaker<\/a>",
+            "image": "shopify://shop_images/bed.png",
+            "title": "<a href=\"https://mattressville.ca/mattress-matchmaker/\">Try our Mattress Matchmaker</a>",
             "text": "",
             "link_label": "",
             "link": ""
