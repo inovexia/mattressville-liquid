@@ -78,6 +78,7 @@
       "settings": {
         "image": "shopify://shop_images/mattressville_location.png",
         "image_overlay_opacity": 0,
+        "banner_link": "https://www.google.com/maps/dir//mattressville/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x882b3807d8af5a49:0x6c1ef3f62624ddff?sa=X&ved=1t:3061&ictx=111",
         "image_height": "small",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
