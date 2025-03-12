@@ -73,7 +73,6 @@
     <script src="{{ 'constants.js' | asset_url }}" defer></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer></script>
     <script src="{{ 'global.js' | asset_url }}" defer></script>
-    <script src="{{ 'main-jquery.js' | asset_url }}" defer></script>
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer></script>
     {%- endif -%}
@@ -619,8 +618,8 @@
       {% comment %} Load custom scripts {% endcomment %}
       <script src="{{ 'invx-global.js' | asset_url }}" defer></script>
 
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" defer></script>
+      <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script async src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
       <script src="{{ 'invx-scripts-pdp.js' | asset_url }}" defer></script>
 
       <script defer>
