@@ -295,7 +295,7 @@
       }
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'gsi.css' | asset_url | stylesheet_tag: preload: true }}
     {%- unless settings.type_body_font.system? -%}
       <link
@@ -566,7 +566,8 @@
   });
 </script> 
 {% if template.name == 'collection' %}
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer ></script>
+
 <script>
   $(document).ready(function () {
     $(".about-collection .read-more").click(function () {
