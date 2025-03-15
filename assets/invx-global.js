@@ -25,3 +25,25 @@ $('.rich-text__blocks p').each(function() {
     }
     
 })
+
+// Collection page paragraph toggle script
+
+$(document).ready(function () {
+    var content = $(".about-collection .metafield-rich_text_field p");
+    var button = $(".about-collection .read-more");
+
+    // Function to count words
+    function wordCount(text) {
+        return text.trim().split(/\s+/).length;
+    }
+
+    // Check if content has 50 words or less
+    if (wordCount(content.text()) <= 50) {
+        button.hide(); // Hide button if 50 words or less
+    }
+    $(".about-collection .read-more").click(function () {
+        $(".about-collection").toggleClass("show");
+        var button = $(this);
+        button.text(button.text() === "SHOW MORE +" ? "SHOW LESS -" : "SHOW MORE +");
+    });
+});

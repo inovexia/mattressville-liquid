@@ -258,8 +258,10 @@
 {% if collection.metafields.custom.about_collection != blank %}
   <div class="about-collection page-width">
     <div class="collection-description">
-      <p class="short-description">{{ collection.metafields.custom.about_collection | strip_html | truncatewords: 50 }}</p>
-      <p class="full-description" style="display: none;">{{ collection.metafields.custom.about_collection }}</p>
+      <div class="short-description">
+        <div class="short-description-child">{{ collection.metafields.custom.about_collection | metafield_tag | truncatewords: 50 }}</div>
+      </div>
+      <div class="full-description">{{ collection.metafields.custom.about_collection | metafield_tag }}</div>
       <button class="read-more">SHOW MORE +</button>
     </div>
   </div>

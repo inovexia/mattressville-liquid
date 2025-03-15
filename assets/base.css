@@ -3313,3 +3313,13 @@ header #invx-announcement-bar a {
 .vendor-details img.vendor-img {
   margin-right: 20px;
 }
+/* Collection Page CSS */
+.about-collection .full-description{
+  display:none;
+}
+.about-collection.show .full-description{
+  display:block;
+}
+.about-collection.show .short-description-child{
+  display:none;
+}

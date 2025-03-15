@@ -566,25 +566,6 @@
 </script> 
 {% if template.name == 'collection' %}
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script>
-  $(document).ready(function () {
-    $(".about-collection .read-more").click(function () {
-      var fullDescription = $(this).siblings(".full-description");
-      var shortDescription = $(this).siblings(".short-description");
-  
-      if (fullDescription.is(":visible")) {
-        fullDescription.slideUp(400);
-        shortDescription.show();
-        $(this).text("SHOW MORE +");
-      } else {
-        shortDescription.hide();
-        fullDescription.slideDown(400);
-        $(this).text("SHOW LESS -");
-      }
-    });
-  });
-</script>
 {% endif %}
         <meta name="msvalidate.01" content="C59C37718C1BB8061739F2AEC8946D1B" />
 
