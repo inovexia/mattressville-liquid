@@ -28,12 +28,9 @@ Allow: /
 {%- if group.user_agent.value == '*' -%}
 {{ 'Disallow: /*?q=*' }}
 {{ 'Disallow: /*?sort_by=' }}
-{{ 'Disallow: /*&page=' }}
-{{ 'Disallow: /*?page=' }}
 {{ 'Disallow: /*?pr_prod_strat=' }}
 {{ 'Disallow: /*?filter.' }}
 {{ 'Disallow: /*?orderby=' }}
-{{ 'Disallow: /*?v=' }}
 {{ 'Disallow: /*?size=' }}
 {{ 'Disallow: /*?wordfence_lh=' }}
 {{ 'Disallow: /*.atom' }}
