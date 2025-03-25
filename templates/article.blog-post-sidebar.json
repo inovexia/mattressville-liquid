@@ -106,10 +106,26 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "174286224389c8d99a": {
+      "type": "apps",
+      "blocks": {
+        "avada_seo_suite_avada_faqs_BNr39b": {
+          "type": "shopify://apps/avada-seo-suite/blocks/avada-faqs/15507c6e-1aa3-45d3-b698-7e175e033440",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "avada_seo_suite_avada_faqs_BNr39b"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "collapsible_content_dVhFEG"
+    "collapsible_content_dVhFEG",
+    "174286224389c8d99a"
   ]
 }
