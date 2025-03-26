@@ -565,20 +565,10 @@
   });
 </script> 
 {% if template.name == 'collection' %}
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer ></script>
 {% endif %}
         <meta name="msvalidate.01" content="C59C37718C1BB8061739F2AEC8946D1B" />
 
-      <!-- BEGIN MerchantWidget Code -->
-  <script id="merchantWidgetScript" src="https://www.gstatic.com/shopping/merchant/merchantwidget.js" defer></script>
-  <script type="text/javascript">
-  merchantWidgetScript.addEventListener('load', function () {
-    merchantwidget.start({
-     position: 'RIGHT_BOTTOM'
-   });
-  });
-</script>
-<!-- END MerchantWidget Code --> 
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
