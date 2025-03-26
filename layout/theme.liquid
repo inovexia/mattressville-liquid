@@ -568,7 +568,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer ></script>
 {% endif %}
         <meta name="msvalidate.01" content="C59C37718C1BB8061739F2AEC8946D1B" />
-
+        {%- render 'qs-badge' -%}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -599,8 +599,8 @@
       {% comment %} Load custom scripts {% endcomment %}
       <script src="{{ 'invx-global.js' | asset_url }}" defer></script>
 
-      <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script async src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" defer></script>
       <script src="{{ 'invx-scripts-pdp.js' | asset_url }}" defer></script>
 
       <script defer>
