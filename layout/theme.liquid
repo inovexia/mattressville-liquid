@@ -46,6 +46,17 @@
       {%- if page_title %} | {{ shop.name }}{% endif -%}
     </title>
 
+    {% comment %} Tag index removed from Collection  {% endcomment %}
+
+    {% if request.path contains '/collections/' and request.path contains '/' %}
+      <script>
+        let pathParts = window.location.pathname.split('/');
+        if (pathParts.length > 3) {
+          window.location.href = '/' + pathParts.slice(1, 3).join('/');
+        }
+      </script>
+    {% endif %}
+
     {% if template == 'list-collections' %}
       <meta name="description" content="Discover your dream mattress at Mattressville! We offer a wide selection of all types of mattresses, including innerspring, memory foam, hybrid, and latex. Find the perfect comfort level and support for your needs, all at competitive prices. Shop online for fast and free delivery, or visit a store near you.">
     {% elsif page_description %}
