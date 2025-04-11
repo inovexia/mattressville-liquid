@@ -63,9 +63,6 @@
       <meta name="description" content="{{ page_description | escape }}">
     {% elsif page_title == 'Products' and settings.all_collection_desc != blank %}
       <meta name="description" content="{{ settings.all_collection_desc | escape }}">
-
-    {% elsif template == 'list-collections' %}
-      <meta name="description" content="{{ section.settings.meta_description | escape }}">
     {% else %}
       <meta
         name="description"

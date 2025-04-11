@@ -3323,3 +3323,12 @@ header #invx-announcement-bar a {
 .about-collection.show .short-description-child{
   display:none;
 }
+
+/* Wishlist CSS */
+header span.st-number.st-js-number {
+  font-size: 0.9rem;
+}
+header .st-wishlist-details-button[data-type="manually"] .st-number {
+  height: 1.7rem;
+  width: 1.7rem;
+}
