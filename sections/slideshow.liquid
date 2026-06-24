@@ -1,6 +1,6 @@
-{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
-{{ 'component-slider.css' | asset_url | stylesheet_tag }}
-{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+{{ 'section-image-banner.aio.min.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.aio.min.css' | asset_url | stylesheet_tag }}
+{{ 'component-slideshow.aio.min.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
@@ -15,7 +15,8 @@
     }
 
     @media screen and (min-width: 750px) {
-      #Slider-{{ section.id }}: : before
+      #Slider-{{ section.id }}::before
+
       , #Slider-{{ section.id }}
       .media::before {
         padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
@@ -139,16 +140,18 @@
                 assign fetch_priority = 'high'
               endif
             -%}
-            {%- if forloop.first %}
-              {{ block.settings.image
- | image_url: width: 3840
- | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
-              }}
+            {%- if forloop.first and section.index == 1 %}
+  {{ block.settings.image
+    | image_url: width: 1500
+    | image_tag: loading: 'eager', height: height, sizes: sizes, widths: widths, fetchpriority: 'high'
+  }}
+
             {%- else -%}
-              {{ block.settings.image
- | image_url: width: 3840
- | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
-              }}
+  {{ block.settings.image
+    | image_url: width: 1500
+    | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+  }}
+
             {%- endif -%}
           {%- else -%}
             {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
@@ -263,7 +266,7 @@
 </slideshow-component>
 
 {%- if request.design_mode -%}
-  <script src="{{ 'theme-editor.js' | asset_url }}" defer></script>
+  <script src="{{ 'theme-editor.aio.min.js' | asset_url }}" defer></script>
 {%- endif -%}
 
 {% schema %}

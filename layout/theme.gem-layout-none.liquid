@@ -55,11 +55,11 @@
 
     {% render 'meta-tags' %}
 
-    <script src="{{ 'constants.js' | asset_url }}" defer></script>
-    <script src="{{ 'pubsub.js' | asset_url }}" defer></script>
-    <script src="{{ 'global.js' | asset_url }}" defer></script>
+    <script src="{{ 'constants.aio.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'pubsub.aio.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'global.aio.min.js' | asset_url }}" defer></script>
     {%- if settings.animations_reveal_on_scroll -%}
-      <script src="{{ 'animations.js' | asset_url }}" defer></script>
+      <script src="{{ 'animations.aio.min.js' | asset_url }}" defer></script>
     {%- endif -%}
 
     {{ content_for_header }}
@@ -311,8 +311,8 @@ body {
 }
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
-    {{ 'gsi.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'base.aio.min.css' | asset_url | stylesheet_tag }}
+    {{ 'gsi.aio.min.css' | asset_url | stylesheet_tag: preload: true }}
     {%- unless settings.type_body_font.system? -%}
       <link
         rel="preload"
@@ -331,14 +331,14 @@ body {
     {%- endunless -%}
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
-      {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
-      <script src="{{ 'localization-form.js' | asset_url }}" defer></script>
+      {{ 'component-localization-form.aio.min.css' | asset_url | stylesheet_tag: preload: true }}
+      <script src="{{ 'localization-form.aio.min.js' | asset_url }}" defer></script>
     {%- endif -%}
 
     {%- if settings.predictive_search_enabled -%}
       <link
         rel="stylesheet"
-        href="{{ 'component-predictive-search.css' | asset_url }}"
+        href="{{ 'component-predictive-search.aio.min.css' | asset_url }}"
         media="print"
         onload="this.media='all'">
     {%- endif -%}

@@ -1,0 +1,162 @@
+{% comment %} Dynamic HTML Sitemap {% endcomment %}
+<div id="html-sitemap" class="page-content html-sitemap">
+  <div class="page-header header-template--22573393019188__main-padding">
+    <div class="page-width">
+      <h1 class="page-title h0">
+        Website Directory - HTML Sitemap
+      </h1>
+    </div>
+  </div>
+<div class="page-width">
+<div class="custom-html-sitemap">
+
+  <div class="html-sitemap">
+<h3>Products</h3>
+<ul>
+{% paginate collections.all.products by 500 %}
+{% for product in collections.all.products %}
+<li><a href="{{ product.url }}">{{ product.title }}</a></li>
+{% endfor %}
+{% endpaginate %}
+</ul>
+  </div>
+  <div class="html-sitemap">
+
+<h3>Collections</h3>
+<ul>
+{% for collection in collections %}
+<li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+{% endfor %}
+</ul>
+  </div>
+  <div class="html-sitemap">
+  <h3>Blogs</h3>
+<ul>
+  <li><a href="{{ shop.url }}/blogs/announcements">Announcements</a></li>
+  <li><a href="{{ shop.url }}/blogs/how-to-user-guide">How To / User Guide</a></li>
+  <li><a href="{{ shop.url }}/blogs/tips">Tips</a></li>
+  <li><a href="{{ shop.url }}/blogs/health-sleep-wellness">Health, Sleep & Wellness</a></li>
+  <li><a href="{{ shop.url }}/blogs/promotions">Promotions</a></li>
+  <li><a href="{{ shop.url }}/blogs/featured-brands">Featured Brands</a></li>
+  <li><a href="{{ shop.url }}/blogs/industry-info">Industry Info</a></li>
+  <li><a href="{{ shop.url }}/blogs/accessory-guide">Accessory Guide</a></li>
+  </ul>
+</div>
+<div class="html-sitemap">
+  <h3>Blog Posts</h3>
+
+{% assign blog_handles = "announcements,how-to-user-guide,tips,health-sleep-wellness,promotions,featured-brands,industry-info,accessory-guide" | split: "," %}
+<ul>
+   {% for handle in blog_handles %}
+
+        {% for article in blogs[handle].articles %}
+
+               <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+         {% endfor %}
+
+  {% endfor %}
+  </ul>
+</div>
+
+<div class="html-sitemap">
+  <h3>Pages</h3>
+<ul>
+{% for page in pages %}
+<li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% endfor %}
+</ul>
+</div>
+
+  
+</div>
+</div>
+</div>
+
+<style>
+  @media screen and (max-width: 768px) {
+     body .custom-html-sitemap ul {
+    display:block;
+    grid-template-columns:unset;
+    gap:20px;;
+}
+    body .custom-html-sitemap ul li {
+    width:100%;
+    max-width:100%;
+    text-overflow:unset;
+}
+     #html-sitemap.html-sitemap .page-header {
+  padding-top: 53px;
+  padding-bottom: 53px;
+}
+}
+  @media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
+    /* STYLES HERE */
+}
+  #html-sitemap .page-header {
+  color: #ffffff;
+  background-image: url("https://mattressville.ca/cdn/shop/files/city-shot.jpg?v=1705756256");
+  background-position:center;
+  margin-bottom: 30px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: relative;
+}
+  #html-sitemap .page-header::before {
+  background-color: #ff5c78;
+  content: "";
+  position: absolute;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+  #html-sitemap .page-title {
+  color: inherit;
+  margin-block:0;
+  position: relative;
+  z-index: 1;
+}
+  #html-sitemap .page-title::after, #html-sitemap .title::after {
+  content: "";
+  display: block;
+  margin:0;
+  left: 0;
+  width: 80px;
+  max-width: 100px;
+  padding-top: 0;
+  border-bottom: 2px solid var(--accent-color);
+}
+  .custom-html-sitemap{
+    padding-top:0px;
+    padding-bottom:50px;
+  }
+  .custom-html-sitemap ul {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    list-style:none;
+    padding-left:20px;
+}
+  .custom-html-sitemap h3{
+    color: #535353;
+    margin-bottom: 15px;
+  }
+  .custom-html-sitemap ul li a {
+    color: #7c7c7c;
+    text-decoration-thickness: 0.2rem;
+    transition: text-decoration-thickness var(--duration-short) ease;
+    line-height: 2.4;
+}
+  .custom-html-sitemap ul li {
+    margin:0;
+    margin-bottom: 0px;
+    max-width: 350px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    list-style:none;
+}
+  
+</style>

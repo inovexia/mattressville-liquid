@@ -12,8 +12,8 @@
   {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical', paginate: paginate %}
 {% endcomment %}
 
-{{ 'component-show-more.css' | asset_url | stylesheet_tag }}
-{{ 'component-visual-display.css' | asset_url | stylesheet_tag }}
+{{ 'component-show-more.aio.min.css' | asset_url | stylesheet_tag }}
+{{ 'component-visual-display.aio.min.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign sort_by = results.sort_by | default: results.default_sort_by
@@ -109,7 +109,27 @@
               </div>
             {%- endif -%}
 
-            <script src="{{ 'show-more.js' | asset_url }}" defer></script>
+            <script src="{{ 'show-more.aio.min.js' | asset_url }}" defer></script>
+            {%- style -%}
+              .facets-container .facet-checkbox input[type="radio"] {
+                position: absolute;
+                opacity: 1;
+                width: 1.6rem;
+                height: 1.6rem;
+                top: 0.7rem;
+                left: -0.4rem;
+                z-index: -1;
+                appearance: none;
+                -webkit-appearance: none;
+              }
+              .icon-radio-outline .icon-radio-dot {
+                visibility: hidden;
+              }
+              .facet-checkbox > input[type="radio"]:checked ~ .icon-radio-outline .icon-radio-dot,
+              .mobile-facets__label > input[type="radio"]:checked ~ .icon-radio-outline .icon-radio-dot {
+                visibility: visible;
+              }
+            {%- endstyle -%}
             {% comment %} Filters for both horizontal and vertical filter {% endcomment %}
             {%- for filter in results.filters -%}
               {% liquid
@@ -124,6 +144,15 @@
                     assign visual_layout_class = 'facets-layout-list'
                     assign show_more_number = 10
                 endcase
+
+                assign is_price_bucket_list = false
+                if filter.label == 'Price Range' or filter.param_name == 'filter.p.m.custom.price_range'
+                  assign is_price_bucket_list = true
+                endif
+                assign bucket_input_type = 'checkbox'
+                if is_price_bucket_list
+                  assign bucket_input_type = 'radio'
+                endif
               %}
 
               {% case filter.type %}
@@ -209,7 +238,7 @@
                                 class="facets__label facet-checkbox{% if is_disabled %} facet-checkbox--disabled disabled{% endif %}{% if has_visual_display %} visual-display-parent visual-display-parent--{{ filter.presentation }}{% endif %}{% if value.active %} active{% endif %}"
                               >
                                 <input
-                                  type="checkbox"
+                                  type="{{ bucket_input_type }}"
                                   name="{{ value.param_name }}"
                                   value="{{ value.value }}"
                                   id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
@@ -229,6 +258,18 @@
                                       presentation: filter.presentation
                                     %}
                                   </div>
+                                {% elsif is_price_bucket_list %}
+                                  <svg
+                                    width="1.6rem"
+                                    height="1.6rem"
+                                    viewBox="0 0 16 16"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    class="icon-radio-outline"
+                                  >
+                                    <circle cx="8" cy="8" r="7.5" stroke="currentColor" fill="none" stroke-width="1"></circle>
+                                    <circle cx="8" cy="8" r="4" fill="currentColor" class="icon-radio-dot"></circle>
+                                  </svg>
                                 {% else %}
                                   <svg
                                     width="1.6rem"
@@ -285,7 +326,7 @@
                                 class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}"
                               >
                                 <input
-                                  type="checkbox"
+                                  type="{{ bucket_input_type }}"
                                   name="{{ value.param_name }}"
                                   value="{{ value.value }}"
                                   id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}-no-js"
@@ -697,6 +738,15 @@
                         assign has_visual_display = false
                         assign visual_layout_class = 'facets-layout-list'
                     endcase
+
+                    assign is_price_bucket_list = false
+                    if filter.label == 'Price Range' or filter.param_name == 'filter.p.m.custom.price_range'
+                      assign is_price_bucket_list = true
+                    endif
+                    assign bucket_input_type = 'checkbox'
+                    if is_price_bucket_list
+                      assign bucket_input_type = 'radio'
+                    endif
                   %}
 
                   {% case filter.type %}
@@ -755,7 +805,7 @@
                                 >
                                   <input
                                     class="mobile-facets__checkbox"
-                                    type="checkbox"
+                                    type="{{ bucket_input_type }}"
                                     name="{{ value.param_name }}"
                                     value="{{ value.value }}"
                                     id="Filter-{{ filter.param_name | escape }}-mobile-{{ forloop.index }}"
@@ -775,6 +825,20 @@
                                         presentation: filter.presentation
                                       %}
                                     </div>
+                                  {% elsif is_price_bucket_list %}
+                                    <span class="mobile-facets__highlight"></span>
+
+                                    <svg
+                                      width="1.6rem"
+                                      height="1.6rem"
+                                      viewBox="0 0 16 16"
+                                      aria-hidden="true"
+                                      focusable="false"
+                                      class="icon-radio-outline"
+                                    >
+                                      <circle cx="8" cy="8" r="7.5" stroke="currentColor" fill="none" stroke-width="1"></circle>
+                                      <circle cx="8" cy="8" r="4" fill="currentColor" class="icon-radio-dot"></circle>
+                                    </svg>
                                   {% else %}
                                     <span class="mobile-facets__highlight"></span>
 
@@ -993,6 +1057,51 @@
                   </div>
                 </div>
               {%- endif -%}
+
+              {% unless collection.handle == 'mattress-protectors' or
+              collection.handle == 'accessories' or
+              collection.handle == 'pillows' or
+              collection.handle == 'bedding-essentials' or
+              collection.handle == 'box-springs' or
+              collection.handle == 'mattress-toppers' or
+              collection.handle == 'adjustable-beds' or 
+              collection.handle == 'furniture-beds' or 
+              collection.handle == 'bed-frames' %}
+                <div class="comfort-scale-legend color-scheme-1">
+                  <h2 style="">Comfort Scale</h2>
+                  <ul>
+                    <li>
+                      <span></span>
+                      <div>
+                        <strong>Soft</strong><br>
+                      </div>
+                      <p>Plush and contouring</p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <div>
+                        <strong>Medium</strong>
+                      </div>
+                      <p>
+                        Balanced comfort</p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <div>
+                        <strong>Firm</strong><br>
+                      </div>
+                      <p>Solid support, slight give</p>
+                    </li>
+                    <li>
+                      <span></span>
+                      <div>
+                        <strong>X-Firm</strong><br>
+                      </div>
+                      <p>Maximum support</p>
+                    </li>
+                  </ul>
+                </div>
+              {% endunless %}
 
               <div class="mobile-facets__footer">
                 <facet-remove class="mobile-facets__clear-wrapper">

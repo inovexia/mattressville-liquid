@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s \"https://mattressville.ca/search?q=mattress&type=product\" -o /tmp/search_page.html -A \"Mozilla/5.0\")"
+    ]
+  }
+}

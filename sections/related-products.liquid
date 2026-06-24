@@ -1,15 +1,15 @@
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'section-related-products.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.aio.min.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.aio.min.css' | asset_url | stylesheet_tag }}
+{{ 'section-related-products.aio.min.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.image_shape == 'blob' %}
-  {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
+  {{ 'mask-blobs.aio.min.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 
 {%- if section.settings.enable_quick_add -%}
-  {{ 'quick-add.css' | asset_url | stylesheet_tag }}
-  <script src="{{ 'quick-add.js' | asset_url }}" defer></script>
-  <script src="{{ 'product-form.js' | asset_url }}" defer></script>
+  {{ 'quick-add.aio.min.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'quick-add.aio.min.js' | asset_url }}" defer></script>
+  <script src="{{ 'product-form.aio.min.js' | asset_url }}" defer></script>
 {%- endif -%}
 
 {%- style -%}

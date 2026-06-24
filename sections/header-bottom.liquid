@@ -1,7 +1,237 @@
-{{ 'header-bottom.css' | asset_url | stylesheet_tag }}
+{{ 'header-bottom.aio.min.css' | asset_url | stylesheet_tag }}
 
 
 <style>
+
+   /* Mattress Matchmaker Popup CSS Start */
+
+          #openPopupBtn{
+            font-family:"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+            background-color: transparent;
+            box-shadow: none;
+            border:none;
+            text-transform: uppercase;
+            color: #707070;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.06rem;
+            font-weight: 400;
+            cursor: pointer;
+          }
+          #openPopupBtn2 {
+            font-family:"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+            background-color: transparent;
+            box-shadow: none;
+            border:none;
+            text-transform: uppercase;
+            align-items: center;
+            color: #707070;
+            display: flex;
+            font-size: 24px;
+            justify-content: space-between;
+            line-height: 30px;
+            padding:5.49px 0;
+            text-decoration:none;
+            text-transform: uppercase;
+          }
+          .mm .popup-content {
+            background-color:#ffffff;
+            padding:50px 30px;
+            margin:30px auto;
+            width: 90%;
+            max-width: 900px;
+            border-radius:10px;
+            position: relative;
+            max-height: 100vh;
+            overflow-y: scroll;
+          }
+          .mm.popup {
+            display: none;
+            position:fixed;
+            z-index: 999999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+          
+          .mm.popup .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+          }
+          .mm .header-logo {
+            text-align: center;
+          }
+          .mm .header-title {
+            font-size: 48px;
+            margin:0;
+            font-weight:700;
+            text-align: center;
+          }
+          .mm .popup-content-area p {
+            font-size: 22px;
+            text-align: center;
+            margin:0;
+          }
+          .mm .pop-up-card {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            padding-top: 30px;
+            flex-wrap: wrap;
+          }
+          .mm .popup-card {
+            background-color: #fff;
+            padding:30px 30px 40px 30px;
+            box-shadow: 5px 5px 10px 5px #dfd9d9;
+            border-radius:20px;
+            flex:1 1 calc(50% - 30px);
+            max-width: calc(50% - 30px);
+            position: relative;
+          }
+          .mm .card-logo {
+            text-align: center;
+          }
+          /* .popup-card h3 {
+            font-size: 26px;
+            text-align: center;
+            font-weight: 700;
+            margin:0;
+            padding-top: 20px;
+            color: #000;
+          } */
+          .popup-card h3{
+            font-size: 26px;
+            text-align: center;
+            font-weight: 700;
+            margin: 0;
+            padding-top: 20px;
+            color: #000;
+            min-height: 113px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          }
+          .mm .pop-up-card .card-logo .icon {
+              height: 75px;
+              width:auto;
+            }
+          .mm .popup-card ul {
+            list-style:none;
+            padding:0;
+            margin-bottom: 50px;
+          }
+          .popup-card ul li {
+            font-size: 18px;
+            position: relative;
+            padding-left:25px;
+          }
+          .popup-card ul li::before {
+            content: "\f00c";
+            font-family: "FontAwesome";
+            color: #ff5c7b;
+            position: absolute;
+            left: 0;
+          }
+          /* .card-btn{
+            text-align: center;
+            margin-top:50px;
+          } */
+          /* .card-btn {
+              position: absolute;
+              transform: translate(-50%,-100%);
+              bottom: 0;
+              left: 50%;
+              right: 50%;
+              width: 100%;
+            } */
+            .card-btn {
+              position: absolute;
+              transform: translate(-50%,-100%);
+              bottom: 0;
+              left: 50%;
+              right: 50%;
+              width: 100%;
+              text-align: center;
+            }
+          .card-btn a {
+            background-color: rgba(255,92,123,1);
+            border-radius:30px;
+            padding:12px 35px;
+            color: #fff;
+            text-decoration:none;
+            font-size: 18px;
+          }
+  @media screen and (max-width: 919px){
+     #openPopupBtn {
+              font-size: 20px;
+              padding: 12px 0px;
+              background-color: transparent;
+              border: none;
+              color: #707070;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              cursor: pointer;
+            }
+  }
+          
+          @media screen and (max-width: 992px) {
+            .mm.popup .close {
+              top: -5px;
+            }
+            .mm .popup-content {
+              padding:30px 20px;
+            }
+            .mm .header-logo{
+              display:none;
+            }
+            .mm .header-title {
+              font-size: 24px;
+              line-height: 30px;
+            }
+            .mm .pop-up-card {
+              padding-top: 15px;
+            }
+            .mm .pop-up-card .card-btn {
+              margin-top: 30px;
+            }
+            .popup-card h3 {
+              padding-top: 10px;
+              line-height: 30px;
+              min-height:50px;
+            }
+            .mm .popup-content-area p {
+              font-size: 16px;
+            }
+            .mm .popup-card {
+              flex:1 1 calc(100% - 0px);
+              max-width: calc(100% - 0px);
+              margin-bottom: 20px;
+              padding: 20px 20px 30px;
+            }
+            .popup-card ul li {
+              font-size: 16px;
+            }
+            .card-btn a {
+              padding:10px 20px;
+              font-size: 16px;
+            }
+            .mm .pop-up-card .card-logo .icon {
+              width: 70px;
+              height:auto;
+            }
+            
+          }
+      /* Product page css by Raj 06-05-2025 */
+     /* .product-single .invx-custom-gallery-slider .swiper-slide{
+        pointer-events: none;
+      } */
+
+      /* Mattress Matchmaker Popup CSS End */
 @media (max-width: 450px) {
   .invx-mega-menu{
   overflow: scroll !important;
@@ -161,13 +391,77 @@
               | default: '/pages/mattress-matchmaker'
               | url_escape
             -%}
-            <a
+             <!-- <a
               class="nav-link"
               href="{{ matchMakerLink }}"
               aria-label="Read more about mattress match maker"
             >
               {{- section.settings.match_maker_label -}}
-            </a>
+            </a>  -->
+            <!-- Trigger button -->
+            <button id="openPopupBtn">Mattress Matchmaker</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Popup container for Mattress Matchmaker -->
+<div id="customPopup" class="mm popup">
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <div class="popup-content-area">
+      <div class="header-logo">
+        <img
+          src="{{ 'popup-logo.png' | asset_img_url: 'master' }}"
+          alt="bed"
+          width="200"
+          height="auto"
+          loading="lazy"
+          class="icon">
+      </div>
+      <h2 class="header-title">Find Your Perfect Mattress</h2>
+      <p>Choose Your Personalized Shopping Experience</p>
+      <div class="pop-up-card">
+        <div class="popup-card">
+          <div class="card-logo">
+            <img
+              src="{{ 'bed-1.5x.png' | asset_img_url: 'master' }}"
+              alt="bed"
+              width="80"
+              height="auto"
+              loading="lazy"
+              class="icon">
+          </div>
+          <h3>Online <br> Matchmaker</h3>
+          <ul>
+            <li>Quick 2-minute questionnaire</li>
+            <li>Shop from home</li>
+            <li>Instant recommendations</li>
+          </ul>
+          <div class="card-btn">
+            <a href="{{ shop.url }}/pages/mattress-matchmaker">Start Online Quiz</a>
+          </div>
+        </div>
+        <div class="popup-card">
+          <div class="card-logo">
+            <img
+              src="{{ 'moon.png' | asset_img_url: 'master' }}"
+              alt="bed"
+              width="100"
+              height="auto"
+              loading="lazy"
+              class="icon">
+          </div>
+          <h3>In-Store Pressure Mapping</h3>
+          <ul>
+            <li>Advanced pressure point analysis</li>
+            <li>Personalized guidance</li>
+            <li>Try before you buy</li>
+          </ul>
+          <div class="card-btn">
+            <a href="{{ shop.url }}/pages/in-store-matchmaker">Book In-Store Demo</a>
           </div>
         </div>
       </div>
@@ -267,6 +561,23 @@
         slideDown(element);
       }
     }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const popup = document.getElementById("customPopup");
+    const btn = document.getElementById("openPopupBtn");
+    const close = popup.querySelector(".close");
+  
+    btn.addEventListener("click", () => popup.style.display = "block");
+    close.addEventListener("click", () => popup.style.display = "none");
+  
+    window.addEventListener("click", function(event) {
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    });
   });
 </script>
 

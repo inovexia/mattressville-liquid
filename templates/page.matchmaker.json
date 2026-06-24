@@ -1,12 +1,1 @@
-{
-  "sections": {
-    "matchmaker": {
-      "type": "main-page-matchmaker",
-      "settings": {
-      }
-    }
-  },
-  "order": [
-    "matchmaker"
-  ]
-}
+{"sections":{"matchmaker":{"type":"main-page-matchmaker","settings":{}}},"order":["matchmaker"]}

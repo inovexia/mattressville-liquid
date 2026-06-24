@@ -9,7 +9,7 @@
               <a href="#expand" class="expand">Show more details</a>
               <a href="#collapse" class="collapse">Show less details</a> 
 {% endcomment %}
-{{ 'shipping-areas.css' | asset_url | stylesheet_tag }}
+{{ 'shipping-areas.aio.min.css' | asset_url | stylesheet_tag }}
 {%- if product.metafields.custom.product_shipping_areas.value.size > 0 -%}
   <div class="shipping-areas">
     <p>

@@ -1,5 +1,5 @@
 {% comment %} 
-  Renders a product media gallery. Should be used with 'media-gallery.js'
+  Renders a product media gallery. Should be used with 'media-gallery.aio.min.js'
   Also see 'product-media-modal'
 
   Accepts: 
@@ -45,11 +45,29 @@
 
     <style>
 
-#lg-outer-3{
+#lg-outer-3,
+#lg-outer-4 {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+body .lg-toolbar .lg-icon,
+body .lg-next,
+body .lg-prev {
+  z-index: 99999 !important;
+  display: block !important;
+  opacity: 1 !important;  
+}
+
+.invx-custom-gallery-slider .swiper-button-next svg, .invx-custom-gallery-slider .swiper-button-prev svg {
   display: none;
 }
-      #lg-outer-4{
-  display: none;
+#lg-close-2 {
+  background-color: #ff5c7b;
+  color: #fff;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
       
@@ -88,10 +106,27 @@
 </div>
 
 <script>
- document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('.invx-custom-gallery-slider').forEach((gallery) => {
-   
-    const mainSwiper = new Swiper(gallery.querySelector('.mySwiperMain'), {
+    const thumbsEl = gallery.querySelector('.mySwiperSmall');
+    const mainEl = gallery.querySelector('.mySwiperMain');
+
+    if (!thumbsEl || !mainEl) return;
+
+    const thumbsSwiper = new Swiper(thumbsEl, {
+      slidesPerView: 4,
+      spaceBetween: 10,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+        768: { slidesPerView: 3 },
+        480: { slidesPerView: 2 }
+      }
+    });
+
+    const mainSwiper = new Swiper(mainEl, {
+      loop: true,
+      spaceBetween: 10,
       navigation: {
         nextEl: gallery.querySelector('.swiper-button-next'),
         prevEl: gallery.querySelector('.swiper-button-prev'),
@@ -100,26 +135,33 @@
         el: gallery.querySelector('.swiper-pagination'),
         clickable: true,
       },
+      thumbs: {
+        swiper: thumbsSwiper
+      },
+      breakpoints: {
+        768: { slidesPerView: 1 },
+        480: { slidesPerView: 1 }
+      }
     });
 
-    
-    const thumbsSwiper = new Swiper(gallery.querySelector('.mySwiperSmall'), {
-      slidesPerView: 4,
-      spaceBetween: 10,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-    });
-
-    mainSwiper.thumbs.swiper = thumbsSwiper;
-
-   
     const mainSlider = gallery.querySelector('.mySwiperMain .swiper-wrapper');
-    if (mainSlider && !mainSlider.classList.contains('lg-initialized')) {
+
+    if (mainSlider && typeof lightGallery === 'function' && !mainSlider.dataset.lgInitialized) {
       lightGallery(mainSlider, {
         selector: 'a[rel="lightbox[gallery]"]',
+        download: false,
+        mobileSettings: {
+          controls: true,
+          showCloseIcon: true,
+          download: false,
+          rotate: false
+        }
       });
+      mainSlider.dataset.lgInitialized = "true";
     }
   });
 });
 
 </script>
+
+

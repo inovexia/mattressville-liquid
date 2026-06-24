@@ -3,7 +3,7 @@
     --footer-mobile-bg: {{ section.settings.background_color }};
   }
 {% endstyle %}
-{{ 'footer-mobile.css' | asset_url | stylesheet_tag }}
+{{ 'footer-mobile.aio.min.css' | asset_url | stylesheet_tag }}
 <div class="page-width">
   <div class="accordion">
     {%- for block in section.blocks -%}
@@ -134,6 +134,7 @@
       <div class="pay-safe">
         <div class="payment-mods">
           {%- if section.settings.enable_google_pay_payment -%}
+            <!-- <img src="{{ 'gpay-logo.png' | asset_url }}" alt="GooglePay Logo"  loading="lazy" width="" height="25"> -->
             <img
               src="{{ 'google_pay' | payment_type_img_url }}"
               alt="google_pay"
@@ -142,6 +143,7 @@
               width="60" />
           {%- endif -%}
           {%- if section.settings.enable_affirm_payment -%}
+            <!-- <img src="{{ 'afrm-logo.png' | asset_url }}" alt="Affirm Logo"  loading="lazy" width="" height="25"> -->
             <img
               src="{{ 'affirm' | payment_type_img_url }}"
               alt="affirm"
@@ -150,6 +152,7 @@
               width="60" />
           {%- endif -%}
           {%- if section.settings.enable_opay_payment -%}
+            <!-- <img src="{{ 'opay.png' | asset_url }}" alt="OPay Logo"  loading="lazy" width="" height="25"> -->
             <img
               src="{{ 'opay' | payment_type_img_url }}"
               alt="opay"
@@ -190,6 +193,7 @@
               width="60" />
           {%- endif -%}
           {%- if section.settings.enable_master_payment -%}
+            <!-- <img src="{{ 'master-card-logo.png' | asset_url }}" alt="Master Card Logo"  loading="lazy" width="" height="25"> -->
             <img
               src="{{ 'master' | payment_type_img_url }}"
               alt="master"
@@ -206,6 +210,7 @@
               width="60" />
           {%- endif -%}
           {%- if section.settings.enable_visa_payment -%}
+            <!-- <img src="{{ 'visa-logo.png' | asset_url }}" alt="Visa Logo"  loading="lazy" width="" height="25"> -->
             <img
               src="{{ 'visa' | payment_type_img_url }}"
               alt="visa"
@@ -214,6 +219,7 @@
               width="60" />
           {%- endif -%}
           {%- if section.settings.enable_paypal_payment -%}
+            <!-- <img src="{{ 'paypal-logo.png' | asset_url }}" alt="PayPal Logo"  loading="lazy" width="" height="25"> -->
             <img
               src="{{ 'paypal' | payment_type_img_url }}"
               alt="paypal"

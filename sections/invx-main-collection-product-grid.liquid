@@ -1,15 +1,15 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.aio.min.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.aio.min.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.image_shape == 'blob' %}
-  {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
+  {{ 'mask-blobs.aio.min.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 
 {%- if section.settings.enable_quick_add -%}
-  {{ 'quick-add.css' | asset_url | stylesheet_tag }}
-  <script src="{{ 'quick-add.js' | asset_url }}" defer></script>
-  <script src="{{ 'product-form.js' | asset_url }}" defer></script>
+  {{ 'quick-add.aio.min.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'quick-add.aio.min.js' | asset_url }}" defer></script>
+  <script src="{{ 'product-form.aio.min.js' | asset_url }}" defer></script>
 {%- endif -%}
 
 {%- style -%}
@@ -97,6 +97,69 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+    /* Comfort Scale legend */
+@media screen and (max-width:767px) {
+  .comfort-scale-legend{
+    display:none;
+  }
+}
+  #FacetsWrapperMobile .comfort-scale-legend {
+    display:block;
+    width: 90%;
+    margin: 0px auto 30px;
+}
+.comfort-scale-legend {
+  padding: 15px;
+  font-family: sans-serif;
+  background-color: #fff;
+  border: 1px solid #00000020;
+  border-radius: 15px;
+}
+.comfort-scale-legend h2{
+  font-size: 24px; 
+  font-weight: bold; 
+  margin-bottom: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+.comfort-scale-legend ul{
+  list-style: none; 
+  padding: 0; 
+  margin: 0;
+}
+.comfort-scale-legend ul li{
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 16px;
+}
+.comfort-scale-legend ul li div{
+  margin-right: 10px;
+}
+.comfort-scale-legend ul li span{
+  width:30px; 
+  min-width:30px;
+  height:30px; 
+  border-radius: 6px; 
+  display: inline-block; 
+  margin-right: 14px;
+}
+.comfort-scale-legend ul li p{
+  margin: 0;
+  font-size: 14px;
+}
+.comfort-scale-legend ul li:first-child span{
+  background-color: #78b0de; 
+}
+.comfort-scale-legend ul li:nth-child(2) span{
+  background-color: #3fb547; 
+}
+.comfort-scale-legend ul li:nth-child(3) span{
+  background-color: #db822a; 
+}
+.comfort-scale-legend ul li:nth-child(4) span{
+  background-color: #c22121; 
+}
+  /* End Comform Scale legend */
 {%- endstyle -%}
 
 {% comment %} 
@@ -110,8 +173,8 @@
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
 
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
-      {{ 'component-facets.css' | asset_url | stylesheet_tag }}
-      <script src="{{ 'facets.js' | asset_url }}" defer></script>
+      {{ 'component-facets.aio.min.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'facets.aio.min.js' | asset_url }}" defer></script>
       {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
         <aside
           aria-labelledby="verticalTitle"
@@ -147,12 +210,56 @@
               </a>
             {% endif %}
           </div>
+        {% unless collection.handle == 'mattress-protectors' or
+              collection.handle == 'accessories' or
+              collection.handle == 'pillows' or
+              collection.handle == 'bedding-essentials' or
+              collection.handle == 'box-springs' or
+              collection.handle == 'mattress-toppers' or
+              collection.handle == 'adjustable-beds' or 
+              collection.handle == 'furniture-beds' or 
+              collection.handle == 'bed-frames' %}
+            <div class="comfort-scale-legend color-scheme-1">
+              <h2 style="">Comfort Scale</h2>
+              <ul>
+                <li>
+                  <span></span>
+                  <div>
+                    <strong>Soft</strong><br>
+                  </div>
+                  <p>Plush and contouring</p>
+                </li>
+                <li>
+                  <span></span>
+                  <div>
+                    <strong>Medium</strong>
+                  </div>
+                  <p>Balanced comfort</p>
+                </li>
+                <li>
+                  <span></span>
+                  <div>
+                    <strong>Firm</strong><br>
+                  </div>
+                  <p>Solid support, slight give</p>
+                </li>
+                <li>
+                  <span></span>
+                  <div>
+                    <strong>Extra Firm</strong><br>
+                  </div>
+                  <p>Maximum support</p>
+                </li>
+              </ul>
+            </div>
+          {% endunless %}
 
         </aside>
       {%- endif -%}
       <div
         class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         id="ProductGridContainer"
+        data-collection-title="{{ collection.title | escape }}"
         {% if settings.animations_reveal_on_scroll %}
         data-cascade
         {% endif %}>

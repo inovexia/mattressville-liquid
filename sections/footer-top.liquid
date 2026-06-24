@@ -2,6 +2,44 @@
   :root  {
     --footer-top-bg: {{ section.settings.background_color }};
   }
+  .matchmaker-grid {
+    max-width: 405px;
+}
+  .footer-contact.match {
+    margin-top: 0;
+}
+  body .footer-contact.match-grid {
+    margin-top: 0;
+}
+  span.match-title.section-title {
+    color: inherit;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 27px;
+    position: relative;
+    text-decoration: none;
+}
+  span.match-title.section-title::after {
+    border-bottom: 2px solid var(--accent-color);
+    bottom: -8px;
+    content: "";
+    display: block;
+    height: 0;
+    left: 0;
+    position: absolute;
+    width: 80px;
+}
+  .match-link {
+  margin-top: 20px;
+}
+  .match-link .w-link a {
+    text-decoration: none;
+    color: #000000;
+}
+  .match-link .w-link a i {
+  margin-right: 10px;
+  color: #ff5c7b;
+}
 {% endstyle %}
 {% javascript %}
   /* Yotpo review badge * /
@@ -18,7 +56,7 @@
   */
 {% endjavascript %}
 
-{{ 'footer-top.css' | asset_url | stylesheet_tag }}
+{{ 'footer-top.aio.min.css' | asset_url | stylesheet_tag }}
 <div class="page-width">
   <div class="footer-inner">
     {%- for block in section.blocks -%}
@@ -91,7 +129,27 @@
   </div>
   
   <div class="footer-badges">
-    {%- for block in section.blocks -%}
+    <div class="matchmaker-grid">
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'about_column' -%}
+      <div class="footer-contact match-grid">
+              <span class="match-title section-title">{{ block.settings.matchmaker_title | escape }}</span>
+              <p>{{ block.settings.matchmaker_description | escape }}</p>
+              <div class="match-link">
+                <div class="w-link">
+                  <a href="{{ block.settings.matchmaker_quiz_link | escape }}"><i class="fa-solid fa-arrow-right-long"></i>{{ block.settings.matchmaker_quiz_link_text | escape }}</a>
+                </div>
+                <div class="w-link">
+                  <a href="{{ block.settings.in_store_matchmaker_link | escape }}"><i class="fa-solid fa-arrow-right-long"></i>{{ block.settings.in_store_matchmaker_link_text | escape }}</a>
+                </div>
+              </div>
+            </div>
+        {%- endcase -%}
+    {%- endfor -%}
+    </div>
+    <div class="badge-grid">
+      {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when 'badge_logos' -%}
           <div class="badge-image">
@@ -127,6 +185,7 @@
           </div>
       {%- endcase -%}
     {%- endfor -%}
+    </div>
     
   </div>
 
@@ -197,7 +256,41 @@
             "id": "contact_mail",
             "label": "Contact Mail",
             "default": "info@mattressville.ca"
-          }
+          },
+          {
+            "type": "text",
+            "id": "matchmaker_title",
+            "label": "Matchmaker Title",
+            "default": "Mattress Matchmaker"
+          },
+          {
+            "type": "textarea",
+            "id": "matchmaker_description",
+            "label": "Matchmaker Description",
+            "default": "Find your perfect mattress online or in store with our Mattress Matchmaker"
+          },
+           {
+            "type": "text",
+            "id": "matchmaker_quiz_link_text",
+            "label": "Matchmaker Quiz Link Text",
+            "default": "Online Matchmaker Quiz"
+          },
+          {
+            "type": "url",
+            "id": "matchmaker_quiz_link",
+            "label": "Online Matchmaker Quiz Link"
+          },
+           {
+            "type": "text",
+            "id": "in_store_matchmaker_link_text",
+            "label": "In Store Matchmaker Link Text",
+            "default": "In-Store Matchmaker Demo"
+          },
+          {
+            "type": "url",
+            "id": "in_store_matchmaker_link",
+            "label": "In-Store Matchmaker Link"
+          },
         ]
       },
       {
@@ -257,6 +350,24 @@
             "id": "locations_b",
             "label": "Locations B"
           },          
+        ]
+      },
+       {
+        "type": "matchmaker_column",
+        "name": "Matchmaker Column",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "Brands"
+          },
+          {
+            "type": "link_list",
+            "id": "brands_menu",
+            "label": "Brands Menu"
+          }
         ]
       },
       {

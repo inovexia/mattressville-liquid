@@ -1,0 +1,385 @@
+{% doc %}
+  @prompt
+    I want a text section with html ellipsis or whatever its called to sections where text is too long. The goal is to have a + button to expand or collapse the text.that way longer text can be added but only the first paragraph would be visible. I would also like to control so this is available only on desktop or mobile or both...this is especially helpful on mobile
+    
+    
+    , I want the option for the button styling to be removed. a simple  "read more +" text that would be in link colour(blue), I want to be able to control how much of the text is shown and how much is hidden. everything else is good
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-expandable-text-{{ ai_gen_id }} {
+    padding: {{ block.settings.padding }}px;
+    background-color: {{ block.settings.background_color }};
+    max-width: 100%;
+  }
+
+  .ai-expandable-text__content-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .ai-expandable-text__content-{{ ai_gen_id }}.collapsed {
+    max-height: {{ block.settings.collapsed_height }}px;
+  }
+
+  .ai-expandable-text__content-{{ ai_gen_id }}.expanded {
+    max-height: none;
+  }
+
+  .ai-expandable-text__text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.font_size }}px;
+    line-height: 1.6;
+  }
+
+  .ai-expandable-text__gradient-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, {{ block.settings.background_color }});
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-expandable-text__content-{{ ai_gen_id }}.expanded .ai-expandable-text__gradient-{{ ai_gen_id }} {
+    opacity: 0;
+  }
+
+  .ai-expandable-text__toggle-{{ ai_gen_id }} {
+    margin-top: 12px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: {{ block.settings.button_font_size }}px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .ai-expandable-text__toggle-{{ ai_gen_id }}.styled {
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    border-radius: {{ block.settings.button_border_radius }}px;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-expandable-text__toggle-{{ ai_gen_id }}.styled:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+  }
+
+  .ai-expandable-text__toggle-{{ ai_gen_id }}.link-style {
+    color: {{ block.settings.link_color }};
+    text-decoration: none;
+  }
+
+  .ai-expandable-text__toggle-{{ ai_gen_id }}.link-style:hover {
+    text-decoration: underline;
+  }
+
+  {% if block.settings.show_on == 'mobile' %}
+    @media screen and (min-width: 750px) {
+      .ai-expandable-text__toggle-{{ ai_gen_id }},
+      .ai-expandable-text__gradient-{{ ai_gen_id }} {
+        display: none;
+      }
+      .ai-expandable-text__content-{{ ai_gen_id }}.collapsed {
+        max-height: none;
+      }
+    }
+  {% endif %}
+
+  {% if block.settings.show_on == 'desktop' %}
+    @media screen and (max-width: 749px) {
+      .ai-expandable-text__toggle-{{ ai_gen_id }},
+      .ai-expandable-text__gradient-{{ ai_gen_id }} {
+        display: none;
+      }
+      .ai-expandable-text__content-{{ ai_gen_id }}.collapsed {
+        max-height: none;
+      }
+    }
+  {% endif %}
+{% endstyle %}
+
+<expandable-text-{{ ai_gen_id }} class="ai-expandable-text-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-expandable-text__content-{{ ai_gen_id }} collapsed" data-content>
+    <div class="ai-expandable-text__text-{{ ai_gen_id }}">
+      {{ block.settings.text }}
+    </div>
+    <div class="ai-expandable-text__gradient-{{ ai_gen_id }}"></div>
+  </div>
+  
+  <button 
+    class="ai-expandable-text__toggle-{{ ai_gen_id }} {% if block.settings.button_style == 'styled' %}styled{% else %}link-style{% endif %}"
+    data-toggle
+    aria-expanded="false"
+  >
+    <span data-expand-text>{{ block.settings.expand_text }}</span>
+    <span data-collapse-text style="display: none;">{{ block.settings.collapse_text }}</span>
+  </button>
+</expandable-text-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ExpandableText{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.content = this.querySelector('[data-content]');
+        this.toggle = this.querySelector('[data-toggle]');
+        this.expandText = this.querySelector('[data-expand-text]');
+        this.collapseText = this.querySelector('[data-collapse-text]');
+        this.isExpanded = false;
+      }
+
+      connectedCallback() {
+        this.checkIfExpandable();
+        this.toggle.addEventListener('click', () => this.toggleContent());
+        window.addEventListener('resize', () => this.checkIfExpandable());
+      }
+
+      checkIfExpandable() {
+        const showOn = '{{ block.settings.show_on }}';
+        const isMobile = window.innerWidth < 750;
+        
+        if (showOn === 'mobile' && !isMobile) {
+          this.toggle.style.display = 'none';
+          return;
+        }
+        
+        if (showOn === 'desktop' && isMobile) {
+          this.toggle.style.display = 'none';
+          return;
+        }
+
+        const collapsedHeight = {{ block.settings.collapsed_height }};
+        const actualHeight = this.content.scrollHeight;
+        
+        if (actualHeight <= collapsedHeight) {
+          this.toggle.style.display = 'none';
+        } else {
+          this.toggle.style.display = 'inline-flex';
+        }
+      }
+
+      toggleContent() {
+        this.isExpanded = !this.isExpanded;
+        
+        if (this.isExpanded) {
+          this.content.classList.remove('collapsed');
+          this.content.classList.add('expanded');
+          this.expandText.style.display = 'none';
+          this.collapseText.style.display = 'inline';
+          this.toggle.setAttribute('aria-expanded', 'true');
+        } else {
+          this.content.classList.remove('expanded');
+          this.content.classList.add('collapsed');
+          this.expandText.style.display = 'inline';
+          this.collapseText.style.display = 'none';
+          this.toggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    }
+
+    customElements.define('expandable-text-{{ ai_gen_id }}', ExpandableText{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Expandable text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Add your longer text content here. This text will be collapsible on the selected devices. You can add multiple paragraphs and format the text as needed.</p><p>This is a second paragraph to demonstrate how the expandable text works with longer content. The text will be truncated based on your height settings.</p>"
+    },
+    {
+      "type": "range",
+      "id": "collapsed_height",
+      "min": 50,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Collapsed height",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "link",
+          "label": "Link style"
+        },
+        {
+          "value": "styled",
+          "label": "Button style"
+        }
+      ],
+      "default": "link"
+    },
+    {
+      "type": "text",
+      "id": "expand_text",
+      "label": "Expand text",
+      "default": "Read more +"
+    },
+    {
+      "type": "text",
+      "id": "collapse_text",
+      "label": "Collapse text",
+      "default": "Read less -"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link color",
+      "default": "#0000EE"
+    },
+    {
+      "type": "header",
+      "content": "Styled button"
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Background color",
+      "default": "#ff5c7b"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Hover background color",
+      "default": "#d7355c"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Display settings"
+    },
+    {
+      "type": "select",
+      "id": "show_on",
+      "label": "Show expand/collapse on",
+      "options": [
+        {
+          "value": "both",
+          "label": "Both mobile and desktop"
+        },
+        {
+          "value": "mobile",
+          "label": "Mobile only"
+        },
+        {
+          "value": "desktop",
+          "label": "Desktop only"
+        }
+      ],
+      "default": "mobile"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#212529"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Expandable text"
+    }
+  ]
+}
+{% endschema %}

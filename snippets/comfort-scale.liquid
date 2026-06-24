@@ -30,7 +30,7 @@
   endif
 %}
 {% if level > 0 %}
-  {{ 'comfort-scale.css' | asset_url | stylesheet_tag }}
+  {{ 'comfort-scale.aio.min.css' | asset_url | stylesheet_tag }}
     <div class="comfort-scale">
     {% comment %} {% if is_card == false %}
                   <h4>Comfort Scale</h4>
@@ -39,7 +39,7 @@
     <div class="firm-meter">
       <h6 class="firmness">
         <span class="d-block">Soft</span>
-        <span class="d-block">Firm</span>
+        <span class="d-block">X-Firm</span>
       </h6>
       <div class="meter level-{{ level }}">
         <span class="meter-block"></span>

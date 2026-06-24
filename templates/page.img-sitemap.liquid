@@ -1,0 +1,107 @@
+{%- layout none -%} 
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  {%- comment -%} Product Images {%- endcomment -%}
+  {% paginate collections.all.products by 1000 %}
+    {% for product in collections.all.products %}
+      
+      {% for image in product.images %}
+        <image:image>
+          <image:loc>
+            {{ image.src | img_url: 'master' | prepend: 'https:' }}
+          </image:loc>
+          <image:title>
+            {{ product.title | xml_escape }}
+          </image:title>
+          <image:caption>
+            {{ product.title }} - {{ shop.name }}
+          </image:caption>
+        </image:image>
+      {% endfor %}
+
+      {% for variant in product.variants %}
+        {% if variant.image %}
+          <image:image>
+            <image:loc>
+              {{ variant.image | img_url: 'master' | prepend: 'https:' }}
+            </image:loc>
+            <image:title>
+              {{ product.title }} - {{ variant.title | xml_escape }}
+            </image:title>
+            <image:caption>
+              {{ product.title }} - {{ variant.title }} - {{ shop.name }}
+            </image:caption>
+          </image:image>
+        {% endif %}
+      {% endfor %}
+
+    {% endfor %}
+  {% endpaginate %}
+
+  {%- comment -%} Blog Article Images {%- endcomment -%}
+  {% for blog in blogs %}
+    {% paginate blog.articles by 500 %}
+      {% for article in blog.articles %}
+        {% if article.image %}
+          <image:image>
+            <image:loc>
+              {{ article.image.src | img_url: 'master' | prepend: 'https:' }}
+            </image:loc>
+            <image:title>
+              {{ article.title | xml_escape }}
+            </image:title>
+            <image:caption>
+              {{ article.title }} - {{ shop.name }}
+            </image:caption>
+          </image:image>
+        {% endif %}
+      {% endfor %}
+    {% endpaginate %}
+  {% endfor %}
+
+  {%- comment -%} Collection Images {%- endcomment -%}
+  {% for collection in collections %}
+    {% if collection.image %}
+      <image:image>
+        <image:loc>
+          {{ collection.image.src | img_url: 'master' | prepend: 'https:' }}
+        </image:loc>
+        <image:title>
+          {{ collection.title | xml_escape }}
+        </image:title>
+        <image:caption>
+          {{ collection.title }} - {{ shop.name }}
+        </image:caption>
+      </image:image>
+    {% endif %}
+  {% endfor %}
+
+  {%- comment -%} Page Images (Extracted from Content) {%- endcomment -%}
+  {% for page in pages %}
+    {% if page.content contains '<img' %}
+      {% assign images = page.content | split: '<img' %}
+      
+      {% for img_tag in images %}
+        {% if img_tag contains 'src="' %}
+          {% assign img_src = img_tag | split: 'src="' | last | split: '"' | first %}
+          
+          <image:image>
+            <image:loc>
+              {{ img_src | prepend: shop.url }}
+            </image:loc>
+            <image:title>
+              {{ page.title | xml_escape }}
+            </image:title>
+            <image:caption>
+              {{ page.title }} - {{ shop.name }}
+            </image:caption>
+          </image:image>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+</urlset>

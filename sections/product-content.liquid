@@ -1,4 +1,4 @@
-{{ 'product-content.css' | asset_url | stylesheet_tag }}
+{{ 'product-content.aio.min.css' | asset_url | stylesheet_tag }}
 <div class="page-width">
   <div class="inner">
     <div class="tabs" role="tablist">
@@ -131,13 +131,16 @@
         <div class="tab-container">
           {%-if product.metafields.meta_data.features_tab != blank -%}
             {{ product.metafields.meta_data.features_tab }}
-          {% else %}
+          {%- endif -%}
+
           {%-if product.metafields.custom.feature_product_info_table != blank -%}
             {{ product.metafields.custom.feature_product_info_table }}
           {%- endif -%}
+
             {%-if product.metafields.custom.feature_mixed_content != blank -%}
               {{ product.metafields.custom.feature_mixed_content | metafield_tag }}
             {%- endif -%}
+
             {% assign feature_image_id = product.metafields.custom.feature_file_content %}
             {% if feature_image_id %}
               {% assign feature_media_image = feature_image_id | file_url %}
@@ -145,7 +148,7 @@
                 <img src="{{ feature_media_image | image_url: 'master' }}" alt="Product Image" style="" width="100%" height="auto">
               {% endif %}
             {% endif %}
-          {%- endif -%}
+      
         </div>
       </div>
       <div id="tabpane-reviews" class="tab-pane">

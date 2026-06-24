@@ -65,6 +65,11 @@
   --shadow-opacity: var(--media-shadow-opacity);
   --shadow-visible: var(--media-shadow-visible);
 }
+/* CSS Added by Raj 26-05-2025 */
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif !important;
+}
+/* End */
 .no-js:not(html) {
   display: none !important;
 }
@@ -80,10 +85,16 @@ html.no-js .no-js-inline {
 html.no-js .no-js-hidden {
   display: none !important;
 }
-.page-width {
+/* Raj 19/08/2025 */
+/* .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
   padding: 0 1.5rem;
+} */
+ .page-width {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0;
 }
 body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   max-width: 100%;
@@ -100,8 +111,21 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   padding-right: 3rem;
 }
 @media screen and (min-width: 750px) {
-  .page-width {
+  /* CSS added by Raj 28-05-2025 */
+  body::-webkit-scrollbar {
+  width:6px;
+}
+  body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+}
+  /* End */
+  /* Raj 19/08/2025 */
+  /* .page-width {
     padding: 0 5rem;
+  } */
+   .page-width {
+    padding: 0;
   }
   .header.page-width,
   .utility-bar__grid.page-width {
@@ -119,10 +143,17 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   }
 }
 @media screen and (min-width: 990px) {
-  .header:not(.drawer-menu).page-width {
+  /* Commented by Raj 16-09-2025 */
+  /* .header:not(.drawer-menu).page-width {
     padding-left: 5rem;
     padding-right: 5rem;
+  } */
+  .header:not(.drawer-menu).page-width {
+    padding-left: 0;
+    padding-right: 0;
   }
+  /* End comment */
+
   .page-width--narrow {
     max-width: 72.6rem;
     padding: 0;
@@ -3325,10 +3356,98 @@ header #invx-announcement-bar a {
 }
 
 /* Wishlist CSS */
-header span.st-number.st-js-number {
-  font-size: 0.9rem;
+body .st-number.st-js-number {
+  font-size: 0.9rem !important;
 }
-header .st-wishlist-details-button[data-type="manually"] .st-number {
-  height: 1.7rem;
-  width: 1.7rem;
+body .st-number {
+  height: 1.7rem !important;
+  width: 1.7rem !important;
 }
+
+/* In Store CSS */
+.section-template--22581712847156__ss_feature_1_qdMUHw-settings .box .box__content-wrapper .box__description{
+  font-size:16px;
+  padding-top:15px;
+}
+
+/* Product Page CSS added by Raj 20-05-2025 */
+@media only screen and (max-width: 700px){
+  #shopify-block-affirm_pay_over_time_messaging_product_block_3HfxRh {
+  display: none;
+}
+  .slider-mobile-gutter .slider-buttons {
+  display: none;
+}
+}
+@media only screen and (min-width: 701px){
+ #shopify-block-affirm_pay_over_time_messaging_product_block_WTFnUc {
+  display: none;
+}
+}
+@media screen and (min-width: 420px) and (max-width: 500px){
+  #shopify-section-template--22573392625972__multicolumn_Yk9bxe .multicolumn.color-scheme-1.gradient.background-none {
+  padding-top: 40px;
+}
+}
+@media screen and (min-width:992px) and (max-width: 1035px){
+ body header .header-bottom .main-nav .main-menu .nav-area .nav-item .nav-link {
+    font-size: 9px !important;
+  }
+}
+@media screen and (min-width:900px) and (max-width: 1200px){
+ body .home-slideshow-inner .home-slideshow-sidebar:after {
+        height: 101%;
+    }
+    .product-card-wrapper .card__heading, .product-card-wrapper .card_heading {
+    font-size: 12px;
+    height:60px;
+  }
+  body .product-card-wrapper .card__content .card__information .card-information .vendor-information .vendor-img {
+    max-width: 100px !important;
+}
+body .card__content .card__information .card-information .vendor-information {
+    flex: 1 0 140px;
+    max-width: 140px;
+}
+body .price--on-sale .price__sale .price-item.price-item--sale {
+    font-size: 14px;
+}
+    body header .header-bottom .main-nav .main-menu .nav-area .nav-item .nav-link {
+        font-size: 10px !important;
+    }
+}
+
+/* CSS Added by Raj 16-09-2025 */
+@media only screen and (max-width: 767px){
+.inline-richtext.h1{
+  font-size:26px;
+  line-height:36px;
+}
+ body .sidebar-content-container {
+    max-width: 95%;
+  }
+  .page-title.h0 {
+  font-size: 26px;
+  line-height: 36px;
+}
+#invx-announcement-bar .page-width {
+  max-width: 95%;
+}
+#shopify-section-sections--22573393641780__footer-mobile {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.accordion .header {
+  padding-left: 0;
+  padding-right: 0;
+}
+header .article-template__title {
+  font-size: 26px;
+  line-height: 36px;
+}
+.section .page-width {
+  max-width: 95%;
+}
+}
+
+

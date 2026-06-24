@@ -1,43 +1,119 @@
-{%- comment -%} 
-  # Caution! Please read https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt before proceeding to make changes to this file. 
-{% endcomment %}
-
+# ================================================================
+# Allow full access to major friendly crawlers
+# ================================================================
 User-agent: Googlebot
 Allow: /
+
 User-agent: Googlebot-Image
-Allow: /images/
+Allow: /
+
 User-agent: AdsBot-Google
 Allow: /
+
 User-agent: Google-Extended
 Allow: /
+
 User-agent: Bingbot
 Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
-{% for group in robots.default_groups %}
-{{ group.user_agent }}
+User-agent: SEMRushBot
+Allow: /
 
-{%- for rule in group.rules -%}
-    {{ rule }}
-{%- endfor -%}
+User-agent: DuckDuckBot
+Allow: /
 
+User-agent: Instagram
+Allow: /
 
+User-agent: LinkedInbot
+Allow: /
 
-  
-{%- if group.user_agent.value == '*' -%}
-{{ 'Disallow: /*?q=*' }}
-{{ 'Disallow: /*?sort_by=' }}
-{{ 'Disallow: /*?pr_prod_strat=' }}
-{{ 'Disallow: /*?filter.' }}
-{{ 'Disallow: /*?orderby=' }}
-{{ 'Disallow: /*?size=' }}
-{{ 'Disallow: /*?wordfence_lh=' }}
-{{ 'Disallow: /*.atom' }}
-{{ 'Disallow: /collections/*/*' }}
-{%- endif -%}
+User-agent: Twitterbot
+Allow: /
 
-  {%- if group.sitemap != blank -%}
-    {{ group.sitemap }}
-  {%- endif -%}
-{% endfor %}
+User-agent: Facebook External Hit
+Allow: /
+
+# ================================================================
+# General crawling rules for all bots
+# ================================================================
+User-agent: *
+Disallow: /admin/
+Disallow: /cart/
+Disallow: /carts/
+Disallow: /orders/
+Disallow: /checkouts/
+Disallow: /checkout/
+Disallow: /55867801757/checkouts/
+Disallow: /55867801757/orders/
+Disallow: /account/
+Disallow: /policies/
+Disallow: /search/
+Disallow: /a/downloads/
+Disallow: /recommendations/products/
+Disallow: /web-pixels-manager
+Disallow: /web-pixel-shopify-custom-pixel
+Disallow: /custom/web-pixel-shopify-custom-pixel@/
+Disallow: /cdn/wpm/
+Disallow: /.well-known/shopify/monorail
+Disallow: /419
+Disallow: /blocked
+Disallow: /apple-app-site-association
+
+# Block faceted navigation and duplicate content
+Disallow: /*?q=
+Disallow: /*?sort_by=
+Disallow: /*?filter.
+Disallow: /*?orderby=
+Disallow: /*?size=
+Disallow: /*?wordfence_lh=
+Disallow: /*?pr_prod_strat=
+Disallow: /*?oseid=
+Disallow: /*preview_theme_id
+Disallow: /*preview_script_id
+Disallow: /*.atom
+
+# Block collection and blog variations
+Disallow: /collections/*sort_by*
+Disallow: /collections/*+*
+Disallow: /collections/*%2B*
+Disallow: /collections/*%2b*
+Disallow: /collections/*filter*&*filter*
+Disallow: /blogs/*+*
+Disallow: /blogs/*%2B*
+Disallow: /blogs/*%2b*
+
+# ================================================================
+# Specific rules for other bots
+# ================================================================
+User-agent: Nutch
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: AhrefsSiteAudit
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: Pinterest
+Crawl-delay: 1
+
+# ================================================================
+# Sitemap
+# ================================================================
+Sitemap: https://mattressville.ca/sitemap.xml
+
+# ================================================================
+# AI Large Language Model crawling rules
+# ================================================================
+# LLM crawlers can find our policies at:
+# https://mattressville.ca/llms.txt

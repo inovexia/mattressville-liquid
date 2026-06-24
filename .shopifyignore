@@ -1,1 +1,4 @@
-package.json
+*.tmp*
+*.swp
+*.bak
+.DS_Store

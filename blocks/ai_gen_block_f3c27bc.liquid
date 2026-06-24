@@ -1,0 +1,519 @@
+{% doc %}
+  @prompt
+    three image blocks with description , first image is aligned left with text on the right, 2nd image is aligned right with text on left, and 3rd image is aligned left with text on right., I want to be able to change the size of the headlines and images. I also want to add a SECTION title and description
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-image-text-blocks-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.spacing_between_blocks }}px;
+    padding: {{ block.settings.section_padding }}px 0;
+  }
+
+  .ai-image-text-blocks__header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: {{ block.settings.header_spacing }}px;
+  }
+
+  .ai-image-text-blocks__section-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.section_title_size }}px;
+    color: {{ block.settings.section_title_color }};
+    margin: 0 0 {{ block.settings.section_title_spacing }}px 0;
+    font-weight: 700;
+  }
+
+  .ai-image-text-blocks__section-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.section_description_size }}px;
+    color: {{ block.settings.section_description_color }};
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .ai-image-text-blocks__section-description-{{ ai_gen_id }} p {
+    margin: 0 0 16px 0;
+  }
+
+  .ai-image-text-blocks__section-description-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-image-text-block-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: {{ block.settings.gap_between_content }}px;
+    flex-wrap: wrap;
+  }
+
+  .ai-image-text-block-{{ ai_gen_id }}--reverse {
+    flex-direction: row-reverse;
+  }
+
+  .ai-image-text-block__image-{{ ai_gen_id }} {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .ai-image-text-block__image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: {{ block.settings.image_height }}px;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    object-fit: cover;
+  }
+
+  .ai-image-text-block__image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: {{ block.settings.image_height }}px;
+    background-color: #f4f4f4;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-image-text-block__image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-image-text-block__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-image-text-block__content-{{ ai_gen_id }} {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .ai-image-text-block__heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.heading_spacing }}px 0;
+    font-weight: 700;
+  }
+
+  .ai-image-text-block__description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+  }
+
+  .ai-image-text-block__description-{{ ai_gen_id }} p {
+    margin: 0 0 16px 0;
+  }
+
+  .ai-image-text-block__description-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-image-text-blocks__section-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.section_title_size }}px * 0.8);
+    }
+
+    .ai-image-text-blocks__section-description-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.section_description_size }}px * 0.9);
+    }
+
+    .ai-image-text-block-{{ ai_gen_id }},
+    .ai-image-text-block-{{ ai_gen_id }}--reverse {
+      flex-direction: column;
+    }
+
+    .ai-image-text-block__image-{{ ai_gen_id }},
+    .ai-image-text-block__content-{{ ai_gen_id }} {
+      min-width: 100%;
+    }
+
+    .ai-image-text-block__image-{{ ai_gen_id }} img,
+    .ai-image-text-block__image-placeholder-{{ ai_gen_id }} {
+      height: {{ block.settings.image_height_mobile }}px;
+    }
+
+    .ai-image-text-block__heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size }}px * 0.8);
+    }
+
+    .ai-image-text-block__description-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.text_size }}px * 0.9);
+    }
+  }
+{% endstyle %}
+
+<div class="ai-image-text-blocks-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.section_title != blank or block.settings.section_description != blank %}
+    <div class="ai-image-text-blocks__header-{{ ai_gen_id }}">
+      {% if block.settings.section_title != blank %}
+        <h2 class="ai-image-text-blocks__section-title-{{ ai_gen_id }}">{{ block.settings.section_title }}</h2>
+      {% endif %}
+      {% if block.settings.section_description != blank %}
+        <div class="ai-image-text-blocks__section-description-{{ ai_gen_id }}">
+          {{ block.settings.section_description }}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="ai-image-text-block-{{ ai_gen_id }}">
+    <div class="ai-image-text-block__image-{{ ai_gen_id }}">
+      {% if block.settings.image_1 %}
+        <img
+          src="{{ block.settings.image_1 | image_url: width: 1200 }}"
+          alt="{{ block.settings.image_1.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image_1.width }}"
+          height="{{ block.settings.image_1.height }}"
+        >
+      {% else %}
+        <div class="ai-image-text-block__image-placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+          <div class="ai-image-text-block__empty-state-{{ ai_gen_id }}">
+            Add an image for block 1
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="ai-image-text-block__content-{{ ai_gen_id }}">
+      {% if block.settings.heading_1 != blank %}
+        <h3 class="ai-image-text-block__heading-{{ ai_gen_id }}">{{ block.settings.heading_1 }}</h3>
+      {% endif %}
+      {% if block.settings.description_1 != blank %}
+        <div class="ai-image-text-block__description-{{ ai_gen_id }}">
+          {{ block.settings.description_1 }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="ai-image-text-block-{{ ai_gen_id }} ai-image-text-block-{{ ai_gen_id }}--reverse">
+    <div class="ai-image-text-block__image-{{ ai_gen_id }}">
+      {% if block.settings.image_2 %}
+        <img
+          src="{{ block.settings.image_2 | image_url: width: 1200 }}"
+          alt="{{ block.settings.image_2.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image_2.width }}"
+          height="{{ block.settings.image_2.height }}"
+        >
+      {% else %}
+        <div class="ai-image-text-block__image-placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+          <div class="ai-image-text-block__empty-state-{{ ai_gen_id }}">
+            Add an image for block 2
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="ai-image-text-block__content-{{ ai_gen_id }}">
+      {% if block.settings.heading_2 != blank %}
+        <h3 class="ai-image-text-block__heading-{{ ai_gen_id }}">{{ block.settings.heading_2 }}</h3>
+      {% endif %}
+      {% if block.settings.description_2 != blank %}
+        <div class="ai-image-text-block__description-{{ ai_gen_id }}">
+          {{ block.settings.description_2 }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="ai-image-text-block-{{ ai_gen_id }}">
+    <div class="ai-image-text-block__image-{{ ai_gen_id }}">
+      {% if block.settings.image_3 %}
+        <img
+          src="{{ block.settings.image_3 | image_url: width: 1200 }}"
+          alt="{{ block.settings.image_3.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image_3.width }}"
+          height="{{ block.settings.image_3.height }}"
+        >
+      {% else %}
+        <div class="ai-image-text-block__image-placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+          <div class="ai-image-text-block__empty-state-{{ ai_gen_id }}">
+            Add an image for block 3
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="ai-image-text-block__content-{{ ai_gen_id }}">
+      {% if block.settings.heading_3 != blank %}
+        <h3 class="ai-image-text-block__heading-{{ ai_gen_id }}">{{ block.settings.heading_3 }}</h3>
+      {% endif %}
+      {% if block.settings.description_3 != blank %}
+        <div class="ai-image-text-block__description-{{ ai_gen_id }}">
+          {{ block.settings.description_3 }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image text blocks",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "Our Story"
+    },
+    {
+      "type": "richtext",
+      "id": "section_description",
+      "label": "Section description",
+      "default": "<p>Discover what makes us unique through our three core values.</p>"
+    },
+    {
+      "type": "range",
+      "id": "section_title_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "section_description_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Description size",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "section_title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "section_description_color",
+      "label": "Description color",
+      "default": "#212529"
+    },
+    {
+      "type": "range",
+      "id": "section_title_spacing",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Title bottom spacing",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "header_spacing",
+      "min": 20,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Header bottom spacing",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Block 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Heading",
+      "default": "First Block Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description_1",
+      "label": "Description",
+      "default": "<p>Add a description for your first block. This text will appear on the right side of the image.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Block 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Heading",
+      "default": "Second Block Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description_2",
+      "label": "Description",
+      "default": "<p>Add a description for your second block. This text will appear on the left side of the image.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Block 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading_3",
+      "label": "Heading",
+      "default": "Third Block Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description_3",
+      "label": "Description",
+      "default": "<p>Add a description for your third block. This text will appear on the right side of the image.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Block style"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Block heading size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Block text size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Block heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Block text color",
+      "default": "#212529"
+    },
+    {
+      "type": "header",
+      "content": "Image style"
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "min": 200,
+      "max": 600,
+      "step": 20,
+      "unit": "px",
+      "label": "Image height (desktop)",
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "image_height_mobile",
+      "min": 150,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "Image height (mobile)",
+      "default": 250
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "spacing_between_blocks",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Space between blocks",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "gap_between_content",
+      "min": 20,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between image and text",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Block heading bottom spacing",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image text blocks"
+    }
+  ]
+}
+{% endschema %}

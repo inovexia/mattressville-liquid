@@ -1,0 +1,542 @@
+{% schema %}
+{
+  "name": "Book Consultation",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Left Heading",
+      "default": "Book Your Free Consultation"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Experience our revolutionary pressure mapping technology and find your perfect mattress match. Our consultations are completely free with no obligation to purchase."
+    },
+    {
+      "type": "richtext",
+      "id": "testimonial",
+      "label": "Testimonial",
+      "default": "<p>“The pressure mapping technology was incredible. After years of back pain, I finally found a mattress that works for me!”<br>– <strong>Michael R, Verified Customer</strong></p>"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "form-heading",
+      "default": "Schedule Your Visit",
+      "label": "Form Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Form Button Text",
+      "default": "Book Your Free Consultation"
+    },
+    {
+      "type": "text",
+      "id": "disclaimer",
+      "label": "Disclaimer Text",
+      "default": "No credit card required. Free consultation with no obligation to purchase."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Key Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Feature subtitle text."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Book Consultation",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  /* hide our mobile selects on desktop */
+#date-time-picker-wrapper .time-dropdowns {
+  display: none;
+}
+/* show them (and flex-layout) below 768px */
+@media (max-width: 767px) {
+  #date-time-picker-wrapper .time-dropdowns {
+    display: flex;
+    gap: 8px;
+    margin-top:10px;
+  }
+}
+.book-consultation-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 20px;
+  justify-content:space-between;
+}
+
+.consultation-left {
+  flex: 1 1 300px;
+  max-width: 700px;
+}
+.consultation-right {
+  flex:1 1 300px;
+  max-width: 450px;
+  background-color: #f9fafb;
+  padding:20px;
+}
+
+.consultation-left h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0px 0px 15px 0px;
+}
+  .consultation-left p{
+    font-size:18px;
+  }
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px 30px;
+  margin-top: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap:
+12px;
+  margin-bottom: 20px;
+}
+
+.feature-item img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.feature-item .text {
+  font-size: 14px;
+}
+
+.feature-item .text strong {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+
+.consultation-left blockquote {
+  font-style: italic;
+  margin-top: 20px;
+  border-left:3px solid #d42f48;
+  padding-left: 15px;
+  color: #444;
+  margin-left: 0;
+}
+#shopify-section-template--22581712847156__video_with_text_nLCjzx .video-container video, #shopify-section-template--22581712847156__video_with_text_nLCjzx .video-container iframe {
+  object-fit: contain;
+}
+
+.consultation-right form {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.consultation-right .full-width{
+  width:100%;
+}
+  .consultation-right .full-width input{
+    width:100%;
+  }
+  .consultation-right input:focus-visible{
+    box-shadow:none;
+    outline:none;
+  }
+  .consultation-right .flex-grid{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .consultation-right .flex-grid .form-field{
+    flex:1 1 calc(50% - 30px);
+    max-width: calc(50% - 0px);
+    box-sizing: border-box;
+  }
+   .consultation-right #date-time-picker-wrapper{
+     flex: 1 1 calc(100% - 30px);
+      max-width: calc(100% - 0px);
+   }
+  .consultation-right #date-time-picker-wrapper .time-dropdowns select {
+    padding: 5px 10px;
+  }
+  .consultation-right .flex-grid .form-field .field-label{
+    display:block;
+  }
+   .consultation-right .flex-grid .form-field input{
+    width:100%;
+  }
+.consultation-right input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.consultation-right button {
+  background-color: #ff5c7b;
+  color: white;
+  border:none;
+  padding:14px;
+  font-size: 16px;
+  border-radius:4px;
+  cursor: pointer;
+  width: 100%;
+}
+  .consultation-right button:hover::after,.consultation-right button:hover::before{
+    display:none;
+  }
+ .consultation-right .form-status-list {
+  padding:0;
+  margin:0px;
+}
+
+.consultation-right .disclaimer {
+  font-size: 12px;
+  color: #777;
+  margin-top: 10px;
+}
+   .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .consultation-left h2 {
+    font-size: 36px;
+    line-height: 40px;
+}
+    .flatpickr-calendar.hasTime.animate.arrowBottom.arrowLeft.rightMost.open {
+      margin:0px auto;
+      right: 0;
+      left: 0;
+    }
+  }
+{% endstylesheet %}
+
+<div class="page-width section-{{ section.id }}">
+<div class="book-consultation-section">
+  <div class="consultation-left">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.description }}</p>
+
+    <div class="feature-grid">
+      {% for block in section.blocks %}
+        {% if block.type == "feature" %}
+          <div class="feature-item">
+            {% if block.settings.icon %}
+              <img src="{{ block.settings.icon | image_url: width: 64 }}" alt="">
+            {% endif %}
+            <div class="text">
+              <strong>{{ block.settings.title }}</strong>
+              <span>{{ block.settings.subtitle }}</span>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <blockquote>{{ section.settings.testimonial }}</blockquote>
+  </div>
+
+  <div class="consultation-right">
+    <div class="form-header">
+      {%- if section.settings.form-heading != blank -%}
+      <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.form-heading }}
+      </h2>
+    {%- else -%}
+      <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+    {%- endif -%}
+    </div>
+    {%- liquid
+      assign contact_form_class = 'isolate'
+      if settings.animations_reveal_on_scroll
+        assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
+      endif
+    -%}
+    {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+      {%- if form.posted_successfully? -%}
+        <p class="form-status form-status-list form__message" tabindex="-1" autofocus>
+          {% render 'icon-success' %}
+          {{ 'templates.contact.form.post_success' | t }}
+        </p>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <p class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+            {% render 'icon-error' %}
+            {{ 'templates.contact.form.error_heading' | t }}
+          </p>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#ContactForm-email" class="link">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
+      <div class="full-width">
+        <label class="field-llabel" for="ContactForm-name">{{ 'templates.contact.form.name' | t }} <span aria-hidden="true">*</span></label>
+        <input
+          class="field-input"
+          autocomplete="name"
+          type="text"
+          id="ContactForm-name"
+          name="contact[{{ 'templates.contact.form.name' | t }}]"
+          value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+          placeholder="{{ 'templates.contact.form.name' | t }}"
+        >
+      </div>
+      <div class="full-width field--with-error">
+        <label class="field-llabel" for="ContactForm-email">
+          {{- 'templates.contact.form.email' | t }}
+          <span aria-hidden="true">*</span></label
+        >
+        <input
+          autocomplete="email"
+          type="email"
+          id="ContactForm-email"
+          class="field-input"
+          name="contact[email]"
+          spellcheck="false"
+          autocapitalize="off"
+          value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+          aria-required="true"
+          {% if form.errors contains 'email' %}
+            aria-invalid="true"
+            aria-describedby="ContactForm-email-error"
+          {% endif %}
+          placeholder="{{ 'templates.contact.form.email' | t }}"
+        >
+        {%- if form.errors contains 'email' -%}
+          <small class="contact__field-error" id="ContactForm-email-error">
+            <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+            <span class="form__message">
+              {%- render 'icon-error' -%}
+              {{- form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email -}}
+            </span>
+          </small>
+        {%- endif -%}
+      </div>
+      <div class="full-width">
+        <label class="field-llabel" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+        <input
+          type="tel"
+          id="ContactForm-phone"
+          class="field-input"
+          autocomplete="tel"
+          name="contact[{{ 'templates.contact.form.phone' | t }}]"
+          pattern="[0-9\-]*"
+          value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+          placeholder="{{ 'templates.contact.form.phone' | t }}"
+        >
+      </div>
+      <div class="flex-grid">
+<div id="date-time-picker-wrapper" class="form-field full-width">
+  <label class="field-label" for="appointment-date">Select Date & Time</label>
+  <!-- visible date (and time on desktop) -->
+  <input
+    type="text"
+    id="appointment-date"
+    class="field-input"
+    placeholder="Choose a date & time"
+    required
+    readonly
+  >
+  <!-- hidden combined value sent to Shopify -->
+  <input type="hidden" id="appointment-datetime" name="contact[Appointment]">
+  <!-- mobile-only time dropdowns -->
+  <div class="time-dropdowns">
+   <select id="appt-hour" class="field-input">
+  <option value="12">12 PM</option>
+  <option value="13">1 PM</option>
+  <option value="14">2 PM</option>
+  <option value="15">3 PM</option>
+  <option value="16">4 PM</option>
+  <option value="17">5 PM</option>
+</select>
+
+    <select id="appt-minute" class="field-input">
+      <option value="00">00</option>
+      <option value="15">15</option>
+      <option value="30">30</option>
+      <option value="45">45</option>
+    </select>
+  </div>
+</div>
+      </div>
+      <div class="contact__button">
+        <button type="submit" class="button">
+          {{ section.settings.button_text }}
+        </button>
+      </div>
+      <div class="disclaimer">{{ section.settings.disclaimer }}</div>
+    {%- endform -%}
+  </div>
+  <!-- Load Flatpickr (calendar library) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+  const dateInput = document.getElementById('appointment-date');
+  const hourSelect = document.getElementById('appt-hour');
+  const minuteSelect = document.getElementById('appt-minute');
+  const hiddenInput = document.getElementById('appointment-datetime');
+
+  function setTimeBounds(day, instance) {
+    // weekend: 12–16, weekday: 12–18
+    const weekend = (day === 0 || day === 6);
+    const max = weekend ? '16:00' : '18:00';
+    instance.set('minTime', '12:00');
+    instance.set('maxTime', max);
+    if (isMobile) populateHours(weekend ? [12,13,14,15,16] : [12,13,14,15,16,17,18]);
+  }
+
+  function populateHours(hours) {
+    hourSelect.innerHTML = '';
+    hours.forEach(h => {
+      const label = (h === 12 ? '12' : h - 12) + ' PM';
+      const opt = document.createElement('option');
+      opt.value = String(h);
+      opt.text = label;
+      hourSelect.appendChild(opt);
+    });
+  }
+
+  function updateHidden() {
+    const date = dateInput.value;
+    const hour = hourSelect.value;
+    const minute = minuteSelect.value;
+    if (!date || !hour || !minute) return;
+    const hr24 = parseInt(hour, 10);
+    const ampm = hr24 < 12 ? 'AM' : 'PM';
+    const hr12 = ((hr24 + 11) % 12 + 1).toString().padStart(2,'0');
+    hiddenInput.value = `${date} ${hr12}:${minute} ${ampm}`;
+  }
+
+  flatpickr("#appointment-date", {
+    enableTime: !isMobile,
+    time_24hr: false,
+    dateFormat: isMobile ? "Y-m-d" : "Y-m-d h:i K",
+    minuteIncrement: 15,
+    minDate: "today",
+    maxDate: new Date().fp_incr(45),
+    disable: [
+      date => [1,3].includes(date.getDay()) // no Mondays or Wednesdays
+    ],
+    onReady(selectedDates, dateStr, instance) {
+      const d = selectedDates[0] || new Date();
+      setTimeBounds(d.getDay(), instance);
+      if (!isMobile) hiddenInput.value = dateStr;
+    },
+    onChange(selectedDates, dateStr, instance) {
+      const day = selectedDates[0].getDay();
+      setTimeBounds(day, instance);
+      if (isMobile) updateHidden();
+      else hiddenInput.value = dateStr;
+    }
+  });
+
+  // wire up mobile selects
+  hourSelect.addEventListener('change', updateHidden);
+  minuteSelect.addEventListener('change', updateHidden);
+});
+</script>
+
+</div>
+</div>

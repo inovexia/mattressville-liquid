@@ -1,0 +1,1600 @@
+{% comment %}
+  Sleep Quality Calculator (Shopify Section)
+  Fixes:
+  - Heading TAG changes work (SEO/structure) + Heading STYLE changes affect visual size
+  - Adjustable spacing between blocks (gaps/margins) + section padding
+  - Plan CTA hidden until calculator is submitted
+  - Info + FAQ editable; FAQ uses blocks (add more anytime)
+  - Logs calculator submissions to Google Sheets (Apps Script webhook)
+  - Logs lead form submission (name/email/opt-in) to Sheets + links to same session_id
+{% endcomment %}
+
+{% assign hero_tag = section.settings.hero_heading_tag | default: 'h1' %}
+{% assign results_tag = section.settings.results_heading_tag | default: 'h2' %}
+{% assign calc_tag = section.settings.calc_heading_tag | default: 'h2' %}
+{% assign plan_tag = section.settings.plan_heading_tag | default: 'h2' %}
+{% assign lead_tag = section.settings.lead_heading_tag | default: 'h2' %}
+{% assign info_tag = section.settings.info_heading_tag | default: 'h2' %}
+{% assign faq_tag = section.settings.faq_heading_tag | default: 'h2' %}
+
+{% assign hero_style = section.settings.hero_heading_style | default: 'h1' %}
+{% assign results_style = section.settings.results_heading_style | default: 'h2' %}
+{% assign calc_style = section.settings.calc_heading_style | default: 'h2' %}
+{% assign plan_style = section.settings.plan_heading_style | default: 'h2' %}
+{% assign lead_style = section.settings.lead_heading_style | default: 'h2' %}
+{% assign info_style = section.settings.info_heading_style | default: 'h2' %}
+{% assign faq_style = section.settings.faq_heading_style | default: 'h2' %}
+
+<section id="SleepCalc-{{ section.id }}" class="sqc" data-section-id="{{ section.id }}">
+  <style>
+    #SleepCalc-{{ section.id }}{
+      --bg: {{ section.settings.bg_color | default: '#ffffff' }};
+      --text: {{ section.settings.text_color | default: '#0b1220' }};
+      --muted: rgba(0,0,0,.62);
+      --border: rgba(0,0,0,.12);
+
+      --primary: {{ section.settings.primary_color | default: '#2563eb' }};
+      --primary2: {{ section.settings.primary_color_2 | default: '#0ea5e9' }};
+
+      --good: #16a34a;
+      --warn: #f59e0b;
+      --bad: #ef4444;
+
+      /* ===== Typography sizes ===== */
+      --fs-h1: {{ section.settings.font_h1 | default: 42 }}px;
+      --fs-h2: {{ section.settings.font_h2 | default: 22 }}px;
+      --fs-h3: {{ section.settings.font_h3 | default: 18 }}px;
+      --fs-body: {{ section.settings.font_body | default: 16 }}px;
+      --fs-small: {{ section.settings.font_small | default: 14 }}px;
+      --fs-kicker: {{ section.settings.font_kicker | default: 14 }}px;
+      --fs-subtitle: {{ section.settings.font_subtitle | default: 18 }}px;
+
+      --fw-heading: {{ section.settings.font_weight_heading | default: 900 }};
+      --fw-body: {{ section.settings.font_weight_body | default: 650 }};
+
+      /* ===== Spacing controls ===== */
+      --pad-top: {{ section.settings.padding_top | default: 24 }}px;
+      --pad-bottom: {{ section.settings.padding_bottom | default: 36 }}px;
+
+      --gap-cols: {{ section.settings.gap_cols | default: 16 }}px;
+      --gap-after-top: {{ section.settings.gap_after_top | default: 16 }}px;
+      --gap-after-main: {{ section.settings.gap_after_main | default: 16 }}px;
+      --gap-before-seo: {{ section.settings.gap_before_seo | default: 18 }}px;
+      --gap-seo: {{ section.settings.gap_seo | default: 14 }}px;
+      --gap-faq: {{ section.settings.gap_faq | default: 10 }}px;
+
+      --card-pad: {{ section.settings.card_padding | default: 16 }}px;
+      --lead-pad: {{ section.settings.lead_padding | default: 14 }}px;
+
+      background: var(--bg);
+      color: var(--text);
+      font-family: inherit;
+      font-size: var(--fs-body);
+    }
+
+    #SleepCalc-{{ section.id }} .sqc-wrap{
+      max-width: 1080px;
+      margin: 0 auto;
+      padding-left: 18px;
+      padding-right: 18px;
+      padding-top: var(--pad-top);
+      padding-bottom: var(--pad-bottom);
+      box-sizing: border-box;
+    }
+
+    /* ===== Heading “styles” (VISUAL) ===== */
+    #SleepCalc-{{ section.id }} .sqc-typ{ margin:0; line-height:1.15; letter-spacing:-0.01em; }
+    #SleepCalc-{{ section.id }} .sqc-typ-h1{ font-size: var(--fs-h1); font-weight: var(--fw-heading); }
+    #SleepCalc-{{ section.id }} .sqc-typ-h2{ font-size: var(--fs-h2); font-weight: var(--fw-heading); }
+    #SleepCalc-{{ section.id }} .sqc-typ-h3{ font-size: var(--fs-h3); font-weight: var(--fw-heading); }
+    #SleepCalc-{{ section.id }} .sqc-typ-body{ font-size: var(--fs-body); font-weight: var(--fw-body); letter-spacing: 0; }
+    #SleepCalc-{{ section.id }} .sqc-typ-small{ font-size: var(--fs-small); font-weight: var(--fw-body); letter-spacing: 0; }
+
+    /* ===== TOP ROW (HERO + RESULTS) ===== */
+    #SleepCalc-{{ section.id }} .sqc-top{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: var(--gap-cols);
+      align-items: start;
+      margin-bottom: var(--gap-after-top);
+    }
+    @media (max-width: 920px){
+      #SleepCalc-{{ section.id }} .sqc-top{ grid-template-columns: 1fr; }
+    }
+
+    /* HERO (no outer border/bg; text black) */
+    #SleepCalc-{{ section.id }} .sqc-hero{
+      border: none !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    #SleepCalc-{{ section.id }} .sqc-heroInner{
+      padding: 0;
+      min-height: {{ section.settings.hero_min_height | default: 180 }}px;
+      display: grid;
+      gap: 10px;
+      align-content: center;
+    }
+    #SleepCalc-{{ section.id }} .sqc-kicker{
+      font-size: var(--fs-kicker);
+      opacity: .92;
+      color: #000 !important;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    #SleepCalc-{{ section.id }} .sqc-title{
+      color: #000 !important;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    #SleepCalc-{{ section.id }} .sqc-subtitle{
+      line-height: 1.55;
+      font-size: var(--fs-subtitle);
+      color: #000 !important;
+      font-weight: var(--fw-body);
+    }
+
+    /* RESULTS container (NO outer border) */
+    #SleepCalc-{{ section.id }} .resultsPane{
+      padding: 0;
+      background: transparent;
+      border: none;
+    }
+
+    /* ===== SECOND ROW (CALCULATOR + PLAN) ===== */
+    #SleepCalc-{{ section.id }} .sqc-main{
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: var(--gap-cols);
+      align-items: stretch;
+    }
+    @media (max-width: 920px){
+      #SleepCalc-{{ section.id }} .sqc-main{ grid-template-columns: 1fr; }
+    }
+
+    #SleepCalc-{{ section.id }} .card{
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #fff;
+      padding: var(--card-pad);
+      height: 100%;
+      box-sizing: border-box;
+    }
+    #SleepCalc-{{ section.id }} .cardHead{
+      margin: 0 0 12px 0;
+    }
+
+    /* FORM */
+    #SleepCalc-{{ section.id }} .form{ display: grid; gap: 12px; }
+    #SleepCalc-{{ section.id }} .row{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 620px){
+      #SleepCalc-{{ section.id }} .row{ grid-template-columns: 1fr; }
+    }
+
+    #SleepCalc-{{ section.id }} label{
+      display: block;
+      font-size: var(--fs-body);
+      font-weight: 800;
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    #SleepCalc-{{ section.id }} input,
+    #SleepCalc-{{ section.id }} select{
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 10px;
+      font-family: inherit;
+      font-size: 1em;
+      background: #fff;
+      color: var(--text);
+      box-sizing: border-box;
+    }
+
+    #SleepCalc-{{ section.id }} .help{
+      margin-top: 6px;
+      font-size: var(--fs-small);
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    #SleepCalc-{{ section.id }} details{
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px 12px;
+      background: rgba(0,0,0,.02);
+    }
+    #SleepCalc-{{ section.id }} summary{
+      cursor: pointer;
+      font-weight: 900;
+      list-style: none;
+      font-size: var(--fs-body);
+    }
+    #SleepCalc-{{ section.id }} summary::-webkit-details-marker{ display:none; }
+
+    #SleepCalc-{{ section.id }} .checks{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 6px;
+    }
+    #SleepCalc-{{ section.id }} .check{
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+      font-size: var(--fs-small);
+      font-weight: 700;
+    }
+    #SleepCalc-{{ section.id }} .check input{ width: auto; }
+
+    #SleepCalc-{{ section.id }} .actions{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 6px;
+    }
+    #SleepCalc-{{ section.id }} .btn{
+      appearance:none;
+      border:none;
+      border-radius: 999px;
+      padding: 12px 14px;
+      font-weight: 900;
+      cursor:pointer;
+      background: linear-gradient(135deg, var(--primary), var(--primary2));
+      color:#fff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      font-size: 1em;
+    }
+    #SleepCalc-{{ section.id }} .btn:focus{ outline: 3px solid rgba(37,99,235,.25); outline-offset: 2px; }
+    #SleepCalc-{{ section.id }} .btn-ghost{
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    #SleepCalc-{{ section.id }} .note{
+      margin-top: 10px;
+      font-size: var(--fs-small);
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    /* RESULTS - VISUAL */
+    #SleepCalc-{{ section.id }} .resultTop{ display: grid; gap: 12px; }
+    #SleepCalc-{{ section.id }} .ringWrap{
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 14px;
+      align-items: center;
+      padding: 12px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(37,99,235,.06), rgba(14,165,233,.03));
+    }
+    @media (max-width: 420px){
+      #SleepCalc-{{ section.id }} .ringWrap{ grid-template-columns: 1fr; }
+    }
+    #SleepCalc-{{ section.id }} .ring{
+      --p: 0;
+      --c: var(--primary);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: conic-gradient(var(--c) calc(var(--p) * 1%), rgba(0,0,0,.08) 0);
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+    #SleepCalc-{{ section.id }} .ring::after{
+      content:"";
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+      position:absolute;
+    }
+    #SleepCalc-{{ section.id }} .ringInner{
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      display: grid;
+      gap: 2px;
+    }
+    #SleepCalc-{{ section.id }} .scoreNum{
+      font-size: calc(var(--fs-h2) * 1.2);
+      font-weight: 1000;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    #SleepCalc-{{ section.id }} .band{
+      font-weight: 900;
+      color: var(--muted);
+      font-size: var(--fs-small);
+      line-height: 1.3;
+    }
+    #SleepCalc-{{ section.id }} .gradeChip{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-weight: 1000;
+      width: fit-content;
+      font-size: var(--fs-small);
+    }
+    #SleepCalc-{{ section.id }} .gradeDot{
+      width: 10px; height:10px; border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+    }
+    #SleepCalc-{{ section.id }} .statGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 520px){
+      #SleepCalc-{{ section.id }} .statGrid{ grid-template-columns: 1fr; }
+    }
+    #SleepCalc-{{ section.id }} .stat{
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px;
+      background: #fff;
+      font-size: var(--fs-small);
+    }
+    #SleepCalc-{{ section.id }} .stat b{
+      display:block;
+      margin-bottom: 4px;
+      font-size: var(--fs-small);
+      letter-spacing: -0.01em;
+    }
+    #SleepCalc-{{ section.id }} .stat span{
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    /* PLAN: hide until submit */
+    #SleepCalc-{{ section.id }} .planContent{
+      display: none;
+      gap: 10px;
+    }
+    #SleepCalc-{{ section.id }} .planContent p{
+      margin: 0;
+      line-height: 1.55;
+      color: rgba(0,0,0,.72);
+      font-weight: var(--fw-body);
+      font-size: var(--fs-body);
+    }
+
+    /* Lead capture */
+    #SleepCalc-{{ section.id }} .lead{
+      margin-top: var(--gap-after-main);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: var(--lead-pad);
+      background: #fff;
+    }
+
+    /* opt-in alignment */
+    #SleepCalc-{{ section.id }} .sqc-optin{
+      display:flex !important;
+      align-items:flex-start !important;
+      gap:10px !important;
+      margin-top:12px !important;
+      font-weight: var(--fw-body);
+      font-size: var(--fs-small);
+      line-height: 1.3;
+    }
+    #SleepCalc-{{ section.id }} .sqc-optin input[type="checkbox"]{
+      width:auto !important;
+      flex:0 0 auto !important;
+      margin:2px 0 0 0 !important;
+      padding:0 !important;
+    }
+
+    /* SEO / INFO */
+    #SleepCalc-{{ section.id }} .seo{
+      margin-top: var(--gap-before-seo);
+      display:grid;
+      gap: var(--gap-seo);
+    }
+    #SleepCalc-{{ section.id }} .seoBlock{
+      border: none;
+      background: transparent;
+      padding: 0;
+    }
+    #SleepCalc-{{ section.id }} .seoBody{
+      margin:0;
+      line-height:1.65;
+      color: rgba(0,0,0,.72);
+      font-weight: var(--fw-body);
+      font-size: var(--fs-body);
+    }
+
+    /* FAQ spacing */
+    #SleepCalc-{{ section.id }} .seoBlock details{ margin-top: var(--gap-faq); }
+    #SleepCalc-{{ section.id }} .seoBlock details:first-of-type{ margin-top: 0; }
+  </style>
+
+  <div class="sqc-wrap">
+
+    <!-- TOP ROW: HERO + RESULTS -->
+    <div class="sqc-top">
+      <div class="sqc-hero">
+        <div class="sqc-heroInner">
+          <div class="sqc-kicker">{{ section.settings.kicker }}</div>
+
+          <{{ hero_tag }} class="sqc-typ sqc-typ-{{ hero_style }} sqc-title">
+            {{ section.settings.heading }}
+          </{{ hero_tag }}>
+
+          <div class="sqc-subtitle">{{ section.settings.subtitle }}</div>
+        </div>
+      </div>
+
+      <aside class="resultsPane">
+        <{{ results_tag }} class="sqc-typ sqc-typ-{{ results_style }} cardHead">
+          {{ section.settings.results_heading }}
+        </{{ results_tag }}>
+
+        <div class="resultTop" aria-live="polite">
+          <div class="ringWrap">
+            <div class="ring" id="sqcRing-{{ section.id }}" style="--p:0; --c: var(--primary);">
+              <div class="ringInner">
+                <div class="scoreNum" id="sqcScore-{{ section.id }}">—</div>
+                <div style="font-weight:900; color: var(--muted); font-size: var(--fs-small);">/ 100</div>
+              </div>
+            </div>
+
+            <div style="display:grid; gap:8px;">
+              <div class="gradeChip" id="sqcGradeChip-{{ section.id }}">
+                <span class="gradeDot" id="sqcGradeDot-{{ section.id }}"></span>
+                <span>{{ section.settings.grade_label }}</span>
+                <span style="font-weight:1000;" id="sqcGrade-{{ section.id }}">—</span>
+              </div>
+              <div class="band" id="sqcBand-{{ section.id }}">{{ section.settings.results_empty_state }}</div>
+            </div>
+          </div>
+
+          <div class="statGrid" id="sqcStats-{{ section.id }}" style="display:none;">
+            <div class="stat"><b>{{ section.settings.stat_sleep }}</b><span id="sqcSleepDur-{{ section.id }}">—</span></div>
+            <div class="stat"><b>{{ section.settings.stat_efficiency }}</b><span id="sqcEff-{{ section.id }}">—</span></div>
+            <div class="stat"><b>{{ section.settings.stat_tib }}</b><span id="sqcTib-{{ section.id }}">—</span></div>
+            <div class="stat"><b>{{ section.settings.stat_limiter }}</b><span id="sqcLimiter-{{ section.id }}">—</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- SECOND ROW: CALCULATOR + PLAN -->
+    <div class="sqc-main">
+
+      <!-- LEFT: CALCULATOR -->
+      <div class="card">
+        <{{ calc_tag }} class="sqc-typ sqc-typ-{{ calc_style }} cardHead">{{ section.settings.calc_heading }}</{{ calc_tag }}>
+
+        <form class="form" id="sqcForm-{{ section.id }}" novalidate>
+          <div class="row">
+            <div>
+              <label for="bedtime-{{ section.id }}">{{ section.settings.label_bedtime }}</label>
+              <input id="bedtime-{{ section.id }}" type="time" required>
+              <div class="help">{{ section.settings.help_bedtime }}</div>
+            </div>
+            <div>
+              <label for="waketime-{{ section.id }}">{{ section.settings.label_waketime }}</label>
+              <input id="waketime-{{ section.id }}" type="time" required>
+              <div class="help">{{ section.settings.help_waketime }}</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="latency-{{ section.id }}">{{ section.settings.label_latency }}</label>
+              <input id="latency-{{ section.id }}" type="number" min="0" max="240" step="1" placeholder="{{ section.settings.placeholder_latency }}" required>
+              <div class="help">{{ section.settings.help_latency }}</div>
+            </div>
+            <div>
+              <label for="awakenings-{{ section.id }}">{{ section.settings.label_awakenings }}</label>
+              <input id="awakenings-{{ section.id }}" type="number" min="0" max="30" step="1" placeholder="{{ section.settings.placeholder_awakenings }}">
+              <div class="help">{{ section.settings.help_awakenings }}</div>
+            </div>
+          </div>
+
+          <details>
+            <summary>{{ section.settings.advanced_heading }}</summary>
+            <div style="height:10px"></div>
+
+            <div class="row">
+              <div>
+                <label for="waso-{{ section.id }}">{{ section.settings.label_waso }}</label>
+                <input id="waso-{{ section.id }}" type="number" min="0" max="240" step="1" placeholder="{{ section.settings.placeholder_waso }}">
+                <div class="help">{{ section.settings.help_waso }}</div>
+              </div>
+
+              <div>
+                <label for="age-{{ section.id }}">{{ section.settings.label_age }}</label>
+                <select id="age-{{ section.id }}">
+                  <option value="adult" selected>{{ section.settings.age_adult }}</option>
+                  <option value="older">{{ section.settings.age_older }}</option>
+                  <option value="teen">{{ section.settings.age_teen }}</option>
+                </select>
+                <div class="help">{{ section.settings.help_age }}</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="restful-{{ section.id }}">{{ section.settings.label_restful }}</label>
+                <select id="restful-{{ section.id }}">
+                  <option value="1">{{ section.settings.rest_1 }}</option>
+                  <option value="2">{{ section.settings.rest_2 }}</option>
+                  <option value="3" selected>{{ section.settings.rest_3 }}</option>
+                  <option value="4">{{ section.settings.rest_4 }}</option>
+                  <option value="5">{{ section.settings.rest_5 }}</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="env-{{ section.id }}">{{ section.settings.label_env }}</label>
+                <select id="env-{{ section.id }}">
+                  <option value="1">{{ section.settings.env_1 }}</option>
+                  <option value="2">{{ section.settings.env_2 }}</option>
+                  <option value="3" selected>{{ section.settings.env_3 }}</option>
+                  <option value="4">{{ section.settings.env_4 }}</option>
+                  <option value="5">{{ section.settings.env_5 }}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="screen-{{ section.id }}">{{ section.settings.label_screen }}</label>
+                <select id="screen-{{ section.id }}">
+                  <option value="0" selected>{{ section.settings.screen_0 }}</option>
+                  <option value="10">{{ section.settings.screen_10 }}</option>
+                  <option value="20">{{ section.settings.screen_20 }}</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="pain-{{ section.id }}">{{ section.settings.label_pain }}</label>
+                <select id="pain-{{ section.id }}">
+                  <option value="no" selected>{{ section.settings.pain_no }}</option>
+                  <option value="yes">{{ section.settings.pain_yes }}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="checks">
+              <label class="check">
+                <input id="caffeine-{{ section.id }}" type="checkbox">
+                {{ section.settings.check_caffeine }}
+              </label>
+              <label class="check">
+                <input id="alcohol-{{ section.id }}" type="checkbox">
+                {{ section.settings.check_alcohol }}
+              </label>
+            </div>
+          </details>
+
+          <div class="actions">
+            <button class="btn" type="submit">{{ section.settings.btn_submit }}</button>
+            <button class="btn btn-ghost" type="button" id="sqcReset-{{ section.id }}">{{ section.settings.btn_reset }}</button>
+          </div>
+
+          <div class="note">
+            <strong>{{ section.settings.note_label }}</strong> {{ section.settings.note_text }}
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT: PLAN (content hidden until submit) -->
+      <div class="card">
+        <{{ plan_tag }} class="sqc-typ sqc-typ-{{ plan_style }} cardHead">{{ section.settings.plan_heading }}</{{ plan_tag }}>
+
+<div class="planContent" id="sqcPlanContent-{{ section.id }}">
+  <div id="sqcPlanText-{{ section.id }}"></div>
+
+  <div class="actions" style="margin-top:10px;">
+    <a class="btn" href="{{ section.settings.matchmaker_online_url }}">{{ section.settings.plan_btn_online }}</a>
+    <a class="btn btn-ghost" href="{{ section.settings.matchmaker_store_url }}">{{ section.settings.plan_btn_store }}</a>
+  </div>
+</div>
+
+      </div>
+
+    </div><!-- /sqc-main -->
+
+    <!-- Lead capture -->
+    {% if section.settings.enable_lead_capture %}
+      <div class="lead">
+        <{{ lead_tag }} class="sqc-typ sqc-typ-{{ lead_style }} cardHead">{{ section.settings.lead_heading }}</{{ lead_tag }}>
+        <div class="help" style="margin-bottom:10px;">{{ section.settings.lead_help }}</div>
+
+        {% assign sleepcalc_form_id = 'SleepCalcNewsletter-' | append: section.id %}
+        {% form 'customer', id: sleepcalc_form_id %}
+          {% if form.posted_successfully? %}
+            <div style="padding:10px; border:1px solid rgba(22,163,74,.35); background: rgba(22,163,74,.08); border-radius: 12px; font-weight:800;">
+              {{ section.settings.lead_success }}
+            </div>
+          {% else %}
+            <label for="sqcName-{{ section.id }}">{{ section.settings.lead_name_label }}</label>
+            <input id="sqcName-{{ section.id }}" type="text" name="contact[first_name]" placeholder="{{ section.settings.lead_name_placeholder }}">
+
+            <label for="sqcEmail-{{ section.id }}" style="margin-top:12px;">{{ section.settings.lead_email_label }}</label>
+            <input id="sqcEmail-{{ section.id }}" type="email" name="contact[email]" required placeholder="{{ section.settings.lead_email_placeholder }}">
+
+            <input type="hidden" name="contact[tags]" id="sqcTags-{{ section.id }}" value="sleep-quality-calculator">
+
+            <label class="sqc-optin" for="sqcOptIn-{{ section.id }}">
+              <input type="checkbox" id="sqcOptIn-{{ section.id }}" name="contact[accepts_marketing]" value="true">
+              <span>{{ section.settings.lead_optin_text }}</span>
+            </label>
+
+            <div class="actions" style="margin-top:10px;">
+              <button class="btn" type="submit">{{ section.settings.lead_btn }}</button>
+            </div>
+
+            {% if form.errors %}
+              <div style="margin-top:10px; color:#b91c1c;">
+                {{ form.errors | default_errors }}
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endform %}
+      </div>
+    {% endif %}
+
+    <!-- Editable info + FAQ -->
+    <div class="seo">
+      <div class="seoBlock">
+        <{{ info_tag }} class="sqc-typ sqc-typ-{{ info_style }} cardHead">{{ section.settings.info_heading }}</{{ info_tag }}>
+        <div class="seoBody">{{ section.settings.info_body }}</div>
+        <div class="help" style="margin-top:10px;">{{ section.settings.info_pro_tip }}</div>
+      </div>
+
+      <div class="seoBlock">
+        <{{ faq_tag }} class="sqc-typ sqc-typ-{{ faq_style }} cardHead">{{ section.settings.faq_heading }}</{{ faq_tag }}>
+
+        {% assign faq_count = 0 %}
+        {% for block in section.blocks %}
+          {% if block.type == 'faq' %}
+            {% assign faq_count = faq_count | plus: 1 %}
+            <details {{ block.shopify_attributes }}>
+              <summary>{{ block.settings.q }}</summary>
+              <div style="height:10px"></div>
+              <div class="seoBody">{{ block.settings.a }}</div>
+            </details>
+          {% endif %}
+        {% endfor %}
+
+        {% if faq_count == 0 %}
+          <div class="help">Add FAQ items in the Theme editor (Blocks → Add “FAQ item”).</div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- FAQ Schema from blocks -->
+    {% assign has_faq = false %}
+    {% for block in section.blocks %}
+      {% if block.type == 'faq' and block.settings.q != blank and block.settings.a != blank %}
+        {% assign has_faq = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if has_faq %}
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {% assign first = true %}
+          {% for block in section.blocks %}
+            {% if block.type == 'faq' and block.settings.q != blank and block.settings.a != blank %}
+              {% unless first %},{% endunless %}
+              {
+                "@type": "Question",
+                "name": {{ block.settings.q | json }},
+                "acceptedAnswer": { "@type": "Answer", "text": {{ block.settings.a | json }} }
+              }
+              {% assign first = false %}
+            {% endif %}
+          {% endfor %}
+        ]
+      }
+      </script>
+    {% endif %}
+
+    <!-- JS -->
+<!-- JS -->
+<script>
+(function () {
+  "use strict";
+
+  // Run after DOM is ready (prevents Shopify editor timing weirdness)
+  function initSQC() {
+    const root = document.getElementById("SleepCalc-{{ section.id }}");
+    if (!root) return;
+
+    // If Shopify re-renders, prevent duplicate bindings
+    if (root.dataset.sqcInit === "1") return;
+    root.dataset.sqcInit = "1";
+
+    const formId = "sqcForm-{{ section.id }}";
+    const resetId = "sqcReset-{{ section.id }}";
+
+    const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+    const pad2 = (n) => String(n).padStart(2, "0");
+
+    const EMPTY_STATE = {{ section.settings.results_empty_state | json }};
+    const SHEETS_WEBAPP_URL = {{ section.settings.sheets_webapp_url | json }};
+    const SHEETS_SECRET = {{ section.settings.sheets_secret | json }};
+    const PLAN_CTA_TITLE = {{ section.settings.plan_cta_title | json }};
+    const PLAN_CTA_BODY  = {{ section.settings.plan_cta_body  | json }};
+
+    const els = {
+      form: document.getElementById(formId),
+      reset: document.getElementById(resetId),
+
+      bedtime: document.getElementById("bedtime-{{ section.id }}"),
+      waketime: document.getElementById("waketime-{{ section.id }}"),
+      latency: document.getElementById("latency-{{ section.id }}"),
+      awakenings: document.getElementById("awakenings-{{ section.id }}"),
+
+      waso: document.getElementById("waso-{{ section.id }}"),
+      age: document.getElementById("age-{{ section.id }}"),
+      restful: document.getElementById("restful-{{ section.id }}"),
+      env: document.getElementById("env-{{ section.id }}"),
+      screen: document.getElementById("screen-{{ section.id }}"),
+      pain: document.getElementById("pain-{{ section.id }}"),
+
+      caffeine: document.getElementById("caffeine-{{ section.id }}"),
+      alcohol: document.getElementById("alcohol-{{ section.id }}"),
+
+      ring: document.getElementById("sqcRing-{{ section.id }}"),
+      score: document.getElementById("sqcScore-{{ section.id }}"),
+      grade: document.getElementById("sqcGrade-{{ section.id }}"),
+      band: document.getElementById("sqcBand-{{ section.id }}"),
+      gradeDot: document.getElementById("sqcGradeDot-{{ section.id }}"),
+
+      stats: document.getElementById("sqcStats-{{ section.id }}"),
+      sleepDur: document.getElementById("sqcSleepDur-{{ section.id }}"),
+      eff: document.getElementById("sqcEff-{{ section.id }}"),
+      tib: document.getElementById("sqcTib-{{ section.id }}"),
+      limiter: document.getElementById("sqcLimiter-{{ section.id }}"),
+
+      planContent: document.getElementById("sqcPlanContent-{{ section.id }}"),
+      planText: document.getElementById("sqcPlanText-{{ section.id }}"),
+
+      tags: document.getElementById("sqcTags-{{ section.id }}"),
+
+      leadName: document.getElementById("sqcName-{{ section.id }}"),
+      leadEmail: document.getElementById("sqcEmail-{{ section.id }}"),
+      leadOpt: document.getElementById("sqcOptIn-{{ section.id }}")
+    };
+
+    if (!els.form) {
+      console.warn("SQC: form not found:", formId);
+      return;
+    }
+
+    let lastCalc = null;
+
+    function getSessionId() {
+      const key = "sqc_session_id";
+      let sid = null;
+      try { sid = localStorage.getItem(key); } catch(e) {}
+      if (!sid) {
+        sid = "sqc_" + Date.now().toString(36) + "_" + Math.random().toString(36).slice(2, 8);
+        try { localStorage.setItem(key, sid); } catch(e) {}
+      }
+      return sid;
+    }
+
+    function makeEventId() {
+      try { if (window.crypto && crypto.randomUUID) return crypto.randomUUID(); } catch(e) {}
+      return "evt_" + Date.now().toString(36) + "_" + Math.random().toString(36).slice(2, 10);
+    }
+
+    function sendToSheets(payload) {
+      if (!SHEETS_WEBAPP_URL || !SHEETS_SECRET) return;
+
+      payload.secret = SHEETS_SECRET;
+      payload.timestamp = new Date().toISOString();
+      payload.page_url = window.location.href;
+      payload.user_agent = navigator.userAgent;
+      payload.session_id = getSessionId();
+      payload.event_id = payload.event_id || makeEventId();
+
+      const body = new URLSearchParams({ payload: JSON.stringify(payload) }).toString();
+
+      try {
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(
+            SHEETS_WEBAPP_URL,
+            new Blob([body], { type: "application/x-www-form-urlencoded" })
+          );
+          return;
+        }
+      } catch(e) {}
+
+      try {
+        fetch(SHEETS_WEBAPP_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body,
+          keepalive: true
+        }).catch(() => {});
+      } catch(e) {}
+    }
+
+    function parseTimeToMinutes(t) {
+      if (!t || t.indexOf(":") === -1) return null;
+      const parts = t.split(":");
+      const hh = Number(parts[0]);
+      const mm = Number(parts[1]);
+      if (Number.isNaN(hh) || Number.isNaN(mm)) return null;
+      return hh * 60 + mm;
+    }
+
+    function minutesToHrsMins(mins) {
+      const h = Math.floor(mins / 60);
+      const m = Math.round(mins % 60);
+      return `${h}h ${pad2(m)}m`;
+    }
+
+    function scoreDuration(hours, ageKey){
+      let t;
+      switch(String(ageKey || "adult")){
+        case "teen":  t = { min: 8, max: 10 }; break;
+        case "older": t = { min: 7, max: 8 };  break;
+        default:      t = { min: 7, max: 9 };  break;
+      }
+
+      if (hours >= t.min && hours <= t.max) return 100;
+
+      if (hours < t.min) {
+        const deficit = t.min - hours;
+        let score = 100 - deficit * 25;
+        if (hours < 6) score -= 15;
+        if (hours < 5) score -= 20;
+        if (hours < 4) score -= 25;
+        return clamp(score, 0, 100);
+      }
+
+      const excess = hours - t.max;
+      let score = 100 - excess * 12;
+      if (hours > t.max + 2) score -= 10;
+      return clamp(score, 0, 100);
+    }
+
+    function scoreEfficiency(eff) {
+      const score = ((eff - 0.65) / 0.25) * 100;
+      return clamp(score, 0, 100);
+    }
+
+    function scoreLatency(mins) {
+      if (mins <= 10) return 90;
+      if (mins <= 20) return 100;
+      if (mins <= 30) return 88;
+      if (mins <= 45) return 72;
+      if (mins <= 60) return 55;
+      return clamp(55 - (mins - 60) * 0.6, 0, 55);
+    }
+
+    function scoreWASO(mins) {
+      if (mins <= 10) return 100;
+      if (mins <= 20) return 90;
+      if (mins <= 40) return 72;
+      if (mins <= 60) return 55;
+      if (mins <= 90) return 35;
+      return clamp(35 - (mins - 90) * 0.25, 0, 35);
+    }
+
+    function scoreAwakenings(n) {
+      if (n <= 1) return 100;
+      if (n === 2) return 85;
+      if (n === 3) return 70;
+      if (n === 4) return 55;
+      if (n === 5) return 40;
+      return clamp(40 - (n - 5) * 4, 0, 40);
+    }
+
+    function gradeFromScore(score) {
+      if (score >= 90) return { letter: "A", band: "Optimal" };
+      if (score >= 80) return { letter: "B", band: "Strong" };
+      if (score >= 70) return { letter: "C", band: "Okay (room to improve)" };
+      if (score >= 60) return { letter: "D", band: "Needs improvement" };
+      return { letter: "F", band: "Poor (take action)" };
+    }
+
+    function colorFromScore(score) {
+      if (score >= 80) return "var(--good)";
+      if (score >= 65) return "var(--primary)";
+      if (score >= 50) return "var(--warn)";
+      return "var(--bad)";
+    }
+
+    function escHtml(s){
+      return String(s || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function gradeAdvice(letter){
+      switch(String(letter || "").toUpperCase()){
+        case "A": return ["You’re in a great spot. Keep your sleep window consistent.","If you want an extra edge: keep the bedroom cool, dark, and quiet."];
+        case "B": return ["You’re doing well. Small tweaks can move you to an A.","Prioritize consistency and reduce late-night stimulation."];
+        case "C": return ["You’re okay — but you’ll feel a lot better with 1–2 improvements.","Focus on your #1 limiter first, then tighten your routine."];
+        case "D": return ["Your sleep needs improvement. Start with your #1 limiter tonight.","If discomfort is involved, your mattress/pillow setup may be contributing."];
+        default:  return ["Your sleep quality is poor right now — take action on your #1 limiter first.","If this has been ongoing, consider talking to a clinician."];
+      }
+    }
+
+    function limiterAdvice(limiter){
+      const key = String(limiter || "").toLowerCase();
+      if (key.includes("duration")) return [
+        "Aim for a longer sleep window (earlier bedtime, consistent wake time).",
+        "Protect the last 60 minutes before bed: dim lights + no work/email.",
+        "If you can’t increase time in bed, prioritize earlier nights 3–4x/week."
+      ];
+      if (key.includes("night waking")) return [
+        "Reduce overnight interruptions: keep the room cool, dark, and quiet.",
+        "Avoid heavy meals/alcohol late; limit fluids 1–2 hours before bed.",
+        "If you wake up and can’t fall back asleep in ~20 min, get up briefly then return."
+      ];
+      if (key.includes("fall asleep")) return [
+        "Reduce pre-bed stimulation: screens off 30–60 minutes before bed.",
+        "Do a simple wind-down routine: warm shower + reading/stretching.",
+        "Keep bedtime consistent — drifting bedtimes increase sleep latency."
+      ];
+      if (key.includes("efficiency")) return [
+        "Avoid spending long periods awake in bed (bed = sleep).",
+        "If you’re awake >20 minutes, get up briefly and return when sleepy.",
+        "Keep a consistent wake time (even after a bad night)."
+      ];
+      if (key.includes("awakenings")) return [
+        "Reduce triggers: noise/light control, temperature, and comfort.",
+        "Check caffeine timing (avoid within ~6 hours of bed).",
+        "If alcohol is common, reduce it — it fragments sleep."
+      ];
+      return ["Focus on consistency (same wake time daily).","Optimize comfort and environment (cool, dark, quiet)."];
+    }
+
+    function extraPersonalizedTips(ctx){
+      const tips = [];
+      if (ctx.pain === "yes") tips.push("Since you reported discomfort, prioritize mattress + pillow alignment (neutral spine).");
+      if (Number(ctx.screen || 0) >= 10) tips.push("Try screens-off 45–60 minutes before bed (or dim + blue-light reduction).");
+      if (ctx.caffeine) tips.push("Move caffeine earlier — aim for none within ~6 hours of bedtime.");
+      if (ctx.alcohol) tips.push("Alcohol fragments sleep — reducing it in the last ~3 hours can improve continuity.");
+      if (Number(ctx.env || 0) > 0 && Number(ctx.env || 0) <= 2) tips.push("Your environment score is low — focus on cool, dark, quiet.");
+      if (Number(ctx.restful || 0) > 0 && Number(ctx.restful || 0) <= 2) tips.push("Since you feel unrefreshed, focus on continuity (less awake time overnight) and comfort.");
+      return tips;
+    }
+
+    function buildPlanHtml(ctx){
+      const gradeLetter = (ctx.grade && ctx.grade.letter) ? ctx.grade.letter : "";
+      const limiter = ctx.limiterLabel || "";
+      const g = gradeAdvice(gradeLetter) || [];
+      const l = limiterAdvice(limiter) || [];
+      const extra = extraPersonalizedTips(ctx);
+
+      const showCta = (ctx.pain === "yes") || (ctx.score <= 70);
+
+      return `
+        <p><strong>Your personalized plan</strong></p>
+
+        <p style="margin:0 0 10px 0;">
+          <strong>Grade ${escHtml(gradeLetter)}:</strong> ${escHtml(g[0] || "")}
+        </p>
+        ${g[1] ? `<p style="margin:0 0 12px 0;">${escHtml(g[1])}</p>` : ""}
+
+        <p style="margin:0 0 8px 0;"><strong>1) Improve your #1 limiter:</strong> ${escHtml(limiter)}</p>
+        <ul style="margin:0 0 12px 18px; padding:0;">
+          ${l.map(item => `<li style="margin:6px 0;">${escHtml(item)}</li>`).join("")}
+        </ul>
+
+        ${extra.length ? `
+          <p style="margin:0 0 8px 0;"><strong>2) Based on your answers:</strong></p>
+          <ul style="margin:0 0 12px 18px; padding:0;">
+            ${extra.map(item => `<li style="margin:6px 0;">${escHtml(item)}</li>`).join("")}
+          </ul>
+        ` : ""}
+
+        ${showCta ? `
+          <p style="margin:0; font-weight:900;">${escHtml(PLAN_CTA_TITLE || "")}</p>
+          <p style="margin:6px 0 0 0; color: rgba(0,0,0,.72);">${escHtml(PLAN_CTA_BODY || "")}</p>
+        ` : ""}
+      `;
+    }
+
+    function compute() {
+      const bedMin = parseTimeToMinutes(els.bedtime && els.bedtime.value);
+      const wakeMin = parseTimeToMinutes(els.waketime && els.waketime.value);
+      if (bedMin === null || wakeMin === null) return { error: "Please enter bedtime and wake-up time." };
+
+      let timeInBed = wakeMin - bedMin;
+      if (timeInBed <= 0) timeInBed += 1440;
+      timeInBed = clamp(timeInBed, 60, 900);
+
+      const latency = clamp(Number((els.latency && els.latency.value) || 0), 0, 240);
+      const awakenings = clamp(Number((els.awakenings && els.awakenings.value) || 0), 0, 30);
+
+      let waso = (els.waso && els.waso.value !== "") ? clamp(Number(els.waso.value), 0, 240) : awakenings * 5;
+      waso = clamp(waso, 0, 240);
+
+      const ageKey = (els.age && els.age.value) ? els.age.value : "adult";
+
+      const timeAsleep = clamp(timeInBed - latency - waso, 0, timeInBed);
+      const sleepHours = timeAsleep / 60;
+      const efficiency = timeInBed ? (timeAsleep / timeInBed) : 0;
+
+      const durationScore = scoreDuration(sleepHours, ageKey);
+      const efficiencyScore = scoreEfficiency(efficiency);
+      const latencyScore = scoreLatency(latency);
+      const wasoScore = scoreWASO(waso);
+      const awakeningsScore = scoreAwakenings(awakenings);
+
+      const weights = { duration: 45, efficiency: 20, latency: 10, waso: 15, awakenings: 10 };
+
+      const total =
+        durationScore * (weights.duration / 100) +
+        efficiencyScore * (weights.efficiency / 100) +
+        latencyScore * (weights.latency / 100) +
+        wasoScore * (weights.waso / 100) +
+        awakeningsScore * (weights.awakenings / 100);
+
+      const score = clamp(Math.round(total), 0, 100);
+      const grade = gradeFromScore(score);
+
+      const contributions = [
+        { k: "Duration", v: durationScore * (weights.duration / 100) },
+        { k: "Efficiency", v: efficiencyScore * (weights.efficiency / 100) },
+        { k: "Fall asleep", v: latencyScore * (weights.latency / 100) },
+        { k: "Night waking", v: wasoScore * (weights.waso / 100) },
+        { k: "Awakenings", v: awakeningsScore * (weights.awakenings / 100) }
+      ].sort((a, b) => a.v - b.v);
+
+      return {
+        ctx: {
+          score,
+          grade,
+          sleepHours,
+          timeInBed,
+          efficiency,
+          limiterLabel: contributions[0].k,
+
+          bedtime: els.bedtime.value,
+          waketime: els.waketime.value,
+          latencyMin: latency,
+          awakenings: awakenings,
+          wasoMin: waso,
+          age: ageKey,
+
+          restful: els.restful ? Number(els.restful.value || 0) : 0,
+          env: els.env ? Number(els.env.value || 0) : 0,
+          screen: els.screen ? Number(els.screen.value || 0) : 0,
+          pain: els.pain ? els.pain.value : "no",
+          caffeine: !!(els.caffeine && els.caffeine.checked),
+          alcohol: !!(els.alcohol && els.alcohol.checked)
+        }
+      };
+    }
+
+    function render(ctx) {
+      const c = colorFromScore(ctx.score);
+
+      if (els.score) els.score.textContent = String(ctx.score);
+      if (els.grade) els.grade.textContent = ctx.grade.letter;
+      if (els.band) els.band.textContent = ctx.grade.band;
+
+      if (els.ring) {
+        els.ring.style.setProperty("--p", ctx.score);
+        els.ring.style.setProperty("--c", c);
+      }
+      if (els.gradeDot) els.gradeDot.style.background = c;
+
+      if (els.stats) els.stats.style.display = "grid";
+      if (els.sleepDur) els.sleepDur.textContent = `${ctx.sleepHours.toFixed(1)}h (estimated)`;
+      if (els.eff) els.eff.textContent = `${Math.round(ctx.efficiency * 100)}%`;
+      if (els.tib) els.tib.textContent = minutesToHrsMins(ctx.timeInBed);
+      if (els.limiter) els.limiter.textContent = ctx.limiterLabel;
+
+      if (els.planContent) els.planContent.style.display = "grid";
+      if (els.planText) els.planText.innerHTML = buildPlanHtml(ctx);
+
+      if (els.tags) {
+        els.tags.value = `sleep-quality-calculator, sleepscore-${ctx.score}, grade-${ctx.grade.letter}`;
+      }
+    }
+
+    function runCalc(e){
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+      }
+
+      let res;
+      try {
+        res = compute();
+      } catch (err) {
+        console.error("SQC compute failed:", err);
+        alert("Calculator error — please check the console.");
+        return;
+      }
+      if (res.error) { alert(res.error); return; }
+
+      render(res.ctx);
+
+      const calcEventId = makeEventId();
+      lastCalc = {
+        event_id: calcEventId,
+        score: res.ctx.score,
+        grade: res.ctx.grade.letter,
+        efficiency_pct: Math.round(res.ctx.efficiency * 100),
+        time_in_bed_min: res.ctx.timeInBed,
+        estimated_sleep_hours: Number(res.ctx.sleepHours.toFixed(1)),
+        limiter: res.ctx.limiterLabel
+      };
+
+      sendToSheets({
+        event: "calc",
+        event_id: calcEventId,
+        bedtime: res.ctx.bedtime,
+        waketime: res.ctx.waketime,
+        latency_min: res.ctx.latencyMin,
+        awakenings: res.ctx.awakenings,
+        waso_min: res.ctx.wasoMin,
+        age: res.ctx.age,
+        restful: res.ctx.restful,
+        env: res.ctx.env,
+        screen: res.ctx.screen,
+        pain: res.ctx.pain,
+        caffeine: res.ctx.caffeine,
+        alcohol: res.ctx.alcohol,
+        score: res.ctx.score,
+        grade: res.ctx.grade.letter,
+        efficiency_pct: Math.round(res.ctx.efficiency * 100),
+        time_in_bed_min: res.ctx.timeInBed,
+        estimated_sleep_hours: Number(res.ctx.sleepHours.toFixed(1)),
+        limiter: res.ctx.limiterLabel
+      });
+    }
+
+    // Bind in CAPTURE so Shopify/app scripts can’t swallow it
+    document.addEventListener("submit", function(e){
+      if (!e || !e.target) return;
+      if (e.target.id === formId) runCalc(e);
+    }, true);
+
+    // Button click fallback (if submit event gets weird)
+    const submitBtn = els.form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.addEventListener("click", runCalc);
+
+    // Reset
+    if (els.reset) {
+      els.reset.addEventListener("click", function () {
+        els.form.reset();
+        if (els.score) els.score.textContent = "—";
+        if (els.grade) els.grade.textContent = "—";
+        if (els.band) els.band.textContent = EMPTY_STATE;
+
+        if (els.ring) {
+          els.ring.style.setProperty("--p", 0);
+          els.ring.style.setProperty("--c", "var(--primary)");
+        }
+
+        if (els.stats) els.stats.style.display = "none";
+        if (els.planContent) els.planContent.style.display = "none";
+        if (els.planText) els.planText.innerHTML = "";
+
+        lastCalc = null;
+      });
+    }
+
+    // Lead form logging (doesn't block Shopify submit)
+    const leadForm = root.querySelector('form[id^="SleepCalcNewsletter-"]');
+    if (leadForm) {
+      leadForm.addEventListener("submit", function () {
+        const payload = {
+          event: "lead",
+          name: (els.leadName && els.leadName.value) ? els.leadName.value : "",
+          email: (els.leadEmail && els.leadEmail.value) ? els.leadEmail.value : "",
+          opt_in: !!(els.leadOpt && els.leadOpt.checked)
+        };
+        if (lastCalc) Object.assign(payload, lastCalc);
+        sendToSheets(payload);
+      }, { capture: true });
+    }
+
+    console.log("SQC initialized OK ({{ section.id }})");
+  }
+
+  // Init now or on DOM ready
+  try {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initSQC, { once: true });
+    } else {
+      initSQC();
+    }
+
+    // Shopify section reload support
+    document.addEventListener("shopify:section:load", function (e) {
+      // re-init if this section reloads
+      initSQC();
+    });
+  } catch (e) {
+    console.error("SQC INIT FAILED (outer):", e);
+  }
+})();
+</script>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sleep Quality Calculator",
+  "settings": [
+{ "type": "header", "content": "Google Sheets" },
+{ "type": "text", "id": "sheets_webapp_url", "label": "Sheets Web App URL", "default": "https://script.google.com/macros/s/AKfycbxetUL1VrT6nJR5xF1y8ksRI8GmFNKwxhksboJjsuY0HVlp7aezaHgbLcEx_RsOCNgN/exec" },
+{ "type": "text", "id": "sheets_secret", "label": "Sheets Secret", "default": "mattressville_sqc_9f3k2a_2025" },
+
+
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "label": "Section padding top (px)", "min": 0, "max": 160, "step": 4, "default": 24 },
+    { "type": "range", "id": "padding_bottom", "label": "Section padding bottom (px)", "min": 0, "max": 200, "step": 4, "default": 36 },
+
+    { "type": "range", "id": "gap_cols", "label": "Gap between columns (px)", "min": 0, "max": 60, "step": 2, "default": 16 },
+    { "type": "range", "id": "gap_after_top", "label": "Gap after top row (px)", "min": 0, "max": 80, "step": 2, "default": 16 },
+    { "type": "range", "id": "gap_after_main", "label": "Gap before lead capture (px)", "min": 0, "max": 80, "step": 2, "default": 16 },
+    { "type": "range", "id": "gap_before_seo", "label": "Gap before Info/FAQ (px)", "min": 0, "max": 120, "step": 2, "default": 18 },
+    { "type": "range", "id": "gap_seo", "label": "Gap between Info and FAQ blocks (px)", "min": 0, "max": 80, "step": 2, "default": 14 },
+    { "type": "range", "id": "gap_faq", "label": "Gap between FAQ items (px)", "min": 0, "max": 40, "step": 2, "default": 10 },
+
+    { "type": "range", "id": "card_padding", "label": "Card padding (px)", "min": 8, "max": 40, "step": 2, "default": 16 },
+    { "type": "range", "id": "lead_padding", "label": "Lead capture padding (px)", "min": 8, "max": 40, "step": 2, "default": 14 },
+
+    { "type": "header", "content": "Typography (visual sizes)" },
+    { "type": "range", "id": "font_h1", "label": "H1 style size (px)", "min": 20, "max": 72, "step": 1, "default": 42 },
+    { "type": "range", "id": "font_h2", "label": "H2 style size (px)", "min": 14, "max": 48, "step": 1, "default": 22 },
+    { "type": "range", "id": "font_h3", "label": "H3 style size (px)", "min": 12, "max": 40, "step": 1, "default": 18 },
+    { "type": "range", "id": "font_subtitle", "label": "Subtitle size (px)", "min": 12, "max": 32, "step": 1, "default": 18 },
+    { "type": "range", "id": "font_body", "label": "Body size (px)", "min": 12, "max": 26, "step": 1, "default": 16 },
+    { "type": "range", "id": "font_small", "label": "Small/help size (px)", "min": 10, "max": 22, "step": 1, "default": 14 },
+    { "type": "range", "id": "font_kicker", "label": "Kicker size (px)", "min": 10, "max": 22, "step": 1, "default": 14 },
+
+    { "type": "range", "id": "font_weight_heading", "label": "Heading weight", "min": 500, "max": 1000, "step": 50, "default": 900 },
+    { "type": "range", "id": "font_weight_body", "label": "Body weight", "min": 400, "max": 900, "step": 50, "default": 650 },
+
+    { "type": "header", "content": "Heading TAG (SEO/structure)" },
+    {
+      "type": "select",
+      "id": "hero_heading_tag",
+      "label": "Hero heading tag",
+      "default": "h1",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "p", "label": "Normal (p)" },
+        { "value": "div", "label": "Normal (div)" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "results_heading_tag",
+      "label": "Results heading tag",
+      "default": "h2",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "Normal (p)" },
+        { "value": "div", "label": "Normal (div)" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "calc_heading_tag",
+      "label": "Calculator heading tag",
+      "default": "h2",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "Normal (p)" },
+        { "value": "div", "label": "Normal (div)" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "plan_heading_tag",
+      "label": "Plan heading tag",
+      "default": "h2",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "Normal (p)" },
+        { "value": "div", "label": "Normal (div)" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "lead_heading_tag",
+      "label": "Lead heading tag",
+      "default": "h2",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "Normal (p)" },
+        { "value": "div", "label": "Normal (div)" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "info_heading_tag",
+      "label": "Info heading tag",
+      "default": "h2",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "Normal (p)" },
+        { "value": "div", "label": "Normal (div)" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "faq_heading_tag",
+      "label": "FAQ heading tag",
+      "default": "h2",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "Normal (p)" },
+        { "value": "div", "label": "Normal (div)" }
+      ]
+    },
+
+    { "type": "header", "content": "Heading STYLE (what it looks like)" },
+    {
+      "type": "select",
+      "id": "hero_heading_style",
+      "label": "Hero heading style",
+      "default": "h1",
+      "options": [
+        { "value": "h1", "label": "H1 style" },
+        { "value": "h2", "label": "H2 style" },
+        { "value": "h3", "label": "H3 style" },
+        { "value": "body", "label": "Body style" },
+        { "value": "small", "label": "Small style" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "results_heading_style",
+      "label": "Results heading style",
+      "default": "h2",
+      "options": [
+        { "value": "h1", "label": "H1 style" },
+        { "value": "h2", "label": "H2 style" },
+        { "value": "h3", "label": "H3 style" },
+        { "value": "body", "label": "Body style" },
+        { "value": "small", "label": "Small style" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "calc_heading_style",
+      "label": "Calculator heading style",
+      "default": "h2",
+      "options": [
+        { "value": "h1", "label": "H1 style" },
+        { "value": "h2", "label": "H2 style" },
+        { "value": "h3", "label": "H3 style" },
+        { "value": "body", "label": "Body style" },
+        { "value": "small", "label": "Small style" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "plan_heading_style",
+      "label": "Plan heading style",
+      "default": "h2",
+      "options": [
+        { "value": "h1", "label": "H1 style" },
+        { "value": "h2", "label": "H2 style" },
+        { "value": "h3", "label": "H3 style" },
+        { "value": "body", "label": "Body style" },
+        { "value": "small", "label": "Small style" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "lead_heading_style",
+      "label": "Lead heading style",
+      "default": "h2",
+      "options": [
+        { "value": "h1", "label": "H1 style" },
+        { "value": "h2", "label": "H2 style" },
+        { "value": "h3", "label": "H3 style" },
+        { "value": "body", "label": "Body style" },
+        { "value": "small", "label": "Small style" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "info_heading_style",
+      "label": "Info heading style",
+      "default": "h2",
+      "options": [
+        { "value": "h1", "label": "H1 style" },
+        { "value": "h2", "label": "H2 style" },
+        { "value": "h3", "label": "H3 style" },
+        { "value": "body", "label": "Body style" },
+        { "value": "small", "label": "Small style" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "faq_heading_style",
+      "label": "FAQ heading style",
+      "default": "h2",
+      "options": [
+        { "value": "h1", "label": "H1 style" },
+        { "value": "h2", "label": "H2 style" },
+        { "value": "h3", "label": "H3 style" },
+        { "value": "body", "label": "Body style" },
+        { "value": "small", "label": "Small style" }
+      ]
+    },
+
+    { "type": "header", "content": "Content" },
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Free tool" },
+    { "type": "text", "id": "heading", "label": "Heading (Hero)", "default": "Sleep Quality Calculator" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "Get a 0–100 Sleep Quality Score, see what’s limiting your rest, and get a personalized plan to sleep better." },
+    { "type": "range", "id": "hero_min_height", "label": "Hero minimum height (px)", "min": 120, "max": 320, "step": 10, "default": 180 },
+
+    { "type": "text", "id": "results_heading", "label": "Results heading", "default": "Your results" },
+    { "type": "text", "id": "grade_label", "label": "Grade label", "default": "Grade:" },
+    { "type": "text", "id": "results_empty_state", "label": "Results empty text", "default": "Fill out the form to calculate." },
+
+    { "type": "text", "id": "stat_sleep", "label": "Stat label: Estimated sleep", "default": "Estimated sleep" },
+    { "type": "text", "id": "stat_efficiency", "label": "Stat label: Sleep efficiency", "default": "Sleep efficiency" },
+    { "type": "text", "id": "stat_tib", "label": "Stat label: Time in bed", "default": "Time in bed" },
+    { "type": "text", "id": "stat_limiter", "label": "Stat label: Main limiter", "default": "Main limiter" },
+
+    { "type": "text", "id": "calc_heading", "label": "Calculator heading", "default": "Calculate your Sleep Quality Score" },
+    { "type": "text", "id": "label_bedtime", "label": "Label: Bedtime", "default": "Bedtime" },
+    { "type": "text", "id": "help_bedtime", "label": "Help: Bedtime", "default": "When you got into bed to sleep." },
+    { "type": "text", "id": "label_waketime", "label": "Label: Wake-up time", "default": "Wake-up time" },
+    { "type": "text", "id": "help_waketime", "label": "Help: Wake-up time", "default": "When you woke up for the day." },
+
+    { "type": "text", "id": "label_latency", "label": "Label: Time to fall asleep", "default": "Time to fall asleep (minutes)" },
+    { "type": "text", "id": "placeholder_latency", "label": "Placeholder: Time to fall asleep", "default": "e.g., 15" },
+    { "type": "text", "id": "help_latency", "label": "Help: Time to fall asleep", "default": "Most people do best when they fall asleep in ~10–30 minutes (varies)." },
+
+    { "type": "text", "id": "label_awakenings", "label": "Label: Number of awakenings", "default": "Number of awakenings" },
+    { "type": "text", "id": "placeholder_awakenings", "label": "Placeholder: Number of awakenings", "default": "e.g., 1" },
+    { "type": "text", "id": "help_awakenings", "label": "Help: Number of awakenings", "default": "How many times you remember waking up." },
+
+    { "type": "text", "id": "advanced_heading", "label": "Advanced options heading", "default": "Advanced options (recommended for accuracy)" },
+    { "type": "text", "id": "label_waso", "label": "Label: WASO", "default": "Minutes awake during the night (WASO)" },
+    { "type": "text", "id": "placeholder_waso", "label": "Placeholder: WASO", "default": "e.g., 20" },
+    { "type": "text", "id": "help_waso", "label": "Help: WASO", "default": "If you’re awake a lot during the night, quality drops even if duration is high." },
+
+    { "type": "text", "id": "label_age", "label": "Label: Age range", "default": "Age range" },
+    { "type": "text", "id": "age_adult", "label": "Age option: Adult", "default": "Adult (18–64)" },
+    { "type": "text", "id": "age_older", "label": "Age option: Older adult", "default": "Older adult (65+)" },
+    { "type": "text", "id": "age_teen", "label": "Age option: Teen", "default": "Teen (13–17)" },
+    { "type": "text", "id": "help_age", "label": "Help: Age", "default": "Used to set a healthy sleep duration target." },
+
+    { "type": "text", "id": "label_restful", "label": "Label: Restfulness", "default": "How rested do you feel? (1–5)" },
+    { "type": "text", "id": "rest_1", "label": "Rest option 1", "default": "1 — Exhausted" },
+    { "type": "text", "id": "rest_2", "label": "Rest option 2", "default": "2 — Tired" },
+    { "type": "text", "id": "rest_3", "label": "Rest option 3", "default": "3 — Okay" },
+    { "type": "text", "id": "rest_4", "label": "Rest option 4", "default": "4 — Good" },
+    { "type": "text", "id": "rest_5", "label": "Rest option 5", "default": "5 — Great" },
+
+    { "type": "text", "id": "label_env", "label": "Label: Sleep environment", "default": "Sleep environment (1–5)" },
+    { "type": "text", "id": "env_1", "label": "Environment option 1", "default": "1 — Noisy/bright/uncomfortable" },
+    { "type": "text", "id": "env_2", "label": "Environment option 2", "default": "2 — Not great" },
+    { "type": "text", "id": "env_3", "label": "Environment option 3", "default": "3 — Fine" },
+    { "type": "text", "id": "env_4", "label": "Environment option 4", "default": "4 — Good" },
+    { "type": "text", "id": "env_5", "label": "Environment option 5", "default": "5 — Excellent" },
+
+    { "type": "text", "id": "label_screen", "label": "Label: Screen time", "default": "Screen time in the last hour" },
+    { "type": "text", "id": "screen_0", "label": "Screen option 0", "default": "None / minimal" },
+    { "type": "text", "id": "screen_10", "label": "Screen option 10", "default": "15–60 minutes" },
+    { "type": "text", "id": "screen_20", "label": "Screen option 20", "default": "60+ minutes" },
+
+    { "type": "text", "id": "label_pain", "label": "Label: Pain", "default": "Pain/discomfort in bed?" },
+    { "type": "text", "id": "pain_no", "label": "Pain option: No", "default": "No" },
+    { "type": "text", "id": "pain_yes", "label": "Pain option: Yes", "default": "Yes" },
+
+    { "type": "text", "id": "check_caffeine", "label": "Checkbox: Caffeine", "default": "Caffeine within ~6 hours of bed" },
+    { "type": "text", "id": "check_alcohol", "label": "Checkbox: Alcohol", "default": "Alcohol within ~3 hours of bed" },
+
+    { "type": "text", "id": "btn_submit", "label": "Button: Submit", "default": "Get my score" },
+    { "type": "text", "id": "btn_reset", "label": "Button: Reset", "default": "Reset" },
+
+    { "type": "text", "id": "note_label", "label": "Note label", "default": "Note:" },
+    { "type": "textarea", "id": "note_text", "label": "Note text", "default": "This tool estimates sleep quality using common sleep metrics. It’s not medical advice. If you suspect a sleep disorder, talk to a qualified clinician." },
+
+    { "type": "text", "id": "plan_heading", "label": "Plan heading", "default": "Your personalized plan" },
+    { "type": "text", "id": "plan_cta_title", "label": "Plan CTA title", "default": "Not sleeping great? Your mattress may be part of the problem." },
+    { "type": "textarea", "id": "plan_cta_body", "label": "Plan CTA body", "default": "If you’re waking up unrested, tossing/turning, or feeling discomfort, it might be time to check your mattress fit." },
+    { "type": "text", "id": "plan_btn_online", "label": "Plan button: Online", "default": "Try the Mattress Matchmaker" },
+    { "type": "text", "id": "plan_btn_store", "label": "Plan button: Store", "default": "Get help in-store" },
+
+    { "type": "url", "id": "matchmaker_online_url", "label": "Mattress Matchmaker (online) URL" },
+    { "type": "url", "id": "matchmaker_store_url", "label": "In-store help URL" },
+
+    { "type": "checkbox", "id": "enable_lead_capture", "label": "Enable email capture", "default": true },
+    { "type": "text", "id": "lead_heading", "label": "Lead capture heading", "default": "Send me my results" },
+    { "type": "text", "id": "lead_help", "label": "Lead capture help text", "default": "Get your score + tips emailed. We’ll tag this signup as “sleep-quality-calculator." },
+    { "type": "text", "id": "lead_success", "label": "Lead capture success message", "default": "You’re in! Check your email (and promotions tab)." },
+    { "type": "text", "id": "lead_name_label", "label": "Lead: Name label", "default": "Name" },
+    { "type": "text", "id": "lead_name_placeholder", "label": "Lead: Name placeholder", "default": "Your name" },
+    { "type": "text", "id": "lead_email_label", "label": "Lead: Email label", "default": "Email" },
+    { "type": "text", "id": "lead_email_placeholder", "label": "Lead: Email placeholder", "default": "you@example.com" },
+    { "type": "text", "id": "lead_optin_text", "label": "Lead: Opt-in text", "default": "Yes — send me tips and offers by email (you can unsubscribe anytime)." },
+    { "type": "text", "id": "lead_btn", "label": "Lead: Button text", "default": "Email me my results" },
+
+    { "type": "text", "id": "info_heading", "label": "Info section heading", "default": "What this calculator measures (and why it’s different)" },
+    { "type": "textarea", "id": "info_body", "label": "Info section body", "default": "Most sleep calculators only suggest bedtimes based on sleep cycles. This one estimates sleep quality using practical metrics like sleep duration, time to fall asleep, night awakenings, and sleep efficiency (time asleep ÷ time in bed) — then gives you a personalized plan to improve." },
+    { "type": "textarea", "id": "info_pro_tip", "label": "Pro tip text", "default": "Pro tip: If you’re sleeping “enough” but still waking up tired, focus on continuity (less awake time overnight) and comfort." },
+
+    { "type": "text", "id": "faq_heading", "label": "FAQ heading", "default": "FAQ" },
+
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#ffffff" },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#0b1220" },
+    { "type": "color", "id": "primary_color", "label": "Primary gradient color 1", "default": "#2563eb" },
+    { "type": "color", "id": "primary_color_2", "label": "Primary gradient color 2", "default": "#0ea5e9" }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "settings": [
+        { "type": "text", "id": "q", "label": "Question", "default": "What is “sleep efficiency”?" },
+        { "type": "textarea", "id": "a", "label": "Answer", "default": "Sleep efficiency is the percentage of time you’re asleep while you’re in bed. Higher usually means better sleep quality." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sleep Quality Calculator",
+      "blocks": [
+        { "type": "faq", "settings": { "q": "What is “sleep efficiency”?", "a": "Sleep efficiency is the percentage of time you’re asleep while you’re in bed. Higher usually means better sleep quality." } },
+        { "type": "faq", "settings": { "q": "What is WASO?", "a": "WASO means “wake after sleep onset” — minutes awake after you’ve fallen asleep." } },
+        { "type": "faq", "settings": { "q": "When should I consider replacing my mattress?", "a": "If you’re waking up sore, the mattress is sagging, or you sleep better elsewhere, it’s worth checking mattress fit." } },
+        { "type": "faq", "settings": { "q": "Is this medical advice?", "a": "No — it’s an educational estimate. If symptoms persist, talk to a qualified professional." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

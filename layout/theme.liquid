@@ -1,20 +1,38 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+    <meta name="google-site-verification" content="TYAQB7d_ULPzuqdWCezLDn9e4rZx77Im3H8uGBRyDR0" />
   <!-- Added by AVADA SEO Suite -->
   {% include 'avada-seo' %}
   <!-- /Added by AVADA SEO Suite -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="">
-     
-     
-    {% if template contains 'collection' and current_tags %} 
+
+  <!--Canonical tag added By Raj 16-09-2025  -->
+{% if template contains 'product' %}
+  <link rel="canonical" href="{{ shop.url }}{{ product.url }}" />
+{% elsif template contains 'collection' %}
+  <link rel="canonical" href="{{ shop.url }}{{ collection.url }}" />
+{% elsif template contains 'page' %}
+  <link rel="canonical" href="{{ shop.url }}{{ page.url }}" />
+{% else %}
+  <link rel="canonical" href="{{ canonical_url }}" />
+{% endif %}
+
+
+  <!--End canonical tag-->
+ 
+
+
+    {% comment %} 
+     {% if template contains 'collection' and current_tags %} 
     <link rel="canonical" href="{{ shop.url }}{{ collection.url }}" />
     {% else %}
     <link rel="canonical" href="{{ canonical_url }}" />
-    {% endif %} 
+    {% endif %}  
+     {% endcomment %}
 
     {% comment %} 
       {% assign canonical_url = 'https://' | append: request.host | append: request.path %}
@@ -26,6 +44,9 @@
       {% endif %}
     {% endcomment %}
 
+    <!--Added By Raj 30-05-2025  -->
+    <link rel="llms.txt" href="https://mattressville.ca/llms.txt" type="text/plain" />
+
     
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -34,7 +55,7 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
-    <meta name="google-site-verification" content="x50xz5Ymkqa_iIVV91g2035qK6XcMG3URQ4x6QqASG8" />
+    
     <title>
       {% if template == 'list-collections' %}
         Collections - Shop All Mattresses & Accessories
@@ -46,16 +67,118 @@
       {%- if page_title %} | {{ shop.name }}{% endif -%}
     </title>
 
-    {% comment %} Tag index removed from Collection  {% endcomment %}
-
-    {% if request.path contains '/collections/' and request.path contains '/' %}
-      <script>
-        let pathParts = window.location.pathname.split('/');
-        if (pathParts.length > 3) {
-          window.location.href = '/' + pathParts.slice(1, 3).join('/');
+    <style>
+      #shopify-block-ATThmUEhxMHhueTB6S__affirm_pay_over_time_messaging_product_block_3HfxRh div span {
+  font-size: 16px !important;
+}
+        #shopify-block-ATUpuQjVEVjBCaUpib__swishlist_simple_wishlist_wishlist_product_button_ARaKRW div {
+          float: right;
         }
-      </script>
-    {% endif %}
+
+/* Price Sorting CSS added on 15-12-2025 */
+
+body .collection #product-grid.grid {
+  display: flex !important;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 0;
+  list-style: none;
+  column-gap: var(--grid-mobile-horizontal-spacing);
+  row-gap: var(--grid-mobile-vertical-spacing);
+}
+@media screen and (min-width: 750px) {
+  body .collection #product-grid.grid {
+    column-gap: var(--grid-desktop-horizontal-spacing) !important;
+    row-gap: var(--grid-desktop-vertical-spacing) !important;
+  }
+}
+/* Css Added on 01-01-2026 by Raj for homepage product card layout */
+#shopify-section-template--22702463287604__featured_collection_xLkaJK .product-grid,
+#shopify-section-template--22702463287604__featured_collection_xLkaJK #product-grid,
+#shopify-section-template--22702463287604__featured_collection_xLkaJK [data-id="CollectionProductGrid"],
+#shopify-section-template--22702463287604__featured_collection_BY7Ca9 .product-grid,
+#shopify-section-template--22702463287604__featured_collection_BY7Ca9 #product-grid,
+#shopify-section-template--22702463287604__featured_collection_BY7Ca9 [data-id="CollectionProductGrid"] {
+  display: flex !important;
+  gap: 15px !important;
+  justify-content: unset;
+}
+
+@media screen and (min-width: 990px) {
+  #shopify-section-template--22702463287604__featured_collection_xLkaJK .grid--4-col-large-desktop .grid__item, 
+  #shopify-section-template--22702463287604__featured_collection_BY7Ca9 .grid--4-col-large-desktop .grid__item {
+    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+    max-width: calc(24% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+  }
+}
+.pagination.custom-pagination .btn-paginate.is-active {
+  background: #ff5a6e;
+  color: #fff;
+  pointer-events: none;
+}
+      @media only screen and (max-width: 767px){
+        body .mobile-header .mobile-main-nav .mobile-menu{
+          margin-top:40px !important;
+        }
+      }
+      .feat-slider .feat-collection {
+        display: flex !important;
+        gap: 5px !important;
+      }
+      @media screen and (min-width: 1280px) {
+        .feat-slider .feat-collection.grid--4-col-large-desktop .grid__item {
+          width: calc(24.5% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+        }
+      }
+
+  @media screen and (min-width: 1280px) {
+    .feat-slider .feat-collection.grid--4-col-large-desktop .grid__item {
+      width: calc(24.5% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+      width: calc(24.5% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+    }
+    body .related-products .grid--4-col-large-desktop .grid__item {
+      width: calc(24.5% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+      max-width: calc(24% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+    }
+  }
+
+  /* related Products */
+  body .related-products .grid.product-grid {
+    display: flex !important;
+    gap: 5px !important;
+  }
+
+  /*Filter Display None*/
+  #Details-filter\.p\.m\.custom\.price_range-template--22573392167220__product-grid {
+    display: none;
+  }
+
+/* End */
+    </style>
+
+     {% comment %} Tag index removed from Collection  {% endcomment %}
+
+{% if request.path contains '/collections/' %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+var pathParts = window.location.pathname.split('/').filter(function(part) {
+return part.length > 0;
+});
+
+
+
+// Example valid structure: ['', 'collections', 'collection-name', 'tags...']
+if (pathParts.length >= 2 && pathParts[1] === 'collections') {
+  var collectionName = pathParts[2] || '';
+  if (!collectionName) {
+    // If collection name is missing (broken URL), redirect safely
+    window.location.href = '/collections/all-mattresses';
+  }
+  // Otherwise, leave dynamic filters alone (NO redirect)
+}
+});
+</script>
+{% endif %}
 
     {% if template == 'list-collections' %}
       <meta name="description" content="Discover your dream mattress at Mattressville! We offer a wide selection of all types of mattresses, including innerspring, memory foam, hybrid, and latex. Find the perfect comfort level and support for your needs, all at competitive prices. Shop online for fast and free delivery, or visit a store near you.">
@@ -70,19 +193,25 @@
       >
     {% endif %}
 
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-      <link
+      <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <!-- <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css"
+      > -->
+     <link
+        rel="preload"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/css/lightgallery-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"
       >
+    
 
     {% render 'meta-tags' %}
 
-    <script src="{{ 'constants.js' | asset_url }}" defer></script>
-    <script src="{{ 'pubsub.js' | asset_url }}" defer></script>
-    <script src="{{ 'global.js' | asset_url }}" defer></script>
+    <script src="{{ 'constants.aio.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'price-sort.js' | asset_url }}" defer></script>
+    <script src="{{ 'pubsub.aio.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'global.aio.min.js' | asset_url }}" defer></script>
     {%- if settings.animations_reveal_on_scroll -%}
-      <script src="{{ 'animations.js' | asset_url }}" defer></script>
+      <script src="{{ 'animations.aio.min.js' | asset_url }}" defer></script>
     {%- endif -%}
 
     {%- if tinyscript -%}{{ content_for_header }}{%- else -%}{% render 'tiny-script-control' %}{%- endif -%}
@@ -294,23 +423,216 @@
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
       }
-
+      @media screen and (min-width: 920px){
+        body .header-bottom .main-nav .main-menu .nav-area .nav-item .nav-link {
+            font-size: 12px !important;
+            line-height: 14px !important;
+          font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif !important;
+          }
+      }
       @media screen and (min-width: 750px) {
         body {
           font-size: 1.6rem;
         }
+        #shopify-section-sections--22573393674548__invx-announcement p,#shopify-section-sections--22573393674548__invx-announcement p a {
+          font-size: 1.6rem !important;
+          font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+        }
+        #shopify-section-sections--22573393674548__invx-announcement p,#shopify-section-sections--22573393674548__invx-announcement #invx-announcement-bar span{
+          font-size: 1.6rem !important;
+          font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+        }
       }
+
+      @media (min-width: 400px) and (max-width: 500px) {
+        #shopify-section-template--22573392625972__invx-slider {
+           height: 267px !important; 
+        }
+      }
+
+      /* Product Gallery Lightbox edited by Raj 07/05/2025 */
+
+      body.gradient {
+        position: relative;
+      }
+      .slider-mobile-gutter ul li:nth-child(2) .multicolumn-card__info {
+          padding-top: 0px !important;
+        }
+      .slider-mobile-gutter ul li:nth-child(2) .multicolumn-card__info h3{
+        margin-top:10px;
+        text-decoration:underline;
+        line-height:30px;
+        cursor:pointer;
+      }
+      .slider-mobile-gutter ul li:nth-child(2) .multicolumn-card__image-wrapper .media .multicolumn-card__image {
+          cursor: pointer;
+        }
+
+       @media only screen and (min-width:1024px) {
+         .lg-prev {
+            left: 200px;
+        }
+         .lg-next {
+            right: 200px;
+        }
+         button#lg-close-1 {
+            top: 30px;
+            right: 100px;
+            position: absolute;
+            background-color: #ff5c7b;
+            opacity: 1;
+            color: #ffffff;
+        }
+       }
+      
+      /* Afirm Information */
+      @media only screen and (min-width: 768px) {
+         #shopify-block-ATFUwWFgxdFgrRjdzc__affirm_pay_over_time_messaging_product_block_WTFnUc {
+          display: none;
+        }
+        /* Added by Raj 30-04-2025 */
+        #cart-notification {
+          top: 85px;
+        }
+        .cart-act.shopify-section-header-sticky #cart-notification.animate.active {
+            top:145px;
+          }
+        
+        .cart-notification {
+          top:145px;
+          position: relative;
+        }
+        .section-header.shopify-section-header-sticky.cart-act .header-wrapper {
+          top: 38.8px;
+        }
+        .section-header.shopify-section-header-sticky.cart-act.shopify-section-header-hidden .header-wrapper {
+          top:0px;
+        }
+        .section-header.shopify-section-header-sticky.cart-act.scrolled-past-header .header-wrapper {
+          top:0px;
+        }
+        /* End  */
+        
+    
+      }
+
+      @media only screen and (max-width: 767px) {
+        body .product__text.inline-richtext.invx-sale-text.caption-with-letter-spacing {
+        display: none !important;
+      }
+      .affirm-as-low-as {
+        padding:20px 0px;
+        display: block;
+      }
+        #shopify-block-ATThmUEhxMHhueTB6S__affirm_pay_over_time_messaging_product_block_3HfxRh {
+          display: none;
+        }
+        .product-single .product__info-container .price--on-sale .price__sale .price-item.price-item--sale {
+          font-size: 36px !important;
+        }
+        .product-single .product__info-container .price--on-sale .price__sale .price-item.price-item--regular {
+            font-size: 24px;
+          }
+        .product-single .price__sale span .saved-amount {
+          font-size: 12px !important;
+        }
+        
+        /* Home Page Slider */
+        body .home-slideshow-inner .swiper .swiper-button-next, body .home-slideshow-inner .swiper .swiper-button-prev{
+          display:none;
+        }
+        .home-slideshow-inner .swiper-slide{
+          margin-bottom:10px;
+        }
+        body .home-slideshow-inner .swiper-slide img{
+          border-radius:15px;
+        }
+        /* Collection vendor slider CSS */
+        body #psb-template--22573392625972__psb_reviews_reviews_01_Vr6JBB .psb-reviews-item {
+          padding:15px 30px;
+        }
+      }
+      /* Wishlist CSS */
+      .product-single .product .product-form__input.product-form__quantity {
+        width: 50%;
+      }
+      .product-single .product .product-form__input.product-form__quantity + div {
+        width: 50%;
+      }
+      body .product-single .product-form__input.product-form__quantity + div > button {
+  float: right;
+}
+      .product__info-container .st-wishlist-button .st-label:not(:empty) {
+        font-size:16px;
+        font-weight: 500;
+        font-family:Roboto;
+        color: #2C2C2C;
+        margin-inline-start: 15px;
+        word-spacing: 3px;
+      }
+body .st-number.st-js-number {
+  font-size: 0.9rem !important;
+}
+body .st-number {
+  height: 1.7rem !important;
+  width: 1.7rem !important;
+}
+      /* Home Slider CSS */
+      .home-slideshow-inner .swiper-slide a{
+        display:block;
+        width:100%;
+      }
+      /* In Store CSS */
+      #shopify-section-template--22581712847156__ss_feature_1_qdMUHw {
+  background-color:#f9fafb;
+        padding-bottom:75px;
+}
+      .section-template--22581712847156__ss_feature_1_qdMUHw.feature-template--22581712847156__ss_feature_1_qdMUHw {
+        background-color: transparent !important;
+      }
+  .feature-template--22581712847156__ss_feature_1_qdMUHw .wrapper-box {
+    background-color: transparent;
+  }
+      #shopify-section-template--22581712847156__ss_feature_1_qdMUHw .feature-template--22581712847156__ss_feature_1_qdMUHw .wrapper-box{
+        background-color:transparent;
+      }
+      .section-template--22581712847156__ss_feature_1_qdMUHw-settings .box__content-wrapper .box__description {
+        font-size: 16px;
+        padding-top: 15px;
+      }
+      #shopify-section-template--22581712847156__multicolumn_brands_PDpygK .brands-page.multicolumn.color-scheme-2.gradient.background-none.no-heading {
+  background-color: #fff;
+}
+      #shopify-section-template--22581712847156__multicolumn_brands_PDpygK .brands-page .multicolumn-card__image-wrapper.multicolumn-card__image-wrapper--full-width.multicolumn-card-spacing {
+  border:none;
+  border-radius:0;
+  padding:0;
+  margin:5px;
+}
+      .section-template--22581712847156__video_with_text_nLCjzx-padding.gradient.color- {
+  background: #f9fafb !important;
+        padding:75px 0px;
+}
+
+{% if page.handle == 'in-store-matchmaker' %}
+  <style>
+    #shopify-section-sections--22573393641780__footer-top {
+      display: none;
+    }
+  </style>
+{% endif %}
+
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'gsi.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'base.aio.min.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'gsi.aio.min.css' | asset_url | stylesheet_tag: preload: true }}
     {%- unless settings.type_body_font.system? -%}
       <link
         rel="preload"
         as="font"
         href="{{ settings.type_body_font | font_url }}"
         type="font/woff2"
-        crossorigin
+        crossorigin="anonymous"
       >
     {%- endunless -%}
     {%- unless settings.type_header_font.system? -%}
@@ -319,19 +641,19 @@
         as="font"
         href="{{ settings.type_header_font | font_url }}"
         type="font/woff2"
-        crossorigin
+        crossorigin="anonymous"
       >
     {%- endunless -%}
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
-      {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
-      <script src="{{ 'localization-form.js' | asset_url }}" defer></script>
+      {{ 'component-localization-form.aio.min.css' | asset_url | stylesheet_tag: preload: true }}
+      <script src="{{ 'localization-form.aio.min.js' | asset_url }}" defer></script>
     {%- endif -%}
-
+      
     {%- if settings.predictive_search_enabled -%}
       <link
         rel="stylesheet"
-        href="{{ 'component-predictive-search.css' | asset_url }}"
+        href="{{ 'component-predictive-search.aio.min.css' | asset_url }}"
         media="print"
         onload="this.media='all'"
       >
@@ -343,9 +665,11 @@
       }
     </script>
     {% render 'gp-head' %}
-    
     <!-- Product Schema -->
     {% if template == 'product' %}
+      {% assign today = 'now' | date: "%s" %}
+      {% assign expiry_seconds = today | plus: 259200 %}
+      {% assign price_valid_until = expiry_seconds | date: "%Y-%m-%d" %}
       <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
@@ -361,11 +685,12 @@
           "@type": "Brand",
           "name": "{{ product.vendor }}"
         },
-        {% if product.metafields.yotpo.reviews_average > "0" %}
+        {% assign review_count = product.metafields.yotpo.reviews_count | default: 0 | plus: 0 %}
+        {% if review_count > 0 %}
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "{{ product.metafields.yotpo.reviews_average }}",
-            "ratingCount": "{{ product.metafields.yotpo.reviews_count }}",
+            "ratingValue": "{{ product.metafields.yotpo.reviews_average | default: 4.5 }}",
+           "ratingCount": "{{ product.metafields.yotpo.reviews_count | default: product.metafields.reviews.rating_count | default: 0 | round }}",
             "bestRating": "5",
             "worstRating": "0"
           },
@@ -380,27 +705,7 @@
               "name": "Mattressville User",
               "reviewRating": {
                 "@type": "Rating",
-                "ratingValue": "{{ product.metafields.yotpo.reviews_average }}"
-              }
-          },
-        {% else %}
-         "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "{{ product.metafields.yotpo.reviews_average }}",
-            "ratingCount": "{{ product.metafields.yotpo.reviews_count }}"
-          },
-          "review": {
-              "@type": "Review",
-              "author": {
-                "@type": "Person",
-                "name": "Verified User"
-              },
-              "datePublished": "{{ product.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
-              "description": "{{ review.body }}",
-              "name": "Mattressville User",
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "{{ product.metafields.yotpo.reviews_average }}"
+                "ratingValue": "{{ product.metafields.yotpo.reviews_average | default: 4.5 }}"
               }
           },
         {% endif %}
@@ -409,7 +714,7 @@
           "url": "{{ shop.url }}{{ product.url }}",
           "priceCurrency": "{{ shop.currency }}",
           "price": "{{ product.price | money_without_currency | replace: ',', '' }}",
-          "priceValidUntil": "2025-12-01",
+          "priceValidUntil":"{{ price_valid_until }}",
           "itemCondition": "https://schema.org/NewCondition",
           "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
           "shippingDetails": [
@@ -544,6 +849,8 @@
     </script>
 
   {% endif %}
+
+
     <script async src="https://app.trustanalytica.com/badge/reputation/pH6Gh5jSfgLx_Kt-6zS_ualxvUPCrMcf15ybvrYKJ3zJC6gppVy9XrGT-GN3Ny2Fycdymg.js" defer ></script>
 
     <!-- Hotjar Tracking Code for https://www.mattressville.ca/ -->
@@ -566,7 +873,6 @@
 
   gtag('config', 'AW-456583818');
 </script>
-    
     <script>
   gtag('config', 'AW-456583818/GdMrCI2O19IDEIrV29kB', {
     'phone_conversion_number': '905-212-7722'
@@ -575,8 +881,130 @@
 {% if template.name == 'collection' %}
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer ></script>
 {% endif %}
-        <meta name="msvalidate.01" content="C59C37718C1BB8061739F2AEC8946D1B" />
-        {%- render 'qs-badge' -%}
+
+<meta name="msvalidate.01" content="C59C37718C1BB8061739F2AEC8946D1B" />
+
+
+<!-- Added by Raj 30-04-2025 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const addToCartBtn = document.getElementById("ProductSubmitButton-template--22573393576244__main");
+    const section = document.getElementById("shopify-section-sections--22573393674548__header");
+    if (addToCartBtn && section) {
+      addToCartBtn.addEventListener("click", function () {
+        section.classList.add("cart-act");
+      });
+    }
+  });
+</script>
+
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const popup = document.getElementById("customPopup");
+    const close = popup ? popup.querySelector(".close") : null;
+    document.querySelector(".slider-mobile-gutter").addEventListener("click", function(e) {
+      const h3 = e.target.closest("h3");
+
+      if (h3 && h3.textContent.includes("Try our Mattress Matchmaker")) {
+        e.preventDefault();
+
+        if (popup) {
+          popup.style.display = "block";
+        } else {
+          console.log("Popup not found");
+        }
+      }
+    });
+
+    // Close button handler
+    if (close) {
+      close.addEventListener("click", function() {
+        popup.style.display = "none";
+      });
+    }
+
+    // Close on background click
+    window.addEventListener("click", function(event) {
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  });
+</script> -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("customPopup");
+    const closeBtn = popup?.querySelector(".close");
+    const matchmakerUrl = "/pages/mattress-matchmaker";
+
+    // Only intercept clicks on the Matchmaker link inside the categories section
+    document.querySelectorAll('.slider-mobile-gutter a[href="' + matchmakerUrl + '"]').forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        if (!popup) return; // if popup doesn't exist, let it behave normally
+        e.preventDefault();
+        popup.style.display = "block";
+      });
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function () {
+        popup.style.display = "none";
+      });
+    }
+
+    window.addEventListener("click", function (event) {
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  });
+</script>
+
+
+<!-- End -->
+
+
+
+    
+{% if template.name == 'index' and first_slide.settings.image %}
+  <link rel="preload"
+        as="image"
+        href="{{ first_slide.settings.image | image_url: width: 1329 }}"
+        fetchpriority="high"
+        imagesrcset="{{ first_slide.settings.image | image_url: width: 550 }} 550w,
+                     {{ first_slide.settings.image | image_url: width: 1100 }} 1100w,
+                     {{ first_slide.settings.image | image_url: width: 1329 }} 1329w"
+        imagesizes="100vw">
+{% endif %}
+  <!-- BEGIN MerchantWidget Code -->
+    <script id='merchantWidgetScript' src="https://www.gstatic.com/shopping/merchant/merchantwidget.js" defer></script>
+    <script type="text/javascript">
+      merchantWidgetScript.addEventListener('load', function () {
+        merchantwidget.start({
+          position: 'LEFT_BOTTOM',
+          sideMargin: 50,
+          bottomMargin: 50,
+          mobileSideMargin: 20,
+          mobileBottomMargin: 20
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+    var iframe = document.getElementById('merchantwidgetiframe');
+    if (iframe) {
+      iframe.setAttribute('title', 'Shopify Merchant Widget');
+    }
+  });
+    </script>
+    <!-- END MerchantWidget Code -->
+
+    <style>
+      @media only screen and (max-width: 767px){
+      body .mobile-header .mobile-main-nav .mobile-menu{
+        margin-top:40px !important;
+      }
+      }
+    </style>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -588,7 +1016,8 @@
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%}
-    <header>{% sections 'header-group' %}</header>
+    <header>{% sections 'header-group' %}
+    </header>
     <main
       id="MainContent"
       class="content-for-layout focus-none"
@@ -605,10 +1034,15 @@
       </ul>
 
       {% comment %} Load custom scripts {% endcomment %}
-      <script src="{{ 'invx-global.js' | asset_url }}" defer></script>
-      <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer></script>
-      <script async src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" defer></script>
-      <script src="{{ 'invx-scripts-pdp.js' | asset_url }}" defer></script>
+{% comment %}
+<script src="...invx-global.aio.min.js..."></script>
+{% endcomment %}      <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer></script>
+      <!-- <script async src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" defer></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/lightgallery.min.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/plugins/zoom/lg-zoom.min.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/plugins/thumbnail/lg-thumbnail.min.js" defer></script>
+
+      <script src="{{ 'invx-scripts-pdp.aio.min.js' | asset_url }}" defer></script>
 
       <script defer>
         window.shopUrl = '{{ request.origin }}';
@@ -653,10 +1087,45 @@
 
 
       {%- if settings.predictive_search_enabled -%}
-        <script src="{{ 'predictive-search.js' | asset_url }}" defer></script>
+        <script src="{{ 'predictive-search.aio.min.js' | asset_url }}" defer></script>
       {%- endif -%}
 
-      <script src="{{ 'tiny-img-link-preloader.js' | asset_url }}" defer></script>
+      <script src="{{ 'tiny-img-link-preloader.aio.min.js' | asset_url }}" defer></script>
+{%- if customer.tags contains 'mville+' -%}
+<style>
+  /* Hide compare-at price, save badge & ending soon for members */
+  .product-single s.price-item--regular,
+  .product-single .saved-amount,
+  .product-single .invx-sale-text {
+    display: none !important;
+  }
+  .product__info-container .price--on-sale .price__sale .price-item.price-item--sale {
+    font-size: 30px;
+  }
+  /* Change sale price from pink to black for members */
+  .product-single .price-item--sale.price-item--last,
+  .product-single .price-item--sale.price-item--last * {
+    color: #222 !important;
+  }
+  @media only screen and (max-width: 767px) {
+    .product-single .product__info-container .price--on-sale .price__sale .price-item.price-item--sale {
+        font-size: 25px !important;
+    }
+}
+@media screen and (min-width: 990px) {
+    .product__inventory {
+        width: auto;
+        float: left;
+        position: relative;
+        top: -38px;
+    }
+}
 
-      </body>
+    .product__inventory {
+        display:block;
+        float: none;
+    }
+</style>
+{%- endif -%}
+    </body>
 </html>

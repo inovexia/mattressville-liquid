@@ -1,4 +1,4 @@
-{{ 'component-home-slideshow.css' | asset_url | stylesheet_tag }}
+{{ 'component-home-slideshow.aio.min.css' | asset_url | stylesheet_tag }}
 
 {% comment %} {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
 {% endcomment %}
@@ -45,7 +45,24 @@
   .home-slideshow-inner .swiper .swiper-button-prev:after {
     font-size: 8px;
   }
-
+/* Popup CSS */
+  .home-slideshow-sidebar #openPopupBtn3 {
+    background-color: transparent;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.06rem;
+}
+@media only screen and (max-width:992px) {
+  /* Popup CSS */
+  .home-slideshow-sidebar #openPopupBtn3 {
+    margin-top:0px;
+    font-size:14px;
+    line-height: 20px;
+}
+}
 
 {%- endstyle -%}
 {% comment %} {%- endif -%}
@@ -65,21 +82,21 @@
               {%- if block.settings.image -%}
 
                 <img
+                  src="{{ block.settings.image | image_url: width: 1200 }}"
                   srcset="
-                        {%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
-                        {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
-                        {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
-                        {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-                        {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-                        {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                        {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
-                  src="{{ block.settings.image | image_url: width: 1030 }}"
-                  sizes="(max-width: 164px) 100vw, (min-width: 165px) and (max-width: 359px) 165px, (min-width: 360px) and (max-width: 534px) 360px, (min-width: 535px) and (max-width: 749px) 535px, (min-width: 750px) and (max-width: 1069px) 750px, (min-width: {{ settings.page_width }}px) {{ settings.page_width }}px"
+                    {{ block.settings.image | image_url: width: 480 }} 480w,
+                    {{ block.settings.image | image_url: width: 768 }} 768w,
+                    {{ block.settings.image | image_url: width: 1024 }} 1024w,
+                    {{ block.settings.image | image_url: width: 1200 }} 1200w
+                  "
+                  sizes="(max-width: 768px) 100vw, 1200px"
                   alt="{{ block.settings.image.alt | escape }}"
-                  width="{{ block.settings.image.width }}"
-                  height="{{ block.settings.image.height }}"
-                  loading="lazy" />
-
+                  width="1200"
+                  height="{{ 1200 | divided_by: block.settings.image.aspect_ratio | round }}"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                />
               {%- else -%}
 
                 {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
@@ -100,12 +117,9 @@
 
     {%- if section.settings.enable_sidebar -%}
       <div class="home-slideshow-sidebar">
-        <div class="sidebar-inner">
+        <div class="sidebar-inner ">
           {%- assign linkItemA = section.settings.link_item_a | default: "/pages/mattress-matchmaker" | url_escape -%}
-          <a
-            class="sidebar-content"
-            href="{{ linkItemA }}"
-            aria-label="Read more about mattress maker page">
+          <div id="openPopupBtn3" class="sidebar-content matchmakerIcon">
             {%- if section.settings.sidebar_image_a != blank -%}
               <img
                 src="{{ section.settings.sidebar_image_a | img_url: 'master' }}"
@@ -114,8 +128,10 @@
                 width="107"
                 loading="lazy" />
             {%- endif -%}
+             <!-- Trigger button added on 13-05-2025-->
+            
             <span class="card-title">{{ section.settings.label_item_a }}</span>
-          </a>
+          </div>
           {%- assign linkItemB = section.settings.link_item_b | default: "/pages/coupons/" | url_escape -%}
           <a
             class="sidebar-content"
@@ -152,6 +168,22 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const popup = document.getElementById("customPopup");
+    const btn = document.getElementById("openPopupBtn3");
+    const close = popup.querySelector(".close");
+  
+    btn.addEventListener("click", () => popup.style.display = "block");
+    close.addEventListener("click", () => popup.style.display = "none");
+  
+    window.addEventListener("click", function(event) {
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
     });
   });
 </script>

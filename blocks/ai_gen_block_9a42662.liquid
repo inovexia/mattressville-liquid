@@ -1,0 +1,663 @@
+{% doc %}
+  @prompt
+    Create a luxury-focused layout for a mattress store's "Why Choose Us" page. Use elegant typography, ample white space, and sophisticated imagery placement. Focus on premium quality, craftsmanship, and exceptional sleep experience rather than deals or discounts. Maintain the existing brand colors but create a more upscale, refined aesthetic.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .luxury-why-us-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding }}px 0;
+    background-color: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+  }
+
+  .luxury-why-us__container-{{ ai_gen_id }} {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .luxury-why-us__header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .luxury-why-us__title-{{ ai_gen_id }} {
+    font-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+    font-weight: 500;
+    font-size: clamp(28px, 5vw, {{ block.settings.heading_size }}px);
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .luxury-why-us__subtitle-{{ ai_gen_id }} {
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    font-size: clamp(16px, 3vw, {{ block.settings.subheading_size }}px);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+
+  .luxury-why-us__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px 60px;
+  }
+
+  .luxury-why-us__item-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .luxury-why-us__item-header-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  .luxury-why-us__item-icon-{{ ai_gen_id }} {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: {{ block.settings.icon_background }};
+    flex-shrink: 0;
+  }
+
+  .luxury-why-us__item-icon-{{ ai_gen_id }} svg {
+    width: 30px;
+    height: 30px;
+    fill: none;
+    stroke: {{ block.settings.icon_color }};
+    stroke-width: 1.5;
+  }
+
+  .luxury-why-us__item-title-{{ ai_gen_id }} {
+    font-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+    font-size: {{ block.settings.feature_title_size }}px;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+
+  .luxury-why-us__item-text-{{ ai_gen_id }} {
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    font-size: {{ block.settings.feature_text_size }}px;
+    line-height: 1.7;
+    color: {{ block.settings.text_color }};
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+
+  .luxury-why-us__image-section-{{ ai_gen_id }} {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .luxury-why-us__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    height: 0;
+    padding-bottom: 120%;
+  }
+
+  .luxury-why-us__image-{{ ai_gen_id }} {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .luxury-why-us__image-placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+  }
+
+  .luxury-why-us__image-placeholder-{{ ai_gen_id }} svg {
+    width: 50%;
+    height: 50%;
+    opacity: 0.2;
+  }
+
+  .luxury-why-us__content-{{ ai_gen_id }} {
+    padding: 20px;
+  }
+
+  .luxury-why-us__content-title-{{ ai_gen_id }} {
+    font-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+    font-size: clamp(24px, 4vw, {{ block.settings.content_title_size }}px);
+    font-weight: 500;
+    margin-bottom: 24px;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .luxury-why-us__content-text-{{ ai_gen_id }} {
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    font-size: {{ block.settings.content_text_size }}px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+
+  .luxury-why-us__button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    transition: background-color 0.3s ease;
+  }
+
+  .luxury-why-us__button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+  }
+
+  @media screen and (max-width: 990px) {
+    .luxury-why-us__grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    .luxury-why-us__image-section-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      margin-top: 60px;
+    }
+
+    .luxury-why-us__content-{{ ai_gen_id }} {
+      padding: 0;
+    }
+  }
+{% endstyle %}
+
+<div class="luxury-why-us-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="luxury-why-us__container-{{ ai_gen_id }}">
+    <div class="luxury-why-us__header-{{ ai_gen_id }}">
+      <h2 class="luxury-why-us__title-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+      <div class="luxury-why-us__subtitle-{{ ai_gen_id }}">{{ block.settings.subheading }}</div>
+    </div>
+
+    <div class="luxury-why-us__grid-{{ ai_gen_id }}">
+      {% for i in (1..4) %}
+        {% assign feature_title_key = 'feature_' | append: i | append: '_title' %}
+        {% assign feature_text_key = 'feature_' | append: i | append: '_text' %}
+        {% assign feature_icon_key = 'feature_' | append: i | append: '_icon' %}
+        
+        {% if block.settings[feature_title_key] != blank %}
+          <div class="luxury-why-us__item-{{ ai_gen_id }}">
+            <div class="luxury-why-us__item-header-{{ ai_gen_id }}">
+              <div class="luxury-why-us__item-icon-{{ ai_gen_id }}">
+                {% case block.settings[feature_icon_key] %}
+                  {% when 'quality' %}
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                    </svg>
+                  {% when 'comfort' %}
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"></path>
+                      <path d="M9 12L11 14L15 10"></path>
+                    </svg>
+                  {% when 'durability' %}
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+                      <path d="M12 6V12L16 14"></path>
+                    </svg>
+                  {% when 'innovation' %}
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.66347 17H14.3364M11.9999 3V4M18.3639 5.63604L17.6568 6.34315M21 11.9999H20M4 11.9999H3M6.34309 6.34315L5.63599 5.63604M8.46441 15.5356C6.51179 13.5829 6.51179 10.4171 8.46441 8.46449C10.417 6.51187 13.5829 6.51187 15.5355 8.46449C17.4881 10.4171 17.4881 13.5829 15.5355 15.5356L14.9884 16.0827C14.3555 16.7155 13.9999 17.5739 13.9999 18.469V19C13.9999 20.1046 13.1045 21 11.9999 21C10.8954 21 9.99995 20.1046 9.99995 19V18.469C9.99995 17.5739 9.6444 16.7155 9.01151 16.0827L8.46441 15.5356Z"></path>
+                    </svg>
+                  {% when 'service' %}
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21 10H3M16 2V6M8 2V6M10 16L12 18L16 14M7.8 22H16.2C17.8802 22 18.7202 22 19.362 21.673C19.9265 21.3854 20.3854 20.9265 20.673 20.362C21 19.7202 21 18.8802 21 17.2V8.8C21 7.11984 21 6.27976 20.673 5.63803C20.3854 5.07354 19.9265 4.6146 19.362 4.32698C18.7202 4 17.8802 4 16.2 4H7.8C6.11984 4 5.27976 4 4.63803 4.32698C4.07354 4.6146 3.6146 5.07354 3.32698 5.63803C3 6.27976 3 7.11984 3 8.8V17.2C3 18.8802 3 19.7202 3.32698 20.362C3.6146 20.9265 4.07354 21.3854 4.63803 21.673C5.27976 22 6.11984 22 7.8 22Z"></path>
+                    </svg>
+                  {% when 'customization' %}
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                    </svg>
+                  {% else %}
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                    </svg>
+                {% endcase %}
+              </div>
+              <h3 class="luxury-why-us__item-title-{{ ai_gen_id }}">{{ block.settings[feature_title_key] }}</h3>
+            </div>
+            <div class="luxury-why-us__item-text-{{ ai_gen_id }}">{{ block.settings[feature_text_key] }}</div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="luxury-why-us__image-section-{{ ai_gen_id }}">
+      <div class="luxury-why-us__image-wrapper-{{ ai_gen_id }}">
+        {% if block.settings.image %}
+          <img 
+            src="{{ block.settings.image | image_url: width: 800 }}"
+            alt="{{ block.settings.image.alt | escape }}"
+            loading="lazy"
+            class="luxury-why-us__image-{{ ai_gen_id }}"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+          >
+        {% else %}
+          <div class="luxury-why-us__image-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+      </div>
+      <div class="luxury-why-us__content-{{ ai_gen_id }}">
+        <h3 class="luxury-why-us__content-title-{{ ai_gen_id }}">{{ block.settings.content_title }}</h3>
+        <div class="luxury-why-us__content-text-{{ ai_gen_id }}">{{ block.settings.content_text }}</div>
+        {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+          <a href="{{ block.settings.button_link }}" class="luxury-why-us__button-{{ ai_gen_id }}">
+            {{ block.settings.button_text }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Luxury Why Choose Us",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Choose Our Luxury Mattresses"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Experience the perfect balance of comfort and support with our handcrafted mattresses, designed to elevate your sleep experience."
+    },
+    {
+      "type": "header",
+      "content": "Features"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_title",
+      "label": "Feature 1 Title",
+      "default": "Premium Materials"
+    },
+    {
+      "type": "select",
+      "id": "feature_1_icon",
+      "label": "Feature 1 Icon",
+      "options": [
+        {
+          "value": "quality",
+          "label": "Quality"
+        },
+        {
+          "value": "comfort",
+          "label": "Comfort"
+        },
+        {
+          "value": "durability",
+          "label": "Durability"
+        },
+        {
+          "value": "innovation",
+          "label": "Innovation"
+        },
+        {
+          "value": "service",
+          "label": "Service"
+        },
+        {
+          "value": "customization",
+          "label": "Customization"
+        }
+      ],
+      "default": "quality"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_1_text",
+      "label": "Feature 1 Text",
+      "default": "Our mattresses are crafted using only the finest materials, sourced from sustainable suppliers around the world."
+    },
+    {
+      "type": "text",
+      "id": "feature_2_title",
+      "label": "Feature 2 Title",
+      "default": "Handcrafted Excellence"
+    },
+    {
+      "type": "select",
+      "id": "feature_2_icon",
+      "label": "Feature 2 Icon",
+      "options": [
+        {
+          "value": "quality",
+          "label": "Quality"
+        },
+        {
+          "value": "comfort",
+          "label": "Comfort"
+        },
+        {
+          "value": "durability",
+          "label": "Durability"
+        },
+        {
+          "value": "innovation",
+          "label": "Innovation"
+        },
+        {
+          "value": "service",
+          "label": "Service"
+        },
+        {
+          "value": "customization",
+          "label": "Customization"
+        }
+      ],
+      "default": "customization"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_2_text",
+      "label": "Feature 2 Text",
+      "default": "Each mattress is meticulously handcrafted by our skilled artisans with decades of experience in luxury mattress making."
+    },
+    {
+      "type": "text",
+      "id": "feature_3_title",
+      "label": "Feature 3 Title",
+      "default": "Innovative Technology"
+    },
+    {
+      "type": "select",
+      "id": "feature_3_icon",
+      "label": "Feature 3 Icon",
+      "options": [
+        {
+          "value": "quality",
+          "label": "Quality"
+        },
+        {
+          "value": "comfort",
+          "label": "Comfort"
+        },
+        {
+          "value": "durability",
+          "label": "Durability"
+        },
+        {
+          "value": "innovation",
+          "label": "Innovation"
+        },
+        {
+          "value": "service",
+          "label": "Service"
+        },
+        {
+          "value": "customization",
+          "label": "Customization"
+        }
+      ],
+      "default": "innovation"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_3_text",
+      "label": "Feature 3 Text",
+      "default": "We combine traditional craftsmanship with cutting-edge sleep technology to create the perfect sleep environment."
+    },
+    {
+      "type": "text",
+      "id": "feature_4_title",
+      "label": "Feature 4 Title",
+      "default": "Personalized Service"
+    },
+    {
+      "type": "select",
+      "id": "feature_4_icon",
+      "label": "Feature 4 Icon",
+      "options": [
+        {
+          "value": "quality",
+          "label": "Quality"
+        },
+        {
+          "value": "comfort",
+          "label": "Comfort"
+        },
+        {
+          "value": "durability",
+          "label": "Durability"
+        },
+        {
+          "value": "innovation",
+          "label": "Innovation"
+        },
+        {
+          "value": "service",
+          "label": "Service"
+        },
+        {
+          "value": "customization",
+          "label": "Customization"
+        }
+      ],
+      "default": "service"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_4_text",
+      "label": "Feature 4 Text",
+      "default": "Our sleep experts provide personalized consultations to help you find the perfect mattress for your unique sleep preferences."
+    },
+    {
+      "type": "header",
+      "content": "Featured Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "content_title",
+      "label": "Content Title",
+      "default": "Crafted for Unparalleled Comfort"
+    },
+    {
+      "type": "textarea",
+      "id": "content_text",
+      "label": "Content Text",
+      "default": "Our master craftsmen spend over 60 hours handcrafting each luxury mattress. We use only the finest natural materials, including organic cotton, New Zealand wool, and natural latex, combined with our proprietary pocket spring system to provide the perfect balance of support and comfort. Experience the difference that true craftsmanship makes to your sleep quality."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Explore Our Collection"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#212529"
+    },
+    {
+      "type": "color",
+      "id": "icon_background",
+      "label": "Icon Background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon Color",
+      "default": "#ff5c7b"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Color",
+      "default": "#ff5c7b"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button Hover Color",
+      "default": "#d7355c"
+    },
+    {
+      "type": "header",
+      "content": "Style Settings"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 40,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Section Padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading Size",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "subheading_size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Subheading Size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "feature_title_size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Feature Title Size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "feature_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Feature Text Size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "content_title_size",
+      "min": 20,
+      "max": 42,
+      "step": 2,
+      "unit": "px",
+      "label": "Content Title Size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "content_text_size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Content Text Size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image Border Radius",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button Border Radius",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Luxury Why Choose Us"
+    }
+  ]
+}
+{% endschema %}

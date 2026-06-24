@@ -1,0 +1,171 @@
+<div class="page-content">
+<div id="image-sitemap">
+  <div class="page-header header-template--22573393019188__main-padding">
+    <div class="page-width">
+      <h1 class="page-title h0">
+        Image Sitemap
+      </h1>
+    </div>
+  </div>
+</div>
+  
+<div class="page-width">
+<div class="custom-image-sitemap">
+<div class="image-sitemap">
+  <h3>Pages</h3>
+  <ul>
+    {% for page in pages %}
+      {% if page.image %}
+        <li>
+          <a href="{{ page.image | img_url: '1024x1024' }}" target="_blank">
+            {{ page.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+  <!-- Collections -->
+
+  <div class="image-sitemap">
+  <h3>Collections</h3>
+  <ul>
+    {% for collection in collections %}
+      {% if collection.image %}
+        <li>
+          <a href="{{ collection.image | img_url: '1024x1024' }}" target="_blank">
+           {{ collection.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  </div>
+  <!-- Products -->
+  <div class="image-sitemap">
+  <h3>Products</h3>
+<ul>
+  {% paginate collections.all.products by 1000 %}
+
+    {% for product in collections.all.products %}
+      {% for image in product.images %}
+        <li>
+          <a href="{{ image.src | img_url: '1024x1024' }}" target="_blank">
+           {{ product.title }}
+          </a>
+        </li>
+      {% endfor %}
+    {% endfor %}
+  
+  {% endpaginate %}
+</ul>
+
+  </div>
+  <!-- Blog Articles -->
+  <div class="image-sitemap">
+  <h3>Blog Articles</h3>
+  {% assign blog_handles = "announcements,how-to-user-guide,tips,health-sleep-wellness,promotions,featured-brands,industry-info,accessory-guide" | split: "," %}
+  <ul>
+    {% for handle in blog_handles %}
+      {% for article in blogs[handle].articles %}
+        {% if article.image %}
+          <li>
+            <a href="{{ article.image | img_url: '1024x1024' }}" target="_blank">
+             {{ article.title }}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</div>
+
+  </div>
+</div>
+</div>
+
+<style>
+  #image-sitemap .page-header {
+  color: #ffffff;
+  background-image: url("https://mattressville.ca/cdn/shop/files/city-shot.jpg?v=1705756256");
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 30px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: relative;
+}
+#image-sitemap .page-header::before {
+  background-color: #ff5c78;
+  content: "";
+  position: absolute;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#image-sitemap .page-title {
+  color: inherit;
+  margin-block: 0;
+  position: relative;
+  z-index: 1;
+}
+#image-sitemap .page-title::after {
+  content: "";
+  display: block;
+  margin: 0;
+  left: 0;
+  width: 80px;
+  max-width: 100px;
+  padding-top: 0;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+  @media screen and (max-width: 768px) {
+     body .custom-image-sitemap ul {
+    display:block;
+    grid-template-columns:unset;
+    gap:20px;;
+}
+    body .custom-image-sitemap ul li {
+    width:100%;
+    max-width:100%;
+    text-overflow:unset;
+}
+}
+
+  .custom-image-sitemap{
+    padding-top:50px;
+    padding-bottom:50px;
+  }
+  .custom-image-sitemap ul {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    list-style:none;
+    padding-left:20px;
+}
+  .custom-image-sitemap h3{
+    color: #535353;
+    margin-bottom: 15px;
+  }
+  .custom-image-sitemap ul li a {
+    color: #7c7c7c;
+    text-decoration-thickness: 0.2rem;
+    transition: text-decoration-thickness var(--duration-short) ease;
+    line-height: 2.4;
+}
+  .custom-image-sitemap ul li {
+    margin:0;
+    margin-bottom: 0px;
+    max-width: 350px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    list-style:none;
+}
+  
+</style>

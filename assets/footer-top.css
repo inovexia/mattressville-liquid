@@ -96,12 +96,26 @@
     line-height: 24px;
     text-decoration: none;
   }
-  .footer-top .footer-badges {
+   /* CSS added by Raj 23-05-2025 */
+    .footer-top .footer-badges {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0px;
+        padding-bottom: 50px;
+    }
+    .badge-grid {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-top: 30px;
+  }
+  /* .footer-top .footer-badges {
     align-items: center;
     display: flex;
     justify-content: right;
     margin-top: 10px;
-  }
+  } */
   .footer-top .footer-contact {
     margin-top: 30px;
   }

@@ -1,0 +1,136 @@
+{% schema %}
+{
+  "name": "Accordion with Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Right Side Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion_item",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "title_icon",
+          "label": "Title Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Accordion with Image",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="accordion-with-image">
+  <div class="page-width">
+    <div class="custom-accordion">
+  <div class="accordion-wrapper">
+    {% for block in section.blocks %}
+      <div class="accordion-item{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}">
+        <div class="accordion-header">
+          {% if block.settings.title_icon %}
+            <img src="{{ block.settings.title_icon | image_url: width:100 }}" alt="Icon" class="icon" />
+          {% endif %}
+          <h3>{{ block.settings.title }}</h3>
+        </div>
+        <div class="accordion-body"{% unless forloop.first %} style="display:none"{% endunless %}>
+          {{ block.settings.content }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="accordion-image">
+    {% if section.settings.right_image %}
+      <img src="{{ section.settings.right_image | image_url: width: 800 }}" alt="Side image" />
+    {% endif %}
+  </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+  .custom-accordion{
+    display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+  }
+  .accordion-wrapper,
+.accordion-image {
+  flex:1 1 calc(50% - 30px);
+  max-width: calc(50% - 30px);
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+.accordion-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem 0;
+}
+.accordion-header .icon {
+  width: 50px;
+  height:50px;
+  margin-right: 1rem;
+  border-radius: 10px;
+}
+.accordion-body {
+  padding: 0 1rem 1rem;
+}
+.accordion-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+   @media screen and (max-width: 767px){
+     .accordion-wrapper, .accordion-image {
+  flex:1 1 calc(100% - 0px);
+  max-width: calc(100% - 0px);
+}
+   }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const accordionItems = document.querySelectorAll('.accordion-item');
+
+  accordionItems.forEach((item, index) => {
+    const header = item.querySelector('.accordion-header');
+
+    header.addEventListener('click', () => {
+      accordionItems.forEach((otherItem, otherIndex) => {
+        const body = otherItem.querySelector('.accordion-body');
+        if (index === otherIndex) {
+          item.classList.toggle('active');
+          body.style.display = item.classList.contains('active') ? 'block' : 'none';
+        } else {
+          otherItem.classList.remove('active');
+          body.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>

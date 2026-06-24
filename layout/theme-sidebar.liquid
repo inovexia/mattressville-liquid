@@ -43,11 +43,11 @@
 
     {% render 'meta-tags' %}
 
-    <script src="{{ 'constants.js' | asset_url }}" defer></script>
-    <script src="{{ 'pubsub.js' | asset_url }}" defer></script>
-    <script src="{{ 'global.js' | asset_url }}" defer></script>
+    <script src="{{ 'constants.aio.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'pubsub.aio.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'global.aio.min.js' | asset_url }}" defer></script>
     {%- if settings.animations_reveal_on_scroll -%}
-      <script src="{{ 'animations.js' | asset_url }}" defer></script>
+      <script src="{{ 'animations.aio.min.js' | asset_url }}" defer></script>
     {%- endif -%}
 
     {{ content_for_header }}
@@ -299,9 +299,9 @@ body {
 }
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
-    {{ 'gsi.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'gsi.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'base.aio.min.css' | asset_url | stylesheet_tag }}
+    {{ 'gsi.aio.min.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'gsi.aio.min.css' | asset_url | stylesheet_tag: preload: true }}
 
     {% comment %} Include CSS for sidebar {% endcomment %}
     {{ 'theme-sidebar.css' | asset_url | stylesheet_tag }}
@@ -328,14 +328,14 @@ body {
     {% endcomment %}
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
-      {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
-      <script src="{{ 'localization-form.js' | asset_url }}" defer></script>
+      {{ 'component-localization-form.aio.min.css' | asset_url | stylesheet_tag: preload: true }}
+      <script src="{{ 'localization-form.aio.min.js' | asset_url }}" defer></script>
     {%- endif -%}
 
     {%- if settings.predictive_search_enabled -%}
       <link
         rel="stylesheet"
-        href="{{ 'component-predictive-search.css' | asset_url }}"
+        href="{{ 'component-predictive-search.aio.min.css' | asset_url }}"
         media="print"
         onload="this.media='all'">
     {%- endif -%}
@@ -434,10 +434,10 @@ body {
         recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
       };
     </script>
-    <script src="{{ 'theme-sidebar.js' | asset_url }}" defer></script>
+    <script src="{{ 'theme-sidebar.aio.min.js' | asset_url }}" defer></script>
 
     {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer></script>
+      <script src="{{ 'predictive-search.aio.min.js' | asset_url }}" defer></script>
     {%- endif -%}
   </body>
 </html>

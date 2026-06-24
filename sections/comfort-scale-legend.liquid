@@ -1,0 +1,82 @@
+{% schema %}
+{
+  "name": "Comfort Scale Legend",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "legend_item",
+      "name": "Legend Item",
+      "settings": [
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Box Color",
+          "default": "#42A5F5"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Soft"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Plush and contouring"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Comfort Scale Legend"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.comfort-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.legend-color-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+}
+.legend-text {
+  display: flex;
+  flex-direction: column;
+}
+.legend-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.legend-description {
+  font-size: 0.95rem;
+  color: #333;
+}
+{% endstylesheet %}
+
+<div class="comfort-legend">
+  {% for block in section.blocks %}
+    <div class="legend-item">
+      <div class="legend-color-box" style="background-color: {{ block.settings.color }};"></div>
+      <div class="legend-text">
+        <div class="legend-title">{{ block.settings.title }}</div>
+        <div class="legend-description">{{ block.settings.description }}</div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
