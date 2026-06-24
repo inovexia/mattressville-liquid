@@ -143,14 +143,47 @@
     return getEffectiveSortBy().startsWith('price');
   }
 
+  function parsePriceBucketLabel(label) {
+    const text = String(label || '').trim();
+
+    const upToMatch = text.match(/up\s*to\s*\$?([\d,]+)/i);
+    if (upToMatch) {
+      return { min: null, max: Number(upToMatch[1].replace(/,/g, '')) };
+    }
+
+    const andUpMatch = text.match(/\$?([\d,]+)\s*and\s*up/i);
+    if (andUpMatch) {
+      return { min: Number(andUpMatch[1].replace(/,/g, '')), max: null };
+    }
+
+    const rangeMatch = text.match(/\$?([\d,]+)\s*-\s*\$?([\d,]+)/);
+    if (rangeMatch) {
+      return {
+        min: Number(rangeMatch[1].replace(/,/g, '')),
+        max: Number(rangeMatch[2].replace(/,/g, ''))
+      };
+    }
+
+    return { min: null, max: null };
+  }
+
   function getPriceRangeFilter() {
     const params = new URLSearchParams(window.location.search);
     const gte = params.get('filter.v.price.gte');
     const lte = params.get('filter.v.price.lte');
 
     // URL values are dollars; variant prices are in cents.
-    const min = gte && Number.isFinite(Number(gte)) ? Number(gte) * 100 : null;
-    const max = lte && Number.isFinite(Number(lte)) ? Number(lte) * 100 : null;
+    let min = gte && Number.isFinite(Number(gte)) ? Number(gte) * 100 : null;
+    let max = lte && Number.isFinite(Number(lte)) ? Number(lte) * 100 : null;
+
+    if (min === null && max === null) {
+      const bucketValue = params.get('filter.p.m.custom.price_range');
+      if (bucketValue) {
+        const bucket = parsePriceBucketLabel(bucketValue);
+        min = bucket.min !== null ? bucket.min * 100 : null;
+        max = bucket.max !== null ? bucket.max * 100 : null;
+      }
+    }
 
     return { min, max };
   }

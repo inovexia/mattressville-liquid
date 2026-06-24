@@ -24,8 +24,17 @@
     assign terms = results.terms | escape
     assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
   endif
--%}
 
+  # The "Price" bucket radios submit through Shopify's built-in
+  # filter.v.price.gte/lte query params (broader, accurate server-side
+  # matching based on real variant prices) rather than the
+  # custom.price_range metafield, which can exclude products whose tagged
+  # bucket doesn't match the size variant being viewed. These are fixed
+  # Shopify param names — no price_range filter object needs to exist in
+  # results.filters for them to work, so they're hardcoded directly below.
+  # JS (price-range-buckets.js) keeps the hidden inputs' values in sync with
+  # the current URL on every render, so no SSR value is needed here.
+-%}
 <div class="facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
     <facet-filters-form class="facets small-hide">
@@ -110,6 +119,7 @@
             {%- endif -%}
 
             <script src="{{ 'show-more.aio.min.js' | asset_url }}" defer></script>
+            <script src="{{ 'price-range-buckets.js' | asset_url }}" defer></script>
             {%- style -%}
               .facets-container .facet-checkbox input[type="radio"] {
                 position: absolute;
@@ -211,6 +221,10 @@
                       {%- endif -%}
                       <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
                         <legend class="visually-hidden">{{ filter.label | escape }}</legend>
+                        {% if is_price_bucket_list %}
+                          <input type="hidden" name="filter.v.price.gte" data-price-bucket-gte>
+                          <input type="hidden" name="filter.v.price.lte" data-price-bucket-lte>
+                        {% endif %}
                         <ul
                           class="{{ visual_layout_class }}{% if filter_type == 'vertical' %} facets__list--vertical{% else %} facets__list{% endif %} list-unstyled no-js-hidden"
                           role="list"
@@ -239,10 +253,15 @@
                               >
                                 <input
                                   type="{{ bucket_input_type }}"
-                                  name="{{ value.param_name }}"
+                                  {% if is_price_bucket_list %}
+                                    class="price-bucket-radio"
+                                    data-bucket-label="{{ value.label | escape }}"
+                                  {% else %}
+                                    name="{{ value.param_name }}"
+                                  {% endif %}
                                   value="{{ value.value }}"
                                   id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                                  {% if value.active %}
+                                  {% if value.active and bucket_input_type != 'radio' %}
                                     checked
                                   {% endif %}
                                   {% if is_disabled %}
@@ -299,16 +318,17 @@
                                 {% endif %}
 
                                 <span class="facet-checkbox__text" aria-hidden="true">
-                                  {{- value.label | escape }} ({{ value.count }})</span
+                                  {{- value.label | escape }}{% unless is_price_bucket_list %} ({{ value.count }}){% endunless %}</span
                                 >
                                 <span class="visually-hidden">
-                                  {{- value.label | escape }} (
-                                  {%- if value.count == 1 -%}
-                                    {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
-                                  {%- else -%}
-                                    {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
-                                  {%- endif -%}
-                                  )</span
+                                  {{- value.label | escape }}
+                                  {%- unless is_price_bucket_list %} (
+                                    {%- if value.count == 1 -%}
+                                      {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
+                                    {%- else -%}
+                                      {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
+                                    {%- endif -%}
+                                  ) {%- endunless -%}</span
                                 >
                               </label>
                             </li>
@@ -330,7 +350,15 @@
                                   name="{{ value.param_name }}"
                                   value="{{ value.value }}"
                                   id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}-no-js"
-                                  {% if value.active %}
+                                  {% comment %}
+                                    Radio inputs sharing a name are mutually exclusive
+                                    document-wide, even across this hidden no-js fallback
+                                    list and the JS-enabled list above. Pre-checking a value
+                                    here would silently steal the "checked" state from the
+                                    visible radio with the same name, so skip it for radio
+                                    groups — checkboxes have no such conflict.
+                                  {% endcomment %}
+                                  {% if value.active and bucket_input_type != 'radio' %}
                                     checked
                                   {% endif %}
                                   {% if value.count == 0 and value.active == false %}
@@ -364,15 +392,16 @@
                                     stroke-linejoin="round" />
                                 </svg>
 
-                                <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
+                                <span aria-hidden="true">{{ value.label | escape }}{% unless is_price_bucket_list %} ({{ value.count }}){% endunless %}</span>
                                 <span class="visually-hidden">
-                                  {{- value.label | escape }} (
-                                  {%- if value.count == 1 -%}
-                                    {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
-                                  {%- else -%}
-                                    {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
-                                  {%- endif -%}
-                                  )</span
+                                  {{- value.label | escape }}
+                                  {%- unless is_price_bucket_list %} (
+                                    {%- if value.count == 1 -%}
+                                      {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
+                                    {%- else -%}
+                                      {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
+                                    {%- endif -%}
+                                  ) {%- endunless -%}</span
                                 >
                               </label>
                             </li>
@@ -398,103 +427,12 @@
                     </div>
                   </details>
                 {% when 'price_range' %}
-                  {% liquid
-                    assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,UYU,VES,VND' | split: ','
-                    assign uses_comma_decimals = false
-                    if currencies_using_comma_decimals contains cart.currency.iso_code
-                      assign uses_comma_decimals = true
-                    endif
-                  %}
-                  <details
-                    id="Details-{{ filter.param_name | escape }}-{{ section.id }}"
-                    class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
-                    data-index="{{ forloop.index }}"
-                    {% if filter_type == 'vertical' and forloop.index == 1 %}
-                      open
-                    {% endif %}
-                  >
-                    <summary class="facets__summary caption-large focus-offset">
-                      <div>
-                        <span>{{ filter.label | escape }}</span>
-                        {% render 'icon-caret' %}
-                      </div>
-                    </summary>
-                    <div
-                      id="Facet-{{ forloop.index }}-{{ section.id }}"
-                      class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
-                    >
-                      <div class="{% if filter_type == 'horizontal' %}facets__header{% else %}facets__header-vertical{% endif %}">
-                        {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
-                        <span class="facets__selected">
-                          {{- 'products.facets.max_price' | t: price: max_price_amount -}}
-                        </span>
-                        {%- if filter_type != 'vertical' -%}
-                          <facet-remove>
-                            <a href="{{ filter.url_to_remove }}" class="facets__reset link underlined-link">
-                              {{ 'products.facets.reset' | t }}
-                            </a>
-                          </facet-remove>
-                        {%- endif -%}
-                      </div>
-                      <price-range class="facets__price">
-                        <span class="field-currency">{{ cart.currency.symbol }}</span>
-                        <div class="field">
-                          <input
-                            class="field__input"
-                            name="{{ filter.min_value.param_name }}"
-                            id="Filter-{{ filter.label | escape }}-GTE"
-                            {%- if filter.min_value.value -%}
-                              {%- if uses_comma_decimals -%}
-                                value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                              {%- else -%}
-                                value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
-                              {%- endif %}
-                            {%- endif -%}
-                            type="number"
-                            placeholder="0"
-                            min="0"
-                            {%- if uses_comma_decimals -%}
-                              max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                            {%- else -%}
-                              max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                            {% endif %}
-                          >
-                          <label class="field__label" for="Filter-{{ filter.label | escape }}-GTE">
-                            {{- 'products.facets.from' | t -}}
-                          </label>
-                        </div>
-                        {%- if filter_type != 'vertical' -%}
-                          <span class="field-currency">{{ cart.currency.symbol }}</span>
-                        {%- endif -%}
-                        <div class="field">
-                          <input
-                            class="field__input"
-                            name="{{ filter.max_value.param_name }}"
-                            id="Filter-{{ filter.label | escape }}-LTE"
-                            {%- if filter.max_value.value -%}
-                              {%- if uses_comma_decimals -%}
-                                value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                              {%- else -%}
-                                value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
-                              {%- endif %}
-                            {%- endif -%}
-                            type="number"
-                            min="0"
-                            {%- if uses_comma_decimals -%}
-                              placeholder="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                              max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                            {%- else -%}
-                              placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                              max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                            {% endif %}
-                          >
-                          <label class="field__label" for="Filter-{{ filter.label | escape }}-LTE">
-                            {{- 'products.facets.to' | t -}}
-                          </label>
-                        </div>
-                      </price-range>
-                    </div>
-                  </details>
+                  {% comment %}
+                    Intentionally not rendered: the "Price Range" bucket radios
+                    (list-type filter above) now drive this same filter's
+                    gte/lte params directly, so this native min/max UI would
+                    otherwise duplicate/conflict with it on the same form.
+                  {% endcomment %}
               {% endcase %}
             {%- endfor -%}
             <noscript>
@@ -780,6 +718,10 @@
                               </span>
                             {%- endif -%}
                           </button>
+                          {% if is_price_bucket_list %}
+                            <input type="hidden" name="filter.v.price.gte" data-price-bucket-gte>
+                            <input type="hidden" name="filter.v.price.lte" data-price-bucket-lte>
+                          {% endif %}
                           <ul class="{{ visual_layout_class }} mobile-facets__list list-unstyled" role="list">
                             {%- liquid
                               assign sorted_values = filter.values
@@ -804,12 +746,16 @@
                                   class="facets__label mobile-facets__label{% if is_disabled %} mobile-facets__label--disabled disabled{% endif %}{% if has_visual_display %} visual-display-parent visual-display-parent--{{ filter.presentation }}{% endif %}{% if value.active %} active{% endif %}"
                                 >
                                   <input
-                                    class="mobile-facets__checkbox"
+                                    class="mobile-facets__checkbox{% if is_price_bucket_list %} price-bucket-radio{% endif %}"
                                     type="{{ bucket_input_type }}"
-                                    name="{{ value.param_name }}"
+                                    {% if is_price_bucket_list %}
+                                      data-bucket-label="{{ value.label | escape }}"
+                                    {% else %}
+                                      name="{{ value.param_name }}"
+                                    {% endif %}
                                     value="{{ value.value }}"
                                     id="Filter-{{ filter.param_name | escape }}-mobile-{{ forloop.index }}"
-                                    {% if value.active %}
+                                    {% if value.active and bucket_input_type != 'radio' %}
                                       checked
                                     {% endif %}
                                     {% if is_disabled %}
@@ -866,16 +812,17 @@
                                   {% endif %}
 
                                   <span class="facet-checkbox__text" aria-hidden="true">
-                                    {{- value.label | escape }} ({{ value.count }})</span
+                                    {{- value.label | escape }}{% unless is_price_bucket_list %} ({{ value.count }}){% endunless %}</span
                                   >
                                   <span class="visually-hidden">
-                                    {{- value.label | escape }} (
-                                    {%- if value.count == '1' -%}
-                                      {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
-                                    {%- else -%}
-                                      {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
-                                    {%- endif -%}
-                                    )</span
+                                    {{- value.label | escape }}
+                                    {%- unless is_price_bucket_list %} (
+                                      {%- if value.count == '1' -%}
+                                        {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
+                                      {%- else -%}
+                                        {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
+                                      {%- endif -%}
+                                    ) {%- endunless -%}</span
                                   >
                                 </label>
                               </li>
@@ -904,122 +851,13 @@
                         </div>
                       </details>
                     {% when 'price_range' %}
-                      {% liquid
-                        assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,UYU,VES,VND' | split: ','
-                        assign uses_comma_decimals = false
-                        if currencies_using_comma_decimals contains cart.currency.iso_code
-                          assign uses_comma_decimals = true
-                        endif
-                      %}
-                      <details
-                        id="Details-Mobile-{{ filter.param_name | escape }}-{{ section.id }}"
-                        class="mobile-facets__details js-filter"
-                        data-index="mobile-{{ forloop.index }}"
-                      >
-                        <summary class="mobile-facets__summary focus-inset">
-                          <div>
-                            <span>{{ filter.label | escape }}</span>
-                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
-                            <noscript>{% render 'icon-caret' %}</noscript>
-                          </div>
-                        </summary>
-                        <div
-                          id="FacetMobile-{{ forloop.index }}-{{ section.id }}"
-                          class="mobile-facets__submenu gradient"
-                        >
-                          <button
-                            class="mobile-facets__close-button link link--text focus-inset"
-                            aria-expanded="true"
-                            type="button"
-                          >
-                            {% render 'icon-arrow' %}
-                            {{ filter.label | escape }}
-                          </button>
-
-                          {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
-                          <p class="mobile-facets__info">
-                            {{ 'products.facets.max_price' | t: price: max_price_amount }}
-                          </p>
-
-                          <price-range class="facets__price">
-                            <span class="field-currency">{{ cart.currency.symbol }}</span>
-                            <div class="field">
-                              <input
-                                class="field__input"
-                                name="{{ filter.min_value.param_name }}"
-                                id="Mobile-Filter-{{ filter.label | escape }}-GTE"
-                                {%- if filter.min_value.value -%}
-                                  {%- if uses_comma_decimals -%}
-                                    value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                                  {%- else -%}
-                                    value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
-                                  {%- endif %}
-                                {%- endif -%}
-                                type="number"
-                                placeholder="0"
-                                min="0"
-                                inputmode="decimal"
-                                {%- if uses_comma_decimals -%}
-                                  max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                                {%- else -%}
-                                  max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                                {% endif %}
-                              >
-                              <label class="field__label" for="Mobile-Filter-{{ filter.label | escape }}-GTE">
-                                {{- 'products.facets.from' | t -}}
-                              </label>
-                            </div>
-
-                            <span class="field-currency">{{ cart.currency.symbol }}</span>
-                            <div class="field">
-                              <input
-                                class="field__input"
-                                name="{{ filter.max_value.param_name }}"
-                                id="Mobile-Filter-{{ filter.label | escape }}-LTE"
-                                {%- if filter.max_value.value -%}
-                                  {%- if uses_comma_decimals -%}
-                                    value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                                  {%- else -%}
-                                    value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
-                                  {%- endif %}
-                                {%- endif -%}
-                                type="number"
-                                min="0"
-                                inputmode="decimal"
-                                {%- if uses_comma_decimals -%}
-                                  placeholder="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                                  max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                                {%- else -%}
-                                  placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                                  max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                                {% endif %}
-                              >
-                              <label class="field__label" for="Mobile-Filter-{{ filter.label | escape }}-LTE">
-                                {{- 'products.facets.to' | t -}}
-                              </label>
-                            </div>
-                          </price-range>
-                          <div class="no-js-hidden mobile-facets__footer">
-                            <facet-remove class="mobile-facets__clear-wrapper">
-                              <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear underlined-link">
-                                {{- 'products.facets.clear' | t -}}
-                              </a>
-                            </facet-remove>
-                            <button
-                              type="button"
-                              class="no-js-hidden button button--primary"
-                              onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
-                            >
-                              {{ 'products.facets.apply' | t }}
-                            </button>
-                            <noscript
-                              ><button class="button button--primary">
-                                {{ 'products.facets.apply' | t }}
-                              </button></noscript
-                            >
-                          </div>
-                        </div>
-                      </details>
+                      {% comment %}
+                        Intentionally not rendered: the "Price Range" bucket
+                        radios (list-type filter above) now drive this same
+                        filter's gte/lte params directly, so this native
+                        min/max UI would otherwise duplicate/conflict with it
+                        on the same form.
+                      {% endcomment %}
                   {% endcase %}
                 {%- endfor -%}
               {%- endif -%}
