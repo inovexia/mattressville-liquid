@@ -1,1 +1,774 @@
-{"layout":"theme-sidebar","sections":{"main":{"type":"invx-main-page","settings":{}},"multicolumn_CrLKdg":{"type":"multicolumn","blocks":{"column_xUV4De":{"type":"column","settings":{"title":"","text":"","link_label":"GTA Flyer","link":"shopify:\/\/pages\/local-gta-flyer"}},"column_mJp4Qk":{"type":"column","disabled":true,"settings":{"title":"Column","text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","link_label":"","link":""}},"column_ypJ9zH":{"type":"column","settings":{"title":"","text":"","link_label":"Canada Wide Flyer","link":"shopify:\/\/pages\/canada-wide-flyer"}}},"block_order":["column_xUV4De","column_mJp4Qk","column_ypJ9zH"],"custom_css":["#Slider-template--22113195393332__multicolumn_CrLKdg {align-items: center; background: #f1f3f4; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); border-radius: 15px; justify-content: space-around; padding: 0px; overflow: hidden;}","#Slider-template--22113195393332__multicolumn_CrLKdg li {background-color: transparent; border: none; text-align: center;}","#Slider-template--22113195393332__multicolumn_CrLKdg li .multicolumn-card__info {padding: 0;}",".link {margin: 0 !important; padding: 10px;}",".icon-wrap {display: none;}"],"settings":{"title":"","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":2,"column_alignment":"center","background_style":"primary","button_label":"","button_link":"","color_scheme":"","columns_mobile":"2","swipe_on_mobile":false,"padding_top":12,"padding_bottom":36}},"image_with_text_zVawM7":{"type":"image-with-text","disabled":true,"custom_css":[".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}","img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 500px; right: 50%; transform: translate(-50%, 0%);}",".global-media-settings {border: none !important;}"],"settings":{"image":"shopify:\/\/shop_images\/mattressville_canada_day_flyer_25.png","height":"large","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"center","content_layout":"no-overlap","section_color_scheme":"","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","padding_top":20,"padding_bottom":20}},"image_with_text_ynHBX7":{"type":"image-with-text","disabled":true,"custom_css":[".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}","img {display: block; max-width: 100%; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 500px; right: 50%; transform: translate(-50%, 0%);}",".global-media-settings {border: none !important;}"],"settings":{"image":"shopify:\/\/shop_images\/mattressville_black_friday_flyer_2025.webp","height":"large","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"center","content_layout":"overlap","section_color_scheme":"","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","padding_top":0,"padding_bottom":0}},"blocks_PPjPW8":{"type":"_blocks","blocks":{"ai_gen_block_e82ac4a_k7RGRz":{"type":"ai_gen_block_e82ac4a","settings":{"text":"<p>Ready for better sleep? Take an <strong>extra 15% off<\/strong> our most popular memory foam, pocket coil, and hybrid mattresses. Prices include Black Friday markdowns; the <strong>extra 15% is auto-applied in cart<\/strong>. <strong>Sale ends November 30, 2025 at 11:59 PM ET.<\/strong><\/p><p>✅ <strong>Fast GTA delivery:<\/strong> most orders in <strong>1–3 business days<\/strong><br\/>🏬 <strong>Same-day Mississauga pickup:<\/strong> in-stock items before 4 PM<br\/>🛏️ <strong>Top brands & sizes:<\/strong> Twin to King, firm to plush<\/p><p><strong>Shopping near Mississauga or Toronto?<\/strong><br\/><br\/>📍 Pick up today at our Mississauga store. We deliver across the <strong>GTA<\/strong>—Toronto, Brampton, Oakville, Vaughan, Markham, Richmond Hill. Delivery ETAs and fees show at checkout.<\/p><p><strong>Quick Buying Guide<\/strong><\/p><p>😴 <strong>Side sleepers:<\/strong> medium-plush or pressure-relief foam\/hybrid<br\/>🧭 <strong>Back & stomach:<\/strong> medium-firm to firm for alignment<br\/>🌬️ <strong>Hot sleepers:<\/strong> cooling gel foams or breathable hybrids<\/p><p><strong>Terms: <\/strong>Eligible items only. Limited quantities. Prices\/availability may change. Offer valid through <strong>Nov 30, 2025 (11:59 PM ET).<\/strong><\/p>","collapsed_height":200,"button_style":"link","expand_text":"Read more +","collapse_text":"Read less -","button_font_size":14,"link_color":"#0000ee","button_padding_vertical":8,"button_padding_horizontal":16,"button_bg_color":"#ff5c7b","button_hover_bg_color":"#d7355c","button_text_color":"#ffffff","button_border_radius":20,"show_on":"mobile","padding":0,"background_color":"#ffffff","text_color":"#212529","font_size":16},"blocks":{}}},"block_order":["ai_gen_block_e82ac4a_k7RGRz"],"disabled":true,"custom_css":[],"name":"Expandable text","settings":{}},"rich_text_W9h3PV":{"type":"rich-text","blocks":{"heading_zqz63J":{"type":"heading","settings":{"heading":"Boxing Week Mattress Deals","heading_size":"h1"}},"heading_Y8i3Af":{"type":"heading","settings":{"heading":"Premium Brands at Boxing Day Prices [Extended] – Tempur-Pedic, Stearns & Foster, Marshall, Aireloom and more!","heading_size":"h2"}},"text_CKak3p":{"type":"text","disabled":true,"settings":{"text":"<p>🎁Celebrate boxing day with us at our <strong>Boxing Day Mattress Sale<\/strong> 2025 and save up to <strong>60%<\/strong> on premium mattresses! Find unbeatable B<em>oxing Day mattress deals<\/em> on luxury brands like <strong>Tempur-Pedic, Stearns & Foster, Marshall, Aireloom, Hypnos  and more<\/strong>. Stock is limited, so act fast to upgrade your sleep for less!<strong> <\/strong>🛒<\/p><p>🏆Mattressville is the biggest retailer of premium high-end mattresses—Find out why we are the highest rated mattress store. We’re going all out for this year’s Boxing Day Sale!<\/p><p><strong>Shop during our Boxing Day Mattress Sale and save up to 60% with massive markdowns.<\/strong> It’s your chance to grab the perfect mattress at prices you won’t believe! 😲<\/p><ul><li><strong>BOX2025 <\/strong>(15% OFF All Orders) <\/li><\/ul><p><em>Discount AUTO APPLIED at checkout on all sale items.<\/em><\/p><p>Treat yourself or your loved ones so you can have a good night, every night. Don’t wait—these deals are only available for a limited time!<\/p><p>Don't forget to check out our blog: <a href=\"\/blogs\/promotions\/10-things-not-to-do-when-shopping-during-a-boxing-day-mattress-sale\" target=\"_blank\" title=\"10 Things NOT To Do When Shopping During A Boxing Day Mattress Sale\"><strong>10 Things NOT To Do When Shopping During A Boxing Day Mattress Sale<\/strong><\/a><\/p><p><em>Coupons cannot be combined with other discounts, promos, or bundles.<\/em><\/p><p><strong>Boxing Week Mattress Mega Sale on Now <\/strong><\/p>"}},"heading_KNizjn":{"type":"heading","disabled":true,"settings":{"heading":"Limited Stock: Don’t Miss These Boxing Day Savings!","heading_size":"h2"}},"button_7a4wy7":{"type":"button","disabled":true,"settings":{"button_label":"Shop Sale Items","button_link":"","button_style_secondary":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_zqz63J","heading_Y8i3Af","text_CKak3p","heading_KNizjn","button_7a4wy7"],"disabled":true,"custom_css":[".rich-text .rich-text__wrapper {padding: 0;}",".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":4,"padding_bottom":0}},"image_with_text_pj6awM":{"type":"image-with-text","disabled":true,"custom_css":[".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}","img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 500px; right: 50%; transform: translate(-50%, 0%);}",".global-media-settings {border: none !important;}"],"settings":{"image":"shopify:\/\/shop_images\/mattressville_boxing_day_flyer_2025_extended.png","height":"large","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"center","content_layout":"no-overlap","section_color_scheme":"","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","padding_top":12,"padding_bottom":12}},"blocks_7YDTfW":{"type":"_blocks","blocks":{"ai_gen_block_e82ac4a_BGzRPW":{"type":"ai_gen_block_e82ac4a","settings":{"text":"<p>🎁Our <strong>Boxing Week Mattress Sale<\/strong> is now extended until Jan 5th 2026 ! Find unbeatable <em>mattress deals<\/em> on luxury brands like <strong>Tempur-Pedic, Stearns & Foster, Marshall, Aireloom, Hypnos  and more<\/strong>. Stock is limited, so act fast to upgrade your sleep for less!<strong> <\/strong>🛒<\/p><p>🏆Mattressville is the biggest retailer of premium high-end mattresses—Find out why we are the highest rated mattress store. <\/p><p><strong>Shop during our Boxing Week Mattress Sale and save up to 60% with massive markdowns.<\/strong> It’s your chance to grab the perfect mattress at prices you won’t believe! 😲<\/p><ul><li><strong>BOX2025 <\/strong>(15% OFF All Orders) <\/li><\/ul><p><em>Discount AUTO APPLIED at checkout on all sale items.<\/em><\/p><p>Treat yourself or your loved ones so you can have a good night, every night. Don’t wait—these deals are only available for a limited time!<\/p><p>Don't forget to check out our blog: <a href=\"\/blogs\/promotions\/10-things-not-to-do-when-shopping-during-a-boxing-day-mattress-sale\" target=\"_blank\" title=\"10 Things NOT To Do When Shopping During A Boxing Day Mattress Sale\"><strong>10 Things NOT To Do When Shopping During A Boxing Day Mattress Sale<\/strong><\/a><\/p><p><em>Coupons cannot be combined with other discounts, promos, or bundles.<\/em><\/p><p><strong>Boxing Week Mattress Mega Sale on Now <\/strong><\/p>","collapsed_height":100,"button_style":"link","expand_text":"Read more +","collapse_text":"Read less -","button_font_size":14,"link_color":"#0000ee","button_padding_vertical":4,"button_padding_horizontal":16,"button_bg_color":"#ff5c7b","button_hover_bg_color":"#d7355c","button_text_color":"#ffffff","button_border_radius":22,"show_on":"mobile","padding":0,"background_color":"#ffffff","text_color":"#212529","font_size":16},"blocks":{}}},"block_order":["ai_gen_block_e82ac4a_BGzRPW"],"disabled":true,"name":"Expandable text","settings":{}},"blocks_RJEPbP":{"type":"_blocks","blocks":{"ai_gen_block_e82ac4a_e8fFmH":{"type":"ai_gen_block_e82ac4a","settings":{"text":"<h3>Flyer transcript <\/h3><p><strong>BOXING Week<\/strong><br\/><strong>MATTRESS MEGA SALE<\/strong><br\/><strong>EXTRA 15% OFF<\/strong><br\/><br\/>Discount automatically applied at checkout<\/p><p><strong>SPECIAL BOXING DAY PRICING<\/strong><\/p><p><strong>Featured Queen Mattress Deals<\/strong><\/p><ul><li><strong>Sealy Tight Top Foam Firm Mattress<\/strong> — <strong>$389 (QUEEN)<\/strong> — <em>Compare at $549<\/em> — <strong>29% OFF<\/strong><br\/><\/li><li><strong>Kingsdown Athena Euro Top Firm Mattress<\/strong> — <strong>$1099 (QUEEN)<\/strong> — <em>Compare at $1,699<\/em> — <strong>35% OFF<\/strong><br\/><\/li><li><strong>Marshall Inspired Series Tight Top Firm Mattress<\/strong> — <strong>$2,699 (QUEEN)<\/strong> — <em>Compare at $3,775<\/em> — <strong>29% OFF<\/strong><br\/><\/li><li><strong>Natura Natural Latex Tight Top Firm Mattress<\/strong> — <strong>$1,699 (QUEEN)<\/strong> — <em>Compare at $2,429<\/em> — <strong>30% OFF<\/strong><br\/><\/li><li><strong>Stearns and Foster Estate Tight Top Luxury Firm Mattress<\/strong> — <strong>$1,799 (QUEEN)<\/strong> — <em>Compare at $3,275<\/em> — <strong>45% OFF<\/strong><br\/><\/li><li><strong>Aireloom Tight Top Extra Firm Mattress (Pacific Series by Kluft)<\/strong> — <strong>$2,799 (QUEEN)<\/strong> — <em>Compare at $3,899<\/em> — <strong>28% OFF<\/strong><br\/><\/li><\/ul><p><strong>EXTRA 15% OFF EVERYTHING<\/strong><br\/><strong>BOX2025 — 15% OFF All Orders.<\/strong><\/p><p><strong>Fine print:<\/strong> Discount is automatically applied at checkout. Coupon cannot be combined with other coupons, promos, or bundles. Free standard delivery on orders over $499.<\/p><p><strong>Store:<\/strong> 1911 Dundas St. East, Unit 18, Mississauga, ON L4X 1M1<br\/><br\/>Financing via <strong>affirm<\/strong><\/p>","collapsed_height":50,"button_style":"link","expand_text":"Read more +","collapse_text":"Read less -","button_font_size":14,"link_color":"#0000ee","button_padding_vertical":8,"button_padding_horizontal":16,"button_bg_color":"#ff5c7b","button_hover_bg_color":"#d7355c","button_text_color":"#ffffff","button_border_radius":20,"show_on":"both","padding":0,"background_color":"#ffffff","text_color":"#212529","font_size":16},"blocks":{}}},"block_order":["ai_gen_block_e82ac4a_e8fFmH"],"disabled":true,"name":"Expandable text","settings":{}},"rich_text_wxcLzR":{"type":"rich-text","blocks":{"heading_MiG6F7":{"type":"heading","settings":{"heading":"Limited Stock: Don’t Miss These Boxing Week Savings!","heading_size":"h2"}},"button_EPQHtk":{"type":"button","settings":{"button_label":"Shop Sale Items","button_link":"shopify:\/\/collections\/boxing-day-mattress-sale","button_style_secondary":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_MiG6F7","button_EPQHtk"],"disabled":true,"custom_css":[".rich-text .rich-text__wrapper {padding: 0;}",".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"],"name":"t:sections.rich-text.presets.name","settings":{"desktop_content_position":"left","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":0,"padding_bottom":20}},"psb_utilities_line_BErMjr":{"type":"psb-utilities-line","disabled":true,"settings":{"container_width":"psb-container","line_height":1,"line_color":"#cccccc"}},"collection_list_EVfJkE":{"type":"collection-list","blocks":{"featured_collection_FjA3yY":{"type":"featured_collection","settings":{"collection":"aireloom"}}},"block_order":["featured_collection_FjA3yY"],"settings":{"title":"Aireloom Mattresses by KLUFT","heading_size":"h1","image_ratio":"square","columns_desktop":3,"color_scheme":"","show_view_all":false,"columns_mobile":"1","swipe_on_mobile":true,"padding_top":12,"padding_bottom":0}},"rich_text_7AXBRM":{"type":"rich-text","blocks":{"text_yCVyTQ":{"type":"text","settings":{"text":"<p><strong>Luxury at Its Finest – Aireloom by Kluft. <\/strong>Experience unparalleled comfort with Aireloom mattresses, where California design meets handcrafted excellence. These premium mattresses are meticulously crafted using the finest materials, offering unmatched support, breathability, and luxury. As one of the select retailers to carry Aireloom by Kluft, we proudly to bring you this exclusive collection designed to elevate your sleep to the next level. Visit us today to explore the Aireloom by Kluft collection.<\/p>"}},"button_HLUmyz":{"type":"button","settings":{"button_label":"Shop Aireloom","button_link":"shopify:\/\/collections\/aireloom","button_style_secondary":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["text_yCVyTQ","button_HLUmyz"],"custom_css":[".rich-text .rich-text__wrapper {padding: 0;}",".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":0,"padding_bottom":44}},"psb_utilities_line_Ytf8dU":{"type":"psb-utilities-line","settings":{"container_width":"psb-container","line_height":1,"line_color":"#cccccc"}},"rich_text_hK34aJ":{"type":"rich-text","blocks":{"heading_P6GQTb":{"type":"heading","settings":{"heading":"Marshall Mattresses Now on Sale","heading_size":"h1"}}},"block_order":["heading_P6GQTb"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":28,"padding_bottom":0}},"collection_list_NRFCEM":{"type":"collection-list","blocks":{"featured_collection_Kay6Aw":{"type":"featured_collection","settings":{"collection":"marshall-mattresses"}}},"block_order":["featured_collection_Kay6Aw"],"settings":{"title":"","heading_size":"h1","image_ratio":"square","columns_desktop":1,"color_scheme":"","show_view_all":false,"columns_mobile":"1","swipe_on_mobile":false,"padding_top":12,"padding_bottom":0}},"rich_text_CLDgr6":{"type":"rich-text","blocks":{"text_QQAhfc":{"type":"text","settings":{"text":"<p><strong>Don't just dream of a better night's sleep – experience it with Marshall! <\/strong>Experience the luxurious softness, supportive structure, and unbeatable value of Marshall Mattresses. <br\/>See for yourself how Marshall turns dreams into a reality, <br\/><strong>Come <\/strong><em><strong>feel the difference<\/strong><\/em><strong> at Mattressville today!<\/strong><\/p>"}},"button_zcYr6P":{"type":"button","settings":{"button_label":"View All","button_link":"shopify:\/\/collections\/marshall-mattresses","button_style_secondary":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["text_QQAhfc","button_zcYr6P"],"custom_css":[".rich-text .rich-text__wrapper {padding: 0;}",".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":0,"padding_bottom":44}},"psb_utilities_line_ficaQA":{"type":"psb-utilities-line","settings":{"container_width":"psb-container","line_height":1,"line_color":"#cccccc"}},"rich_text_Ye4p7T":{"type":"rich-text","blocks":{"heading_VicVdY":{"type":"heading","settings":{"heading":"Best Deals on Kingsdown Mattresses","heading_size":"h1"}}},"block_order":["heading_VicVdY"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":0}},"collection_list_4dyGwc":{"type":"collection-list","blocks":{"featured_collection_zrpYh7":{"type":"featured_collection","settings":{"collection":"kingsdown"}}},"block_order":["featured_collection_zrpYh7"],"settings":{"title":"","heading_size":"h1","image_ratio":"square","columns_desktop":3,"color_scheme":"","show_view_all":false,"columns_mobile":"1","swipe_on_mobile":false,"padding_top":0,"padding_bottom":0}},"rich_text_fgdiqy":{"type":"rich-text","blocks":{"text_CiQDix":{"type":"text","settings":{"text":"<p><strong>Dream Big. Sleep Better. Save Huge. <\/strong>Mattressville is offering <em><strong>exclusive deals<\/strong><\/em> on the luxurious Kingsdown mattresses you love. <strong>Don't miss out on these incredible deals!<\/strong> <br\/><strong>Visit Mattressville today<\/strong> and <em>experience the difference<\/em> a <strong>Kingsdown mattress<\/strong> can make.<\/p>"}}},"block_order":["text_CiQDix"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":0,"padding_bottom":16}},"image_with_text_EKL6in":{"type":"image-with-text","disabled":true,"custom_css":[".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}","img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 540px; right: 50%; transform: translate(-50%, 0%);}",".global-media-settings {border: none !important;}"],"settings":{"image":"shopify:\/\/shop_images\/Stay_Tuned.png","height":"large","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"center","content_layout":"no-overlap","section_color_scheme":"","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","padding_top":0,"padding_bottom":0}},"rich_text_dtFKYq":{"type":"rich-text","blocks":{"button_HVgt3F":{"type":"button","settings":{"button_label":"View All","button_link":"shopify:\/\/collections\/kingsdown","button_style_secondary":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["button_HVgt3F"],"custom_css":[".rich-text .rich-text__wrapper {padding: 0;}",".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":0,"padding_bottom":36}},"psb_utilities_line_i4pFzE":{"type":"psb-utilities-line","disabled":true,"name":"⚡︎PSB: Line","settings":{"container_width":"psb-container","line_height":1,"line_color":"#cccccc"}},"collapsible_content_yGz6zz":{"type":"collapsible-content","blocks":{"collapsible_row_kArc3q":{"type":"collapsible_row","settings":{"heading":"How do I claim discounts during your Boxing Week Mattress Sale?","icon":"check_mark","row_content":"<p>Claiming your discount is easy! The advertised prices are already marked down and <strong>Boxing Week discounts<\/strong> are automatically applied at <strong>checkout<\/strong>, so you’ll see your savings instantly. <\/p>","page":""}},"collapsible_row_G8wgPj":{"type":"collapsible_row","settings":{"heading":"Do coupons stack?","icon":"check_mark","row_content":"<p>No—coupons can’t be combined with other promos or bundles.<\/p>","page":""}},"collapsible_row_pNpaj6":{"type":"collapsible_row","settings":{"heading":"What are the best Boxing Week mattress deals for 2025?","icon":"check_mark","row_content":"<p>The best Boxing Week mattress deals at Mattressville include up to <strong>60% off<\/strong> all products, including premium mattresses from top brands. Whether you’re looking for memory foam, hybrid, or luxury mattresses, our Boxing Day sale offers unbeatable discounts you won’t find any other time of the year.<\/p><p>All products are <strong>already marked down.<\/strong> If you need assistance, our team is happy to help!<\/p>","page":""}},"collapsible_row_TT7RMq":{"type":"collapsible_row","settings":{"heading":"How much can I save during Mattressville’s Boxing Week Mattress Sale?","icon":"check_mark","row_content":"<p>During our <strong>Boxing Week Mattress Sale<\/strong>, get an additional 15% when you checkout. All products are already marked down for a total savings of up to <strong>60%<\/strong> <\/p><p>In addition to these steep discounts, we also offer exclusive deals like free local delivery on orders over $499. It’s the perfect opportunity to upgrade your sleep at a fraction of the price.<\/p>","page":""}},"collapsible_row_HVCGiq":{"type":"collapsible_row","settings":{"heading":"Which mattress brands are on sale this Boxing Week?","icon":"check_mark","row_content":"<p>We’re offering deep discounts on leading mattress brands, including:<\/p><ul><li><strong>Aireloom<\/strong><\/li><li><strong>Marshall<\/strong><\/li><li><strong>Hypnos<\/strong><\/li><li><strong>Sprout<\/strong><\/li><li><strong>Stearns & Foster<\/strong><\/li><li><strong>Tempur-Pedic<\/strong><\/li><li><strong>Kingsdown<\/strong><\/li><li><strong>Natura<\/strong><\/li><li><strong>Sealy<\/strong><\/li><li><strong>Serta<\/strong><\/li><\/ul><p><strong>...and more!<\/strong><\/p>","page":""}},"collapsible_row_rDEkY4":{"type":"collapsible_row","settings":{"heading":"When does Mattressville’s Boxing Week Mattress Sale start and end?","icon":"check_mark","row_content":"<p>Our Boxing Week Mattress Sale is extended until January <strong>5th, 2026, <\/strong>while supplies last. To avoid missing out on your preferred mattress, we recommend shopping early—stock moves fast during Boxing Week sales.<\/p>","page":""}},"collapsible_row_YMBLE8":{"type":"collapsible_row","settings":{"heading":"How do I choose the right mattress during a sale?","icon":"check_mark","row_content":"<p>To find the perfect mattress, consider the following:<\/p><ul><li><strong>Sleeping Position:<\/strong> Side sleepers need softer mattresses; back and stomach sleepers benefit from firmer options.<\/li><li><strong>Budget:<\/strong> Our sale offers a range of options for every price point.<\/li><li><strong>Size:<\/strong> Choose a mattress that fits your room and sleep needs—Queen, King, or California King are popular picks.<\/li><li>TRY our <a href=\"\/pages\/mattress-matchmaker\" title=\"Mattress Matchmaker\">Mattress Matchmaker <\/a>shopping assistant <\/li><\/ul><p>If you’re unsure, our <strong>mattress experts<\/strong> are here to help online, over the phone, or in-person at our <strong>Mississauga showroom<\/strong>.<\/p>","page":""}},"collapsible_row_K6TAQD":{"type":"collapsible_row","settings":{"heading":"Do you offer free delivery or trial periods during the promo period?","icon":"check_mark","row_content":"<p>Yes! We offer <strong>free delivery on orders over $499<\/strong> during the sale. Additionally, all of our mattresses come with a <a href=\"\/pages\/90-day-comfort-guarantee\" title=\"90 Day Comfort Guarantee\"><strong>90-day Comfort Guarantee<\/strong><\/a>, allowing you to swap your mattress if it’s not the perfect fit. Visit our showroom or contact us online to learn more.<\/p>","page":""}},"collapsible_row_e8ib6b":{"type":"collapsible_row","settings":{"heading":"What about returns?","icon":"check_mark","row_content":"<p>Standard return policy applies unless noted. See full details here: <a href=\"https:\/\/mattressville.ca\/pages\/refund-policy\" target=\"_blank\" title=\"https:\/\/mattressville.ca\/pages\/refund-policy\">Refund Policy <\/a><\/p>","page":""}}},"block_order":["collapsible_row_kArc3q","collapsible_row_G8wgPj","collapsible_row_pNpaj6","collapsible_row_TT7RMq","collapsible_row_HVCGiq","collapsible_row_rDEkY4","collapsible_row_YMBLE8","collapsible_row_K6TAQD","collapsible_row_e8ib6b"],"disabled":true,"settings":{"caption":"","heading":"<strong>Boxing Day FAQ<\/strong>","heading_size":"h2","heading_alignment":"center","layout":"none","color_scheme":"","container_color_scheme":"","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":36,"padding_bottom":36}}},"order":["main","multicolumn_CrLKdg","image_with_text_zVawM7","image_with_text_ynHBX7","blocks_PPjPW8","rich_text_W9h3PV","image_with_text_pj6awM","blocks_7YDTfW","blocks_RJEPbP","rich_text_wxcLzR","psb_utilities_line_BErMjr","collection_list_EVfJkE","rich_text_7AXBRM","psb_utilities_line_Ytf8dU","rich_text_hK34aJ","collection_list_NRFCEM","rich_text_CLDgr6","psb_utilities_line_ficaQA","rich_text_Ye4p7T","collection_list_4dyGwc","rich_text_fgdiqy","image_with_text_EKL6in","rich_text_dtFKYq","psb_utilities_line_i4pFzE","collapsible_content_yGz6zz"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme-sidebar",
+  "sections": {
+    "main": {
+      "type": "invx-main-page",
+      "settings": {}
+    },
+    "multicolumn_CrLKdg": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_xUV4De": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "GTA Flyer",
+            "link": "shopify://pages/local-gta-flyer"
+          }
+        },
+        "column_mJp4Qk": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ypJ9zH": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "Canada Wide Flyer",
+            "link": "shopify://pages/canada-wide-flyer"
+          }
+        }
+      },
+      "block_order": [
+        "column_xUV4De",
+        "column_mJp4Qk",
+        "column_ypJ9zH"
+      ],
+      "custom_css": [
+        "#Slider-template--22113195393332__multicolumn_CrLKdg {align-items: center; background: #f1f3f4; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); border-radius: 15px; justify-content: space-around; padding: 0px; overflow: hidden;}",
+        "#Slider-template--22113195393332__multicolumn_CrLKdg li {background-color: transparent; border: none; text-align: center;}",
+        "#Slider-template--22113195393332__multicolumn_CrLKdg li .multicolumn-card__info {padding: 0;}",
+        ".link {margin: 0 !important; padding: 10px;}",
+        ".icon-wrap {display: none;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_ynHBX7": {
+      "type": "image-with-text",
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
+        ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
+        "img {display: block; max-width: 100%; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 500px; right: 50%; transform: translate(-50%, 0%);}",
+        ".global-media-settings {border: none !important;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/mattressville_black_friday_flyer_2025.webp",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "blocks_PPjPW8": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e82ac4a_k7RGRz": {
+          "type": "ai_gen_block_e82ac4a",
+          "settings": {
+            "text": "<p>Ready for better sleep? Take an <strong>extra 15% off</strong> our most popular memory foam, pocket coil, and hybrid mattresses. Prices include Black Friday markdowns; the <strong>extra 15% is auto-applied in cart</strong>. <strong>Sale ends November 30, 2025 at 11:59 PM ET.</strong></p><p>✅ <strong>Fast GTA delivery:</strong> most orders in <strong>1–3 business days</strong><br/>🏬 <strong>Same-day Mississauga pickup:</strong> in-stock items before 4 PM<br/>🛏️ <strong>Top brands & sizes:</strong> Twin to King, firm to plush</p><p><strong>Shopping near Mississauga or Toronto?</strong><br/><br/>📍 Pick up today at our Mississauga store. We deliver across the <strong>GTA</strong>—Toronto, Brampton, Oakville, Vaughan, Markham, Richmond Hill. Delivery ETAs and fees show at checkout.</p><p><strong>Quick Buying Guide</strong></p><p>😴 <strong>Side sleepers:</strong> medium-plush or pressure-relief foam/hybrid<br/>🧭 <strong>Back & stomach:</strong> medium-firm to firm for alignment<br/>🌬️ <strong>Hot sleepers:</strong> cooling gel foams or breathable hybrids</p><p><strong>Terms: </strong>Eligible items only. Limited quantities. Prices/availability may change. Offer valid through <strong>Nov 30, 2025 (11:59 PM ET).</strong></p>",
+            "collapsed_height": 200,
+            "button_style": "link",
+            "expand_text": "Read more +",
+            "collapse_text": "Read less -",
+            "button_font_size": 14,
+            "link_color": "#0000ee",
+            "button_padding_vertical": 8,
+            "button_padding_horizontal": 16,
+            "button_bg_color": "#ff5c7b",
+            "button_hover_bg_color": "#d7355c",
+            "button_text_color": "#ffffff",
+            "button_border_radius": 20,
+            "show_on": "mobile",
+            "padding": 0,
+            "background_color": "#ffffff",
+            "text_color": "#212529",
+            "font_size": 16
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e82ac4a_k7RGRz"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Expandable text",
+      "settings": {}
+    },
+    "rich_text_W9h3PV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zqz63J": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Great Canadian Mattress Sale",
+            "heading_size": "h1"
+          }
+        },
+        "heading_Y8i3Af": {
+          "type": "heading",
+          "settings": {
+            "heading": "Premium Mattress Brands at Canada Day Prices – Marshall, Aireloom, Hypnos, Sprout,   and more!",
+            "heading_size": "h2"
+          }
+        },
+        "text_CKak3p": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>🎁Celebrate boxing day with us at our <strong>Boxing Day Mattress Sale</strong> 2025 and save up to <strong>60%</strong> on premium mattresses! Find unbeatable B<em>oxing Day mattress deals</em> on luxury brands like <strong>Tempur-Pedic, Stearns & Foster, Marshall, Aireloom, Hypnos  and more</strong>. Stock is limited, so act fast to upgrade your sleep for less!<strong> </strong>🛒</p><p>🏆Mattressville is the biggest retailer of premium high-end mattresses—Find out why we are the highest rated mattress store. We’re going all out for this year’s Boxing Day Sale!</p><p><strong>Shop during our Boxing Day Mattress Sale and save up to 60% with massive markdowns.</strong> It’s your chance to grab the perfect mattress at prices you won’t believe! 😲</p><ul><li><strong>BOX2025 </strong>(15% OFF All Orders) </li></ul><p><em>Discount AUTO APPLIED at checkout on all sale items.</em></p><p>Treat yourself or your loved ones so you can have a good night, every night. Don’t wait—these deals are only available for a limited time!</p><p>Don't forget to check out our blog: <a href=\"/blogs/promotions/10-things-not-to-do-when-shopping-during-a-boxing-day-mattress-sale\" target=\"_blank\" title=\"10 Things NOT To Do When Shopping During A Boxing Day Mattress Sale\"><strong>10 Things NOT To Do When Shopping During A Boxing Day Mattress Sale</strong></a></p><p><em>Coupons cannot be combined with other discounts, promos, or bundles.</em></p><p><strong>Boxing Week Mattress Mega Sale on Now </strong></p>"
+          }
+        },
+        "heading_KNizjn": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Limited Stock: Don’t Miss These Boxing Day Savings!",
+            "heading_size": "h2"
+          }
+        },
+        "button_7a4wy7": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Shop Sale Items",
+            "button_link": "",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_zqz63J",
+        "heading_Y8i3Af",
+        "text_CKak3p",
+        "heading_KNizjn",
+        "button_7a4wy7"
+      ],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_pj6awM": {
+      "type": "image-with-text",
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
+        ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
+        "img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 500px; right: 50%; transform: translate(-50%, 0%);}",
+        ".global-media-settings {border: none !important;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/mattressville_boxing_day_flyer_2025_extended.png",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "blocks_7YDTfW": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e82ac4a_BGzRPW": {
+          "type": "ai_gen_block_e82ac4a",
+          "settings": {
+            "text": "<p>🎁Our <strong>Boxing Week Mattress Sale</strong> is now extended until Jan 5th 2026 ! Find unbeatable <em>mattress deals</em> on luxury brands like <strong>Tempur-Pedic, Stearns & Foster, Marshall, Aireloom, Hypnos  and more</strong>. Stock is limited, so act fast to upgrade your sleep for less!<strong> </strong>🛒</p><p>🏆Mattressville is the biggest retailer of premium high-end mattresses—Find out why we are the highest rated mattress store. </p><p><strong>Shop during our Boxing Week Mattress Sale and save up to 60% with massive markdowns.</strong> It’s your chance to grab the perfect mattress at prices you won’t believe! 😲</p><ul><li><strong>BOX2025 </strong>(15% OFF All Orders) </li></ul><p><em>Discount AUTO APPLIED at checkout on all sale items.</em></p><p>Treat yourself or your loved ones so you can have a good night, every night. Don’t wait—these deals are only available for a limited time!</p><p>Don't forget to check out our blog: <a href=\"/blogs/promotions/10-things-not-to-do-when-shopping-during-a-boxing-day-mattress-sale\" target=\"_blank\" title=\"10 Things NOT To Do When Shopping During A Boxing Day Mattress Sale\"><strong>10 Things NOT To Do When Shopping During A Boxing Day Mattress Sale</strong></a></p><p><em>Coupons cannot be combined with other discounts, promos, or bundles.</em></p><p><strong>Boxing Week Mattress Mega Sale on Now </strong></p>",
+            "collapsed_height": 100,
+            "button_style": "link",
+            "expand_text": "Read more +",
+            "collapse_text": "Read less -",
+            "button_font_size": 14,
+            "link_color": "#0000ee",
+            "button_padding_vertical": 4,
+            "button_padding_horizontal": 16,
+            "button_bg_color": "#ff5c7b",
+            "button_hover_bg_color": "#d7355c",
+            "button_text_color": "#ffffff",
+            "button_border_radius": 22,
+            "show_on": "mobile",
+            "padding": 0,
+            "background_color": "#ffffff",
+            "text_color": "#212529",
+            "font_size": 16
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e82ac4a_BGzRPW"
+      ],
+      "disabled": true,
+      "name": "Expandable text",
+      "settings": {}
+    },
+    "rich_text_wxcLzR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MiG6F7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Limited Stock: Don’t Miss These Boxing Week Savings!",
+            "heading_size": "h2"
+          }
+        },
+        "button_EPQHtk": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Sale Items",
+            "button_link": "shopify://collections/boxing-day-mattress-sale",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MiG6F7",
+        "button_EPQHtk"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "image_banner_xAPReH": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/the_great_canadian_mattress_sale_2026.webp",
+        "image_overlay_opacity": 0,
+        "banner_link": "shopify://collections/all-mattresses",
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "psb_utilities_line_BErMjr": {
+      "type": "psb-utilities-line",
+      "settings": {
+        "container_width": "psb-container",
+        "line_height": 1,
+        "line_color": "#cccccc"
+      }
+    },
+    "collection_list_EVfJkE": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_FjA3yY": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "aireloom"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_FjA3yY"
+      ],
+      "settings": {
+        "title": "Aireloom Mattresses by KLUFT",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_7AXBRM": {
+      "type": "rich-text",
+      "blocks": {
+        "text_yCVyTQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Luxury at Its Finest – Aireloom by Kluft. </strong>Experience unparalleled comfort with Aireloom mattresses, where California design meets handcrafted excellence. These premium mattresses are meticulously crafted using the finest materials, offering unmatched support, breathability, and luxury. As one of the select retailers to carry Aireloom by Kluft, we proudly to bring you this exclusive collection designed to elevate your sleep to the next level. Visit us today to explore the Aireloom by Kluft collection.</p>"
+          }
+        },
+        "button_HLUmyz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Aireloom",
+            "button_link": "shopify://collections/aireloom",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_yCVyTQ",
+        "button_HLUmyz"
+      ],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 44
+      }
+    },
+    "psb_utilities_line_Ytf8dU": {
+      "type": "psb-utilities-line",
+      "settings": {
+        "container_width": "psb-container",
+        "line_height": 1,
+        "line_color": "#cccccc"
+      }
+    },
+    "rich_text_hK34aJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_P6GQTb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Marshall Mattresses Now on Sale",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_P6GQTb"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "collection_list_NRFCEM": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_Kay6Aw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "marshall-mattresses"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_Kay6Aw"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 1,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_CLDgr6": {
+      "type": "rich-text",
+      "blocks": {
+        "text_QQAhfc": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Don't just dream of a better night's sleep – experience it with Marshall! </strong>Experience the luxurious softness, supportive structure, and unbeatable value of Marshall Mattresses. <br/>See for yourself how Marshall turns dreams into a reality, <br/><strong>Come </strong><em><strong>feel the difference</strong></em><strong> at Mattressville today!</strong></p>"
+          }
+        },
+        "button_zcYr6P": {
+          "type": "button",
+          "settings": {
+            "button_label": "View All",
+            "button_link": "shopify://collections/marshall-mattresses",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_QQAhfc",
+        "button_zcYr6P"
+      ],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 44
+      }
+    },
+    "psb_utilities_line_ficaQA": {
+      "type": "psb-utilities-line",
+      "settings": {
+        "container_width": "psb-container",
+        "line_height": 1,
+        "line_color": "#cccccc"
+      }
+    },
+    "rich_text_Ye4p7T": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VicVdY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Best Deals on Kingsdown Mattresses",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VicVdY"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "collection_list_4dyGwc": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_zrpYh7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "kingsdown"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_zrpYh7"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_fgdiqy": {
+      "type": "rich-text",
+      "blocks": {
+        "text_CiQDix": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Dream Big. Sleep Better. Save Huge. </strong>Mattressville is offering <em><strong>exclusive deals</strong></em> on the luxurious Kingsdown mattresses you love. <strong>Don't miss out on these incredible deals!</strong> <br/><strong>Visit Mattressville today</strong> and <em>experience the difference</em> a <strong>Kingsdown mattress</strong> can make.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_CiQDix"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "image_with_text_EKL6in": {
+      "type": "image-with-text",
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item {width: 100%;}",
+        ".image-with-text__media.image-with-text__media--medium.global-media-settings.background-transparent.media {border: none !important;}",
+        "img {display: block; max-width: auto; position: absolute; top: 0; left: 50%; height: 100%; object-fit: unset; width: 540px; right: 50%; transform: translate(-50%, 0%);}",
+        ".global-media-settings {border: none !important;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Stay_Tuned.png",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_dtFKYq": {
+      "type": "rich-text",
+      "blocks": {
+        "button_HVgt3F": {
+          "type": "button",
+          "settings": {
+            "button_label": "View All",
+            "button_link": "shopify://collections/kingsdown",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_HVgt3F"
+      ],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "psb_utilities_line_i4pFzE": {
+      "type": "psb-utilities-line",
+      "disabled": true,
+      "name": "⚡︎PSB: Line",
+      "settings": {
+        "container_width": "psb-container",
+        "line_height": 1,
+        "line_color": "#cccccc"
+      }
+    },
+    "collapsible_content_yGz6zz": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_kArc3q": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I claim discounts during your Boxing Week Mattress Sale?",
+            "icon": "check_mark",
+            "row_content": "<p>Claiming your discount is easy! The advertised prices are already marked down and <strong>Boxing Week discounts</strong> are automatically applied at <strong>checkout</strong>, so you’ll see your savings instantly. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_G8wgPj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do coupons stack?",
+            "icon": "check_mark",
+            "row_content": "<p>No—coupons can’t be combined with other promos or bundles.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pNpaj6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are the best Boxing Week mattress deals for 2025?",
+            "icon": "check_mark",
+            "row_content": "<p>The best Boxing Week mattress deals at Mattressville include up to <strong>60% off</strong> all products, including premium mattresses from top brands. Whether you’re looking for memory foam, hybrid, or luxury mattresses, our Boxing Day sale offers unbeatable discounts you won’t find any other time of the year.</p><p>All products are <strong>already marked down.</strong> If you need assistance, our team is happy to help!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_TT7RMq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much can I save during Mattressville’s Boxing Week Mattress Sale?",
+            "icon": "check_mark",
+            "row_content": "<p>During our <strong>Boxing Week Mattress Sale</strong>, get an additional 15% when you checkout. All products are already marked down for a total savings of up to <strong>60%</strong> </p><p>In addition to these steep discounts, we also offer exclusive deals like free local delivery on orders over $499. It’s the perfect opportunity to upgrade your sleep at a fraction of the price.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_HVCGiq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Which mattress brands are on sale this Boxing Week?",
+            "icon": "check_mark",
+            "row_content": "<p>We’re offering deep discounts on leading mattress brands, including:</p><ul><li><strong>Aireloom</strong></li><li><strong>Marshall</strong></li><li><strong>Hypnos</strong></li><li><strong>Sprout</strong></li><li><strong>Stearns & Foster</strong></li><li><strong>Tempur-Pedic</strong></li><li><strong>Kingsdown</strong></li><li><strong>Natura</strong></li><li><strong>Sealy</strong></li><li><strong>Serta</strong></li></ul><p><strong>...and more!</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rDEkY4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When does Mattressville’s Boxing Week Mattress Sale start and end?",
+            "icon": "check_mark",
+            "row_content": "<p>Our Boxing Week Mattress Sale is extended until January <strong>5th, 2026, </strong>while supplies last. To avoid missing out on your preferred mattress, we recommend shopping early—stock moves fast during Boxing Week sales.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YMBLE8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I choose the right mattress during a sale?",
+            "icon": "check_mark",
+            "row_content": "<p>To find the perfect mattress, consider the following:</p><ul><li><strong>Sleeping Position:</strong> Side sleepers need softer mattresses; back and stomach sleepers benefit from firmer options.</li><li><strong>Budget:</strong> Our sale offers a range of options for every price point.</li><li><strong>Size:</strong> Choose a mattress that fits your room and sleep needs—Queen, King, or California King are popular picks.</li><li>TRY our <a href=\"/pages/mattress-matchmaker\" title=\"Mattress Matchmaker\">Mattress Matchmaker </a>shopping assistant </li></ul><p>If you’re unsure, our <strong>mattress experts</strong> are here to help online, over the phone, or in-person at our <strong>Mississauga showroom</strong>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_K6TAQD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer free delivery or trial periods during the promo period?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes! We offer <strong>free delivery on orders over $499</strong> during the sale. Additionally, all of our mattresses come with a <a href=\"/pages/90-day-comfort-guarantee\" title=\"90 Day Comfort Guarantee\"><strong>90-day Comfort Guarantee</strong></a>, allowing you to swap your mattress if it’s not the perfect fit. Visit our showroom or contact us online to learn more.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_e8ib6b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What about returns?",
+            "icon": "check_mark",
+            "row_content": "<p>Standard return policy applies unless noted. See full details here: <a href=\"https://mattressville.ca/pages/refund-policy\" target=\"_blank\" title=\"https://mattressville.ca/pages/refund-policy\">Refund Policy </a></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_kArc3q",
+        "collapsible_row_G8wgPj",
+        "collapsible_row_pNpaj6",
+        "collapsible_row_TT7RMq",
+        "collapsible_row_HVCGiq",
+        "collapsible_row_rDEkY4",
+        "collapsible_row_YMBLE8",
+        "collapsible_row_K6TAQD",
+        "collapsible_row_e8ib6b"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Boxing Day FAQ</strong>",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_CrLKdg",
+    "image_with_text_ynHBX7",
+    "blocks_PPjPW8",
+    "rich_text_W9h3PV",
+    "image_with_text_pj6awM",
+    "blocks_7YDTfW",
+    "rich_text_wxcLzR",
+    "image_banner_xAPReH",
+    "psb_utilities_line_BErMjr",
+    "collection_list_EVfJkE",
+    "rich_text_7AXBRM",
+    "psb_utilities_line_Ytf8dU",
+    "rich_text_hK34aJ",
+    "collection_list_NRFCEM",
+    "rich_text_CLDgr6",
+    "psb_utilities_line_ficaQA",
+    "rich_text_Ye4p7T",
+    "collection_list_4dyGwc",
+    "rich_text_fgdiqy",
+    "image_with_text_EKL6in",
+    "rich_text_dtFKYq",
+    "psb_utilities_line_i4pFzE",
+    "collapsible_content_yGz6zz"
+  ]
+}
