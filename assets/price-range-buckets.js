@@ -40,6 +40,70 @@
     return { min: null, max: null };
   }
 
+  const PRICE_PILL_MARKER = 'data-price-pill';
+  const CLOSE_ICON_SVG = '<svg aria-hidden="true" focusable="false" width="12" height="13" class="icon icon-close-small" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+    '<path d="M8.48627 9.32917L2.82849 3.67098" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>' +
+    '<path d="M2.88539 9.38504L8.42932 3.61524" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>' +
+    '</svg>';
+
+  function buildPriceLabel(min, max) {
+    if (min !== null && max !== null) return '$' + min + ' - $' + max;
+    if (min !== null) return '$' + min + ' and up';
+    if (max !== null) return 'Up to $' + max;
+    return '';
+  }
+
+  function buildRemoveUrl() {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('filter.v.price.gte');
+    url.searchParams.delete('filter.v.price.lte');
+    return url.toString();
+  }
+
+  // There's no price_range filter object for this collection (it uses a
+  // metafield-based list filter instead), so the existing "active facets"
+  // pill logic — which only knows how to show a price pill from such a
+  // filter object — never fires for our gte/lte params. Inject/remove our
+  // own matching pill manually, in every active-facets container on the page.
+  function syncPricePill(label) {
+    // Guard every DOM write against redundant mutations: this runs from the
+    // same MutationObserver that watches .facets-container (the ancestor of
+    // .active-facets), so writing unconditionally on every call would
+    // re-trigger that observer indefinitely.
+    const removeUrl = label ? buildRemoveUrl() : '';
+
+    document.querySelectorAll('.active-facets').forEach((container) => {
+      const existing = container.querySelector('[' + PRICE_PILL_MARKER + ']');
+
+      if (!label) {
+        if (existing) existing.remove();
+        return;
+      }
+
+      if (existing) {
+        const textEl = existing.querySelector('.active-facets__button-inner');
+        const link = existing.querySelector('a');
+        const wantedText = label + ' ';
+        if (textEl.firstChild && textEl.firstChild.textContent !== wantedText) {
+          textEl.firstChild.textContent = wantedText;
+        }
+        if (link.getAttribute('href') !== removeUrl) {
+          link.setAttribute('href', removeUrl);
+        }
+        return;
+      }
+
+      const pill = document.createElement('facet-remove');
+      pill.setAttribute(PRICE_PILL_MARKER, '');
+      pill.innerHTML = '<a href="' + removeUrl + '" class="active-facets__button active-facets__button--light">' +
+        '<span class="active-facets__button-inner button button--tertiary">' + label + ' ' +
+        CLOSE_ICON_SVG +
+        '<span class="visually-hidden">Remove filter</span>' +
+        '</span></a>';
+      container.appendChild(pill);
+    });
+  }
+
   function syncBucketState() {
     const params = new URLSearchParams(window.location.search);
     const gte = params.get('filter.v.price.gte');
@@ -59,10 +123,17 @@
       input.value = currentMax !== null ? currentMax : '';
     });
 
+    let matchedLabel = '';
     document.querySelectorAll('.price-bucket-radio').forEach((radio) => {
       const bucket = parsePriceBucketLabel(radio.dataset.bucketLabel);
-      radio.checked = bucket.min === currentMin && bucket.max === currentMax;
+      const matches = bucket.min === currentMin && bucket.max === currentMax;
+      radio.checked = matches;
+      if (matches) matchedLabel = radio.dataset.bucketLabel;
     });
+
+    const hasPriceFilter = currentMin !== null || currentMax !== null;
+    const pillLabel = hasPriceFilter ? ('Price: ' + (matchedLabel || buildPriceLabel(currentMin, currentMax))) : '';
+    syncPricePill(pillLabel);
   }
 
   document.addEventListener('change', (event) => {
