@@ -48,6 +48,13 @@
             "slide_link": "shopify://collections/marshall-mattresses"
           }
         },
+        "slide_bMTGd8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/the_great_canadian_mattress_sale_2026.webp",
+            "slide_link": "shopify://collections/all-mattresses"
+          }
+        },
         "slide_7fCfTx": {
           "type": "slide",
           "settings": {
@@ -116,6 +123,7 @@
         "slide_ameJgH",
         "slide_WmxnNj",
         "slide_k4wTAU",
+        "slide_bMTGd8",
         "slide_7fCfTx",
         "slide_9y8Uir",
         "slide_bTWUcd",
