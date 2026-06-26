@@ -1,1 +1,224 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"text","settings":{"text":"{{ product.vendor }}","text_style":"uppercase","text_icon":"","text_color":"#000000"}},"yotpo_product_photo_reviews_star_rating_7iziTr":{"type":"shopify:\/\/apps\/yotpo-product-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"{{product}}"}},"title_4diFiT":{"type":"title","settings":{}},"caption":{"type":"text","disabled":true,"settings":{"text":"{{ product.metafields.descriptors.subtitle.value }}","text_style":"subtitle","text_icon":"&nbsp;","text_color":"#000000"}},"affirm_pay_over_time_messaging_product_block_3HfxRh":{"type":"shopify:\/\/apps\/affirm-pay-over-time-messaging\/blocks\/product-block\/6dce54be-130d-4d13-9636-1e8f611b3071","settings":{"logo_align":"left","font_size":16,"logo_color":"blue","logo_type":"logo","public_api_key":"","price_selector":""}},"essentials_XbMJNa":{"type":"essentials","settings":{}},"text_VqUtyK":{"type":"text","settings":{"text":"Ending soon<strong> May 31st<\/strong>","text_style":"body","text_icon":"<svg width=\"1.2rem\" height=\"1.2rem\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" style=\"stroke: #F0321F;\">\n                      <path d=\"M4.51555 7C3.55827 8.4301 3 10.1499 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3V6M12 12L8 8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                    <\/svg>","text_color":"#f0321f"}},"appstle_memberships_appstle_membership_product_page_widget_fhTUdz":{"type":"shopify:\/\/apps\/appstle-memberships\/blocks\/appstle-membership-product-page-widget\/76528d70-5fbe-48f8-8e19-590d109aa2b7","disabled":true,"settings":{}},"inventory_XBRzgq":{"type":"inventory","settings":{"text_style":"body","inventory_threshold":10,"show_inventory_quantity":true}},"icon_with_text_apLJb3":{"type":"icon-with-text","disabled":true,"settings":{"layout":"vertical","icon_1":"none","image_1":"shopify:\/\/shop_images\/affirm.png","heading_1":"Pay in 4 interest-free payments","icon_2":"none","heading_2":"","icon_3":"none","heading_3":""}},"custom_liquid_yFxECU":{"type":"custom_liquid","settings":{"custom_liquid":"<hr class=\"hr-custom\">\n <div class=\"grid__item product__media-wrapper invx-product-gallery\">\n        {% render 'invx-product-media-gallery', variant_images: variant_images %}\n      <\/div>\n\n\n<style>\n\n.hr-custom{\nmargin-top: 40px;\n}\n\n@media (max-width: 700px) {\n  .invx-product-gallery {\n    display: block; \/* Ensure it's visible on small screens *\/\n  }\n.hr-custom{\nmargin-top: 25px;\n}\n}\n\n@media (min-width: 701px) {\n  .invx-product-gallery {\n    display: none; \/* Hide for larger screens *\/\n  }\n}\n<\/style>"}},"affirm_pay_over_time_messaging_product_block_MmdkYj":{"type":"shopify:\/\/apps\/affirm-pay-over-time-messaging\/blocks\/product-block\/6dce54be-130d-4d13-9636-1e8f611b3071","disabled":true,"settings":{"logo_align":"left","font_size":16,"logo_color":"blue","logo_type":"logo","public_api_key":"","price_selector":""}},"affirm_pay_over_time_messaging_product_block_WTFnUc":{"type":"shopify:\/\/apps\/affirm-pay-over-time-messaging\/blocks\/product-block\/6dce54be-130d-4d13-9636-1e8f611b3071","settings":{"logo_align":"left","font_size":16,"logo_color":"blue","logo_type":"logo","public_api_key":"","price_selector":""}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"dropdown"}},"custom_liquid_BxNYxP":{"type":"custom_liquid","settings":{"custom_liquid":"<hr>"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"swishlist_simple_wishlist_wishlist_product_button_ARaKRW":{"type":"shopify:\/\/apps\/swishlist-simple-wishlist\/blocks\/wishlist_product_button\/bfcb80f2-f00d-42ae-909a-9f00c726327b","settings":{"custom_liquid":""}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"show_gift_card_recipient":true}},"comfort_scale":{"type":"comfort_scale","settings":{}},"share":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["vendor","yotpo_product_photo_reviews_star_rating_7iziTr","title_4diFiT","caption","affirm_pay_over_time_messaging_product_block_3HfxRh","essentials_XbMJNa","text_VqUtyK","appstle_memberships_appstle_membership_product_page_widget_fhTUdz","inventory_XBRzgq","icon_with_text_apLJb3","custom_liquid_yFxECU","affirm_pay_over_time_messaging_product_block_MmdkYj","affirm_pay_over_time_messaging_product_block_WTFnUc","variant_picker","custom_liquid_BxNYxP","quantity_selector","swishlist_simple_wishlist_wishlist_product_button_ARaKRW","buy_buttons","comfort_scale","share"],"custom_css":[".product__info-container .icon-with-text {margin-bottom: 0; margin-top: 0px;}",".icon-with-text__item {align-items: baseline; flex-direction: column; gap: 8px;}","@media (min-width: 990px) {.icon-with-text__item {margin-top: 0px; }}",".icon-with-text--vertical img {width: 65px; height: auto;}",".icon-with-text__item .h4.inline-richtext {font-size: 11px; margin-bottom: 24px; font-weight: 400; line-height: 1.5;}"],"settings":{"enable_sticky_info":true,"color_scheme":"","media_size":"large","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"stacked","media_position":"left","image_zoom":"lightbox","mobile_thumbnails":"hide","hide_variants":true,"enable_video_looping":false,"padding_top":32,"padding_bottom":12}},"product-content":{"type":"product-content","blocks":{"yotpo_product_photo_reviews_reviews_ngj838":{"type":"shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"{{product}}"}}},"block_order":["yotpo_product_photo_reviews_reviews_ngj838"],"settings":{}},"related-products":{"type":"related-products","settings":{"heading":"Related Products","heading_size":"h2","products_to_show":4,"columns_desktop":2,"color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":true,"show_rating":false,"enable_quick_add":true,"columns_mobile":"1","padding_top":36,"padding_bottom":60}}},"order":["main","product-content","related-products"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase",
+            "text_icon": "",
+            "text_color": "#000000"
+          }
+        },
+        "yotpo_product_photo_reviews_star_rating_7iziTr": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title_4diFiT": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle",
+            "text_icon": "&nbsp;",
+            "text_color": "#000000"
+          }
+        },
+        "affirm_pay_over_time_messaging_product_block_3HfxRh": {
+          "type": "shopify://apps/affirm-pay-over-time-messaging/blocks/product-block/6dce54be-130d-4d13-9636-1e8f611b3071",
+          "settings": {
+            "logo_align": "left",
+            "font_size": 16,
+            "logo_color": "blue",
+            "logo_type": "logo",
+            "public_api_key": "",
+            "price_selector": ""
+          }
+        },
+        "essentials_XbMJNa": {
+          "type": "essentials",
+          "settings": {}
+        },
+        "text_VqUtyK": {
+          "type": "text",
+          "settings": {
+            "text": "Ending soon<strong> July 2nd</strong>",
+            "text_style": "body",
+            "text_icon": "<svg width=\"1.2rem\" height=\"1.2rem\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"stroke: #F0321F;\">\n                      <path d=\"M4.51555 7C3.55827 8.4301 3 10.1499 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3V6M12 12L8 8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n                    </svg>",
+            "text_color": "#f0321f"
+          }
+        },
+        "appstle_memberships_appstle_membership_product_page_widget_fhTUdz": {
+          "type": "shopify://apps/appstle-memberships/blocks/appstle-membership-product-page-widget/76528d70-5fbe-48f8-8e19-590d109aa2b7",
+          "disabled": true,
+          "settings": {}
+        },
+        "inventory_XBRzgq": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        },
+        "icon_with_text_apLJb3": {
+          "type": "icon-with-text",
+          "disabled": true,
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/affirm.png",
+            "heading_1": "Pay in 4 interest-free payments",
+            "icon_2": "none",
+            "heading_2": "",
+            "icon_3": "none",
+            "heading_3": ""
+          }
+        },
+        "custom_liquid_yFxECU": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr class=\"hr-custom\">\n <div class=\"grid__item product__media-wrapper invx-product-gallery\">\n        {% render 'invx-product-media-gallery', variant_images: variant_images %}\n      </div>\n\n\n<style>\n\n.hr-custom{\nmargin-top: 40px;\n}\n\n@media (max-width: 700px) {\n  .invx-product-gallery {\n    display: block; /* Ensure it's visible on small screens */\n  }\n.hr-custom{\nmargin-top: 25px;\n}\n}\n\n@media (min-width: 701px) {\n  .invx-product-gallery {\n    display: none; /* Hide for larger screens */\n  }\n}\n</style>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "custom_liquid_BxNYxP": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr>"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "swishlist_simple_wishlist_wishlist_product_button_ARaKRW": {
+          "type": "shopify://apps/swishlist-simple-wishlist/blocks/wishlist_product_button/bfcb80f2-f00d-42ae-909a-9f00c726327b",
+          "settings": {
+            "custom_liquid": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "comfort_scale": {
+          "type": "comfort_scale",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "yotpo_product_photo_reviews_star_rating_7iziTr",
+        "title_4diFiT",
+        "caption",
+        "affirm_pay_over_time_messaging_product_block_3HfxRh",
+        "essentials_XbMJNa",
+        "text_VqUtyK",
+        "appstle_memberships_appstle_membership_product_page_widget_fhTUdz",
+        "inventory_XBRzgq",
+        "icon_with_text_apLJb3",
+        "custom_liquid_yFxECU",
+        "variant_picker",
+        "custom_liquid_BxNYxP",
+        "quantity_selector",
+        "swishlist_simple_wishlist_wishlist_product_button_ARaKRW",
+        "buy_buttons",
+        "comfort_scale",
+        "share"
+      ],
+      "custom_css": [
+        ".product__info-container .icon-with-text {margin-bottom: 0; margin-top: 0px;}",
+        ".icon-with-text__item {align-items: baseline; flex-direction: column; gap: 8px;}",
+        "@media (min-width: 990px) {.icon-with-text__item {margin-top: 0px; }}",
+        ".icon-with-text--vertical img {width: 65px; height: auto;}",
+        ".icon-with-text__item .h4.inline-richtext {font-size: 11px; margin-bottom: 24px; font-weight: 400; line-height: 1.5;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 32,
+        "padding_bottom": 12
+      }
+    },
+    "product-content": {
+      "type": "product-content",
+      "blocks": {
+        "yotpo_product_photo_reviews_reviews_ngj838": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_photo_reviews_reviews_ngj838"
+      ],
+      "settings": {}
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Related Products",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 2,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-content",
+    "related-products"
+  ]
+}
