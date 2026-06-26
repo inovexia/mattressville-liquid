@@ -320,6 +320,45 @@
         "show_text_below": true
       }
     },
+    "rich_text_Mn8j9W": {
+      "type": "rich-text",
+      "blocks": {
+        "text_wEmiKB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>🍁 Celebrate Canada day with our <strong>Great Canadian Mattress Sale</strong> 2026 and save big on premium mattresses! Find unbeatable Canada<em> Day mattress deals</em> on luxury brands like <strong>Hypnos, Sprout, Marshall, Aireloom, and more</strong>. Stock is limited, so act fast to upgrade your sleep for less!<strong> </strong>🛒</p><p>🏆Mattressville is the biggest retailer of premium high-end mattresses—Find out why we are the highest rated mattress store. We’re going all out for this year’s Canada Day Sale!</p><p><strong>Shop during our Canada Day Mattress Sale and save up to an extra 20% off with massive markdowns.</strong> It’s your chance to grab the perfect mattress at prices you won’t believe! 😲</p><p><em>Discounts AUTO APPLIED at checkout.</em></p><p>Treat yourself or your loved ones so you can have a good night, every night. Don’t wait—these deals are only available for a limited time!</p><p><em>Coupons cannot be combined with other discounts, promos, or bundles.</em></p><p><strong>The Great Canadian Mattress Sale on Now </strong></p>"
+          }
+        },
+        "button_ce49Tp": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_wEmiKB",
+        "button_ce49Tp"
+      ],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {padding: 0;}",
+        ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 44
+      }
+    },
     "psb_utilities_line_BErMjr": {
       "type": "psb-utilities-line",
       "settings": {
@@ -755,6 +794,7 @@
     "blocks_7YDTfW",
     "rich_text_wxcLzR",
     "image_banner_xAPReH",
+    "rich_text_Mn8j9W",
     "psb_utilities_line_BErMjr",
     "collection_list_EVfJkE",
     "rich_text_7AXBRM",
