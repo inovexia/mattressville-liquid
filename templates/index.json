@@ -145,6 +145,8 @@
         "slider_visual": "dots",
         "auto_rotate": true,
         "change_slides_speed": 3,
+        "mobile_image": "shopify://shop_images/trade-gothic-lt-std.zip_9e52de74-1e1c-49ef-9b51-1b0e7b9a8729.webp",
+        "mobile_image_link": "",
         "image_behavior": "none",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
