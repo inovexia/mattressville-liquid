@@ -1,7 +1,5 @@
 {{ 'component-home-slideshow.aio.min.css' | asset_url | stylesheet_tag }}
 
-{% comment %} {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
-{% endcomment %}
 {%- style -%}
 
   .home-slideshow-inner .invx-home-slider {
@@ -41,11 +39,16 @@
     padding: 10px;
     margin-top: 0;
   }
+
   .home-slideshow-inner .swiper .swiper-button-next:after,
   .home-slideshow-inner .swiper .swiper-button-prev:after {
     font-size: 8px;
   }
-/* Popup CSS */
+
+  .mobile-static-slide {
+    display: none;
+  }
+
   .home-slideshow-sidebar #openPopupBtn3 {
     background-color: transparent;
     border: none;
@@ -54,31 +57,63 @@
     font-size: 18px;
     line-height: 26px;
     letter-spacing: 0.06rem;
-}
-@media only screen and (max-width:992px) {
-  /* Popup CSS */
-  .home-slideshow-sidebar #openPopupBtn3 {
-    margin-top:0px;
-    font-size:14px;
-    line-height: 20px;
-}
-}
+  }
+
+  @media only screen and (max-width: 992px) {
+    .home-slideshow-sidebar #openPopupBtn3 {
+      margin-top: 0px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .desktop-slider {
+      display: none !important;
+    }
+
+    .mobile-static-slide {
+      display: block;
+      margin: 10px 10px 0;
+    }
+
+    .mobile-static-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      display: block;
+    }
+  }
 
 {%- endstyle -%}
-{% comment %} {%- endif -%}
- {% endcomment %}
-<!-- Swiper -->
+
 <div class="page-width">
   <div class="home-slideshow-inner">
 
-    <div class="swiper invx-home-slider">
+    {%- if section.settings.mobile_image != blank -%}
+      <div class="mobile-static-slide">
+        <a href="{{ section.settings.mobile_image_link }}">
+          <img
+            src="{{ section.settings.mobile_image | image_url: width: 900 }}"
+            alt="{{ section.settings.mobile_image.alt | escape }}"
+            width="900"
+            height="{{ 900 | divided_by: section.settings.mobile_image.aspect_ratio | round }}"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          >
+        </a>
+      </div>
+    {%- endif -%}
+
+    <div class="swiper invx-home-slider desktop-slider">
       <div class="swiper-wrapper">
         {%- for block in section.blocks -%}
           <div class="swiper-slide">
             <a
               href="{{ block.settings.slide_link }}"
               class=""
-              aria-label="Read more about ">
+              aria-label="Read more about">
               {%- if block.settings.image -%}
 
                 <img
@@ -97,6 +132,7 @@
                   fetchpriority="high"
                   decoding="async"
                 />
+
               {%- else -%}
 
                 {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
@@ -109,15 +145,15 @@
             </a>
           </div>
         {%- endfor -%}
-
       </div>
+
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
 
     {%- if section.settings.enable_sidebar -%}
       <div class="home-slideshow-sidebar">
-        <div class="sidebar-inner ">
+        <div class="sidebar-inner">
           {%- assign linkItemA = section.settings.link_item_a | default: "/pages/mattress-matchmaker" | url_escape -%}
           <div id="openPopupBtn3" class="sidebar-content matchmakerIcon">
             {%- if section.settings.sidebar_image_a != blank -%}
@@ -128,10 +164,10 @@
                 width="107"
                 loading="lazy" />
             {%- endif -%}
-             <!-- Trigger button added on 13-05-2025-->
-            
+
             <span class="card-title">{{ section.settings.label_item_a }}</span>
           </div>
+
           {%- assign linkItemB = section.settings.link_item_b | default: "/pages/coupons/" | url_escape -%}
           <a
             class="sidebar-content"
@@ -150,6 +186,7 @@
         </div>
       </div>
     {%- endif -%}
+
   </div>
 </div>
 
@@ -158,36 +195,45 @@
     var settings = {
       change_slides_speed: {{ section.settings.change_slides_speed }}
     };
-    var swiper = new Swiper(".invx-home-slider", {
-      loop: true,
-      autoplay: {
+
+    if (window.innerWidth > 749) {
+      var swiper = new Swiper(".invx-home-slider", {
+        loop: true,
+        autoplay: {
           delay: settings.change_slides_speed * 1000,
           disableOnInteraction: false,
         },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    }
   });
 </script>
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const popup = document.getElementById("customPopup");
     const btn = document.getElementById("openPopupBtn3");
-    const close = popup.querySelector(".close");
-  
-    btn.addEventListener("click", () => popup.style.display = "block");
-    close.addEventListener("click", () => popup.style.display = "none");
-  
-    window.addEventListener("click", function(event) {
-      if (event.target === popup) {
-        popup.style.display = "none";
+
+    if (popup && btn) {
+      const close = popup.querySelector(".close");
+
+      btn.addEventListener("click", () => popup.style.display = "block");
+
+      if (close) {
+        close.addEventListener("click", () => popup.style.display = "none");
       }
-    });
+
+      window.addEventListener("click", function(event) {
+        if (event.target === popup) {
+          popup.style.display = "none";
+        }
+      });
+    }
   });
 </script>
-
 
 {% schema %}
   {
@@ -257,6 +303,20 @@
         "unit": "s",
         "label": "t:sections.home_slideshow.settings.change_slides_speed.label",
         "default": 5
+      },
+      {
+        "type": "header",
+        "content": "Mobile Static Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "url",
+        "id": "mobile_image_link",
+        "label": "Mobile Image Link"
       },
       {
         "type": "header",
