@@ -239,7 +239,7 @@
                             endif
                           -%}
                           {%- for value in sorted_values -%}
-                            {%- if is_price_bucket_list and value.label contains '5000' -%}{%- continue -%}{%- endif -%}
+                            {%- if is_price_bucket_list and value.label contains '5001' -%}{%- continue -%}{%- endif -%}
                             {% liquid
                               assign is_disabled = false
                               if value.count == 0 and value.active == false
@@ -341,7 +341,7 @@
                           role="list"
                         >
                           {%- for value in filter.values -%}
-                            {%- if is_price_bucket_list and value.label contains '5000' -%}{%- continue -%}{%- endif -%}
+                            {%- if is_price_bucket_list and value.label contains '5001' -%}{%- continue -%}{%- endif -%}
                             <li class="list-menu__item facets__item">
                               <label
                                 for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}-no-js"
@@ -735,7 +735,7 @@
                               endif
                             -%}
                             {%- for value in sorted_values -%}
-                              {%- if is_price_bucket_list and value.label contains '5000' -%}{%- continue -%}{%- endif -%}
+                              {%- if is_price_bucket_list and value.label contains '5001' -%}{%- continue -%}{%- endif -%}
                               {% liquid
                                 assign is_disabled = false
                                 if value.count == 0 and value.active == false
