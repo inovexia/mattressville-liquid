@@ -539,7 +539,13 @@
     const slice = allProducts.slice(start, start + perPage);
 
     selfMutating = true;
-    grid.innerHTML = slice.map((product) => product.html).join('');
+    // On the search page, #product-grid is a wrapper <div> containing a
+    // loading-overlay and a <ul class="grid">. Writing cards directly to
+    // the div destroys the <ul> wrapper, breaking the flex layout. Write
+    // to the inner <ul> when it exists; fall back to the grid element itself
+    // on collection pages where #product-grid is already the <ul>.
+    const cardContainer = grid.querySelector('ul.grid') || grid;
+    cardContainer.innerHTML = slice.map((product) => product.html).join('');
     updateVariantLabels();
     updatePaginationUI(safePage);
     setTimeout(() => { selfMutating = false; }, 0);
