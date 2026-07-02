@@ -429,6 +429,9 @@
             {% if section.settings.filter_type == 'vertical' %}
             class="facets-vertical  "
             {% endif %}>
+            {% if request.query_string contains 'sort_by=price' %}
+              <style id="price-sort-veil">#product-grid { opacity: 0 !important; pointer-events: none; }</style>
+            {% endif %}
             <div class="product-grid-container" id="ProductGridContainer">
               {%- if search.results.size == 0 and search.filters != empty -%}
                 <div

@@ -280,9 +280,20 @@
     };
   }
 
+  function getSectionId() {
+    const grid = findGrid();
+    return grid ? (grid.dataset.id || null) : null;
+  }
+
   async function fetchPage(page) {
     const url = new URL(window.location.href);
     url.searchParams.set('page', page);
+
+    // Using the section rendering API returns only the section HTML (~20–50 KB)
+    // instead of the full storefront page (~200–400 KB), making each fetch
+    // significantly faster when there are multiple pages to load.
+    const sectionId = getSectionId();
+    if (sectionId) url.searchParams.set('section_id', sectionId);
 
     const response = await fetch(url.toString());
     if (!response.ok) return null;
@@ -394,15 +405,52 @@
     const grid = findGrid();
     if (!grid) return;
 
-    grid.style.transition = 'opacity 0.15s ease';
-    grid.style.opacity = '0.35';
+    grid.style.transition = 'none';
+    grid.style.opacity = '0';
     grid.style.pointerEvents = 'none';
+
+    if (!document.getElementById('price-sort-loader')) {
+      if (!document.getElementById('price-sort-style')) {
+        const style = document.createElement('style');
+        style.id = 'price-sort-style';
+        style.textContent = '@keyframes price-sort-spin { to { transform: rotate(360deg); } }';
+        document.head.appendChild(style);
+      }
+      const loader = document.createElement('div');
+      loader.id = 'price-sort-loader';
+      loader.style.cssText = [
+        'position:fixed',
+        'top:50%',
+        'left:50%',
+        'transform:translate(-50%,-50%)',
+        'z-index:9999',
+        'width:48px',
+        'height:48px',
+        'border-radius:50%',
+        'border:3px solid rgba(0,0,0,0.12)',
+        'border-top-color:#D7355C',
+        'animation:price-sort-spin 0.75s linear infinite'
+      ].join(';');
+      document.body.appendChild(loader);
+    }
   }
 
   function hideLoading() {
     const grid = findGrid();
     if (!grid) return;
 
+    const veil = document.getElementById('price-sort-veil');
+    if (veil) veil.remove();
+
+    const loader = document.getElementById('price-sort-loader');
+    if (loader) loader.remove();
+
+    // Force reflow so the transition fires from 0→1, not skipped.
+    grid.style.transition = 'none';
+    grid.style.opacity = '0';
+    void grid.offsetHeight;
+
+    grid.style.transition = 'opacity 0.4s ease';
     grid.style.opacity = '';
     grid.style.pointerEvents = '';
   }
@@ -638,7 +686,14 @@
       priceDataCount: findGrid() ? findGrid().querySelectorAll(PRICE_DATA_SELECTOR).length : 0
     };
 
-    if (shouldRebuild()) waitForGridReady(rebuild);
+    if (shouldRebuild()) {
+      // Hide the grid immediately — before waitForGridReady starts polling —
+      // so users never see the server-rendered unsorted/unfiltered cards.
+      // The Liquid veil <style> already hides it from first paint; this call
+      // covers the JS path (e.g. AJAX filter changes after initial load).
+      showLoading();
+      waitForGridReady(rebuild);
+    }
     hookDawn();
     observeGridChanges();
   });

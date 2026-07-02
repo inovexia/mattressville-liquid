@@ -178,6 +178,9 @@
           </aside>
         {%- endif -%}
       {% endif %}
+      {% if collection.sort_by contains 'price' %}
+        <style id="price-sort-veil">#product-grid { opacity: 0 !important; pointer-events: none; }</style>
+      {% endif %}
       <div
         class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         id="ProductGridContainer"
