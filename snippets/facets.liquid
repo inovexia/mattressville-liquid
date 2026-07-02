@@ -25,6 +25,11 @@
     assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
   endif
 
+  assign is_budget_collection = false
+  if collection.handle == 'up-to-300' or collection.handle == '301-600' or collection.handle == '601-900' or collection.handle == '901-1200' or collection.handle == '1201-1500' or collection.handle == '1500-and-up'
+    assign is_budget_collection = true
+  endif
+
   # The "Price" bucket radios submit through Shopify's built-in
   # filter.v.price.gte/lte query params (broader, accurate server-side
   # matching based on real variant prices) rather than the
@@ -164,6 +169,8 @@
                   assign bucket_input_type = 'radio'
                 endif
               %}
+
+              {%- if is_price_bucket_list and is_budget_collection -%}{%- continue -%}{%- endif -%}
 
               {% case filter.type %}
                 {% when 'boolean', 'list' %}
@@ -688,6 +695,8 @@
                       assign bucket_input_type = 'radio'
                     endif
                   %}
+
+                  {%- if is_price_bucket_list and is_budget_collection -%}{%- continue -%}{%- endif -%}
 
                   {% case filter.type %}
                     {% when 'boolean', 'list' %}
