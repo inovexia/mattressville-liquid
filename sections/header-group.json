@@ -44,6 +44,7 @@
     },
     "mobile-header": {
       "type": "mobile-header",
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 420px) {.mobile_logo {display: flex; }}"
       ],
@@ -80,7 +81,7 @@
       "type": "header-mid",
       "settings": {
         "text_color": "#ffffff",
-        "phone_number": "905-212-7722",
+        "phone_number": "1-905-212-7722",
         "contact_us_page": "contact",
         "offer_text": "FREE Shipping over $499"
       }
