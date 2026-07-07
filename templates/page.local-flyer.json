@@ -188,6 +188,7 @@
         "heading_KNizjn",
         "button_7a4wy7"
       ],
+      "disabled": true,
       "custom_css": [
         ".rich-text .rich-text__wrapper {padding: 0;}",
         ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
@@ -304,6 +305,7 @@
     },
     "image_banner_xAPReH": {
       "type": "image-banner",
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/the_great_canadian_mattress_sale_2026.webp",
@@ -345,6 +347,7 @@
         "text_wEmiKB",
         "button_ce49Tp"
       ],
+      "disabled": true,
       "custom_css": [
         ".rich-text .rich-text__wrapper {padding: 0;}",
         ".rich-text__blocks .button--secondary {padding: 15px 30px; border-radius: 10px; text-transform: uppercase;}"
@@ -361,6 +364,7 @@
     },
     "psb_utilities_line_BErMjr": {
       "type": "psb-utilities-line",
+      "disabled": true,
       "settings": {
         "container_width": "psb-container",
         "line_height": 1,
