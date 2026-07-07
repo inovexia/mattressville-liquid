@@ -44,7 +44,6 @@
     },
     "mobile-header": {
       "type": "mobile-header",
-      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 420px) {.mobile_logo {display: flex; }}"
       ],
