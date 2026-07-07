@@ -14,6 +14,7 @@
       "blocks": {
         "slide_4UbLyR": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/the_great_canadian_mattress_sale_2026.webp",
             "slide_link": "shopify://collections/all-mattresses"
@@ -21,7 +22,6 @@
         },
         "slide_PEgBhX": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Homepage_welcome_banner_2025.jpg",
             "slide_link": "/collections/all-mattresses"
@@ -50,6 +50,7 @@
         },
         "slide_bMTGd8": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/the_great_canadian_mattress_sale_2026.webp",
             "slide_link": "shopify://collections/all-mattresses"
