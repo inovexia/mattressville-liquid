@@ -8,6 +8,32 @@
   </div>
 </div>
 
+<script>
+  (function () {
+    var STORAGE_KEY = 'invx_dismiss_annc';
+    var duration = {{ section.settings.duration | json }};
+    var bar = document.getElementById('invx-announcement-bar');
+    var dismiss = document.getElementById('invx-announcement-bar-dismiss');
+    if (!bar || !dismiss) return;
+
+    // Hide immediately if already dismissed this session
+    try {
+      if (duration === 'session' && sessionStorage.getItem(STORAGE_KEY)) {
+        bar.style.display = 'none';
+        return;
+      }
+    } catch (e) {}
+
+    dismiss.style.cursor = 'pointer';
+    dismiss.addEventListener('click', function () {
+      bar.style.display = 'none';
+      try {
+        if (duration === 'session') sessionStorage.setItem(STORAGE_KEY, '1');
+      } catch (e) {}
+    });
+  })();
+</script>
+
 {% schema %}
   {
     "name": "Announcements",
