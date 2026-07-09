@@ -96,6 +96,7 @@
         },
         "slide_86rVjX": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/The_Best_Mattresses_of_2026-Mattressville_home.webp",
             "slide_link": "shopify://blogs/tips/best-mattresses-of-2026"
