@@ -75,21 +75,19 @@
         },
         "coupon_yDC3bH": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/300OFF.png",
             "type": "other",
             "code": "SAVE300",
             "title": "SAVE $300 COUPON",
             "description": "<p>Coupons can not be combined with any other offer or discount and do not have a cash value. Must be presented at the time of purchase or can be applied online by entering coupon code: <strong>SAVE300 ($300 OFF on selected Orders from $1,500 and Up)</strong> at the checkout page. Mattressville reserves the right to void the coupons.</p>",
-            "expiry": "May 17, 2026",
+            "expiry": "July 19, 2026",
             "button_label": "Start Saving",
             "button_link": "shopify://collections/all-mattresses"
           }
         },
         "coupon_FkNtma": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Save_100_Coupon.webp",
             "type": "other",
@@ -145,7 +143,6 @@
         },
         "coupon_KzhYWf": {
           "type": "coupon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Save_50_Coupon.webp",
             "type": "other",
