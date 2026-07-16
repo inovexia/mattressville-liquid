@@ -70,7 +70,27 @@ body .lg-prev {
   margin-right: 20px;
 }
 
-      
+.invx-custom-gallery-slider .invx-gallery-video-slide video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.invx-custom-gallery-slider .invx-gallery-thumb-video {
+  position: relative;
+}
+.invx-custom-gallery-slider .invx-gallery-thumb-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, .6));
+  pointer-events: none;
+}
+
+
     </style>
 
 <div class="invx-custom-gallery-slider">
@@ -78,14 +98,31 @@ body .lg-prev {
     <div class="swiper-wrapper" id="lg-swiper">
       {%- for media in product.media -%}
         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-          <a
-            
-            href="{{ media | img_url: 'master' }}"
-            class="swiper-slide"
-            rel="lightbox[gallery]">
+          {%- if media.media_type == 'video' -%}
+            <div class="swiper-slide invx-gallery-video-slide">
+              {{ media | media_tag: image_size: '1946x', muted: true, loop: true, controls: true, preload: 'none' }}
+            </div>
+          {%- elsif media.media_type == 'external_video' -%}
+            {%- liquid
+              assign video_class = 'invx-gallery-video js-' | append: media.host
+            -%}
+            <div class="swiper-slide invx-gallery-video-slide">
+              {%- if media.host == 'youtube' -%}
+                {{ media | external_video_url: muted: true, loop: true, playlist: media.external_id | external_video_tag: class: video_class }}
+              {%- else -%}
+                {{ media | external_video_url: muted: true, loop: true | external_video_tag: class: video_class }}
+              {%- endif -%}
+            </div>
+          {%- else -%}
+            <a
 
-            <img src="{{ media | img_url: 'master' }}" alt="Product Image {{ forloop.index }}" width="100%" height="auto" />
-          </a>
+              href="{{ media | img_url: 'master' }}"
+              class="swiper-slide"
+              rel="lightbox[gallery]">
+
+              <img src="{{ media | img_url: 'master' }}" alt="Product Image {{ forloop.index }}" width="100%" height="auto" />
+            </a>
+          {%- endif -%}
         {%- endunless -%}
       {%- endfor -%}
     </div>
@@ -96,7 +133,10 @@ body .lg-prev {
     <div class="swiper-wrapper">
       {%- for media in product.media -%}
         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-          <div class="swiper-slide">
+          <div class="swiper-slide{% if media.media_type == 'video' or media.media_type == 'external_video' %} invx-gallery-thumb-video{% endif %}">
+            {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+              <span class="invx-gallery-thumb-play" aria-hidden="true">{% render 'icon-play' %}</span>
+            {%- endif -%}
             <img src="{{ media | img_url }}" alt="Product Image {{ forloop.index }}" width="100%" height="auto" />
           </div>
         {%- endunless -%}
@@ -143,6 +183,31 @@ document.addEventListener("DOMContentLoaded", function () {
         480: { slidesPerView: 1 }
       }
     });
+
+    function playSlideVideo(slide) {
+      if (!slide) return;
+      const video = slide.querySelector('video');
+      if (video) {
+        video.play().catch(() => {});
+        return;
+      }
+      const youtube = slide.querySelector('.js-youtube');
+      if (youtube && youtube.contentWindow) {
+        youtube.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+      }
+      const vimeo = slide.querySelector('.js-vimeo');
+      if (vimeo && vimeo.contentWindow) {
+        vimeo.contentWindow.postMessage('{"method":"play"}', '*');
+      }
+    }
+
+    function syncActiveSlideVideo() {
+      if (typeof window.pauseAllMedia === 'function') window.pauseAllMedia();
+      playSlideVideo(mainSwiper.slides[mainSwiper.activeIndex]);
+    }
+
+    mainSwiper.on('slideChangeTransitionEnd', syncActiveSlideVideo);
+    syncActiveSlideVideo();
 
     const mainSlider = gallery.querySelector('.mySwiperMain .swiper-wrapper');
 
