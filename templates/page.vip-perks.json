@@ -9,8 +9,86 @@
  */
 {
   "sections": {
+    "ss_vip_perks_xUe4mx": {
+      "type": "ss-vip-perks",
+      "blocks": {
+        "perk_BgJejH": {
+          "type": "perk",
+          "settings": {
+            "icon": "percent",
+            "value": "20%",
+            "title": "Hypnos Mattresses",
+            "text": "20% off the full Hypnos collection."
+          }
+        },
+        "perk_gGPXGm": {
+          "type": "perk",
+          "settings": {
+            "icon": "percent",
+            "value": "15%",
+            "title": "Marshall Curated, Aireloom Preferred & Sprout",
+            "text": "15% off across these premium lines."
+          }
+        },
+        "perk_GDcdiW": {
+          "type": "perk",
+          "settings": {
+            "icon": "percent",
+            "value": "10%",
+            "title": "Marshall Inspired & Aireloom Pacific",
+            "text": "10% off these collections."
+          }
+        },
+        "perk_dma6xX": {
+          "type": "perk",
+          "settings": {
+            "icon": "tag",
+            "value": "5%",
+            "title": "Selected Products",
+            "text": "5% off select items storewide."
+          }
+        },
+        "perk_RBL349": {
+          "type": "perk",
+          "settings": {
+            "icon": "truck",
+            "value": "FREE",
+            "title": "VIP Delivery Service",
+            "text": "Complimentary white-glove delivery for Mville+ VIP members."
+          }
+        }
+      },
+      "block_order": [
+        "perk_BgJejH",
+        "perk_gGPXGm",
+        "perk_GDcdiW",
+        "perk_dma6xX",
+        "perk_RBL349"
+      ],
+      "name": "SS VIP Perks",
+      "settings": {
+        "enable_gate": false,
+        "gate_tag": "vip",
+        "locked_heading": "Members only",
+        "locked_text": "This page is exclusive to Mville+ VIP members. Log in to your account to view your perks.",
+        "locked_button_label": "Log in",
+        "eyebrow": "Mville+ VIP",
+        "heading": "Welcome to Mville+ VIP",
+        "subtext": "Exclusive member pricing and white-glove service, just for you.",
+        "image_position": "left",
+        "columns": 2,
+        "accent_color": "#ff5c78",
+        "bg_color": "#ffffff",
+        "card_bg_color": "#faf8f6",
+        "heading_color": "#1a1a1a",
+        "text_color": "#1a1a1a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "header_color": "#ffffff",
         "header_bg_color": "#ff5c78",
@@ -63,6 +141,7 @@
       "settings": {
         "image": "shopify://shop_images/Only_Use_Your_Bed_for_Sleep.png",
         "image_overlay_opacity": 0,
+        "banner_link": "",
         "image_height": "small",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
@@ -391,6 +470,7 @@
     }
   },
   "order": [
+    "ss_vip_perks_xUe4mx",
     "main",
     "image_banner_RFj6nU",
     "rich_text_TVzKQc",
