@@ -351,15 +351,17 @@
               {%- if hasChildren -%}
                 <div class="dropdown-menu">
                   {%- for childlink in link.links -%}
-                    <div class="dropdown-item">
-                      <a
-                        class="nav-link"
-                        href="{{ childlink.url }}"
-                        aria-label="Product list of {{ childlink.title | escape }}"
-                      >
-                        {{- childlink.title | escape -}}
-                      </a>
-                    </div>
+                    {%- assign show_link = true -%}
+                    {%- if childlink.title == 'VIP Perks' -%}
+                      {%- unless customer and customer.tags contains 'mville+' -%}
+                        {%- assign show_link = false -%}
+                      {%- endunless -%}
+                    {%- endif -%}
+                    {%- if show_link -%}
+                      <div class="dropdown-item">
+                        <a class="nav-link" href="{{ childlink.url }}" aria-label="Product list of {{ childlink.title | escape }}">{{ childlink.title | escape }}</a>
+                      </div>
+                    {%- endif -%}
                   {%- endfor -%}
                 </div>
               {%- endif -%}
