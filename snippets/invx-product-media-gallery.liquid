@@ -201,9 +201,26 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
+    function pauseGalleryVideos(exceptSlide) {
+      gallery.querySelectorAll('video').forEach((video) => {
+        if (!exceptSlide || !exceptSlide.contains(video)) video.pause();
+      });
+      gallery.querySelectorAll('.js-youtube').forEach((iframe) => {
+        if ((!exceptSlide || !exceptSlide.contains(iframe)) && iframe.contentWindow) {
+          iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        }
+      });
+      gallery.querySelectorAll('.js-vimeo').forEach((iframe) => {
+        if ((!exceptSlide || !exceptSlide.contains(iframe)) && iframe.contentWindow) {
+          iframe.contentWindow.postMessage('{"method":"pause"}', '*');
+        }
+      });
+    }
+
     function syncActiveSlideVideo() {
-      if (typeof window.pauseAllMedia === 'function') window.pauseAllMedia();
-      playSlideVideo(mainSwiper.slides[mainSwiper.activeIndex]);
+      const activeSlide = mainSwiper.slides[mainSwiper.activeIndex];
+      pauseGalleryVideos(activeSlide);
+      playSlideVideo(activeSlide);
     }
 
     mainSwiper.on('slideChangeTransitionEnd', syncActiveSlideVideo);
