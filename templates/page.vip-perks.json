@@ -67,7 +67,7 @@
       ],
       "name": "SS VIP Perks",
       "settings": {
-        "enable_gate": false,
+        "enable_gate": true,
         "gate_tag": "vip",
         "locked_heading": "Members only",
         "locked_text": "This page is exclusive to Mville+ VIP members. Log in to your account to view your perks.",
