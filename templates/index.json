@@ -12,14 +12,6 @@
     "invx-slider": {
       "type": "invx-home-slider",
       "blocks": {
-        "slide_4UbLyR": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/the_great_canadian_mattress_sale_2026.webp",
-            "slide_link": "shopify://collections/all-mattresses"
-          }
-        },
         "slide_PEgBhX": {
           "type": "slide",
           "settings": {
@@ -46,14 +38,6 @@
           "settings": {
             "image": "shopify://shop_images/marshall_home_banner_2025.webp",
             "slide_link": "shopify://collections/marshall-mattresses"
-          }
-        },
-        "slide_bMTGd8": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/the_great_canadian_mattress_sale_2026.webp",
-            "slide_link": "shopify://collections/all-mattresses"
           }
         },
         "slide_7fCfTx": {
@@ -89,6 +73,7 @@
         },
         "slide_dJqdk3": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/highest_rated_reviews_mattressville.webp",
             "slide_link": "shopify://pages/reviews"
@@ -120,12 +105,10 @@
         }
       },
       "block_order": [
-        "slide_4UbLyR",
         "slide_PEgBhX",
         "slide_ameJgH",
         "slide_WmxnNj",
         "slide_k4wTAU",
-        "slide_bMTGd8",
         "slide_7fCfTx",
         "slide_9y8Uir",
         "slide_bTWUcd",
